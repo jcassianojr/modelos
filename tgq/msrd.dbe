@@ -1,0 +1,13 @@
+DBFDEF msrd
+   MSRD       N   8  0
+   CODIGO     C  24  0
+   PF         N   8  0
+   DATA       D   8  0
+   OCORREU    C  20  0
+   DESC01     C  80  0
+   DESC02     C  80  0
+   INV01      C  80  0
+   ACA01      C  80  0
+   CLIENTE    N   8  0
+ENDDEF
+ENDFILE

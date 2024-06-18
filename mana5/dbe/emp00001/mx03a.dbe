@@ -1,0 +1,7 @@
+DBFDEF mx03a
+   CODIGO     C   8  0
+   SEQ        N   3  0
+   DESCRI     C  30  0
+   PRECO      N  12  2
+ENDDEF
+ENDFILE

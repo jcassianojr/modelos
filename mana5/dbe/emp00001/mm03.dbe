@@ -1,0 +1,13 @@
+DBFDEF mm03
+   NUMMENS    N   5  0
+   DESMENS    C  60  0
+   LIN01      C  70  0
+   LIN02      C  70  0
+   LIN03      C  70  0
+   LIN04      C  70  0
+   LIN05      C  70  0
+   LIN06      C  70  0
+   LIN07      C  70  0
+   LIN08      C  70  0
+ENDDEF
+ENDFILE

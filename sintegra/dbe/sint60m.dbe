@@ -1,0 +1,16 @@
+DBFDEF sint60m
+   TIPO       C   2  0
+   SUB60M     C   1  0
+   EMIS60M    D   8  0
+   NUMFABM    C  20  0
+   NUMPDVM    C   3  0
+   MODEL60M   C   2  0
+   NUINI60M   C   6  0
+   NUFIM60M   C   6  0
+   REDUZ60M   C   6  0
+   CRO60M     N   3  0
+   VENDA60M   N  16  2
+   TOTGER60M  N  16  2
+   BRANCO60M  C  37  0
+ENDDEF
+ENDFILE

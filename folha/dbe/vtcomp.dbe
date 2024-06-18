@@ -1,0 +1,36 @@
+DBFDEF vtcomp
+   CODIGO     N   4  0
+   VALOR      N  12  2
+   DESCR      C  50  0
+   COD01      N   4  0
+   COD02      N   4  0
+   COD03      N   4  0
+   COD04      N   4  0
+   COD05      N   4  0
+   COD06      N   4  0
+   COD07      N   4  0
+   COD08      N   4  0
+   COD09      N   4  0
+   COD10      N   4  0
+   VAL01      N  12  2
+   VAL02      N  12  2
+   VAL03      N  12  2
+   VAL04      N  12  2
+   VAL05      N  12  2
+   VAL06      N  12  2
+   VAL07      N  12  2
+   VAL08      N  12  2
+   VAL09      N  12  2
+   VAL10      N  12  2
+   QTD01      N   3  0
+   QTD02      N   3  0
+   QTD03      N   3  0
+   QTD04      N   3  0
+   QTD05      N   3  0
+   QTD06      N   3  0
+   QTD07      N   3  0
+   QTD08      N   3  0
+   QTD09      N   3  0
+   QTD10      N   3  0
+ENDDEF
+ENDFILE

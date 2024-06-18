@@ -1,0 +1,8 @@
+DBFDEF mw06
+   TIPO       C   1  0
+   CODIGO     C  15  0
+   ANO        N   4  0
+   MES        N   2  0
+   USO        N  16  5
+ENDDEF
+ENDFILE

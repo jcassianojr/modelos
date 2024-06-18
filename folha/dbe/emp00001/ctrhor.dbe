@@ -1,0 +1,17 @@
+DBFDEF ctrhor
+   DEPTO      N   4  0
+   SETOR      N   3  0
+   SECAO      N   3  0
+   NOMEC      C  15  0
+   ANO        N   4  0
+   MES        N   2  0
+   QTFUN      N   4  0
+   HRTRA      N   7  2
+   HRDSR      N   7  2
+   HRNJU      N   7  2
+   HRJUS      N   7  2
+   CCUSTO     N   6  0
+   UNIFUN     C  10  0
+   MODIRETO   C   1  0
+ENDDEF
+ENDFILE

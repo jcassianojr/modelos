@@ -1,0 +1,6 @@
+DBFDEF manfer
+   DIA        N   2  0
+   MES        N   2  0
+   DESCRICAO  C  40  0
+ENDDEF
+ENDFILE

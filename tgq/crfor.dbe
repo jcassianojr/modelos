@@ -1,0 +1,19 @@
+DBFDEF crfor
+   SEQ        N   3  0
+   NFOR       N   8  0
+   QTDREC     N  12  0
+   QTDNC      N  12  0
+   PPM        N  12  0
+   DIAS       N   4  0
+   IAF        N   7  2
+   IQF        N  12  0
+   ANUAL      C   1  0
+   SEMES      C   1  0
+   DESCRI     C  20  0
+   PPMS       N   8  0
+   PPMA       N   8  0
+   IAFS       N   7  2
+   IAFA       N   7  2
+   NOME       C  50  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,5 @@
+DBFDEF declmot
+   NUMERO     N   3  0
+   NOME       C  40  0
+ENDDEF
+ENDFILE

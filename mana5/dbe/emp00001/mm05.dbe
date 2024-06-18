@@ -1,0 +1,8 @@
+DBFDEF mm05
+   OPERACAO   C   7  0
+   CLASSIPI   C  14  0
+   TOTALMER   N  18  2
+   TOTALIPI   N  18  2
+   TOTPESO    N  13  3
+ENDDEF
+ENDFILE

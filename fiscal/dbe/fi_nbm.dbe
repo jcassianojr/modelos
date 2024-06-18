@@ -1,0 +1,16 @@
+DBFDEF fi_nbm
+   NUMERONBM  C   8  0
+   DESCRI     C 100  0
+   IPI_NBM    N   5  2
+   ICMS_NBM   N   5  2
+   TIPO       C   1  0
+   CODNBM     C  10  0
+   TRIBUTAR   C   1  0
+   ALIQNAC    N   5  2
+   ALIQIMP    N   5  2
+   EX         N   5  2
+   ALIQEST    N   5  2
+   ALIQMUN    N   5  2
+   DATAIMP    D   8  0
+ENDDEF
+ENDFILE

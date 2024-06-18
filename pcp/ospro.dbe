@@ -1,0 +1,7 @@
+DBFDEF ospro
+   PRODUTO    C  24  0
+   DATAACM    D   8  0
+   DATAPRG    D   8  0
+   QTDE       N   6  0
+ENDDEF
+ENDFILE

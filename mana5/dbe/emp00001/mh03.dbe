@@ -1,0 +1,11 @@
+DBFDEF mh03
+   NUMERO     C   6  0
+   COGNOME    C  12  0
+   LOCAL1     C  74  0
+   LOCAL2     C  74  0
+   LOCAL3     C  74  0
+   LOCAL4     C  74  0
+   LOCAL5     C  74  0
+   LOCAL6     C  74  0
+ENDDEF
+ENDFILE

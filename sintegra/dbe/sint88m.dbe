@@ -1,0 +1,8 @@
+DBFDEF sint88M
+   REG        C   2  0
+   SUB        C   1  0
+   CNPJ       C  14  0
+   MENSAGEM   C  34  0
+   BRANCOS    C  75  0
+ENDDEF
+ENDFILE

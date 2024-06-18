@@ -1,0 +1,12 @@
+DBFDEF me03a
+   NUMERO     C   4  0
+   OF         N   8  2
+   DATA       D   8  0
+   QTDDE      N  12  5
+   CODMP01    C  12  0
+   CODRES     C   1  0
+   SEQ        N   3  0
+   SSQ        N   3  0
+   QTDPEC     N  12  3
+ENDDEF
+ENDFILE

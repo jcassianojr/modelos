@@ -1,0 +1,21 @@
+DBFDEF sint76
+   TIPO       C   2  0
+   CGC        C  14  0
+   IE         C  14  0
+   MODEL76    C   2  0
+   SERIE76    C   2  0
+   SUBSER76   C   2  0
+   NFISC76    C  10  0
+   CFOP76     C   4  0
+   TIPREC76   C   1  0
+   EMIS76     D   8  0
+   UF         C   2  0
+   VALTOT76   N  13  2
+   BASEIC76   N  13  2
+   VALICM76   N  12  2
+   ISENTO76   N  12  2
+   OUTRAS76   N  12  2
+   ALIQICM76  N   2  0
+   SITUAC76   C   1  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,5 @@
+DBFDEF pisindev
+   CODIGO     C  11  0
+   NOME       C  15  0
+ENDDEF
+ENDFILE

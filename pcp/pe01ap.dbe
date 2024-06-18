@@ -1,0 +1,25 @@
+DBFDEF pe01ap
+   TIPPED     C   1  0
+   CODIGO     C  24  0
+   UNIDADE    C   2  0
+   NOME       C  50  0
+   NOM2       C  50  0
+   NRNOTAINI  N   8  2
+   DIGCTR     C   1  0
+   DATAFAT    D   8  0
+   VALORINI   N   9  2
+   TOTKGINI   N   6  0
+   NRNOTASAI  N   8  0
+   TOTKGANT   N   6  0
+   TOTKGSAI   N   6  0
+   TOTKGEST   N   6  0
+   TIPOCLI    C   1  0
+   CLIENTE    N   5  0
+   COGNOME    C  12  0
+   DATASAI    D   8  0
+   CRM        N   8  0
+   PEDIDO     N   5  0
+   ITEM       N   2  0
+   RECEBER    C   1  0
+ENDDEF
+ENDFILE

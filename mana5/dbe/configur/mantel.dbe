@@ -1,0 +1,12 @@
+DBFDEF mantel
+   CODIGO     C   6  0
+   SEQ        N   3  0
+   TIP        C   1  0
+   LININI     N   2  0
+   COLINI     N   2  0
+   LINFIM     N   2  0
+   COLFIM     N   2  0
+   DIZER      C  80  0
+   ESTILO     C  20  0
+ENDDEF
+ENDFILE

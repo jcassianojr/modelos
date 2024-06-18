@@ -1,0 +1,5 @@
+DBFDEF medtab14
+   CODIGO     C  10  0
+   DESCRICAO  C 254  0
+ENDDEF
+ENDFILE

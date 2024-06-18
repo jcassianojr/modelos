@@ -1,0 +1,11 @@
+DBFDEF ME04C
+   OCC        N   8  0
+   CODIGO     C  10  0
+   DATA       D   8  0
+   DATAP      D   8  0
+   CODFOR     N   8  0
+   COGFOR     C  20  0
+   CERTIFI    C  10  0
+   NFCC       N   8  0
+ENDDEF
+ENDFILE

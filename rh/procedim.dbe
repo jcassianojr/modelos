@@ -1,0 +1,7 @@
+DBFDEF procedim
+   CURSO      C  20  0
+   DESCUR     C 120  0
+   TIPO       C   1  0
+   GRUPO      C   5  0
+ENDDEF
+ENDFILE

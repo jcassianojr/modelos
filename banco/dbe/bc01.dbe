@@ -1,0 +1,9 @@
+DBFDEF bc01
+   CODIGO     C   4  0
+   DESCRICAO  C  35  0
+   VALOR      N  15  2
+   VALOR1     N  15  2
+   TIPO       C   1  0
+   ITEM       C   3  0
+ENDDEF
+ENDFILE

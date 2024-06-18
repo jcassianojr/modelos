@@ -1,0 +1,11 @@
+DBFDEF restemp
+   CONTA1     N   3  0
+   CONTA2     N   3  0
+   NOME1      C  35  0
+   NOME2      C  35  0
+   VALOR1     N  18  2
+   VALOR2     N  18  2
+   HORAS1     N   6  2
+   HORAS2     N   6  2
+ENDDEF
+ENDFILE

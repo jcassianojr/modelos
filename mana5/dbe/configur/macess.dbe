@@ -1,0 +1,6 @@
+DBFDEF macess
+   CODIGO     C   6  0
+   DESCRICAO  C  60  0
+   SENHA      C   5  0
+ENDDEF
+ENDFILE

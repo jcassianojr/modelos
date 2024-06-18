@@ -1,0 +1,13 @@
+DBFDEF apucfo
+   CFO        C   3  0
+   CFONEW     C   4  0
+   SUBCFO     C   1  0
+   DESCRICAO  C  40  0
+   CONTABIL   N  12  2
+   BASE       N  12  2
+   VALOR      N  12  2
+   ISENTA     N  12  2
+   OUTRA      N  12  2
+   OBS        N  12  2
+ENDDEF
+ENDFILE

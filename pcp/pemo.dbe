@@ -1,0 +1,14 @@
+DBFDEF pemo
+   PEDIDO     N   5  0
+   TIPPED     C   1  0
+   CODIGO     C  24  0
+   NOME       C  50  0
+   FORNECEDO  N   8  0
+   COGNOME    C  15  0
+   UNID       C   2  0
+   NOM2       C  50  0
+   COMPRAS    N   8  0
+   COMITEM    N   3  0
+   APLICACAO  C  50  0
+ENDDEF
+ENDFILE

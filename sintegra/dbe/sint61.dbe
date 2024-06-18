@@ -1,0 +1,19 @@
+DBFDEF sint61
+   TIPO       C   2  0
+   BRANCO611  C  14  0
+   BRANCO612  C  14  0
+   EMIS61     D   8  0
+   MODEL61M   C   2  0
+   SERIE61    C   3  0
+   SUBSER61   C   2  0
+   NUINI61M   C   6  0
+   NUFIM61M   C   6  0
+   VALTOT61   N  13  2
+   BASEIC61   N  13  2
+   VALICM61   N  12  2
+   ISENTA61   N  13  2
+   OUTRAS61   N  13  2
+   ALIQIC61   N   4  2
+   BRANCO61   C   1  0
+ENDDEF
+ENDFILE

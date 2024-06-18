@@ -1,0 +1,6 @@
+DBFDEF fpasfgts
+   FPAS       C   3  0
+   CODREC     C   3  0
+   CATEGORIA  C   4  0
+ENDDEF
+ENDFILE

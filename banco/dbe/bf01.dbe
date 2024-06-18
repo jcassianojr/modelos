@@ -1,0 +1,8 @@
+DBFDEF bf01
+   VENDA      N   8  0
+   NUMERO     N   8  0
+   CODIGO     C  24  0
+   DATA       D   8  0
+   VALOR      N  10  2
+ENDDEF
+ENDFILE

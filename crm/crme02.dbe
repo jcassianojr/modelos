@@ -1,0 +1,20 @@
+DBFDEF CRME02
+   RASTRO     C  12  0
+   DATA       D   8  0
+   NOME       C  30  0
+   NOM2       C  35  0
+   NOM3       C  35  0
+   APLICACAO  C  50  0
+   FORNECEDOR N   8  0
+   RESPO      C  40  0
+   NRNOTA     N   8  0
+   NRNOTB     N   8  0
+   PESONFA    N   9  3
+   PESONFB    N   9  3
+   QTDEA      N  12  3
+   QTDEB      N  12  3
+   POS        C  11  0
+   CODIGO     C  24  0
+   CERT       C  50  0
+ENDDEF
+ENDFILE

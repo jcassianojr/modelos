@@ -1,0 +1,20 @@
+DBFDEF np
+   NP         N   8  0
+   CODIGO     C  24  0
+   NOME       C  40  0
+   CLIENTE    N   8  0
+   CLINOME    C  40  0
+   VEICULO    C  20  0
+   PRSICM     N  10  4
+   PRCICM     N  10  4
+   VLFER      N  12  2
+   PRAZO      D   8  0
+   QTDMES     N   8  0
+   COMPRADOR  C   5  0
+   COMPNOME   C  40  0
+   DESANUAL   N   1  0
+   OS         C  20  0
+   ANO        N   4  0
+   PENDENTE   L   1  0
+ENDDEF
+ENDFILE

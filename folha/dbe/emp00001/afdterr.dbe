@@ -1,0 +1,8 @@
+DBFDEF afdterr
+   NUMERO     N   8  0
+   DATA       D   8  0
+   HORA       N   5  2
+   MOTIVO     N   8  0
+   MOTOCO     C  70  0
+ENDDEF
+ENDFILE

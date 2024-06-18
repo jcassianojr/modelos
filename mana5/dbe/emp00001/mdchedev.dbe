@@ -1,0 +1,6 @@
+DBFDEF MDCHEDEV
+   CODIGO     C   2  0
+   NOME       C 255  0
+ENDDEF
+ENDFILE
+

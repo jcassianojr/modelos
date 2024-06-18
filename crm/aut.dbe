@@ -1,0 +1,18 @@
+DBFDEF aut
+   AUT        N   8  0
+   USADA      L   1  0
+   USER       N   8  0
+   MOTIVO     C 150  0
+   MOTIV2     C 150  0
+   CARTA      C   1  0
+   DATA       D   8  0
+   DATABX     D   8  0
+   CRM        N   8  0
+   DATACR     D   8  0
+   FISOBS01   C  80  0
+   FISOBS02   C  80  0
+   FISOBS03   C  80  0
+   LIBPOR     C  15  0
+   LIBFISCAL  C   1  0
+ENDDEF
+ENDFILE

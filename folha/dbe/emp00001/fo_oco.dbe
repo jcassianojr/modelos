@@ -1,0 +1,30 @@
+DBFDEF fo_oco
+   NUMERO     N   8  0
+   DATASAIDA  D   8  0
+   PERIODOPAG N   3  0
+   DATARETORN D   8  0
+   CODIGO     C   2  0
+   NOME       C  30  0
+   TEM_13_SAL C   1  0
+   PRAZOMAXIM N   4  0
+   CONTA      N   3  0
+   CONTROLE   N  18  0
+   OBS        C  60  0
+   OBS2       C  60  0
+   NOMEF      C  30  0
+   DATAFIM13S D   8  0
+   DATAFIMPAG D   8  0
+   DEPTO      N   4  0
+   SETOR      N   3  0
+   SECAO      N   3  0
+   CHAPA      N   5  0
+   VALPG      N  12  2
+   ABTFGTS    C   1  0
+   CODFGS     C   2  0
+   CODFGR     C   2  0
+   PGFGS      C   1  0
+   PGFGR      C   1  0
+   DIASS      N   2  0
+   DIASR      N   2  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,6 @@
+DBFDEF mexpor1
+   CODIGO     C   6  0
+   VARDES     C  20  0
+   VARDRI     C 100  0
+ENDDEF
+ENDFILE

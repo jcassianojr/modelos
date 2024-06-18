@@ -1,0 +1,12 @@
+DBFDEF rhab
+   NUMERO     N   8  0
+   CODIGO     C   2  0
+   DATA       D   8  0
+   JUSTIFICA  C   1  0
+   HORAS      N   5  2
+   SEQ        N   8  0
+   MES        N   2  0
+   ANO        N   4  0
+   CODIGO2    C   2  0
+ENDDEF
+ENDFILE

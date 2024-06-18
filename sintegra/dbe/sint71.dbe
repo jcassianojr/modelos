@@ -1,0 +1,21 @@
+DBFDEF sint71
+   TIPO       C   2  0
+   CGC        C  14  0
+   IE         C  14  0
+   EMIS71     D   8  0
+   UF         C   2  0
+   MODEL71    C   2  0
+   SERIE71    C   1  0
+   SUBSER71   C   2  0
+   NFISC71    C   6  0
+   UFREM      C   2  0
+   CNPJREM    C  14  0
+   INSCREM    C  14  0
+   EMISREM71  D   8  0
+   MODREM71   C   2  0
+   SERIREM71  C   3  0
+   NFISREM71  C   6  0
+   VALTOT71   N  14  2
+   BRANCO71   C  12  0
+ENDDEF
+ENDFILE

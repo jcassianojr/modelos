@@ -1,0 +1,6 @@
+DBFDEF caged
+   CODIGO     C   2  0
+   DESCRICAO  C  50  0
+   TIPO       C   1  0
+ENDDEF
+ENDFILE

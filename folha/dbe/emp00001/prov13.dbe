@@ -1,0 +1,17 @@
+DBFDEF prov13
+   NUMERO     N   8  0
+   SALARIO    N  12  2
+   SALVAR     N  12  2
+   AVOS       N   2  0
+   VALOR      N  12  2
+   VALENC     N  12  2
+   VALTOT     N  12  2
+   VALPRI     N  12  2
+   VALLIQ     N  12  2
+   MES        N   2  0
+   ANO        N   4  0
+   DEPTO      N   4  0
+   SETOR      N   3  0
+   SECAO      N   3  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,12 @@
+DBFDEF fo_psl
+   NUMERO     N   5  0
+   NOME       C  30  0
+   ADMITIDO   D   8  0
+   FUNCAO     C  20  0
+   SALANT     N  11  2
+   SALATU     N  11  2
+   SALPRO     N  11  2
+   TAXA1      N   6  2
+   TAXA2      N   6  2
+ENDDEF
+ENDFILE

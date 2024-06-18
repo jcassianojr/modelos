@@ -1,0 +1,13 @@
+DBFDEF fo_relhr
+   NUMERO     N   8  0
+   NOME       C  30  0
+   HFOL00     C   1  0
+   GRUPO      C   2  0
+   ALMOCO     C   1  0
+   PADRAO     C   1  0
+   HORREF     C   2  0
+   MARALM     C   1  0
+   MARMES     C   1  0
+   DATAREF1   D   8  0
+ENDDEF
+ENDFILE

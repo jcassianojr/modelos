@@ -1,0 +1,13 @@
+DBFDEF MOVIMENT
+   NUMERO     N   8  0
+   NOME       C  30  0
+   DESTINO    C   1  0
+   CAMINHO    C 200  0
+   ARQUIVO    C  30  0
+   ARQDEST    C   8  0
+   PROCESSO   C   1  0
+   ANOREL     C   1  0
+   HORADEC    C   1  0
+   MODELO     N   8  0
+ENDDEF
+ENDFILE

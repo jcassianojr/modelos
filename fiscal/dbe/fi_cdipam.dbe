@@ -1,0 +1,8 @@
+DBFDEF fi_cdipam
+   CODIGO     C   8  0
+   NOME       C  35  0
+   UF         C   2  0
+   UFIBGE     C   2  0
+   DIPAM      C   4  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,7 @@
+# datashare
+
+arquivos compartilhados
+
+
+***
+_Created with the Personal Edition of HelpNDoc: [Benefits of a Help Authoring Tool](<https://www.helpauthoringsoftware.com>)_

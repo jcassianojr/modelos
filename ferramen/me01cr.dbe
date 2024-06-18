@@ -1,0 +1,10 @@
+DBFDEF me01cr
+   CODIGO     C   4  0
+   NOME       C  40  0
+   PROGRAMA   D   8  0
+   EFETUADA   D   8  0
+   LVM        N   8  0
+   ANO        N   4  0
+   CANO       C   4  0
+ENDDEF
+ENDFILE

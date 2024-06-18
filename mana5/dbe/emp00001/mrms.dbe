@@ -1,0 +1,7 @@
+DBFDEF mrms
+   CODMS01    C  24  0
+   CODMR01    C  10  0
+   CODMA01    N   8  0
+   PCEMB      N  10  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,38 @@
+DBFDEF my03
+   NUMERO     N   8  0
+   DATA       D   8  0
+   CODIGO     C  24  0
+   CODIG2     C  24  0
+   SEQ        N   3  0
+   SSQ        N   3  0
+   QTDDE      N   5  0
+   TIOOPE     C   1  0
+   CODOPE     N   8  0
+   CODMAQ     C   4  0
+   INIOPR     N   5  2
+   FIMOPR     N   5  2
+   ALMINI     N   5  2
+   ALMFIM     N   5  2
+   DATOPR     D   8  0
+   HOROPR     N   6  2
+   RASTRO     C   6  0
+   PARADA     N   5  2
+   OP         N   8  0
+   VALREF     N   6  0
+   ANTREF     N   6  0
+   FATREF     N   9  5
+   SALREF     N   6  0
+   TURNO      C   2  0
+   OBSLAN     C  20  0
+   VIRADA     C   1  0
+   BXMY03     C   1  0
+   TPMY03     C   1  0
+   EXCMAQ     C   1  0
+   SUBMAQ     C   3  0
+   HORUSO     N   5  2
+   FIRMA      N   1  0
+   NUMMB01    N   8  0
+   TEMPOREF   N   5  0
+   CODIGOINT  C  24  0
+ENDDEF
+ENDFILE

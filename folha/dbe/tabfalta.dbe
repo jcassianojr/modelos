@@ -1,0 +1,15 @@
+DBFDEF tabfalta
+   CODIGO     C   2  0
+   NOME       C  40  0
+   APURA      C   1  0
+   FORMULA    C  40  0
+   OBS        C  50  0
+   MACPAD     C   1  0
+   CODIMP01   N   3  0
+   CODIMP02   N   3  0
+   CODFGS     C   2  0
+   CODFGR     C   2  0
+   RHABCOD    C   2  0
+   RHABJUST   C   1  0
+ENDDEF
+ENDFILE

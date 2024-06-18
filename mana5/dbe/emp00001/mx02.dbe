@@ -1,0 +1,9 @@
+DBFDEF mx02
+   OS         N   8  2
+   DATA       D   8  0
+   CLIENTE    N   5  0
+   COGNOME    C  12  0
+   DESCRICAO  C  40  0
+   OBS        C  70  0
+ENDDEF
+ENDFILE

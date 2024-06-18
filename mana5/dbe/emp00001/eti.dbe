@@ -1,0 +1,24 @@
+DBFDEF eti
+   CODIGO     C  12  0
+   NOME       C 100  0
+   NOM2       C  10  0
+   CAMADA     C  50  0
+   SALTO      C  50  0
+   ESPE       C  50  0
+   SUPE       C  50  0
+   CCM        N  15  6
+   ULTPRC     N  15  6
+   ULTUND     C   2  0
+   ULTDATA    D   8  0
+   REDICM     N   6  2
+   REV        N   3  0
+   REVDATA    D   8  0
+   VALOR      N  15  6
+   CUSTF      N  15  6
+   CODMW      C   3  0
+   LEADTIME   N   2  0
+   COGNOME    C  10  0
+   PISCON     C   1  0
+   NINTERNO   N   8  0
+ENDDEF
+ENDFILE

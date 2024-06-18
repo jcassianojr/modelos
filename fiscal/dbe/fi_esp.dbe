@@ -1,0 +1,7 @@
+DBFDEF fi_esp
+   CODSER     C   5  0
+   DESSER     C  60  0
+   TIPSER     C   1  0
+   EXPCONT    C   1  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,6 @@
+DBFDEF raisnatj
+   CODIGO     C   4  0
+   NOME       C  80  0
+   NATGRU     C  50  0
+ENDDEF
+ENDFILE

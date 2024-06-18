@@ -1,0 +1,11 @@
+DBFDEF cores
+   CODIGO     C   7  0
+   DESCRICAO  C  60  0
+   COR1       C   6  0
+   COR2       C   6  0
+   COR3       C   6  0
+   COR4       C   6  0
+   COR5       C   6  0
+   COR6       C   6  0
+ENDDEF
+ENDFILE

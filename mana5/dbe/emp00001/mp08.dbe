@@ -1,0 +1,13 @@
+DBFDEF mp08
+   NUMERO     N   8  0
+   NUMMP04    N   8  0
+   DATA       D   8  0
+   TIPO       C   1  0
+   CODIGO     C  24  0
+   QTDE       N  10  0
+   PRAZO      D   8  0
+   PRAZOD     N   4  0
+   RETORNO    D   8  0
+   PRORROGA   N   4  0
+ENDDEF
+ENDFILE

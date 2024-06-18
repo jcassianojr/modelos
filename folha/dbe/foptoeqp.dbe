@@ -1,0 +1,11 @@
+DBFDEF foptoeqp
+   NUMERO     N   8  0
+   NOME       C  30  0
+   TIPO       C   1  0
+   REP        C  17  0
+   LOCALINST  C  50  0
+   ATIVO      C   1  0
+   GRUPOREL   N   8  0
+   GERAAFD    C   1  0
+ENDDEF
+ENDFILE

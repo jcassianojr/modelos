@@ -1,0 +1,10 @@
+DBFDEF ospr2
+   NUMERO     N   8  0
+   PRODUTO    C  24  0
+   PLANTA     C  10  0
+   PROGRAMA   D   8  0
+   QTDE       N   8  0
+   DATAIMP    D   8  0
+   HORAPRG    N   5  2
+ENDDEF
+ENDFILE

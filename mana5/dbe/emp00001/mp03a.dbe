@@ -1,0 +1,7 @@
+DBFDEF mp03a
+   CODIGO     C  12  0
+   SEQ        N   3  0
+   CODMPSB    C  12  0
+   NOMMPSB    C  30  0
+ENDDEF
+ENDFILE

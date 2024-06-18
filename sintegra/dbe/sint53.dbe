@@ -1,0 +1,27 @@
+DBFDEF sint53
+   TIPO       C   2  0
+   CGC        C  18  0
+   IE         C  20  0
+   DATA       D   8  0
+   UF         C   2  0
+   MODELO     N   2  0
+   SERIE      C   3  0
+   SUB        C   2  0
+   NUMERO     N   8  0
+   CFOP       C   4  0
+   VALORTOT   N  10  2
+   BASE       N  10  2
+   VALOR      N  10  2
+   ISENTA     N  10  2
+   OUTRAS     N  10  2
+   ALIQUOTA   N   5  2
+   SITUACAO   C   1  0
+   TIPONF     C   1  0
+   OBS        N  10  2
+   ANTECIPA   C   1  0
+   DESPESAS   N  10  2
+   FORNECEDO  N   8  0
+   EMITENTE   C   1  0
+   TIPOCLI    C   1  0
+ENDDEF
+ENDFILE

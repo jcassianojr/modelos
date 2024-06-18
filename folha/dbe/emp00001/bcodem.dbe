@@ -1,0 +1,14 @@
+DBFDEF bcodem
+   NUMERO     N   8  0
+   ANO        N   4  0
+   MES        N   2  0
+   SALDO      N   8  2
+   SALANT     N   8  2
+   CREDITO    N   8  2
+   DEBITO     N   8  2
+   DIAANT     N   8  2
+   DIACRE     N   8  2
+   DIADEB     N   8  2
+   DIASAL     N   8  2
+ENDDEF
+ENDFILE

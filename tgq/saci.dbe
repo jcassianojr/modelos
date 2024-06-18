@@ -1,0 +1,40 @@
+DBFDEF saci
+   SAC        N   8  0
+   CAUSA      N   3  0
+   ACAO       N   3  0
+   AREA       C   2  0
+   DESARE     C  30  0
+   RESPON     C  40  0
+   ACAO01     C 100  0
+   ACAO02     C 100  0
+   ACAO03     C 100  0
+   ACAO04     C 100  0
+   ACAO05     C 100  0
+   ACAO06     C 100  0
+   ACAO07     C 100  0
+   ACAO08     C 100  0
+   ACAO09     C 100  0
+   ACAO10     C 100  0
+   PRAZO      D   8  0
+   DATAF      D   8  0
+   FECHO      D   8  0
+   POSICAO    C   1  0
+   INV01      C 100  0
+   INV02      C 100  0
+   INV03      C 100  0
+   INV04      C 100  0
+   INV05      C 100  0
+   INV06      C 100  0
+   INV07      C 100  0
+   INV08      C 100  0
+   INV09      C 100  0
+   INV10      C 100  0
+   ACM01      C 100  0
+   ACM02      C 100  0
+   ACM03      C 100  0
+   ACM04      C 100  0
+   ACM05      C 100  0
+   ACM06      C 100  0
+   LPAE       L   1  0
+ENDDEF
+ENDFILE

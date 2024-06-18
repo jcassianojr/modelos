@@ -1,0 +1,28 @@
+DBFDEF etiq3
+   CODIGO     C  12  0
+   DESCRICAO  C  32  0
+   ARQUIVO    C  25  0
+   CHAVE      C   8  0
+   CAMPO      C   8  0
+   ARQUIVO2   C  25  0
+   CHAVE2     C   8  0
+   LINHA1     C  80  0
+   LINHA2     C  80  0
+   LINHA3     C  80  0
+   LINHA4     C  80  0
+   LINHA5     C  80  0
+   LINHA6     C  80  0
+   LINHA7     C  80  0
+   LINHA8     C  80  0
+   S1         N   2  0
+   S2         N   2  0
+   S3         N   2  0
+   S4         N   2  0
+   S5         N   2  0
+   S6         N   2  0
+   S7         N   2  0
+   S8         N   2  0
+   FILTRO     C  70  0
+   SETUP      C  70  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,8 @@
+DBFDEF diskrel1
+   NOME       C   6  0
+   SEQ        N   5  0
+   LIN        N   2  0
+   COL        N   3  0
+   DIZ        C  90  0
+ENDDEF
+ENDFILE

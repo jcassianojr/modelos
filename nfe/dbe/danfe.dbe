@@ -1,0 +1,27 @@
+DBFDEF danfe
+   ID         C  44  0
+   CPROD      C  16  0
+   XPROD      C  60  0
+   QCOM       N  13  3
+   VUNCOM     N  11  3
+   UCOM       C   4  0
+   CFOP       C   4  0
+   NCM        C  10  0
+   CSTICMS    C   4  0
+   CSTIPI     C   4  0
+   CSTPIS     C   4  0
+   CSTCOFINS  C   4  0
+   VICMS      N  11  3
+   VPIS       N  11  3
+   VIPI       N  11  3
+   VCOFINS    N  11  3
+   VBCICMS    N  11  3
+   VBCPIS     N  12  3
+   VBCIPI     N  11  3
+   VBCCOFINS  N  11  3
+   PICMS      N   6  2
+   PPIS       N   6  2
+   PIPI       N   6  2
+   PCOFINS    N   6  2
+ENDDEF
+ENDFILE

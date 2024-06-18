@@ -1,0 +1,29 @@
+DBFDEF fo_sal
+   NUMERO     N   8  0
+   ANO        N   4  0
+   SALJAN     N  12  2
+   MOT1       C   2  0
+   SALFEV     N  12  2
+   MOT2       C   2  0
+   SALMAR     N  12  2
+   MOT3       C   2  0
+   SALABR     N  12  2
+   MOT4       C   2  0
+   SALMAI     N  12  2
+   MOT5       C   2  0
+   SALJUN     N  12  2
+   MOT6       C   2  0
+   SALJUL     N  12  2
+   MOT7       C   2  0
+   SALAGO     N  12  2
+   MOT8       C   2  0
+   SALSET     N  12  2
+   MOT9       C   2  0
+   SALOUT     N  12  2
+   MOT10      C   2  0
+   SALNOV     N  12  2
+   MOT11      C   2  0
+   SALDEZ     N  12  2
+   MOT12      C   2  0
+ENDDEF
+ENDFILE

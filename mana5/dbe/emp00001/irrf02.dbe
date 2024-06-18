@@ -1,0 +1,11 @@
+DBFDEF IRRF02
+   NUMERO     N   8  0
+   ITEM       N   2  0
+   MES        N   4  0
+   DARF       C   4  0
+   NATUREZA   C  20  0
+   RENDA      N  12  2
+   ALIQUOTA   N   5  2
+   IRRF       N   8  2
+ENDDEF
+ENDFILE

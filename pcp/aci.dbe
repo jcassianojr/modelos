@@ -1,0 +1,13 @@
+DBFDEF aci
+   AC         N   8  0
+   ITEM       N   3  0
+   DATA       D   8  0
+   DETALHE    C  20  0
+   ENTPC      N   8  0
+   ENTKG      N  12  4
+   SAIPC      N   8  0
+   SAIKG      N  12  4
+   SALPC      N   8  0
+   SALKG      N  12  4
+ENDDEF
+ENDFILE

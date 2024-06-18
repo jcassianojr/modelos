@@ -1,0 +1,25 @@
+DBFDEF bcofgts
+   EMP        N   5  0
+   NUMERO     C   3  0
+   NOME       C  30  0
+   AGENCIA    C   4  0
+   DIVAGENCI  C   1  0
+   AGENCTA    C   9  0
+   NOMEAGENC  C  30  0
+   CIDADE     C  40  0
+   UF         C   2  0
+   CODEMP     C   4  0
+   SEQUENCIA  C   7  0
+   UNIDADE    C  15  0
+   UNIGR      C   5  0
+   CONTA      C  15  0
+   CODEMPDV   C   1  0
+   SEQUENDV   C   1  0
+   TIPOEMP    C   1  0
+   ENDERECO   C  30  0
+   NUMEROEMP  C   6  0
+   COMPLEMEN  C  15  0
+   TRUNCAR    C   1  0
+   TRUNCA2    C   1  0
+ENDDEF
+ENDFILE

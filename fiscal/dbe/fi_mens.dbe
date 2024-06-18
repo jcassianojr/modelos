@@ -1,0 +1,7 @@
+DBFDEF fi_mens
+   CODIGO     N   4  0
+   OCORR      C 254  0
+   FLEGAL     C 100  0
+   OPERACAO   C   1  0
+ENDDEF
+ENDFILE

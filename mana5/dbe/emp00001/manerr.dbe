@@ -1,0 +1,9 @@
+DBFDEF manerr
+   USUARIO    C  10  0
+   DATA       D   8  0
+   HORA       C   8  0
+   ERRO       C  40  0
+   OPR        C   3  0
+   ARQUIVO    C   8  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,5 @@
+DBFDEF tilres
+   NOME       C  12  0
+   TITULO     C  12  0
+ENDDEF
+ENDFILE

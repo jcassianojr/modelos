@@ -1,0 +1,35 @@
+DBFDEF rd
+   SEQ        N   3  0
+   DIAINI     D   8  0
+   DIAFIM     D   8  0
+   ANUAL      C   1  0
+   SEMES      C   1  0
+   DESCRI     C  30  0
+   DESCR2     C  10  0
+   MES        N   2  0
+   ANO        N   4  0
+   EQPU       N  10  2
+   EQPE       N  10  2
+   EQPP       N  10  2
+   FUPU       N  10  2
+   FUPE       N  10  2
+   FUPP       N  10  2
+   EQHT       N  10  2
+   EQHP       N  10  2
+   EQH24      N  10  2
+   EQHD       N  10  2
+   EQQP       N  10  0
+   FUHT       N  10  2
+   FUHP       N  10  2
+   FUHD       N  10  2
+   FUQP       N  10  0
+   PAHP       N  10  2
+   EQPERE     N  10  2
+   EQPPRE     N  10  2
+   EQPURE     N  10  2
+   EQPE24     N  10  2
+   EQPP24     N  10  2
+   EQPU24     N  10  2
+   PRPE       N  10  2
+ENDDEF
+ENDFILE

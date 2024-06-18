@@ -1,0 +1,9 @@
+DBFDEF ME4CCI
+   NUMERO     N   8  0
+   DIMENSAO   C  50  0
+   ENCONTRA   C  30  0
+   TENDENCIA  C  10  0
+   LAUDO      C   1  0
+   INCTOT     C  10  0
+ENDDEF
+ENDFILE

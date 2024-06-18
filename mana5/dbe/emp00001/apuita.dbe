@@ -1,0 +1,6 @@
+DBFDEF apuita
+   MES        N   2  0
+   ANO        N   4  0
+   SALDO      N  18  2
+ENDDEF
+ENDFILE

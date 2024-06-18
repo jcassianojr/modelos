@@ -1,0 +1,11 @@
+DBFDEF crm3l
+   CODIGO     C  24  0
+   NVEZES     N   2  0
+   RACF       N   8  0
+   DESC01     C  90  0
+   DESC02     C  90  0
+   DESC03     C  90  0
+   DESC04     C  90  0
+   DESC05     C  90  0
+ENDDEF
+ENDFILE

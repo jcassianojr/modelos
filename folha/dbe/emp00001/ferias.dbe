@@ -1,0 +1,27 @@
+DBFDEF FERIAS
+   NUMERO     N   5  0
+   DEPTO      N   4  0
+   SECAO      N   3  0
+   SETOR      N   3  0
+   NOME       C  30  0
+   ADMITIDO   D   8  0
+   CCUSTO     N   6  0
+   UNIFUN     C  10  0
+   MODIRETA   C   1  0
+   QTVEN      N   2  0
+   INIPER     D   8  0
+   FIMPER     D   8  0
+   INIGOZ     D   8  0
+   FIMGOZ     D   8  0
+   INIPRG     D   8  0
+   FIMPRG     D   8  0
+   DEPSETSEC  N  10  0
+   DENUNIFUN  C  30  0
+   CNUMERO    C   8  0
+   FUNCAO     N   8  0
+   FUNNOME    C  30  0
+   HTT        C   2  0
+   SITUACAO   C   2  0
+   SALADM     N  12  2
+ENDDEF
+ENDFILE

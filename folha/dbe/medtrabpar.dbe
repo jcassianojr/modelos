@@ -1,0 +1,5 @@
+DBFDEF MedTrabPAR
+   CODIGO     C  12  0
+   NOME       C 255  0
+ENDDEF
+ENDFILE

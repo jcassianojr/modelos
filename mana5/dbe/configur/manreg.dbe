@@ -1,0 +1,6 @@
+DBFDEF manreg
+   POSICAO    N   2  0
+   GRUPO      C   2  0
+   DESCRICAO  C  70  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,29 @@
+DBFDEF ML02
+   NRNOTA     N   8  0
+   TIPFAT     C   1  0
+   DATA       D   8  0
+   TIPOCLI    C   2  0
+   CLIENTE    N   5  0
+   COGNOME    C  12  0
+   PEDIDO     N   8  0
+   DDD        C   2  0
+   TELEFONE   C  12  0
+   VENDEDOR   C   5  0
+   TOTFAT     N  18  2
+   SITUACAO   N   2  0
+   BANCO      C   3  0
+   NOMEBCO    C  12  0
+   DOCUMENTO  C  15  0
+   DATENT     N   2  0
+   VENTIP     C   1  0
+   VALOR      N  18  2
+   JUROS      N  18  2
+   OBS        C  70  0
+   OBS1       C  70  0
+   OBS2       C  70  0
+   OBS3       C  70  0
+   OBS4       C  70  0
+   FATPER     N   6  2
+   HISTORICO  C   3  0
+ENDDEF
+ENDFILE

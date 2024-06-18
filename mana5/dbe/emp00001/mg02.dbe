@@ -1,0 +1,13 @@
+DBFDEF mg02
+   NUMERO     C   5  0
+   CHAPAF     C   8  0
+   MOTORF     C  30  0
+   OBS1       C  40  0
+   CODEMP     C  12  0
+   CNH        C   9  0
+   CATCNH     C   1  0
+   VALCNH     D   8  0
+   EXPCNH     D   8  0
+   KMINI      N   8  3
+ENDDEF
+ENDFILE

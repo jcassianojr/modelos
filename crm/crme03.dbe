@@ -1,0 +1,15 @@
+DBFDEF CRME03
+   ESPE       C  80  0
+   USUARIO    C  10  0
+   SETOR      C  30  0
+   DATA       D   8  0
+   CODIGO     C  24  0
+   NOME       C  40  0
+   NCLI       N   8  0
+   CLIENTE    C  30  0
+   RASTRO     C  12  0
+   QTAMO      N  12  0
+   REFNUM     N   8  0
+   CERT       C  50  0
+ENDDEF
+ENDFILE

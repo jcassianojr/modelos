@@ -1,0 +1,8 @@
+DBFDEF cesta
+   NUMERO     N   8  0
+   NOME       C  40  0
+   CESTA      C   1  0
+   ADMITIDO   D   8  0
+   OBS        C  40  0
+ENDDEF
+ENDFILE

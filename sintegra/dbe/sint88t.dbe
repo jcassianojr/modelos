@@ -1,0 +1,24 @@
+DBFDEF sint88T
+   REG        C   2  0
+   SUB        C   1  0
+   CNPJ       C  14  0
+   DTEMISSAO  C   8  0
+   UF         C   2  0
+   MODELONF   C   2  0
+   SERIENF    C   3  0
+   NUMERONF   C   6  0
+   EMITENTE   C   1  0
+   CIFFOB     C   1  0
+   CNPJFRETE  C  14  0
+   UFFRETE    C   2  0
+   IEFRETE    C  14  0
+   MODAL      C   1  0
+   PLACA1     C   7  0
+   UF1        C   2  0
+   PLACA2     C   7  0
+   UF2        C   2  0
+   PLACA3     C   7  0
+   UF3        C   2  0
+   BRANCOS    C  28  0
+ENDDEF
+ENDFILE

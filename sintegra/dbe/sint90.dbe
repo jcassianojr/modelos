@@ -1,0 +1,4 @@
+DBFDEF sint90
+   REG90      C 126  0
+ENDDEF
+ENDFILE

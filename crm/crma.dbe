@@ -1,0 +1,18 @@
+DBFDEF crma
+   NUMERO     N   8  0
+   DATA       D   8  0
+   TIPOENT    C   1  0
+   CODIGO     C  24  0
+   FORNECEDO  N   8  0
+   COGFOR     C  15  0
+   NF         N   8  0
+   PRODUTO    C  24  0
+   CLIENTE    N   8  0
+   COGCLI     C  12  0
+   RASTROA    C  12  0
+   RASTROOK   C  12  0
+   DATAOK     D   8  0
+   MOTIVO     C   3  0
+   CRM        N   8  0
+ENDDEF
+ENDFILE

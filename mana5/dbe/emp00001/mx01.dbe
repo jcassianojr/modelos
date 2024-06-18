@@ -1,0 +1,29 @@
+DBFDEF mx01
+   OS         N   8  2
+   DATA       D   8  0
+   CLIENTE    N   5  0
+   COGNOME    C  12  0
+   EMPREGADO  N   5  0
+   NOME       C  32  0
+   CARGO      C  20  0
+   COD_CARGO  N   4  0
+   SERVICO    C   8  0
+   DESCRICAO  C  40  0
+   HRINI      N   5  2
+   HRFIM      N   5  2
+   HRDES      N   5  2
+   HRQTDE     N   5  2
+   DATABASE   D   8  0
+   TIPBASE    C   1  0
+   TIPOSERV   C   1  0
+   VALOR      N  12  2
+   VALORTOT   N  12  2
+   OBSERVACAO C  73  0
+   QTDDE      N   5  2
+   IMPOSTO    C   2  0
+   ALIQUOTA   N   5  2
+   UNID       C   2  0
+   VALORIMP   N  12  2
+   VALORMER   N  12  2
+ENDDEF
+ENDFILE

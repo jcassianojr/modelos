@@ -1,0 +1,7 @@
+DBFDEF telememo
+   NOME       C  15  0
+   ESPECIF    C  35  0
+   TELEF      C  15  0
+   FAX        C  15  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,16 @@
+DBFDEF escalpad
+   SEQ        N   2  0
+   GRUPO      C   2  0
+   DATA       D   8  0
+   CODREV     C   2  0
+   ENTREV     N   6  2
+   ALIREV     N   6  2
+   ALSREV     N   6  2
+   SAIREV     N   6  2
+   VIRADA     C   1  0
+   FOLGASN    C   1  0
+   CODADC     C   2  0
+   BCOSN      C   1  0
+   HORARIO    N   8  0
+ENDDEF
+ENDFILE

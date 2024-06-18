@@ -1,0 +1,11 @@
+DBFDEF nfcc
+   MES        N   2  0
+   ANO        N   4  0
+   NF         N   8  0
+   NUMERO     N   8  0
+   VALOR      N   9  2
+   VALORVT    N   9  2
+   VALORAM    N   9  2
+   HORAS      N   9  2
+ENDDEF
+ENDFILE

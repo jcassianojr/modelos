@@ -1,0 +1,7 @@
+DBFDEF ptohoref
+   RELOGIO    C   5  0
+   HORINI     N   5  2
+   HORFIM     N   5  2
+   TIPO       N   4  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,10 @@
+DBFDEF rat
+   RAT        N   8  0
+   CLIENTE    N   8  0
+   CLINOME    C  50  0
+   DATA       D   8  0
+   VISITA     L   1  0
+   RECCLI     L   1  0
+   RELCLI     L   1  0
+ENDDEF
+ENDFILE

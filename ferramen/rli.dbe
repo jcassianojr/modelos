@@ -1,0 +1,10 @@
+DBFDEF rli
+   RL         N   8  0
+   CODME01    C   5  0
+   LUB01      C   1  0
+   LUB02      C   1  0
+   LUB03      C   1  0
+   LUB04      C   1  0
+   LUB05      C   1  0
+ENDDEF
+ENDFILE

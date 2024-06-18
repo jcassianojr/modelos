@@ -1,0 +1,47 @@
+DBFDEF mi01
+   CONTA      C  11  0
+   NIVEL      N   1  0
+   TIPO       C   1  0
+   NOME       C  50  0
+   NUMERO     N   6  0
+   IDENTIFICA C   1  0
+   DAC        N   1  0
+   SAL01      N  18  2
+   SAL02      N  18  2
+   SAL03      N  18  2
+   SAL04      N  18  2
+   SAL05      N  18  2
+   SAL06      N  18  2
+   SAL07      N  18  2
+   SAL08      N  18  2
+   SAL09      N  18  2
+   SAL10      N  18  2
+   SAL11      N  18  2
+   SAL12      N  18  2
+   SAS01      N  18  2
+   SAS02      N  18  2
+   SAS03      N  18  2
+   SAS04      N  18  2
+   SAS05      N  18  2
+   SAS06      N  18  2
+   SAS07      N  18  2
+   SAS08      N  18  2
+   SAS09      N  18  2
+   SAS10      N  18  2
+   SAS11      N  18  2
+   SAS12      N  18  2
+   SAO01      N  18  2
+   SAO02      N  18  2
+   SAO03      N  18  2
+   SAO04      N  18  2
+   SAO05      N  18  2
+   SAO06      N  18  2
+   SAO07      N  18  2
+   SAO08      N  18  2
+   SAO09      N  18  2
+   SAO10      N  18  2
+   SAO11      N  18  2
+   SAO12      N  18  2
+   CONTAREF   C  15  0
+ENDDEF
+ENDFILE

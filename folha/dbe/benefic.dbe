@@ -1,0 +1,46 @@
+DBFDEF benefic
+   EMPRESA    C   2  0
+   NUMERO     N   8  0
+   CPFBEN     C  14  0
+   NOMEBEN    C  60  0
+   CPFTIT     C  14  0
+   SALARIO    N  12  2
+   SALARIO13  N  12  2
+   PLR        N  12  2
+   IND        N  12  2
+   CPFTITSEM  C  14  0
+   MATRICULA  N   8  0
+   BANCO      C   4  0
+   AGENCIA    C   5  0
+   CONTA      C  12  0
+   PESSOA     N   8  0
+   CONTADIG   C   2  0
+   PROCESSO   C  30  0
+   VARA       C  30  0
+   SENTENCA   D   8  0
+   INICIO     D   8  0
+   FINAL      D   8  0
+   RESCISAO   C   1  0
+   DESCRICAO  C  30  0
+   RESCOMP    C   1  0
+   FERIAS     C   1  0
+   VALE       C   1  0
+   SAL13      C   1  0
+   MENSAL     C   1  0
+   PLRSN      C   1  0
+   SITUACAO   C   1  0
+   PERCENT    N   6  2
+   ENDERECO   C  60  0       
+   CIDADE     C  35  0       
+   CEP        C   9  0       
+   TELEFONE   C  14  0         
+   DDD        C   2  0         
+   UF         C   2  0       
+   COGNOME    C  30  0       
+   BAIRRO     C  35  0       
+   OFICIO     C  30  0       
+   NASCTO     D   8  0            
+   DIZER      C 255  0            
+   DATAINC    D   8  0	   	      
+ENDDEF
+ENDFILE

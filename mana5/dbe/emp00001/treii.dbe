@@ -1,0 +1,9 @@
+DBFDEF treii
+   TREIN      N   8  0
+   NUMFUN     N   8  0
+   NOMFUN     C  40  0
+   COMPAR     C   1  0
+   AVALIA     C   1  0
+   TRXCER     C   1  0
+ENDDEF
+ENDFILE

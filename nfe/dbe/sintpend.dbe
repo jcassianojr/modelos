@@ -1,0 +1,17 @@
+DBFDEF sintpend
+   CNPJ       C  20  0
+   IE         C  20  0
+   CCM        C  20  0
+   UF         C   2  0
+   CIDADE     C  35  0
+   CNPJOK     C   1  0
+   IEOK       C   1  0
+   CCMOK      C   1  0
+   RAZAO      C  60  0
+   ORI        C  10  0
+   DIG3OK     C   1  0
+   OBS        C  60  0
+   CEP        C   8  0
+   DDD        C   2  0
+ENDDEF
+ENDFILE

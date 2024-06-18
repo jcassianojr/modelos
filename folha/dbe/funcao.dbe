@@ -1,0 +1,46 @@
+DBFDEF funcao
+   CODIGO     N   5  0
+   NOME       C  40  0
+   VALOR      N  11  2
+   CBO        C   5  0
+   FNOME      C  17  0
+   FAIXA      C   2  0
+   AREA       C   2  0
+   CODMP02    C  10  0
+   DES01      C  70  0
+   DES02      C  70  0
+   DES03      C  70  0
+   DES04      C  70  0
+   DES05      C  70  0
+   DES06      C  70  0
+   DES07      C  70  0
+   DES08      C  70  0
+   DES09      C  70  0
+   DES10      C  70  0
+   REQ01      C  70  0
+   REQ02      C  70  0
+   REQ03      C  70  0
+   REQ04      C  70  0
+   REQ05      C  70  0
+   REQ06      C  70  0
+   REQ07      C  70  0
+   REQ08      C  70  0
+   REQ09      C  70  0
+   REQ10      C  70  0
+   RED01      C  70  0
+   RED02      C  70  0
+   RED03      C  70  0
+   RED04      C  70  0
+   RED05      C  70  0
+   RED06      C  70  0
+   RED07      C  70  0
+   RED08      C  70  0
+   RED09      C  70  0
+   RED10      C  70  0
+   CBONEW     C   6  0
+   REQCNH     C   1  0
+   REQOC      C   1  0
+   OCEMIS     C   6  0
+   TEMLX      C   1  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,14 @@
+DBFDEF fo_fp13b
+   NUMERO     N   5  0
+   CONTA      N   4  0
+   HORAS      N   7  2
+   VALOR      N  12  2
+   CONTROLE   N   9  0
+   FATOR      N   6  4
+   TRIBUTIRR  N   1  0
+   TRIBUTINPS N   1  0
+   TRIB_FGTS  N   1  0
+   TIPO       N   1  0
+   VALORBASE  N  10  2
+ENDDEF
+ENDFILE

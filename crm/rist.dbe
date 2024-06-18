@@ -1,0 +1,37 @@
+DBFDEF rist
+   RIST       N   8  0
+   RASTRO     C  12  0
+   TIPO       C   1  0
+   NFORN      N   8  0
+   FORNE      C  30  0
+   CLASSI     C   1  0
+   NF         N   8  0
+   NFB        N   8  0
+   DATANF     D   8  0
+   CERT       C  40  0
+   CODIGO     C  24  0
+   DENO       C  40  0
+   NCLI       N   8  0
+   CLIENTE    C  30  0
+   OS         C   8  0
+   INSP       C   1  0
+   NIVEL      C   5  0
+   QTAMO      N   5  0
+   CORPO      C   1  0
+   LAUDOF     C   1  0
+   DATAL      D   8  0
+   OBS01      C  60  0
+   OBS02      C  60  0
+   DATA       D   8  0
+   UNID       C   4  0
+   APLICACAO  C  25  0
+   AREA       C   2  0
+   CARGO      C  25  0
+   RESPO      C  40  0
+   CLOTECRT   C   1  0
+   CRM        N   8  0
+   LLAUDO     L   1  0
+   QTDE       N  10  3
+   CONTIG     L   1  0
+ENDDEF
+ENDFILE

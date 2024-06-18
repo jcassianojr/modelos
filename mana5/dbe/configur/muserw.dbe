@@ -1,0 +1,7 @@
+DBFDEF muserw
+   CONTROLE   C  20  0
+   ITEMENU    C   3  0
+   POSICAO    N   3  0
+   POSTELA    C  30  0
+ENDDEF
+ENDFILE

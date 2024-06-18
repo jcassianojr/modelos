@@ -1,0 +1,10 @@
+DBFDEF fi_oco
+   ANO        N   4  0
+   MES        N   2  0
+   TIPO       C   1  0
+   ITEM       N   2  0
+   DESCRICAO  C  50  0
+   VALICM     N  12  2
+   VALIPI     N  12  2
+ENDDEF
+ENDFILE

@@ -1,0 +1,37 @@
+DBFDEF gc
+   GC         N   8  0
+   CLIENTE    N   8  0
+   CLINOME    C  40  0
+   CODIGO     C  24  0
+   NOME       C  40  0
+   CODME01    C  12  0
+   NOMME01    C  40  0
+   SEQ        N   3  0
+   SSQ        N   3  0
+   CARAC      C  50  0
+   ESPEC      C  30  0
+   FREQ       C  10  0
+   TAM        C  10  0
+   CODME04    C   8  0
+   NOMME04    C  40  0
+   CO2ME04    C   8  0
+   NO2ME04    C  40  0
+   UNIDME     C  10  0
+   REFCTR     C   1  0
+   VALX       N   9  4
+   LIC        N   9  4
+   LSC        N   9  4
+   LIE        N   9  4
+   LSE        N   9  4
+   VINI       N   9  4
+   VDIV       N   7  4
+   VALR       N   7  4
+   LSCR       N   7  4
+   VDIR       N   7  4
+   VMAX       N   9  4
+   RMAX       N   7  4
+   ACP        N   8  0
+   AEP        N   8  0
+   OBS        C  80  0
+ENDDEF
+ENDFILE

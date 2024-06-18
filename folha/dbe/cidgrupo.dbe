@@ -1,0 +1,5 @@
+DBFDEF cidgrupo
+   CODIGO     C  10  0
+   NOME       C 100  0
+ENDDEF
+ENDFILE

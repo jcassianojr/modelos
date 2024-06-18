@@ -1,0 +1,16 @@
+DBFDEF danfe2
+   ID         C  44  0
+   CNPJ       C  14  0
+   CNPJDEST   C  14  0
+   NNF        C   9  0
+   SERIE      C   3  0
+   EMISSAO    C  10  0
+   CANCELADA  C   1  0
+   AVB        C   1  0
+   XML        C   1  0
+   DANFEVIEW  C   1  0
+   CSTATUS    C   3  0
+   LOGIXSUP   C   1  0
+   PROTOCOLO  C  20  0
+ENDDEF
+ENDFILE

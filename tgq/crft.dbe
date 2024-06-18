@@ -1,0 +1,22 @@
+DBFDEF crft
+   NFOR       N   8  0
+   SEQ        N   3  0
+   ITEM       N   3  0
+   DESCRICAO  C  15  0
+   VAL01      N   8  0
+   VAL02      N   8  0
+   VAL03      N   8  0
+   VAL04      N   8  0
+   VAL05      N   8  0
+   VAL06      N   8  0
+   VAL07      N   8  0
+   VAL08      N   8  0
+   VAL09      N   8  0
+   VAL10      N   8  0
+   VAL11      N   8  0
+   VAL12      N   8  0
+   TOTAL      N   8  0
+   IAFS       N   7  2
+   PPMS       N   8  0
+ENDDEF
+ENDFILE

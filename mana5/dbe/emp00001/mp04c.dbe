@@ -1,0 +1,9 @@
+DBFDEF MP04C
+   TECNICO    N   8  0
+   CURSO      C  20  0
+   DESCUR     C 120  0
+   TREIN      N   8  0
+   NUMANT     N   8  0
+   CARHOR     N   8  0
+ENDDEF
+ENDFILE

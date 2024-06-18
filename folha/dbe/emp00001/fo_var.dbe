@@ -1,0 +1,15 @@
+DBFDEF fo_var
+   NUMERO     N  10  0
+   CONTA      N   4  0
+   HORAS      N  18  2
+   VALOR      N  18  2
+   TIPO       N   1  0
+   CONTROLE   N  18  0
+   VARFER     N   1  0
+   VARRES     N   1  0
+   VAR13S     N   1  0
+   NIVFER     N   1  0
+   NIVRES     N   1  0
+   NIV13S     N   1  0
+ENDDEF
+ENDFILE

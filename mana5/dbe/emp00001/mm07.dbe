@@ -1,0 +1,12 @@
+DBFDEF mm07
+   REQDEV     N   8  0
+   CLIENTE    N   8  0
+   COGCLI     C  12  0
+   NF         N   8  0
+   NFC        N   8  0
+   PRODUTO    C  24  0
+   DATANF     D   8  0
+   DATADEV    D   8  0
+   VALOR      N  12  2
+ENDDEF
+ENDFILE

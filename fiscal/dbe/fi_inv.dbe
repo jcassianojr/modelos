@@ -1,0 +1,12 @@
+DBFDEF fi_inv
+   NUMERO     N   8  0
+   CODIPI     C   2  0
+   CLASSIFI   C  14  0
+   NOME       C  40  0
+   QTDDE      N  10  2
+   UNIDADE    C   2  0
+   VALORUNI   N  10  2
+   VALORPAR   N  10  2
+   OBS        C  15  0
+ENDDEF
+ENDFILE

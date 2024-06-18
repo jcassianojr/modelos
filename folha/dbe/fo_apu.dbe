@@ -1,0 +1,8 @@
+DBFDEF fo_apu
+   CONTA      N   3  0
+   NOME       C  35  0
+   HORAS      N   9  2
+   COL        N   3  0
+   VALOR      N  18  2
+ENDDEF
+ENDFILE

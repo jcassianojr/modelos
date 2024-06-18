@@ -1,0 +1,6 @@
+DBFDEF mx03
+   CODIGO     C   8  0
+   DESCRICAO  C  50  0
+   TOTAL      N  18  2
+ENDDEF
+ENDFILE

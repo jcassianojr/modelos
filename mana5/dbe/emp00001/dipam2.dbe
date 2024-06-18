@@ -1,0 +1,5 @@
+DBFDEF dipam2
+   FORNECEDO  N   8  0
+   VALORMER   N  12  2
+ENDDEF
+ENDFILE

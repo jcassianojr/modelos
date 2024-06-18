@@ -1,0 +1,17 @@
+DBFDEF ms96
+   ARQUIVO    C   8  0
+   DOCUMENTO  C   1  0
+   OPERACAO   C   1  0
+   USUARIO    C  10  0
+   QTDE       N   6  0
+   OLDQTDE    N   6  0
+   NUMERO     N   8  0
+   DATA       D   8  0
+   CODIGO     C  24  0
+   RASTRO     C  12  0
+   ESTQXXX    N   6  0
+   ESTQYYY    N   6  0
+   SEQ        N   3  0
+   SSQ        N   3  0
+ENDDEF
+ENDFILE

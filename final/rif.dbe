@@ -1,0 +1,21 @@
+DBFDEF RIF
+   RIF        N   8  0
+   PF         N   8  0
+   CLIENTE    N   8  0
+   CLINOME    C  50  0
+   CODIGO     C  24  0
+   NOME       C  40  0
+   REVDATA    D   8  0
+   QTDE       N   8  0
+   OS         N   8  2
+   DATA       D   8  0
+   ISIII      N   4  0
+   LAUDO      C   1  0
+   RASTRO     C  14  0
+   INSNUM     N   8  0
+   INSNOM     C  40  0
+   IMPORTADO  L   1  0
+   PCFTIPO    C   1  0
+   CODIGOINT  C  24  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,13 @@
+DBFDEF cccor
+   CODIGO     N   4  0
+   DESCR      C  35  0
+   CO_HIS     N   3  0
+   CO_HISN    C  70  0
+   CO_COD     C  13  0
+   CO_CODD    C  13  0
+   CO_CODR    N   6  0
+   CO_CODRD   N   6  0
+   CO_CODN    C  40  0
+   NUMEMP     N   5  0
+ENDDEF
+ENDFILE

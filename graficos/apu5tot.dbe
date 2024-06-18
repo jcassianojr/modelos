@@ -1,0 +1,8 @@
+DBFDEF apu5tot
+   MES        N   2  0
+   ANO        N   4  0
+   VALORTOT   N  18  2
+   VALOREXP   N  18  2
+   JUNTO      C   7  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,33 @@
+DBFDEF CONFINSS
+   FPAS       N   3  0
+   DESCRICAO  C  50  0   
+   EMPREGADO  C   3  0
+   EMPRESA    N   5  2
+   ACIDENTE   N   5  2
+   E0001      N   5  2
+   E0002      N   5  2
+   E0004      N   5  2
+   E0008      N   5  2
+   E0016      N   5  2
+   E0032      N   5  2
+   E0064      N   5  2
+   E0128      N   5  2
+   E0256      N   5  2
+   E0512      N   5  2
+   E1024      N   5  2
+   E2048      N   5  2
+   E4096      N   5  2
+   TOTAL      N   5  2
+   TERCEIRO   N   4  0
+   DESCRICAO  C  50  0
+   PEMP       N   5  2
+   PAUT       N   5  2
+   CODGUIA    C   4  0
+   CODPAG     C   4  0
+   PASSAT     C   1  0
+   INDCOOP    C   6  0
+   CLASSTRIB  C   2  0
+   CODTERC    N   4  0
+   ALIQTERC   N   4  2   
+ENDDEF
+ENDFILE

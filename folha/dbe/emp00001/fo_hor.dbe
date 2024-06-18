@@ -1,0 +1,12 @@
+DBFDEF fo_hor
+   NUMERO     N   5  0
+   NOME       C  30  0
+   D1         C  60  0
+   D2         C  60  0
+   D3         C  60  0
+   D4         C  60  0
+   D5         C  60  0
+   D6         C  60  0
+   D7         C  60  0
+ENDDEF
+ENDFILE

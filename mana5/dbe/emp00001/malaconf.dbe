@@ -1,0 +1,6 @@
+DBFDEF malaconf
+   CODIGO     N   8  0
+   DESCRICAO  C  60  0
+   DBF        C   8  0
+ENDDEF
+ENDFILE

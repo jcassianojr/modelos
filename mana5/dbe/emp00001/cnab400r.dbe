@@ -1,0 +1,35 @@
+DBFDEF cnab400r
+   TITEMP     C  25  0
+   TITBAN     C  20  0
+   CODREG     C   3  0
+   INDOPE     C  24  0
+   CODCAR     C   2  0
+   CODOCO     C   2  0
+   DATAOCO    D   8  0
+   SEUNUM     C  10  0
+   DATAVEN    D   8  0
+   VALTIT     N  12  2
+   CODBCO     C   3  0
+   AGCBCO     C   5  0
+   ESPTIT     C   2  0
+   VALDEP     N  12  2
+   VALIOF     N  12  2
+   VALABT     N  12  2
+   VALDES     N  12  2
+   VALPAG     N  12  2
+   VALJUR     N  12  2
+   VALMUL     N  12  2
+   CODMOD     C   1  0
+   CREDATA    D   8  0
+   SEQARQ     N   6  0
+   VALDEPOUT  N  12  2
+   VALJURATR  N  12  2
+   MOTPRO     C   1  0
+   MOTREG01   C   2  0
+   MOTREG02   C   2  0
+   MOTREG03   C   2  0
+   MOTREG04   C   2  0
+   MOTREG05   C   2  0
+   LIQDATA    D   8  0
+ENDDEF
+ENDFILE

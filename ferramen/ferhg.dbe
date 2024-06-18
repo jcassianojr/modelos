@@ -1,0 +1,11 @@
+DBFDEF ferhg
+   OS         N   8  0
+   CODFERR    C  24  0
+   CODME01    C   4  0
+   DATA       D   8  0
+   SEQ        N   3  0
+   SSQ        N   3  0
+   TIPSER     C   1  0
+   SERVICO    C 255  0
+ENDDEF
+ENDFILE

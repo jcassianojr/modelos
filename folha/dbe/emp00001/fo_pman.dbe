@@ -1,0 +1,13 @@
+DBFDEF fo_pman
+   NUMERO     N   8  0
+   DATOCO     D   8  0
+   HOROCO     N   5  2
+   HOROC2     N   5  2
+   HOROC3     N   5  2
+   HOROC4     N   5  2
+   TIPOCO     C   1  0
+   MOTOCO     C  60  0
+   MOTIVO     N   8  0
+   ZERHOR     C   1  0
+ENDDEF
+ENDFILE

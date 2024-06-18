@@ -1,0 +1,5 @@
+DBFDEF tb_grpar
+   CODIGO     C   2  0
+   NOME       C  20  0
+ENDDEF
+ENDFILE

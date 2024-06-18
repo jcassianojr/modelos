@@ -1,0 +1,21 @@
+DBFDEF apu5g3
+   CLIENTE    N   8  0
+   COGCLI     C  12  0
+   CODIGO     C  24  0
+   NOME       C  40  0
+   PARTI      N   6  2
+   PPLAN      N   9  4
+   QTDDE      N  12  0
+   VALORMER   N  12  2
+   VALORTOT   N  12  2
+   PRECOM     N   8  2
+   PERCLI     N   6  2
+   INTCOM     N   8  0
+   INTCLI     N   8  0
+   JUNTO      C  40  0
+   MES        N   2  0
+   ANO        N   4  0
+   ORDEM      N   2  0
+   PERCLITOR  N   6  2
+ENDDEF
+ENDFILE

@@ -1,0 +1,6 @@
+DBFDEF pti
+   TREIN      N   8  0
+   NUMFUN     N   8  0
+   NOMFUN     C  40  0
+ENDDEF
+ENDFILE

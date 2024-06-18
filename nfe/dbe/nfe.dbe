@@ -1,0 +1,10 @@
+DBFDEF nfe
+   EMPRESA    C   2  0
+   SINTEL     D   8  0
+   NFS        N   8  0
+   GMPROTREC  N   8  0
+   DANFEVREC  N   8  0
+   STATUSREC  N   8  0
+   CHAVESUP   N   8  0
+ENDDEF
+ENDFILE

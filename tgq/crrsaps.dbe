@@ -1,0 +1,34 @@
+DBFDEF crrsaps
+   SEQ        N   3  0
+   SETCOD     C   1  0
+   SETOR      C  10  0
+   SETCOG     C   5  0
+   QTDE       N   8  0
+   QTDENC     N   8  0
+   PPM        N   8  0
+   RET        N   8  0
+   DEV        N   8  0
+   SUC        N   8  0
+   PPMRET     N   8  0
+   PPMDEV     N   8  0
+   PPMSUC     N   8  0
+   SEMRET     N   8  0
+   SEMSUC     N   8  0
+   SEMDEV     N   8  0
+   SEMPPM     N   8  0
+   SEMPPMRET  N   8  0
+   SEMPPMSUC  N   8  0
+   SEMPPMDEV  N   8  0
+   SEMTOT     N   8  0
+   SEMPRO     N   8  0
+   ANURET     N   8  0
+   ANUSUC     N   8  0
+   ANUDEV     N   8  0
+   ANUPPM     N   8  0
+   ANUPPMRET  N   8  0
+   ANUPPMSUC  N   8  0
+   ANUPPMDEV  N   8  0
+   ANUTOT     N   8  0
+   ANUPRO     N   8  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,6 @@
+DBFDEF cartorio
+   CODIGO     C   6  0
+   IBGE       C   7  0
+   NOME       C 240  0
+ENDDEF
+ENDFILE

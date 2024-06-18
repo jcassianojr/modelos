@@ -1,0 +1,9 @@
+DBFDEF curso
+   CURSO      C  20  0
+   GRUPO      C   5  0
+   DESCUR     C 120  0
+   CARGA      N   8  2
+   CERT       C   1  0
+   TIPCUR     C   1  0
+ENDDEF
+ENDFILE

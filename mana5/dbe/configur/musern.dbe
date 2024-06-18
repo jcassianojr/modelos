@@ -1,0 +1,5 @@
+DBFDEF musern
+   USUARIO    C  10  0
+   ID         C  40  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,35 @@
+DBFDEF MF03
+   NUMERO     N   5  0
+   AGENCIA    C  12  0
+   CONTA      C  12  0
+   TITULAR1   C  40  0
+   TITULAR2   C  40  0
+   TIPOCTA    C   1  0
+   ENDERECO1  C  40  0
+   BAIRRO1    C  30  0
+   CIDADE1    C  30  0
+   ESTADO1    C   2  0
+   CEP1       C   9  0
+   CXPOSTAL1  C   5  0
+   DDD1       C   2  0
+   TELEFONE1  C  12  0
+   RAMAL1     C   4  0
+   CONTATO1   C  22  0
+   DDF1       C   2  0
+   FAX1       C  12  0
+   CPF1       C  14  0
+   ENDERECO2  C  40  0
+   BAIRRO2    C  30  0
+   CIDADE2    C  30  0
+   ESTADO2    C   2  0
+   CEP2       C   9  0
+   CXPOSTAL2  C   5  0
+   DDD2       C   2  0
+   TELEFONE2  C  12  0
+   RAMAL2     C   4  0
+   CONTATO2   C  22  0
+   DDF2       C   2  0
+   FAX2       C  12  0
+   CPF2       C  14  0
+ENDDEF
+ENDFILE

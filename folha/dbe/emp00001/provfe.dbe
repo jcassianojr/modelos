@@ -1,0 +1,19 @@
+DBFDEF provfe
+   NUMERO     N   8  0
+   COMP       D   8  0
+   SALARIO    N  12  2
+   SALVAR     N  12  2
+   AVOS       N   2  0
+   DIAS       N   2  0
+   VALOR      N  12  2
+   VALTER     N  12  2
+   VALENC     N  12  2
+   VALTOT     N  12  2
+   MES        N   2  0
+   ANO        N   4  0
+   DEPTO      N   4  0
+   SETOR      N   3  0
+   SECAO      N   3  0
+   CONTROLE   C  24  0
+ENDDEF
+ENDFILE

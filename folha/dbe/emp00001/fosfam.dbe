@@ -1,0 +1,36 @@
+DBFDEF FOSFAM
+   REQUISI    N   8  0
+   NUMERO     N   8  0
+   NOME       C  60  0
+   NASCTO     D   8  0
+   LOCAL      C  35  0
+   CARTORIO   C  15  0
+   NREGIS     C  32  0
+   LIVRO      C   5  0
+   FOLHA      C   5  0
+   ENTREGA    D   8  0
+   BAIXA      D   8  0
+   CNS        C  15  0
+   IRRF       C   1  0
+   SALFAM     C   1  0
+   GRPA       C   2  0
+   ESOCIAL    C   2  0
+   NCARTORIO  C   6  0
+   TERMO      C   7  0
+   LOCALIBGE  C   7  0
+   SEXO       C   1  0
+   LOCALUF    C   2  0
+   CPF        C  14  0
+   CPFTIT     C  14  0
+   VIVO       C   1  0
+   CASAMENTO  D   8  0
+   ESTCIVIL   C   1  0
+   ESTUDO     C   1  0
+   INVALIDEZ  C   1  0
+   RG         C  14  0
+   RGUF       C   2  0
+   RGEMIS     C   6  0
+   RGDATA     D   8  0
+   PIS        C  11  0
+ENDDEF
+ENDFILE

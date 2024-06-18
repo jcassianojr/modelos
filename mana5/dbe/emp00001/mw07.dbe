@@ -1,0 +1,45 @@
+DBFDEF MW07
+   CODIGO     C  15  0
+   NOME       C 200  0
+   NOM2       C   1  0
+   CTACONTB   C  11  0
+   UNIDADE    C   2  0
+   SAIMIN     N  12  3
+   ESTQMIN    N  12  3
+   ESTQENT    N  12  3
+   ESTQSAI    N  12  3
+   ESTQINI    N  12  3
+   ESTQSAL    N  12  3
+   ESTQPRO    N  12  3
+   DIASENT    N   3  0
+   DIASEST    N   3  0
+   DATABALAN  D   8  0
+   DATMIN     D   8  0
+   MMENSAL    N  12  3
+   MINDI      N  12  3
+   MININD     N  12  3
+   CAUTO      N  12  3
+   MW05GRU    C   5  0
+   TIPDIS     C   1  0
+   DIADIS     N   3  0
+   OBS        C  70  0
+   COTVAL     N  12  3
+   ULTPRC     N  15  6
+   ULTUND     C   2  0
+   ULTDATA    D   8  0
+   CCM        N  15  6
+   REDICM     N   6  2
+   APLICACAO  C  50  0
+   CODMW      C   3  0
+   PISCON     C   1  0
+   CODIPI     C   2  0
+   CLASSIPI   C  14  0
+   IPI        N   5  2
+   VALINV     N  12  2
+   PRECUST    N  12  2
+   PLTINV     N   8  0
+   PESLIQ     N   6  3
+   QTDEAPU    N  12  0
+   CRMSEL     N   2  0
+ENDDEF
+ENDFILE

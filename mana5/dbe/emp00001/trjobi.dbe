@@ -1,0 +1,8 @@
+DBFDEF trjobi
+   NUMERO     N   8  0
+   PECA       C  24  0
+   NUMTEC     N   8  0
+   NOMTEC     C  40  0
+   CARGA      N   5  2
+ENDDEF
+ENDFILE

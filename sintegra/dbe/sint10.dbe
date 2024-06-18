@@ -1,0 +1,15 @@
+DBFDEF sint10
+   TIPO       C   2  0
+   CGC        C  14  0
+   IE         C  14  0
+   NOME       C  35  0
+   MUNICIPIO  C  30  0
+   UF         C   2  0
+   FAX        C  10  0
+   DATAINI    D   8  0
+   DATAFIM    D   8  0
+   CONVENIO   C   1  0
+   NATUREZA   N   1  0
+   FINALIDADE C   1  0
+ENDDEF
+ENDFILE

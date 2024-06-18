@@ -1,0 +1,15 @@
+DBFDEF apu5emp
+   CLIENTE    N   8  0
+   COGCLI     C  12  0
+   VALORTOT   N  12  2
+   PERCLI     N   6  2
+   PERPRO     N   6  2
+   INTPERC    N   8  0
+   ANO        N   4  0
+   MES        N   2  0
+   TGRUPO     C   1  0
+   LEXPORTA   L   1  0
+   VALOREXP   N  12  2
+   SUBGER     C   3  0
+ENDDEF
+ENDFILE

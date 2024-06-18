@@ -1,0 +1,47 @@
+DBFDEF mw02
+   COMPED     N   8  0
+   ITEM       N   3  0
+   ITETIP     C   1  0
+   ITECOD     C  13  0
+   ITEREC     N   8  0
+   ITENOM     C 200  0
+   ITENO2     C  50  0
+   ITEO01     C 200  0
+   ITEO02     C  70  0
+   ITEO03     C  70  0
+   ITEN01     C  35  0
+   ITEN02     C  35  0
+   ITEUNI     C   2  0
+   ITEQTD     N  12  3
+   ITETOT     N  12  2
+   ITEPRC     N  15  5
+   RECDAT     D   8  0
+   ITEUE      C   7  0
+   ITESOL     C  12  0
+   ITECTA     C   3  0
+   ITEIPI     N   4  1
+   ITEENT     N  12  3
+   ITERES     N  12  3
+   ITESAL     N  12  3
+   ITECCM     N  15  6
+   DESTINO    C  20  0
+   CODDEP     C   3  0
+   RECO01     C  78  0
+   RECO02     C  78  0
+   RECO03     C  78  0
+   RECNUM     N   8  0
+   RECNOT     N   8  0
+   PRGENT     N   8  0
+   REQDAT     D   8  0
+   PEDCLI     C   1  0
+   VIGENCIA   D   8  0
+   VERIFICA   D   8  0
+   RESIDUO    C   1  0
+   PPAP       N   8  0
+   PPAPD      D   8  0
+   REDICM     N   6  2
+   PEDATIVO   C   1  0
+   CODMW      C   3  0
+   BLQITEM    C   1  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,8 @@
+DBFDEF mi03
+   UE         C   7  0
+   ATIVIDADE  C  50  0
+   GASTO      C   1  0
+   CENTRO     C   4  0
+   CFOLHA     N   3  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,6 @@
+DBFDEF msbai
+   ORIGEM     C  24  0
+   DESTINO    C  24  0
+   PLANTA     N   8  0
+ENDDEF
+ENDFILE

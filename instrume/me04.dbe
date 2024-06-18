@@ -1,0 +1,46 @@
+DBFDEF ME04
+   CODIGO     C   8  0
+   TIPO       C  30  0
+   MARCA      C  20  0
+   CAPACI     C  30  0
+   DIVI       C  10  0
+   NOMTIPO    C  30  0
+   CODTIPO    C   3  0
+   CODFOR     N   8  0
+   COGFOR     C  12  0
+   COMPRA     D   8  0
+   VALOR      N   9  2
+   SITUACAO   C   1  0
+   DATAUSO    D   8  0
+   DATAFIM    D   8  0
+   NORMA      C  30  0
+   APLIC      C  30  0
+   TIPCAL     C   1  0
+   CALIBRAR   N   3  0
+   ATIVO      C   1  0
+   ERROADM    C  15  0
+   OBS01      C  70  0
+   OBS02      C  70  0
+   OBS03      C  70  0
+   MODELO     C  20  0
+   CALULT     D   8  0
+   CALPRO     D   8  0
+   CADTIP     C   1  0
+   DIME       C   1  0
+   MATE       C   1  0
+   CARA       C   1  0
+   PRECO      N   9  2
+   ULTPRC     N   9  2
+   ULTUND     C   2  0
+   ULTDATA    D   8  0
+   NOME       C   1  0
+   APLICACAO  C  24  0
+   DESENHO    C  25  0
+   DATAEXT    D   8  0
+   CLASSIPI   C  10  0
+   UNIDADE    C   2  0
+   PF         N   8  0
+   RRMDATA    D   8  0
+   CODIGOINT  C  15  0
+ENDDEF
+ENDFILE

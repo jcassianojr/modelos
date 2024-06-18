@@ -1,0 +1,6 @@
+DBFDEF codirrf
+   CODIGO     C   4  0
+   NOME       C 100  0
+   VALPESSOA  C   1  0
+ENDDEF
+ENDFILE

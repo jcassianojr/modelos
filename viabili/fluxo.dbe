@@ -1,0 +1,6 @@
+DBFDEF fluxo
+   CODIGO     C   1  0
+   NOME       C  50  0
+   NUMERO     N   3  0
+ENDDEF
+ENDFILE

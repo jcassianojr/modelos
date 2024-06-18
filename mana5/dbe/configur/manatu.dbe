@@ -1,0 +1,6 @@
+DBFDEF manatu
+   ARQUIVO1   C   8  0
+   ARQUIVO2   C   8  0
+   INDICE     N   1  0
+ENDDEF
+ENDFILE

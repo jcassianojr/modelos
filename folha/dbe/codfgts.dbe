@@ -1,0 +1,47 @@
+DBFDEF codfgts
+   CODIGO     C   3  0
+   NOME       C 254  0
+   ICTOMADOR  C   1  0
+   ICRECFGTS  C   1  0
+   ICRECINSS  C   1  0
+   ICEXCLFGTS C   1  0
+   ICPARCFGTS C   1  0
+   ICCODPGTO  C   1  0
+   ICCAFVI    C   1  0
+   ICCAFOE    C   1  0
+   ICCAPRVI   C   1  0
+   ICCAPROE   C   1  0
+   ICCAEDVI   C   1  0
+   ICINSS13   C   1  0
+   ICCOMPENSA C   1  0
+   ICSALFAMI  C   1  0
+   ICOUTINFO  C   1  0
+   ICOUTINFOP C   1  0
+   ICPRDRULPF C   1  0
+   ICPRDRULPJ C   1  0
+   ICRCVNDDES C   1  0
+   ICDD13SGES C   1  0
+   ICDDSGES   C   1  0
+   ICCENTRAL  C   1  0
+   ICSIMPLES  C   1  0
+   ICVRRETEN  C   1  0
+   ICFATTOM   C   1  0
+   ICCOPTRAB  C   1  0
+   REG00      C   1  0
+   REG01      C   1  0
+   REG10      C   1  0
+   REG11      C   1  0
+   REG12      C   1  0
+   REG13      C   1  0
+   REG14      C   1  0
+   REG20      C   1  0
+   REG30      C   1  0
+   REG31      C   1  0
+   REG32      C   1  0
+   REG70      C   1  0
+   REG80      C   1  0
+   REG90      C   1  0
+   ICMODOPER  C   1  0
+   CORCLPEADM C   3  0
+ENDDEF
+ENDFILE

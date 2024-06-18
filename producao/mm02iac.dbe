@@ -1,0 +1,22 @@
+DBFDEF mm02iac
+   NUMERO     N   8  0
+   DATA       D   8  0
+   FORNECEDO  N   5  0
+   OS         N   8  0
+   QTDE       N  10  3
+   CODIGO     C  24  0
+   ENTREGA    D   8  0
+   QTDESAL    N  10  3
+   OSITEM     N   8  0
+   CODIGOINT  C  24  0
+   CODCLIENTE C  20  0
+   PRECO      N  12  5
+   NOME       C  25  0
+   VALORMER   N  12  2
+   CLASSIPI   C  10  0
+   TIPOENT    C   1  0
+   CGC        C  18  0
+   COGNOME    C  20  0
+   EMPLOGIX   C   2  0
+ENDDEF
+ENDFILE

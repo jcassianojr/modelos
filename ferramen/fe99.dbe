@@ -1,0 +1,15 @@
+DBFDEF fe99
+   ARQUIVO    C   8  0
+   DOCUMENTO  C  40  0
+   OPERACAO   C   1  0
+   USUARIO    C   5  0
+   QTDE       N  12  3
+   OLDQTDE    N  12  3
+   NUMERO     N   8  0
+   DATA       D   8  0
+   CODIGO     C  24  0
+   RASTRO     C   6  0
+   ESTQXXX    N  12  3
+   ESTQYYY    N  12  3
+ENDDEF
+ENDFILE

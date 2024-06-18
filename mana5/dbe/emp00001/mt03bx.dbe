@@ -1,0 +1,31 @@
+DBFDEF mt03bx
+   CODIGO     C  24  0
+   UNIDADE    C   2  0
+   NOME       C  30  0
+   NRNOTAINI  N   8  0
+   DIGCTR     C   1  0
+   SERIE      C   3  0
+   DATAFAT    D   8  0
+   OSINI      N   8  2
+   VALORINI   N  10  2
+   TOTKGINI   N   9  2
+   NRNOTASAI  N   8  0
+   TOTKGANT   N   9  2
+   TOTKGSAI   N   9  2
+   TOTKGEST   N   9  2
+   TIPOCLI    C   1  0
+   CLIENTE    N   5  0
+   COGNOME    C  12  0
+   DATASAI    D   8  0
+   CRM        N   8  0
+   PESOREF    N  12  5
+   CLASSIPI   C  14  0
+   PRECO      N  10  2
+   TIPOENT    C   1  0
+   OBS        C  30  0
+   RASTRO     C  12  0
+   DIFSALDO   N   9  2
+   LOCAL      C   5  0
+   QTDEEMB    N   2  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,17 @@
+DBFDEF mx05
+   SEQ        N   8  0
+   CLIENTE    N   5  0
+   COGCLI     C  12  0
+   SOLICITA   D   8  0
+   HORASOL    N   5  2
+   CONTATO    C  12  0
+   TECNICO    N   5  0
+   COGTEC     C  12  0
+   PREVISAO   D   8  0
+   EFETUADA   D   8  0
+   HORAEFE    N   5  2
+   ASSUNTO    C  30  0
+   DIZER1     C  78  0
+   DIZER2     C  78  0
+ENDDEF
+ENDFILE

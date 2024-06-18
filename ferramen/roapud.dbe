@@ -1,0 +1,5 @@
+DBFDEF roapud
+   DIAINI     D   8  0
+   DIAFIM     D   8  0
+ENDDEF
+ENDFILE

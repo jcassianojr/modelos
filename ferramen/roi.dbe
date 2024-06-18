@@ -1,0 +1,6 @@
+DBFDEF roi
+   RO         N   8  0
+   CODIGO     C  20  0
+   QTDE       N   8  0
+ENDDEF
+ENDFILE

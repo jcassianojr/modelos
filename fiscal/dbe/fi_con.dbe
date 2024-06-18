@@ -1,0 +1,6 @@
+DBFDEF fi_con
+   CODSER     C   5  0
+   DESSER     C  60  0
+   TIPSER     C   1  0
+ENDDEF
+ENDFILE

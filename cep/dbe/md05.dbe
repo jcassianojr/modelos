@@ -1,0 +1,24 @@
+DBFDEF md05
+   UFICMS     C   2  0
+   ZONAFRANCA C   1  0
+   ALIQUOTA   N   5  2
+   ALIQUOTAR  N   5  2
+   NOMEEXT    C  20  0
+   CAPITAL    C  20  0
+   INICEP     C   9  0
+   FIMCEP     C   9  0
+   INICEP2    C   9  0
+   FIMCEP2    C   9  0
+   REGIAO     C   2  0
+   CODMUN     C   2  0
+   CORREIO    N   2  0
+   AREATEL    C   1  0
+   ALIQTEL    N   5  2
+   QTDECID    N   5  0
+   REGCOD     C   1  0
+   AREA       N  12  3
+   TAMIE      N   2  0
+   MASCIE     C  20  0
+   UFDEST     C   2  0
+ENDDEF
+ENDFILE

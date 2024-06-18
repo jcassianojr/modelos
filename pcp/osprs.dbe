@@ -1,0 +1,12 @@
+DBFDEF osprs
+   NUMERO     N   8  0
+   PRODUTO    C  24  0
+   PLANTA     C  10  0
+   PROGRAMA   D   8  0
+   QTDE       N   8  0
+   DATAIMP    D   8  0
+   HORAPRG    N   5  2
+   CODIGOINT  C  24  0
+   CLIENTE    N   8  0
+ENDDEF
+ENDFILE

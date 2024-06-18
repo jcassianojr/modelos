@@ -1,0 +1,15 @@
+DBFDEF mg04
+   COD_IPVA   N   7  0
+   TIPO       N   1  0
+   FAIXA_IPVA N   2  0
+   LINHA      N   4  0
+   COD_REF    N   4  0
+   MARCA      C  20  0
+   MODELO     C  55  0
+   ORIGEM     C   3  0
+   NUMMARCA   N   8  0
+   CATEGORIA  C   2  0
+   CAPACID    N   3  0
+   CODFIPE    C   7  0
+ENDDEF
+ENDFILE

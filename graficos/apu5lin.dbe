@@ -1,0 +1,7 @@
+DBFDEF apu5lin
+   ANO        N   4  0
+   SUBGER     C   2  0
+   PERFAT     N   5  2
+   VALORTOT   N  12  2
+ENDDEF
+ENDFILE

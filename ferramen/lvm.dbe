@@ -1,0 +1,21 @@
+DBFDEF lvm
+   LVM        N   8  0
+   NUMERO     C  24  0
+   NOME       C  40  0
+   DATA       D   8  0
+   SETOR      C  10  0
+   ACESSOR    C  20  0
+   CONTABIL   C   8  0
+   FABRICANTE C  20  0
+   MODELO     C  20  0
+   TECNICO    N   8  0
+   TECNOME    C  40  0
+   OBS01      C  60  0
+   OBS02      C  60  0
+   OBS03      C  60  0
+   OBS04      C  60  0
+   OBS05      C  60  0
+   RO         N   8  0
+   HORAS      N   6  2
+ENDDEF
+ENDFILE

@@ -1,0 +1,21 @@
+DBFDEF manarq1
+   ARQUIVO    C   8  0
+   ITEM       N   2  0
+   INDICE     C   8  0
+   INDEXP     C  60  0
+   DESC       C  55  0
+   LIN1       N   2  0
+   LIN2       N   2  0
+   LIN3       N   2  0
+   COL1       N   2  0
+   COL2       N   2  0
+   COL3       N   2  0
+   VAR1       C  10  0
+   VAR2       C  10  0
+   VAR3       C  10  0
+   DES1       C  30  0
+   DES2       C  30  0
+   DES3       C  30  0
+   FORMULA    C  60  0
+ENDDEF
+ENDFILE

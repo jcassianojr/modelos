@@ -1,0 +1,6 @@
+DBFDEF mi04
+   CONTA      C   4  0
+   NOME       C  50  0
+   SAIREL     C   1  0
+ENDDEF
+ENDFILE

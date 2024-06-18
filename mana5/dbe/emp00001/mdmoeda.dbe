@@ -1,0 +1,9 @@
+DBFDEF MDMOEDA
+   CODIGO     C   3  0
+   DESCRICAO  C  30  0
+   PAIS       C   3  0
+   PAISNOME   C  35  0
+   SIMBOLO    C   5  0
+ENDDEF
+ENDFILE
+

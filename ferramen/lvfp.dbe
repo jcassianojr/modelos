@@ -1,0 +1,6 @@
+DBFDEF lvfp
+   ITEM       N   2  0
+   DESCRI     C  60  0
+   GRUPO      C   1  0
+ENDDEF
+ENDFILE

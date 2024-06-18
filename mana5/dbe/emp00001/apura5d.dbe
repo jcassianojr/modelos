@@ -1,0 +1,6 @@
+DBFDEF apura5d
+   JUNTO      C  40  0
+   PERLUC     N   6  2
+   INTPER     N   6  0
+ENDDEF
+ENDFILE

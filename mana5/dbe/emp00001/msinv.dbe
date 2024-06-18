@@ -1,0 +1,22 @@
+DBFDEF msinv
+   CLIENTE    N   8  0
+   ANO        N   4  0
+   MES        N   2  0
+   COGNOME    C  15  0
+   FAT        N  12  2
+   MAT        N  12  2
+   MATP       N   7  2
+   COM        N  12  2
+   COMP       N   7  2
+   MATCOM     N  12  2
+   MATCOMP    N   7  2
+   EST        N  12  2
+   ESTP       N   7  2
+   PRO        N  12  2
+   PROP       N   7  2
+   ESP        N  12  2
+   ESPP       N   7  2
+   TOT        N  12  2
+   TOTP       N   7  2
+ENDDEF
+ENDFILE

@@ -1,0 +1,4 @@
+DBFDEF sindcnpj
+   CNPJ       C  14  0
+ENDDEF
+ENDFILE

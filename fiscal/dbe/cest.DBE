@@ -1,0 +1,6 @@
+DBFDEF cest
+   CODIGO     C   7  0
+   DESCRICAO  C 255  0
+   SEGMENTO   C   2  0
+ENDDEF
+ENDFILE

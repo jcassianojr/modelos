@@ -1,0 +1,13 @@
+DBFDEF adipis
+   FORNECEDO  N   8  0
+   DCLASSIPI  C  14  0
+   DOPER      C   3  0
+   DVALORNF   N  18  2
+   DVALIPI    N  18  2
+   CGC        C  18  0
+   COGNOME    C  20  0
+   DCFONEW    C   4  0
+   FICHA      L   1  0
+   DESCRI     C  60  0
+ENDDEF
+ENDFILE

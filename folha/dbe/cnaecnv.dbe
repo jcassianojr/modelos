@@ -1,0 +1,8 @@
+DBFDEF CNAECNV
+   CNAE2      C   7  0
+   DESCR2     C 150  0
+   CNAE1      C   7  0
+   DESCR1     C 150  0
+   SEQ        C   1  0
+ENDDEF
+ENDFILE

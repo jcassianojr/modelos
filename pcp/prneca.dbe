@@ -1,0 +1,25 @@
+DBFDEF prneca
+   CODIGO     C  24  0
+   QTDE       N   6  0
+   QTDE01     N   6  0
+   QTDE02     N   6  0
+   QTDE03     N   6  0
+   QTDE04     N   6  0
+   QTDE05     N   6  0
+   QTDE06     N   6  0
+   QTDE07     N   6  0
+   QTDE08     N   6  0
+   QTDE09     N   6  0
+   QTDE10     N   6  0
+   QTDE11     N   6  0
+   QTDE12     N   6  0
+   QTDE13     N   6  0
+   QTDE14     N   6  0
+   QTDE15     N   6  0
+   QTDE16     N   6  0
+   QTDE17     N   6  0
+   QTDE18     N   6  0
+   QTDE19     N   6  0
+   QTDE20     N   6  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,8 @@
+DBFDEF crdias
+   SEQ        N   3  0
+   NFOR       N   8  0
+   DIAS       N   7  2
+   QTENT      N  10  0
+   QTPRZ      N  10  0
+ENDDEF
+ENDFILE

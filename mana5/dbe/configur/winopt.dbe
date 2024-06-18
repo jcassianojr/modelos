@@ -1,0 +1,11 @@
+DBFDEF winopt
+   ITEMENU    C   3  0
+   POSICAO    N   3  0
+   DESCP      C  30  0
+   DESCM      C  75  0
+   LINHA      N   2  0
+   COLUNA     N   2  0
+   TECLA      N   3  0
+   EXECUTAR   C 200  0
+ENDDEF
+ENDFILE

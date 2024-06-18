@@ -1,0 +1,6 @@
+DBFDEF racfsal
+   SEQ        N   3  0
+   CLIFOR     N   8  0
+   QTDE       N  10  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,28 @@
+DBFDEF viabiii
+   OV         N   8  0
+   ITEM       N   3  0
+   TIPO       C   1  0
+   REV        C  10  0
+   SITUACAO   C   1  0
+   SITUSER    C  10  0
+   SITDATA    D   8  0
+   SITHORA    C  10  0
+   PRECO      N  12  2
+   PRECODT    D   8  0
+   PRECOUN    C   2  0
+   CLIFOR     N   8  0
+   CLICOG     C  12  0
+   APROVACAO  C   1  0
+   APRUSER    C  10  0
+   APRDATA    D   8  0
+   APRTIME    C  10  0
+   COTUSR     C  10  0
+   COTDATA    D   8  0
+   COTTIME    C  10  0
+   DATALC     D   8  0
+   PRAZOI     D   8  0
+   DADO       M  10  0
+   SITOBS     M  10  0
+   APROBS     M  10  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,47 @@
+DBFDEF op02sex
+   OP         N   8  2
+   CODIGO     C  24  0
+   SEQ        N   3  0
+   SSQ        N   3  0
+   CLIENTE    N   8  0
+   COGNOME    C  12  0
+   CODMP01    C  12  0
+   COGMP01    C  10  0
+   CODMP03    C  12  0
+   DESCRI     C  70  0
+   NOMER      C  15  0
+   SETOROP    C   1  0
+   TEMPO01    N   3  0
+   TEMPO02    N   3  0
+   TEMPO03    N   3  0
+   DATAI01    D   8  0
+   DATAI02    D   8  0
+   DATAI03    D   8  0
+   PRAZO01    D   8  0
+   PRAZO02    D   8  0
+   PRAZO03    D   8  0
+   QTDDE01    N   6  0
+   QTDDE02    N   6  0
+   QTDDE03    N   6  0
+   BLOQUEAR   C   1  0
+   URGEN01    C   1  0
+   URGEN02    C   1  0
+   URGEN03    C   1  0
+   INICI01    D   8  0
+   INICI02    D   8  0
+   INICI03    D   8  0
+   DATAREF    D   8  0
+   LEADESP    N   2  0
+   FILIAL     N   2  0
+   HORA01     N   7  2
+   HORA02     N   7  2
+   HORA03     N   7  2
+   DATABAS    D   8  0
+   TEM01      C   1  0
+   DATABA2    D   8  0
+   DATABA3    D   8  0
+   DATABA4    D   8  0
+   NUMFERR    N   8  0
+   CODINT     C  24  0
+ENDDEF
+ENDFILE

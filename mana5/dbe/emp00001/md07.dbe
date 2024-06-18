@@ -1,0 +1,6 @@
+DBFDEF md07
+   UNIDADE    C   3  0
+   UNIDDES    C  60  0
+   UNIDDEC    C   1  0
+ENDDEF
+ENDFILE

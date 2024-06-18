@@ -1,0 +1,11 @@
+DBFDEF lc
+   DOCUMENTO  C  20  0
+   DATA       C  10  0
+   NOVODOC    C  40  0
+   NOVODATA   C  10  0
+   TIPO       C  20  0
+   NUMCOMP    C  10  0
+   PASTA      C  10  0
+   NUMERO     N  10  0
+ENDDEF
+ENDFILE

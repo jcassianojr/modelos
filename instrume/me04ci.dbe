@@ -1,0 +1,13 @@
+DBFDEF ME04CI
+   OCC        N   8  0
+   ITEM       N   3  0
+   ESPECI     C  30  0
+   ENCTR      C  30  0
+   DESVIO     C  10  0
+   INCTOT     C  10  0
+   LAUDO      C   1  0
+   NRELAT     C   5  0
+   ASSNOM     C  10  0
+   ASSDAT     D   8  0
+ENDDEF
+ENDFILE

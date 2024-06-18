@@ -1,0 +1,18 @@
+DBFDEF rdtbx
+   CODIGO     C  24  0
+   SEQ        N   3  0
+   SSQ        N   3  0
+   MES        N   2  0
+   ANO        N   4  0
+   PQTDDE     N   7  0
+   PHORAS     N   6  2
+   QTDDE      N   9  2
+   PADRAO     N   5  0
+   PADRA4     N   5  0
+   MEDIA      N   6  2
+   MEDI4      N   6  2
+   SIMETRICA  L   1  0
+   DATAAPU    D   8  0
+   DATABAI    D   8  0
+ENDDEF
+ENDFILE

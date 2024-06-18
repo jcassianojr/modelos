@@ -1,0 +1,26 @@
+DBFDEF ME04D
+   OCD        N   8  0
+   CODIGO     C  24  0
+   MOTIVO     C   1  0
+   OBS01      C  50  0
+   OBS02      C  50  0
+   OBS03      C  50  0
+   INVALIDA   C   1  0
+   VERIFI     C  20  0
+   INSPECAO   C   1  0
+   CODIGOS    C  40  0
+   CLINOME    C  40  0
+   NF         C  30  0
+   ACLI01     C  50  0
+   ACLI02     C  50  0
+   INCIDE     C   1  0
+   FREQ1      C  20  0
+   FREQ2      C  20  0
+   ACOR01     C  75  0
+   ACOR02     C  75  0
+   ACOR03     C  75  0
+   ACOR04     C  75  0
+   RESPON     C  30  0
+   DATAOCD    D   8  0
+ENDDEF
+ENDFILE

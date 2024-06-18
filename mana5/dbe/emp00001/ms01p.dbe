@@ -1,0 +1,6 @@
+DBFDEF ms01p
+   CODIGO     C  24  0
+   FORNECEDO  N   5  0
+   PPLAN      N   9  4
+ENDDEF
+ENDFILE

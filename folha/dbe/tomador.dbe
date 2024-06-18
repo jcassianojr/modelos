@@ -1,0 +1,32 @@
+DBFDEF tomador
+   NUMERO     N   8  0
+   COGNOME    C  12  0
+   NOME       C  40  0
+   ENDERECO   C  40  0
+   BAIRRO     C  30  0
+   CIDADE     C  35  0
+   ESTADO     C   2  0
+   CEP        C   9  0
+   CXPOSTAL   C   5  0
+   DDDTLX     C   2  0
+   TELEX      C   6  0
+   DDD        C   2  0
+   TELEFONE   C  12  0
+   RAMAL      C   4  0
+   CONTATO    C  22  0
+   DDD1       C   2  0
+   TELEFONE1  C  12  0
+   RAMAL1     C   4  0
+   CONTATO1   C  22  0
+   DDDFAX     C   2  0
+   TELEFAX    C  12  0
+   CGC        C  18  0
+   INSCR      C  15  0
+   JUCESP     C  15  0
+   OBSERVA    C  30  0
+   PESSOA     C   1  0
+   IMUNI      C  15  0
+   SITE       C  30  0
+   EMAIL      C  30  0
+ENDDEF
+ENDFILE

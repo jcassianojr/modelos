@@ -1,0 +1,10 @@
+DBFDEF apu5g5
+   JUNTO      C  40  0
+   CODIGO     C  24  0
+   PERDIF     N   7  2
+   INTDIF     N   7  0
+   MES        N   2  0
+   ANO        N   4  0
+   COGCLI     C  15  0
+ENDDEF
+ENDFILE

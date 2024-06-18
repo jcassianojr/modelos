@@ -1,0 +1,15 @@
+DBFDEF cii
+   CI         N   8  0
+   ITEM       N   3  0
+   DESVIO     N   9  4
+   ENC        N   9  4
+   CENC       C  30  0
+   CESPE      C  40  0
+   ESPE       N   9  4
+   MAX        N   9  4
+   MIN        N   9  4
+   UND        C  20  0
+   LOCALI     C  30  0
+   LAUDO      C   1  0
+ENDDEF
+ENDFILE

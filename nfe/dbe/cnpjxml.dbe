@@ -1,0 +1,34 @@
+DBFDEF cnpjxml
+   CNPJ       C  14  0
+   IE         C  14  0
+   NOME       C  60  0
+   ENDERECO   C  60  0
+   CIDADE     C  35  0
+   CEP        C   8  0
+   TELEFONE   C  14  0
+   DDD        C   2  0
+   UF         C   2  0
+   IESUBST    C  14  0
+   IMUNICIPAL C  15  0
+   COGNOME    C  60  0
+   EMAIL      C  60  0
+   NUMEND     C  15  0
+   COMPLEM    C  30  0
+   BAIRRO     C  35  0
+   BACEN      C   5  0
+   PAIS       C  10  0
+   CNAE       C   7  0
+   SUFRAMA    C   9  0
+   CODIBGE    C   7  0
+   ULTIMAIMP  D   8  0
+   CODPART    C  20  0
+   CSIT       C   1  0
+   INDCREDNFE C   1  0
+   INDCREDCTE C   1  0
+   XREGAPUR   C   7  0
+   DINIATIV   C  10  0
+   DULTSIT    C  10  0
+   DINIXML    D   8  0
+   ENDTIP     C  10  0
+ENDDEF
+ENDFILE

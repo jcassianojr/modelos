@@ -1,0 +1,17 @@
+DBFDEF paises
+   BACEN      N   4  0
+   NOME       C  35  0
+   UF         C   2  0
+   DDD        C   3  0
+   DDDDIRETO  C   1  0
+   ISO3166A   C   2  0
+   ISO3166B   C   3  0
+   ISO3166C   C   3  0
+   NOMEINT    C  35  0
+   AREA       N   8  0
+   PERIM      N   7  0
+   INDEPYEAR  N   4  0
+   CONTINENT  C  15  0
+   LOGIXCONT  N   2  0
+ENDDEF
+ENDFILE

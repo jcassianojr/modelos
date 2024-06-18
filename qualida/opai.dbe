@@ -1,0 +1,6 @@
+DBFDEF opai
+   OPAE       N   8  0
+   ESPEC      C 100  0
+   LAUDO      C   1  0
+ENDDEF
+ENDFILE

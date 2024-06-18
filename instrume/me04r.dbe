@@ -1,0 +1,12 @@
+DBFDEF ME04R
+   NUMERO     N   8  0
+   CODIGO     C   8  0
+   CODOPER    N   8  0
+   SAIDA      D   8  0
+   HORASAI    N   6  2
+   DEVOLUCAO  D   8  0
+   HORADEV    N   6  2
+   AREA       C   2  0
+   SETOR      C   3  0
+ENDDEF
+ENDFILE

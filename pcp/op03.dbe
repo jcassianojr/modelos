@@ -1,0 +1,26 @@
+DBFDEF op03
+   OP         N   8  2
+   CODIGO     C  24  0
+   SEQ        N   3  0
+   SSQ        N   3  0
+   CLIENTE    N   8  0
+   COGNOME    C  12  0
+   VMES       N   6  0
+   VQUI       N   6  0
+   VMED       N  10  3
+   VMEQ       N  10  3
+   VPRG       N   6  0
+   CODMP01    C  12  0
+   COGMP01    C  10  0
+   QTTIME     N   8  5
+   QTTIM2     N   8  5
+   QTTIMM     N   8  5
+   QTTIMD     N   8  5
+   QINI       N   6  0
+   QSAI       N   6  0
+   QSAL       N   6  0
+   QPRO       N   6  0
+   FILIAL     N   2  0
+   CODINT     C  24  0
+ENDDEF
+ENDFILE

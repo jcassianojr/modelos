@@ -1,0 +1,11 @@
+DBFDEF ms06req
+   NUMERO     N   8  0
+   CODIGO     C  24  0
+   SEQ        N   3  0
+   SSQ        N   3  0
+   BXCOD      C  24  0
+   BXSEQ      N   3  0
+   BXSSQ      N   3  0
+   BXFAT      N   6  2
+ENDDEF
+ENDFILE

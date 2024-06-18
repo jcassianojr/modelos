@@ -1,0 +1,6 @@
+DBFDEF lvmp
+   ITEM       N   2  0
+   DESCRI     C 200  0
+   GRUPO      C   3  0
+ENDDEF
+ENDFILE

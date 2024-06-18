@@ -1,0 +1,9 @@
+DBFDEF fo_tab
+   TABELA     C   4  0
+   CODIGO     C   5  0
+   CODIG2     C   5  0
+   VALOR      N  12  5
+   DESCRI     C  70  0
+   DESCR2     C  70  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,16 @@
+DBFDEF sint55
+   TIPO       C   2  0
+   CGC        C  14  0
+   IE         C  14  0
+   DTGNRE     D   8  0
+   UF         C   2  0
+   UFFAVOR    C   2  0
+   BANCO      C   3  0
+   AGENCIA    C   4  0
+   NUMGNRE    C  20  0
+   VALGNRE    N  13  2
+   DTVENC     D   8  0
+   MESANOREF  C   6  0
+   CONVENIO   C  30  0
+ENDDEF
+ENDFILE

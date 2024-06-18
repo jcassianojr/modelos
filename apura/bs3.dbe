@@ -1,0 +1,20 @@
+DBFDEF bs3
+   CODIGO     C  12  0
+   NOME       C  30  0
+   GRUPOUTL   C   3  0
+   ESTOQUE    N  10  0
+   ESTOQU3    N  10  0
+   USO01      N  10  0
+   USO02      N  10  0
+   USO03      N  10  0
+   USO04      N  10  0
+   SAL01      N  10  0
+   SAL02      N  10  0
+   SAL03      N  10  0
+   SAL04      N  10  0
+   SA301      N  10  0
+   SA302      N  10  0
+   SA303      N  10  0
+   SA304      N  10  0
+ENDDEF
+ENDFILE

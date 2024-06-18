@@ -1,0 +1,9 @@
+DBFDEF mx04
+   SEQ        N   5  0
+   CLIENTE    N   8  0
+   COGNOME    C  12  0
+   DATA       D   8  0
+   HORA       N   6  2
+   VALOR      N   9  2
+ENDDEF
+ENDFILE

@@ -1,0 +1,15 @@
+DBFDEF ginssd
+   NUMEMP     N   5  0
+   VALREC     N  12  2
+   VALEMP     N  12  2
+   VALTER     N  12  2
+   VALDED     N  12  2
+   VALLIQ     N  12  2
+   MES        N   2  0
+   ANO        N   4  0
+   DEPTO      N   4  0
+   SETOR      N   3  0
+   SECAO      N   3  0
+   CONTROLE   C  18  0
+ENDDEF
+ENDFILE

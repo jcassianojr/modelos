@@ -1,0 +1,18 @@
+DBFDEF crrsapp
+   SEQ        N   3  0
+   CODIGO     C  24  0
+   NOME       C  40  0
+   PRODUSO    C   1  0
+   QTDE       N   7  0
+   SET01      N   7  0
+   SET02      N   7  0
+   SET03      N   7  0
+   SET04      N   7  0
+   SET05      N   7  0
+   SET06      N   7  0
+   SET07      N   7  0
+   SET08      N   7  0
+   SET09      N   7  0
+   SET00      N   7  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,6 @@
+DBFDEF crrsapc
+   SEQ        N   3  0
+   CLIENTE    N   8  0
+   QTDE       N  12  0
+ENDDEF
+ENDFILE

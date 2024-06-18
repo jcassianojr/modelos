@@ -1,0 +1,5 @@
+DBFDEF medmmb
+   CODIGO     C   1  0
+   NOME       C   6  0
+ENDDEF
+ENDFILE

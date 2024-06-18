@@ -1,0 +1,18 @@
+DBFDEF acdi
+   ACD        N   8  0
+   VAL01      N   9  4
+   VAL02      N   9  4
+   VAL03      N   9  4
+   VAL04      N   9  4
+   VAL05      N   9  4
+   MEDX       N   9  4
+   VALR       N   9  4
+   DATA       D   8  0
+   HORA       N   5  2
+   ACP        N   8  0
+   AEP        N   8  0
+   ORDEM      N   3  0
+   LIC        N   9  4
+   LSC        N   9  4
+ENDDEF
+ENDFILE

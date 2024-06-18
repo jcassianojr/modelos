@@ -1,0 +1,5 @@
+DBFDEF foptopis
+   NUMERO     N   8  0
+   PIS        C  12  0
+ENDDEF
+ENDFILE

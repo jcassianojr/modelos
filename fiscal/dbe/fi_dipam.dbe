@@ -1,0 +1,5 @@
+DBFDEF fi_dipam
+   DIPAM      C   2  0
+   NOME       C 100  0
+ENDDEF
+ENDFILE

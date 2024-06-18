@@ -1,0 +1,8 @@
+DBFDEF lvfi
+   LVF        N   8  0
+   ITEM       N   2  0
+   DESCRI     C  50  0
+   OPER01     C   1  0
+   OPER02     C   1  0
+ENDDEF
+ENDFILE

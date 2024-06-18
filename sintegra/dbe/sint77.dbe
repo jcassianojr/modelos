@@ -1,0 +1,20 @@
+DBFDEF sint77
+   TIPO       C   2  0
+   CGC        C  14  0
+   MODEL77    C   2  0
+   SERIE77    C   2  0
+   SUBSER77   C   2  0
+   NFISC77    C  10  0
+   CFOP77     C   4  0
+   TIPREC77   C   1  0
+   ITEM77     C   3  0
+   PRODUT77   C  11  0
+   QUANT77    N  13  3
+   VALPRO77   N  12  2
+   VALDES77   N  12  2
+   BASEIC77   N  12  2
+   ALIQIC77   N   2  0
+   CNPJMF     C  14  0
+   CODTERM    C  10  0
+ENDDEF
+ENDFILE

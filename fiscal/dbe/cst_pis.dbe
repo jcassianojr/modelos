@@ -1,0 +1,7 @@
+DBFDEF cst_pis
+   CODIGO     C   2  0
+   NOME       C 150  0
+   DT_INI     D   8  0
+   DT_FIN     D   8  0
+ENDDEF
+ENDFILE

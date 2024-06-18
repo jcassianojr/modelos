@@ -1,0 +1,19 @@
+DBFDEF manfec
+   ARQORI     C   8  0
+   STRANO     C   8  0
+   STRDES     C   2  0
+   STRATU     C   8  0
+   STRBAI     C   8  0
+   FECANU     C 100  0
+   CAMDAT     C  10  0
+   CAMDA2     C  10  0
+   OPER01     C 200  0
+   OPER02     C 200  0
+   OPER03     C 200  0
+   OPER04     C 200  0
+   OPER05     C 200  0
+   OPER06     C 200  0
+   OPER07     C 200  0
+   FECHAAUTO  C   1  0
+ENDDEF
+ENDFILE

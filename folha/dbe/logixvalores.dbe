@@ -1,0 +1,9 @@
+DBFDEF logixvalores
+   EMPRESA    N   2  0
+   NUMERO     N   8  0
+   ANO        N   4  0
+   MES        N   2  0
+   EVENTO     N   4  0
+   HORAS      N   7  2
+ENDDEF
+ENDFILE

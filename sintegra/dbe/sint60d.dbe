@@ -1,0 +1,14 @@
+DBFDEF sint60d
+   TIPO       C   2  0
+   SUB60D     C   1  0
+   EMIS60D    D   8  0
+   NUMFABD    C  20  0
+   PROD60D    C  14  0
+   QUANT60D   N  13  3
+   VALPRO60D  N  16  2
+   BASEIC60D  N  16  2
+   SITTRI60D  C   4  0
+   VALICM60D  N  13  2
+   BRANCO60D  C  19  0
+ENDDEF
+ENDFILE

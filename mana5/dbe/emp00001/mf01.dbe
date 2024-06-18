@@ -1,0 +1,14 @@
+DBFDEF mf01
+   NUMERO     C   3  0
+   DIGITO     C   1  0
+   COGNOME    C  12  0
+   NOME       C  60  0
+   BANCO      N   3  0
+   CARTEIRA   C   3  0
+   FLUXODIA   C   1  0
+   SITE       C  50  0
+   ISPB       C   8  0
+   CNPJ       C  18  0
+   NOMECOMP   C  80  0
+ENDDEF
+ENDFILE

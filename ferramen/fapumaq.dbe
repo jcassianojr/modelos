@@ -1,0 +1,7 @@
+DBFDEF fapumaq
+   SEQ        N   3  0
+   FERRAM     C   4  0
+   QTDE       N  12  0
+   HORAS      N   9  2
+ENDDEF
+ENDFILE

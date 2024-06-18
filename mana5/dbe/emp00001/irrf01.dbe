@@ -1,0 +1,18 @@
+DBFDEF IRRF01
+   NUMERO     N   8  0
+   DARF       C   4  0
+   DOCUMENTO  C  20  0
+   ANO        N   4  0
+   CGC        C  18  0
+   PESSOA     C   1  0
+   NOME       C  40  0
+   ENDERECO   C  40  0
+   CIDADE     C  30  0
+   ESTADO     C   2  0
+   BAIRRO     C  30  0
+   CEP        C   9  0
+   DDD        C   2  0
+   TELEFONE   C  12  0
+   CONTATO    C  12  0
+ENDDEF
+ENDFILE

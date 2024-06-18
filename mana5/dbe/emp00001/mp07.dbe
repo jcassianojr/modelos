@@ -1,0 +1,6 @@
+DBFDEF mp07
+   ARMARIO    N   8  0
+   NUMERO     N   8  0
+   NOME       C  40  0
+ENDDEF
+ENDFILE
