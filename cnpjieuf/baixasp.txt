@@ -1,0 +1,1 @@
+maior 100 mega nao suportado git esta no \develop\git
