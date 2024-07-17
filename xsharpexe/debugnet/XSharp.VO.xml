@@ -109,17 +109,17 @@
     <member name="M:XSharp.OleDateTime.ToString">
       <summary>Converts the value of the current <see cref="T:System.DateTime" /> object to its equivalent string representation using the formatting conventions of the current culture.</summary>
       <returns>A string representation of the value of the current <see cref="T:System.DateTime" /> object.</returns>
-      <exception cref="T:System.ArgumentOutOfRangeException">The date and time is outside the range of dates supported by the calendar used by the current culture. </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">The date and time is outside the range of dates supported by the calendar used by the current culture.</exception>
     </member>
     <member name="M:XSharp.OleDateTime.ToString(System.IFormatProvider)">
       <summary>Converts the value of the current <see cref="T:System.DateTime" /> object to its equivalent string representation using the formatting conventions of the current culture.</summary>
       <returns>A string representation of the value of the current <see cref="T:System.DateTime" /> object.</returns>
-      <exception cref="T:System.ArgumentOutOfRangeException">The date and time is outside the range of dates supported by the calendar used by the current culture. </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">The date and time is outside the range of dates supported by the calendar used by the current culture.</exception>
     </member>
     <member name="M:XSharp.OleDateTime.ToString(System.String,System.IFormatProvider)">
       <summary>Converts the value of the current <see cref="T:System.DateTime" /> object to its equivalent string representation using the formatting conventions of the current culture.</summary>
       <returns>A string representation of the value of the current <see cref="T:System.DateTime" /> object.</returns>
-      <exception cref="T:System.ArgumentOutOfRangeException">The date and time is outside the range of dates supported by the calendar used by the current culture. </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">The date and time is outside the range of dates supported by the calendar used by the current culture.</exception>
     </member>
     <member name="T:XSharp.VObject">
       <summary>Base class for many types used in the VO SDK Classes</summary>

@@ -962,6 +962,8 @@
     <member name="T:XSharp.DialectChanged">
       <summary>Delegate used for the DialectChanged Event handler</summary>
     </member>
+    <member name="T:XSharp.DialectExtension"></member>
+    <member name="M:XSharp.DialectExtension.IsVoLike(XSharp.XSharpDialect)"></member>
     <member name="T:XSharp.Error">
       <summary>XSharp Runtime base Error class</summary>
     </member>
@@ -1246,6 +1248,14 @@
             </summary>
       <value>A value of the __UsualType enum</value>
     </member>
+    <member name="T:XSharp.ICurrency">
+      <summary>
+            This interface is used to return Decimal values from the RDD system
+            </summary>
+    </member>
+    <member name="P:XSharp.ICurrency.Value">
+      <summary>Decimal value of the Currency</summary>
+    </member>
     <member name="T:XSharp.IDate">
       <summary>
             This interface defines Date values
@@ -1271,6 +1281,8 @@
       <summary>Year part of the date. A number between 0 and 9999</summary>
       <returns>Integer value</returns>
     </member>
+    <member name="T:XSharp.IDbConnectionClient"></member>
+    <member name="P:XSharp.IDbConnectionClient.DbConnection"></member>
     <member name="T:XSharp.IDbNotify">
       <summary>
             This interface must be implemented by objects that register themselves for DB Notifications
@@ -1297,7 +1309,6 @@
     </member>
     <member name="P:XSharp.IFloat.Value">
       <summary>Double value of the Float</summary>
-      <returns>Integer value</returns>
     </member>
     <member name="T:XSharp.IMacroCompiler">
       <summary>
@@ -1570,6 +1581,10 @@
     <member name="P:XSharp.RuntimeState.Optimize">
       <summary>RDD Optimize Flag  </summary>
     </member>
+    <member name="P:XSharp.RuntimeState.Refresh">
+      <summary>The current SetRefresh flag.</summary>
+    </member>
+    <member name="P:XSharp.RuntimeState.RunningOnWindows"></member>
     <member name="P:XSharp.RuntimeState.Safety">
       <summary>The current SetSafety flag.</summary>
     </member>
@@ -2701,7 +2716,16 @@
         </summary>
       <param name="cString">The character to convert to a number.</param>
       <returns>
-            A number from 0 to 255, representing the ASCII code of <paramref name=" cString " />.
+            A number from 0 to 255, representing the ASCII code of <paramref name="cString" />.
+        </returns>
+    </member>
+    <member name="M:XSharp.Core.Functions.AscA(System.String)">
+      <summary>
+            Convert a character to its ASCII value.
+        </summary>
+      <param name="cString">The character to convert to a number.</param>
+      <returns>
+            A number from 0 to 255, representing the ASCII code of <paramref name="cString" />.
         </returns>
     </member>
     <member name="M:XSharp.Core.Functions.AscW(System.String)">
@@ -2709,7 +2733,7 @@
             Convert a character to its Unicode ASCII value.
             </summary>
       <param name="c"></param>
-      <returns></returns>
+      <returns>Number of the Unicode character</returns>
     </member>
     <member name="M:XSharp.Core.Functions.At(System.String,System.String)">
       <summary>
@@ -2964,7 +2988,7 @@
       <summary>
             Convert an ASCII code to a character value, always using the Ansi codepage, ignoring the SetAnsi() setting.
             </summary>
-      <param name="dwChar"></param>
+      <param name="dwCode"></param>
       <returns></returns>
     </member>
     <member name="M:XSharp.Core.Functions.ChrW(System.UInt32)">
@@ -5564,7 +5588,7 @@
         </returns>
     </member>
     <member name="M:XSharp.Core.Functions.Oem2AnsiA(System.Byte[])">
-      <summary>Represents text as a sequence of UTF-16 code units.To browse the .NET Framework source code for this type, see the Reference Source.</summary>
+      <summary>Represents text as a sequence of UTF-16 code units.</summary>
       <param name="bSource">A byte array that contains the string to convert</param>
     </member>
     <member name="M:XSharp.Core.Functions.Oem2AnsiA(System.String@)">
@@ -6659,6 +6683,26 @@
         </param>
       <returns></returns>
     </member>
+    <member name="M:XSharp.Core.Functions.SetRefresh">
+      <summary>
+            Retrieve and optionally set the time for which the RDD system caches data.
+        </summary>
+      <param name="nNewSetting">The acceptable difference between 2 numbers.</param>
+      <returns>
+            If <paramref name="nNewSetting" /> is not specified, SetRefresh() returns the current setting.<br />
+            If <paramref name="nNewSetting" /> is specified, the previous setting is returned.
+        </returns>
+    </member>
+    <member name="M:XSharp.Core.Functions.SetRefresh(System.Double)">
+      <summary>
+            Retrieve and optionally set the time for which the RDD system caches data.
+        </summary>
+      <param name="nNewSetting">The acceptable difference between 2 numbers.</param>
+      <returns>
+            If <paramref name="nNewSetting" /> is not specified, SetRefresh() returns the current setting.<br />
+            If <paramref name="nNewSetting" /> is specified, the previous setting is returned.
+        </returns>
+    </member>
     <member name="M:XSharp.Core.Functions.SetSafety"></member>
     <member name="M:XSharp.Core.Functions.SetSafety(System.Boolean)"></member>
     <member name="M:XSharp.Core.Functions.SetScience">
@@ -7306,76 +7350,81 @@
     </member>
     <member name="M:XSharp.IO.XsBufferedFileStream.Flush(System.Boolean)">
       <summary>Clears buffers for this stream and causes any buffered data to be written to the file, and also clears all intermediate file buffers.</summary>
-      <param name="flushToDisk">true to flush all intermediate file buffers; otherwise, false. </param>
+      <param name="flushToDisk">
+        <see langword="true" /> to flush all intermediate file buffers; otherwise, <see langword="false" />.</param>
     </member>
     <member name="P:XSharp.IO.XsBufferedFileStream.Length">
       <summary>Gets the length in bytes of the stream.</summary>
       <returns>A long value representing the length of the stream in bytes.</returns>
       <exception cref="T:System.NotSupportedException">
-        <see cref="P:System.IO.FileStream.CanSeek" /> for this stream is false. </exception>
-      <exception cref="T:System.IO.IOException">An I/O error, such as the file being closed, occurred. </exception>
+        <see cref="P:System.IO.FileStream.CanSeek" /> for this stream is <see langword="false" />.</exception>
+      <exception cref="T:System.IO.IOException">An I/O error, such as the file being closed, occurred.</exception>
     </member>
     <member name="P:XSharp.IO.XsBufferedFileStream.Position">
       <summary>Gets or sets the current position of this stream.</summary>
       <returns>The current position of this stream.</returns>
-      <exception cref="T:System.NotSupportedException">The stream does not support seeking. </exception>
-      <exception cref="T:System.IO.IOException">An I/O error occurred. - or -The position was set to a very large value beyond the end of the stream in Windows 98 or earlier.</exception>
-      <exception cref="T:System.ArgumentOutOfRangeException">Attempted to set the position to a negative value. </exception>
-      <exception cref="T:System.IO.EndOfStreamException">Attempted seeking past the end of a stream that does not support this. </exception>
+      <exception cref="T:System.NotSupportedException">The stream does not support seeking.</exception>
+      <exception cref="T:System.IO.IOException">An I/O error occurred.  
+-or-
+ The position was set to a very large value beyond the end of the stream in Windows 98 or earlier.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">Attempted to set the position to a negative value.</exception>
+      <exception cref="T:System.IO.EndOfStreamException">Attempted seeking past the end of a stream that does not support this.</exception>
     </member>
     <member name="M:XSharp.IO.XsBufferedFileStream.Read(System.Byte[],System.Int32,System.Int32)">
       <summary>Reads a block of bytes from the stream and writes the data in a given buffer.</summary>
-      <param name="array">When this method returns, contains the specified byte array with the values between <paramref name="offset" /> and (<paramref name="offset" /> + <paramref name="count" /> - 1<paramref name=")" /> replaced by the bytes read from the current source. </param>
-      <param name="offset">The byte offset in <paramref name="array" /> at which the read bytes will be placed. </param>
-      <param name="count">The maximum number of bytes to read. </param>
+      <param name="array">When this method returns, contains the specified byte array with the values between <paramref name="offset" /> and (<paramref name="offset" /> + <paramref name="count" /> - 1) replaced by the bytes read from the current source.</param>
+      <param name="offset">The byte offset in <paramref name="array" /> at which the read bytes will be placed.</param>
+      <param name="count">The maximum number of bytes to read.</param>
       <returns>The total number of bytes read into the buffer. This might be less than the number of bytes requested if that number of bytes are not currently available, or zero if the end of the stream is reached.</returns>
       <exception cref="T:System.ArgumentNullException">
-        <paramref name="array" /> is null. </exception>
+        <paramref name="array" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentOutOfRangeException">
-        <paramref name="offset" /> or <paramref name="count" /> is negative. </exception>
-      <exception cref="T:System.NotSupportedException">The stream does not support reading. </exception>
-      <exception cref="T:System.IO.IOException">An I/O error occurred. </exception>
+        <paramref name="offset" /> or <paramref name="count" /> is negative.</exception>
+      <exception cref="T:System.NotSupportedException">The stream does not support reading.</exception>
+      <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
       <exception cref="T:System.ArgumentException">
-        <paramref name="offset" /> and <paramref name="count" /> describe an invalid range in <paramref name="array" />. </exception>
-      <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed. </exception>
+        <paramref name="offset" /> and <paramref name="count" /> describe an invalid range in <paramref name="array" />.</exception>
+      <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
     </member>
     <member name="M:XSharp.IO.XsBufferedFileStream.Seek(System.Int64,System.IO.SeekOrigin)">
       <summary>Sets the current position of this stream to the given value.</summary>
-      <param name="offset">The point relative to <paramref name="origin" /> from which to begin seeking. </param>
-      <param name="origin">Specifies the beginning, the end, or the current position as a reference point for <paramref name="offset" />, using a value of type <see cref="T:System.IO.SeekOrigin" />. </param>
+      <param name="offset">The point relative to <paramref name="origin" /> from which to begin seeking.</param>
+      <param name="origin">Specifies the beginning, the end, or the current position as a reference point for <paramref name="offset" />, using a value of type <see cref="T:System.IO.SeekOrigin" />.</param>
       <returns>The new position in the stream.</returns>
-      <exception cref="T:System.IO.IOException">An I/O error occurred. </exception>
-      <exception cref="T:System.NotSupportedException">The stream does not support seeking, such as if the FileStream is constructed from a pipe or console output. </exception>
-      <exception cref="T:System.ArgumentException">Seeking is attempted before the beginning of the stream. </exception>
-      <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed. </exception>
+      <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
+      <exception cref="T:System.NotSupportedException">The stream does not support seeking, such as if the <see langword="FileStream" /> is constructed from a pipe or console output.</exception>
+      <exception cref="T:System.ArgumentException">Seeking is attempted before the beginning of the stream.</exception>
+      <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
     </member>
     <member name="M:XSharp.IO.XsBufferedFileStream.SetLength(System.Int64)">
       <summary>Sets the length of this stream to the given value.</summary>
-      <param name="value">The new length of the stream. </param>
-      <exception cref="T:System.IO.IOException">An I/O error has occurred. </exception>
-      <exception cref="T:System.NotSupportedException">The stream does not support both writing and seeking. </exception>
-      <exception cref="T:System.ArgumentOutOfRangeException">Attempted to set the <paramref name="value" /> parameter to less than 0. </exception>
+      <param name="value">The new length of the stream.</param>
+      <exception cref="T:System.IO.IOException">An I/O error has occurred.</exception>
+      <exception cref="T:System.NotSupportedException">The stream does not support both writing and seeking.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">Attempted to set the <paramref name="value" /> parameter to less than 0.</exception>
     </member>
     <member name="M:XSharp.IO.XsBufferedFileStream.Write(System.Byte[],System.Int32,System.Int32)">
       <summary>Writes a block of bytes to the file stream.</summary>
       <param name="array">The buffer containing data to write to the stream.</param>
-      <param name="offset">The zero-based byte offset in <paramref name="array" /> from which to begin copying bytes to the stream. </param>
-      <param name="count">The maximum number of bytes to write. </param>
+      <param name="offset">The zero-based byte offset in <paramref name="array" /> from which to begin copying bytes to the stream.</param>
+      <param name="count">The maximum number of bytes to write.</param>
       <exception cref="T:System.ArgumentNullException">
-        <paramref name="array" /> is null. </exception>
+        <paramref name="array" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
-        <paramref name="offset" /> and <paramref name="count" /> describe an invalid range in <paramref name="array" />. </exception>
+        <paramref name="offset" /> and <paramref name="count" /> describe an invalid range in <paramref name="array" />.</exception>
       <exception cref="T:System.ArgumentOutOfRangeException">
-        <paramref name="offset" /> or <paramref name="count" /> is negative. </exception>
-      <exception cref="T:System.IO.IOException">An I/O error occurred. - or -Another thread may have caused an unexpected change in the position of the operating system's file handle. </exception>
-      <exception cref="T:System.ObjectDisposedException">The stream is closed. </exception>
-      <exception cref="T:System.NotSupportedException">The current stream instance does not support writing. </exception>
+        <paramref name="offset" /> or <paramref name="count" /> is negative.</exception>
+      <exception cref="T:System.IO.IOException">An I/O error occurred.  
+-or-
+ Another thread may have caused an unexpected change in the position of the operating system's file handle.</exception>
+      <exception cref="T:System.ObjectDisposedException">The stream is closed.</exception>
+      <exception cref="T:System.NotSupportedException">The current stream instance does not support writing.</exception>
     </member>
     <member name="M:XSharp.IO.XsBufferedFileStream.WriteByte(System.Byte)">
       <summary>Writes a byte to the current position in the file stream.</summary>
-      <param name="value">A byte to write to the stream. </param>
-      <exception cref="T:System.ObjectDisposedException">The stream is closed. </exception>
-      <exception cref="T:System.NotSupportedException">The stream does not support writing. </exception>
+      <param name="value">A byte to write to the stream.</param>
+      <exception cref="T:System.ObjectDisposedException">The stream is closed.</exception>
+      <exception cref="T:System.NotSupportedException">The stream does not support writing.</exception>
     </member>
     <member name="M:XSharp.IO.XsBufferedFileStream.XRead(System.Int64,System.Byte[],System.Int32)">
       <summary>Bypass the buffered Read mechanism and call the original Read() method in the base class</summary>
@@ -7388,26 +7437,34 @@
     </member>
     <member name="M:XSharp.IO.XsFileStream.#ctor(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,System.Int32,System.IO.FileOptions)">
       <summary>Initializes a new instance of the <see cref="T:System.IO.FileStream" /> class with the specified path, creation mode, read/write and sharing permission, the access other FileStreams can have to the same file, the buffer size, and additional file options.</summary>
-      <param name="path">A relative or absolute path for the file that the current FileStream object will encapsulate. </param>
-      <param name="mode">A constant that determines how to open or create the file. </param>
-      <param name="access">A constant that determines how the file can be accessed by the FileStream object. This also determines the values returned by the <see cref="P:System.IO.FileStream.CanRead" /> and <see cref="P:System.IO.FileStream.CanWrite" /> properties of the FileStream object. <see cref="P:System.IO.FileStream.CanSeek" /> is true if <paramref name="path" /> specifies a disk file. </param>
-      <param name="share">A constant that determines how the file will be shared by processes. </param>
+      <param name="path">A relative or absolute path for the file that the current <see langword="FileStream" /> object will encapsulate.</param>
+      <param name="mode">A constant that determines how to open or create the file.</param>
+      <param name="access">A constant that determines how the file can be accessed by the <see langword="FileStream" /> object. This also determines the values returned by the <see cref="P:System.IO.FileStream.CanRead" /> and <see cref="P:System.IO.FileStream.CanWrite" /> properties of the <see langword="FileStream" /> object. <see cref="P:System.IO.FileStream.CanSeek" /> is <see langword="true" /> if <paramref name="path" /> specifies a disk file.</param>
+      <param name="share">A constant that determines how the file will be shared by processes.</param>
       <param name="bufferSize">A positive <see cref="T:System.Int32" /> value greater than 0 indicating the buffer size. The default buffer size is 4096.</param>
       <param name="options">A value that specifies additional file options.</param>
       <exception cref="T:System.ArgumentNullException">
-        <paramref name="path" /> is null. </exception>
+        <paramref name="path" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
-        <paramref name="path" /> is an empty string (""), contains only white space, or contains one or more invalid characters. -or-<paramref name="path" /> refers to a non-file device, such as "con:", "com1:", "lpt1:", etc. in an NTFS environment.</exception>
+        <paramref name="path" /> is an empty string (""), contains only white space, or contains one or more invalid characters.  
+-or-  
+<paramref name="path" /> refers to a non-file device, such as "con:", "com1:", "lpt1:", etc. in an NTFS environment.</exception>
       <exception cref="T:System.NotSupportedException">
         <paramref name="path" /> refers to a non-file device, such as "con:", "com1:", "lpt1:", etc. in a non-NTFS environment.</exception>
       <exception cref="T:System.ArgumentOutOfRangeException">
-        <paramref name="bufferSize" /> is negative or zero.-or- <paramref name="mode" />, <paramref name="access" />, or <paramref name="share" /> contain an invalid value. </exception>
-      <exception cref="T:System.IO.FileNotFoundException">The file cannot be found, such as when <paramref name="mode" /> is FileMode.Truncate or FileMode.Open, and the file specified by <paramref name="path" /> does not exist. The file must already exist in these modes. </exception>
-      <exception cref="T:System.IO.IOException">An I/O error, such as specifying FileMode.CreateNew when the file specified by <paramref name="path" /> already exists, occurred.-or-The stream has been closed.</exception>
-      <exception cref="T:System.Security.SecurityException">The caller does not have the required permission. </exception>
-      <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid, such as being on an unmapped drive. </exception>
-      <exception cref="T:System.UnauthorizedAccessException">The <paramref name="access" /> requested is not permitted by the operating system for the specified <paramref name="path" />, such as when <paramref name="access" /> is Write or ReadWrite and the file or directory is set for read-only access. -or-<see cref="F:System.IO.FileOptions.Encrypted" /> is specified for <paramref name="options" />, but file encryption is not supported on the current platform.</exception>
-      <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters, and file names must be less than 260 characters. </exception>
+        <paramref name="bufferSize" /> is negative or zero.  
+-or-  
+<paramref name="mode" />, <paramref name="access" />, or <paramref name="share" /> contain an invalid value.</exception>
+      <exception cref="T:System.IO.FileNotFoundException">The file cannot be found, such as when <paramref name="mode" /> is <see langword="FileMode.Truncate" /> or <see langword="FileMode.Open" />, and the file specified by <paramref name="path" /> does not exist. The file must already exist in these modes.</exception>
+      <exception cref="T:System.IO.IOException">An I/O error, such as specifying <see langword="FileMode.CreateNew" /> when the file specified by <paramref name="path" /> already exists, occurred.  
+ -or-  
+ The stream has been closed.</exception>
+      <exception cref="T:System.Security.SecurityException">The caller does not have the required permission.</exception>
+      <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid, such as being on an unmapped drive.</exception>
+      <exception cref="T:System.UnauthorizedAccessException">The <paramref name="access" /> requested is not permitted by the operating system for the specified <paramref name="path" />, such as when <paramref name="access" /> is <see langword="Write" /> or <see langword="ReadWrite" /> and the file or directory is set for read-only access.  
+ -or-  
+ <see cref="F:System.IO.FileOptions.Encrypted" /> is specified for <paramref name="options" />, but file encryption is not supported on the current platform.</exception>
+      <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length.</exception>
     </member>
     <member name="M:XSharp.IO.XsFileStream.CreateFileStream(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,System.Int32,System.IO.FileOptions)">
       <summary>Create a XsFileStream object on Windows and a normal FileStream object on other OS-es</summary>
@@ -7417,171 +7474,177 @@
     </member>
     <member name="M:XSharp.IO.XsFileStream.Flush">
       <summary>Clears buffers for this stream and causes any buffered data to be written to the file.</summary>
-      <exception cref="T:System.IO.IOException">An I/O error occurred. </exception>
-      <exception cref="T:System.ObjectDisposedException">The stream is closed. </exception>
+      <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
+      <exception cref="T:System.ObjectDisposedException">The stream is closed.</exception>
     </member>
     <member name="M:XSharp.IO.XsFileStream.Flush(System.Boolean)">
       <summary>Clears buffers for this stream and causes any buffered data to be written to the file, and also clears all intermediate file buffers.</summary>
-      <param name="flushToDisk">true to flush all intermediate file buffers; otherwise, false. </param>
+      <param name="flushToDisk">
+        <see langword="true" /> to flush all intermediate file buffers; otherwise, <see langword="false" />.</param>
     </member>
     <member name="M:XSharp.IO.XsFileStream.Lock(System.Int64,System.Int64)">
       <summary>Prevents other processes from reading from or writing to the <see cref="T:System.IO.FileStream" />.</summary>
-      <param name="position">The beginning of the range to lock. The value of this parameter must be equal to or greater than zero (0). </param>
-      <param name="length">The range to be locked. </param>
+      <param name="position">The beginning of the range to lock. The value of this parameter must be equal to or greater than zero (0).</param>
+      <param name="length">The range to be locked.</param>
       <exception cref="T:System.ArgumentOutOfRangeException">
-        <paramref name="position" /> or <paramref name="length" /> is negative. </exception>
-      <exception cref="T:System.ObjectDisposedException">The file is closed. </exception>
+        <paramref name="position" /> or <paramref name="length" /> is negative.</exception>
+      <exception cref="T:System.ObjectDisposedException">The file is closed.</exception>
       <exception cref="T:System.IO.IOException">The process cannot access the file because another process has locked a portion of the file.</exception>
     </member>
     <member name="M:XSharp.IO.XsFileStream.Read(System.Byte[],System.Int32,System.Int32)">
       <summary>Reads a block of bytes from the stream and writes the data in a given buffer.</summary>
-      <param name="array">When this method returns, contains the specified byte array with the values between <paramref name="offset" /> and (<paramref name="offset" /> + <paramref name="count" /> - 1<paramref name=")" /> replaced by the bytes read from the current source. </param>
-      <param name="offset">The byte offset in <paramref name="array" /> at which the read bytes will be placed. </param>
-      <param name="count">The maximum number of bytes to read. </param>
+      <param name="array">When this method returns, contains the specified byte array with the values between <paramref name="offset" /> and (<paramref name="offset" /> + <paramref name="count" /> - 1) replaced by the bytes read from the current source.</param>
+      <param name="offset">The byte offset in <paramref name="array" /> at which the read bytes will be placed.</param>
+      <param name="count">The maximum number of bytes to read.</param>
       <returns>The total number of bytes read into the buffer. This might be less than the number of bytes requested if that number of bytes are not currently available, or zero if the end of the stream is reached.</returns>
       <exception cref="T:System.ArgumentNullException">
-        <paramref name="array" /> is null. </exception>
+        <paramref name="array" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentOutOfRangeException">
-        <paramref name="offset" /> or <paramref name="count" /> is negative. </exception>
-      <exception cref="T:System.NotSupportedException">The stream does not support reading. </exception>
-      <exception cref="T:System.IO.IOException">An I/O error occurred. </exception>
+        <paramref name="offset" /> or <paramref name="count" /> is negative.</exception>
+      <exception cref="T:System.NotSupportedException">The stream does not support reading.</exception>
+      <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
       <exception cref="T:System.ArgumentException">
-        <paramref name="offset" /> and <paramref name="count" /> describe an invalid range in <paramref name="array" />. </exception>
-      <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed. </exception>
+        <paramref name="offset" /> and <paramref name="count" /> describe an invalid range in <paramref name="array" />.</exception>
+      <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
     </member>
     <member name="M:XSharp.IO.XsFileStream.Seek(System.Int64,System.IO.SeekOrigin)">
       <summary>Sets the current position of this stream to the given value.</summary>
-      <param name="offset">The point relative to <paramref name="origin" /> from which to begin seeking. </param>
-      <param name="origin">Specifies the beginning, the end, or the current position as a reference point for <paramref name="offset" />, using a value of type <see cref="T:System.IO.SeekOrigin" />. </param>
+      <param name="offset">The point relative to <paramref name="origin" /> from which to begin seeking.</param>
+      <param name="origin">Specifies the beginning, the end, or the current position as a reference point for <paramref name="offset" />, using a value of type <see cref="T:System.IO.SeekOrigin" />.</param>
       <returns>The new position in the stream.</returns>
-      <exception cref="T:System.IO.IOException">An I/O error occurred. </exception>
-      <exception cref="T:System.NotSupportedException">The stream does not support seeking, such as if the FileStream is constructed from a pipe or console output. </exception>
-      <exception cref="T:System.ArgumentException">Seeking is attempted before the beginning of the stream. </exception>
-      <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed. </exception>
+      <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
+      <exception cref="T:System.NotSupportedException">The stream does not support seeking, such as if the <see langword="FileStream" /> is constructed from a pipe or console output.</exception>
+      <exception cref="T:System.ArgumentException">Seeking is attempted before the beginning of the stream.</exception>
+      <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
     </member>
     <member name="M:XSharp.IO.XsFileStream.SetLength(System.Int64)">
       <summary>Sets the length of this stream to the given value.</summary>
-      <param name="value">The new length of the stream. </param>
-      <exception cref="T:System.IO.IOException">An I/O error has occurred. </exception>
-      <exception cref="T:System.NotSupportedException">The stream does not support both writing and seeking. </exception>
-      <exception cref="T:System.ArgumentOutOfRangeException">Attempted to set the <paramref name="value" /> parameter to less than 0. </exception>
+      <param name="value">The new length of the stream.</param>
+      <exception cref="T:System.IO.IOException">An I/O error has occurred.</exception>
+      <exception cref="T:System.NotSupportedException">The stream does not support both writing and seeking.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">Attempted to set the <paramref name="value" /> parameter to less than 0.</exception>
     </member>
     <member name="M:XSharp.IO.XsFileStream.Unlock(System.Int64,System.Int64)">
       <summary>Allows access by other processes to all or part of a file that was previously locked.</summary>
-      <param name="position">The beginning of the range to unlock. </param>
-      <param name="length">The range to be unlocked. </param>
+      <param name="position">The beginning of the range to unlock.</param>
+      <param name="length">The range to be unlocked.</param>
       <exception cref="T:System.ArgumentOutOfRangeException">
-        <paramref name="position" /> or <paramref name="length" /> is negative. </exception>
+        <paramref name="position" /> or <paramref name="length" /> is negative.</exception>
     </member>
     <member name="M:XSharp.IO.XsFileStream.Write(System.Byte[],System.Int32,System.Int32)">
       <summary>Writes a block of bytes to the file stream.</summary>
       <param name="array">The buffer containing data to write to the stream.</param>
-      <param name="offset">The zero-based byte offset in <paramref name="array" /> from which to begin copying bytes to the stream. </param>
-      <param name="count">The maximum number of bytes to write. </param>
+      <param name="offset">The zero-based byte offset in <paramref name="array" /> from which to begin copying bytes to the stream.</param>
+      <param name="count">The maximum number of bytes to write.</param>
       <exception cref="T:System.ArgumentNullException">
-        <paramref name="array" /> is null. </exception>
+        <paramref name="array" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
-        <paramref name="offset" /> and <paramref name="count" /> describe an invalid range in <paramref name="array" />. </exception>
+        <paramref name="offset" /> and <paramref name="count" /> describe an invalid range in <paramref name="array" />.</exception>
       <exception cref="T:System.ArgumentOutOfRangeException">
-        <paramref name="offset" /> or <paramref name="count" /> is negative. </exception>
-      <exception cref="T:System.IO.IOException">An I/O error occurred. - or -Another thread may have caused an unexpected change in the position of the operating system's file handle. </exception>
-      <exception cref="T:System.ObjectDisposedException">The stream is closed. </exception>
-      <exception cref="T:System.NotSupportedException">The current stream instance does not support writing. </exception>
+        <paramref name="offset" /> or <paramref name="count" /> is negative.</exception>
+      <exception cref="T:System.IO.IOException">An I/O error occurred.  
+-or-
+ Another thread may have caused an unexpected change in the position of the operating system's file handle.</exception>
+      <exception cref="T:System.ObjectDisposedException">The stream is closed.</exception>
+      <exception cref="T:System.NotSupportedException">The current stream instance does not support writing.</exception>
     </member>
     <member name="M:XSharp.IO.XsFileStream.WriteByte(System.Byte)">
       <summary>Writes a byte to the current position in the file stream.</summary>
-      <param name="value">A byte to write to the stream. </param>
-      <exception cref="T:System.ObjectDisposedException">The stream is closed. </exception>
-      <exception cref="T:System.NotSupportedException">The stream does not support writing. </exception>
+      <param name="value">A byte to write to the stream.</param>
+      <exception cref="T:System.ObjectDisposedException">The stream is closed.</exception>
+      <exception cref="T:System.NotSupportedException">The stream does not support writing.</exception>
     </member>
     <member name="T:XSharp.IO.XsWin32FileStream">
       <summary>This class is used for Shared diskaccess on Windows. </summary>
     </member>
     <member name="M:XSharp.IO.XsWin32FileStream.Flush">
       <summary>Clears buffers for this stream and causes any buffered data to be written to the file.</summary>
-      <exception cref="T:System.IO.IOException">An I/O error occurred. </exception>
-      <exception cref="T:System.ObjectDisposedException">The stream is closed. </exception>
+      <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
+      <exception cref="T:System.ObjectDisposedException">The stream is closed.</exception>
     </member>
     <member name="M:XSharp.IO.XsWin32FileStream.Flush(System.Boolean)">
       <summary>Clears buffers for this stream and causes any buffered data to be written to the file, and also clears all intermediate file buffers.</summary>
-      <param name="flushToDisk">true to flush all intermediate file buffers; otherwise, false. </param>
+      <param name="flushToDisk">
+        <see langword="true" /> to flush all intermediate file buffers; otherwise, <see langword="false" />.</param>
     </member>
     <member name="P:XSharp.IO.XsWin32FileStream.Length">
       <summary>Gets the length in bytes of the stream.</summary>
       <returns>A long value representing the length of the stream in bytes.</returns>
       <exception cref="T:System.NotSupportedException">
-        <see cref="P:System.IO.FileStream.CanSeek" /> for this stream is false. </exception>
-      <exception cref="T:System.IO.IOException">An I/O error, such as the file being closed, occurred. </exception>
+        <see cref="P:System.IO.FileStream.CanSeek" /> for this stream is <see langword="false" />.</exception>
+      <exception cref="T:System.IO.IOException">An I/O error, such as the file being closed, occurred.</exception>
     </member>
     <member name="M:XSharp.IO.XsWin32FileStream.Lock(System.Int64,System.Int64)">
       <summary>Prevents other processes from reading from or writing to the <see cref="T:System.IO.FileStream" />.</summary>
-      <param name="position">The beginning of the range to lock. The value of this parameter must be equal to or greater than zero (0). </param>
-      <param name="length">The range to be locked. </param>
+      <param name="position">The beginning of the range to lock. The value of this parameter must be equal to or greater than zero (0).</param>
+      <param name="length">The range to be locked.</param>
       <exception cref="T:System.ArgumentOutOfRangeException">
-        <paramref name="position" /> or <paramref name="length" /> is negative. </exception>
-      <exception cref="T:System.ObjectDisposedException">The file is closed. </exception>
+        <paramref name="position" /> or <paramref name="length" /> is negative.</exception>
+      <exception cref="T:System.ObjectDisposedException">The file is closed.</exception>
       <exception cref="T:System.IO.IOException">The process cannot access the file because another process has locked a portion of the file.</exception>
     </member>
     <member name="M:XSharp.IO.XsWin32FileStream.Read(System.Byte[],System.Int32,System.Int32)">
       <summary>Reads a block of bytes from the stream and writes the data in a given buffer.</summary>
-      <param name="array">When this method returns, contains the specified byte array with the values between <paramref name="offset" /> and (<paramref name="offset" /> + <paramref name="count" /> - 1<paramref name=")" /> replaced by the bytes read from the current source. </param>
-      <param name="offset">The byte offset in <paramref name="array" /> at which the read bytes will be placed. </param>
-      <param name="count">The maximum number of bytes to read. </param>
+      <param name="array">When this method returns, contains the specified byte array with the values between <paramref name="offset" /> and (<paramref name="offset" /> + <paramref name="count" /> - 1) replaced by the bytes read from the current source.</param>
+      <param name="offset">The byte offset in <paramref name="array" /> at which the read bytes will be placed.</param>
+      <param name="count">The maximum number of bytes to read.</param>
       <returns>The total number of bytes read into the buffer. This might be less than the number of bytes requested if that number of bytes are not currently available, or zero if the end of the stream is reached.</returns>
       <exception cref="T:System.ArgumentNullException">
-        <paramref name="array" /> is null. </exception>
+        <paramref name="array" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentOutOfRangeException">
-        <paramref name="offset" /> or <paramref name="count" /> is negative. </exception>
-      <exception cref="T:System.NotSupportedException">The stream does not support reading. </exception>
-      <exception cref="T:System.IO.IOException">An I/O error occurred. </exception>
+        <paramref name="offset" /> or <paramref name="count" /> is negative.</exception>
+      <exception cref="T:System.NotSupportedException">The stream does not support reading.</exception>
+      <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
       <exception cref="T:System.ArgumentException">
-        <paramref name="offset" /> and <paramref name="count" /> describe an invalid range in <paramref name="array" />. </exception>
-      <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed. </exception>
+        <paramref name="offset" /> and <paramref name="count" /> describe an invalid range in <paramref name="array" />.</exception>
+      <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
     </member>
     <member name="M:XSharp.IO.XsWin32FileStream.Seek(System.Int64,System.IO.SeekOrigin)">
       <summary>Sets the current position of this stream to the given value.</summary>
-      <param name="offset">The point relative to <paramref name="origin" /> from which to begin seeking. </param>
-      <param name="origin">Specifies the beginning, the end, or the current position as a reference point for <paramref name="offset" />, using a value of type <see cref="T:System.IO.SeekOrigin" />. </param>
+      <param name="offset">The point relative to <paramref name="origin" /> from which to begin seeking.</param>
+      <param name="origin">Specifies the beginning, the end, or the current position as a reference point for <paramref name="offset" />, using a value of type <see cref="T:System.IO.SeekOrigin" />.</param>
       <returns>The new position in the stream.</returns>
-      <exception cref="T:System.IO.IOException">An I/O error occurred. </exception>
-      <exception cref="T:System.NotSupportedException">The stream does not support seeking, such as if the FileStream is constructed from a pipe or console output. </exception>
-      <exception cref="T:System.ArgumentException">Seeking is attempted before the beginning of the stream. </exception>
-      <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed. </exception>
+      <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
+      <exception cref="T:System.NotSupportedException">The stream does not support seeking, such as if the <see langword="FileStream" /> is constructed from a pipe or console output.</exception>
+      <exception cref="T:System.ArgumentException">Seeking is attempted before the beginning of the stream.</exception>
+      <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
     </member>
     <member name="M:XSharp.IO.XsWin32FileStream.SetLength(System.Int64)">
       <summary>Sets the length of this stream to the given value.</summary>
-      <param name="value">The new length of the stream. </param>
-      <exception cref="T:System.IO.IOException">An I/O error has occurred. </exception>
-      <exception cref="T:System.NotSupportedException">The stream does not support both writing and seeking. </exception>
-      <exception cref="T:System.ArgumentOutOfRangeException">Attempted to set the <paramref name="value" /> parameter to less than 0. </exception>
+      <param name="value">The new length of the stream.</param>
+      <exception cref="T:System.IO.IOException">An I/O error has occurred.</exception>
+      <exception cref="T:System.NotSupportedException">The stream does not support both writing and seeking.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">Attempted to set the <paramref name="value" /> parameter to less than 0.</exception>
     </member>
     <member name="M:XSharp.IO.XsWin32FileStream.Unlock(System.Int64,System.Int64)">
       <summary>Allows access by other processes to all or part of a file that was previously locked.</summary>
-      <param name="position">The beginning of the range to unlock. </param>
-      <param name="length">The range to be unlocked. </param>
+      <param name="position">The beginning of the range to unlock.</param>
+      <param name="length">The range to be unlocked.</param>
       <exception cref="T:System.ArgumentOutOfRangeException">
-        <paramref name="position" /> or <paramref name="length" /> is negative. </exception>
+        <paramref name="position" /> or <paramref name="length" /> is negative.</exception>
     </member>
     <member name="M:XSharp.IO.XsWin32FileStream.Write(System.Byte[],System.Int32,System.Int32)">
       <summary>Writes a block of bytes to the file stream.</summary>
       <param name="array">The buffer containing data to write to the stream.</param>
-      <param name="offset">The zero-based byte offset in <paramref name="array" /> from which to begin copying bytes to the stream. </param>
-      <param name="count">The maximum number of bytes to write. </param>
+      <param name="offset">The zero-based byte offset in <paramref name="array" /> from which to begin copying bytes to the stream.</param>
+      <param name="count">The maximum number of bytes to write.</param>
       <exception cref="T:System.ArgumentNullException">
-        <paramref name="array" /> is null. </exception>
+        <paramref name="array" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
-        <paramref name="offset" /> and <paramref name="count" /> describe an invalid range in <paramref name="array" />. </exception>
+        <paramref name="offset" /> and <paramref name="count" /> describe an invalid range in <paramref name="array" />.</exception>
       <exception cref="T:System.ArgumentOutOfRangeException">
-        <paramref name="offset" /> or <paramref name="count" /> is negative. </exception>
-      <exception cref="T:System.IO.IOException">An I/O error occurred. - or -Another thread may have caused an unexpected change in the position of the operating system's file handle. </exception>
-      <exception cref="T:System.ObjectDisposedException">The stream is closed. </exception>
-      <exception cref="T:System.NotSupportedException">The current stream instance does not support writing. </exception>
+        <paramref name="offset" /> or <paramref name="count" /> is negative.</exception>
+      <exception cref="T:System.IO.IOException">An I/O error occurred.  
+-or-
+ Another thread may have caused an unexpected change in the position of the operating system's file handle.</exception>
+      <exception cref="T:System.ObjectDisposedException">The stream is closed.</exception>
+      <exception cref="T:System.NotSupportedException">The current stream instance does not support writing.</exception>
     </member>
     <member name="M:XSharp.IO.XsWin32FileStream.WriteByte(System.Byte)">
       <summary>Writes a byte to the current position in the file stream.</summary>
-      <param name="value">A byte to write to the stream. </param>
-      <exception cref="T:System.ObjectDisposedException">The stream is closed. </exception>
-      <exception cref="T:System.NotSupportedException">The stream does not support writing. </exception>
+      <param name="value">A byte to write to the stream.</param>
+      <exception cref="T:System.ObjectDisposedException">The stream is closed.</exception>
+      <exception cref="T:System.NotSupportedException">The stream does not support writing.</exception>
     </member>
     <member name="T:XSharp.RDD.BaseIndex">
       <summary>Base Index class. Does not implement anything. </summary>
@@ -8031,6 +8094,8 @@
     <member name="M:XSharp.RDD.Dbc.Create(System.String)">
       <summary>Create a database.</summary>
     </member>
+    <member name="M:XSharp.RDD.Dbc.CreateView(System.String,System.String,System.Boolean,System.Boolean,System.String)"></member>
+    <member name="M:XSharp.RDD.Dbc.Delete(System.String,System.Boolean,System.Boolean)"></member>
     <member name="M:XSharp.RDD.Dbc.Dump(System.String)">
       <summary>Dump a database to the terminal window.</summary>
     </member>
@@ -8241,6 +8306,9 @@
     <member name="P:XSharp.RDD.DbColumnInfo.NumericScale">
       <summary>Numeric Scale</summary>
     </member>
+    <member name="P:XSharp.RDD.DbColumnInfo.ReadOnly">
+      <summary>Numeric Precision</summary>
+    </member>
     <member name="T:XSharp.RDD.DbcOther">
       <summary>Class that stores other info about Databases, such as the source and object code for Database </summary>
     </member>
@@ -8299,6 +8367,110 @@
     </member>
     <member name="P:XSharp.RDD.DbcTable.Relations">
       <summary>The collection of relations</summary>
+    </member>
+    <member name="T:XSharp.RDD.DbCurrency">
+      <summary>Implementation of the ICurrency interface that can be used by the RDD system. </summary>
+    </member>
+    <member name="M:XSharp.RDD.DbCurrency.#ctor(System.Decimal)">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>XSharp.RDD.DbCurrency</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:XSharp.RDD.DbCurrency.GetTypeCode">
+      <summary>Returns the <see cref="T:System.TypeCode" /> for this instance.</summary>
+      <returns>The enumerated constant that is the <see cref="T:System.TypeCode" /> of the class or value type that implements this interface.</returns>
+    </member>
+    <member name="M:XSharp.RDD.DbCurrency.System#IConvertible#ToBoolean(System.IFormatProvider)">
+      <summary>Converts the value of this instance to an equivalent Boolean value using the specified culture-specific formatting information.</summary>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
+      <returns>A Boolean value equivalent to the value of this instance.</returns>
+    </member>
+    <member name="M:XSharp.RDD.DbCurrency.System#IConvertible#ToByte(System.IFormatProvider)">
+      <summary>Converts the value of this instance to an equivalent 8-bit unsigned integer using the specified culture-specific formatting information.</summary>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
+      <returns>An 8-bit unsigned integer equivalent to the value of this instance.</returns>
+    </member>
+    <member name="M:XSharp.RDD.DbCurrency.System#IConvertible#ToChar(System.IFormatProvider)">
+      <summary>Converts the value of this instance to an equivalent Unicode character using the specified culture-specific formatting information.</summary>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
+      <returns>A Unicode character equivalent to the value of this instance.</returns>
+    </member>
+    <member name="M:XSharp.RDD.DbCurrency.System#IConvertible#ToDateTime(System.IFormatProvider)">
+      <summary>Converts the value of this instance to an equivalent <see cref="T:System.DateTime" /> using the specified culture-specific formatting information.</summary>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
+      <returns>A <see cref="T:System.DateTime" /> instance equivalent to the value of this instance.</returns>
+    </member>
+    <member name="M:XSharp.RDD.DbCurrency.System#IConvertible#ToDecimal(System.IFormatProvider)">
+      <summary>Converts the value of this instance to an equivalent <see cref="T:System.Decimal" /> number using the specified culture-specific formatting information.</summary>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
+      <returns>A <see cref="T:System.Decimal" /> number equivalent to the value of this instance.</returns>
+    </member>
+    <member name="M:XSharp.RDD.DbCurrency.System#IConvertible#ToDouble(System.IFormatProvider)">
+      <summary>Converts the value of this instance to an equivalent double-precision floating-point number using the specified culture-specific formatting information.</summary>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
+      <returns>A double-precision floating-point number equivalent to the value of this instance.</returns>
+    </member>
+    <member name="M:XSharp.RDD.DbCurrency.System#IConvertible#ToInt16(System.IFormatProvider)">
+      <summary>Converts the value of this instance to an equivalent 16-bit signed integer using the specified culture-specific formatting information.</summary>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
+      <returns>An 16-bit signed integer equivalent to the value of this instance.</returns>
+    </member>
+    <member name="M:XSharp.RDD.DbCurrency.System#IConvertible#ToInt32(System.IFormatProvider)">
+      <summary>Converts the value of this instance to an equivalent 32-bit signed integer using the specified culture-specific formatting information.</summary>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
+      <returns>An 32-bit signed integer equivalent to the value of this instance.</returns>
+    </member>
+    <member name="M:XSharp.RDD.DbCurrency.System#IConvertible#ToInt64(System.IFormatProvider)">
+      <summary>Converts the value of this instance to an equivalent 64-bit signed integer using the specified culture-specific formatting information.</summary>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
+      <returns>An 64-bit signed integer equivalent to the value of this instance.</returns>
+    </member>
+    <member name="M:XSharp.RDD.DbCurrency.System#IConvertible#ToSByte(System.IFormatProvider)">
+      <summary>Converts the value of this instance to an equivalent 8-bit signed integer using the specified culture-specific formatting information.</summary>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
+      <returns>An 8-bit signed integer equivalent to the value of this instance.</returns>
+    </member>
+    <member name="M:XSharp.RDD.DbCurrency.System#IConvertible#ToSingle(System.IFormatProvider)">
+      <summary>Converts the value of this instance to an equivalent single-precision floating-point number using the specified culture-specific formatting information.</summary>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
+      <returns>A single-precision floating-point number equivalent to the value of this instance.</returns>
+    </member>
+    <member name="M:XSharp.RDD.DbCurrency.System#IConvertible#ToString(System.IFormatProvider)">
+      <summary>Converts the value of this instance to an equivalent <see cref="T:System.String" /> using the specified culture-specific formatting information.</summary>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
+      <returns>A <see cref="T:System.String" /> instance equivalent to the value of this instance.</returns>
+    </member>
+    <member name="M:XSharp.RDD.DbCurrency.System#IConvertible#ToType(System.Type,System.IFormatProvider)">
+      <summary>Converts the value of this instance to an <see cref="T:System.Object" /> of the specified <see cref="T:System.Type" /> that has an equivalent value, using the specified culture-specific formatting information.</summary>
+      <param name="conversionType">The <see cref="T:System.Type" /> to which the value of this instance is converted.</param>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
+      <returns>An <see cref="T:System.Object" /> instance of type <paramref name="conversionType" /> whose value is equivalent to the value of this instance.</returns>
+    </member>
+    <member name="M:XSharp.RDD.DbCurrency.System#IConvertible#ToUInt16(System.IFormatProvider)">
+      <summary>Converts the value of this instance to an equivalent 16-bit unsigned integer using the specified culture-specific formatting information.</summary>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
+      <returns>An 16-bit unsigned integer equivalent to the value of this instance.</returns>
+    </member>
+    <member name="M:XSharp.RDD.DbCurrency.System#IConvertible#ToUInt32(System.IFormatProvider)">
+      <summary>Converts the value of this instance to an equivalent 32-bit unsigned integer using the specified culture-specific formatting information.</summary>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
+      <returns>An 32-bit unsigned integer equivalent to the value of this instance.</returns>
+    </member>
+    <member name="M:XSharp.RDD.DbCurrency.System#IConvertible#ToUInt64(System.IFormatProvider)">
+      <summary>Converts the value of this instance to an equivalent 64-bit unsigned integer using the specified culture-specific formatting information.</summary>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
+      <returns>An 64-bit unsigned integer equivalent to the value of this instance.</returns>
+    </member>
+    <member name="M:XSharp.RDD.DbCurrency.ToString">
+      <summary>Returns the fully qualified type name of this instance.</summary>
+      <returns>The fully qualified type name.</returns>
+    </member>
+    <member name="P:XSharp.RDD.DbCurrency.Value">
+      <summary>Decimal value of the Currency</summary>
     </member>
     <member name="T:XSharp.RDD.DbcView">
       <summary>Class that stores information about a view in a DBC</summary>
@@ -8375,86 +8547,89 @@
       <summary>Number of digits (includes the optional decimal separator and decimals).</summary>
       <returns>Integer value</returns>
     </member>
-    <member name="M:XSharp.RDD.DbFloat.GetTypeCode"></member>
+    <member name="M:XSharp.RDD.DbFloat.GetTypeCode">
+      <summary>Returns the <see cref="T:System.TypeCode" /> for this instance.</summary>
+      <returns>The enumerated constant that is the <see cref="T:System.TypeCode" /> of the class or value type that implements this interface.</returns>
+    </member>
     <member name="M:XSharp.RDD.DbFloat.System#IConvertible#ToBoolean(System.IFormatProvider)">
       <summary>Converts the value of this instance to an equivalent Boolean value using the specified culture-specific formatting information.</summary>
-      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
       <returns>A Boolean value equivalent to the value of this instance.</returns>
     </member>
     <member name="M:XSharp.RDD.DbFloat.System#IConvertible#ToByte(System.IFormatProvider)">
       <summary>Converts the value of this instance to an equivalent 8-bit unsigned integer using the specified culture-specific formatting information.</summary>
-      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
       <returns>An 8-bit unsigned integer equivalent to the value of this instance.</returns>
     </member>
     <member name="M:XSharp.RDD.DbFloat.System#IConvertible#ToChar(System.IFormatProvider)">
       <summary>Converts the value of this instance to an equivalent Unicode character using the specified culture-specific formatting information.</summary>
-      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
       <returns>A Unicode character equivalent to the value of this instance.</returns>
     </member>
     <member name="M:XSharp.RDD.DbFloat.System#IConvertible#ToDateTime(System.IFormatProvider)">
       <summary>Converts the value of this instance to an equivalent <see cref="T:System.DateTime" /> using the specified culture-specific formatting information.</summary>
-      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
       <returns>A <see cref="T:System.DateTime" /> instance equivalent to the value of this instance.</returns>
     </member>
     <member name="M:XSharp.RDD.DbFloat.System#IConvertible#ToDecimal(System.IFormatProvider)">
       <summary>Converts the value of this instance to an equivalent <see cref="T:System.Decimal" /> number using the specified culture-specific formatting information.</summary>
-      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
       <returns>A <see cref="T:System.Decimal" /> number equivalent to the value of this instance.</returns>
     </member>
     <member name="M:XSharp.RDD.DbFloat.System#IConvertible#ToDouble(System.IFormatProvider)">
       <summary>Converts the value of this instance to an equivalent double-precision floating-point number using the specified culture-specific formatting information.</summary>
-      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
       <returns>A double-precision floating-point number equivalent to the value of this instance.</returns>
     </member>
     <member name="M:XSharp.RDD.DbFloat.System#IConvertible#ToInt16(System.IFormatProvider)">
       <summary>Converts the value of this instance to an equivalent 16-bit signed integer using the specified culture-specific formatting information.</summary>
-      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
       <returns>An 16-bit signed integer equivalent to the value of this instance.</returns>
     </member>
     <member name="M:XSharp.RDD.DbFloat.System#IConvertible#ToInt32(System.IFormatProvider)">
       <summary>Converts the value of this instance to an equivalent 32-bit signed integer using the specified culture-specific formatting information.</summary>
-      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
       <returns>An 32-bit signed integer equivalent to the value of this instance.</returns>
     </member>
     <member name="M:XSharp.RDD.DbFloat.System#IConvertible#ToInt64(System.IFormatProvider)">
       <summary>Converts the value of this instance to an equivalent 64-bit signed integer using the specified culture-specific formatting information.</summary>
-      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
       <returns>An 64-bit signed integer equivalent to the value of this instance.</returns>
     </member>
     <member name="M:XSharp.RDD.DbFloat.System#IConvertible#ToSByte(System.IFormatProvider)">
       <summary>Converts the value of this instance to an equivalent 8-bit signed integer using the specified culture-specific formatting information.</summary>
-      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
       <returns>An 8-bit signed integer equivalent to the value of this instance.</returns>
     </member>
     <member name="M:XSharp.RDD.DbFloat.System#IConvertible#ToSingle(System.IFormatProvider)">
       <summary>Converts the value of this instance to an equivalent single-precision floating-point number using the specified culture-specific formatting information.</summary>
-      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
       <returns>A single-precision floating-point number equivalent to the value of this instance.</returns>
     </member>
     <member name="M:XSharp.RDD.DbFloat.System#IConvertible#ToString(System.IFormatProvider)">
       <summary>Converts the value of this instance to an equivalent <see cref="T:System.String" /> using the specified culture-specific formatting information.</summary>
-      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
       <returns>A <see cref="T:System.String" /> instance equivalent to the value of this instance.</returns>
     </member>
     <member name="M:XSharp.RDD.DbFloat.System#IConvertible#ToType(System.Type,System.IFormatProvider)">
       <summary>Converts the value of this instance to an <see cref="T:System.Object" /> of the specified <see cref="T:System.Type" /> that has an equivalent value, using the specified culture-specific formatting information.</summary>
-      <param name="conversionType">The <see cref="T:System.Type" /> to which the value of this instance is converted. </param>
-      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+      <param name="conversionType">The <see cref="T:System.Type" /> to which the value of this instance is converted.</param>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
       <returns>An <see cref="T:System.Object" /> instance of type <paramref name="conversionType" /> whose value is equivalent to the value of this instance.</returns>
     </member>
     <member name="M:XSharp.RDD.DbFloat.System#IConvertible#ToUInt16(System.IFormatProvider)">
       <summary>Converts the value of this instance to an equivalent 16-bit unsigned integer using the specified culture-specific formatting information.</summary>
-      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
       <returns>An 16-bit unsigned integer equivalent to the value of this instance.</returns>
     </member>
     <member name="M:XSharp.RDD.DbFloat.System#IConvertible#ToUInt32(System.IFormatProvider)">
       <summary>Converts the value of this instance to an equivalent 32-bit unsigned integer using the specified culture-specific formatting information.</summary>
-      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
       <returns>An 32-bit unsigned integer equivalent to the value of this instance.</returns>
     </member>
     <member name="M:XSharp.RDD.DbFloat.System#IConvertible#ToUInt64(System.IFormatProvider)">
       <summary>Converts the value of this instance to an equivalent 64-bit unsigned integer using the specified culture-specific formatting information.</summary>
-      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+      <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information.</param>
       <returns>An 64-bit unsigned integer equivalent to the value of this instance.</returns>
     </member>
     <member name="M:XSharp.RDD.DbFloat.ToString">
@@ -8463,7 +8638,6 @@
     </member>
     <member name="P:XSharp.RDD.DbFloat.Value">
       <summary>Double value of the Float</summary>
-      <returns>Integer value</returns>
     </member>
     <member name="T:XSharp.RDD.IBlobData">
       <summary>
@@ -9705,7 +9879,9 @@
         </span>
       </returns>
     </member>
-    <member name="P:XSharp.RDD.Workarea.Closed"></member>
+    <member name="P:XSharp.RDD.Workarea.Closed">
+      <summary>Has the workarea been closed.</summary>
+    </member>
     <member name="M:XSharp.RDD.Workarea.CloseMemFile">
       <summary>Close the memo file</summary>
       <returns>
@@ -9829,6 +10005,7 @@
       <summary>Evaluate a code block.</summary>
       <param name="sBlock">The code block to evaluate.</param>
     </member>
+    <member name="M:XSharp.RDD.Workarea.EvalFilter(XSharp.ICodeblock)"></member>
     <member name="P:XSharp.RDD.Workarea.Exclusive">
       <summary>Is the Workarea opened Exclusively</summary>
     </member>
@@ -9886,7 +10063,13 @@
     <member name="P:XSharp.RDD.Workarea.Found">
       <summary>The outcome of the last search operation.</summary>
     </member>
-    <member name="M:XSharp.RDD.Workarea.GetField(System.Int32)"></member>
+    <member name="M:XSharp.RDD.Workarea.GetField(System.Int32)">
+      <summary>
+            Return the (1 based) RddFieldInfo object for the specified field
+            </summary>
+      <param name="nFldPos">1 based index</param>
+      <returns>FieldInfo object or NULL when the index is not valid</returns>
+    </member>
     <member name="M:XSharp.RDD.Workarea.GetRec">
       <summary>Retrieve the RDD's record buffer as array of bytes.</summary>
       <returns>Record buffer of the RDD. This is the original buffer, so changing this buffer may cause corruption !</returns>
@@ -9979,7 +10162,12 @@
         </span>
       </returns>
     </member>
-    <member name="P:XSharp.RDD.Workarea.HasProperties"></member>
+    <member name="P:XSharp.RDD.Workarea.HasProperties">
+      <summary>Does the workarea have properties.</summary>
+    </member>
+    <member name="P:XSharp.RDD.Workarea.HasRelations">
+      <summary>Does the workarea have relations.</summary>
+    </member>
     <member name="M:XSharp.RDD.Workarea.HeaderLock(XSharp.RDD.Enums.DbLockMode)">
       <summary>Lock or unlock the header of a database file.</summary>
       <param name="uiMode">An enum value specifying the kind of lock to acquire.</param>
@@ -11590,6 +11778,9 @@
     <member name="F:XSharp.RDD.Enums.DbInfo.DBI_MEMOSTREAM">
       <summary>Stream: The memo file's stream</summary>
     </member>
+    <member name="F:XSharp.RDD.Enums.DbInfo.DBI_MEMOPATH">
+      <summary>Stream: The memo file name</summary>
+    </member>
     <member name="F:XSharp.RDD.Enums.DbInfo.DBI_DB_VERSION">
       <summary></summary>
     </member>
@@ -11706,6 +11897,9 @@
     </member>
     <member name="F:XSharp.RDD.Enums.DbInfo.DBI_QUERY">
       <summary>if area represents result of a query, obtain expression of this query </summary>
+    </member>
+    <member name="F:XSharp.RDD.Enums.DbInfo.DBI_REFRESH">
+      <summary>Refresh the current data in the SQLRDD</summary>
     </member>
     <member name="F:XSharp.RDD.Enums.DbInfo.BLOB_INFO_HANDLE">
       <summary></summary>
@@ -11838,6 +12032,15 @@
     </member>
     <member name="F:XSharp.RDD.Enums.DbInfo.DBI_RL_TEST">
       <summary>Clipmore extension: </summary>
+    </member>
+    <member name="F:XSharp.RDD.Enums.DbInfo.DBI_RL_HITS">
+      <summary>Recordlist extension: </summary>
+    </member>
+    <member name="F:XSharp.RDD.Enums.DbInfo.DBI_RL_MISSES">
+      <summary>Recordlist extension: </summary>
+    </member>
+    <member name="F:XSharp.RDD.Enums.DbInfo.DBI_RL_ENABLE">
+      <summary>Recordlist extension: </summary>
     </member>
     <member name="T:XSharp.RDD.Enums.DbLockMode">
       <summary>This enum specifies the lock modes.</summary>
@@ -12414,6 +12617,11 @@
       <summary> A flag that is TRUE if all rows are to be processed during order creation. </summary>
     </member>
     <member name="M:XSharp.RDD.Support.DbOrderCondInfo.Clone"></member>
+    <member name="F:XSharp.RDD.Support.DbOrderCondInfo.Collation">
+      <summary>
+            Collation for the FoxPro INDEX ON command
+            </summary>
+    </member>
     <member name="M:XSharp.RDD.Support.DbOrderCondInfo.Compile(XSharp.RDD.IRdd)"></member>
     <member name="F:XSharp.RDD.Support.DbOrderCondInfo.Custom">
       <summary>A flag that is TRUE if the new order will be a custom built order.</summary>
@@ -12429,6 +12637,21 @@
     </member>
     <member name="F:XSharp.RDD.Support.DbOrderCondInfo.ForExpression">
       <summary>A string defining the for condition to use for the creation and maintenance of the order.</summary>
+    </member>
+    <member name="F:XSharp.RDD.Support.DbOrderCondInfo.IsBinary">
+      <summary>
+            Binary option for the FoxPro INDEX ON command
+            </summary>
+    </member>
+    <member name="F:XSharp.RDD.Support.DbOrderCondInfo.IsCandidate">
+      <summary>
+            Candidate option for the FoxPro INDEX ON command
+            </summary>
+    </member>
+    <member name="F:XSharp.RDD.Support.DbOrderCondInfo.IsCompact">
+      <summary>
+            Compact option for the FoxPro INDEX ON command
+            </summary>
     </member>
     <member name="F:XSharp.RDD.Support.DbOrderCondInfo.NextCount">
       <summary>The number of rows to process for order creation.</summary>
@@ -12706,11 +12929,15 @@
     <member name="P:XSharp.RDD.Support.RddFieldInfo.CanSort">
       <summary>Can the field be sorted?</summary>
     </member>
-    <member name="P:XSharp.RDD.Support.RddFieldInfo.Caption"></member>
+    <member name="P:XSharp.RDD.Support.RddFieldInfo.Caption">
+      <summary>Dynamic property for the Caption. Read from the VFP properties collection.</summary>
+    </member>
     <member name="M:XSharp.RDD.Support.RddFieldInfo.Clone">
       <summary>Clone a RddFieldInfo object.</summary>
     </member>
-    <member name="P:XSharp.RDD.Support.RddFieldInfo.ColumnName"></member>
+    <member name="P:XSharp.RDD.Support.RddFieldInfo.ColumnName">
+      <summary>Dynamic property for the ColumnName. Read from the VFP properties collection.</summary>
+    </member>
     <member name="M:XSharp.RDD.Support.RddFieldInfo.CopyValues(XSharp.RDD.Support.RddFieldInfo)">
       <summary>Copy values from one object to another.</summary>
       <param name="oInfo">Object to copy values to.</param>
@@ -12718,19 +12945,34 @@
     <member name="F:XSharp.RDD.Support.RddFieldInfo.Decimals">
       <summary>Decimal positions</summary>
     </member>
-    <member name="P:XSharp.RDD.Support.RddFieldInfo.Description"></member>
+    <member name="P:XSharp.RDD.Support.RddFieldInfo.DefaultValue">
+      <summary>Dynamic property for the DefaultValue. Read from the VFP properties collection.</summary>
+    </member>
+    <member name="P:XSharp.RDD.Support.RddFieldInfo.Description">
+      <summary>Dynamic property for the Description. Read from the VFP properties collection.</summary>
+    </member>
     <member name="F:XSharp.RDD.Support.RddFieldInfo.FieldType">
       <summary>Field Type</summary>
+    </member>
+    <member name="P:XSharp.RDD.Support.RddFieldInfo.FieldTypeFlags">
+      <summary>FieldType as a string</summary>
     </member>
     <member name="P:XSharp.RDD.Support.RddFieldInfo.FieldTypeStr">
       <summary>Field type as 1 character string.</summary>
     </member>
+    <member name="M:XSharp.RDD.Support.RddFieldInfo.FindType(System.String)"></member>
     <member name="F:XSharp.RDD.Support.RddFieldInfo.Flags">
       <summary>Flags, such as Nullable, AutoIncrement, Binary etc.</summary>
     </member>
-    <member name="P:XSharp.RDD.Support.RddFieldInfo.Format"></member>
-    <member name="P:XSharp.RDD.Support.RddFieldInfo.HasProperties"></member>
-    <member name="P:XSharp.RDD.Support.RddFieldInfo.InputMask"></member>
+    <member name="P:XSharp.RDD.Support.RddFieldInfo.Format">
+      <summary>Dynamic property for the Format. Read from the VFP properties collection.</summary>
+    </member>
+    <member name="P:XSharp.RDD.Support.RddFieldInfo.HasProperties">
+      <summary>Does the field have properties.</summary>
+    </member>
+    <member name="P:XSharp.RDD.Support.RddFieldInfo.InputMask">
+      <summary>Dynamic property for the InputMask. Read from the VFP properties collection.</summary>
+    </member>
     <member name="P:XSharp.RDD.Support.RddFieldInfo.IsAutoIncrement">
       <summary>Is it an autoincrement ?</summary>
     </member>
@@ -12755,6 +12997,9 @@
     <member name="P:XSharp.RDD.Support.RddFieldInfo.IsUnicode">
       <summary>Is it a unicode text ?</summary>
     </member>
+    <member name="P:XSharp.RDD.Support.RddFieldInfo.IsUnique">
+      <summary>Dynamic property for the IsUnique. Read from the VFP properties collection.</summary>
+    </member>
     <member name="P:XSharp.RDD.Support.RddFieldInfo.IsVarLength">
       <summary>Is it a variable length field ?</summary>
     </member>
@@ -12767,17 +13012,32 @@
     <member name="F:XSharp.RDD.Support.RddFieldInfo.Name">
       <summary>Name, normally max 10 characters</summary>
     </member>
+    <member name="F:XSharp.RDD.Support.RddFieldInfo.NextValue">
+      <summary>Next key for autoincrement columns.</summary>
+    </member>
     <member name="F:XSharp.RDD.Support.RddFieldInfo.Offset">
       <summary>Offset in the record buffer for DBF fields.</summary>
     </member>
     <member name="F:XSharp.RDD.Support.RddFieldInfo.Ordinal">
       <summary>1 based Ordinal position in the RDD.</summary>
     </member>
+    <member name="P:XSharp.RDD.Support.RddFieldInfo.PrimaryKey">
+      <summary>Dynamic property for the PrimaryKey. Read from the VFP properties collection.</summary>
+    </member>
     <member name="P:XSharp.RDD.Support.RddFieldInfo.Properties">
       <summary>Dynamic list of optional properties, such as Caption, Description.</summary>
     </member>
+    <member name="P:XSharp.RDD.Support.RddFieldInfo.RuleExpression">
+      <summary>Dynamic property for the RuleExpression. Read from the VFP properties collection.</summary>
+    </member>
+    <member name="P:XSharp.RDD.Support.RddFieldInfo.RuleText">
+      <summary>Dynamic property for the RuleText. Read from the VFP properties collection.</summary>
+    </member>
     <member name="M:XSharp.RDD.Support.RddFieldInfo.SameType(XSharp.RDD.Support.RddFieldInfo)">
       <summary>Check if two fields match in type, length and decimals.</summary>
+    </member>
+    <member name="F:XSharp.RDD.Support.RddFieldInfo.StepValue">
+      <summary>Step value for autoincrement columns.</summary>
     </member>
     <member name="M:XSharp.RDD.Support.RddFieldInfo.ToString"></member>
     <member name="M:XSharp.RDD.Support.RddFieldInfo.Validate">

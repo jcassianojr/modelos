@@ -454,6 +454,7 @@
       <param name="uLength">The length of the field.  This argument is required for numeric and string data types, but is optional for all others.</param>
       <param name="uDecimals">The number of decimals in the field.  This argument is used for numeric data types only.  The default is 0.</param>
     </member>
+    <member name="M:VO.FieldSpec._SetType(XSharp.__Usual,XSharp.__Symbol)"></member>
     <member name="M:VO.FieldSpec.AsString">
       <summary>
             Return the caption defined to this field specification's hyperlabel; if no caption is defined, return the name defined to the hyperlabel.
