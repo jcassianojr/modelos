@@ -1,6 +1,0 @@
-DBFDEF vmark
-   SEQ        N   2  0
-   DESCRI     C  12  0
-   PERCE      N   6  2
-ENDDEF
-ENDFILE
