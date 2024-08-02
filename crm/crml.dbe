@@ -1,6 +1,0 @@
-DBFDEF crml
-   CLIFOR     N   8  0
-   CODIGO     C  24  0
-   LOTE       N   3  0
-ENDDEF
-ENDFILE

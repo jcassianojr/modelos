@@ -1,7 +1,0 @@
-DBFDEF crmcesp
-   NUMERO     N   8  0
-   NOME       C 100  0
-   TIPOENT    C   1  0
-   CODIGO     C  24  0
-ENDDEF
-ENDFILE

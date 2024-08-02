@@ -1,9 +1,0 @@
-DBFDEF ferhgi
-   OS         N  10  0
-   DATA       D   8  0
-   HINI       N   5  2
-   HFIM       N   5  2
-   HGAS       N   5  2
-   OBS        C 255  0
-ENDDEF
-ENDFILE

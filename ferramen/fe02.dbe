@@ -1,8 +1,0 @@
-DBFDEF fe02
-   TIPO       C  24  0
-   CODIGO     C  20  0
-   ANO        N   4  0
-   MES        N   2  0
-   USO        N  16  5
-ENDDEF
-ENDFILE

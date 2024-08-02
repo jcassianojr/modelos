@@ -1,6 +1,0 @@
-DBFDEF crmens
-   CODIGO     C  10  0
-   NOME       C  40  0
-   VALOR      N  12  8
-ENDDEF
-ENDFILE
