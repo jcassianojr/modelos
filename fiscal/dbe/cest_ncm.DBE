@@ -1,9 +1,0 @@
-DBFDEF cest_ncm
-   CEST_ID    C   7  0
-   NCM_ID     C   8  0
-   TAMANHO    C   1  0
-   FAIXA_I    C   8  0
-   FAIXA_F    C   8  0
-   CEST_SEGME C   2  0
-ENDDEF
-ENDFILE

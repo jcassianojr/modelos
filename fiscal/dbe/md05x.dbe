@@ -1,9 +1,0 @@
-DBFDEF md05x
-   UFICMS     C   2  0
-   UFDEST     C   2  0
-   NOMEEXT    C  20  0
-   ALIQUOTA   N   5  2
-   ALIQUOTAR  N   5  2
-   ZONAFRANCA C   1  0
-ENDDEF
-ENDFILE

@@ -1,9 +1,0 @@
-DBFDEF fi_ciapi
-   CIAP       N   8  0
-   ITEM       N   2  0
-   MES        N   2  0
-   ANO        N   4  0
-   VALOR      N   8  2
-   SOMAR      C   1  0
-ENDDEF
-ENDFILE

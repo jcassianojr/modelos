@@ -1,6 +1,0 @@
-DBFDEF fi_nbmcnv
-   NUMERONBM  C   8  0
-   CODNBM     C  10  0
-   NOMENBM    C  55  0
-ENDDEF
-ENDFILE

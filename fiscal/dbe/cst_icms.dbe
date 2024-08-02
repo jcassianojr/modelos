@@ -1,7 +1,0 @@
-DBFDEF cst_icms
-   CODIGO     C  30  0
-   NOME       C 254  0
-   DT_INI     D   8  0
-   DT_FIN     D   8  0
-ENDDEF
-ENDFILE

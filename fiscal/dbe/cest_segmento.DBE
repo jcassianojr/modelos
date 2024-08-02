@@ -1,6 +1,0 @@
-DBFDEF cest_segmento
-   ID         C   2  0
-   ANEXO      C  10  0
-   DESCRICAO  C 120  0
-ENDDEF
-ENDFILE

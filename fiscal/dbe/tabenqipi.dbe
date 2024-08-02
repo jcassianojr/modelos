@@ -1,8 +1,0 @@
-DBFDEF tabenqipi
-   CODIGO     C   3  0
-   GRUPOCST   C  20  0
-   DESCR1     C 254  0
-   DESCR2     C 180  0
-   DESCRICAO  C 255  0
-ENDDEF
-ENDFILE
