@@ -1,9 +1,0 @@
-DBFDEF ospra
-   PRODUTO    C  24  0
-   DATAACM    D   8  0
-   DATAPRG    D   8  0
-   QTDE       N   6  0
-   LISTA      C   1  0
-   TIPO       C   1  0
-ENDDEF
-ENDFILE

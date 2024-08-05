@@ -1,9 +1,0 @@
-DBFDEF RIFI
-   RIF        N   8  0
-   TOL        C 150  0
-   MIN        N  12  4
-   MAX        N  12  4
-   OK         C   1  0
-   INSTRUME   C  60  0
-ENDDEF
-ENDFILE

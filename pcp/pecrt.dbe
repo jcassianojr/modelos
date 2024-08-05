@@ -1,9 +1,0 @@
-DBFDEF pecrt
-   TIPO       C   1  0
-   CODIGO     C  24  0
-   UNRNOTA    N   8  0
-   UFORNE     N   8  0
-   UQTDE      N  12  2
-   UDATA      D   8  0
-ENDDEF
-ENDFILE

@@ -1,7 +1,0 @@
-DBFDEF rdpd
-   SEQ        N   3  0
-   NUMERO     C   2  0
-   NOME       C  40  0
-   HP         N  10  2
-ENDDEF
-ENDFILE
