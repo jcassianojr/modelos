@@ -1,7 +1,0 @@
-DBFDEF adpi
-   ADP        N   8  0
-   ESPC       C  80  0
-   ENCO       C  80  0
-   LAUDO      C   1  0
-ENDDEF
-ENDFILE

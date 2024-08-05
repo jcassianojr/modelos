@@ -1,7 +1,0 @@
-DBFDEF rnci
-   RNC        N   8  0
-   QTNC       N   8  0
-   SETCOD     C   1  0
-   CODERR     C   3  0
-ENDDEF
-ENDFILE

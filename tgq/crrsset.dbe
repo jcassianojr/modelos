@@ -1,7 +1,0 @@
-DBFDEF crrsset
-   CODIGO     C   1  0
-   NOME       C  10  0
-   GRAFICO    L   1  0
-   COGNOME    C   5  0
-ENDDEF
-ENDFILE

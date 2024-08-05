@@ -1,9 +1,0 @@
-DBFDEF caf
-   NUMERO     N   8  0
-   PREVISTO   D   8  0
-   EFETUADO   D   8  0
-   DPLANO     D   8  0
-   EFICAZ     C   1  0
-   OBS        C  80  0
-ENDDEF
-ENDFILE
