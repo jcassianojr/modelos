@@ -1,9 +1,0 @@
-DBFDEF fo_res
-   NUMERO     N   5  0
-   CONTA      N   3  0
-   MES        N   2  0
-   HORAS      N   6  2
-   VALOR      N  12  2
-   CONTROLE   N  18  0
-ENDDEF
-ENDFILE

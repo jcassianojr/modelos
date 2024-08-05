@@ -1,7 +1,0 @@
-DBFDEF fo_csat
-   CODIGO     N   7  0
-   DESCRICAO  C  70  0
-   GRAU       N   1  0
-   TAXA       N   5  2
-ENDDEF
-ENDFILE

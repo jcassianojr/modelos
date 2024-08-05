@@ -1,9 +1,0 @@
-DBFDEF fo_phor
-   NUMERO     N   8  0
-   OCOINI     D   8  0
-   OCOFIM     D   8  0
-   OCOCOD     C   2  0
-   OCOMOT     C  60  0
-   MOTIVO     N   8  0
-ENDDEF
-ENDFILE

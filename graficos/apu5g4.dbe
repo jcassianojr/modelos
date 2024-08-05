@@ -1,8 +1,0 @@
-DBFDEF apu5g4
-   JUNTO      C  40  0
-   PERLUC     N   6  2
-   INTPER     N   6  0
-   MES        N   2  0
-   ANO        N   4  0
-ENDDEF
-ENDFILE

@@ -1,8 +1,0 @@
-DBFDEF unid
-   CODIGO     C  10  0
-   NUMERO     N   8  0
-   NOME       C  30  0
-   MODIRETA   C   1  0
-   CODSINER   N   5  0
-ENDDEF
-ENDFILE

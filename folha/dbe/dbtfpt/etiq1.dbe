@@ -1,7 +1,0 @@
-DBFDEF etiq1
-   CODIGO     C   8  0
-   DESCRICAO  C  30  0
-   SELECAO    C   1  0
-   TEXTO      M  10  0
-ENDDEF
-ENDFILE

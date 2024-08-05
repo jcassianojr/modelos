@@ -1,6 +1,0 @@
-DBFDEF orgemiss
-   CODIGO     C  10  0
-   NOME       C  85  0
-   CAIXA      N   2  0
-ENDDEF
-ENDFILE

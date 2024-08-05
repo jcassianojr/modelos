@@ -1,9 +1,0 @@
-DBFDEF tabturno
-   CODIGO     C   2  0
-   NOME       C  45  0
-   NOM2       C  45  0
-   DESCRICAO  C  40  0
-   APURA      C   1  0
-   FORMULA    C  40  0
-ENDDEF
-ENDFILE

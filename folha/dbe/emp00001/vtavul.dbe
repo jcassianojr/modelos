@@ -1,8 +1,0 @@
-DBFDEF vtavul
-   NUMERO     N   5  0
-   CONTA      N   4  0
-   HORAS      N   6  2
-   VALOR      N  12  2
-   CONTROLE   N   9  0
-ENDDEF
-ENDFILE

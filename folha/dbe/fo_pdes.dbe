@@ -1,9 +1,0 @@
-DBFDEF fo_pdes
-   NUMERO     N   8  0
-   DATA       D   8  0
-   CONTA      N   2  0
-   HORAS      N   6  2
-   OBS        C  60  0
-   HORA2      N   6  2
-ENDDEF
-ENDFILE

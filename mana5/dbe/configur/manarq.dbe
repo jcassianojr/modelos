@@ -13,7 +13,7 @@ DBFDEF manarq
    CBAS       C  78  0
    IBUS       N   2  0
    IEXI       N   2  0
-   CAMINHO    C  25  0
+   CAMINHO    C  30  0
    ARQMES     N   2  0
    ARQANO     N   4  0
    PULAFIX    C   1  0

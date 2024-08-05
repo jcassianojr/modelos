@@ -1,8 +1,0 @@
-DBFDEF foptopro
-   ORIGEM     N   8  0
-   DESTINO    N   8  0
-   DATA       D   8  0
-   NOME       C  60  0
-   MOTIVO     N   8  0
-ENDDEF
-ENDFILE

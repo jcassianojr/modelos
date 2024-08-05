@@ -1,8 +1,0 @@
-DBFDEF htttroca
-   NUMERO     N   8  0
-   DATA       C  10  0
-   HORA       C  10  0
-   ANT        C  10  0
-   HTT        C  10  0
-ENDDEF
-ENDFILE

@@ -1,8 +1,0 @@
-DBFDEF folrel
-   DBF        C   8  0
-   CAMPO      C  10  0
-   DADO       C  40  0
-   DESCRICAO  M  10  0
-   ARQUIVO    C  12  0
-ENDDEF
-ENDFILE

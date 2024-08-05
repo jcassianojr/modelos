@@ -1,5 +1,0 @@
-DBFDEF tbcodpg
-   CODIGO     C   4  0
-   NOME       C  50  0
-ENDDEF
-ENDFILE

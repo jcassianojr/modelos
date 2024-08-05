@@ -1,7 +1,0 @@
-DBFDEF fo_cbo
-   CODIGO     C   5  0
-   NOME       C 200  0
-   CODGPBASEC C   3  0
-   TPSITUACAO C   2  0
-ENDDEF
-ENDFILE

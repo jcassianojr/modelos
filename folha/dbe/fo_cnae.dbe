@@ -1,8 +1,0 @@
-DBFDEF FO_CNAE
-   T_CNAE     C   7  0
-   DESCRICAO  C 100  0
-   A_IBGE     C   4  0
-   TAXA       N   3  0
-   SEQ        C   1  0
-ENDDEF
-ENDFILE

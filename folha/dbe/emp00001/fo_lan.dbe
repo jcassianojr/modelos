@@ -1,6 +1,0 @@
-DBFDEF fo_lan
-   CONTA      N   3  0
-   VALOR      N  10  2
-   GRUPO      C  80  0
-ENDDEF
-ENDFILE

@@ -1,7 +1,0 @@
-DBFDEF fo_fai
-   FAIXA      C   2  0
-   DESCRICAO  C  50  0
-   VALOR      N  12  2
-   INDICE     N   8  3
-ENDDEF
-ENDFILE

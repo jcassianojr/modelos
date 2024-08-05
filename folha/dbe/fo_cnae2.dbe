@@ -1,8 +1,0 @@
-DBFDEF fo_cnae2
-   CODIGO     C   7  0
-   DESCRICAO  C 100  0
-   CODIGOPAI  C   7  0
-   ALIQ_ATV   N   6  2
-   NCM_ATV    C   8  0
-ENDDEF
-ENDFILE
