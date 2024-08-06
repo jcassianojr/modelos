@@ -1,8 +1,0 @@
-DBFDEF etippp
-   NUMERO     N   4  0
-   CODIGO     C  24  0
-   NOME       C  50  0
-   SUFIX      C   5  0
-   ENGENHA    C  50  0
-ENDDEF
-ENDFILE

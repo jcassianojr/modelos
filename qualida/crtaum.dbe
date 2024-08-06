@@ -1,9 +1,0 @@
-DBFDEF crtaum
-   TIPO       C   1  0
-   DATA       D   8  0
-   HORA       N   5  2
-   VALOR      N   8  0
-   REFCTR     C   1  0
-   SALA       C   5  0
-ENDDEF
-ENDFILE

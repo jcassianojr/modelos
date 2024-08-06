@@ -1,9 +1,0 @@
-DBFDEF cic
-   DESENHO    C  24  0
-   DESCRI     C  40  0
-   DATAR      D   8  0
-   DATAD      D   8  0
-   REVD       C   5  0
-   CLIENTE    N   8  0
-ENDDEF
-ENDFILE

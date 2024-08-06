@@ -1,7 +1,0 @@
-DBFDEF aepx
-   ACP        N   8  0
-   VALOR      N  12  4
-   QTDE       N   2  0
-   TOTAL      N  15  4
-ENDDEF
-ENDFILE
