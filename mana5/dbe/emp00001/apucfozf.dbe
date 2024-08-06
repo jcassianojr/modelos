@@ -1,8 +1,0 @@
-DBFDEF apucfozf
-   NF         N   6  0
-   DATA       D   8  0
-   VALOR      N  12  2
-   CNPJ       C  18  0
-   CODMUN     C   5  0
-ENDDEF
-ENDFILE

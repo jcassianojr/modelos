@@ -1,7 +1,0 @@
-DBFDEF mp02tal
-   CODIGO     C  12  0
-   CURSO      C  20  0
-   NUMFUN     N   8  0
-   TREIN      N   8  0
-ENDDEF
-ENDFILE

@@ -1,7 +1,0 @@
-DBFDEF md01
-   CODIGO     C  12  0
-   NOME       C  40  0
-   TIPO       C   1  0
-   GRUPO      C   2  0
-ENDDEF
-ENDFILE

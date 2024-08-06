@@ -1,7 +1,0 @@
-DBFDEF mm08
-   TIPOENT    C   1  0
-   CODIGO     C  24  0
-   FORNECEDO  N   8  0
-   REDICM     N   6  2
-ENDDEF
-ENDFILE

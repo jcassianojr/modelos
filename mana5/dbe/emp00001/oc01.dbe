@@ -1,7 +1,0 @@
-DBFDEF oc01
-   OC         N   8  0
-   DATA       D   8  0
-   OBS        C  60  0
-   TOTAL      N  15  3
-ENDDEF
-ENDFILE

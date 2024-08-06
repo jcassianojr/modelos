@@ -1,6 +1,0 @@
-DBFDEF mf11
-   VARIAVEL   C  10  0
-   EXECUTE    C 120  0
-   ARQUIVO    C   8  0
-ENDDEF
-ENDFILE

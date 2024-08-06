@@ -1,8 +1,0 @@
-DBFDEF apuser
-   CLIENTE    N   8  0
-   ANO        N   4  0
-   MES        N   2  0
-   VALOR      N  12  2
-   SEMNOTA    C   1  0
-ENDDEF
-ENDFILE

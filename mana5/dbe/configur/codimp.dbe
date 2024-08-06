@@ -1,7 +1,0 @@
-DBFDEF codimp
-   CODIGO     C   6  0
-   NOMEIMP    C  12  0
-   DESCRICAO  C  50  0
-   CONTEUDO   C  70  0
-ENDDEF
-ENDFILE

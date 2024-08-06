@@ -1,8 +1,0 @@
-DBFDEF dipam
-   FORNECEDO  N   8  0
-   CODIGO     C  24  0
-   CLASSIPI   C  14  0
-   VALORMER   N  12  2
-   NOME       C  40  0
-ENDDEF
-ENDFILE

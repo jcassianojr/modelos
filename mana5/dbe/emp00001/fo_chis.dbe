@@ -1,9 +1,0 @@
-DBFDEF fo_chis
-   NUMERO     N   8  0
-   NOME       C  40  0
-   ADMISSAO   D   8  0
-   DEMISSAO   D   8  0
-   ARQUIVO    C  20  0
-   OBS        C  40  0
-ENDDEF
-ENDFILE

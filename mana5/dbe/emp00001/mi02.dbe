@@ -1,8 +1,0 @@
-DBFDEF mi02
-   CODIGO     C   3  0
-   DESCRICAO  C  35  0
-   VALOR      N  15  2
-   VALOR1     N  15  2
-   TIPO       C   1  0
-ENDDEF
-ENDFILE

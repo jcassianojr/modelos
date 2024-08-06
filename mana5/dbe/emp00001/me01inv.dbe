@@ -1,7 +1,0 @@
-DBFDEF me01inv
-   CONTABIL   C   8  0
-   NOME       C  40  0
-   NRFORNE    N   5  0
-   COGNOME    C  12  0
-ENDDEF
-ENDFILE

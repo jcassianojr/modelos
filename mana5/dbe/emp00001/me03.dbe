@@ -1,8 +1,0 @@
-DBFDEF me03
-   NUMERO     C   4  0
-   DATA       D   8  0
-   ESTQINI    N   5  2
-   ESTQSAI    N   5  2
-   ESTQSAL    N   5  2
-ENDDEF
-ENDFILE

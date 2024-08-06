@@ -1,7 +1,0 @@
-DBFDEF msop
-   CODIGO     C  24  0
-   QTDE       N  10  0
-   LOCAL      C  10  0
-   OP         N   8  0
-ENDDEF
-ENDFILE

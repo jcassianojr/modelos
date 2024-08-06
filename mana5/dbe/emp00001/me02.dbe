@@ -1,7 +1,0 @@
-DBFDEF me02
-   NUMERO     C   4  0
-   SEQ        N   3  0
-   CODMP01    C  12  0
-   NOMMP01    C  30  0
-ENDDEF
-ENDFILE

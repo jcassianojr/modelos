@@ -1,9 +1,0 @@
-DBFDEF DICI
-   TABELA     C  10  0
-   CAMPO      C  10  0
-   TIPO       C   1  0
-   TAM        N   3  0
-   DEC        N   2  0
-   EXCLUIDO   C  10  0
-ENDDEF
-ENDFILE

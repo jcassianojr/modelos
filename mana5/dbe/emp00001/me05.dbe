@@ -1,8 +1,0 @@
-DBFDEF me05
-   DDD        C   4  0
-   NUMERO     C   9  0
-   TIPOT      C  12  0
-   HEXA       C  12  0
-   MODELO     C  30  0
-ENDDEF
-ENDFILE
