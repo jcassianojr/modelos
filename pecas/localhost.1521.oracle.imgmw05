@@ -1,0 +1,15 @@
+--------------------------------------------
+--------------- Dump details ---------------
+--------------------------------------------
+-- Original file: C:\Users\jcass\Downloads\imgmw05.mdb
+-- Dump date: 12-17-2024 20:00:05
+--------------------------------------------
+
+-- creating table
+CREATE TABLE IMAGENS (
+	CODIGO VARCHAR2 (24) NOT NULL,
+	IMAGEM BLOB,
+	NUMERO NUMBER
+);
+
+
