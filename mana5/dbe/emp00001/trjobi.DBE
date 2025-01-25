@@ -1,0 +1,85 @@
+DBFDEF TRJOBI
+   NUMERO     N   8  0
+   PECA       C  24  0
+   NUMTEC     N   8  0
+   NOMTEC     C  40  0
+   CARGA      N   5  2
+ENDDEF
+DEFINDEX TRJOBI
+   NUMERO NUMERO NUMERO
+   PECA PECA PECA
+   NUMTEC NUMTEC NUMTEC
+ENDINDEX
+ENDFILE
+
+[TRJOBI.DBF]
+CAMINHO=c:\temp\dbf\
+DRIVER=DBFCDX
+NUMMAINTAINED=3
+MAINTAIN0=trjobi.CDX
+TAG0=NUMERO
+INDEX0=NUMERO
+INDEXFIELDS0=NUMERO
+TAG1=PECA
+INDEX1=PECA
+INDEXFIELDS1=PECA
+TAG2=NUMTEC
+INDEX2=NUMTEC
+INDEXFIELDS2=NUMTEC
+
+[SQLITE]
+CREATE TABLE IF NOT EXISTS trjobi (NUMERO INTEGER default 0, PECA TEXT , NUMTEC INTEGER default 0, NOMTEC TEXT , CARGA FLOAT)
+
+create index NUMERO on trjobi ( NUMERO ) ;
+create index PECA on trjobi ( PECA ) ;
+create index NUMTEC on trjobi ( NUMTEC ) ;
+
+[MSSQL]
+CREATE TABLE IF NOT EXISTS trjobi (NUMERO INT, PECA VARCHAR(24), NUMTEC INT, NOMTEC VARCHAR(40), CARGA NUMERIC(5,2))
+
+create index NUMERO on trjobi ( NUMERO ) ;
+create index PECA on trjobi ( PECA ) ;
+create index NUMTEC on trjobi ( NUMTEC ) ;
+
+[MYSQL]
+CREATE TABLE IF NOT EXISTS trjobi (NUMERO INTEGER(8), PECA CHAR(24), NUMTEC INTEGER(8), NOMTEC CHAR(40), CARGA NUMERIC(5,2))
+
+create index NUMERO on trjobi ( NUMERO ) ;
+create index PECA on trjobi ( PECA ) ;
+create index NUMTEC on trjobi ( NUMTEC ) ;
+
+[POSTGRESQL]
+CREATE TABLE IF NOT EXISTS TRJOBI (NUMERO INTEGER, PECA VARCHAR(24), NUMTEC INTEGER, NOMTEC VARCHAR(40), CARGA NUMERIC(5,2))
+
+create index NUMERO on trjobi ( NUMERO ) ;
+create index PECA on trjobi ( PECA ) ;
+create index NUMTEC on trjobi ( NUMTEC ) ;
+
+[ACCESS]
+CREATE TABLE trjobi (NUMERO LONG, PECA VARCHAR(24), NUMTEC LONG, NOMTEC VARCHAR(40), CARGA DOUBLE)
+
+create index NUMERO on trjobi ( NUMERO ) ;
+create index PECA on trjobi ( PECA ) ;
+create index NUMTEC on trjobi ( NUMTEC ) ;
+
+[ORACLE]
+CREATE TABLE IF NOT EXISTS trjobi (NUMERO NUMBER(8)  DEFAULT 0, PECA VARCHAR2 (24), NUMTEC NUMBER(8)  DEFAULT 0, NOMTEC VARCHAR2 (40), CARGA NUMBER(5,2)  DEFAULT 0)
+
+create index NUMERO on trjobi ( NUMERO ) ;
+create index PECA on trjobi ( PECA ) ;
+create index NUMTEC on trjobi ( NUMTEC ) ;
+
+[DBML]
+Table trjobi {
+"NUMERO" DECIMAL (8) [default: 0]
+"PECA" CHAR (24)
+"NUMTEC" DECIMAL (8) [default: 0]
+"NOMTEC" CHAR (40)
+"CARGA" DECIMAL (5,2) [default: 0]
+  Indexes {
+ ( NUMERO )  [name: "NUMERO"]
+ ( PECA )  [name: "PECA"]
+ ( NUMTEC )  [name: "NUMTEC"]
+
+ }
+}

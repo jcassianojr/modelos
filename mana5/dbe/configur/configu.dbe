@@ -1,0 +1,27 @@
+DBFDEF configu
+   HELP       C   8  0
+   ARQ        C   8  0
+   ARQ1       C   8  0
+   DIRA       C  60  0
+   DIRB       C  60  0
+   DIRC       C  60  0
+   DIRI       C  60  0
+   DIRP       C  60  0
+   DIRE       C  60  0
+   MOEDA01    C  20  0
+   MOEDA02    C  20  0
+   MOEDA03    C  20  0
+   MOEDA04    C  20  0
+   MOEDA05    C  20  0
+   MOEDA06    C  20  0
+   MANUAL     C   8  0
+   ACHESC     C   1  0
+   ARQHIS     C   8  0
+   MULTIEMP   C   1  0
+   ARQFON     C   8  0
+   IMPPAD     C  12  0
+   INXCGCMA   N   1  0
+   INXCGCMB   N   1  0
+   DRIVER     C  10  0
+ENDDEF
+ENDFILE

@@ -1,0 +1,68 @@
+DBFDEF MG05
+   NUMERO     N   8  0
+   NOME       C  20  0
+ENDDEF
+DEFINDEX MG05
+   MG05-1 NUMERO NUMERO
+   MG05-2 NOME NOME
+ENDINDEX
+ENDFILE
+
+[MG05.DBF]
+CAMINHO=c:\temp\dbf\
+DRIVER=DBFCDX
+NUMMAINTAINED=2
+MAINTAIN0=mg05.CDX
+TAG0=MG05-1
+INDEX0=NUMERO
+INDEXFIELDS0=NUMERO
+TAG1=MG05-2
+INDEX1=NOME
+INDEXFIELDS1=NOME
+
+[SQLITE]
+CREATE TABLE IF NOT EXISTS mg05 (NUMERO INTEGER default 0, NOME TEXT )
+
+create index MG05_1 on mg05 ( NUMERO ) ;
+create index MG05_2 on mg05 ( NOME ) ;
+
+[MSSQL]
+CREATE TABLE IF NOT EXISTS mg05 (NUMERO INT, NOME VARCHAR(20))
+
+create index MG05_1 on mg05 ( NUMERO ) ;
+create index MG05_2 on mg05 ( NOME ) ;
+
+[MYSQL]
+CREATE TABLE IF NOT EXISTS mg05 (NUMERO INTEGER(8), NOME CHAR(20))
+
+create index MG05_1 on mg05 ( NUMERO ) ;
+create index MG05_2 on mg05 ( NOME ) ;
+
+[POSTGRESQL]
+CREATE TABLE IF NOT EXISTS MG05 (NUMERO INTEGER, NOME VARCHAR(20))
+
+create index MG05_1 on mg05 ( NUMERO ) ;
+create index MG05_2 on mg05 ( NOME ) ;
+
+[ACCESS]
+CREATE TABLE mg05 (NUMERO LONG, NOME VARCHAR(20))
+
+create index MG05_1 on mg05 ( NUMERO ) ;
+create index MG05_2 on mg05 ( NOME ) ;
+
+[ORACLE]
+CREATE TABLE IF NOT EXISTS mg05 (NUMERO NUMBER(8)  DEFAULT 0, NOME VARCHAR2 (20))
+
+create index MG05_1 on mg05 ( NUMERO ) ;
+create index MG05_2 on mg05 ( NOME ) ;
+
+[DBML]
+Table mg05 {
+"NUMERO" DECIMAL (8) [default: 0]
+"NOME" CHAR (20)
+  Indexes {
+ ( NUMERO )  [name: "MG05_1"]
+ ( NOME )  [name: "MG05_2"]
+
+ }
+}

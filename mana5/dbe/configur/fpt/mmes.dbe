@@ -1,0 +1,7 @@
+DBFDEF mmes
+   CODIGO     C   6  0
+   USO        C  50  0
+   MENSAGEM   C  50  0
+   DESCRICAO  M  10  0
+ENDDEF
+ENDFILE
