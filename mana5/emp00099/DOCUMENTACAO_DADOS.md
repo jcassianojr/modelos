@@ -1,0 +1,45 @@
+# 🗄️ Dicionario de Estruturas de Dados do Projeto
+> Varredura automatica realizada em: 05/12/26
+
+## 📋 Tabela DBF: `mp04.dbf`
+| Campo | Tipo | Tam | Dec |
+| :--- | :--- | :--- | :--- |
+| TECNICO | N | 8 | 0 |
+| CNUMERO | C | 8 | 0 |
+| COGTEC | C | 12 | 0 |
+| NOMTEC | C | 40 | 0 |
+| TABTEC | C | 12 | 0 |
+| AREA | C | 2 | 0 |
+| ARE2 | C | 2 | 0 |
+| SETOR | C | 12 | 0 |
+| ADMITIDO | D | 8 | 0 |
+| DEMITIDO | D | 8 | 0 |
+| APONTA | C | 1 | 0 |
+| DATAEXM | D | 8 | 0 |
+| DATAHAB | D | 8 | 0 |
+| DATAVIS | D | 8 | 0 |
+| EMAILINT | C | 50 | 0 |
+| EMAILEXT | C | 50 | 0 |
+| SOLDADOR | L | 1 | 0 |
+| EMPILHAD | L | 1 | 0 |
+| PONTOROL | L | 1 | 0 |
+| OBSESCOLA | C | 50 | 0 |
+| OBSTECNO | C | 50 | 0 |
+| OBSUNIVER | C | 50 | 0 |
+| NUMFOLHA | N | 3 | 0 |
+| ESCCOMPR | L | 1 | 0 |
+| ESCCOMOB | C | 50 | 0 |
+| OBSPOS | C | 50 | 0 |
+| ESCRAIS | C | 2 | 0 |
+| NUMREGANT | N | 8 | 0 |
+| NUMEMPANT | N | 3 | 0 |
+| DATTRANSF | D | 8 | 0 |
+| CPF | C | 14 | 0 |
+
+**Índices vinculados:**
+- Tag: `MP04-1` Expressão: `TECNICO`
+- Tag: `MP04-2` Expressão: `NOMTEC`
+- Tag: `MP04-3` Expressão: `CNUMERO`
+- Tag: `MP04-4` Expressão: `TABTEC`
+
+---
