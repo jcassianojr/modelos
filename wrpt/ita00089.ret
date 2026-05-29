@@ -1,0 +1,269 @@
+{\rtf1\ansi
+{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss Helv;}{\f2\froman Times New Roman;}}
+{\colortbl\red0\green0\blue0;\red128\green0\blue0;\red0\green128\blue0;\red128\green128\blue0;\red0\green0\blue128;\red128\green0\blue128;\red0\green128\blue128;\red128\green128\blue128;\red192\green192\blue192;\red255\green0\blue0;\red0\green255\blue0;\red255\green255\blue0;\red0\green0\blue255;\red255\green0\blue255;\red0\green255\blue255;}
+{\info{\author itaesbra                      }{\creatim \yr1998\mo2\dy19\hr13\min34}{\revtim \yr2026\mo5\dy27\hr20\min38}}
+{\*\vrwvern5\vrwsubn0}
+\paperw12240 \paperh15840 \margl900 \margr810 \margt1440 \margb1440
+{\*\vrwcol TABLE1{\col0 0 2250 180 0 0}{\col1 2430 2250 180 0 0}{\col2 4860 2250 180 0 0}{\col3 7290 2250 180 0 0}}
+{\*\vrwcol TABLE2{\col0 0 3060 180 0 0}{\col1 3240 3060 180 0 0}{\col2 6480 3060 180 0 0}}
+{\*\vrwcol TABLE3{\col0 0 6480 180 0 0}{\col1 6660 3780 180 0 0}}
+{\*\vrwcol TABLE4{\col0 0 1620 180 0 0}{\col1 1800 4680 180 0 0}{\col2 6660 3780 180 0 0}}
+{\*\vrwcol TABLE5{\col0 0 1980 180 0 0}{\col1 2160 1980 180 0 0}{\col2 4320 1980 180 0 0}{\col3 6480 1980 180 0 0}{\col4 8640 1800 180 0 0}}
+{\*\ctrcol}{\*\hrzpagbrk}{\*\vrwprmnam _parameter}
+\sectd \linex0 \pard
+{\*\vrwvar {\v0 NUMERO\colnum1\colnam numero\len6\txt}
+{\v1 COGNOME\colnum2\colnam cognome\len13\txt}
+{\v2 NOME\colnum3\colnam nome\len41\txt}
+{\v3 ENDERECO\colnum4\colnam endereco\len41\txt}
+{\v4 BAIRRO\colnum5\colnam bairro\len31\txt}
+{\v5 CIDADE\colnum6\colnam cidade\len36\txt}
+{\v6 ESTADO\colnum7\colnam estado\len3\txt}
+{\v7 CEP\colnum8\colnam cep\len10\txt}
+{\v8 DDD\colnum9\colnam ddd\len5\txt}
+{\v9 TELEFONE\colnum10\colnam telefone\len10\txt}
+{\v10 RAMAL\colnum11\colnam ramal\len5\txt}
+{\v11 DDD1\colnum13\colnam ddd1\len5\txt}
+{\v12 RAMAL1\colnum15\colnam ramal1\len5\txt}
+{\v13 CONTATO1\colnum16\colnam contato1\len23\txt}
+{\v14 DDDFAX\colnum18\colnam dddfax\len5\txt}
+{\v15 TELEFAX\colnum19\colnam telefax\len10\txt}
+{\v16 ZONA\colnum23\colnam zona\len7\txt}
+{\v17 COMPRADOR\colnum0\colnam COMPRADOR\len6\txt}
+{\v18 CONTATO\colnum12\colnam contato\len23\txt}
+{\v19 TELEFONE1\colnum14\colnam telefone1\len10\txt}
+{\v20 CXPOSTAL\colnum0\colnam CXPOSTAL\len6\txt}
+{\v21 DDDTLX\colnum0\colnam DDDTLX\len5\txt}
+{\v22 TELEX\colnum0\colnam TELEX\len7\txt}
+{\v23 CGC\colnum20\colnam cgc\len19\txt}
+{\v24 INSCR\colnum0\colnam INSCR\len17\txt}
+{\v25 VENDEDOR\colnum0\colnam VENDEDOR\len6\txt}
+{\v26 CODIGO\colnum0\colnam CODIGO\len16\txt}
+{\v27 TRANSPORTE\colnum0\colnam TRANSPORTE\len8\flt}
+{\v28 ENDERECO2\colnum0\colnam ENDERECO2\len41\txt}
+{\v29 BAIRRO2\colnum0\colnam BAIRRO2\len31\txt}
+{\v30 CIDADE2\colnum0\colnam CIDADE2\len31\txt}
+{\v31 ESTADO2\colnum0\colnam ESTADO2\len3\txt}
+{\v32 CEP2\colnum0\colnam CEP2\len10\txt}
+{\v33 DDD2\colnum0\colnam DDD2\len5\txt}
+{\v34 TELEFONE2\colnum0\colnam TELEFONE2\len10\txt}
+{\v35 RAMAL2\colnum0\colnam RAMAL2\len5\txt}
+{\v36 CONTATO2\colnum0\colnam CONTATO2\len23\txt}
+{\v37 DDDFAX2\colnum0\colnam DDDFAX2\len5\txt}
+{\v38 TELEFAX2\colnum0\colnam TELEFAX2\len10\txt}
+{\v39 CONDPAG\colnum0\colnam CONDPAG\len3\txt}
+{\v40 TIPOCOB\colnum0\colnam TIPOCOB\len3\txt}
+{\v41 CONCEITO\colnum0\colnam CONCEITO\len11\txt}
+{\v42 LIMITE\colnum0\colnam LIMITE\len8\flt}
+{\v43 LIMITEACU\colnum0\colnam LIMITEACU\len8\flt}
+{\v44 NOME3\colnum0\colnam NOME3\len61\txt}
+{\v45 ENDERECO3\colnum0\colnam ENDERECO3\len41\txt}
+{\v46 BAIRRO3\colnum0\colnam BAIRRO3\len31\txt}
+{\v47 CIDADE3\colnum0\colnam CIDADE3\len31\txt}
+{\v48 ESTADO3\colnum0\colnam ESTADO3\len3\txt}
+{\v49 CEP3\colnum0\colnam CEP3\len10\txt}
+{\v50 DDD3\colnum0\colnam DDD3\len5\txt}
+{\v51 TELEFONE3\colnum0\colnam TELEFONE3\len10\txt}
+{\v52 RAMAL3\colnum0\colnam RAMAL3\len5\txt}
+{\v53 CONTATO3\colnum0\colnam CONTATO3\len23\txt}
+{\v54 DDDFAX3\colnum0\colnam DDDFAX3\len5\txt}
+{\v55 TELEFAX3\colnum0\colnam TELEFAX3\len10\txt}
+{\v56 CGC3\colnum0\colnam CGC3\len19\txt}
+{\v57 INSCR3\colnum0\colnam INSCR3\len17\txt}
+{\v58 TOTDEV\colnum0\colnam TOTDEV\len8\flt}
+{\v59 RAMO\colnum0\colnam RAMO\len3\txt}
+{\v60 DTCAD\colnum0\colnam DTCAD\len8\dat}
+{\v61 DT1COM\colnum0\colnam DT1COM\len8\dat}
+{\v62 VL1CRU\colnum0\colnam VL1CRU\len8\flt}
+{\v63 VL1DOL\colnum0\colnam VL1DOL\len8\flt}
+{\v64 DTMCOM\colnum0\colnam DTMCOM\len8\dat}
+{\v65 VLMCRU\colnum0\colnam VLMCRU\len8\flt}
+{\v66 VLMDOL\colnum0\colnam VLMDOL\len8\flt}
+{\v67 DTUCOM\colnum0\colnam DTUCOM\len8\dat}
+{\v68 VLUCRU\colnum0\colnam VLUCRU\len8\flt}
+{\v69 VLUDOL\colnum0\colnam VLUDOL\len8\flt}
+{\v70 DIAATRA\colnum0\colnam DIAATRA\len8\flt}
+{\v71 VLACRU\colnum0\colnam VLACRU\len8\flt}
+{\v72 VLADOL\colnum0\colnam VLADOL\len8\flt}
+{\v73 PRODUTO1\colnum0\colnam PRODUTO1\len8\txt}
+{\v74 PRODUTO2\colnum0\colnam PRODUTO2\len8\txt}
+{\v75 PRODUTO3\colnum0\colnam PRODUTO3\len8\txt}
+{\v76 PRODUTO4\colnum0\colnam PRODUTO4\len8\txt}
+{\v77 PRODUTO5\colnum0\colnam PRODUTO5\len8\txt}
+{\v78 MAQ1\colnum0\colnam MAQ1\len8\flt}
+{\v79 MAQ2\colnum0\colnam MAQ2\len8\flt}
+{\v80 MAQ3\colnum0\colnam MAQ3\len8\flt}
+{\v81 MAQ4\colnum0\colnam MAQ4\len8\flt}
+{\v82 MAQ5\colnum0\colnam MAQ5\len8\flt}
+{\v83 MARCA1\colnum0\colnam MARCA1\len11\txt}
+{\v84 MARCA2\colnum0\colnam MARCA2\len11\txt}
+{\v85 MARCA3\colnum0\colnam MARCA3\len11\txt}
+{\v86 MARCA4\colnum0\colnam MARCA4\len11\txt}
+{\v87 MARCA5\colnum0\colnam MARCA5\len11\txt}
+{\v88 PESSOA\colnum25\colnam pessoa\len2\txt}
+{\v89 CTACONTB\colnum0\colnam CTACONTB\len12\txt}
+{\v90 ZONAROT\colnum0\colnam ZONAROT\len11\txt}
+{\v91 ZONASEQ\colnum0\colnam ZONASEQ\len8\flt}
+{\v92 KM\colnum0\colnam KM\len8\flt}
+{\v93 CONDCONC\colnum0\colnam CONDCONC\len3\txt}
+{\v94 GRUPOEMP\colnum0\colnam GRUPOEMP\len13\txt}
+{\v95 CODCONC\colnum0\colnam CODCONC\len3\txt}
+{\v96 LUCRO\colnum0\colnam LUCRO\len8\flt}
+{\v97 CELULAR\colnum17\colnam celular\len10\txt}
+{\v98 IESTADUAL\colnum21\colnam iestadual\len16\txt}
+{\v99 OBSERVA\colnum22\colnam observa\len31\txt}
+{\v100 DATANASC\colnum24\colnam datanasc\len8\dat}
+{\v101 PORCOMIS\colnum26\colnam porcomis\len8\flt}
+{\v102 COTA\colnum27\colnam cota\len8\flt}
+{\v103 BANCO\colnum28\colnam banco\len4\txt}
+{\v104 AGENCIA\colnum29\colnam agencia\len8\txt}
+{\v105 CONTA\colnum30\colnam conta\len13\txt}
+{\v106 DDDBIP\colnum31\colnam dddbip\len5\txt}
+{\v107 TELBIP\colnum32\colnam telbip\len10\txt}
+{\v108 CODBIP\colnum33\colnam codbip\len13\txt}
+{\v109 VENGRU\colnum34\colnam vengru\len5\txt}
+{\v110 VENHIE\colnum35\colnam venhie\len3\txt}
+{\v111 _date{\expcr12 SystemDate()}\dat}
+{\v112 _pagenumber{\expcr12 PageNumber()}\flt}
+{\v113 HORAATU{\expcr12 SystemTime()}\dat}
+{\v114 _parameter1\colnam Do Comprador:\prm \txt}
+{\v115 _parameter2\colnam ao Comprador:{\dftprm ZZZZZZZZZZZZZZZZZ}\prm \txt}
+}
+{\*\vrwqry \qrynam QUERY2\inptyp30 {\*\cqmsql \qbeqry103  select *
+	
+ from 
+	MC02.DBF
+ where 
+	(NUMERO >= '[_parameter1]' and 
+	NUMERO <= '[_parameter2]')} {\map NUMERO\mapcol NUMERO\maptbl MC02\mapnum1}
+{\map COGNOME\mapcol COGNOME\maptbl MC02\mapnum2}
+{\map NOME\mapcol NOME\maptbl MC02\mapnum3}
+{\map ENDERECO\mapcol ENDERECO\maptbl MC02\mapnum4}
+{\map BAIRRO\mapcol BAIRRO\maptbl MC02\mapnum5}
+{\map CIDADE\mapcol CIDADE\maptbl MC02\mapnum6}
+{\map ESTADO\mapcol ESTADO\maptbl MC02\mapnum7}
+{\map CEP\mapcol CEP\maptbl MC02\mapnum8}
+{\map DDD\mapcol DDD\maptbl MC02\mapnum9}
+{\map TELEFONE\mapcol TELEFONE\maptbl MC02\mapnum10}
+{\map RAMAL\mapcol RAMAL\maptbl MC02\mapnum11}
+{\map DDD1\mapcol DDD1\maptbl MC02\mapnum13}
+{\map RAMAL1\mapcol RAMAL1\maptbl MC02\mapnum15}
+{\map CONTATO1\mapcol CONTATO1\maptbl MC02\mapnum16}
+{\map DDDFAX\mapcol DDDFAX\maptbl MC02\mapnum18}
+{\map TELEFAX\mapcol TELEFAX\maptbl MC02\mapnum19}
+{\map ZONA\mapcol ZONA\maptbl MC02\mapnum23}
+{\map COMPRADOR\mapnum0}
+{\map CONTATO\mapcol CONTATO\maptbl MC02\mapnum12}
+{\map TELEFONE1\mapcol TELEFONE1\maptbl MC02\mapnum14}
+{\map CXPOSTAL\mapnum0}
+{\map DDDTLX\mapnum0}
+{\map TELEX\mapnum0}
+{\map CGC\mapcol CGC\maptbl MC02\mapnum20}
+{\map INSCR\mapnum0}
+{\map VENDEDOR\mapnum0}
+{\map CODIGO\mapnum0}
+{\map TRANSPORTE\mapnum0}
+{\map ENDERECO2\mapnum0}
+{\map BAIRRO2\mapnum0}
+{\map CIDADE2\mapnum0}
+{\map ESTADO2\mapnum0}
+{\map CEP2\mapnum0}
+{\map DDD2\mapnum0}
+{\map TELEFONE2\mapnum0}
+{\map RAMAL2\mapnum0}
+{\map CONTATO2\mapnum0}
+{\map DDDFAX2\mapnum0}
+{\map TELEFAX2\mapnum0}
+{\map CONDPAG\mapnum0}
+{\map TIPOCOB\mapnum0}
+{\map CONCEITO\mapnum0}
+{\map LIMITE\mapnum0}
+{\map LIMITEACU\mapnum0}
+{\map NOME3\mapnum0}
+{\map ENDERECO3\mapnum0}
+{\map BAIRRO3\mapnum0}
+{\map CIDADE3\mapnum0}
+{\map ESTADO3\mapnum0}
+{\map CEP3\mapnum0}
+{\map DDD3\mapnum0}
+{\map TELEFONE3\mapnum0}
+{\map RAMAL3\mapnum0}
+{\map CONTATO3\mapnum0}
+{\map DDDFAX3\mapnum0}
+{\map TELEFAX3\mapnum0}
+{\map CGC3\mapnum0}
+{\map INSCR3\mapnum0}
+{\map TOTDEV\mapnum0}
+{\map RAMO\mapnum0}
+{\map DTCAD\mapnum0}
+{\map DT1COM\mapnum0}
+{\map VL1CRU\mapnum0}
+{\map VL1DOL\mapnum0}
+{\map DTMCOM\mapnum0}
+{\map VLMCRU\mapnum0}
+{\map VLMDOL\mapnum0}
+{\map DTUCOM\mapnum0}
+{\map VLUCRU\mapnum0}
+{\map VLUDOL\mapnum0}
+{\map DIAATRA\mapnum0}
+{\map VLACRU\mapnum0}
+{\map VLADOL\mapnum0}
+{\map PRODUTO1\mapnum0}
+{\map PRODUTO2\mapnum0}
+{\map PRODUTO3\mapnum0}
+{\map PRODUTO4\mapnum0}
+{\map PRODUTO5\mapnum0}
+{\map MAQ1\mapnum0}
+{\map MAQ2\mapnum0}
+{\map MAQ3\mapnum0}
+{\map MAQ4\mapnum0}
+{\map MAQ5\mapnum0}
+{\map MARCA1\mapnum0}
+{\map MARCA2\mapnum0}
+{\map MARCA3\mapnum0}
+{\map MARCA4\mapnum0}
+{\map MARCA5\mapnum0}
+{\map PESSOA\mapcol PESSOA\maptbl MC02\mapnum25}
+{\map CTACONTB\mapnum0}
+{\map ZONAROT\mapnum0}
+{\map ZONASEQ\mapnum0}
+{\map KM\mapnum0}
+{\map CONDCONC\mapnum0}
+{\map GRUPOEMP\mapnum0}
+{\map CODCONC\mapnum0}
+{\map LUCRO\mapnum0}
+{\map CELULAR\mapcol CELULAR\maptbl MC02\mapnum17}
+{\map IESTADUAL\mapcol IESTADUAL\maptbl MC02\mapnum21}
+{\map OBSERVA\mapcol OBSERVA\maptbl MC02\mapnum22}
+{\map DATANASC\mapcol DATANASC\maptbl MC02\mapnum24}
+{\map PORCOMIS\mapcol PORCOMIS\maptbl MC02\mapnum26}
+{\map COTA\mapcol COTA\maptbl MC02\mapnum27}
+{\map BANCO\mapcol BANCO\maptbl MC02\mapnum28}
+{\map AGENCIA\mapcol AGENCIA\maptbl MC02\mapnum29}
+{\map CONTA\mapcol CONTA\maptbl MC02\mapnum30}
+{\map DDDBIP\mapcol DDDBIP\maptbl MC02\mapnum31}
+{\map TELBIP\mapcol TELBIP\maptbl MC02\mapnum32}
+{\map CODBIP\mapcol CODBIP\maptbl MC02\mapnum33}
+{\map VENGRU\mapcol VENGRU\maptbl MC02\mapnum34}
+{\map VENHIE\mapcol VENHIE\maptbl MC02\mapnum35}
+}
+{\*\vrwsct {\BCK15840 {\sctrct0 0 12240 15840}\nstlev1 }}
+\pard\plain\ql {\f1\fs20 }
+{\*\vrwsct {\PHD1322 {\sctrct900 1440 11430 2762}\txthgt \nstlev1 }}
+\pard\plain\qc {\b\f2\fs12 }{\*\brdwid20}{\*\boxrnd}\brdcel\box\brdrs\brdrw20\brdrs\brdrw20\par\pard\plain\qc {\b\f2\fs36 Cadastro de Compradores}{\*\brdwid20}{\*\boxrnd}\brdcel\box\brdrs\brdrw20\brdrs\brdrw20\par\pard\plain\qr {\f2\fs20       }{\f2\fs20 {\*\varref _date}}{\f2\fs20       }{\f2\fs20 {\*\varref HORAATU\pic GT }}{\f2\fs20   }{\*\brdwid20}{\*\boxrnd}\brdcel\box\brdrs\brdrw20\brdrs\brdrw20\par\pard\plain\ql {\f2\fs20 }{\*\brdwid20}{\*\boxrnd}\brdcel\box\brdrs\brdrw20\brdrs\brdrw20\par\pard\plain\ql {\f2\fs16 }
+{\*\vrwgrf {\vrwbmp 270 90 3870 3690 0 0 0 0 1 0 0 C:\\develop\\modelos\\logo\\semfoto.bmp}}
+{\*\vrwsct {\GHD911 {\sctrct900 2762 11430 3673}\txthgt \rptbrk \nstlev1 {\grpvbllst NUMERO}}}
+\pard\plain\ql {\f2\fs28  }{\b\f2\fs28  Cliente : }{\b\f2\fs28 {\*\varref NUMERO}}{\b\f2\fs28  - }{\b\f2\fs28 {\*\varref COGNOME\trmblk}}{\b\f2\fs28  }{\*\brdwid20}{\*\boxrnd}\brdcel\box\brdrs\brdrw20\brdrs\brdrw20\par\pard\plain\ql {\b\f2\fs28                }{\b\f2\fs28 {\*\varref NOME\trmblk}}{\b\f2\fs28 }{\*\brdwid20}{\*\boxrnd}\brdcel\box\brdrs\brdrw20\brdrs\brdrw20\par\pard\plain\ql {\f2\fs16 }
+{\*\vrwsct {\BDY2740 {\sctrct900 3673 11430 6413}\txthgt \nstlev1 }}
+\pard\plain\trowd \trgaph90\trleft-90\cellx6570\cellx10530
+{\*\vrwcoldef3}
+\intbl \ql {\f2\fs20 Endereço}{\*\brdwid20}\brdrt\brdrs\brdrw20\brdrb\brdrs\brdrw20\brdrl\brdrs\brdrw20\brdrs\brdrw20\par\pard\plain\intbl \ql {\f2\fs24 {\*\varref ENDERECO\trmblk}}{\f2\fs24 }\cell\pard\plain\intbl \ql {\f2\fs20 Bairro}{\*\brdwid20}\brdrt\brdrs\brdrw20\brdrl\brdrs\brdrw20\brdrr\brdrs\brdrw20\brdrs\brdrw20\par\pard\plain\intbl \ql {\f2\fs24 {\*\varref BAIRRO\trmblk}}{\f2\fs24 }{\*\brdwid20}\brdrt\brdrs\brdrw20\brdrb\brdrs\brdrw20\brdrl\brdrs\brdrw20\brdrr\brdrs\brdrw20\brdrs\brdrw20\cell\row
+\pard\plain\trowd \trgaph90\trleft-90\cellx1710\cellx6570\cellx10530
+{\*\vrwcoldef4}
+\intbl \ql {\f2\fs20 CEP:}{\*\brdwid20}\brdrb\brdrs\brdrw20\brdrl\brdrs\brdrw20\brdrs\brdrw20\par\pard\plain\intbl \ql {\f2\fs24 {\*\varref CEP\trmblk}}{\f2\fs24 }\cell\pard\plain\intbl \ql {\f2\fs20 Cidade}\par\pard\plain\intbl \ql {\f2\fs24 {\*\varref CIDADE\trmblk}}{\f2\fs24 }{\*\brdwid20}\brdrb\brdrs\brdrw20\brdrl\brdrs\brdrw20\brdrs\brdrw20\cell\pard\plain\intbl \ql {\f2\fs20 Estado}{\*\brdwid20}\brdcel\brdrr\brdrs\brdrw20\brdrs\brdrw20\par\pard\plain\intbl \ql {\f2\fs24 {\*\varref ESTADO\trmblk}}{\f2\fs24 }{\*\brdwid20}\brdrb\brdrs\brdrw20\brdrl\brdrs\brdrw20\brdrr\brdrs\brdrw20\brdrs\brdrw20\cell\pard\plain\row
+\pard \ql {\f2\fs24 }\par\pard\plain\trowd \trgaph90\trleft-90\cellx2070\cellx4230\cellx6390\cellx8550\cellx10530
+{\*\vrwcoldef5}
+\intbl \ql {\f2\fs20 }{\*\brdwid20}\brdrt\brdrs\brdrw20\brdrb\brdrs\brdrw20\brdrl\brdrs\brdrw20\brdrs\brdrw20\par\pard\plain\intbl \ql {\f2\fs24 Telefone}\par\pard\plain\intbl \ql {\f2\fs24 Telefone}\par\pard\plain\intbl \ql {\f2\fs24 Telefax}\cell\pard\plain\intbl \ql {\f2\fs20 DDD}{\*\brdwid20}\brdrt\brdrs\brdrw20\brdrb\brdrs\brdrw20\brdrl\brdrs\brdrw20\brdrs\brdrw20\par\pard\plain\intbl \ql {\f2\fs24 {\*\varref DDD\trmblk}}{\f2\fs24 }\par\pard\plain\intbl \ql {\f2\fs24 {\*\varref DDD1\trmblk}}{\f2\fs24 }\par\pard\plain\intbl \ql {\f2\fs24 {\*\varref DDDFAX\trmblk}}{\f2\fs24 }\cell\pard\plain\intbl \ql {\f2\fs20 Número}{\*\brdwid20}\brdrt\brdrs\brdrw20\brdrb\brdrs\brdrw20\brdrl\brdrs\brdrw20\brdrs\brdrw20\par\pard\plain\intbl \ql {\f2\fs24 {\*\varref TELEFONE\trmblk}}{\f2\fs24 }\par\pard\plain\intbl \ql {\f2\fs24 {\*\varref TELEFONE1\trmblk}}{\f2\fs24 }\par\pard\plain\intbl \ql {\f2\fs24 {\*\varref TELEFAX\trmblk}}{\f2\fs24 }\cell\pard\plain\intbl \ql {\f2\fs20 Ramal}{\*\brdwid20}\brdrt\brdrs\brdrw20\brdrb\brdrs\brdrw20\brdrl\brdrs\brdrw20\brdrs\brdrw20\par\pard\plain\intbl \ql {\f2\fs24 {\*\varref RAMAL\trmblk}}{\f2\fs24 }\par\pard\plain\intbl \ql {\f2\fs24 {\*\varref RAMAL1\trmblk}}{\f2\fs24 }\par\pard\plain\intbl \ql {\f2\fs20 }\cell\pard\plain\intbl \ql {\f2\fs20 Contato}{\*\brdwid20}\brdrt\brdrs\brdrw20\brdrb\brdrs\brdrw20\brdrl\brdrs\brdrw20\brdrr\brdrs\brdrw20\brdrs\brdrw20\par\pard\plain\intbl \ql {\f2\fs24 {\*\varref CONTATO\trmblk}}{\f2\fs24 }{\*\brdwid20}\brdcel\brdrb\brdrs\brdrw20\brdrs\brdrw20\par\pard\plain\intbl \ql {\f2\fs24 {\*\varref CONTATO1\trmblk}}{\f2\fs24 }{\*\brdwid20}\brdcel\brdrb\brdrs\brdrw20\brdrs\brdrw20\par\pard\plain\intbl \ql {\f0\fs20 }\cell\pard\plain\row
+\pard \ql {\f2\fs20 }
+{\*\vrwsct {\GFT234 {\sctrct900 6413 11430 6647}\txthgt \nstlev1 {\grpvbllst NUMERO}}}
+\pard\plain\ql {\f2\fs20 }
+}
