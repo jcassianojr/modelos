@@ -1,7 +1,7 @@
-# 🗄️ Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 05/12/26
+# ??? Dicionario de Estruturas de Dados do Projeto
+> Varredura automatica realizada em: 06/03/26
 
-## 📋 Tabela DBF: `anp.dbf`
+## ?? Tabela DBF: `anp.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 30 | 0 |
@@ -9,11 +9,11 @@
 | DT_INI | D | 8 | 0 |
 | DT_FIN | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `CartaoBandeira.dbf`
+## ?? Tabela DBF: `CartaoBandeira.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 2 | 0 |
@@ -21,11 +21,11 @@
 | DT_INI | D | 8 | 0 |
 | DT_FIN | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `CEST.dbf`
+## ?? Tabela DBF: `CEST.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 7 | 0 |
@@ -33,11 +33,11 @@
 | DESCRICAO | C | 255 | 0 |
 | SEGMENTO | C | 2 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `CEST_NCM.dbf`
+## ?? Tabela DBF: `CEST_NCM.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CEST_ID | C | 7 | 0 |
@@ -47,26 +47,26 @@
 | FAIXA_F | C | 8 | 0 |
 | CEST_SEGME | C | 2 | 0 |
 
-**Índices vinculados:**
-- Tag: `CEST_NCM01` Expressão: `CEST_ID`
-- Tag: `CEST_NCM02` Expressão: `NCM_ID`
-- Tag: `CEST_NCM03` Expressão: `CEST_SEGME`
-- Tag: `CEST_NCM04` Expressão: `CEST_SEGME+NCM_ID`
+**Indices vinculados:**
+- Tag: `CEST_NCM01` Expressao: `CEST_ID`
+- Tag: `CEST_NCM02` Expressao: `NCM_ID`
+- Tag: `CEST_NCM03` Expressao: `CEST_SEGME`
+- Tag: `CEST_NCM04` Expressao: `CEST_SEGME+NCM_ID`
 
 ---
-## 📋 Tabela DBF: `cest_SEGMENTO.dbf`
+## ?? Tabela DBF: `cest_SEGMENTO.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | ID | C | 2 | 0 |
 | ANEXO | C | 10 | 0 |
 | DESCRICAO | C | 120 | 0 |
 
-**Índices vinculados:**
-- Tag: `SEGMENTO01` Expressão: `ID`
-- Tag: `SEGMENTO02` Expressão: `DESCRICAO`
+**Indices vinculados:**
+- Tag: `SEGMENTO01` Expressao: `ID`
+- Tag: `SEGMENTO02` Expressao: `DESCRICAO`
 
 ---
-## 📋 Tabela DBF: `cl_enq_ipi.dbf`
+## ?? Tabela DBF: `cl_enq_ipi.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 30 | 0 |
@@ -74,11 +74,11 @@
 | DT_INI | D | 8 | 0 |
 | DT_FIN | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `cst_cofins.dbf`
+## ?? Tabela DBF: `cst_cofins.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 2 | 0 |
@@ -86,12 +86,12 @@
 | DT_INI | D | 8 | 0 |
 | DT_FIN | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
-- Tag: `NOME` Expressão: `NOME`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
+- Tag: `NOME` Expressao: `NOME`
 
 ---
-## 📋 Tabela DBF: `cst_icm.dbf`
+## ?? Tabela DBF: `cst_icm.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 3 | 0 |
@@ -99,12 +99,12 @@
 | DT_INI | D | 8 | 0 |
 | DT_FIN | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
-- Tag: `NOME` Expressão: `NOME`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
+- Tag: `NOME` Expressao: `NOME`
 
 ---
-## 📋 Tabela DBF: `cst_icms.dbf`
+## ?? Tabela DBF: `cst_icms.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 30 | 0 |
@@ -112,11 +112,11 @@
 | DT_INI | D | 8 | 0 |
 | DT_FIN | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `cst_ipi.dbf`
+## ?? Tabela DBF: `cst_ipi.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 2 | 0 |
@@ -124,12 +124,12 @@
 | DT_INI | D | 8 | 0 |
 | DT_FIN | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
-- Tag: `NOME` Expressão: `NOME`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
+- Tag: `NOME` Expressao: `NOME`
 
 ---
-## 📋 Tabela DBF: `cst_pis.dbf`
+## ?? Tabela DBF: `cst_pis.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 2 | 0 |
@@ -137,22 +137,22 @@
 | DT_INI | D | 8 | 0 |
 | DT_FIN | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
-- Tag: `NOME` Expressão: `NOME`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
+- Tag: `NOME` Expressao: `NOME`
 
 ---
-## 📋 Tabela DBF: `efdtprod.dbf`
+## ?? Tabela DBF: `efdtprod.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 2 | 0 |
 | NOME | C | 30 | 0 |
 
-**Índices vinculados:**
-- Tag: `EFDPROD` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `EFDPROD` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `fi_cai.dbf`
+## ?? Tabela DBF: `fi_cai.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | SEQ | N | 8 | 0 |
@@ -163,11 +163,11 @@
 | SALDO | N | 15 | 2 |
 | CONTA | C | 11 | 0 |
 
-**Índices vinculados:**
-- Tag: `FI_CAI` Expressão: `SEQ`
+**Indices vinculados:**
+- Tag: `FI_CAI` Expressao: `SEQ`
 
 ---
-## 📋 Tabela DBF: `fi_cdipam.dbf`
+## ?? Tabela DBF: `fi_cdipam.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 8 | 0 |
@@ -176,12 +176,12 @@
 | UFIBGE | C | 2 | 0 |
 | DIPAM | C | 4 | 0 |
 
-**Índices vinculados:**
-- Tag: `FI_CDIPAM` Expressão: `CODIGO`
-- Tag: `FI_CDIPAM2` Expressão: `UF+NOME`
+**Indices vinculados:**
+- Tag: `FI_CDIPAM` Expressao: `CODIGO`
+- Tag: `FI_CDIPAM2` Expressao: `UF+NOME`
 
 ---
-## 📋 Tabela DBF: `fi_ciap.dbf`
+## ?? Tabela DBF: `fi_ciap.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CIAP | N | 8 | 0 |
@@ -201,11 +201,11 @@
 | DTINICIO | D | 8 | 0 |
 | OBSNF | C | 20 | 0 |
 
-**Índices vinculados:**
-- Tag: `FI_CIAP` Expressão: `CIAP`
+**Indices vinculados:**
+- Tag: `FI_CIAP` Expressao: `CIAP`
 
 ---
-## 📋 Tabela DBF: `fi_ciapi.dbf`
+## ?? Tabela DBF: `fi_ciapi.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CIAP | N | 8 | 0 |
@@ -215,12 +215,12 @@
 | VALOR | N | 8 | 2 |
 | SOMAR | C | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `FI_CIAPI` Expressão: `STR(CIAP,8)+STR(ITEM,2)`
-- Tag: `FI_CIAP2` Expressão: `CIAP`
+**Indices vinculados:**
+- Tag: `FI_CIAPI` Expressao: `STR(CIAP,8)+STR(ITEM,2)`
+- Tag: `FI_CIAP2` Expressao: `CIAP`
 
 ---
-## 📋 Tabela DBF: `fi_con.dbf`
+## ?? Tabela DBF: `fi_con.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODSER | C | 5 | 0 |
@@ -228,17 +228,17 @@
 | TIPSER | C | 1 | 0 |
 
 ---
-## 📋 Tabela DBF: `fi_dipam.dbf`
+## ?? Tabela DBF: `fi_dipam.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | DIPAM | C | 2 | 0 |
 | NOME | C | 100 | 0 |
 
-**Índices vinculados:**
-- Tag: `FI_DIPAM` Expressão: `DIPAM`
+**Indices vinculados:**
+- Tag: `FI_DIPAM` Expressao: `DIPAM`
 
 ---
-## 📋 Tabela DBF: `fi_esp.dbf`
+## ?? Tabela DBF: `fi_esp.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODSER | C | 7 | 0 |
@@ -246,11 +246,11 @@
 | TIPSER | C | 1 | 0 |
 | EXPCONT | C | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `FI_ESP` Expressão: `CODSER`
+**Indices vinculados:**
+- Tag: `FI_ESP` Expressao: `CODSER`
 
 ---
-## 📋 Tabela DBF: `fi_inv.dbf`
+## ?? Tabela DBF: `fi_inv.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -263,11 +263,11 @@
 | VALORPAR | N | 10 | 2 |
 | OBS | C | 15 | 0 |
 
-**Índices vinculados:**
-- Tag: `FI_INV01` Expressão: `NUMERO`
+**Indices vinculados:**
+- Tag: `FI_INV01` Expressao: `NUMERO`
 
 ---
-## 📋 Tabela DBF: `fi_mens.dbf`
+## ?? Tabela DBF: `fi_mens.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | N | 4 | 0 |
@@ -275,11 +275,11 @@
 | FLEGAL | C | 100 | 0 |
 | OPERACAO | C | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `FI_MENS` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `FI_MENS` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `fi_mes.dbf`
+## ?? Tabela DBF: `fi_mes.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 5 | 0 |
@@ -334,11 +334,11 @@
 | FILIFISS | N | 3 | 0 |
 | FILIFISE | N | 3 | 0 |
 
-**Índices vinculados:**
-- Tag: `FI_MES` Expressão: `STR(NUMERO,5)+STRZERO(ANO,4)+STRZERO(MES,2)`
+**Indices vinculados:**
+- Tag: `FI_MES` Expressao: `STR(NUMERO,5)+STRZERO(ANO,4)+STRZERO(MES,2)`
 
 ---
-## 📋 Tabela DBF: `fi_nbm.dbf`
+## ?? Tabela DBF: `fi_nbm.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERONBM | C | 8 | 0 |
@@ -355,24 +355,24 @@
 | ALIQMUN | N | 5 | 2 |
 | DATAIMP | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `FI_NBM` Expressão: `NUMERONBM`
-- Tag: `FI_NBM-2` Expressão: `CODNBM`
+**Indices vinculados:**
+- Tag: `FI_NBM` Expressao: `NUMERONBM`
+- Tag: `FI_NBM-2` Expressao: `CODNBM`
 
 ---
-## 📋 Tabela DBF: `fi_nbmcnv.dbf`
+## ?? Tabela DBF: `fi_nbmcnv.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERONBM | C | 8 | 0 |
 | CODNBM | C | 10 | 0 |
 | NOMENBM | C | 55 | 0 |
 
-**Índices vinculados:**
-- Tag: `FI_NBM` Expressão: `NUMERONBM`
-- Tag: `FI_NBM-2` Expressão: `CODNBM`
+**Indices vinculados:**
+- Tag: `FI_NBM` Expressao: `NUMERONBM`
+- Tag: `FI_NBM-2` Expressao: `CODNBM`
 
 ---
-## 📋 Tabela DBF: `fi_nbms.dbf`
+## ?? Tabela DBF: `fi_nbms.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERONBM | C | 9 | 0 |
@@ -389,12 +389,12 @@
 | ALIQMUN | N | 5 | 2 |
 | DATAIMP | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `FI_NBM` Expressão: `NUMERONBM`
-- Tag: `FI_NBM-2` Expressão: `CODNBM`
+**Indices vinculados:**
+- Tag: `FI_NBM` Expressao: `NUMERONBM`
+- Tag: `FI_NBM-2` Expressao: `CODNBM`
 
 ---
-## 📋 Tabela DBF: `fi_oco.dbf`
+## ?? Tabela DBF: `fi_oco.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | ANO | N | 4 | 0 |
@@ -405,11 +405,11 @@
 | VALICM | N | 12 | 2 |
 | VALIPI | N | 12 | 2 |
 
-**Índices vinculados:**
-- Tag: `FI_OCO` Expressão: `STR(ANO,4)+STR(MES,2)+TIPO+STR(ITEM,2)`
+**Indices vinculados:**
+- Tag: `FI_OCO` Expressao: `STR(ANO,4)+STR(MES,2)+TIPO+STR(ITEM,2)`
 
 ---
-## 📋 Tabela DBF: `fi_ser.dbf`
+## ?? Tabela DBF: `fi_ser.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODSER | C | 5 | 0 |
@@ -417,11 +417,11 @@
 | TIPSER | C | 1 | 0 |
 | EXPCONT | C | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `FI_SER01` Expressão: `CODSER`
+**Indices vinculados:**
+- Tag: `FI_SER01` Expressao: `CODSER`
 
 ---
-## 📋 Tabela DBF: `fi_temp1.dbf`
+## ?? Tabela DBF: `fi_temp1.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CFO | C | 3 | 0 |
@@ -441,24 +441,56 @@
 | IPIOUT | N | 18 | 2 |
 | OBSIPI | N | 18 | 2 |
 
-**Índices vinculados:**
-- Tag: `FI_TEM11` Expressão: `CFO+SUBCFO+STR(ICM,5,2)`
-- Tag: `FI_TEM12` Expressão: `CFONEW+STR(ICM,5,2)`
-- Tag: `FI_TEM13` Expressão: `CFO+SUBCFO+STR(IPI,5,2)`
-- Tag: `FI_TEM14` Expressão: `CFONEW+STR(IPI,5,2)`
+**Indices vinculados:**
+- Tag: `FI_TEM11` Expressao: `CFO+SUBCFO+STR(ICM,5,2)`
+- Tag: `FI_TEM12` Expressao: `CFONEW+STR(ICM,5,2)`
+- Tag: `FI_TEM13` Expressao: `CFO+SUBCFO+STR(IPI,5,2)`
+- Tag: `FI_TEM14` Expressao: `CFONEW+STR(IPI,5,2)`
 
 ---
-## 📋 Tabela DBF: `indicador_presenca.dbf`
+## ?? Tabela DBF: `IBS.DBF`
+| Campo | Tipo | Tam | Dec |
+| :--- | :--- | :--- | :--- |
+| IBS | C | 3 | 0 |
+| DESCRIBS | C | 55 | 0 |
+| CLASTRIB | C | 6 | 0 |
+| NOMECLAST1 | C | 250 | 0 |
+| NOMECLAST2 | C | 250 | 0 |
+| DESCRTRIB1 | C | 250 | 0 |
+| DESCRTRIB2 | C | 250 | 0 |
+| DESCRLC01 | C | 250 | 0 |
+| DESCRLC02 | C | 250 | 0 |
+| LC | C | 20 | 0 |
+| TIPOALIQ | C | 100 | 0 |
+| PREDIBS | C | 100 | 0 |
+| PREDCBS | C | 100 | 0 |
+| INDREDBC | C | 100 | 0 |
+| INDGTRREG | C | 100 | 0 |
+| INDCREDP | C | 100 | 0 |
+| INDMONO | C | 100 | 0 |
+| INDMORETEN | C | 100 | 0 |
+| INDMONORET | C | 100 | 0 |
+| INDMONODIF | C | 100 | 0 |
+| CREDPARA | C | 100 | 0 |
+| DINIVIG | C | 100 | 0 |
+| DFIMVIG | C | 100 | 0 |
+| ULTATUALIZ | C | 100 | 0 |
+
+**Indices vinculados:**
+- Tag: `IBS` Expressao: `IBS`
+
+---
+## ?? Tabela DBF: `indicador_presenca.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 1 | 0 |
 | DESCRICAO | C | 50 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `md03.dbf`
+## ?? Tabela DBF: `md03.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 2 | 0 |
@@ -470,7 +502,7 @@
 | DSTA | C | 1 | 0 |
 
 ---
-## 📋 Tabela DBF: `md04.dbf`
+## ?? Tabela DBF: `md04.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CFONEW | C | 4 | 0 |
@@ -508,13 +540,13 @@
 | COMUNICA | C | 1 | 0 |
 | TRANSP | C | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `MD04-1` Expressão: `CFO+CFONEW`
-- Tag: `MD04-2` Expressão: `CFONEW`
-- Tag: `MD04-3` Expressão: `CFO`
+**Indices vinculados:**
+- Tag: `MD04-1` Expressao: `CFO+CFONEW`
+- Tag: `MD04-2` Expressao: `CFONEW`
+- Tag: `MD04-3` Expressao: `CFO`
 
 ---
-## 📋 Tabela DBF: `md05x.dbf`
+## ?? Tabela DBF: `md05x.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | UFICMS | C | 2 | 0 |
@@ -524,63 +556,63 @@
 | ALIQUOTAR | N | 5 | 2 |
 | ZONAFRANCA | C | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `MD05X-1` Expressão: `UFICMS`
-- Tag: `MD05X-2` Expressão: `NOMEEXT`
-- Tag: `MD05X-3` Expressão: `UFICMS+UFDEST`
+**Indices vinculados:**
+- Tag: `MD05X-1` Expressao: `UFICMS`
+- Tag: `MD05X-2` Expressao: `NOMEEXT`
+- Tag: `MD05X-3` Expressao: `UFICMS+UFDEST`
 
 ---
-## 📋 Tabela DBF: `modais_frete.dbf`
+## ?? Tabela DBF: `modais_frete.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 1 | 0 |
 | DESCRICAO | C | 30 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `modalidade_frete.dbf`
+## ?? Tabela DBF: `modalidade_frete.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 1 | 0 |
 | DESCRICAO | C | 55 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `modalidade_frete_anp.dbf`
+## ?? Tabela DBF: `modalidade_frete_anp.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 2 | 0 |
 | DESCRICAO | C | 50 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `modelo_cobranca.dbf`
+## ?? Tabela DBF: `modelo_cobranca.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 1 | 0 |
 | DESCRICAO | C | 50 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `modelo_cobranca_cst.dbf`
+## ?? Tabela DBF: `modelo_cobranca_cst.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 1 | 0 |
 | DESCRICAO | C | 50 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `MOEDA.dbf`
+## ?? Tabela DBF: `MOEDA.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | N | 4 | 0 |
@@ -595,14 +627,32 @@
 | NUMINT | N | 4 | 0 |
 | NUMDEC | N | 2 | 0 |
 
-**Índices vinculados:**
-- Tag: `MOEDA` Expressão: `CODIGO`
-- Tag: `SIMBOLO` Expressão: `SIMBOLO`
-- Tag: `PAIS` Expressão: `PAIS`
-- Tag: `NOME` Expressão: `NOME`
+**Indices vinculados:**
+- Tag: `MOEDA` Expressao: `CODIGO`
+- Tag: `SIMBOLO` Expressao: `SIMBOLO`
+- Tag: `PAIS` Expressao: `PAIS`
+- Tag: `NOME` Expressao: `NOME`
 
 ---
-## 📋 Tabela DBF: `NCMUF.DBF`
+## ?? Tabela DBF: `nbs.dbf`
+| Campo | Tipo | Tam | Dec |
+| :--- | :--- | :--- | :--- |
+| NBS | C | 12 | 0 |
+| DESC_NBS | C | 999 | 0 |
+| ITEM | C | 5 | 0 |
+| DESC_ITEM | C | 300 | 0 |
+| ONEROSA | C | 1 | 0 |
+| EXTERIOR | C | 1 | 0 |
+| INDOP | C | 6 | 0 |
+| LOCAL_INC | C | 300 | 0 |
+| CLASSTRIB | C | 6 | 0 |
+| DESC_CLAS | C | 999 | 0 |
+
+**Indices vinculados:**
+- Tag: `NBS` Expressao: `NBS`
+
+---
+## ?? Tabela DBF: `NCMUF.DBF`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | COD_NBM | C | 12 | 0 |
@@ -636,27 +686,27 @@
 | TO | N | 6 | 2 |
 
 ---
-## 📋 Tabela DBF: `NFECORRECAO.DBF`
+## ?? Tabela DBF: `NFECORRECAO.DBF`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 2 | 0 |
 | DESCRICAO | C | 30 | 0 |
 
-**Índices vinculados:**
-- Tag: `NFECRET` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `NFECRET` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `NFECRET.DBF`
+## ?? Tabela DBF: `NFECRET.DBF`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 3 | 0 |
 | DESCRICAO | C | 120 | 0 |
 
-**Índices vinculados:**
-- Tag: `NFECRET` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `NFECRET` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `qualif_assinante.dbf`
+## ?? Tabela DBF: `qualif_assinante.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 3 | 0 |
@@ -664,11 +714,11 @@
 | DT_INI | D | 8 | 0 |
 | DT_FIN | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `sintdoc.dbf`
+## ?? Tabela DBF: `sintdoc.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 2 | 0 |
@@ -676,57 +726,57 @@
 | DT_INI | D | 8 | 0 |
 | DT_FIN | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
-- Tag: `NOME` Expressão: `NOME`
-- Tag: `SINTDOC` Expressão: `CODIGO`
-- Tag: `SINTDOC2` Expressão: `NOME`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
+- Tag: `NOME` Expressao: `NOME`
+- Tag: `SINTDOC` Expressao: `CODIGO`
+- Tag: `SINTDOC2` Expressao: `NOME`
 
 ---
-## 📋 Tabela DBF: `sintsitu.dbf`
+## ?? Tabela DBF: `sintsitu.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 1 | 0 |
 | NOME | C | 20 | 0 |
 
-**Índices vinculados:**
-- Tag: `SINTSITU` Expressão: `CODIGO`
-- Tag: `SINTSIT2` Expressão: `NOME`
+**Indices vinculados:**
+- Tag: `SINTSITU` Expressao: `CODIGO`
+- Tag: `SINTSIT2` Expressao: `NOME`
 
 ---
-## 📋 Tabela DBF: `tabenqipi.dbf`
+## ?? Tabela DBF: `tabenqipi.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 3 | 0 |
-| GRUPOCST | C | 20 | 0 |
+| GRUPOCST | C | 10 | 0 |
 | DESCR1 | C | 254 | 0 |
 | DESCR2 | C | 180 | 0 |
 | DESCRICAO | C | 255 | 0 |
 
-**Índices vinculados:**
-- Tag: `ENQIPI01` Expressão: `field->CODIGO`
-- Tag: `ENQIPI02` Expressão: `field->GRUPOCST`
-- Tag: `ENQIPI03` Expressão: `upper( left( field->DESCR1, 240 ) )`
+**Indices vinculados:**
+- Tag: `ENQIPI01` Expressao: `field->CODIGO`
+- Tag: `ENQIPI02` Expressao: `field->GRUPOCST`
+- Tag: `ENQIPI03` Expressao: `upper( left( field->DESCR1, 240 ) )`
 
 ---
-## 📋 Tabela DBF: `tipo_pagamento.dbf`
+## ?? Tabela DBF: `tipo_pagamento.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 2 | 0 |
 | DESCRICAO | C | 60 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `unidade_medida_comercial.dbf`
+## ?? Tabela DBF: `unidade_medida_comercial.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | UNIDADE | C | 7 | 0 |
 | UNIDDES | C | 25 | 0 |
 | UNIDDEC | C | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `UNIDADE`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `UNIDADE`
 
 ---
