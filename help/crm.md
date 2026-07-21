@@ -21,7 +21,7 @@
 26/06/2003 - Outras Entradas Traz Agora Observaçoes do Pedido
 24/06/2003 - Gera Ensaios de Compras Avulsas/Lote Piloto quando solicitado
              Calcula Peso e ou Quantidade Peças quando tratamento
-09/06/2003 - Opçao Busca Rastro Tratamento Pelo Numero NF Itaesbra
+09/06/2003 - Opçao Busca Rastro Tratamento Pelo Numero NF sistema
 05/06/2003 - Inclusao CRM/CRM Outras Opçao imprimir
              Crm Outras mantem numero pedido anterior para Facilitar proximo item
              Crm Tratamentos Bloquei se nao tiver Rastro
