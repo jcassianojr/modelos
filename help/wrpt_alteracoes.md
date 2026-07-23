@@ -1,5 +1,6 @@
 23/07/2026:
   * Icones menu configuracao
+  * log de alteracoes em md
   
 30/10/2003:
   * Inclusao voretrun/fabimgview
