@@ -14,14 +14,14 @@ ENDFILE
 
 [HEADERINFO]
 Type of file             : 0x03
-Last update (DD.MM.YY)   : 22.07.26
-Number of records        :      14332
+Last update (DD.MM.YY)   : 24.07.26
+Number of records        :      17646
 Header size              :        258
 Record size              :         65
 Fields count             :          7
 Header:                           3
-Driver:                  DBFNTX
-Tipo:                    dBASE III sem memo
+Driver:                  DBFCDX
+Tipo:                    FoxBASE+ / dBASE III sem memo
 
 [DICI.DBF]
 CAMINHO=c:\develop\harbour\dbu\dbu32\
