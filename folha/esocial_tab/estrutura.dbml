@@ -1,0 +1,682 @@
+// Origem: esocial_cbo.dbf (DBF)
+Table "esocial_cbo" {
+  Note: "Origem: esocial_cbo.dbf"
+  "CODIGO" VARCHAR(6)
+  "NOME" VARCHAR(150)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab01.dbf (DBF)
+Table "esocial_tab01" {
+  Note: "Origem: esocial_tab01.dbf"
+  "CODIGO" VARCHAR(3)
+  "NOME" VARCHAR(255)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  "GRUPO" VARCHAR(5)
+  "ALIQFGTS" VARCHAR(1)
+  "OBRIGA" VARCHAR(1)
+  "ALIQFGTSCO" VARCHAR(3)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab02.dbf (DBF)
+Table "esocial_tab02" {
+  Note: "Origem: esocial_tab02.dbf"
+  "CODIGO" INTEGER [default: 0]
+  "NOME" VARCHAR(74)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab03.dbf (DBF)
+Table "esocial_tab03" {
+  Note: "Origem: esocial_tab03.dbf"
+  "CODIGO" VARCHAR(4)
+  "NOME" VARCHAR(65)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  "DESCRICAO" VARCHAR(255)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab04.dbf (DBF)
+Table "esocial_tab04" {
+  Note: "Origem: esocial_tab04.dbf"
+  "CODFPAS" INTEGER [default: 0]
+  "INDCOOP" VARCHAR(6)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  "CLASSTRIB" VARCHAR(2)
+  "CODTERC" INTEGER [default: 0]
+  "ALIQTERC" DECIMAL(4,2) [default: 0]
+  Indexes {
+    CODFPAS [name: "CODFPAS"]
+  }
+}
+
+// Origem: esocial_tab05.dbf (DBF)
+Table "esocial_tab05" {
+  Note: "Origem: esocial_tab05.dbf"
+  "CODIGO" INTEGER [default: 0]
+  "NOME" VARCHAR(56)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab07.dbf (DBF)
+Table "esocial_tab07" {
+  Note: "Origem: esocial_tab07.dbf"
+  "CODIGO" VARCHAR(4)
+  "NOME" VARCHAR(55)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  "MATERIABIO" VARCHAR(3)
+  "AGENTEQUIM" INTEGER [default: 0]
+  Indexes {
+    codigo [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab08.dbf (DBF)
+Table "esocial_tab08" {
+  Note: "Origem: esocial_tab08.dbf"
+  "CODIGO" INTEGER [default: 0]
+  "NOME" VARCHAR(149)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  "TPINSC" INTEGER [default: 0]
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab09.dbf (DBF)
+Table "esocial_tab09" {
+  Note: "Origem: esocial_tab09.dbf"
+  "CODIGO" VARCHAR(6)
+  "NOME" VARCHAR(84)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  "IDTPEVENTO" INTEGER [default: 0]
+  "TAGTPEVENT" VARCHAR(17)
+  "IDENTIFIC" VARCHAR(23)
+  "INDCHDUPL" INTEGER [default: 0]
+  "INDEXCL" INTEGER [default: 0]
+  "CLASSTRIB" VARCHAR(11)
+  "NCLASSTRI" VARCHAR(2)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab10.dbf (DBF)
+Table "esocial_tab10" {
+  Note: "Origem: esocial_tab10.dbf"
+  "CODIGO" VARCHAR(2)
+  "NOME" VARCHAR(255)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  "TPINSCR" VARCHAR(13)
+  "NRINSCR" VARCHAR(98)
+  "CDVALID" VARCHAR(1)
+  "TXCLASSTRB" VARCHAR(47)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab11.dbf (DBF)
+Table "esocial_tab11" {
+  Note: "Origem: esocial_tab11.dbf"
+  "CODIGO" INTEGER [default: 0]
+  "CLASSTRIB" VARCHAR(11)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  "NCLASSTRI" VARCHAR(8)
+  "COOPERATIV" VARCHAR(1)
+  "TPLOTACAO" VARCHAR(20)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab13.dbf (DBF)
+Table "esocial_tab13" {
+  Note: "Origem: esocial_tab13.dbf"
+  "CODIGO" VARCHAR(9)
+  "NOME" VARCHAR(161)
+  "DTINICIO" DATETIME
+  "DTFIM" VARCHAR(8)
+  Indexes {
+    codigo [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab14.dbf (DBF)
+Table "esocial_tab14" {
+  Note: "Origem: esocial_tab14.dbf"
+  "CODIGO" INTEGER [default: 0]
+  "NOME" VARCHAR(185)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  Indexes {
+    codigo [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab15.dbf (DBF)
+Table "esocial_tab15" {
+  Note: "Origem: esocial_tab15.dbf"
+  "CODIGO" VARCHAR(9)
+  "NOME" VARCHAR(135)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab16.dbf (DBF)
+Table "esocial_tab16" {
+  Note: "Origem: esocial_tab16.dbf"
+  "CODIGO" VARCHAR(9)
+  "NOME" VARCHAR(63)
+  "DTINICIO" DATETIME
+  "DTFIM" VARCHAR(8)
+  Indexes {
+    codigo [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab17.dbf (DBF)
+Table "esocial_tab17" {
+  Note: "Origem: esocial_tab17.dbf"
+  "CODIGO" VARCHAR(9)
+  "NOME" VARCHAR(135)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  Indexes {
+    codigo [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab18.dbf (DBF)
+Table "esocial_tab18" {
+  Note: "Origem: esocial_tab18.dbf"
+  "CODIGO" VARCHAR(2)
+  "NOME" VARCHAR(255)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  "PERALTMOT" VARCHAR(5)
+  "DOMESTICO" VARCHAR(1)
+  "DESCRESUM" VARCHAR(50)
+  "SUSSALMEN" VARCHAR(1)
+  "PAGSALFAM" VARCHAR(1)
+  "GERAREMUN" VARCHAR(1)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab19.dbf (DBF)
+Table "esocial_tab19" {
+  Note: "Origem: esocial_tab19.dbf"
+  "CODIGO" INTEGER [default: 0]
+  "NOME" VARCHAR(236)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  "GERADAE" INTEGER [default: 0]
+  "LCATEGTRAB" VARCHAR(23)
+  "GERAINDCOM" INTEGER [default: 0]
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab20.dbf (DBF)
+Table "esocial_tab20" {
+  Note: "Origem: esocial_tab20.dbf"
+  "CODIGO" VARCHAR(3)
+  "NOME" VARCHAR(11)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab21.dbf (DBF)
+Table "esocial_tab21" {
+  Note: "Origem: esocial_tab21.dbf"
+  "CODIGO" VARCHAR(9)
+  "NOME" VARCHAR(135)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  "CODIGOPAI" VARCHAR(9)
+  "TIPO" VARCHAR(1)
+  Indexes {
+    codigo [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab22.dbf (DBF)
+Table "esocial_tab22" {
+  Note: "Origem: esocial_tab22.dbf"
+  "CODIGO" VARCHAR(9)
+  "NOME" VARCHAR(206)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  "GRAU" VARCHAR(6)
+  "OPERATIV" VARCHAR(255)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab23.dbf (DBF)
+Table "esocial_tab23" {
+  Note: "Origem: esocial_tab23.dbf"
+  "CODIGO" VARCHAR(8)
+  "NOME" VARCHAR(148)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  "TEMPCONTR" INTEGER [default: 0]
+  "ALIQ" INTEGER [default: 0]
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab24.dbf (DBF)
+Table "esocial_tab24" {
+  Note: "Origem: esocial_tab24.dbf"
+  "CODIGO" INTEGER [default: 0]
+  "LCLASSTRIB" VARCHAR(44)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab26.dbf (DBF)
+Table "esocial_tab26" {
+  Note: "Origem: esocial_tab26.dbf"
+  "CODIGO" VARCHAR(6)
+  "NOME" VARCHAR(255)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab51.dbf (DBF)
+Table "esocial_tab51" {
+  Note: "Origem: esocial_tab51.dbf"
+  "CODIGO" INTEGER [default: 0]
+  "NOME" VARCHAR(16)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  "OBRIGA" VARCHAR(1)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab52.dbf (DBF)
+Table "esocial_tab52" {
+  Note: "Origem: esocial_tab52.dbf"
+  "CODIGO" VARCHAR(10)
+  "NOME" VARCHAR(56)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  "HRENTR" INTEGER [default: 0]
+  "HRSAIDA" INTEGER [default: 0]
+  "DURJORNADA" INTEGER [default: 0]
+  "TPINTERV" INTEGER [default: 0]
+  "DURINTERV" INTEGER [default: 0]
+  "INIINTERV" VARCHAR(1)
+  "TERMINTERV" VARCHAR(1)
+  "PERHORFLEX" VARCHAR(1)
+  "QTDHRSSEM" VARCHAR(2)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab53.dbf (DBF)
+Table "esocial_tab53" {
+  Note: "Origem: esocial_tab53.dbf"
+  "CODIGO" INTEGER [default: 0]
+  "NOME" VARCHAR(73)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  "ESOCFILIAL" VARCHAR(1)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab54.dbf (DBF)
+Table "esocial_tab54" {
+  Note: "Origem: esocial_tab54.dbf"
+  "CODIGO" VARCHAR(11)
+  "NOME" VARCHAR(84)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  "NATRUBR" VARCHAR(4)
+  "TPRUBR" VARCHAR(1)
+  "CODINCCP" VARCHAR(2)
+  "CODINCIRRF" VARCHAR(2)
+  "CODINCFGTS" VARCHAR(2)
+  "CODINCSIND" VARCHAR(1)
+  "REPDSR" VARCHAR(1)
+  "REP13" VARCHAR(1)
+  "REPFERIAS" VARCHAR(1)
+  "REPRESC" VARCHAR(1)
+  "REPAFAST" VARCHAR(1)
+  "FATORRUBR" VARCHAR(1)
+  "LOCALAPLIC" VARCHAR(24)
+  "DOMESTICA" VARCHAR(1)
+  "SE" VARCHAR(1)
+  "GERAL" VARCHAR(1)
+  "DESCRICAO" VARCHAR(255)
+  "NOTA" VARCHAR(255)
+  "ORDRESCDOM" VARCHAR(2)
+  "PERADICRUB" VARCHAR(1)
+  "ORDREMDOM" VARCHAR(2)
+  "REPSFDOM" VARCHAR(1)
+  "PERFOLRES" VARCHAR(1)
+  "PEREDITRUB" VARCHAR(1)
+  "PEREXCRUB" VARCHAR(1)
+  "FILCATRUB" VARCHAR(3)
+  "GRUPRENDDO" VARCHAR(5)
+  Indexes {
+    codigo [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab55.dbf (DBF)
+Table "esocial_tab55" {
+  Note: "Origem: esocial_tab55.dbf"
+  "CODIGO" INTEGER [default: 0]
+  "NOME" VARCHAR(50)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  "CLASSTRIB" VARCHAR(2)
+  "NCLASSTRIB" INTEGER [default: 0]
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab57.dbf (DBF)
+Table "esocial_tab57" {
+  Note: "Origem: esocial_tab57.dbf"
+  "INFSALCONT" DECIMAL(7,2) [default: 0]
+  "SUPSALCONT" DECIMAL(7,2) [default: 0]
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  "ALIQ" INTEGER [default: 0]
+  Indexes {
+    recno() [name: "RECNO"]
+  }
+}
+
+// Origem: esocial_tab58.dbf (DBF)
+Table "esocial_tab58" {
+  Note: "Origem: esocial_tab58.dbf"
+  "INFBC" DECIMAL(7,2) [default: 0]
+  "SUPBC" DECIMAL(13,2) [default: 0]
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  "ALIQ" DECIMAL(4,1) [default: 0]
+  "PARCDED" DECIMAL(6,2) [default: 0]
+  Indexes {
+    recno() [name: "RECNO"]
+  }
+}
+
+// Origem: esocial_tab59.dbf (DBF)
+Table "esocial_tab59" {
+  Note: "Origem: esocial_tab59.dbf"
+  "CODIGO" INTEGER [default: 0]
+  "NOME" VARCHAR(74)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  "TPSUSP" INTEGER [default: 0]
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab60.dbf (DBF)
+Table "esocial_tab60" {
+  Note: "Origem: esocial_tab60.dbf"
+  "CODIGO" VARCHAR(4)
+  "DESCRICAO" VARCHAR(255)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  "NOME" VARCHAR(50)
+  Indexes {
+    codigo [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab61.dbf (DBF)
+Table "esocial_tab61" {
+  Note: "Origem: esocial_tab61.dbf"
+  "CODIGO" VARCHAR(11)
+  "NOME" VARCHAR(98)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  "CODGRUPO" INTEGER [default: 0]
+  "CODCBO" INTEGER [default: 0]
+  "TPTRAB" INTEGER [default: 0]
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab62.dbf (DBF)
+Table "esocial_tab62" {
+  Note: "Origem: esocial_tab62.dbf"
+  "CODIGO" INTEGER [default: 0]
+  "NOME" VARCHAR(112)
+  "DTINICIO" DATETIME
+  "DTFIM" VARCHAR(1)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab63.dbf (DBF)
+Table "esocial_tab63" {
+  Note: "Origem: esocial_tab63.dbf"
+  "CODIGO" INTEGER [default: 0]
+  "NOME" VARCHAR(56)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  "EVENTO" VARCHAR(6)
+  "RUBRICAS" VARCHAR(215)
+  "CATEGORIA" INTEGER [default: 0]
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab64.dbf (DBF)
+Table "esocial_tab64" {
+  Note: "Origem: esocial_tab64.dbf"
+  "CODIGO" VARCHAR(11)
+  "NOME" VARCHAR(62)
+  "DTINICIO" DATETIME
+  "DTFIM" DATETIME
+  "TPLOTACAO" INTEGER [default: 0]
+  "TPINSC" VARCHAR(1)
+  "NRINSC" VARCHAR(1)
+  "FPAS" INTEGER [default: 0]
+  "CODTERCS" INTEGER [default: 0]
+  "CATEGIGUAL" INTEGER [default: 0]
+  "CATEGDIF" VARCHAR(1)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: esocial_tab65.dbf (DBF)
+Table "esocial_tab65" {
+  Note: "Origem: esocial_tab65.dbf"
+  "INFBC" DECIMAL(6,2) [default: 0]
+  "SUPBC" DECIMAL(7,2) [default: 0]
+  "DTINICIO" INTEGER [default: 0]
+  "DTFIM" INTEGER [default: 0]
+  "PARCDED" DECIMAL(5,2) [default: 0]
+  Indexes {
+    recno() [name: "RECNO"]
+  }
+}
+
+// Origem: esocial_tab66.dbf (DBF)
+Table "esocial_tab66" {
+  Note: "Origem: esocial_tab66.dbf"
+  "CODIGO" INTEGER [default: 0]
+  "DESCRICAO" VARCHAR(27)
+  "DTINICIO" INTEGER [default: 0]
+  "DTFIM" VARCHAR(8)
+  "CATEGORIA" INTEGER [default: 0]
+  "NCATEGORIA" VARCHAR(1)
+  "VALOR" DECIMAL(6,2) [default: 0]
+  Indexes {
+    recno() [name: "RECNO"]
+  }
+}
+
+// Origem: esocial_tab67.dbf (DBF)
+Table "esocial_tab67" {
+  Note: "Origem: esocial_tab67.dbf"
+  "CODIGO" VARCHAR(3)
+  "DESCRICAO" VARCHAR(113)
+  "DTINICIO" INTEGER [default: 0]
+  "DTFIM" VARCHAR(1)
+  "CODESOCIAL" INTEGER [default: 0]
+  Indexes {
+    recno() [name: "RECNO"]
+  }
+}
+
+// Origem: esocial_tab68.dbf (DBF)
+Table "esocial_tab68" {
+  Note: "Origem: esocial_tab68.dbf"
+  "CODIGO" INTEGER [default: 0]
+  "NOME" VARCHAR(82)
+  "DTINICIO" INTEGER [default: 0]
+  "DTFIM" VARCHAR(8)
+  "CODIGORUBR" VARCHAR(35)
+  "CAMPOFIXO" VARCHAR(1)
+  "RESTRICAON" VARCHAR(35)
+  Indexes {
+    recno() [name: "RECNO"]
+  }
+}
+
+// Origem: esocial_tab69.dbf (DBF)
+Table "esocial_tab69" {
+  Note: "Origem: esocial_tab69.dbf"
+  "CODIGO" VARCHAR(11)
+  "DESCRICAO" VARCHAR(39)
+  "DTINICIO" INTEGER [default: 0]
+  "DTFIM" VARCHAR(1)
+  Indexes {
+    recno() [name: "RECNO"]
+  }
+}
+
+// Origem: esocial_tab70.dbf (DBF)
+Table "esocial_tab70" {
+  Note: "Origem: esocial_tab70.dbf"
+  "CODIGO" INTEGER [default: 0]
+  "DESCRICAO" VARCHAR(66)
+  "DTINICIO" INTEGER [default: 0]
+  "DTFIM" VARCHAR(1)
+  Indexes {
+    recno() [name: "RECNO"]
+  }
+}
+
+// Origem: esocial_tab71.dbf (DBF)
+Table "esocial_tab71" {
+  Note: "Origem: esocial_tab71.dbf"
+  "CODIGO" INTEGER [default: 0]
+  "DESCRICAO" VARCHAR(20)
+  "DTINICIO" INTEGER [default: 0]
+  "DTFIM" VARCHAR(1)
+  Indexes {
+    recno() [name: "RECNO"]
+  }
+}
+
+// Origem: esocial_tab72.dbf (DBF)
+Table "esocial_tab72" {
+  Note: "Origem: esocial_tab72.dbf"
+  "CODIGO" INTEGER [default: 0]
+  "DESCRICAO" VARCHAR(59)
+  "DTINICIO" INTEGER [default: 0]
+  "DTFIM" VARCHAR(1)
+  Indexes {
+    recno() [name: "RECNO"]
+  }
+}
+
+// Origem: esocial_tab73.dbf (DBF)
+Table "esocial_tab73" {
+  Note: "Origem: esocial_tab73.dbf"
+  "CODIGO" INTEGER [default: 0]
+  "DESCRICAO" VARCHAR(202)
+  "DTINICIO" INTEGER [default: 0]
+  "DTFIM" VARCHAR(1)
+  Indexes {
+    recno() [name: "RECNO"]
+  }
+}
+
+// Origem: esocial_tab74.dbf (DBF)
+Table "esocial_tab74" {
+  Note: "Origem: esocial_tab74.dbf"
+  "CODIGO" INTEGER [default: 0]
+  "DESCRICAO" VARCHAR(44)
+  "DTINICIO" INTEGER [default: 0]
+  "DTFIM" VARCHAR(1)
+  Indexes {
+    recno() [name: "RECNO"]
+  }
+}
+
+// Origem: esocial_tab75.dbf (DBF)
+Table "esocial_tab75" {
+  Note: "Origem: esocial_tab75.dbf"
+  "CODIGO" INTEGER [default: 0]
+  "DESCRICAO" VARCHAR(33)
+  "DTINICIO" INTEGER [default: 0]
+  "DTFIM" VARCHAR(1)
+  Indexes {
+    recno() [name: "RECNO"]
+  }
+}
+

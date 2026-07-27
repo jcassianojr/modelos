@@ -1,0 +1,315 @@
+// Origem: cnpjxml.dbf (DBF)
+Table "cnpjxml" {
+  Note: "Origem: cnpjxml.dbf"
+  "CNPJ" VARCHAR(14)
+  "IE" VARCHAR(14)
+  "NOME" VARCHAR(60)
+  "ENDERECO" VARCHAR(60)
+  "CIDADE" VARCHAR(35)
+  "CEP" VARCHAR(8)
+  "TELEFONE" VARCHAR(14)
+  "DDD" VARCHAR(2)
+  "UF" VARCHAR(2)
+  "IESUBST" VARCHAR(14)
+  "IMUNICIPAL" VARCHAR(15)
+  "COGNOME" VARCHAR(60)
+  "EMAIL" VARCHAR(60)
+  "NUMEND" VARCHAR(15)
+  "COMPLEM" VARCHAR(30)
+  "BAIRRO" VARCHAR(35)
+  "BACEN" VARCHAR(5)
+  "PAIS" VARCHAR(10)
+  "CNAE" VARCHAR(7)
+  "SUFRAMA" VARCHAR(9)
+  "CODIBGE" VARCHAR(7)
+  "ULTIMAIMP" DATETIME
+  "CODPART" VARCHAR(20)
+  "CSIT" VARCHAR(1)
+  "INDCREDNFE" VARCHAR(1)
+  "INDCREDCTE" VARCHAR(1)
+  "XREGAPUR" VARCHAR(7)
+  "DINIATIV" VARCHAR(10)
+  "DULTSIT" VARCHAR(10)
+  "DINIXML" DATETIME
+  "ENDTIP" VARCHAR(10)
+  Indexes {
+    CNPJ [name: "CNPJXML1"]
+    IE [name: "CNPJXML2"]
+    CODPART [name: "CNPJXML3"]
+    UF+CIDADE [name: "CNPJXML4"]
+  }
+}
+
+// Origem: cnpjxmlfec.dbf (DBF)
+Table "cnpjxmlfec" {
+  Note: "Origem: cnpjxmlfec.dbf"
+  "CNPJ" VARCHAR(14)
+  "IE" VARCHAR(14)
+  "NOME" VARCHAR(60)
+  "ENDERECO" VARCHAR(60)
+  "CIDADE" VARCHAR(35)
+  "CEP" VARCHAR(8)
+  "TELEFONE" VARCHAR(14)
+  "DDD" VARCHAR(2)
+  "UF" VARCHAR(2)
+  "IESUBST" VARCHAR(14)
+  "IMUNICIPAL" VARCHAR(15)
+  "COGNOME" VARCHAR(60)
+  "EMAIL" VARCHAR(60)
+  "NUMEND" VARCHAR(15)
+  "COMPLEM" VARCHAR(30)
+  "BAIRRO" VARCHAR(35)
+  "BACEN" VARCHAR(5)
+  "PAIS" VARCHAR(10)
+  "CNAE" VARCHAR(7)
+  "SUFRAMA" VARCHAR(9)
+  "CODIBGE" VARCHAR(7)
+  "ULTIMAIMP" DATETIME
+  "CODPART" VARCHAR(20)
+  "CSIT" VARCHAR(1)
+  "INDCREDNFE" VARCHAR(1)
+  "INDCREDCTE" VARCHAR(1)
+  "XREGAPUR" VARCHAR(7)
+  "DINIATIV" VARCHAR(10)
+  "DULTSIT" VARCHAR(10)
+  "DINIXML" DATETIME
+  "ENDTIP" VARCHAR(10)
+  Indexes {
+    CNPJ [name: "CNPJXML1"]
+    IE [name: "CNPJXML2"]
+    CODPART [name: "CNPJXML3"]
+    UF+CIDADE [name: "CNPJXML4"]
+  }
+}
+
+// Origem: danfe.dbf (DBF)
+Table "danfe" {
+  Note: "Origem: danfe.dbf"
+  "ID" VARCHAR(44)
+  "CPROD" VARCHAR(16)
+  "XPROD" VARCHAR(60)
+  "QCOM" DECIMAL(13,3) [default: 0]
+  "VUNCOM" DECIMAL(11,3) [default: 0]
+  "UCOM" VARCHAR(4)
+  "CFOP" VARCHAR(4)
+  "NCM" VARCHAR(10)
+  "CSTICMS" VARCHAR(4)
+  "CSTIPI" VARCHAR(4)
+  "CSTPIS" VARCHAR(4)
+  "CSTCOFINS" VARCHAR(4)
+  "VICMS" DECIMAL(11,3) [default: 0]
+  "VPIS" DECIMAL(11,3) [default: 0]
+  "VIPI" DECIMAL(11,3) [default: 0]
+  "VCOFINS" DECIMAL(11,3) [default: 0]
+  "VBCICMS" DECIMAL(11,3) [default: 0]
+  "VBCPIS" DECIMAL(12,3) [default: 0]
+  "VBCIPI" DECIMAL(11,3) [default: 0]
+  "VBCCOFINS" DECIMAL(11,3) [default: 0]
+  "PICMS" DECIMAL(6,2) [default: 0]
+  "PPIS" DECIMAL(6,2) [default: 0]
+  "PIPI" DECIMAL(6,2) [default: 0]
+  "PCOFINS" DECIMAL(6,2) [default: 0]
+  Indexes {
+    Id+cProd [name: "DANFE"]
+  }
+}
+
+// Origem: danfe2.dbf (DBF)
+Table "danfe2" {
+  Note: "Origem: danfe2.dbf"
+  "ID" VARCHAR(44)
+  "CNPJ" VARCHAR(14)
+  "CNPJDEST" VARCHAR(14)
+  "NNF" VARCHAR(9)
+  "SERIE" VARCHAR(3)
+  "EMISSAO" VARCHAR(10)
+  "CANCELADA" VARCHAR(1)
+  "AVB" VARCHAR(1)
+  "XML" VARCHAR(1)
+  "DANFEVIEW" VARCHAR(1)
+  "CSTATUS" VARCHAR(3)
+  "LOGIXSUP" VARCHAR(1)
+  "PROTOCOLO" VARCHAR(20)
+  Indexes {
+    ID [name: "DANFE2"]
+    CNPJ+ NNF [name: "DANFE2-2"]
+    NNF [name: "DANFE2-3"]
+  }
+}
+
+// Origem: danfe2fec.dbf (DBF)
+Table "danfe2fec" {
+  Note: "Origem: danfe2fec.dbf"
+  "ID" VARCHAR(44)
+  "CNPJ" VARCHAR(14)
+  "CNPJDEST" VARCHAR(14)
+  "NNF" VARCHAR(9)
+  "SERIE" VARCHAR(3)
+  "EMISSAO" VARCHAR(10)
+  "CANCELADA" VARCHAR(1)
+  "AVB" VARCHAR(1)
+  "XML" VARCHAR(1)
+  "DANFEVIEW" VARCHAR(1)
+  "CSTATUS" VARCHAR(3)
+  "LOGIXSUP" VARCHAR(1)
+  "PROTOCOLO" VARCHAR(20)
+  Indexes {
+    ID [name: "DANFE2"]
+    CNPJ+ NNF [name: "DANFE2-2"]
+    NNF [name: "DANFE2-3"]
+  }
+}
+
+// Origem: nfe.dbf (DBF)
+Table "nfe" {
+  Note: "Origem: nfe.dbf"
+  "EMPRESA" VARCHAR(2)
+  "SINTEL" DATETIME
+  "NFS" INTEGER [default: 0]
+  "GMPROTREC" INTEGER [default: 0]
+  "DANFEVREC" INTEGER [default: 0]
+  "STATUSREC" INTEGER [default: 0]
+  "CHAVESUP" INTEGER [default: 0]
+  Indexes {
+    EMPRESA [name: "NFE"]
+  }
+}
+
+// Origem: nfecorrecao.dbf (DBF)
+Table "nfecorrecao" {
+  Note: "Origem: nfecorrecao.dbf"
+  "CODIGO" VARCHAR(2)
+  "DESCRICAO" VARCHAR(30)
+  Indexes {
+    CODIGO [name: "NFECORRE"]
+  }
+}
+
+// Origem: NFECRET.DBF (DBF)
+Table "NFECRET" {
+  Note: "Origem: NFECRET.DBF"
+  "CODIGO" VARCHAR(3)
+  "DESCRICAO" VARCHAR(120)
+  Indexes {
+    CODIGO [name: "NFECRET"]
+  }
+}
+
+// Origem: sintcert.dbf (DBF)
+Table "sintcert" {
+  Note: "Origem: sintcert.dbf"
+  "CNPJ" VARCHAR(20)
+  "IE" VARCHAR(20)
+  "CCM" VARCHAR(20)
+  "UF" VARCHAR(2)
+  "CIDADE" VARCHAR(35)
+  "CNPJOK" VARCHAR(1)
+  "IEOK" VARCHAR(1)
+  "CCMOK" VARCHAR(1)
+  "RAZAO" VARCHAR(60)
+  "ORI" VARCHAR(10)
+  "DIG3OK" VARCHAR(1)
+  "OBS" VARCHAR(60)
+  "CEP" VARCHAR(8)
+  "DDD" VARCHAR(2)
+  "SUFRAMA" VARCHAR(9)
+  "CNAE" VARCHAR(7)
+  "EMAIL" VARCHAR(60)
+  "TELEFONE" VARCHAR(15)
+  "CSIT" VARCHAR(1)
+  "INDCREDNFE" VARCHAR(1)
+  "INDCREDCTE" VARCHAR(1)
+  "XREGAPUR" VARCHAR(7)
+  "DINIATIV" VARCHAR(10)
+  "DULTSIT" VARCHAR(10)
+  "BAIRRO" VARCHAR(35)
+  "CODIBGE" VARCHAR(7)
+  "ENDERECO" VARCHAR(60)
+  "NUMEND" VARCHAR(15)
+  "COMPLEM" VARCHAR(30)
+  "ULTIMAIMP" DATETIME
+  "ENDTIP" VARCHAR(10)
+  Indexes {
+    CNPJ [name: "SINTCE01"]
+    IE [name: "SINTCE02"]
+    RAZAO [name: "SINTCE03"]
+    UF+CIDADE [name: "SINTCE04"]
+  }
+}
+
+// Origem: sintcertfec.dbf (DBF)
+Table "sintcertfec" {
+  Note: "Origem: sintcertfec.dbf"
+  "CNPJ" VARCHAR(20)
+  "IE" VARCHAR(20)
+  "CCM" VARCHAR(20)
+  "UF" VARCHAR(2)
+  "CIDADE" VARCHAR(35)
+  "CNPJOK" VARCHAR(1)
+  "IEOK" VARCHAR(1)
+  "CCMOK" VARCHAR(1)
+  "RAZAO" VARCHAR(60)
+  "ORI" VARCHAR(10)
+  "DIG3OK" VARCHAR(1)
+  "OBS" VARCHAR(60)
+  "CEP" VARCHAR(8)
+  "DDD" VARCHAR(2)
+  "SUFRAMA" VARCHAR(9)
+  "CNAE" VARCHAR(7)
+  "EMAIL" VARCHAR(60)
+  "TELEFONE" VARCHAR(15)
+  "CSIT" VARCHAR(1)
+  "INDCREDNFE" VARCHAR(1)
+  "INDCREDCTE" VARCHAR(1)
+  "XREGAPUR" VARCHAR(7)
+  "DINIATIV" VARCHAR(10)
+  "DULTSIT" VARCHAR(10)
+  "BAIRRO" VARCHAR(35)
+  "CODIBGE" VARCHAR(7)
+  "ENDERECO" VARCHAR(60)
+  "NUMEND" VARCHAR(15)
+  "COMPLEM" VARCHAR(30)
+  "ULTIMAIMP" DATETIME
+  "ENDTIP" VARCHAR(10)
+  Indexes {
+    CNPJ [name: "SINTCE01"]
+    IE [name: "SINTCE02"]
+    RAZAO [name: "SINTCE03"]
+    UF+CIDADE [name: "SINTCE04"]
+  }
+}
+
+// Origem: sintpend.dbf (DBF)
+Table "sintpend" {
+  Note: "Origem: sintpend.dbf"
+  "CNPJ" VARCHAR(20)
+  "IE" VARCHAR(20)
+  "CCM" VARCHAR(20)
+  "UF" VARCHAR(2)
+  "CIDADE" VARCHAR(35)
+  "CNPJOK" VARCHAR(1)
+  "IEOK" VARCHAR(1)
+  "CCMOK" VARCHAR(1)
+  "RAZAO" VARCHAR(60)
+  "ORI" VARCHAR(10)
+  "DIG3OK" VARCHAR(1)
+  "OBS" VARCHAR(60)
+  "CEP" VARCHAR(8)
+  "DDD" VARCHAR(2)
+  Indexes {
+    CNPJ [name: "SINTPE01"]
+    IE [name: "SINTPE02"]
+    RAZAO [name: "SINTPE03"]
+    UF+CIDADE [name: "SINTPE04"]
+  }
+}
+
+// Origem: xmlpend.dbf (DBF)
+Table "xmlpend" {
+  Note: "Origem: xmlpend.dbf"
+  "ID" VARCHAR(44)
+  Indexes {
+    ID [name: "XMLPEND"]
+  }
+}
+

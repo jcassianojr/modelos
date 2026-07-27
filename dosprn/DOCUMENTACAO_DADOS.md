@@ -1,7 +1,9 @@
-# 🗄️ Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 05/12/26
+# Dicionario de Estruturas de Dados do Projeto
+> Varredura automatica realizada em: 27/07/2026
 
-## 📋 Tabela DBF: `dosprn1.dbf`
+## Tabela DBF: `dosprn1.dbf`
+> **Origem:** `dosprn1.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | PR_NO | N | 3 | 0 |
@@ -31,11 +33,13 @@
 | HEAD_MARG | N | 2 | 0 |
 | FOOT_MARG | N | 2 | 0 |
 
-**Índices vinculados:**
-- Tag: `DOSPRN` Expressão: `PR_NAME`
+**Indices vinculados:**
+- Tag: `DOSPRN` Expressao: `PR_NAME`
 
 ---
-## 📋 Tabela DBF: `dosprn2.dbf`
+## Tabela DBF: `dosprn2.dbf`
+> **Origem:** `dosprn2.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | EMPRESA | C | 15 | 0 |
@@ -104,18 +108,20 @@
 | EXPAND03 | C | 14 | 0 |
 | EXPAND04 | C | 14 | 0 |
 
-**Índices vinculados:**
-- Tag: `DOSPRN2` Expressão: `EMPRESA+IMPRESS`
+**Indices vinculados:**
+- Tag: `DOSPRN2` Expressao: `EMPRESA+IMPRESS`
 
 ---
-## 📋 Tabela DBF: `dosprn3.dbf`
+## Tabela DBF: `dosprn3.dbf`
+> **Origem:** `dosprn3.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NOME | C | 22 | 0 |
 | C_10CPI | C | 20 | 0 |
 | C_17CPI | C | 20 | 0 |
 
-**Índices vinculados:**
-- Tag: `NOME` Expressão: `NOME`
+**Indices vinculados:**
+- Tag: `NOME` Expressao: `NOME`
 
 ---

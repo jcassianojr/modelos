@@ -1,0 +1,660 @@
+// Origem: cs.dbf (DBF)
+Table "cs" {
+  Note: "Origem: cs.dbf"
+  "CS" INTEGER [default: 0]
+  "DATA" DATETIME
+  "TIPO" VARCHAR(1)
+  "FERRAM" VARCHAR(24)
+  "NOME" VARCHAR(40)
+  "TECNICO" INTEGER [default: 0]
+  "TECNOME" VARCHAR(40)
+  "QTDEBASE" INTEGER [default: 0]
+  "QTDESALDO" INTEGER [default: 0]
+  "QTDEPED" INTEGER [default: 0]
+  "QTDEURG" INTEGER [default: 0]
+  "DATASALDO" DATETIME
+  "DATAPED" DATETIME
+  "DATAURG" DATETIME
+  "QTDETOT" INTEGER [default: 0]
+  "HRBAS" DECIMAL(9,2) [default: 0]
+  "HRTOT" DECIMAL(9,2) [default: 0]
+  "HRPRE" DECIMAL(9,2) [default: 0]
+  "HRURG" DECIMAL(9,2) [default: 0]
+  "HRSAL" DECIMAL(9,2) [default: 0]
+  "DATHPED" DATETIME
+  "DATHURG" DATETIME
+  "DATHSAL" DATETIME
+  "LANCADA" TINYINT(1)
+  "LANCDAT" DATETIME
+  "LANCUSR" INTEGER [default: 0]
+  Indexes {
+    CS [name: "CS"]
+  }
+}
+
+// Origem: fapu.dbf (DBF)
+Table "fapu" {
+  Note: "Origem: fapu.dbf"
+  "SEQ" INTEGER [default: 0]
+  "DINI" DATETIME
+  "DFIM" DATETIME
+  "APURADO" TINYINT(1)
+  "PCPLIB" TINYINT(1)
+  "PCPNUM" INTEGER [default: 0]
+  "PCPDAT" DATETIME
+  Indexes {
+    SEQ [name: "FAPU"]
+  }
+}
+
+// Origem: fapubai.dbf (DBF)
+Table "fapubai" {
+  Note: "Origem: fapubai.dbf"
+  "SEQ" INTEGER [default: 0]
+  "FERRAM" VARCHAR(24)
+  "QTDE" INTEGER [default: 0]
+  "HORAS" DECIMAL(9,2) [default: 0]
+  Indexes {
+    STR(SEQ,3)+FERRAM [name: "FAPUBAI"]
+  }
+}
+
+// Origem: fapufer.dbf (DBF)
+Table "fapufer" {
+  Note: "Origem: fapufer.dbf"
+  "SEQ" INTEGER [default: 0]
+  "FERRAM" VARCHAR(24)
+  "QTDE" INTEGER [default: 0]
+  "HORAS" DECIMAL(9,2) [default: 0]
+  Indexes {
+    STR(SEQ,3)+FERRAM [name: "FAPUFER"]
+    FERRAM [name: "FAPUFER2"]
+  }
+}
+
+// Origem: fapui.dbf (DBF)
+Table "fapui" {
+  Note: "Origem: fapui.dbf"
+  "SEQ" INTEGER [default: 0]
+  "FERRAM" VARCHAR(24)
+  "QTDE" INTEGER [default: 0]
+  "HORAS" DECIMAL(9,2) [default: 0]
+  Indexes {
+    SEQ [name: "FAPUI"]
+  }
+}
+
+// Origem: fapumaq.dbf (DBF)
+Table "fapumaq" {
+  Note: "Origem: fapumaq.dbf"
+  "SEQ" INTEGER [default: 0]
+  "FERRAM" VARCHAR(4)
+  "QTDE" INTEGER [default: 0]
+  "HORAS" DECIMAL(9,2) [default: 0]
+  Indexes {
+    STR(SEQ,3)+FERRAM [name: "FAPUMAQ"]
+    FERRAM [name: "FAPUMAQ2"]
+  }
+}
+
+// Origem: fe02.dbf (DBF)
+Table "fe02" {
+  Note: "Origem: fe02.dbf"
+  "TIPO" VARCHAR(24)
+  "CODIGO" VARCHAR(20)
+  "ANO" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "USO" DECIMAL(16,5) [default: 0]
+  Indexes {
+    TIPO+CODIGO+STR(ANO,4)+STR(MES,2) [name: "FE02-1"]
+  }
+}
+
+// Origem: fe99.dbf (DBF)
+Table "fe99" {
+  Note: "Origem: fe99.dbf"
+  "ARQUIVO" VARCHAR(8)
+  "DOCUMENTO" VARCHAR(40)
+  "OPERACAO" VARCHAR(1)
+  "USUARIO" VARCHAR(5)
+  "QTDE" DECIMAL(12,3) [default: 0]
+  "OLDQTDE" DECIMAL(12,3) [default: 0]
+  "NUMERO" INTEGER [default: 0]
+  "DATA" DATETIME
+  "CODIGO" VARCHAR(24)
+  "RASTRO" VARCHAR(6)
+  "ESTQXXX" DECIMAL(12,3) [default: 0]
+  "ESTQYYY" DECIMAL(12,3) [default: 0]
+  Indexes {
+    ARQUIVO+DOCUMENTO [name: "FE99-1"]
+    CODIGO+DTOS(DATA) [name: "FE99-2"]
+  }
+}
+
+// Origem: fergi.dbf (DBF)
+Table "fergi" {
+  Note: "Origem: fergi.dbf"
+  "FERRAM" VARCHAR(24)
+  "CODIGO" VARCHAR(20)
+  "NOME" VARCHAR(40)
+  "DESENHO" VARCHAR(40)
+  "SAIMIN" DECIMAL(12,3) [default: 0]
+  "ESTQMIN" DECIMAL(12,3) [default: 0]
+  "ESTQENT" DECIMAL(12,3) [default: 0]
+  "ESTQSAI" DECIMAL(12,3) [default: 0]
+  "ESTQINI" DECIMAL(12,3) [default: 0]
+  "ESTQSAL" DECIMAL(12,3) [default: 0]
+  "DIASENT" INTEGER [default: 0]
+  "DIASEST" INTEGER [default: 0]
+  "DATABALAN" DATETIME
+  "DATMIN" DATETIME
+  "MINDI" DECIMAL(12,3) [default: 0]
+  "MININD" DECIMAL(12,3) [default: 0]
+  "CAUTO" DECIMAL(12,3) [default: 0]
+  "CCM" DECIMAL(15,6) [default: 0]
+  "NOM2" VARCHAR(1)
+  "UNIDADE" VARCHAR(2)
+  Indexes {
+    FERRAM [name: "FERGI"]
+    FERRAM+CODIGO [name: "FERGI-2"]
+  }
+}
+
+// Origem: fergrp.dbf (DBF)
+Table "fergrp" {
+  Note: "Origem: fergrp.dbf"
+  "GRUPO" VARCHAR(24)
+  Indexes {
+    GRUPO [name: "FERGRP"]
+  }
+}
+
+// Origem: ferhg.dbf (DBF)
+Table "ferhg" {
+  Note: "Origem: ferhg.dbf"
+  "OS" INTEGER [default: 0]
+  "CODFERR" VARCHAR(24)
+  "CODME01" VARCHAR(4)
+  "DATA" DATETIME
+  "SEQ" INTEGER [default: 0]
+  "SSQ" INTEGER [default: 0]
+  "TIPSER" VARCHAR(1)
+  "SERVICO" VARCHAR(255)
+  Indexes {
+    OS [name: "OS"]
+    CODFERR [name: "CODFERR"]
+  }
+}
+
+// Origem: ferhgi.dbf (DBF)
+Table "ferhgi" {
+  Note: "Origem: ferhgi.dbf"
+  "OS" INTEGER [default: 0]
+  "DATA" DATETIME
+  "HINI" DECIMAL(5,2) [default: 0]
+  "HFIM" DECIMAL(5,2) [default: 0]
+  "HGAS" DECIMAL(5,2) [default: 0]
+  "OBS" VARCHAR(255)
+  Indexes {
+    OS [name: "OS"]
+  }
+}
+
+// Origem: fernf.dbf (DBF)
+Table "fernf" {
+  Note: "Origem: fernf.dbf"
+  "FERRAM" VARCHAR(24)
+  "TIPO" VARCHAR(2)
+  "NRNOTA" INTEGER [default: 0]
+  "DTNOTA" DATETIME
+  "VLNOTA" DECIMAL(12,2) [default: 0]
+  "TIPCAD" VARCHAR(1)
+  "CLIFOR" INTEGER [default: 0]
+  "CLICOG" VARCHAR(12)
+  "OBS" VARCHAR(70)
+  Indexes {
+    FERRAM+STR(NRNOTA,8) [name: "FERNF"]
+    FERRAM [name: "FERNF-2"]
+  }
+}
+
+// Origem: feros.dbf (DBF)
+Table "feros" {
+  Note: "Origem: feros.dbf"
+  "FEROS" INTEGER [default: 0]
+  "REVISAO" VARCHAR(1)
+  "CHAVE" VARCHAR(9)
+  "CLIENTE" INTEGER [default: 0]
+  "COGCLI" VARCHAR(12)
+  "FERRAM" VARCHAR(24)
+  "NOME" VARCHAR(40)
+  "DATAOS" DATETIME
+  "DATAPE" DATETIME
+  "DATANF" DATETIME
+  "DATAPRZ" DATETIME
+  "NRNOTA" INTEGER [default: 0]
+  "VALORMER" DECIMAL(10,2) [default: 0]
+  "VALORICM" DECIMAL(10,2) [default: 0]
+  "VALORIPI" DECIMAL(10,2) [default: 0]
+  "VALORTOT" DECIMAL(10,2) [default: 0]
+  "BASEICM" DECIMAL(10,2) [default: 0]
+  "BASEIPI" DECIMAL(10,2) [default: 0]
+  "ICM" DECIMAL(5,2) [default: 0]
+  "IPI" DECIMAL(5,2) [default: 0]
+  "CONSUMO" VARCHAR(1)
+  "SOMANF" VARCHAR(1)
+  "QTDE" INTEGER [default: 0]
+  "PRECO" DECIMAL(10,2) [default: 0]
+  "OBS" VARCHAR(240)
+  "CODIPI" VARCHAR(2)
+  "CLASSIPI" VARCHAR(10)
+  "PEDIDOCLI" VARCHAR(20)
+  "ANTIGO" INTEGER [default: 0]
+  "PPAPPREV" DATETIME
+  "PPAPDATA" DATETIME
+  "GP11PREV" DATETIME
+  "GP11DATA" DATETIME
+  "ADTODATA" DATETIME
+  "ADTOVALOR" DECIMAL(12,2) [default: 0]
+  "OBS2" VARCHAR(254)
+  "TIPO" VARCHAR(1)
+  "NFPGVCTO" DATETIME
+  Indexes {
+    CHAVE [name: "FEROS-1"]
+    FERRAM [name: "FEROS-2"]
+    STR(CLIENTE,8)+FERRAM [name: "FEROS-3"]
+    PEDIDOCLI [name: "FEROS-4"]
+  }
+}
+
+// Origem: ferram.dbf (DBF)
+Table "ferram" {
+  Note: "Origem: ferram.dbf"
+  "FERRAM" VARCHAR(24)
+  "GRUPO" VARCHAR(24)
+  "NUMERO" INTEGER [default: 0]
+  "NOME" VARCHAR(40)
+  "CLIENTE" INTEGER [default: 0]
+  "COGCLI" VARCHAR(12)
+  "SITUACAO" VARCHAR(1)
+  "OBS" VARCHAR(50)
+  "DATAATV" DATETIME
+  "DATADES" DATETIME
+  "DATADEV" DATETIME
+  "DATAOUT" DATETIME
+  "CLASSE" VARCHAR(1)
+  "QTDEBASE" INTEGER [default: 0]
+  "QTDESALDO" INTEGER [default: 0]
+  "QTDEPED" INTEGER [default: 0]
+  "QTDEURG" INTEGER [default: 0]
+  "DATASALDO" DATETIME
+  "DATAPED" DATETIME
+  "DATAURG" DATETIME
+  "TIPOFER" VARCHAR(1)
+  "QTDETOT" INTEGER [default: 0]
+  "HRBAS" DECIMAL(9,2) [default: 0]
+  "HRTOT" DECIMAL(10,2) [default: 0]
+  "HRPRE" DECIMAL(7,2) [default: 0]
+  "HRURG" DECIMAL(7,2) [default: 0]
+  "HRSAL" DECIMAL(9,2) [default: 0]
+  "DATHPED" DATETIME
+  "DATHURG" DATETIME
+  "DATHSAL" DATETIME
+  "PREVER" VARCHAR(1)
+  "VDBAS" INTEGER [default: 0]
+  "VDPRE" INTEGER [default: 0]
+  "VDURG" INTEGER [default: 0]
+  "VDDPRE" DATETIME
+  "VDDURG" DATETIME
+  "VDHBAS" DECIMAL(9,2) [default: 0]
+  "VDHPRE" DECIMAL(10,2) [default: 0]
+  "VDHURG" DECIMAL(10,2) [default: 0]
+  "VDHDPRE" DATETIME
+  "VDHDURG" DATETIME
+  "PROPRIA" VARCHAR(1)
+  "NAEMPRESA" VARCHAR(1)
+  "VISUALNUM" INTEGER [default: 0]
+  "VISUALNOM" VARCHAR(40)
+  "VISUALOBS" VARCHAR(50)
+  "MEDA" DECIMAL(7,3) [default: 0]
+  "MEDB" DECIMAL(7,3) [default: 0]
+  "MEDC" DECIMAL(7,3) [default: 0]
+  "MEDD" DECIMAL(7,3) [default: 0]
+  "MEDH" DECIMAL(7,3) [default: 0]
+  "PESO" DECIMAL(7,3) [default: 0]
+  "CONTABIL" VARCHAR(8)
+  "CODMP01" VARCHAR(12)
+  "PECA" VARCHAR(24)
+  "SEQ" INTEGER [default: 0]
+  "SSQ" INTEGER [default: 0]
+  "OPERN" VARCHAR(40)
+  "PECAN" VARCHAR(40)
+  "PRENSA" VARCHAR(4)
+  "PRENSAN" VARCHAR(40)
+  "ALTURA" VARCHAR(30)
+  "ALMOFADA" VARCHAR(20)
+  "PINOS" VARCHAR(30)
+  "MATCOD" VARCHAR(24)
+  "MATNOM" VARCHAR(100)
+  "LARG" VARCHAR(30)
+  "ESPMAT" VARCHAR(30)
+  "PASSOFER" VARCHAR(25)
+  "PECAROL" VARCHAR(5)
+  "PRATILE" VARCHAR(5)
+  "USADEMI" VARCHAR(1)
+  "USADISP" VARCHAR(1)
+  "OBST01" VARCHAR(40)
+  "DATAT" DATETIME
+  "ESQTIP" VARCHAR(1)
+  "ESQL01" VARCHAR(8)
+  "ESQL02" VARCHAR(8)
+  "ESQL03" VARCHAR(8)
+  "ESQL04" VARCHAR(8)
+  "ESQL05" VARCHAR(8)
+  "ESQL06" VARCHAR(8)
+  "ESQL07" VARCHAR(8)
+  "ESQL08" VARCHAR(8)
+  "MEDIARO" INTEGER [default: 0]
+  "PF" INTEGER [default: 0]
+  Indexes {
+    FERRAM [name: "FERRAM"]
+    GRUPO [name: "FERRAM2"]
+    NUMERO [name: "FERRAM3"]
+  }
+}
+
+// Origem: ferrami.dbf (DBF)
+Table "ferrami" {
+  Note: "Origem: ferrami.dbf"
+  "FERRAM" VARCHAR(24)
+  "ITEM" INTEGER [default: 0]
+  "LIN01" VARCHAR(80)
+  Indexes {
+    FERRAM [name: "FERRAMI"]
+  }
+}
+
+// Origem: lvf.dbf (DBF)
+Table "lvf" {
+  Note: "Origem: lvf.dbf"
+  "LVF" INTEGER [default: 0]
+  "FERRAM" VARCHAR(24)
+  "AREA" VARCHAR(2)
+  "DESCRI" VARCHAR(40)
+  "ACESSOR" VARCHAR(50)
+  "NOME" VARCHAR(40)
+  "CLIENTE" INTEGER [default: 0]
+  "CLINOME" VARCHAR(50)
+  "DATA" DATETIME
+  "TECNICO" INTEGER [default: 0]
+  "TECNOME" VARCHAR(40)
+  "OBS01" VARCHAR(60)
+  "OBS02" VARCHAR(60)
+  "OBS03" VARCHAR(60)
+  "OBS04" VARCHAR(60)
+  "OBS05" VARCHAR(60)
+  "RO" INTEGER [default: 0]
+  Indexes {
+    LVF [name: "LVF"]
+  }
+}
+
+// Origem: lvfi.dbf (DBF)
+Table "lvfi" {
+  Note: "Origem: lvfi.dbf"
+  "LVF" INTEGER [default: 0]
+  "ITEM" INTEGER [default: 0]
+  "DESCRI" VARCHAR(50)
+  "OPER01" VARCHAR(1)
+  "OPER02" VARCHAR(1)
+  Indexes {
+    LVF [name: "LVFI"]
+  }
+}
+
+// Origem: lvfp.dbf (DBF)
+Table "lvfp" {
+  Note: "Origem: lvfp.dbf"
+  "ITEM" INTEGER [default: 0]
+  "DESCRI" VARCHAR(60)
+  "GRUPO" VARCHAR(1)
+  Indexes {
+    ITEM [name: "LVFP"]
+  }
+}
+
+// Origem: lvm.dbf (DBF)
+Table "lvm" {
+  Note: "Origem: lvm.dbf"
+  "LVM" INTEGER [default: 0]
+  "NUMERO" VARCHAR(24)
+  "NOME" VARCHAR(40)
+  "DATA" DATETIME
+  "SETOR" VARCHAR(10)
+  "ACESSOR" VARCHAR(20)
+  "CONTABIL" VARCHAR(8)
+  "FABRICANTE" VARCHAR(20)
+  "MODELO" VARCHAR(20)
+  "TECNICO" INTEGER [default: 0]
+  "TECNOME" VARCHAR(40)
+  "OBS01" VARCHAR(60)
+  "OBS02" VARCHAR(60)
+  "OBS03" VARCHAR(60)
+  "OBS04" VARCHAR(60)
+  "OBS05" VARCHAR(60)
+  "RO" INTEGER [default: 0]
+  "HORAS" DECIMAL(6,2) [default: 0]
+  Indexes {
+    LVM [name: "LVM"]
+  }
+}
+
+// Origem: lvmi.dbf (DBF)
+Table "lvmi" {
+  Note: "Origem: lvmi.dbf"
+  "LVM" INTEGER [default: 0]
+  "ITEM" INTEGER [default: 0]
+  "DESCRI" VARCHAR(150)
+  "OPER01" VARCHAR(1)
+  "OPER02" VARCHAR(1)
+  "OPER03" VARCHAR(1)
+  Indexes {
+    LVM [name: "LVMI"]
+  }
+}
+
+// Origem: lvmp.dbf (DBF)
+Table "lvmp" {
+  Note: "Origem: lvmp.dbf"
+  "ITEM" INTEGER [default: 0]
+  "DESCRI" VARCHAR(200)
+  "GRUPO" VARCHAR(3)
+  Indexes {
+    STR(ITEM,2)+GRUPO [name: "LVMP"]
+  }
+}
+
+// Origem: mapu.dbf (DBF)
+Table "mapu" {
+  Note: "Origem: mapu.dbf"
+  "SEQ" INTEGER [default: 0]
+  "DINI" DATETIME
+  "DFIM" DATETIME
+  "APURADO" TINYINT(1)
+  "PCPLIB" TINYINT(1)
+  "PCPNUM" INTEGER [default: 0]
+  "PCPDAT" DATETIME
+  Indexes {
+    SEQ [name: "MAPU"]
+  }
+}
+
+// Origem: mapubai.dbf (DBF)
+Table "mapubai" {
+  Note: "Origem: mapubai.dbf"
+  "SEQ" INTEGER [default: 0]
+  "FERRAM" VARCHAR(4)
+  "QTDE" INTEGER [default: 0]
+  "HORAS" DECIMAL(9,2) [default: 0]
+  Indexes {
+    STR(SEQ,3)+FERRAM [name: "MAPUBAI"]
+  }
+}
+
+// Origem: mapui.dbf (DBF)
+Table "mapui" {
+  Note: "Origem: mapui.dbf"
+  "SEQ" INTEGER [default: 0]
+  "FERRAM" VARCHAR(4)
+  "QTDE" INTEGER [default: 0]
+  "HORAS" DECIMAL(9,2) [default: 0]
+  Indexes {
+    SEQ [name: "MUPUI"]
+  }
+}
+
+// Origem: me01cr.dbf (DBF)
+Table "me01cr" {
+  Note: "Origem: me01cr.dbf"
+  "CODIGO" VARCHAR(4)
+  "NOME" VARCHAR(40)
+  "PROGRAMA" DATETIME
+  "EFETUADA" DATETIME
+  "LVM" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "CANO" VARCHAR(4)
+  Indexes {
+    CODIGO+DTOS(PROGRAMA) [name: "ME01CR"]
+  }
+}
+
+// Origem: rl.dbf (DBF)
+Table "rl" {
+  Note: "Origem: rl.dbf"
+  "RL" INTEGER [default: 0]
+  "DATA" DATETIME
+  Indexes {
+    RL [name: "RL"]
+  }
+}
+
+// Origem: rli.dbf (DBF)
+Table "rli" {
+  Note: "Origem: rli.dbf"
+  "RL" INTEGER [default: 0]
+  "CODME01" VARCHAR(5)
+  "LUB01" VARCHAR(1)
+  "LUB02" VARCHAR(1)
+  "LUB03" VARCHAR(1)
+  "LUB04" VARCHAR(1)
+  "LUB05" VARCHAR(1)
+  Indexes {
+    RL [name: "RL"]
+  }
+}
+
+// Origem: ro.dbf (DBF)
+Table "ro" {
+  Note: "Origem: ro.dbf"
+  "RO" INTEGER [default: 0]
+  "AREA" VARCHAR(2)
+  "DESCRI" VARCHAR(20)
+  "FERRAM" VARCHAR(24)
+  "NOME" VARCHAR(40)
+  "DATA" DATETIME
+  "TECNICO" INTEGER [default: 0]
+  "TECNOME" VARCHAR(40)
+  "HORA" DECIMAL(5,2) [default: 0]
+  "TIPO" VARCHAR(1)
+  "TIPORO" VARCHAR(1)
+  "DEFEITO" VARCHAR(80)
+  "DEFEIT2" VARCHAR(40)
+  "DEFEIT3" VARCHAR(40)
+  "SOLUCAO" VARCHAR(200)
+  "SOLUCA2" VARCHAR(80)
+  "SOLUCA3" VARCHAR(80)
+  "SOLUCA4" VARCHAR(80)
+  "SM" INTEGER [default: 0]
+  "QTDESALDO" INTEGER [default: 0]
+  "QTDEPED" INTEGER [default: 0]
+  "QTDEURG" INTEGER [default: 0]
+  "DATASALDO" DATETIME
+  "DATAPED" DATETIME
+  "DATAURG" DATETIME
+  "CLIENTE" INTEGER [default: 0]
+  "CLINOME" VARCHAR(50)
+  "CONCLUIDA" TINYINT(1)
+  "QTDETOT" INTEGER [default: 0]
+  "HRBAS" DECIMAL(10,2) [default: 0]
+  "HRTOT" DECIMAL(9,2) [default: 0]
+  "HRPRE" DECIMAL(7,2) [default: 0]
+  "HRURG" DECIMAL(7,2) [default: 0]
+  "HRSAL" DECIMAL(9,2) [default: 0]
+  "DATHPED" DATETIME
+  "DATHURG" DATETIME
+  "DATHSAL" DATETIME
+  "REQNUM" INTEGER [default: 0]
+  "REQNOME" VARCHAR(40)
+  "ZERO" INTEGER [default: 0]
+  "DATAPAR" DATETIME
+  "HORAPAR" DECIMAL(5,2) [default: 0]
+  "HORAINI" DECIMAL(5,2) [default: 0]
+  "HORAFIM" DECIMAL(5,2) [default: 0]
+  "DATAINI" DATETIME
+  "DATAFIM" DATETIME
+  "HORAPINI" DECIMAL(5,2) [default: 0]
+  "DIASANT" INTEGER [default: 0]
+  "DIASPAI" INTEGER [default: 0]
+  "DIASAVO" INTEGER [default: 0]
+  Indexes {
+    RO [name: "RO"]
+    SM [name: "RO-2"]
+    TIPO+FERRAM+DTOS(DATA) [name: "RO-3"]
+    TIPO+FERRAM+DTOS(DATAINI) [name: "RO-4"]
+    TIPO+FERRAM+DTOS(DATAFIM) [name: "RO-5"]
+  }
+}
+
+// Origem: roapud.dbf (DBF)
+Table "roapud" {
+  Note: "Origem: roapud.dbf"
+  "DIAINI" DATETIME
+  "DIAFIM" DATETIME
+}
+
+// Origem: roi.dbf (DBF)
+Table "roi" {
+  Note: "Origem: roi.dbf"
+  "RO" INTEGER [default: 0]
+  "CODIGO" VARCHAR(20)
+  "QTDE" INTEGER [default: 0]
+  Indexes {
+    RO [name: "ROI"]
+  }
+}
+
+// Origem: sm.dbf (DBF)
+Table "sm" {
+  Note: "Origem: sm.dbf"
+  "SM" INTEGER [default: 0]
+  "DATA" DATETIME
+  "TIPO" VARCHAR(1)
+  "CODIGO" VARCHAR(24)
+  "NOME" VARCHAR(40)
+  "CLIENTE" INTEGER [default: 0]
+  "CLINOME" VARCHAR(50)
+  "DEF01" VARCHAR(80)
+  "DEF02" VARCHAR(30)
+  "DATAPP" DATETIME
+  "PRIOR" VARCHAR(1)
+  "RO" INTEGER [default: 0]
+  "CONCLUIDA" TINYINT(1)
+  "REQNUM" INTEGER [default: 0]
+  "REQNOME" VARCHAR(40)
+  "HORAPINI" DECIMAL(5,2) [default: 0]
+  "DATAPAR" DATETIME
+  Indexes {
+    SM [name: "SM"]
+  }
+}
+

@@ -1,0 +1,58 @@
+// Origem: RIF.dbf (DBF)
+Table "RIF" {
+  Note: "Origem: RIF.dbf"
+  "RIF" INTEGER [default: 0]
+  "PF" INTEGER [default: 0]
+  "CLIENTE" INTEGER [default: 0]
+  "CLINOME" VARCHAR(50)
+  "CODIGO" VARCHAR(24)
+  "NOME" VARCHAR(40)
+  "REVDATA" DATETIME
+  "QTDE" INTEGER [default: 0]
+  "OS" DECIMAL(8,2) [default: 0]
+  "DATA" DATETIME
+  "ISIII" INTEGER [default: 0]
+  "LAUDO" VARCHAR(1)
+  "RASTRO" VARCHAR(14)
+  "INSNUM" INTEGER [default: 0]
+  "INSNOM" VARCHAR(40)
+  "IMPORTADO" TINYINT(1)
+  "PCFTIPO" VARCHAR(1)
+  "CODIGOINT" VARCHAR(24)
+  Indexes {
+    PF [name: "RIF-2"]
+    DATA [name: "RIF-3"]
+    CODIGO+STR(99999999-RIF,8) [name: "RIF-4"]
+    RASTRO [name: "RIF"]
+  }
+}
+
+// Origem: RIFI.dbf (DBF)
+Table "RIFI" {
+  Note: "Origem: RIFI.dbf"
+  "RIF" INTEGER [default: 0]
+  "TOL" VARCHAR(150)
+  "MIN" DECIMAL(12,4) [default: 0]
+  "MAX" DECIMAL(12,4) [default: 0]
+  "OK" VARCHAR(1)
+  "INSTRUME" VARCHAR(60)
+  Indexes {
+    RIF [name: "RIFI"]
+  }
+}
+
+// Origem: rifpr.dbf (DBF)
+Table "rifpr" {
+  Note: "Origem: rifpr.dbf"
+  "PRODUTO" VARCHAR(24)
+  "QTDE" INTEGER [default: 0]
+  "RIF1200" INTEGER [default: 0]
+  "RIFULT" INTEGER [default: 0]
+  "RIFTOT" INTEGER [default: 0]
+  "SEL100" DATETIME
+  "RIFSEL" INTEGER [default: 0]
+  Indexes {
+    PRODUTO [name: "RIFPR"]
+  }
+}
+

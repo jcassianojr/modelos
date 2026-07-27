@@ -1,7 +1,9 @@
-# 🗄️ Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 05/12/26
+# Dicionario de Estruturas de Dados do Projeto
+> Varredura automatica realizada em: 27/07/2026
 
-## 📋 Tabela DBF: `esocial_cbo.dbf`
+## Tabela DBF: `esocial_cbo.dbf`
+> **Origem:** `esocial_cbo.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 6 | 0 |
@@ -9,11 +11,13 @@
 | DT_INI | D | 8 | 0 |
 | DT_FIN | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab01.dbf`
+## Tabela DBF: `esocial_tab01.dbf`
+> **Origem:** `esocial_tab01.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 3 | 0 |
@@ -25,11 +29,13 @@
 | OBRIGA | C | 1 | 0 |
 | ALIQFGTSCO | C | 3 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab02.dbf`
+## Tabela DBF: `esocial_tab02.dbf`
+> **Origem:** `esocial_tab02.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | N | 1 | 0 |
@@ -37,11 +43,13 @@
 | DTINICIO | D | 8 | 0 |
 | DTFIM | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab03.dbf`
+## Tabela DBF: `esocial_tab03.dbf`
+> **Origem:** `esocial_tab03.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 4 | 0 |
@@ -50,11 +58,13 @@
 | DTFIM | D | 8 | 0 |
 | DESCRICAO | C | 255 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab04.dbf`
+## Tabela DBF: `esocial_tab04.dbf`
+> **Origem:** `esocial_tab04.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODFPAS | N | 3 | 0 |
@@ -65,11 +75,13 @@
 | CODTERC | N | 4 | 0 |
 | ALIQTERC | N | 4 | 2 |
 
-**Índices vinculados:**
-- Tag: `CODFPAS` Expressão: `CODFPAS`
+**Indices vinculados:**
+- Tag: `CODFPAS` Expressao: `CODFPAS`
 
 ---
-## 📋 Tabela DBF: `esocial_tab05.dbf`
+## Tabela DBF: `esocial_tab05.dbf`
+> **Origem:** `esocial_tab05.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | N | 1 | 0 |
@@ -77,11 +89,13 @@
 | DTINICIO | D | 8 | 0 |
 | DTFIM | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab07.dbf`
+## Tabela DBF: `esocial_tab07.dbf`
+> **Origem:** `esocial_tab07.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 4 | 0 |
@@ -91,11 +105,13 @@
 | MATERIABIO | C | 3 | 0 |
 | AGENTEQUIM | N | 2 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `codigo`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `codigo`
 
 ---
-## 📋 Tabela DBF: `esocial_tab08.dbf`
+## Tabela DBF: `esocial_tab08.dbf`
+> **Origem:** `esocial_tab08.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | N | 2 | 0 |
@@ -104,11 +120,13 @@
 | DTFIM | D | 8 | 0 |
 | TPINSC | N | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab09.dbf`
+## Tabela DBF: `esocial_tab09.dbf`
+> **Origem:** `esocial_tab09.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 6 | 0 |
@@ -123,11 +141,13 @@
 | CLASSTRIB | C | 11 | 0 |
 | NCLASSTRI | C | 2 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab10.dbf`
+## Tabela DBF: `esocial_tab10.dbf`
+> **Origem:** `esocial_tab10.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 2 | 0 |
@@ -139,11 +159,13 @@
 | CDVALID | C | 1 | 0 |
 | TXCLASSTRB | C | 47 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab11.dbf`
+## Tabela DBF: `esocial_tab11.dbf`
+> **Origem:** `esocial_tab11.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | N | 3 | 0 |
@@ -154,11 +176,13 @@
 | COOPERATIV | C | 1 | 0 |
 | TPLOTACAO | C | 20 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab13.dbf`
+## Tabela DBF: `esocial_tab13.dbf`
+> **Origem:** `esocial_tab13.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 9 | 0 |
@@ -166,11 +190,13 @@
 | DTINICIO | D | 8 | 0 |
 | DTFIM | C | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `codigo`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `codigo`
 
 ---
-## 📋 Tabela DBF: `esocial_tab14.dbf`
+## Tabela DBF: `esocial_tab14.dbf`
+> **Origem:** `esocial_tab14.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | N | 9 | 0 |
@@ -178,11 +204,13 @@
 | DTINICIO | D | 8 | 0 |
 | DTFIM | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `codigo`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `codigo`
 
 ---
-## 📋 Tabela DBF: `esocial_tab15.dbf`
+## Tabela DBF: `esocial_tab15.dbf`
+> **Origem:** `esocial_tab15.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 9 | 0 |
@@ -190,11 +218,13 @@
 | DTINICIO | D | 8 | 0 |
 | DTFIM | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab16.dbf`
+## Tabela DBF: `esocial_tab16.dbf`
+> **Origem:** `esocial_tab16.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 9 | 0 |
@@ -202,11 +232,13 @@
 | DTINICIO | D | 8 | 0 |
 | DTFIM | C | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `codigo`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `codigo`
 
 ---
-## 📋 Tabela DBF: `esocial_tab17.dbf`
+## Tabela DBF: `esocial_tab17.dbf`
+> **Origem:** `esocial_tab17.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 9 | 0 |
@@ -214,11 +246,13 @@
 | DTINICIO | D | 8 | 0 |
 | DTFIM | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `codigo`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `codigo`
 
 ---
-## 📋 Tabela DBF: `esocial_tab18.dbf`
+## Tabela DBF: `esocial_tab18.dbf`
+> **Origem:** `esocial_tab18.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 2 | 0 |
@@ -232,11 +266,13 @@
 | PAGSALFAM | C | 1 | 0 |
 | GERAREMUN | C | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab19.dbf`
+## Tabela DBF: `esocial_tab19.dbf`
+> **Origem:** `esocial_tab19.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | N | 2 | 0 |
@@ -247,11 +283,13 @@
 | LCATEGTRAB | C | 23 | 0 |
 | GERAINDCOM | N | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab20.dbf`
+## Tabela DBF: `esocial_tab20.dbf`
+> **Origem:** `esocial_tab20.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 3 | 0 |
@@ -259,11 +297,13 @@
 | DTINICIO | D | 8 | 0 |
 | DTFIM | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab21.dbf`
+## Tabela DBF: `esocial_tab21.dbf`
+> **Origem:** `esocial_tab21.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 9 | 0 |
@@ -273,11 +313,13 @@
 | CODIGOPAI | C | 9 | 0 |
 | TIPO | C | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `codigo`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `codigo`
 
 ---
-## 📋 Tabela DBF: `esocial_tab22.dbf`
+## Tabela DBF: `esocial_tab22.dbf`
+> **Origem:** `esocial_tab22.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 9 | 0 |
@@ -287,11 +329,13 @@
 | GRAU | C | 6 | 0 |
 | OPERATIV | C | 255 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab23.dbf`
+## Tabela DBF: `esocial_tab23.dbf`
+> **Origem:** `esocial_tab23.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 8 | 0 |
@@ -301,11 +345,13 @@
 | TEMPCONTR | N | 2 | 0 |
 | ALIQ | N | 2 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab24.dbf`
+## Tabela DBF: `esocial_tab24.dbf`
+> **Origem:** `esocial_tab24.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | N | 3 | 0 |
@@ -313,11 +359,13 @@
 | DTINICIO | D | 8 | 0 |
 | DTFIM | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab26.dbf`
+## Tabela DBF: `esocial_tab26.dbf`
+> **Origem:** `esocial_tab26.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 6 | 0 |
@@ -325,11 +373,13 @@
 | DTINICIO | D | 8 | 0 |
 | DTFIM | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab51.dbf`
+## Tabela DBF: `esocial_tab51.dbf`
+> **Origem:** `esocial_tab51.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | N | 4 | 0 |
@@ -338,11 +388,13 @@
 | DTFIM | D | 8 | 0 |
 | OBRIGA | C | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab52.dbf`
+## Tabela DBF: `esocial_tab52.dbf`
+> **Origem:** `esocial_tab52.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 10 | 0 |
@@ -359,11 +411,13 @@
 | PERHORFLEX | C | 1 | 0 |
 | QTDHRSSEM | C | 2 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab53.dbf`
+## Tabela DBF: `esocial_tab53.dbf`
+> **Origem:** `esocial_tab53.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | N | 4 | 0 |
@@ -372,11 +426,13 @@
 | DTFIM | D | 8 | 0 |
 | ESOCFILIAL | C | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab54.dbf`
+## Tabela DBF: `esocial_tab54.dbf`
+> **Origem:** `esocial_tab54.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 11 | 0 |
@@ -411,11 +467,13 @@
 | FILCATRUB | C | 3 | 0 |
 | GRUPRENDDO | C | 5 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `codigo`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `codigo`
 
 ---
-## 📋 Tabela DBF: `esocial_tab55.dbf`
+## Tabela DBF: `esocial_tab55.dbf`
+> **Origem:** `esocial_tab55.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | N | 3 | 0 |
@@ -425,11 +483,13 @@
 | CLASSTRIB | C | 2 | 0 |
 | NCLASSTRIB | N | 2 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab57.dbf`
+## Tabela DBF: `esocial_tab57.dbf`
+> **Origem:** `esocial_tab57.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | INFSALCONT | N | 7 | 2 |
@@ -438,11 +498,13 @@
 | DTFIM | D | 8 | 0 |
 | ALIQ | N | 2 | 0 |
 
-**Índices vinculados:**
-- Tag: `RECNO` Expressão: `recno()`
+**Indices vinculados:**
+- Tag: `RECNO` Expressao: `recno()`
 
 ---
-## 📋 Tabela DBF: `esocial_tab58.dbf`
+## Tabela DBF: `esocial_tab58.dbf`
+> **Origem:** `esocial_tab58.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | INFBC | N | 7 | 2 |
@@ -452,11 +514,13 @@
 | ALIQ | N | 4 | 1 |
 | PARCDED | N | 6 | 2 |
 
-**Índices vinculados:**
-- Tag: `RECNO` Expressão: `recno()`
+**Indices vinculados:**
+- Tag: `RECNO` Expressao: `recno()`
 
 ---
-## 📋 Tabela DBF: `esocial_tab59.dbf`
+## Tabela DBF: `esocial_tab59.dbf`
+> **Origem:** `esocial_tab59.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | N | 2 | 0 |
@@ -465,11 +529,13 @@
 | DTFIM | D | 8 | 0 |
 | TPSUSP | N | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab60.dbf`
+## Tabela DBF: `esocial_tab60.dbf`
+> **Origem:** `esocial_tab60.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 4 | 0 |
@@ -478,11 +544,13 @@
 | DTFIM | D | 8 | 0 |
 | NOME | C | 50 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `codigo`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `codigo`
 
 ---
-## 📋 Tabela DBF: `esocial_tab61.dbf`
+## Tabela DBF: `esocial_tab61.dbf`
+> **Origem:** `esocial_tab61.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 11 | 0 |
@@ -493,11 +561,13 @@
 | CODCBO | N | 6 | 0 |
 | TPTRAB | N | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab62.dbf`
+## Tabela DBF: `esocial_tab62.dbf`
+> **Origem:** `esocial_tab62.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | N | 3 | 0 |
@@ -505,11 +575,13 @@
 | DTINICIO | D | 8 | 0 |
 | DTFIM | C | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab63.dbf`
+## Tabela DBF: `esocial_tab63.dbf`
+> **Origem:** `esocial_tab63.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | N | 1 | 0 |
@@ -520,11 +592,13 @@
 | RUBRICAS | C | 215 | 0 |
 | CATEGORIA | N | 3 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab64.dbf`
+## Tabela DBF: `esocial_tab64.dbf`
+> **Origem:** `esocial_tab64.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 11 | 0 |
@@ -539,11 +613,13 @@
 | CATEGIGUAL | N | 3 | 0 |
 | CATEGDIF | C | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `esocial_tab65.dbf`
+## Tabela DBF: `esocial_tab65.dbf`
+> **Origem:** `esocial_tab65.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | INFBC | N | 6 | 2 |
@@ -552,11 +628,13 @@
 | DTFIM | N | 8 | 0 |
 | PARCDED | N | 5 | 2 |
 
-**Índices vinculados:**
-- Tag: `RECNO` Expressão: `recno()`
+**Indices vinculados:**
+- Tag: `RECNO` Expressao: `recno()`
 
 ---
-## 📋 Tabela DBF: `esocial_tab66.dbf`
+## Tabela DBF: `esocial_tab66.dbf`
+> **Origem:** `esocial_tab66.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | N | 1 | 0 |
@@ -567,11 +645,13 @@
 | NCATEGORIA | C | 1 | 0 |
 | VALOR | N | 6 | 2 |
 
-**Índices vinculados:**
-- Tag: `RECNO` Expressão: `recno()`
+**Indices vinculados:**
+- Tag: `RECNO` Expressao: `recno()`
 
 ---
-## 📋 Tabela DBF: `esocial_tab67.dbf`
+## Tabela DBF: `esocial_tab67.dbf`
+> **Origem:** `esocial_tab67.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 3 | 0 |
@@ -580,11 +660,13 @@
 | DTFIM | C | 1 | 0 |
 | CODESOCIAL | N | 2 | 0 |
 
-**Índices vinculados:**
-- Tag: `RECNO` Expressão: `recno()`
+**Indices vinculados:**
+- Tag: `RECNO` Expressao: `recno()`
 
 ---
-## 📋 Tabela DBF: `esocial_tab68.dbf`
+## Tabela DBF: `esocial_tab68.dbf`
+> **Origem:** `esocial_tab68.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | N | 3 | 0 |
@@ -595,11 +677,13 @@
 | CAMPOFIXO | C | 1 | 0 |
 | RESTRICAON | C | 35 | 0 |
 
-**Índices vinculados:**
-- Tag: `RECNO` Expressão: `recno()`
+**Indices vinculados:**
+- Tag: `RECNO` Expressao: `recno()`
 
 ---
-## 📋 Tabela DBF: `esocial_tab69.dbf`
+## Tabela DBF: `esocial_tab69.dbf`
+> **Origem:** `esocial_tab69.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 11 | 0 |
@@ -607,11 +691,13 @@
 | DTINICIO | N | 7 | 0 |
 | DTFIM | C | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `RECNO` Expressão: `recno()`
+**Indices vinculados:**
+- Tag: `RECNO` Expressao: `recno()`
 
 ---
-## 📋 Tabela DBF: `esocial_tab70.dbf`
+## Tabela DBF: `esocial_tab70.dbf`
+> **Origem:** `esocial_tab70.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | N | 1 | 0 |
@@ -619,11 +705,13 @@
 | DTINICIO | N | 7 | 0 |
 | DTFIM | C | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `RECNO` Expressão: `recno()`
+**Indices vinculados:**
+- Tag: `RECNO` Expressao: `recno()`
 
 ---
-## 📋 Tabela DBF: `esocial_tab71.dbf`
+## Tabela DBF: `esocial_tab71.dbf`
+> **Origem:** `esocial_tab71.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | N | 1 | 0 |
@@ -631,11 +719,13 @@
 | DTINICIO | N | 7 | 0 |
 | DTFIM | C | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `RECNO` Expressão: `recno()`
+**Indices vinculados:**
+- Tag: `RECNO` Expressao: `recno()`
 
 ---
-## 📋 Tabela DBF: `esocial_tab72.dbf`
+## Tabela DBF: `esocial_tab72.dbf`
+> **Origem:** `esocial_tab72.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | N | 1 | 0 |
@@ -643,11 +733,13 @@
 | DTINICIO | N | 7 | 0 |
 | DTFIM | C | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `RECNO` Expressão: `recno()`
+**Indices vinculados:**
+- Tag: `RECNO` Expressao: `recno()`
 
 ---
-## 📋 Tabela DBF: `esocial_tab73.dbf`
+## Tabela DBF: `esocial_tab73.dbf`
+> **Origem:** `esocial_tab73.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | N | 1 | 0 |
@@ -655,11 +747,13 @@
 | DTINICIO | N | 7 | 0 |
 | DTFIM | C | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `RECNO` Expressão: `recno()`
+**Indices vinculados:**
+- Tag: `RECNO` Expressao: `recno()`
 
 ---
-## 📋 Tabela DBF: `esocial_tab74.dbf`
+## Tabela DBF: `esocial_tab74.dbf`
+> **Origem:** `esocial_tab74.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | N | 1 | 0 |
@@ -667,11 +761,13 @@
 | DTINICIO | N | 7 | 0 |
 | DTFIM | C | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `RECNO` Expressão: `recno()`
+**Indices vinculados:**
+- Tag: `RECNO` Expressao: `recno()`
 
 ---
-## 📋 Tabela DBF: `esocial_tab75.dbf`
+## Tabela DBF: `esocial_tab75.dbf`
+> **Origem:** `esocial_tab75.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | N | 1 | 0 |
@@ -679,7 +775,7 @@
 | DTINICIO | N | 7 | 0 |
 | DTFIM | C | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `RECNO` Expressão: `recno()`
+**Indices vinculados:**
+- Tag: `RECNO` Expressao: `recno()`
 
 ---

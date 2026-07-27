@@ -1,7 +1,9 @@
-# 🗄️ Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 05/12/26
+# Dicionario de Estruturas de Dados do Projeto
+> Varredura automatica realizada em: 27/07/2026
 
-## 📋 Tabela DBF: `mail.dbf`
+## Tabela DBF: `mail.dbf`
+> **Origem:** `mail.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -16,87 +18,33 @@
 | HORAOK | C | 8 | 0 |
 
 ---
+## Tabela DBF: `mailerro.dbf`
+> **Origem:** `mailerro.dbf` (Driver: DBFCDX)
 
-#### Tabela: `mail`
-| Campo | Tipo | PK | NotNull |
-| :--- | :--- | :---: | :---: |
-| NUMERO | INTEGER |   |   |
-| ERRO | CHAR(8) |   |   |
-| DATA | DATE |   |   |
-| HORA | CHAR(8) |   |   |
-| DE | CHAR(12) |   |   |
-| DESTINO | CHAR(12) |   |   |
-| ASSUNTO | CHAR(120) |   |   |
-| TEXTO | TEXT |   |   |
-| DATAOK | DATE |   |   |
-| HORAOK | CHAR(8) |   |   |
-
-**Índices e Chaves:**
-> *Nenhum índice definido.*
-
----
-
-#### Tabela: `mailerro`
-| Campo | Tipo | PK | NotNull |
-| :--- | :--- | :---: | :---: |
-| ERRO | CHAR(8) |   |   |
-| ASSUNTO | CHAR(120) |   |   |
-
-**Índices e Chaves:**
-- **idx_mailerro_mailerro**: `ERRO`
-
----
-
-#### Tabela: `mailpara`
-| Campo | Tipo | PK | NotNull |
-| :--- | :--- | :---: | :---: |
-| ERRO | CHAR(8) |   |   |
-| DESTINO | CHAR(12) |   |   |
-
-**Índices e Chaves:**
-- **idx_mailpara**: `ERRO`
-
----
-
-#### Tabela: `mailpg`
-| Campo | Tipo | PK | NotNull |
-| :--- | :--- | :---: | :---: |
-| NUMERO | INTEGER |   |   |
-| ERRO | CHAR(8) |   |   |
-| DATA | DATE |   |   |
-| HORA | CHAR(8) |   |   |
-| DE | CHAR(12) |   |   |
-| DESTINO | CHAR(12) |   |   |
-| ASSUNTO | CHAR(120) |   |   |
-| TEXTO | TEXT |   |   |
-| DATAOK | DATE |   |   |
-| HORAOK | CHAR(8) |   |   |
-
-**Índices e Chaves:**
-> *Nenhum índice definido.*
-
----
-## 📋 Tabela DBF: `mailerro.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | ERRO | C | 8 | 0 |
 | ASSUNTO | C | 120 | 0 |
 
-**Índices vinculados:**
-- Tag: `MAILERRO` Expressão: `ERRO`
+**Indices vinculados:**
+- Tag: `MAILERRO` Expressao: `ERRO`
 
 ---
-## 📋 Tabela DBF: `mailpara.dbf`
+## Tabela DBF: `mailpara.dbf`
+> **Origem:** `mailpara.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | ERRO | C | 8 | 0 |
 | DESTINO | C | 12 | 0 |
 
-**Índices vinculados:**
-- Tag: `MAILPARA` Expressão: `ERRO`
+**Indices vinculados:**
+- Tag: `MAILPARA` Expressao: `ERRO`
 
 ---
-## 📋 Tabela DBF: `mailpg.dbf`
+## Tabela DBF: `mailpg.dbf`
+> **Origem:** `mailpg.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |

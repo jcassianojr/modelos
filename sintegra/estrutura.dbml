@@ -1,0 +1,651 @@
+// Origem: sint.dbf (DBF)
+Table "sint" {
+  Note: "Origem: sint.dbf"
+  "REG" VARCHAR(2)
+  Indexes {
+    RECNO() [name: "REGISTRO"]
+  }
+}
+
+// Origem: sint10.dbf (DBF)
+Table "sint10" {
+  Note: "Origem: sint10.dbf"
+  "TIPO" VARCHAR(2)
+  "CGC" VARCHAR(14)
+  "IE" VARCHAR(14)
+  "NOME" VARCHAR(35)
+  "MUNICIPIO" VARCHAR(30)
+  "UF" VARCHAR(2)
+  "FAX" VARCHAR(10)
+  "DATAINI" DATETIME
+  "DATAFIM" DATETIME
+  "CONVENIO" VARCHAR(1)
+  "NATUREZA" INTEGER [default: 0]
+  "FINALIDADE" VARCHAR(1)
+  Indexes {
+    RECNO() [name: "REGISTRO"]
+  }
+}
+
+// Origem: sint11.dbf (DBF)
+Table "sint11" {
+  Note: "Origem: sint11.dbf"
+  "TIPO" VARCHAR(2)
+  "LOGRADOURO" VARCHAR(34)
+  "NUMERO" INTEGER [default: 0]
+  "COMPL" VARCHAR(22)
+  "BAIRRO" VARCHAR(15)
+  "CEP" VARCHAR(8)
+  "CONTATO" VARCHAR(28)
+  "TELEFONE" VARCHAR(12)
+  Indexes {
+    RECNO() [name: "REGISTRO"]
+  }
+}
+
+// Origem: sint50.dbf (DBF)
+Table "sint50" {
+  Note: "Origem: sint50.dbf"
+  "TIPO" VARCHAR(2)
+  "CGC" VARCHAR(18)
+  "IE" VARCHAR(20)
+  "DATA" DATETIME
+  "UF" VARCHAR(2)
+  "MODELO" INTEGER [default: 0]
+  "SERIE" VARCHAR(3)
+  "SUB" VARCHAR(2)
+  "NUMERO" INTEGER [default: 0]
+  "CFOP" VARCHAR(4)
+  "VALORTOT" DECIMAL(10,2) [default: 0]
+  "BASE" DECIMAL(10,2) [default: 0]
+  "VALOR" DECIMAL(10,2) [default: 0]
+  "ISENTA" DECIMAL(10,2) [default: 0]
+  "OUTRAS" DECIMAL(10,2) [default: 0]
+  "ALIQUOTA" DECIMAL(5,2) [default: 0]
+  "SITUACAO" VARCHAR(1)
+  "TIPONF" VARCHAR(1)
+  "OBS" DECIMAL(10,2) [default: 0]
+  "EMITENTE" VARCHAR(1)
+  "FORNECEDO" INTEGER [default: 0]
+  "TIPOCLI" VARCHAR(1)
+  Indexes {
+    DTOS(DATA)+STR(NUMERO,8) [name: "SINT50-1"]
+    STR(NUMERO,8)+TIPONF [name: "SINT50-2"]
+  }
+}
+
+// Origem: sint51.dbf (DBF)
+Table "sint51" {
+  Note: "Origem: sint51.dbf"
+  "TIPO" VARCHAR(2)
+  "CGC" VARCHAR(18)
+  "IE" VARCHAR(20)
+  "DATA" DATETIME
+  "UF" VARCHAR(2)
+  "MODELO" INTEGER [default: 0]
+  "SERIE" VARCHAR(3)
+  "SUB" VARCHAR(2)
+  "NUMERO" INTEGER [default: 0]
+  "CFOP" VARCHAR(4)
+  "VALORTOT" DECIMAL(10,2) [default: 0]
+  "BASE" DECIMAL(10,2) [default: 0]
+  "VALOR" DECIMAL(10,2) [default: 0]
+  "ISENTA" DECIMAL(10,2) [default: 0]
+  "OUTRAS" DECIMAL(10,2) [default: 0]
+  "ALIQUOTA" DECIMAL(5,2) [default: 0]
+  "SITUACAO" VARCHAR(1)
+  "TIPONF" VARCHAR(1)
+  "OBS" DECIMAL(10,2) [default: 0]
+  "FORNECEDO" INTEGER [default: 0]
+  "TIPOCLI" VARCHAR(1)
+  "BRANCOS" VARCHAR(1)
+  Indexes {
+    DTOS(DATA)+STR(NUMERO,8) [name: "SINT51-1"]
+    STR(NUMERO,8)+TIPONF [name: "SINT51-2"]
+  }
+}
+
+// Origem: sint53.dbf (DBF)
+Table "sint53" {
+  Note: "Origem: sint53.dbf"
+  "TIPO" VARCHAR(2)
+  "CGC" VARCHAR(18)
+  "IE" VARCHAR(20)
+  "DATA" DATETIME
+  "UF" VARCHAR(2)
+  "MODELO" INTEGER [default: 0]
+  "SERIE" VARCHAR(3)
+  "SUB" VARCHAR(2)
+  "NUMERO" INTEGER [default: 0]
+  "CFOP" VARCHAR(4)
+  "VALORTOT" DECIMAL(10,2) [default: 0]
+  "BASE" DECIMAL(10,2) [default: 0]
+  "VALOR" DECIMAL(10,2) [default: 0]
+  "ISENTA" DECIMAL(10,2) [default: 0]
+  "OUTRAS" DECIMAL(10,2) [default: 0]
+  "ALIQUOTA" DECIMAL(5,2) [default: 0]
+  "SITUACAO" VARCHAR(1)
+  "TIPONF" VARCHAR(1)
+  "OBS" DECIMAL(10,2) [default: 0]
+  "ANTECIPA" VARCHAR(1)
+  "DESPESAS" DECIMAL(10,2) [default: 0]
+  "FORNECEDO" INTEGER [default: 0]
+  "EMITENTE" VARCHAR(1)
+  "TIPOCLI" VARCHAR(1)
+  Indexes {
+    DTOS(DATA)+STR(NUMERO,8) [name: "SINT53-1"]
+    STR(NUMERO,8)+TIPONF [name: "SINT53-2"]
+  }
+}
+
+// Origem: sint54.dbf (DBF)
+Table "sint54" {
+  Note: "Origem: sint54.dbf"
+  "TIPO" VARCHAR(2)
+  "CGC" VARCHAR(18)
+  "MODELO" INTEGER [default: 0]
+  "SERIE" VARCHAR(3)
+  "NUMERO" INTEGER [default: 0]
+  "CFOP" VARCHAR(4)
+  "SITUACAO" INTEGER [default: 0]
+  "ITEM" INTEGER [default: 0]
+  "CODIGORED" VARCHAR(14)
+  "QTDE" DECIMAL(11,3) [default: 0]
+  "VALORMER" DECIMAL(10,2) [default: 0]
+  "DESCONTO" DECIMAL(10,2) [default: 0]
+  "BASEICM" DECIMAL(10,2) [default: 0]
+  "BASESUB" DECIMAL(10,2) [default: 0]
+  "VALORIPI" DECIMAL(10,2) [default: 0]
+  "ICM" DECIMAL(5,2) [default: 0]
+  "TIPOENT" VARCHAR(1)
+  "CODIGO" VARCHAR(24)
+  "TIPONF" VARCHAR(1)
+  "TIPOCLI" VARCHAR(1)
+  "FORNECEDO" INTEGER [default: 0]
+  "UF" VARCHAR(2)
+  "SUB" VARCHAR(2)
+  "DATA" DATETIME
+  Indexes {
+    CGC+SERIE+SUB+STR(NUMERO,8)+STR(ITEM,3) [name: "SINT54-1"]
+    STR(NUMERO,8)+TIPONF [name: "SINT54-2"]
+    CODIGORED [name: "SINT54-3"]
+    CODIGO [name: "SINT54-4"]
+    FORNECEDO [name: "SINT54-5"]
+    STR(NUMERO,8)+CGC [name: "SINT54-6"]
+  }
+}
+
+// Origem: sint55.dbf (DBF)
+Table "sint55" {
+  Note: "Origem: sint55.dbf"
+  "TIPO" VARCHAR(2)
+  "CGC" VARCHAR(14)
+  "IE" VARCHAR(14)
+  "DTGNRE" DATETIME
+  "UF" VARCHAR(2)
+  "UFFAVOR" VARCHAR(2)
+  "BANCO" VARCHAR(3)
+  "AGENCIA" VARCHAR(4)
+  "NUMGNRE" VARCHAR(20)
+  "VALGNRE" DECIMAL(13,2) [default: 0]
+  "DTVENC" DATETIME
+  "MESANOREF" VARCHAR(6)
+  "CONVENIO" VARCHAR(30)
+  Indexes {
+    RECNO() [name: "REGISTRO"]
+  }
+}
+
+// Origem: sint56.dbf (DBF)
+Table "sint56" {
+  Note: "Origem: sint56.dbf"
+  "REG" VARCHAR(2)
+  "CNPJCPF" VARCHAR(14)
+  "MODELO" INTEGER [default: 0]
+  "SERIE" VARCHAR(3)
+  "NUMERO" VARCHAR(6)
+  "CFOP" VARCHAR(4)
+  "CST" INTEGER [default: 0]
+  "NRITEM" INTEGER [default: 0]
+  "CODPROD" VARCHAR(14)
+  "TPOPERACAO" INTEGER [default: 0]
+  "CNPJCONC" INTEGER [default: 0]
+  "ALQIPI" VARCHAR(4)
+  "CHASSI" VARCHAR(17)
+  "BRANCOS" VARCHAR(39)
+  Indexes {
+    RECNO() [name: "REGISTRO"]
+  }
+}
+
+// Origem: sint60a.dbf (DBF)
+Table "sint60a" {
+  Note: "Origem: sint60a.dbf"
+  "TIPO" VARCHAR(2)
+  "SUB60A" VARCHAR(1)
+  "EMIS60A" DATETIME
+  "NUMFABA" VARCHAR(20)
+  "SITTRI60A" VARCHAR(4)
+  "VALOR60" DECIMAL(12,2) [default: 0]
+  "BRANCO60A" VARCHAR(79)
+  Indexes {
+    RECNO() [name: "REGISTRO"]
+  }
+}
+
+// Origem: sint60d.dbf (DBF)
+Table "sint60d" {
+  Note: "Origem: sint60d.dbf"
+  "TIPO" VARCHAR(2)
+  "SUB60D" VARCHAR(1)
+  "EMIS60D" DATETIME
+  "NUMFABD" VARCHAR(20)
+  "PROD60D" VARCHAR(14)
+  "QUANT60D" DECIMAL(13,3) [default: 0]
+  "VALPRO60D" DECIMAL(16,2) [default: 0]
+  "BASEIC60D" DECIMAL(16,2) [default: 0]
+  "SITTRI60D" VARCHAR(4)
+  "VALICM60D" DECIMAL(13,2) [default: 0]
+  "BRANCO60D" VARCHAR(19)
+  Indexes {
+    RECNO() [name: "REGISTRO"]
+  }
+}
+
+// Origem: sint60i.dbf (DBF)
+Table "sint60i" {
+  Note: "Origem: sint60i.dbf"
+  "TIPO" VARCHAR(2)
+  "SUB60I" VARCHAR(1)
+  "EMIS60I" DATETIME
+  "NUMFABI" VARCHAR(20)
+  "MODEL60I" VARCHAR(2)
+  "NUMCOO" VARCHAR(6)
+  "NUMITE60I" VARCHAR(3)
+  "PROD60I" VARCHAR(14)
+  "QUANT60I" DECIMAL(13,3) [default: 0]
+  "VALUNI60I" DECIMAL(13,3) [default: 0]
+  "BASEIC60I" DECIMAL(12,2) [default: 0]
+  "SITTRI60I" VARCHAR(4)
+  "VALICM60I" INTEGER [default: 0]
+  "BRANCO60I" VARCHAR(16)
+  Indexes {
+    RECNO() [name: "REGISTRO"]
+  }
+}
+
+// Origem: sint60m.dbf (DBF)
+Table "sint60m" {
+  Note: "Origem: sint60m.dbf"
+  "TIPO" VARCHAR(2)
+  "SUB60M" VARCHAR(1)
+  "EMIS60M" DATETIME
+  "NUMFABM" VARCHAR(20)
+  "NUMPDVM" VARCHAR(3)
+  "MODEL60M" VARCHAR(2)
+  "NUINI60M" VARCHAR(6)
+  "NUFIM60M" VARCHAR(6)
+  "REDUZ60M" VARCHAR(6)
+  "CRO60M" INTEGER [default: 0]
+  "VENDA60M" DECIMAL(16,2) [default: 0]
+  "TOTGER60M" DECIMAL(16,2) [default: 0]
+  "BRANCO60M" VARCHAR(37)
+  Indexes {
+    RECNO() [name: "REGISTRO"]
+  }
+}
+
+// Origem: sint60r.dbf (DBF)
+Table "sint60r" {
+  Note: "Origem: sint60r.dbf"
+  "TIPO" VARCHAR(2)
+  "SUB60R" VARCHAR(1)
+  "MESANOEMR" VARCHAR(6)
+  "PROD60R" VARCHAR(14)
+  "QUANT60R" DECIMAL(13,3) [default: 0]
+  "VALUNI60R" DECIMAL(16,2) [default: 0]
+  "BASEIC60R" DECIMAL(16,2) [default: 0]
+  "SITTRI60R" VARCHAR(4)
+  "BRANCO60R" VARCHAR(54)
+  Indexes {
+    RECNO() [name: "REGISTRO"]
+  }
+}
+
+// Origem: sint61.dbf (DBF)
+Table "sint61" {
+  Note: "Origem: sint61.dbf"
+  "TIPO" VARCHAR(2)
+  "BRANCO611" VARCHAR(14)
+  "BRANCO612" VARCHAR(14)
+  "EMIS61" DATETIME
+  "MODEL61M" VARCHAR(2)
+  "SERIE61" VARCHAR(3)
+  "SUBSER61" VARCHAR(2)
+  "NUINI61M" VARCHAR(6)
+  "NUFIM61M" VARCHAR(6)
+  "VALTOT61" DECIMAL(13,2) [default: 0]
+  "BASEIC61" DECIMAL(13,2) [default: 0]
+  "VALICM61" DECIMAL(12,2) [default: 0]
+  "ISENTA61" DECIMAL(13,2) [default: 0]
+  "OUTRAS61" DECIMAL(13,2) [default: 0]
+  "ALIQIC61" DECIMAL(4,2) [default: 0]
+  "BRANCO61" VARCHAR(1)
+  Indexes {
+    RECNO() [name: "REGISTRO"]
+  }
+}
+
+// Origem: sint70.dbf (DBF)
+Table "sint70" {
+  Note: "Origem: sint70.dbf"
+  "TIPO" VARCHAR(2)
+  "CGC" VARCHAR(18)
+  "IE" VARCHAR(20)
+  "DATA" DATETIME
+  "UF" VARCHAR(2)
+  "MODELO" INTEGER [default: 0]
+  "SERIE" VARCHAR(3)
+  "SUB" VARCHAR(2)
+  "NUMERO" INTEGER [default: 0]
+  "CFOP" VARCHAR(4)
+  "VALORTOT" DECIMAL(10,2) [default: 0]
+  "BASE" DECIMAL(10,2) [default: 0]
+  "VALOR" DECIMAL(10,2) [default: 0]
+  "ISENTA" DECIMAL(10,2) [default: 0]
+  "OUTRAS" DECIMAL(10,2) [default: 0]
+  "ALIQUOTA" DECIMAL(5,2) [default: 0]
+  "SITUACAO" VARCHAR(1)
+  "TIPONF" VARCHAR(1)
+  "OBS" DECIMAL(10,2) [default: 0]
+  "EMITENTE" VARCHAR(1)
+  "FRETE" VARCHAR(1)
+  "FORNECEDO" INTEGER [default: 0]
+  "TIPOCLI" VARCHAR(1)
+  Indexes {
+    DTOS(DATA)+STR(NUMERO,8) [name: "SINT70-1"]
+    STR(NUMERO,8)+TIPONF [name: "SINT70-2"]
+  }
+}
+
+// Origem: sint71.dbf (DBF)
+Table "sint71" {
+  Note: "Origem: sint71.dbf"
+  "TIPO" VARCHAR(2)
+  "CGC" VARCHAR(14)
+  "IE" VARCHAR(14)
+  "EMIS71" DATETIME
+  "UF" VARCHAR(2)
+  "MODEL71" VARCHAR(2)
+  "SERIE71" VARCHAR(1)
+  "SUBSER71" VARCHAR(2)
+  "NFISC71" VARCHAR(6)
+  "UFREM" VARCHAR(2)
+  "CNPJREM" VARCHAR(14)
+  "INSCREM" VARCHAR(14)
+  "EMISREM71" DATETIME
+  "MODREM71" VARCHAR(2)
+  "SERIREM71" VARCHAR(3)
+  "NFISREM71" VARCHAR(6)
+  "VALTOT71" DECIMAL(14,2) [default: 0]
+  "BRANCO71" VARCHAR(12)
+  Indexes {
+    RECNO() [name: "REGISTRO"]
+  }
+}
+
+// Origem: sint74.dbf (DBF)
+Table "sint74" {
+  Note: "Origem: sint74.dbf"
+  "TIPO" VARCHAR(2)
+  "DATA_INVEN" VARCHAR(8)
+  "COD_MERCAD" VARCHAR(14)
+  "QUANTIDADE" INTEGER [default: 0]
+  "VALORTOTAL" INTEGER [default: 0]
+  "SITU_ESTOQ" VARCHAR(1)
+  "CGC" VARCHAR(14)
+  "IE" VARCHAR(14)
+  "UF" VARCHAR(2)
+  "BRANCO74" VARCHAR(45)
+  Indexes {
+    RECNO() [name: "REGISTRO"]
+  }
+}
+
+// Origem: sint75.dbf (DBF)
+Table "sint75" {
+  Note: "Origem: sint75.dbf"
+  "TIPO" VARCHAR(2)
+  "DATAINI" DATETIME
+  "DATAFIM" DATETIME
+  "CODIGORED" VARCHAR(14)
+  "CLASSIPI" VARCHAR(14)
+  "DESCRICAO" VARCHAR(53)
+  "UNID" VARCHAR(2)
+  "SITUACAO" INTEGER [default: 0]
+  "TIPOENT" VARCHAR(1)
+  "IPI" DECIMAL(5,2) [default: 0]
+  "ICM" DECIMAL(5,2) [default: 0]
+  "REDICM" DECIMAL(5,2) [default: 0]
+  "SUBICM" DECIMAL(5,2) [default: 0]
+  "GERADO" TINYINT(1)
+  "CODIGO" VARCHAR(24)
+  Indexes {
+    CODIGORED [name: "SINT75-1"]
+    CODIGO [name: "SINT75-2"]
+  }
+}
+
+// Origem: sint76.dbf (DBF)
+Table "sint76" {
+  Note: "Origem: sint76.dbf"
+  "TIPO" VARCHAR(2)
+  "CGC" VARCHAR(14)
+  "IE" VARCHAR(14)
+  "MODEL76" VARCHAR(2)
+  "SERIE76" VARCHAR(2)
+  "SUBSER76" VARCHAR(2)
+  "NFISC76" VARCHAR(10)
+  "CFOP76" VARCHAR(4)
+  "TIPREC76" VARCHAR(1)
+  "EMIS76" DATETIME
+  "UF" VARCHAR(2)
+  "VALTOT76" DECIMAL(13,2) [default: 0]
+  "BASEIC76" DECIMAL(13,2) [default: 0]
+  "VALICM76" DECIMAL(12,2) [default: 0]
+  "ISENTO76" DECIMAL(12,2) [default: 0]
+  "OUTRAS76" DECIMAL(12,2) [default: 0]
+  "ALIQICM76" INTEGER [default: 0]
+  "SITUAC76" VARCHAR(1)
+}
+
+// Origem: sint77.dbf (DBF)
+Table "sint77" {
+  Note: "Origem: sint77.dbf"
+  "TIPO" VARCHAR(2)
+  "CGC" VARCHAR(14)
+  "MODEL77" VARCHAR(2)
+  "SERIE77" VARCHAR(2)
+  "SUBSER77" VARCHAR(2)
+  "NFISC77" VARCHAR(10)
+  "CFOP77" VARCHAR(4)
+  "TIPREC77" VARCHAR(1)
+  "ITEM77" VARCHAR(3)
+  "PRODUT77" VARCHAR(11)
+  "QUANT77" DECIMAL(13,3) [default: 0]
+  "VALPRO77" DECIMAL(12,2) [default: 0]
+  "VALDES77" DECIMAL(12,2) [default: 0]
+  "BASEIC77" DECIMAL(12,2) [default: 0]
+  "ALIQIC77" INTEGER [default: 0]
+  "CNPJMF" VARCHAR(14)
+  "CODTERM" VARCHAR(10)
+  Indexes {
+    RECNO() [name: "REGISTRO"]
+  }
+}
+
+// Origem: sint85.dbf (DBF)
+Table "sint85" {
+  Note: "Origem: sint85.dbf"
+  "REG" VARCHAR(2)
+  "DECLARACAO" INTEGER [default: 0]
+  "DATADEC" DATETIME
+  "AVERBACAO" VARCHAR(1)
+  "REGEXP" INTEGER [default: 0]
+  "DTREGEXP" DATETIME
+  "CONHEC" VARCHAR(16)
+  "DTCONHEC" DATETIME
+  "TIPOCONHEC" INTEGER [default: 0]
+  "PAIS" INTEGER [default: 0]
+  "COMPROV" INTEGER [default: 0]
+  "DTCOMPROV" DATETIME
+  "NFEXPORT" VARCHAR(6)
+  "EMISSAO" DATETIME
+  "MODELO" INTEGER [default: 0]
+  "SERIE" VARCHAR(3)
+  "BRANCOS" VARCHAR(19)
+  Indexes {
+    RECNO() [name: "REGISTRO"]
+  }
+}
+
+// Origem: sint86.dbf (DBF)
+Table "sint86" {
+  Note: "Origem: sint86.dbf"
+  "REG" VARCHAR(2)
+  "REGEXP" INTEGER [default: 0]
+  "DTREGEXP" DATETIME
+  "CNPJREMET" INTEGER [default: 0]
+  "IEREMET" VARCHAR(14)
+  "UFREMET" VARCHAR(2)
+  "NF" VARCHAR(6)
+  "EMISSAO" DATETIME
+  "MODELO" INTEGER [default: 0]
+  "SERIE" VARCHAR(3)
+  "PRODUTO" VARCHAR(14)
+  "QUANT" DECIMAL(11,3) [default: 0]
+  "VALUNIT" DECIMAL(12,2) [default: 0]
+  "VALPROD" DECIMAL(12,2) [default: 0]
+  "RELAC" INTEGER [default: 0]
+  "BRANCOS" VARCHAR(5)
+  Indexes {
+    RECNO() [name: "REGISTRO"]
+  }
+}
+
+// Origem: sint88c.dbf (DBF)
+Table "sint88c" {
+  Note: "Origem: sint88c.dbf"
+  "REG" VARCHAR(2)
+  "SUB" VARCHAR(1)
+  "CNPJ" VARCHAR(14)
+  "MODELONF" VARCHAR(2)
+  "SERIENF" VARCHAR(3)
+  "NUMERONF" VARCHAR(6)
+  "CFOP" VARCHAR(4)
+  "NUMITEM" VARCHAR(3)
+  "CODPRODUTO" VARCHAR(14)
+  "QUANTIDADE" DECIMAL(11,3) [default: 0]
+  "BCST" DECIMAL(12,2) [default: 0]
+  "VLRST" DECIMAL(12,2) [default: 0]
+  "VLRSTCOMPL" DECIMAL(12,2) [default: 0]
+  "RETENCAO" DECIMAL(12,2) [default: 0]
+  "PARCIMPRET" DECIMAL(12,2) [default: 0]
+  "BRANCOS" VARCHAR(6)
+  Indexes {
+    RECNO() [name: "REGISTRO"]
+  }
+}
+
+// Origem: sint88d.dbf (DBF)
+Table "sint88d" {
+  Note: "Origem: sint88d.dbf"
+  "REG" VARCHAR(2)
+  "SUB" VARCHAR(1)
+  "CNPJ" VARCHAR(14)
+  "IE" VARCHAR(14)
+  "UF" VARCHAR(2)
+  "MODELONF" VARCHAR(2)
+  "SERIENF" VARCHAR(3)
+  "NUMERONF" VARCHAR(6)
+  "EMITENTE" VARCHAR(1)
+  "DTEMISSAO" VARCHAR(8)
+  "DTSAIDA" VARCHAR(8)
+  "CNPJSAIDA" VARCHAR(14)
+  "UFSAIDA" VARCHAR(2)
+  "IESAIDA" VARCHAR(14)
+  "CNPJENT" VARCHAR(14)
+  "UFENTREGA" VARCHAR(2)
+  "IEENTREGA" VARCHAR(14)
+  "BRANCOS" VARCHAR(5)
+  Indexes {
+    RECNO() [name: "REGISTRO"]
+  }
+}
+
+// Origem: sint88e.dbf (DBF)
+Table "sint88e" {
+  Note: "Origem: sint88e.dbf"
+  "REG" VARCHAR(2)
+  "SUB" VARCHAR(1)
+  "CNPJ" VARCHAR(14)
+  "IE" VARCHAR(14)
+  "CODPROINF" VARCHAR(14)
+  "CODPROSEF" VARCHAR(14)
+  "BRANCOS" VARCHAR(67)
+  Indexes {
+    RECNO() [name: "REGISTRO"]
+  }
+}
+
+// Origem: sint88m.dbf (DBF)
+Table "sint88m" {
+  Note: "Origem: sint88m.dbf"
+  "REG" VARCHAR(2)
+  "SUB" VARCHAR(1)
+  "CNPJ" VARCHAR(14)
+  "MENSAGEM" VARCHAR(34)
+  "BRANCOS" VARCHAR(75)
+  Indexes {
+    RECNO() [name: "REGISTRO"]
+  }
+}
+
+// Origem: sint88t.dbf (DBF)
+Table "sint88t" {
+  Note: "Origem: sint88t.dbf"
+  "REG" VARCHAR(2)
+  "SUB" VARCHAR(1)
+  "CNPJ" VARCHAR(14)
+  "DTEMISSAO" VARCHAR(8)
+  "UF" VARCHAR(2)
+  "MODELONF" VARCHAR(2)
+  "SERIENF" VARCHAR(3)
+  "NUMERONF" VARCHAR(6)
+  "EMITENTE" VARCHAR(1)
+  "CIFFOB" VARCHAR(1)
+  "CNPJFRETE" VARCHAR(14)
+  "UFFRETE" VARCHAR(2)
+  "IEFRETE" VARCHAR(14)
+  "MODAL" VARCHAR(1)
+  "PLACA1" VARCHAR(7)
+  "UF1" VARCHAR(2)
+  "PLACA2" VARCHAR(7)
+  "UF2" VARCHAR(2)
+  "PLACA3" VARCHAR(7)
+  "UF3" VARCHAR(2)
+  "BRANCOS" VARCHAR(28)
+  Indexes {
+    RECNO() [name: "REGISTRO"]
+  }
+}
+
+// Origem: sint90.dbf (DBF)
+Table "sint90" {
+  Note: "Origem: sint90.dbf"
+  "REG90" VARCHAR(126)
+  Indexes {
+    RECNO() [name: "REGISTRO"]
+  }
+}
+

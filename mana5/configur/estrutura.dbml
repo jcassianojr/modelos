@@ -1,0 +1,845 @@
+// Origem: agenda.dbf (DBF)
+Table "agenda" {
+  Note: "Origem: agenda.dbf"
+  "CDDATA" DATETIME
+  "OBS1" VARCHAR(60)
+  "OBS2" VARCHAR(60)
+  "OBS3" VARCHAR(60)
+  "OBS4" VARCHAR(60)
+  "OBS5" VARCHAR(60)
+  "OBS6" VARCHAR(60)
+  "OBS7" VARCHAR(60)
+  "OBS8" VARCHAR(60)
+  Indexes {
+    CDDATA [name: "AGENDA"]
+  }
+}
+
+// Origem: codimp.dbf (DBF)
+Table "codimp" {
+  Note: "Origem: codimp.dbf"
+  "CODIGO" VARCHAR(6)
+  "NOMEIMP" VARCHAR(12)
+  "DESCRICAO" VARCHAR(50)
+  "CONTEUDO" VARCHAR(70)
+  Indexes {
+    CODIGO [name: "CODIMP"]
+  }
+}
+
+// Origem: cores.dbf (DBF)
+Table "cores" {
+  Note: "Origem: cores.dbf"
+  "CODIGO" VARCHAR(7)
+  "DESCRICAO" VARCHAR(60)
+  "COR1" VARCHAR(6)
+  "COR2" VARCHAR(6)
+  "COR3" VARCHAR(6)
+  "COR4" VARCHAR(6)
+  "COR5" VARCHAR(6)
+  "COR6" VARCHAR(6)
+  Indexes {
+    CODIGO [name: "CORES"]
+  }
+}
+
+// Origem: macess.dbf (DBF)
+Table "macess" {
+  Note: "Origem: macess.dbf"
+  "CODIGO" VARCHAR(6)
+  "DESCRICAO" VARCHAR(60)
+  "SENHA" VARCHAR(5)
+  Indexes {
+    CODIGO [name: "MACESS"]
+  }
+}
+
+// Origem: manaman.dbf (DBF)
+Table "manaman" {
+  Note: "Origem: manaman.dbf"
+  "DESCRICAO" VARCHAR(76)
+  "ARQUIVO" VARCHAR(12)
+  Indexes {
+    ARQUIVO [name: "MANAMAN"]
+  }
+}
+
+// Origem: manarq.dbf (DBF)
+Table "manarq" {
+  Note: "Origem: manarq.dbf"
+  "ARQUIVO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(60)
+  "CAMINHO" VARCHAR(40)
+  "FIXAR" VARCHAR(1)
+  "LACHI" INTEGER [default: 0]
+  "PADRAO" VARCHAR(1)
+  "VIDEO" VARCHAR(1)
+  "PBUS" VARCHAR(1)
+  "PIND" VARCHAR(1)
+  "CBAR" VARCHAR(120)
+  "TIPG" VARCHAR(1)
+  "LAYGET" VARCHAR(6)
+  "CBAS" VARCHAR(78)
+  "IBUS" INTEGER [default: 0]
+  "IEXI" INTEGER [default: 0]
+  "ARQMES" INTEGER [default: 0]
+  "ARQANO" INTEGER [default: 0]
+  "PULAFIX" VARCHAR(1)
+  "DRIVER" VARCHAR(10)
+  Indexes {
+    ARQUIVO [name: "MANARQ"]
+  }
+}
+
+// Origem: manarq1.dbf (DBF)
+Table "manarq1" {
+  Note: "Origem: manarq1.dbf"
+  "ARQUIVO" VARCHAR(8)
+  "ITEM" INTEGER [default: 0]
+  "INDICE" VARCHAR(8)
+  "INDEXP" VARCHAR(60)
+  "DESC" VARCHAR(55)
+  "LIN1" INTEGER [default: 0]
+  "LIN2" INTEGER [default: 0]
+  "LIN3" INTEGER [default: 0]
+  "COL1" INTEGER [default: 0]
+  "COL2" INTEGER [default: 0]
+  "COL3" INTEGER [default: 0]
+  "VAR1" VARCHAR(10)
+  "VAR2" VARCHAR(10)
+  "VAR3" VARCHAR(10)
+  "DES1" VARCHAR(30)
+  "DES2" VARCHAR(30)
+  "DES3" VARCHAR(30)
+  "FORMULA" VARCHAR(60)
+  Indexes {
+    ARQUIVO+STR(ITEM,2) [name: "MANARQ1"]
+  }
+}
+
+// Origem: manatu.dbf (DBF)
+Table "manatu" {
+  Note: "Origem: manatu.dbf"
+  "ARQUIVO1" VARCHAR(8)
+  "ARQUIVO2" VARCHAR(8)
+  "INDICE" INTEGER [default: 0]
+  Indexes {
+    ARQUIVO1 [name: "MANATU"]
+  }
+}
+
+// Origem: manerr.dbf (DBF)
+Table "manerr" {
+  Note: "Origem: manerr.dbf"
+  "USUARIO" VARCHAR(10)
+  "DATA" DATETIME
+  "HORA" VARCHAR(8)
+  "ERRO" VARCHAR(20)
+  "OPR" VARCHAR(3)
+  "ARQUIVO" VARCHAR(8)
+  Indexes {
+    USUARIO+DTOS(DATA) [name: "MANERR"]
+  }
+}
+
+// Origem: manfec.dbf (DBF)
+Table "manfec" {
+  Note: "Origem: manfec.dbf"
+  "ARQORI" VARCHAR(8)
+  "STRANO" VARCHAR(8)
+  "STRDES" VARCHAR(2)
+  "STRATU" VARCHAR(8)
+  "STRBAI" VARCHAR(8)
+  "FECANU" VARCHAR(100)
+  "CAMDAT" VARCHAR(10)
+  "CAMDA2" VARCHAR(10)
+  "OPER01" VARCHAR(200)
+  "OPER02" VARCHAR(200)
+  "OPER03" VARCHAR(200)
+  "OPER04" VARCHAR(200)
+  "OPER05" VARCHAR(200)
+  "OPER06" VARCHAR(200)
+  "OPER07" VARCHAR(200)
+  "FECHAAUTO" VARCHAR(1)
+  Indexes {
+    ARQORI [name: "MANFEC"]
+    STRANO [name: "MANFEC-2"]
+    STRDES [name: "MANFEC-3"]
+  }
+}
+
+// Origem: manfer.dbf (DBF)
+Table "manfer" {
+  Note: "Origem: manfer.dbf"
+  "DIA" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "DESCRICAO" VARCHAR(40)
+  Indexes {
+    STR(DIA)+STR(MES) [name: "MANFER"]
+  }
+}
+
+// Origem: manget.dbf (DBF)
+Table "manget" {
+  Note: "Origem: manget.dbf"
+  "CODIGO" VARCHAR(6)
+  "SEQ" INTEGER [default: 0]
+  "TIP" VARCHAR(1)
+  "LININI" INTEGER [default: 0]
+  "COLINI" INTEGER [default: 0]
+  "LINFIM" INTEGER [default: 0]
+  "COLFIM" INTEGER [default: 0]
+  "CAMPO" VARCHAR(10)
+  "ESTILO" VARCHAR(25)
+  "MENSAGEM" VARCHAR(40)
+  "CONDICAO" VARCHAR(200)
+  "PRECOND" VARCHAR(200)
+  Indexes {
+    CODIGO+STR(SEQ,3) [name: "MANGET"]
+  }
+}
+
+// Origem: manopt.dbf (DBF)
+Table "manopt" {
+  Note: "Origem: manopt.dbf"
+  "ITEMENU" VARCHAR(1)
+  "POSICAO" INTEGER [default: 0]
+  "DESCP" VARCHAR(30)
+  "DESCM" VARCHAR(75)
+  "LINHA" INTEGER [default: 0]
+  "COLUNA" INTEGER [default: 0]
+  "TECLA" INTEGER [default: 0]
+  "EXECUTAR" VARCHAR(254)
+  Indexes {
+    ITEMENU+STR(POSICAO,2) [name: "MANOPT"]
+  }
+}
+
+// Origem: manre1.dbf (DBF)
+Table "manre1" {
+  Note: "Origem: manre1.dbf"
+  "ARQUIVO" INTEGER [default: 0]
+  "MENU" VARCHAR(2)
+  "CODIGO" VARCHAR(8)
+  "TIPO" VARCHAR(1)
+  "SEQUENCIA" INTEGER [default: 0]
+  "SEQ" INTEGER [default: 0]
+  "ESPACEJAR" INTEGER [default: 0]
+  "COLUNA" INTEGER [default: 0]
+  "CONTEUDO" VARCHAR(78)
+  "MASCARA" VARCHAR(25)
+  "TOTALIZA" TINYINT(1)
+  "FORMULA" VARCHAR(35)
+  "QUEBRAR" INTEGER [default: 0]
+  Indexes {
+    MENU+CODIGO+STR(ARQUIVO)+STR(SEQUENCIA)+STR(COLUNA) [name: "MANRE1-1"]
+  }
+}
+
+// Origem: manreg.dbf (DBF)
+Table "manreg" {
+  Note: "Origem: manreg.dbf"
+  "POSICAO" INTEGER [default: 0]
+  "GRUPO" VARCHAR(2)
+  "DESCRICAO" VARCHAR(70)
+  Indexes {
+    POSICAO [name: "MANREG-1"]
+    GRUPO [name: "MANREG-2"]
+  }
+}
+
+// Origem: manrel.dbf (DBF)
+Table "manrel" {
+  Note: "Origem: manrel.dbf"
+  "MENU" VARCHAR(2)
+  "MENU1" VARCHAR(2)
+  "CODIGO" VARCHAR(8)
+  "CODIGO1" VARCHAR(8)
+  "NOME" VARCHAR(60)
+  "FOLHA" INTEGER [default: 0]
+  "ETIQ" VARCHAR(1)
+  "ALTURA" INTEGER [default: 0]
+  "LARGURA" INTEGER [default: 0]
+  "COLUNAS" INTEGER [default: 0]
+  "ARQUIVO1" VARCHAR(8)
+  "PIND1" VARCHAR(1)
+  "INDICE1" INTEGER [default: 0]
+  "CAMPO1" VARCHAR(150)
+  "ARQUIVO2" VARCHAR(8)
+  "PIND2" VARCHAR(1)
+  "INDICE2" INTEGER [default: 0]
+  "CAMPO2" VARCHAR(150)
+  "ARQUIVO3" VARCHAR(8)
+  "PIND3" VARCHAR(1)
+  "INDICE3" INTEGER [default: 0]
+  "CAMPO3" VARCHAR(150)
+  "ARQUIVO4" VARCHAR(8)
+  "PIND4" VARCHAR(1)
+  "INDICE4" INTEGER [default: 0]
+  "CAMPO4" VARCHAR(150)
+  "ARQUIVO5" VARCHAR(8)
+  "PIND5" VARCHAR(1)
+  "INDICE5" INTEGER [default: 0]
+  "CAMPO5" VARCHAR(150)
+  "ARQUIVO6" VARCHAR(8)
+  "PIND6" VARCHAR(1)
+  "INDICE6" INTEGER [default: 0]
+  "CAMPO6" VARCHAR(150)
+  "INDEXACAO" VARCHAR(78)
+  "SETUP" VARCHAR(78)
+  "FILTRO" VARCHAR(78)
+  "REL1ARQ" INTEGER [default: 0]
+  "REL2ARQ" INTEGER [default: 0]
+  "REL3ARQ" INTEGER [default: 0]
+  "REL4ARQ" INTEGER [default: 0]
+  "RELACAO1" VARCHAR(71)
+  "RELACAO2" VARCHAR(71)
+  "RELACAO3" VARCHAR(71)
+  "RELACAO4" VARCHAR(71)
+  "DEFAULT" INTEGER [default: 0]
+  "QUEBRA1A" VARCHAR(53)
+  "QUEBRA1B" VARCHAR(53)
+  "QUEBRA1C" VARCHAR(53)
+  "QUEBRA1D" VARCHAR(53)
+  "QUEBRA1E" VARCHAR(53)
+  "QUEBRA2A" VARCHAR(53)
+  "QUEBRA2B" VARCHAR(53)
+  "QUEBRA2C" VARCHAR(53)
+  "QUEBRA2D" VARCHAR(53)
+  "QUEBRA2E" VARCHAR(53)
+  "QUEBRA3A" VARCHAR(53)
+  "QUEBRA3B" VARCHAR(53)
+  "QUEBRA3C" VARCHAR(53)
+  "QUEBRA3D" VARCHAR(53)
+  "QUEBRA3E" VARCHAR(53)
+  "QUEBRA4A" VARCHAR(53)
+  "QUEBRA4B" VARCHAR(53)
+  "QUEBRA4C" VARCHAR(53)
+  "QUEBRA4D" VARCHAR(53)
+  "QUEBRA4E" VARCHAR(53)
+  "QUEBRA5A" VARCHAR(53)
+  "QUEBRA5B" VARCHAR(53)
+  "QUEBRA5C" VARCHAR(53)
+  "QUEBRA5D" VARCHAR(53)
+  "QUEBRA5E" VARCHAR(53)
+  "SELECAO" INTEGER [default: 0]
+  "FATOR1" VARCHAR(1)
+  "FATOR2" VARCHAR(1)
+  "FATOR3" VARCHAR(1)
+  "FATOR4" VARCHAR(1)
+  "FATOR5" VARCHAR(1)
+  "DESCRICA1" VARCHAR(25)
+  "DESCRICA2" VARCHAR(25)
+  "DESCRICA3" VARCHAR(25)
+  "DESCRICA4" VARCHAR(25)
+  "DESCRICA5" VARCHAR(25)
+  "TAM1" INTEGER [default: 0]
+  "TAM2" INTEGER [default: 0]
+  "TAM3" INTEGER [default: 0]
+  "TAM4" INTEGER [default: 0]
+  "TAM5" INTEGER [default: 0]
+  "NOME_LISTA" VARCHAR(70)
+  "REL_NIV2" VARCHAR(1)
+  "REL_NIV3" VARCHAR(1)
+  "REL_NIV4" VARCHAR(1)
+  "REL_NIV5" VARCHAR(1)
+  "ACESSOS" INTEGER [default: 0]
+  "DATAULT" DATETIME
+  Indexes {
+    MENU+CODIGO [name: "MANREL"]
+  }
+}
+
+// Origem: mansub.dbf (DBF)
+Table "mansub" {
+  Note: "Origem: mansub.dbf"
+  "ITEMENU" VARCHAR(4)
+  "POSICAO" INTEGER [default: 0]
+  "DESCP" VARCHAR(30)
+  "DESCM" VARCHAR(75)
+  "LINHA" INTEGER [default: 0]
+  "COLUNA" INTEGER [default: 0]
+  "TECLA" INTEGER [default: 0]
+  "EXECUTAR" VARCHAR(200)
+  Indexes {
+    ITEMENU+STR(POSICAO,2) [name: "MANSUB"]
+  }
+}
+
+// Origem: mantel.dbf (DBF)
+Table "mantel" {
+  Note: "Origem: mantel.dbf"
+  "CODIGO" VARCHAR(6)
+  "SEQ" INTEGER [default: 0]
+  "TIP" VARCHAR(1)
+  "LININI" INTEGER [default: 0]
+  "COLINI" INTEGER [default: 0]
+  "LINFIM" INTEGER [default: 0]
+  "COLFIM" INTEGER [default: 0]
+  "DIZER" VARCHAR(80)
+  "ESTILO" VARCHAR(20)
+  Indexes {
+    CODIGO+STR(SEQ,3) [name: "MANTEL"]
+  }
+}
+
+// Origem: mcarta.dbf (DBF)
+Table "mcarta" {
+  Note: "Origem: mcarta.dbf"
+  "ARQUIVO" VARCHAR(8)
+  "NOME" VARCHAR(50)
+  "SETUP" VARCHAR(20)
+  "MARSUP" INTEGER [default: 0]
+  "MARINF" INTEGER [default: 0]
+  "MARDIR" INTEGER [default: 0]
+  "MARESQ" INTEGER [default: 0]
+  "MARCOL" INTEGER [default: 0]
+  "MARLIN" INTEGER [default: 0]
+  Indexes {
+    ARQUIVO [name: "MCARTA"]
+  }
+}
+
+// Origem: mcopia.dbf (DBF)
+Table "mcopia" {
+  Note: "Origem: mcopia.dbf"
+  "NOME" VARCHAR(6)
+  "DIRETORIO" VARCHAR(35)
+  "ARQ01" VARCHAR(12)
+  "ARQ02" VARCHAR(12)
+  "ARQ03" VARCHAR(12)
+  "ARQ04" VARCHAR(12)
+  "ARQ05" VARCHAR(12)
+  "ARQ06" VARCHAR(12)
+  "ARQO7" VARCHAR(12)
+  "ARQO8" VARCHAR(12)
+  "ARQ09" VARCHAR(12)
+  "ARQ10" VARCHAR(12)
+  "ARQ11" VARCHAR(12)
+  "ARQ12" VARCHAR(12)
+  "ARQ13" VARCHAR(12)
+  "ARQ14" VARCHAR(12)
+  "ARQ15" VARCHAR(12)
+  "ARQ16" VARCHAR(12)
+  "ARQ17" VARCHAR(12)
+  "ARQ18" VARCHAR(12)
+  "ARQ19" VARCHAR(12)
+  "ARQ20" VARCHAR(12)
+  "ARQ21" VARCHAR(12)
+  "ARQ22" VARCHAR(12)
+  "ARQ23" VARCHAR(12)
+  "ARQ24" VARCHAR(12)
+  "ARQ25" VARCHAR(12)
+  "ARQ26" VARCHAR(12)
+  "ARQ27" VARCHAR(12)
+  "ARQ28" VARCHAR(12)
+  "ARQ29" VARCHAR(12)
+  "ARQ30" VARCHAR(12)
+  "ARQ31" VARCHAR(12)
+  "ARQ32" VARCHAR(12)
+  "ARQ33" VARCHAR(12)
+  "ARQ34" VARCHAR(12)
+  "ARQ35" VARCHAR(12)
+  "ARQ36" VARCHAR(12)
+  "ARQ37" VARCHAR(12)
+  "ARQ38" VARCHAR(12)
+  "ARQ39" VARCHAR(12)
+  "ARQ40" VARCHAR(12)
+  Indexes {
+    NOME [name: "MCOPIA"]
+  }
+}
+
+// Origem: metiq.dbf (DBF)
+Table "metiq" {
+  Note: "Origem: metiq.dbf"
+  "CODIGO" VARCHAR(6)
+  "NOME" VARCHAR(50)
+  "LINHA1" VARCHAR(75)
+  "LINHA2" VARCHAR(75)
+  "LINHA3" VARCHAR(75)
+  "LINHA4" VARCHAR(75)
+  "LINHA5" VARCHAR(75)
+  "LINHA6" VARCHAR(75)
+  "LINHA7" VARCHAR(75)
+  "LINHA8" VARCHAR(75)
+  "NLIN" INTEGER [default: 0]
+  "NCOL" INTEGER [default: 0]
+  "NCAR" INTEGER [default: 0]
+  "SETUP" VARCHAR(20)
+  "ARQUIVO" VARCHAR(8)
+  "INDICE" INTEGER [default: 0]
+  "FILTRO" VARCHAR(50)
+  "ARQGRA" VARCHAR(8)
+  "PIND" VARCHAR(1)
+  "NIND" INTEGER [default: 0]
+  "TIPFIL" VARCHAR(1)
+  "CONFIL" VARCHAR(50)
+  "PFIL" VARCHAR(1)
+  "SETUPFIM" VARCHAR(20)
+  Indexes {
+    CODIGO [name: "METIQ"]
+  }
+}
+
+// Origem: mexpor.dbf (DBF)
+Table "mexpor" {
+  Note: "Origem: mexpor.dbf"
+  "ARQORI" VARCHAR(8)
+  "ARQDES" VARCHAR(8)
+  "CODIGO" VARCHAR(6)
+  "DESCRICAO" VARCHAR(50)
+  "CHAVEIND" VARCHAR(30)
+  "DESAPP" VARCHAR(10)
+  "ORIAPP" VARCHAR(40)
+  "REPENC" VARCHAR(1)
+  "APAGA" VARCHAR(1)
+  "TIPO" VARCHAR(1)
+  "ARQORIEXT" VARCHAR(3)
+  "ARQDESEXT" VARCHAR(3)
+  Indexes {
+    CODIGO [name: "MEXPOR"]
+  }
+}
+
+// Origem: mexpor1.dbf (DBF)
+Table "mexpor1" {
+  Note: "Origem: mexpor1.dbf"
+  "CODIGO" VARCHAR(6)
+  "VARDES" VARCHAR(20)
+  "VARDRI" VARCHAR(100)
+  Indexes {
+    CODIGO+VARDES [name: "MEXPOR1"]
+  }
+}
+
+// Origem: mf11.dbf (DBF)
+Table "mf11" {
+  Note: "Origem: mf11.dbf"
+  "VARIAVEL" VARCHAR(10)
+  "EXECUTE" VARCHAR(120)
+  "ARQUIVO" VARCHAR(8)
+  Indexes {
+    VARIAVEL+ARQUIVO [name: "MF11-1"]
+  }
+}
+
+// Origem: mmes.dbf (DBF)
+Table "mmes" {
+  Note: "Origem: mmes.dbf"
+  "CODIGO" VARCHAR(6)
+  "USO" VARCHAR(50)
+  "MENSAGEM" VARCHAR(50)
+  "DESCRICAO" LONGTEXT
+  Indexes {
+    CODIGO [name: "MMES"]
+  }
+}
+
+// Origem: muser.dbf (DBF)
+Table "muser" {
+  Note: "Origem: muser.dbf"
+  "USUARIO" VARCHAR(10)
+  "SENHA" VARCHAR(8)
+  "VALIDADE" VARCHAR(8)
+  "VALDATA" DATETIME
+  "EQUIVALE" VARCHAR(10)
+  "ESTADO" VARCHAR(1)
+  "ARQFON" VARCHAR(8)
+  "SETOR" VARCHAR(10)
+  "WRPTNO" INTEGER [default: 0]
+  "FOLHANO" INTEGER [default: 0]
+  "DATATRO" DATETIME
+  "USUARIOW" VARCHAR(20)
+  "SENHAW" VARCHAR(20)
+  "POSTEL01" INTEGER [default: 0]
+  "POSTEL02" INTEGER [default: 0]
+  "POSTEL03" INTEGER [default: 0]
+  "POSTEL04" INTEGER [default: 0]
+  "POSTEL05" INTEGER [default: 0]
+  "POSTEL06" INTEGER [default: 0]
+  "POSTEL07" INTEGER [default: 0]
+  "POSTEL08" INTEGER [default: 0]
+  "POSTEL09" INTEGER [default: 0]
+  "POSTEL10" INTEGER [default: 0]
+  "POSTEL11" INTEGER [default: 0]
+  "POSTEL12" INTEGER [default: 0]
+  "POSTEL13" INTEGER [default: 0]
+  "POSTEL14" INTEGER [default: 0]
+  "POSTEL15" INTEGER [default: 0]
+  "POSTEL16" INTEGER [default: 0]
+  "POSTEL17" INTEGER [default: 0]
+  "POSTEL18" INTEGER [default: 0]
+  "CHAVEH" VARCHAR(64)
+  "CHAVEWC" VARCHAR(64)
+  "CHAVEWW" VARCHAR(64)
+  "CHAVEWS" VARCHAR(64)
+  Indexes {
+    USUARIO [name: "MUSER"]
+  }
+}
+
+// Origem: musera.dbf (DBF)
+Table "musera" {
+  Note: "Origem: musera.dbf"
+  "CONTROLE" VARCHAR(20)
+  Indexes {
+    CONTROLE [name: "MUSERA"]
+  }
+}
+
+// Origem: muserb.dbf (DBF)
+Table "muserb" {
+  Note: "Origem: muserb.dbf"
+  "CONTROLE" VARCHAR(20)
+  "ITEMENU" VARCHAR(3)
+  "POSICAO" INTEGER [default: 0]
+  "POSTELA" VARCHAR(30)
+  Indexes {
+    CONTROLE [name: "MUSERB"]
+    ITEMENU+STRZERO(POSICAO,3)+POSTELA [name: "MUSERB-2"]
+  }
+}
+
+// Origem: muserf.dbf (DBF)
+Table "muserf" {
+  Note: "Origem: muserf.dbf"
+  "CONTROLE" VARCHAR(20)
+  Indexes {
+    CONTROLE [name: "MUSERF"]
+  }
+}
+
+// Origem: muserm.dbf (DBF)
+Table "muserm" {
+  Note: "Origem: muserm.dbf"
+  "CONTROLE" VARCHAR(13)
+  Indexes {
+    CONTROLE [name: "MUSERM"]
+  }
+}
+
+// Origem: musern.dbf (DBF)
+Table "musern" {
+  Note: "Origem: musern.dbf"
+  "USUARIO" VARCHAR(10)
+  "ID" VARCHAR(40)
+  Indexes {
+    USUARIO [name: "MUSERN"]
+  }
+}
+
+// Origem: musero.dbf (DBF)
+Table "musero" {
+  Note: "Origem: musero.dbf"
+  "CONTROLE" VARCHAR(20)
+  Indexes {
+    CONTROLE [name: "MUSERO"]
+  }
+}
+
+// Origem: muserr.dbf (DBF)
+Table "muserr" {
+  Note: "Origem: muserr.dbf"
+  "CONTROLE" VARCHAR(20)
+  Indexes {
+    CONTROLE [name: "MUSERR"]
+  }
+}
+
+// Origem: muserw.dbf (DBF)
+Table "muserw" {
+  Note: "Origem: muserw.dbf"
+  "CONTROLE" VARCHAR(20)
+  "ITEMENU" VARCHAR(3)
+  "POSICAO" INTEGER [default: 0]
+  "POSTELA" VARCHAR(30)
+  Indexes {
+    CONTROLE [name: "MUSERW"]
+    ITEMENU+STRZERO(POSICAO,3)+POSTELA [name: "MUSERW-2"]
+  }
+}
+
+// Origem: nota.dbf (DBF)
+Table "nota" {
+  Note: "Origem: nota.dbf"
+  "NOME" VARCHAR(10)
+  "OBS1" VARCHAR(60)
+  "OBS2" VARCHAR(60)
+  "OBS3" VARCHAR(60)
+  "OBS4" VARCHAR(60)
+  "OBS5" VARCHAR(60)
+  "OBS6" VARCHAR(60)
+  "OBS7" VARCHAR(60)
+  Indexes {
+    NOME [name: "NOTA"]
+  }
+}
+
+// Origem: padre1.dbf (DBF)
+Table "padre1" {
+  Note: "Origem: padre1.dbf"
+  "ARQUIVO" INTEGER [default: 0]
+  "MENU" VARCHAR(2)
+  "CODIGO" VARCHAR(8)
+  "TIPO" VARCHAR(1)
+  "SEQUENCIA" INTEGER [default: 0]
+  "SEQ" INTEGER [default: 0]
+  "ESPACEJAR" INTEGER [default: 0]
+  "COLUNA" INTEGER [default: 0]
+  "CONTEUDO" VARCHAR(78)
+  "MASCARA" VARCHAR(25)
+  "TOTALIZA" TINYINT(1)
+  "FORMULA" VARCHAR(35)
+  "QUEBRAR" INTEGER [default: 0]
+  Indexes {
+    MENU+CODIGO+STR(ARQUIVO)+STR(SEQUENCIA)+STR(COLUNA) [name: "PADRE1-1"]
+  }
+}
+
+// Origem: padrel.dbf (DBF)
+Table "padrel" {
+  Note: "Origem: padrel.dbf"
+  "MENU" VARCHAR(2)
+  "MENU1" VARCHAR(2)
+  "CODIGO" VARCHAR(8)
+  "CODIGO1" VARCHAR(8)
+  "NOME" VARCHAR(60)
+  "FOLHA" INTEGER [default: 0]
+  "ETIQ" VARCHAR(1)
+  "ALTURA" INTEGER [default: 0]
+  "LARGURA" INTEGER [default: 0]
+  "COLUNAS" INTEGER [default: 0]
+  "ARQUIVO1" VARCHAR(8)
+  "PIND1" VARCHAR(1)
+  "INDICE1" INTEGER [default: 0]
+  "CAMPO1" VARCHAR(150)
+  "ARQUIVO2" VARCHAR(8)
+  "PIND2" VARCHAR(1)
+  "INDICE2" INTEGER [default: 0]
+  "CAMPO2" VARCHAR(150)
+  "ARQUIVO3" VARCHAR(8)
+  "PIND3" VARCHAR(1)
+  "INDICE3" INTEGER [default: 0]
+  "CAMPO3" VARCHAR(150)
+  "ARQUIVO4" VARCHAR(8)
+  "PIND4" VARCHAR(1)
+  "INDICE4" INTEGER [default: 0]
+  "CAMPO4" VARCHAR(150)
+  "ARQUIVO5" VARCHAR(8)
+  "PIND5" VARCHAR(1)
+  "INDICE5" INTEGER [default: 0]
+  "CAMPO5" VARCHAR(150)
+  "ARQUIVO6" VARCHAR(8)
+  "PIND6" VARCHAR(1)
+  "INDICE6" INTEGER [default: 0]
+  "CAMPO6" VARCHAR(150)
+  "INDEXACAO" VARCHAR(78)
+  "SETUP" VARCHAR(78)
+  "FILTRO" VARCHAR(78)
+  "REL1ARQ" INTEGER [default: 0]
+  "REL2ARQ" INTEGER [default: 0]
+  "REL3ARQ" INTEGER [default: 0]
+  "REL4ARQ" INTEGER [default: 0]
+  "RELACAO1" VARCHAR(71)
+  "RELACAO2" VARCHAR(71)
+  "RELACAO3" VARCHAR(71)
+  "RELACAO4" VARCHAR(71)
+  "DEFAULT" INTEGER [default: 0]
+  "QUEBRA1A" VARCHAR(53)
+  "QUEBRA1B" VARCHAR(53)
+  "QUEBRA1C" VARCHAR(53)
+  "QUEBRA1D" VARCHAR(53)
+  "QUEBRA1E" VARCHAR(53)
+  "QUEBRA2A" VARCHAR(53)
+  "QUEBRA2B" VARCHAR(53)
+  "QUEBRA2C" VARCHAR(53)
+  "QUEBRA2D" VARCHAR(53)
+  "QUEBRA2E" VARCHAR(53)
+  "QUEBRA3A" VARCHAR(53)
+  "QUEBRA3B" VARCHAR(53)
+  "QUEBRA3C" VARCHAR(53)
+  "QUEBRA3D" VARCHAR(53)
+  "QUEBRA3E" VARCHAR(53)
+  "QUEBRA4A" VARCHAR(53)
+  "QUEBRA4B" VARCHAR(53)
+  "QUEBRA4C" VARCHAR(53)
+  "QUEBRA4D" VARCHAR(53)
+  "QUEBRA4E" VARCHAR(53)
+  "QUEBRA5A" VARCHAR(53)
+  "QUEBRA5B" VARCHAR(53)
+  "QUEBRA5C" VARCHAR(53)
+  "QUEBRA5D" VARCHAR(53)
+  "QUEBRA5E" VARCHAR(53)
+  "SELECAO" INTEGER [default: 0]
+  "FATOR1" VARCHAR(1)
+  "FATOR2" VARCHAR(1)
+  "FATOR3" VARCHAR(1)
+  "FATOR4" VARCHAR(1)
+  "FATOR5" VARCHAR(1)
+  "DESCRICA1" VARCHAR(25)
+  "DESCRICA2" VARCHAR(25)
+  "DESCRICA3" VARCHAR(25)
+  "DESCRICA4" VARCHAR(25)
+  "DESCRICA5" VARCHAR(25)
+  "TAM1" INTEGER [default: 0]
+  "TAM2" INTEGER [default: 0]
+  "TAM3" INTEGER [default: 0]
+  "TAM4" INTEGER [default: 0]
+  "TAM5" INTEGER [default: 0]
+  "NOME_LISTA" VARCHAR(70)
+  "REL_NIV2" VARCHAR(1)
+  "REL_NIV3" VARCHAR(1)
+  "REL_NIV4" VARCHAR(1)
+  "REL_NIV5" VARCHAR(1)
+  "ACESSOS" INTEGER [default: 0]
+  "DATAULT" DATETIME
+  Indexes {
+    MENU+CODIGO [name: "PADREL-1"]
+  }
+}
+
+// Origem: sysopt.dbf (DBF)
+Table "sysopt" {
+  Note: "Origem: sysopt.dbf"
+  "ITEMENU" VARCHAR(3)
+  "POSICAO" INTEGER [default: 0]
+  "DESCP" VARCHAR(30)
+  "DESCM" VARCHAR(75)
+  "LINHA" INTEGER [default: 0]
+  "COLUNA" INTEGER [default: 0]
+  "TECLA" INTEGER [default: 0]
+  "EXECUTAR" VARCHAR(200)
+  Indexes {
+    ITEMENU+STR(POSICAO,2) [name: "SYSOPT"]
+  }
+}
+
+// Origem: telememo.dbf (DBF)
+Table "telememo" {
+  Note: "Origem: telememo.dbf"
+  "NOME" VARCHAR(15)
+  "ESPECIF" VARCHAR(35)
+  "TELEF" VARCHAR(15)
+  "FAX" VARCHAR(15)
+  Indexes {
+    NOME [name: "TELEMEMO"]
+  }
+}
+
+// Origem: winopt.dbf (DBF)
+Table "winopt" {
+  Note: "Origem: winopt.dbf"
+  "ITEMENU" VARCHAR(3)
+  "POSICAO" INTEGER [default: 0]
+  "DESCP" VARCHAR(30)
+  "DESCM" VARCHAR(75)
+  "LINHA" INTEGER [default: 0]
+  "COLUNA" INTEGER [default: 0]
+  "TECLA" INTEGER [default: 0]
+  "EXECUTAR" VARCHAR(200)
+  Indexes {
+    ITEMENU+STR(POSICAO,3) [name: "WINOPT"]
+  }
+}
+

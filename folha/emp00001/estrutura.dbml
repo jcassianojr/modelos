@@ -1,0 +1,1929 @@
+// Origem: afdterr.dbf (DBF)
+Table "afdterr" {
+  Note: "Origem: afdterr.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "DATA" DATETIME
+  "HORA" DECIMAL(5,2) [default: 0]
+  "MOTIVO" INTEGER [default: 0]
+  "MOTOCO" VARCHAR(70)
+  Indexes {
+    STR(NUMERO,8)+DTOS(DATA)+STR(HORA,5,2) [name: "AFDTERR"]
+  }
+}
+
+// Origem: ajudira.dbf (DBF)
+Table "ajudira" {
+  Note: "Origem: ajudira.dbf"
+  "CPF" VARCHAR(14)
+  "MES" INTEGER [default: 0]
+  "NUMERO" INTEGER [default: 0]
+  "VALOR1" DECIMAL(12,2) [default: 0]
+  "VALOR2" DECIMAL(12,2) [default: 0]
+  "VALOR3" DECIMAL(12,2) [default: 0]
+  "VALOR5" DECIMAL(12,2) [default: 0]
+  "VALOR4" DECIMAL(12,2) [default: 0]
+  "VALOR6" DECIMAL(12,2) [default: 0]
+  "VALOR7" DECIMAL(12,2) [default: 0]
+  "VALUF1" DECIMAL(12,2) [default: 0]
+  "VALUF2" DECIMAL(12,2) [default: 0]
+  "VALUF3" DECIMAL(12,2) [default: 0]
+  "VALUF4" DECIMAL(12,2) [default: 0]
+  "VALUF5" DECIMAL(12,2) [default: 0]
+  "VALUF6" DECIMAL(12,2) [default: 0]
+  "VALUF7" DECIMAL(12,2) [default: 0]
+  Indexes {
+    CPF+STR(MES,2) [name: "AJUDIRA"]
+  }
+}
+
+// Origem: ajudird.dbf (DBF)
+Table "ajudird" {
+  Note: "Origem: ajudird.dbf"
+  "CPF" VARCHAR(14)
+  "MES" INTEGER [default: 0]
+  "NUMERO" INTEGER [default: 0]
+  "VALOR1" DECIMAL(12,2) [default: 0]
+  "VALOR2" DECIMAL(12,2) [default: 0]
+  "VALOR3" DECIMAL(12,2) [default: 0]
+  "VALOR5" DECIMAL(12,2) [default: 0]
+  "VALOR4" DECIMAL(12,2) [default: 0]
+  "VALOR6" DECIMAL(12,2) [default: 0]
+  "VALOR7" DECIMAL(12,2) [default: 0]
+  "VALUF1" DECIMAL(12,2) [default: 0]
+  "VALUF2" DECIMAL(12,2) [default: 0]
+  "VALUF3" DECIMAL(12,2) [default: 0]
+  "VALUF4" DECIMAL(12,2) [default: 0]
+  "VALUF5" DECIMAL(12,2) [default: 0]
+  "VALUF6" DECIMAL(12,2) [default: 0]
+  "VALUF7" DECIMAL(12,2) [default: 0]
+  Indexes {
+    CPF+STR(MES,2) [name: "AJUDIRD"]
+  }
+}
+
+// Origem: ajudirf.dbf (DBF)
+Table "ajudirf" {
+  Note: "Origem: ajudirf.dbf"
+  "CPF" VARCHAR(14)
+  "MES" INTEGER [default: 0]
+  "NUMERO" INTEGER [default: 0]
+  "VALOR1" DECIMAL(12,2) [default: 0]
+  "VALOR2" DECIMAL(12,2) [default: 0]
+  "VALOR3" DECIMAL(12,2) [default: 0]
+  "VALOR5" DECIMAL(12,2) [default: 0]
+  "VALOR4" DECIMAL(12,2) [default: 0]
+  "VALOR6" DECIMAL(12,2) [default: 0]
+  "VALOR7" DECIMAL(12,2) [default: 0]
+  "VALUF1" DECIMAL(12,2) [default: 0]
+  "VALUF2" DECIMAL(12,2) [default: 0]
+  "VALUF3" DECIMAL(12,2) [default: 0]
+  "VALUF4" DECIMAL(12,2) [default: 0]
+  "VALUF5" DECIMAL(12,2) [default: 0]
+  "VALUF6" DECIMAL(12,2) [default: 0]
+  "VALUF7" DECIMAL(12,2) [default: 0]
+  Indexes {
+    CPF+STR(MES,2) [name: "AJUDIRF"]
+  }
+}
+
+// Origem: bcobak.dbf (DBF)
+Table "bcobak" {
+  Note: "Origem: bcobak.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "SALDO" DECIMAL(8,2) [default: 0]
+  "SALANT" DECIMAL(8,2) [default: 0]
+  "CREDITO" DECIMAL(8,2) [default: 0]
+  "DEBITO" DECIMAL(8,2) [default: 0]
+  "DIAANT" DECIMAL(8,2) [default: 0]
+  "DIACRE" DECIMAL(8,2) [default: 0]
+  "DIADEB" DECIMAL(8,2) [default: 0]
+  "DIASAL" DECIMAL(8,2) [default: 0]
+  Indexes {
+    STR(NUMERO,8)+STR(ANO,4)+STR(MES,2) [name: "BCOBAK"]
+  }
+}
+
+// Origem: bcodek.dbf (DBF)
+Table "bcodek" {
+  Note: "Origem: bcodek.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "SALDO" DECIMAL(8,2) [default: 0]
+  "SALANT" DECIMAL(8,2) [default: 0]
+  "CREDITO" DECIMAL(8,2) [default: 0]
+  "DEBITO" DECIMAL(8,2) [default: 0]
+  "DIAANT" DECIMAL(8,2) [default: 0]
+  "DIACRE" DECIMAL(8,2) [default: 0]
+  "DIADEB" DECIMAL(8,2) [default: 0]
+  "DIASAL" DECIMAL(8,2) [default: 0]
+  Indexes {
+    STR(NUMERO,8)+STR(ANO,4)+STR(MES,2) [name: "BCODEK"]
+  }
+}
+
+// Origem: bcodem.dbf (DBF)
+Table "bcodem" {
+  Note: "Origem: bcodem.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "SALDO" DECIMAL(8,2) [default: 0]
+  "SALANT" DECIMAL(8,2) [default: 0]
+  "CREDITO" DECIMAL(8,2) [default: 0]
+  "DEBITO" DECIMAL(8,2) [default: 0]
+  "DIAANT" DECIMAL(8,2) [default: 0]
+  "DIACRE" DECIMAL(8,2) [default: 0]
+  "DIADEB" DECIMAL(8,2) [default: 0]
+  "DIASAL" DECIMAL(8,2) [default: 0]
+  Indexes {
+    STR(NUMERO,8)+STR(ANO,4)+STR(MES,2) [name: "BCODEM"]
+  }
+}
+
+// Origem: bcohrs.dbf (DBF)
+Table "bcohrs" {
+  Note: "Origem: bcohrs.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "SALDO" DECIMAL(8,2) [default: 0]
+  "SALANT" DECIMAL(8,2) [default: 0]
+  "CREDITO" DECIMAL(8,2) [default: 0]
+  "DEBITO" DECIMAL(8,2) [default: 0]
+  "DIAANT" DECIMAL(8,2) [default: 0]
+  "DIACRE" DECIMAL(8,2) [default: 0]
+  "DIADEB" DECIMAL(8,2) [default: 0]
+  "DIASAL" DECIMAL(8,2) [default: 0]
+  Indexes {
+    STR(NUMERO,8)+STR(ANO,4)+STR(MES,2) [name: "BCOHRS"]
+  }
+}
+
+// Origem: bcoreq.dbf (DBF)
+Table "bcoreq" {
+  Note: "Origem: bcoreq.dbf"
+  "REQUISI" INTEGER [default: 0]
+  "NUMERO" INTEGER [default: 0]
+  "DATA" DATETIME
+  "TIPO" VARCHAR(1)
+  "HORAS" DECIMAL(6,2) [default: 0]
+  "DIAS" DECIMAL(6,2) [default: 0]
+  "OBS" VARCHAR(60)
+  "IMP" VARCHAR(6)
+}
+
+// Origem: bcrbak.dbf (DBF)
+Table "bcrbak" {
+  Note: "Origem: bcrbak.dbf"
+  "REQUISI" INTEGER [default: 0]
+  "NUMERO" INTEGER [default: 0]
+  "DATA" DATETIME
+  "TIPO" VARCHAR(1)
+  "HORAS" DECIMAL(6,2) [default: 0]
+  "DIAS" DECIMAL(6,2) [default: 0]
+  "OBS" VARCHAR(60)
+  "IMP" VARCHAR(6)
+  Indexes {
+    REQUISI [name: "BCRBAK"]
+  }
+}
+
+// Origem: cesta.dbf (DBF)
+Table "cesta" {
+  Note: "Origem: cesta.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "NOME" VARCHAR(40)
+  "CESTA" VARCHAR(1)
+  "ADMITIDO" DATETIME
+  "OBS" VARCHAR(40)
+  Indexes {
+    NUMERO [name: "CESTA"]
+  }
+}
+
+// Origem: ctrhor.dbf (DBF)
+Table "ctrhor" {
+  Note: "Origem: ctrhor.dbf"
+  "DEPTO" INTEGER [default: 0]
+  "SETOR" INTEGER [default: 0]
+  "SECAO" INTEGER [default: 0]
+  "NOMEC" VARCHAR(15)
+  "ANO" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "QTFUN" INTEGER [default: 0]
+  "HRTRA" DECIMAL(7,2) [default: 0]
+  "HRDSR" DECIMAL(7,2) [default: 0]
+  "HRNJU" DECIMAL(7,2) [default: 0]
+  "HRJUS" DECIMAL(7,2) [default: 0]
+  "CCUSTO" INTEGER [default: 0]
+  "UNIFUN" VARCHAR(10)
+  "MODIRETO" VARCHAR(1)
+  Indexes {
+    STR(ANO,4)+STR(MES,2)+STR(DEPTO,4) [name: "CTRHOR"]
+  }
+}
+
+// Origem: ferias.dbf (DBF)
+Table "ferias" {
+  Note: "Origem: ferias.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "DEPTO" INTEGER [default: 0]
+  "SECAO" INTEGER [default: 0]
+  "SETOR" INTEGER [default: 0]
+  "NOME" VARCHAR(30)
+  "ADMITIDO" DATETIME
+  "CCUSTO" INTEGER [default: 0]
+  "UNIFUN" VARCHAR(10)
+  "MODIRETA" VARCHAR(1)
+  "QTVEN" INTEGER [default: 0]
+  "INIPER" DATETIME
+  "FIMPER" DATETIME
+  "INIGOZ" DATETIME
+  "FIMGOZ" DATETIME
+  "INIPRG" DATETIME
+  "FIMPRG" DATETIME
+  "DEPSETSEC" INTEGER [default: 0]
+  "DENUNIFUN" VARCHAR(30)
+  "CNUMERO" VARCHAR(8)
+  "FUNCAO" INTEGER [default: 0]
+  "FUNNOME" VARCHAR(30)
+  "HTT" VARCHAR(2)
+  "SITUACAO" VARCHAR(2)
+  "SALADM" DECIMAL(12,2) [default: 0]
+  Indexes {
+    NUMERO [name: "FERIAS01"]
+    INIPER [name: "FERIAS02"]
+    STR(NUMERO,8)+DTOS(INIPER) [name: "FERIAS03"]
+  }
+}
+
+// Origem: foopes.dbf (DBF)
+Table "foopes" {
+  Note: "Origem: foopes.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CNUMERO" VARCHAR(8)
+  "DEPTO" INTEGER [default: 0]
+  "SECAO" INTEGER [default: 0]
+  "SETOR" INTEGER [default: 0]
+  "DEPSETSEC" INTEGER [default: 0]
+  "CHAPA" INTEGER [default: 0]
+  "ORDEM" INTEGER [default: 0]
+  "NOME" VARCHAR(60)
+  "ENDTIP" VARCHAR(3)
+  "ENDER" VARCHAR(40)
+  "ENDNUM" VARCHAR(10)
+  "ENDCOMPL" VARCHAR(30)
+  "BAIRRO" VARCHAR(30)
+  "IBGE" VARCHAR(7)
+  "CIDADE" VARCHAR(35)
+  "ESTADO" VARCHAR(2)
+  "CEP" VARCHAR(9)
+  "FONE" VARCHAR(14)
+  "NASC" DATETIME
+  "NASCIBGE" VARCHAR(7)
+  "ANONASCI" INTEGER [default: 0]
+  "NASCPAIS" VARCHAR(4)
+  "CIVIL" INTEGER [default: 0]
+  "ESTCIVIL" VARCHAR(1)
+  "ESCRAIS" VARCHAR(2)
+  "PAI" VARCHAR(40)
+  "MAE" VARCHAR(40)
+  "CPF" VARCHAR(14)
+  "PROFIS" VARCHAR(7)
+  "CTPSDATA" DATETIME
+  "CTPSUF" VARCHAR(2)
+  "SERIE" VARCHAR(5)
+  "PIS" VARCHAR(11)
+  "RGTIP" VARCHAR(3)
+  "RG" VARCHAR(14)
+  "RGUF" VARCHAR(2)
+  "RGEMIS" VARCHAR(6)
+  "RGDATA" DATETIME
+  "FGTS" DATETIME
+  "ADMITIDO" DATETIME
+  "TIPFGTS" VARCHAR(2)
+  "TIPO" VARCHAR(1)
+  "HRSEM" DECIMAL(5,2) [default: 0]
+  "FUNCAO" INTEGER [default: 0]
+  "DEMITIDO" DATETIME
+  "MOTIVO" VARCHAR(2)
+  "DATCONTSIN" DATETIME
+  "SINDICATO" INTEGER [default: 0]
+  "BANCO" VARCHAR(3)
+  "AGENCIA" VARCHAR(7)
+  "CONTA" VARCHAR(12)
+  "SOCIOSIND" VARCHAR(1)
+  "SITUACAO" VARCHAR(2)
+  "INSALUBRI" VARCHAR(1)
+  "PERICULO" VARCHAR(1)
+  "AVISOPREV" DATETIME
+  "ALTFGTS" VARCHAR(3)
+  "CONTAFGTS" VARCHAR(11)
+  "AVOSM" INTEGER [default: 0]
+  "SEXO" VARCHAR(1)
+  "ASSM" VARCHAR(1)
+  "ASSO" VARCHAR(1)
+  "HT" VARCHAR(40)
+  "FGTSMOT" VARCHAR(2)
+  "MOTIVODEM" INTEGER [default: 0]
+  "HTT" VARCHAR(2)
+  "EXCVALE" VARCHAR(1)
+  "VALEHORA" DECIMAL(6,2) [default: 0]
+  "SALVAR13S" DECIMAL(12,2) [default: 0]
+  "CNH" VARCHAR(11)
+  "CATCNH" VARCHAR(2)
+  "VALCNH" DATETIME
+  "EXPCNH" DATETIME
+  "OC" VARCHAR(10)
+  "OCVAL" DATETIME
+  "OCEXP" DATETIME
+  "OCEMI" VARCHAR(10)
+  "EXADAT" DATETIME
+  "EXAPRO" DATETIME
+  "CATEGORIA" VARCHAR(2)
+  "PGFGTS" VARCHAR(1)
+  "OCOFGTS" VARCHAR(1)
+  "EOCO" VARCHAR(1)
+  "VTDIAS" INTEGER [default: 0]
+  "CI" INTEGER [default: 0]
+  "CLASSE" INTEGER [default: 0]
+  "TOMADOR" INTEGER [default: 0]
+  "PGASSI" VARCHAR(1)
+  "RACS" VARCHAR(1)
+  "DEFICI" VARCHAR(1)
+  "CCUSTO" INTEGER [default: 0]
+  "UNIFUN" VARCHAR(10)
+  "MODIRETA" VARCHAR(1)
+  "CESTA" VARCHAR(1)
+  "VT" VARCHAR(1)
+  "EMAIL" VARCHAR(50)
+  "TITULO" VARCHAR(14)
+  "TITUZONA" VARCHAR(3)
+  "TITUSECA" VARCHAR(3)
+  "CNS" VARCHAR(15)
+  "NUMREGANT" INTEGER [default: 0]
+  "NUMEMPANT" INTEGER [default: 0]
+  "DATTRANSF" DATETIME
+  "ETADM" VARCHAR(1)
+  "EIADM" VARCHAR(1)
+  "E1ADM" VARCHAR(1)
+  "EREGI" VARCHAR(3)
+  "EPREV" VARCHAR(4)
+  "EVINC" VARCHAR(3)
+  "ELTRA" VARCHAR(1)
+  "ETJOR" VARCHAR(1)
+  "ETCOR" VARCHAR(1)
+  "SALADM" DECIMAL(12,2) [default: 0]
+  "APOSENT" VARCHAR(1)
+  "APOSEND" DATETIME
+  "RESERV" VARCHAR(12)
+  "RESECAT" VARCHAR(1)
+  "OCUF" VARCHAR(2)
+  "CELULAR" VARCHAR(14)
+  "RICUF" VARCHAR(2)
+  "RICEXP" DATETIME
+  "RIC" VARCHAR(32)
+  "RICEMI" VARCHAR(3)
+  Indexes {
+    NUMERO [name: "FO_PES"]
+    NOME [name: "FO_PES2"]
+    CPF [name: "FO_PES3"]
+    PIS [name: "FO_PES4"]
+    ordem [name: "FO_PES5"]
+    PIS+DTOS(ADMITIDO) [name: "TEMP"]
+  }
+}
+
+// Origem: foptoatr.dbf (DBF)
+Table "foptoatr" {
+  Note: "Origem: foptoatr.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "NOME" VARCHAR(40)
+  "DATA" DATETIME
+  "ENT" DECIMAL(5,2) [default: 0]
+  "RENT" DECIMAL(5,2) [default: 0]
+  "SAI" DECIMAL(5,2) [default: 0]
+  "RSAI" DECIMAL(5,2) [default: 0]
+  "CODANL" VARCHAR(2)
+  "COD" VARCHAR(2)
+  "SOD" VARCHAR(2)
+  "BCOSN" VARCHAR(1)
+  "OBSATR" VARCHAR(78)
+  "HORXXX" DECIMAL(5,2) [default: 0]
+  Indexes {
+    STR(NUMERO,8)+DTOS(DATA)+CODANL [name: "FOPTOATR"]
+  }
+}
+
+// Origem: foptoeve.dbf (DBF)
+Table "foptoeve" {
+  Note: "Origem: foptoeve.dbf"
+  "DIA" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "CODIGO" VARCHAR(2)
+  "DESCRICAO" VARCHAR(40)
+  "BCOSN" VARCHAR(1)
+  "REDSN" VARCHAR(1)
+  "FOLSN" VARCHAR(1)
+  Indexes {
+    STR(DIA,2)+STR(MES,2) [name: "FOPTOEVE"]
+  }
+}
+
+// Origem: foptoprd.dbf (DBF)
+Table "foptoprd" {
+  Note: "Origem: foptoprd.dbf"
+  "ORIGEM" INTEGER [default: 0]
+  "DESTINO" INTEGER [default: 0]
+  "DATA" DATETIME
+  "NOME" VARCHAR(30)
+  Indexes {
+    STR(ORIGEM,8)+DTOS(DATA) [name: "FOPTOPRD"]
+  }
+}
+
+// Origem: foptorev.dbf (DBF)
+Table "foptorev" {
+  Note: "Origem: foptorev.dbf"
+  "GRUPO" VARCHAR(2)
+  "DATA" DATETIME
+  "CODREV" VARCHAR(2)
+  "ENTREV" DECIMAL(6,2) [default: 0]
+  "ALIREV" DECIMAL(6,2) [default: 0]
+  "ALSREV" DECIMAL(6,2) [default: 0]
+  "SAIREV" DECIMAL(6,2) [default: 0]
+  "VIRADA" VARCHAR(1)
+  "SEQ" INTEGER [default: 0]
+  "FOLGASN" VARCHAR(1)
+  "CODADC" VARCHAR(2)
+  "BCOSN" VARCHAR(1)
+  "HORARIO" INTEGER [default: 0]
+}
+
+// Origem: forais.dbf (DBF)
+Table "forais" {
+  Note: "Origem: forais.dbf"
+  "ANO" INTEGER [default: 0]
+  "NUMERO" INTEGER [default: 0]
+  "NOME" VARCHAR(30)
+  "RAIZJAN" DECIMAL(10,2) [default: 0]
+  "RAIZFEV" DECIMAL(10,2) [default: 0]
+  "RAIZMAR" DECIMAL(10,2) [default: 0]
+  "RAIZABR" DECIMAL(10,2) [default: 0]
+  "RAIZMAI" DECIMAL(10,2) [default: 0]
+  "RAIZJUN" DECIMAL(10,2) [default: 0]
+  "RAIZJUL" DECIMAL(10,2) [default: 0]
+  "RAIZAGO" DECIMAL(10,2) [default: 0]
+  "RAIZSET" DECIMAL(10,2) [default: 0]
+  "RAIZOUT" DECIMAL(10,2) [default: 0]
+  "RAIZNOV" DECIMAL(10,2) [default: 0]
+  "RAIZDEZ" DECIMAL(10,2) [default: 0]
+  "RAIZAVI" DECIMAL(10,2) [default: 0]
+  "SAL13_1" DECIMAL(10,2) [default: 0]
+  "MES_1" INTEGER [default: 0]
+  "SAL13_2" DECIMAL(10,2) [default: 0]
+  "MES_2" INTEGER [default: 0]
+  "RAIZFER" DECIMAL(9,2) [default: 0]
+  "RAIZACR" DECIMAL(9,2) [default: 0]
+  "RAIZGRA" DECIMAL(9,2) [default: 0]
+  "RAIZMUL" DECIMAL(9,2) [default: 0]
+  "RAIZBCH" DECIMAL(9,2) [default: 0]
+  "MESBCH" INTEGER [default: 0]
+  "MESACR" INTEGER [default: 0]
+  "MESGRA" INTEGER [default: 0]
+  "IBGECOD" VARCHAR(7)
+  "HORJAN" INTEGER [default: 0]
+  "HORFEV" INTEGER [default: 0]
+  "HORMAR" INTEGER [default: 0]
+  "HORABR" INTEGER [default: 0]
+  "HORMAI" INTEGER [default: 0]
+  "HORJUN" INTEGER [default: 0]
+  "HORJUL" INTEGER [default: 0]
+  "HORAGO" INTEGER [default: 0]
+  "HORSET" INTEGER [default: 0]
+  "HOROUT" INTEGER [default: 0]
+  "HORNOV" INTEGER [default: 0]
+  "HORDEZ" INTEGER [default: 0]
+  "CODAFA01" VARCHAR(2)
+  "INIAFA01" VARCHAR(4)
+  "FIMAFA01" VARCHAR(4)
+  "CODAFA02" VARCHAR(2)
+  "INIAFA02" VARCHAR(4)
+  "FIMAFA02" VARCHAR(4)
+  "CODAFA03" VARCHAR(2)
+  "INIAFA03" VARCHAR(4)
+  "FIMAFA03" VARCHAR(4)
+  "DIASAFA" INTEGER [default: 0]
+  "CGCSOC1" VARCHAR(14)
+  "VALSOC1" DECIMAL(9,2) [default: 0]
+  "CGCSOC2" VARCHAR(14)
+  "VALSOC2" DECIMAL(9,2) [default: 0]
+  "CGCSIN" VARCHAR(14)
+  "VALSIN" DECIMAL(9,2) [default: 0]
+  "CGCASS" VARCHAR(14)
+  "VALASS" DECIMAL(9,2) [default: 0]
+  "CGCCON" VARCHAR(14)
+  "VALCON" DECIMAL(9,2) [default: 0]
+  "RAISVINC" VARCHAR(2)
+  "RAISSITU" VARCHAR(1)
+  "RAISDEM" VARCHAR(2)
+  "ALVARA" VARCHAR(1)
+  "TIPOADM" VARCHAR(2)
+  Indexes {
+    STR(ANO,4)+STR(NUMERO,8) [name: "FORAIS"]
+    STR(ANO,4)+NOME [name: "FORAIS-2"]
+  }
+}
+
+// Origem: fosfam.dbf (DBF)
+Table "fosfam" {
+  Note: "Origem: fosfam.dbf"
+  "REQUISI" INTEGER [default: 0]
+  "NUMERO" INTEGER [default: 0]
+  "NOME" VARCHAR(40)
+  "NASCTO" DATETIME
+  "LOCAL" VARCHAR(35)
+  "CARTORIO" VARCHAR(15)
+  "NREGIS" VARCHAR(32)
+  "LIVRO" VARCHAR(5)
+  "FOLHA" VARCHAR(5)
+  "ENTREGA" DATETIME
+  "BAIXA" DATETIME
+  "CNS" VARCHAR(15)
+  "IRRF" VARCHAR(1)
+  "SALFAM" VARCHAR(1)
+  "GRPA" VARCHAR(2)
+  "ESOCIAL" VARCHAR(2)
+  "NCARTORIO" VARCHAR(6)
+  "TERMO" VARCHAR(7)
+  "LOCALIBGE" VARCHAR(7)
+  "SEXO" VARCHAR(1)
+  "LOCALUF" VARCHAR(2)
+  "CPF" VARCHAR(14)
+  "CPFTIT" VARCHAR(14)
+  "VIVO" VARCHAR(1)
+  "CASAMENTO" DATETIME
+  "ESTCIVIL" VARCHAR(1)
+  "ESTUDO" VARCHAR(1)
+  "INVALIDEZ" VARCHAR(1)
+  "RG" VARCHAR(14)
+  "RGUF" VARCHAR(2)
+  "RGEMIS" VARCHAR(6)
+  "RGDATA" DATETIME
+  Indexes {
+    STR(NUMERO,8)+STR(REQUISI,8) [name: "FOSFAM"]
+    CPFTIT+CPF [name: "FOSFAM-2"]
+    CPFTIT+NOME [name: "FOSFAM-3"]
+  }
+}
+
+// Origem: fo_comp.dbf (DBF)
+Table "fo_comp" {
+  Note: "Origem: fo_comp.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(6,2) [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "FATOR" DECIMAL(8,5) [default: 0]
+  "TRIBUTIRR" INTEGER [default: 0]
+  "TRIBUTINPS" INTEGER [default: 0]
+  "TRIB_FGTS" INTEGER [default: 0]
+  "TIPO" INTEGER [default: 0]
+  "VALORBASE" DECIMAL(10,2) [default: 0]
+  "VALORMES1" DECIMAL(12,2) [default: 0]
+  "VALORMES3" DECIMAL(12,2) [default: 0]
+  "MES1" INTEGER [default: 0]
+  "MES2" INTEGER [default: 0]
+  Indexes {
+    CONTROLE [name: "FO_COMP"]
+  }
+}
+
+// Origem: fo_dio.dbf (DBF)
+Table "fo_dio" {
+  Note: "Origem: fo_dio.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "DATA" DATETIME
+  "HORA" DECIMAL(5,2) [default: 0]
+  "RELOGIO" VARCHAR(5)
+  "TIPOM" VARCHAR(1)
+  "TIPOR" VARCHAR(1)
+}
+
+// Origem: fo_exp.dbf (DBF)
+Table "fo_exp" {
+  Note: "Origem: fo_exp.dbf"
+  "DEPTO" INTEGER [default: 0]
+  "SETOR" INTEGER [default: 0]
+  "SECAO" INTEGER [default: 0]
+  "CHAPA" INTEGER [default: 0]
+  "NUMERO" INTEGER [default: 0]
+  "NOME" VARCHAR(30)
+  "ADMITIDO" DATETIME
+  "DIAS1" INTEGER [default: 0]
+  "DIAS2" INTEGER [default: 0]
+  "DATAFIM1" DATETIME
+  "DATAFIM2" DATETIME
+  "OBS1" VARCHAR(60)
+  "OBS2" VARCHAR(60)
+  "OBS3" VARCHAR(60)
+  "OBS4" VARCHAR(60)
+  "OBS5" VARCHAR(60)
+  Indexes {
+    NUMERO [name: "FO_EXP"]
+  }
+}
+
+// Origem: fo_fer.dbf (DBF)
+Table "fo_fer" {
+  Note: "Origem: fo_fer.dbf"
+  "DEPTO" INTEGER [default: 0]
+  "SECAO" INTEGER [default: 0]
+  "SETOR" INTEGER [default: 0]
+  "CHAPA" INTEGER [default: 0]
+  "NUMERO" INTEGER [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "DATFERIAS" DATETIME
+  "DATFERIASF" DATETIME
+  "FALTAS" INTEGER [default: 0]
+  "GOZOU1DE" DATETIME
+  "GOZOU1ATE" DATETIME
+  "GOZOU2DE" DATETIME
+  "GOZOU2ATE" DATETIME
+  "PROGRAMA" DATETIME
+  "PROGRAMA1" DATETIME
+  "DIASJUS" INTEGER [default: 0]
+  "DIASPAGO" INTEGER [default: 0]
+  "DIASGOZA" INTEGER [default: 0]
+  "BAIXADO" VARCHAR(1)
+  "ABONO1DE" DATETIME
+  "ABONO1ATE" DATETIME
+  "DIASPAGO2" INTEGER [default: 0]
+  "DIASGOZA2" INTEGER [default: 0]
+  "DIASPAGO3" INTEGER [default: 0]
+  "DIASGOZA3" INTEGER [default: 0]
+  "NOME" VARCHAR(30)
+  "COMPDATAI" DATETIME
+  "COMPDATAF" DATETIME
+  "FA01" INTEGER [default: 0]
+  "FA02" INTEGER [default: 0]
+  "FA03" INTEGER [default: 0]
+  "FA04" INTEGER [default: 0]
+  "FA05" INTEGER [default: 0]
+  "FA06" INTEGER [default: 0]
+  "FA07" INTEGER [default: 0]
+  "FA08" INTEGER [default: 0]
+  "FA09" INTEGER [default: 0]
+  "FA10" INTEGER [default: 0]
+  "FA11" INTEGER [default: 0]
+  "FA12" INTEGER [default: 0]
+  "FA13" INTEGER [default: 0]
+  "SALVAR" DECIMAL(12,2) [default: 0]
+  "SALVARC" DECIMAL(12,2) [default: 0]
+  "COMPABOI" DATETIME
+  "COMPABOF" DATETIME
+  Indexes {
+    CONTROLE [name: "FO_FER"]
+  }
+}
+
+// Origem: fo_ffe.dbf (DBF)
+Table "fo_ffe" {
+  Note: "Origem: fo_ffe.dbf"
+  "CONTA" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "HORAS" DECIMAL(10,2) [default: 0]
+  "VALOR" DECIMAL(18,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  Indexes {
+    CONTROLE [name: "FO_FFE"]
+  }
+}
+
+// Origem: fo_fp13a.dbf (DBF)
+Table "fo_fp13a" {
+  Note: "Origem: fo_fp13a.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(7,2) [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "FATOR" DECIMAL(6,4) [default: 0]
+  "TRIBUTIRR" INTEGER [default: 0]
+  "TRIBUTINPS" INTEGER [default: 0]
+  "TRIB_FGTS" INTEGER [default: 0]
+  "TIPO" INTEGER [default: 0]
+  "VALORBASE" DECIMAL(10,2) [default: 0]
+  Indexes {
+    CONTROLE [name: "FO_FP13A"]
+  }
+}
+
+// Origem: fo_fp13b.dbf (DBF)
+Table "fo_fp13b" {
+  Note: "Origem: fo_fp13b.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(7,2) [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "FATOR" DECIMAL(6,4) [default: 0]
+  "TRIBUTIRR" INTEGER [default: 0]
+  "TRIBUTINPS" INTEGER [default: 0]
+  "TRIB_FGTS" INTEGER [default: 0]
+  "TIPO" INTEGER [default: 0]
+  "VALORBASE" DECIMAL(10,2) [default: 0]
+  Indexes {
+    CONTROLE [name: "FO_FP13B"]
+  }
+}
+
+// Origem: fo_fp13c.dbf (DBF)
+Table "fo_fp13c" {
+  Note: "Origem: fo_fp13c.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(7,2) [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "FATOR" DECIMAL(6,4) [default: 0]
+  "TRIBUTIRR" INTEGER [default: 0]
+  "TRIBUTINPS" INTEGER [default: 0]
+  "TRIB_FGTS" INTEGER [default: 0]
+  "TIPO" INTEGER [default: 0]
+  "VALORBASE" DECIMAL(10,2) [default: 0]
+  Indexes {
+    CONTROLE [name: "FO_FP13C"]
+  }
+}
+
+// Origem: fo_hor.dbf (DBF)
+Table "fo_hor" {
+  Note: "Origem: fo_hor.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "NOME" VARCHAR(30)
+  "D1" VARCHAR(60)
+  "D2" VARCHAR(60)
+  "D3" VARCHAR(60)
+  "D4" VARCHAR(60)
+  "D5" VARCHAR(60)
+  "D6" VARCHAR(60)
+  "D7" VARCHAR(60)
+  Indexes {
+    NUMERO [name: "FO_HOR"]
+  }
+}
+
+// Origem: fo_ira.dbf (DBF)
+Table "fo_ira" {
+  Note: "Origem: fo_ira.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CODREN" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "VALOR" DECIMAL(18,2) [default: 0]
+  "VALUFIR" DECIMAL(18,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "CPF" VARCHAR(14)
+  "CONTROL2" VARCHAR(20)
+  Indexes {
+    CONTROL2 [name: "FO_IRA"]
+  }
+}
+
+// Origem: fo_ird.dbf (DBF)
+Table "fo_ird" {
+  Note: "Origem: fo_ird.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CODREN" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "VALOR" DECIMAL(18,2) [default: 0]
+  "VALUFIR" DECIMAL(18,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "CPF" VARCHAR(14)
+  "CONTROL2" VARCHAR(20)
+  Indexes {
+    CONTROL2 [name: "FO_IRD"]
+  }
+}
+
+// Origem: fo_irr.dbf (DBF)
+Table "fo_irr" {
+  Note: "Origem: fo_irr.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CODREN" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "VALOR" DECIMAL(18,2) [default: 0]
+  "VALUFIR" DECIMAL(18,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "CPF" VARCHAR(14)
+  "CONTROL2" VARCHAR(20)
+  Indexes {
+    CONTROL2 [name: "FO_IRR"]
+  }
+}
+
+// Origem: fo_oco.dbf (DBF)
+Table "fo_oco" {
+  Note: "Origem: fo_oco.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "DATASAIDA" DATETIME
+  "PERIODOPAG" INTEGER [default: 0]
+  "DATARETORN" DATETIME
+  "CODIGO" VARCHAR(2)
+  "NOME" VARCHAR(30)
+  "TEM_13_SAL" VARCHAR(1)
+  "PRAZOMAXIM" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "OBS" VARCHAR(60)
+  "OBS2" VARCHAR(60)
+  "NOMEF" VARCHAR(30)
+  "DATAFIM13S" DATETIME
+  "DATAFIMPAG" DATETIME
+  "DEPTO" INTEGER [default: 0]
+  "SETOR" INTEGER [default: 0]
+  "SECAO" INTEGER [default: 0]
+  "CHAPA" INTEGER [default: 0]
+  "VALPG" DECIMAL(12,2) [default: 0]
+  "ABTFGTS" VARCHAR(1)
+  "CODFGS" VARCHAR(2)
+  "CODFGR" VARCHAR(2)
+  "PGFGS" VARCHAR(1)
+  "PGFGR" VARCHAR(1)
+  "DIASS" INTEGER [default: 0]
+  "DIASR" INTEGER [default: 0]
+  Indexes {
+    STR(NUMERO,8)+DTOS(DATASAIDA) [name: "FO_OCO"]
+  }
+}
+
+// Origem: fo_pdes.dbf (DBF)
+Table "fo_pdes" {
+  Note: "Origem: fo_pdes.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "DATA" DATETIME
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(6,2) [default: 0]
+  "OBS" VARCHAR(60)
+  "HORA2" DECIMAL(6,2) [default: 0]
+}
+
+// Origem: fo_pes.dbf (DBF)
+Table "fo_pes" {
+  Note: "Origem: fo_pes.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CNUMERO" VARCHAR(8)
+  "DEPTO" INTEGER [default: 0]
+  "SECAO" INTEGER [default: 0]
+  "SETOR" INTEGER [default: 0]
+  "DEPSETSEC" INTEGER [default: 0]
+  "CHAPA" INTEGER [default: 0]
+  "ORDEM" INTEGER [default: 0]
+  "NOME" VARCHAR(60)
+  "ENDTIP" VARCHAR(3)
+  "ENDER" VARCHAR(40)
+  "ENDNUM" VARCHAR(10)
+  "ENDCOMPL" VARCHAR(30)
+  "BAIRRO" VARCHAR(30)
+  "IBGE" VARCHAR(7)
+  "CIDADE" VARCHAR(35)
+  "ESTADO" VARCHAR(2)
+  "CEP" VARCHAR(9)
+  "FONE" VARCHAR(14)
+  "NASC" DATETIME
+  "NASCIBGE" VARCHAR(7)
+  "ANONASCI" INTEGER [default: 0]
+  "NASCPAIS" VARCHAR(4)
+  "CIVIL" INTEGER [default: 0]
+  "ESTCIVIL" VARCHAR(1)
+  "ESCRAIS" VARCHAR(2)
+  "PAI" VARCHAR(40)
+  "MAE" VARCHAR(40)
+  "CPF" VARCHAR(14)
+  "PROFIS" VARCHAR(7)
+  "CTPSDATA" DATETIME
+  "CTPSUF" VARCHAR(2)
+  "SERIE" VARCHAR(5)
+  "PIS" VARCHAR(11)
+  "RGTIP" VARCHAR(3)
+  "RG" VARCHAR(14)
+  "RGUF" VARCHAR(2)
+  "RGEMIS" VARCHAR(6)
+  "RGDATA" DATETIME
+  "FGTS" DATETIME
+  "ADMITIDO" DATETIME
+  "TIPFGTS" VARCHAR(2)
+  "TIPO" VARCHAR(1)
+  "HRSEM" DECIMAL(5,2) [default: 0]
+  "FUNCAO" INTEGER [default: 0]
+  "DEMITIDO" DATETIME
+  "MOTIVO" VARCHAR(2)
+  "DATCONTSIN" DATETIME
+  "SINDICATO" INTEGER [default: 0]
+  "BANCO" VARCHAR(3)
+  "AGENCIA" VARCHAR(7)
+  "CONTA" VARCHAR(12)
+  "SOCIOSIND" VARCHAR(1)
+  "SITUACAO" VARCHAR(2)
+  "INSALUBRI" VARCHAR(1)
+  "PERICULO" VARCHAR(1)
+  "AVISOPREV" DATETIME
+  "ALTFGTS" VARCHAR(3)
+  "CONTAFGTS" VARCHAR(11)
+  "AVOSM" INTEGER [default: 0]
+  "SEXO" VARCHAR(1)
+  "ASSM" VARCHAR(1)
+  "ASSO" VARCHAR(1)
+  "HT" VARCHAR(40)
+  "FGTSMOT" VARCHAR(2)
+  "MOTIVODEM" INTEGER [default: 0]
+  "HTT" VARCHAR(2)
+  "EXCVALE" VARCHAR(1)
+  "VALEHORA" DECIMAL(6,2) [default: 0]
+  "SALVAR13S" DECIMAL(12,2) [default: 0]
+  "CNH" VARCHAR(11)
+  "CATCNH" VARCHAR(2)
+  "VALCNH" DATETIME
+  "EXPCNH" DATETIME
+  "OC" VARCHAR(10)
+  "OCVAL" DATETIME
+  "OCEXP" DATETIME
+  "OCEMI" VARCHAR(10)
+  "EXADAT" DATETIME
+  "EXAPRO" DATETIME
+  "CATEGORIA" VARCHAR(2)
+  "PGFGTS" VARCHAR(1)
+  "OCOFGTS" VARCHAR(1)
+  "EOCO" VARCHAR(1)
+  "VTDIAS" INTEGER [default: 0]
+  "CI" INTEGER [default: 0]
+  "CLASSE" INTEGER [default: 0]
+  "TOMADOR" INTEGER [default: 0]
+  "PGASSI" VARCHAR(1)
+  "RACS" VARCHAR(1)
+  "DEFICI" VARCHAR(1)
+  "CCUSTO" INTEGER [default: 0]
+  "UNIFUN" VARCHAR(10)
+  "MODIRETA" VARCHAR(1)
+  "CESTA" VARCHAR(1)
+  "VT" VARCHAR(1)
+  "EMAIL" VARCHAR(50)
+  "TITULO" VARCHAR(14)
+  "TITUZONA" VARCHAR(3)
+  "TITUSECA" VARCHAR(3)
+  "CNS" VARCHAR(15)
+  "NUMREGANT" INTEGER [default: 0]
+  "NUMEMPANT" INTEGER [default: 0]
+  "DATTRANSF" DATETIME
+  "ETADM" VARCHAR(1)
+  "EIADM" VARCHAR(1)
+  "E1ADM" VARCHAR(1)
+  "EREGI" VARCHAR(3)
+  "EPREV" VARCHAR(4)
+  "EVINC" VARCHAR(3)
+  "ELTRA" VARCHAR(1)
+  "ETJOR" VARCHAR(1)
+  "ETCOR" VARCHAR(1)
+  "SALADM" DECIMAL(12,2) [default: 0]
+  "APOSENT" VARCHAR(1)
+  "APOSEND" DATETIME
+  "RESERV" VARCHAR(12)
+  "RESECAT" VARCHAR(1)
+  "OCUF" VARCHAR(2)
+  "CELULAR" VARCHAR(14)
+  "RICUF" VARCHAR(2)
+  "RICEXP" DATETIME
+  "RIC" VARCHAR(32)
+  "RICEMI" VARCHAR(3)
+  Indexes {
+    NUMERO [name: "FO_PES"]
+    NOME [name: "FO_PES2"]
+    CPF [name: "FO_PES3"]
+    PIS [name: "FO_PES4"]
+    ORDEM [name: "FO_PES5"]
+  }
+}
+
+// Origem: fo_pfe.dbf (DBF)
+Table "fo_pfe" {
+  Note: "Origem: fo_pfe.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(6,2) [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "FATOR" DECIMAL(8,5) [default: 0]
+  "TRIBUTIRR" INTEGER [default: 0]
+  "TRIBUTINPS" INTEGER [default: 0]
+  "TRIB_FGTS" INTEGER [default: 0]
+  "TIPO" INTEGER [default: 0]
+  "VALORBASE" DECIMAL(10,2) [default: 0]
+  "VALORMES1" DECIMAL(18,2) [default: 0]
+  "VALORMES2" DECIMAL(18,2) [default: 0]
+  "MES1" INTEGER [default: 0]
+  "MES2" INTEGER [default: 0]
+  "DATACOMP" DATETIME
+  Indexes {
+    CONTROLE [name: "FO_PFE"]
+  }
+}
+
+// Origem: fo_phor.dbf (DBF)
+Table "fo_phor" {
+  Note: "Origem: fo_phor.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "OCOINI" DATETIME
+  "OCOFIM" DATETIME
+  "OCOCOD" VARCHAR(2)
+  "OCOMOT" VARCHAR(60)
+  "MOTIVO" INTEGER [default: 0]
+}
+
+// Origem: fo_pman.dbf (DBF)
+Table "fo_pman" {
+  Note: "Origem: fo_pman.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "DATOCO" DATETIME
+  "HOROCO" DECIMAL(5,2) [default: 0]
+  "HOROC2" DECIMAL(5,2) [default: 0]
+  "HOROC3" DECIMAL(5,2) [default: 0]
+  "HOROC4" DECIMAL(5,2) [default: 0]
+  "TIPOCO" VARCHAR(1)
+  "MOTOCO" VARCHAR(60)
+  "MOTIVO" INTEGER [default: 0]
+  "ZERHOR" VARCHAR(1)
+}
+
+// Origem: fo_poco.dbf (DBF)
+Table "fo_poco" {
+  Note: "Origem: fo_poco.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "OCOINI" DATETIME
+  "OCOFIM" DATETIME
+  "OCOCOD" VARCHAR(2)
+  "OCOMOT" VARCHAR(60)
+  "OCOSUB" VARCHAR(2)
+  "OCOBCO" VARCHAR(1)
+  "OCORED" VARCHAR(1)
+  "OCOFOL" VARCHAR(1)
+  "OCOEXT" VARCHAR(1)
+  "OCOALM" VARCHAR(1)
+  "HRREL" DECIMAL(6,2) [default: 0]
+  "CESTA" VARCHAR(1)
+  "ABONA" VARCHAR(1)
+  "HRABO" DECIMAL(6,2) [default: 0]
+  "HRRELDEC" DECIMAL(6,2) [default: 0]
+  "HRABODEC" DECIMAL(6,2) [default: 0]
+  "MOTIVO" INTEGER [default: 0]
+}
+
+// Origem: fo_pon.dbf (DBF)
+Table "fo_pon" {
+  Note: "Origem: fo_pon.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "DATA" DATETIME
+  "ENT" DECIMAL(5,2) [default: 0]
+  "ALS" DECIMAL(5,2) [default: 0]
+  "ALE" DECIMAL(5,2) [default: 0]
+  "SAI" DECIMAL(5,2) [default: 0]
+  "COD" VARCHAR(2)
+  "SOD" VARCHAR(2)
+  "ALMOCO" VARCHAR(1)
+  "CODREV" VARCHAR(2)
+  "ENTREV" DECIMAL(6,2) [default: 0]
+  "ALIREV" DECIMAL(6,2) [default: 0]
+  "ALSREV" DECIMAL(6,2) [default: 0]
+  "SAIREV" DECIMAL(6,2) [default: 0]
+  "CTA01" DECIMAL(6,2) [default: 0]
+  "CTA02" DECIMAL(6,2) [default: 0]
+  "CTA03" DECIMAL(6,2) [default: 0]
+  "CTA04" DECIMAL(6,2) [default: 0]
+  "CTA05" DECIMAL(6,2) [default: 0]
+  "CTA06" DECIMAL(6,2) [default: 0]
+  "CTA07" DECIMAL(6,2) [default: 0]
+  "CTA08" DECIMAL(6,2) [default: 0]
+  "CTA09" DECIMAL(6,2) [default: 0]
+  "CTA10" DECIMAL(6,2) [default: 0]
+  "CTA11" DECIMAL(6,2) [default: 0]
+  "CTA12" DECIMAL(6,2) [default: 0]
+  "CTA13" DECIMAL(6,2) [default: 0]
+  "CTA14" DECIMAL(6,2) [default: 0]
+  "CTA15" DECIMAL(6,2) [default: 0]
+  "CTA16" DECIMAL(6,2) [default: 0]
+  "BCOSN" VARCHAR(1)
+  "BCOHRS" DECIMAL(7,2) [default: 0]
+  "REDSN" VARCHAR(1)
+  "FOLSN" VARCHAR(1)
+  "EXTSN" VARCHAR(1)
+  "VIRADA" VARCHAR(1)
+  "MUDENT" VARCHAR(1)
+  "MUDSAI" VARCHAR(1)
+  "MUDALS" VARCHAR(1)
+  "MUDALE" VARCHAR(1)
+  "MUDHOR" VARCHAR(1)
+  "HORARIO" INTEGER [default: 0]
+}
+
+// Origem: fo_pos.dbf (DBF)
+Table "fo_pos" {
+  Note: "Origem: fo_pos.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "NOME" VARCHAR(30)
+  "SEMINI" DATETIME
+  "SEMFIM" DATETIME
+  "CTA01" DECIMAL(7,2) [default: 0]
+  "CTA02" DECIMAL(7,2) [default: 0]
+  "CTA03" DECIMAL(7,2) [default: 0]
+  "CTA04" DECIMAL(7,2) [default: 0]
+  "CTA05" DECIMAL(7,2) [default: 0]
+  "CTA06" DECIMAL(7,2) [default: 0]
+  "CTA07" DECIMAL(7,2) [default: 0]
+  "CTA08" DECIMAL(7,2) [default: 0]
+  "CTA09" DECIMAL(7,2) [default: 0]
+  "CTA10" DECIMAL(7,2) [default: 0]
+  "CTA11" DECIMAL(7,2) [default: 0]
+  "CTA12" DECIMAL(7,2) [default: 0]
+  "CTA13" DECIMAL(7,2) [default: 0]
+  "CTA14" DECIMAL(7,2) [default: 0]
+  "CTA15" DECIMAL(7,2) [default: 0]
+  "CTA16" DECIMAL(7,2) [default: 0]
+  "CTA17" DECIMAL(7,2) [default: 0]
+  "CTA18" DECIMAL(7,2) [default: 0]
+  "CTA19" DECIMAL(7,2) [default: 0]
+  "CTA20" DECIMAL(7,2) [default: 0]
+  "CTA21" DECIMAL(7,2) [default: 0]
+  "CTA22" DECIMAL(7,2) [default: 0]
+  "CTA23" DECIMAL(7,2) [default: 0]
+  "CTA24" DECIMAL(7,2) [default: 0]
+  "VAL01" DECIMAL(12,2) [default: 0]
+  "VAL02" DECIMAL(12,2) [default: 0]
+  "VAL03" DECIMAL(12,2) [default: 0]
+  "VAL04" DECIMAL(12,2) [default: 0]
+  "VAL05" DECIMAL(12,2) [default: 0]
+  "VAL06" DECIMAL(12,2) [default: 0]
+  "VAL07" DECIMAL(12,2) [default: 0]
+  "VAL08" DECIMAL(12,2) [default: 0]
+  "VAL09" DECIMAL(12,2) [default: 0]
+  "VAL10" DECIMAL(12,2) [default: 0]
+  "VAL11" DECIMAL(12,2) [default: 0]
+  "VAL12" DECIMAL(12,2) [default: 0]
+  "VAL13" DECIMAL(12,2) [default: 0]
+  "VAL14" DECIMAL(12,2) [default: 0]
+  "VAL15" DECIMAL(12,2) [default: 0]
+  "VAL16" DECIMAL(12,2) [default: 0]
+  "VAL17" DECIMAL(12,2) [default: 0]
+  "VAL18" DECIMAL(12,2) [default: 0]
+  "VAL19" DECIMAL(12,2) [default: 0]
+  "VAL20" DECIMAL(12,2) [default: 0]
+  "VAL21" DECIMAL(12,2) [default: 0]
+  "VAL22" DECIMAL(12,2) [default: 0]
+  "VAL23" DECIMAL(12,2) [default: 0]
+  "VAL24" DECIMAL(12,2) [default: 0]
+  "BCOHRS" DECIMAL(7,2) [default: 0]
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+}
+
+// Origem: fo_pot.dbf (DBF)
+Table "fo_pot" {
+  Note: "Origem: fo_pot.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "NOME" VARCHAR(30)
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "CTA01" DECIMAL(7,2) [default: 0]
+  "CTA02" DECIMAL(7,2) [default: 0]
+  "CTA03" DECIMAL(7,2) [default: 0]
+  "CTA04" DECIMAL(7,2) [default: 0]
+  "CTA05" DECIMAL(7,2) [default: 0]
+  "CTA06" DECIMAL(7,2) [default: 0]
+  "CTA07" DECIMAL(7,2) [default: 0]
+  "CTA08" DECIMAL(7,2) [default: 0]
+  "CTA09" DECIMAL(7,2) [default: 0]
+  "CTA10" DECIMAL(7,2) [default: 0]
+  "CTA11" DECIMAL(7,2) [default: 0]
+  "CTA12" DECIMAL(7,2) [default: 0]
+  "CTA13" DECIMAL(7,2) [default: 0]
+  "CTA14" DECIMAL(7,2) [default: 0]
+  "CTA15" DECIMAL(7,2) [default: 0]
+  "CTA16" DECIMAL(7,2) [default: 0]
+  "CTA17" DECIMAL(7,2) [default: 0]
+  "CTA18" DECIMAL(7,2) [default: 0]
+  "CTA19" DECIMAL(7,2) [default: 0]
+  "CTA20" DECIMAL(7,2) [default: 0]
+  "CTA21" DECIMAL(7,2) [default: 0]
+  "CTA22" DECIMAL(7,2) [default: 0]
+  "CTA23" DECIMAL(7,2) [default: 0]
+  "CTA24" DECIMAL(7,2) [default: 0]
+  "VAL01" DECIMAL(12,2) [default: 0]
+  "VAL02" DECIMAL(12,2) [default: 0]
+  "VAL03" DECIMAL(12,2) [default: 0]
+  "VAL04" DECIMAL(12,2) [default: 0]
+  "VAL05" DECIMAL(12,2) [default: 0]
+  "VAL06" DECIMAL(12,2) [default: 0]
+  "VAL07" DECIMAL(12,2) [default: 0]
+  "VAL08" DECIMAL(12,2) [default: 0]
+  "VAL09" DECIMAL(12,2) [default: 0]
+  "VAL10" DECIMAL(12,2) [default: 0]
+  "VAL11" DECIMAL(12,2) [default: 0]
+  "VAL12" DECIMAL(12,2) [default: 0]
+  "VAL13" DECIMAL(12,2) [default: 0]
+  "VAL14" DECIMAL(12,2) [default: 0]
+  "VAL15" DECIMAL(12,2) [default: 0]
+  "VAL16" DECIMAL(12,2) [default: 0]
+  "VAL17" DECIMAL(12,2) [default: 0]
+  "VAL18" DECIMAL(12,2) [default: 0]
+  "VAL19" DECIMAL(12,2) [default: 0]
+  "VAL20" DECIMAL(12,2) [default: 0]
+  "VAL21" DECIMAL(12,2) [default: 0]
+  "VAL22" DECIMAL(12,2) [default: 0]
+  "VAL23" DECIMAL(12,2) [default: 0]
+  "VAL24" DECIMAL(12,2) [default: 0]
+  "BCOHRS" DECIMAL(7,2) [default: 0]
+}
+
+// Origem: fo_psl.dbf (DBF)
+Table "fo_psl" {
+  Note: "Origem: fo_psl.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "NOME" VARCHAR(30)
+  "ADMITIDO" DATETIME
+  "FUNCAO" VARCHAR(20)
+  "SALANT" DECIMAL(11,2) [default: 0]
+  "SALATU" DECIMAL(11,2) [default: 0]
+  "SALPRO" DECIMAL(11,2) [default: 0]
+  "TAXA1" DECIMAL(6,2) [default: 0]
+  "TAXA2" DECIMAL(6,2) [default: 0]
+  Indexes {
+    NUMERO [name: "FO_PSL"]
+  }
+}
+
+// Origem: fo_ptt.dbf (DBF)
+Table "fo_ptt" {
+  Note: "Origem: fo_ptt.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "NOME" VARCHAR(30)
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "CTA01" DECIMAL(7,2) [default: 0]
+  "CTA02" DECIMAL(7,2) [default: 0]
+  "CTA03" DECIMAL(7,2) [default: 0]
+  "CTA04" DECIMAL(7,2) [default: 0]
+  "CTA05" DECIMAL(7,2) [default: 0]
+  "CTA06" DECIMAL(7,2) [default: 0]
+  "CTA07" DECIMAL(7,2) [default: 0]
+  "CTA08" DECIMAL(7,2) [default: 0]
+  "CTA09" DECIMAL(7,2) [default: 0]
+  "CTA10" DECIMAL(7,2) [default: 0]
+  "CTA11" DECIMAL(7,2) [default: 0]
+  "CTA12" DECIMAL(7,2) [default: 0]
+  "CTA13" DECIMAL(7,2) [default: 0]
+  "CTA14" DECIMAL(7,2) [default: 0]
+  "CTA15" DECIMAL(7,2) [default: 0]
+  "CTA16" DECIMAL(7,2) [default: 0]
+  "VAL01" DECIMAL(12,2) [default: 0]
+  "VAL02" DECIMAL(12,2) [default: 0]
+  "VAL03" DECIMAL(12,2) [default: 0]
+  "VAL04" DECIMAL(12,2) [default: 0]
+  "VAL05" DECIMAL(12,2) [default: 0]
+  "VAL06" DECIMAL(12,2) [default: 0]
+  "VAL07" DECIMAL(12,2) [default: 0]
+  "VAL08" DECIMAL(12,2) [default: 0]
+  "VAL09" DECIMAL(12,2) [default: 0]
+  "VAL10" DECIMAL(12,2) [default: 0]
+  "VAL11" DECIMAL(12,2) [default: 0]
+  "VAL12" DECIMAL(12,2) [default: 0]
+  "VAL13" DECIMAL(12,2) [default: 0]
+  "VAL14" DECIMAL(12,2) [default: 0]
+  "VAL15" DECIMAL(12,2) [default: 0]
+  "VAL16" DECIMAL(12,2) [default: 0]
+  "BCOHRS" DECIMAL(7,2) [default: 0]
+  Indexes {
+    STR(NUMERO,8)+STR(ANO,4)+STR(MES,2) [name: "FO_PTT"]
+  }
+}
+
+// Origem: fo_rdd.dbf (DBF)
+Table "fo_rdd" {
+  Note: "Origem: fo_rdd.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "HORAS" DECIMAL(6,2) [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  Indexes {
+    CONTROLE [name: "FO_RDD"]
+  }
+}
+
+// Origem: fo_relhr.dbf (DBF)
+Table "fo_relhr" {
+  Note: "Origem: fo_relhr.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "NOME" VARCHAR(30)
+  "HFOL00" VARCHAR(1)
+  "GRUPO" VARCHAR(2)
+  "ALMOCO" VARCHAR(1)
+  "PADRAO" VARCHAR(1)
+  "HORREF" VARCHAR(2)
+  "MARALM" VARCHAR(1)
+  "MARMES" VARCHAR(1)
+  "DATAREF1" DATETIME
+  Indexes {
+    NUMERO [name: "FO_RELHR"]
+  }
+}
+
+// Origem: fo_res.dbf (DBF)
+Table "fo_res" {
+  Note: "Origem: fo_res.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "HORAS" DECIMAL(6,2) [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  Indexes {
+    CONTROLE [name: "FO_RES"]
+  }
+}
+
+// Origem: fo_rss.dbf (DBF)
+Table "fo_rss" {
+  Note: "Origem: fo_rss.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(6,2) [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "FATOR" DECIMAL(8,5) [default: 0]
+  "TRIBUTIRR" INTEGER [default: 0]
+  "TRIBUTINPS" INTEGER [default: 0]
+  "TRIB_FGTS" INTEGER [default: 0]
+  "TIPO" INTEGER [default: 0]
+  "VALORBASE" DECIMAL(10,2) [default: 0]
+  "MES1" INTEGER [default: 0]
+  "VALORMES1" DECIMAL(18,2) [default: 0]
+  "MES2" INTEGER [default: 0]
+  "VALORMES2" DECIMAL(18,2) [default: 0]
+  Indexes {
+    CONTROLE [name: "FO_RSS"]
+  }
+}
+
+// Origem: fo_sal.dbf (DBF)
+Table "fo_sal" {
+  Note: "Origem: fo_sal.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "SALJAN" DECIMAL(12,2) [default: 0]
+  "MOT1" VARCHAR(2)
+  "SALFEV" DECIMAL(12,2) [default: 0]
+  "MOT2" VARCHAR(2)
+  "SALMAR" DECIMAL(12,2) [default: 0]
+  "MOT3" VARCHAR(2)
+  "SALABR" DECIMAL(12,2) [default: 0]
+  "MOT4" VARCHAR(2)
+  "SALMAI" DECIMAL(12,2) [default: 0]
+  "MOT5" VARCHAR(2)
+  "SALJUN" DECIMAL(12,2) [default: 0]
+  "MOT6" VARCHAR(2)
+  "SALJUL" DECIMAL(12,2) [default: 0]
+  "MOT7" VARCHAR(2)
+  "SALAGO" DECIMAL(12,2) [default: 0]
+  "MOT8" VARCHAR(2)
+  "SALSET" DECIMAL(12,2) [default: 0]
+  "MOT9" VARCHAR(2)
+  "SALOUT" DECIMAL(12,2) [default: 0]
+  "MOT10" VARCHAR(2)
+  "SALNOV" DECIMAL(12,2) [default: 0]
+  "MOT11" VARCHAR(2)
+  "SALDEZ" DECIMAL(12,2) [default: 0]
+  "MOT12" VARCHAR(2)
+  Indexes {
+    STR(NUMERO,8)+STR(ANO,4) [name: "FO_SAL"]
+  }
+}
+
+// Origem: fo_var.dbf (DBF)
+Table "fo_var" {
+  Note: "Origem: fo_var.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(18,2) [default: 0]
+  "VALOR" DECIMAL(18,2) [default: 0]
+  "TIPO" INTEGER [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "VARFER" INTEGER [default: 0]
+  "VARRES" INTEGER [default: 0]
+  "VAR13S" INTEGER [default: 0]
+  "NIVFER" INTEGER [default: 0]
+  "NIVRES" INTEGER [default: 0]
+  "NIV13S" INTEGER [default: 0]
+  Indexes {
+    CONTROLE [name: "FO_VAR"]
+  }
+}
+
+// Origem: fo_vbr.dbf (DBF)
+Table "fo_vbr" {
+  Note: "Origem: fo_vbr.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(18,2) [default: 0]
+  "VALOR" DECIMAL(18,2) [default: 0]
+  "TIPO" INTEGER [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "VARFER" INTEGER [default: 0]
+  "VARRES" INTEGER [default: 0]
+  "VAR13S" INTEGER [default: 0]
+  "NIVFER" INTEGER [default: 0]
+  "NIVRES" INTEGER [default: 0]
+  "NIV13S" INTEGER [default: 0]
+  Indexes {
+    CONTROLE [name: "FO_VBR"]
+  }
+}
+
+// Origem: fp000100.dbf (DBF)
+Table "fp000100" {
+  Note: "Origem: fp000100.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(6,2) [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "FATOR" DECIMAL(6,4) [default: 0]
+  "TRIBUTIRR" INTEGER [default: 0]
+  "TRIBUTINPS" INTEGER [default: 0]
+  "TRIB_FGTS" INTEGER [default: 0]
+  "TIPO" INTEGER [default: 0]
+  "VALORBASE" DECIMAL(10,2) [default: 0]
+}
+
+// Origem: fp000101.dbf (DBF)
+Table "fp000101" {
+  Note: "Origem: fp000101.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(6,2) [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "FATOR" DECIMAL(6,4) [default: 0]
+  "TRIBUTIRR" INTEGER [default: 0]
+  "TRIBUTINPS" INTEGER [default: 0]
+  "TRIB_FGTS" INTEGER [default: 0]
+  "TIPO" INTEGER [default: 0]
+  "VALORBASE" DECIMAL(10,2) [default: 0]
+}
+
+// Origem: fp000102.dbf (DBF)
+Table "fp000102" {
+  Note: "Origem: fp000102.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(6,2) [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "FATOR" DECIMAL(6,4) [default: 0]
+  "TRIBUTIRR" INTEGER [default: 0]
+  "TRIBUTINPS" INTEGER [default: 0]
+  "TRIB_FGTS" INTEGER [default: 0]
+  "TIPO" INTEGER [default: 0]
+  "VALORBASE" DECIMAL(10,2) [default: 0]
+}
+
+// Origem: fp000103.dbf (DBF)
+Table "fp000103" {
+  Note: "Origem: fp000103.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(6,2) [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "FATOR" DECIMAL(6,4) [default: 0]
+  "TRIBUTIRR" INTEGER [default: 0]
+  "TRIBUTINPS" INTEGER [default: 0]
+  "TRIB_FGTS" INTEGER [default: 0]
+  "TIPO" INTEGER [default: 0]
+  "VALORBASE" DECIMAL(10,2) [default: 0]
+}
+
+// Origem: fp000104.dbf (DBF)
+Table "fp000104" {
+  Note: "Origem: fp000104.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(6,2) [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "FATOR" DECIMAL(6,4) [default: 0]
+  "TRIBUTIRR" INTEGER [default: 0]
+  "TRIBUTINPS" INTEGER [default: 0]
+  "TRIB_FGTS" INTEGER [default: 0]
+  "TIPO" INTEGER [default: 0]
+  "VALORBASE" DECIMAL(10,2) [default: 0]
+}
+
+// Origem: fp000105.dbf (DBF)
+Table "fp000105" {
+  Note: "Origem: fp000105.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(6,2) [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "FATOR" DECIMAL(6,4) [default: 0]
+  "TRIBUTIRR" INTEGER [default: 0]
+  "TRIBUTINPS" INTEGER [default: 0]
+  "TRIB_FGTS" INTEGER [default: 0]
+  "TIPO" INTEGER [default: 0]
+  "VALORBASE" DECIMAL(10,2) [default: 0]
+}
+
+// Origem: fp000106.dbf (DBF)
+Table "fp000106" {
+  Note: "Origem: fp000106.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(6,2) [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "FATOR" DECIMAL(6,4) [default: 0]
+  "TRIBUTIRR" INTEGER [default: 0]
+  "TRIBUTINPS" INTEGER [default: 0]
+  "TRIB_FGTS" INTEGER [default: 0]
+  "TIPO" INTEGER [default: 0]
+  "VALORBASE" DECIMAL(10,2) [default: 0]
+}
+
+// Origem: fp000107.dbf (DBF)
+Table "fp000107" {
+  Note: "Origem: fp000107.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(6,2) [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "FATOR" DECIMAL(6,4) [default: 0]
+  "TRIBUTIRR" INTEGER [default: 0]
+  "TRIBUTINPS" INTEGER [default: 0]
+  "TRIB_FGTS" INTEGER [default: 0]
+  "TIPO" INTEGER [default: 0]
+  "VALORBASE" DECIMAL(10,2) [default: 0]
+}
+
+// Origem: fp000108.dbf (DBF)
+Table "fp000108" {
+  Note: "Origem: fp000108.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(6,2) [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "FATOR" DECIMAL(6,4) [default: 0]
+  "TRIBUTIRR" INTEGER [default: 0]
+  "TRIBUTINPS" INTEGER [default: 0]
+  "TRIB_FGTS" INTEGER [default: 0]
+  "TIPO" INTEGER [default: 0]
+  "VALORBASE" DECIMAL(10,2) [default: 0]
+}
+
+// Origem: fp000109.dbf (DBF)
+Table "fp000109" {
+  Note: "Origem: fp000109.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(6,2) [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "FATOR" DECIMAL(6,4) [default: 0]
+  "TRIBUTIRR" INTEGER [default: 0]
+  "TRIBUTINPS" INTEGER [default: 0]
+  "TRIB_FGTS" INTEGER [default: 0]
+  "TIPO" INTEGER [default: 0]
+  "VALORBASE" DECIMAL(10,2) [default: 0]
+}
+
+// Origem: fp000110.dbf (DBF)
+Table "fp000110" {
+  Note: "Origem: fp000110.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(6,2) [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "FATOR" DECIMAL(6,4) [default: 0]
+  "TRIBUTIRR" INTEGER [default: 0]
+  "TRIBUTINPS" INTEGER [default: 0]
+  "TRIB_FGTS" INTEGER [default: 0]
+  "TIPO" INTEGER [default: 0]
+  "VALORBASE" DECIMAL(10,2) [default: 0]
+}
+
+// Origem: fp000111.dbf (DBF)
+Table "fp000111" {
+  Note: "Origem: fp000111.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(6,2) [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "FATOR" DECIMAL(6,4) [default: 0]
+  "TRIBUTIRR" INTEGER [default: 0]
+  "TRIBUTINPS" INTEGER [default: 0]
+  "TRIB_FGTS" INTEGER [default: 0]
+  "TIPO" INTEGER [default: 0]
+  "VALORBASE" DECIMAL(10,2) [default: 0]
+}
+
+// Origem: fp000112.dbf (DBF)
+Table "fp000112" {
+  Note: "Origem: fp000112.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(6,2) [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "FATOR" DECIMAL(6,4) [default: 0]
+  "TRIBUTIRR" INTEGER [default: 0]
+  "TRIBUTINPS" INTEGER [default: 0]
+  "TRIB_FGTS" INTEGER [default: 0]
+  "TIPO" INTEGER [default: 0]
+  "VALORBASE" DECIMAL(10,2) [default: 0]
+}
+
+// Origem: htttroca.dbf (DBF)
+Table "htttroca" {
+  Note: "Origem: htttroca.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "DATA" VARCHAR(10)
+  "HORA" VARCHAR(10)
+  "ANT" VARCHAR(10)
+  "HTT" VARCHAR(10)
+  Indexes {
+    NUMERO [name: "HTTTROCA"]
+  }
+}
+
+// Origem: irrf.dbf (DBF)
+Table "irrf" {
+  Note: "Origem: irrf.dbf"
+  "CGC" VARCHAR(18)
+  "CPF" VARCHAR(18)
+  "NOME" VARCHAR(40)
+  "V401" DECIMAL(12,2) [default: 0]
+  "V402" DECIMAL(12,2) [default: 0]
+  "V403" DECIMAL(12,2) [default: 0]
+  "V404" DECIMAL(12,2) [default: 0]
+  "V407" DECIMAL(12,2) [default: 0]
+  "V405" DECIMAL(12,2) [default: 0]
+  "V501" DECIMAL(12,2) [default: 0]
+  "V502" DECIMAL(12,2) [default: 0]
+  "V503" DECIMAL(12,2) [default: 0]
+  "V504" DECIMAL(12,2) [default: 0]
+  "V505" DECIMAL(12,2) [default: 0]
+  "V506" DECIMAL(12,2) [default: 0]
+  "V507" DECIMAL(12,2) [default: 0]
+  "V611" DECIMAL(12,2) [default: 0]
+  "V612" DECIMAL(12,2) [default: 0]
+  "V613" DECIMAL(12,2) [default: 0]
+  "V614" DECIMAL(12,2) [default: 0]
+  "V615" DECIMAL(12,2) [default: 0]
+  "V617" DECIMAL(12,2) [default: 0]
+  "OBS01" VARCHAR(60)
+  "OBS02" VARCHAR(60)
+  "OBS03" VARCHAR(60)
+  "OBS04" VARCHAR(60)
+  "OBS05" VARCHAR(60)
+  "V601" DECIMAL(12,2) [default: 0]
+  "V602" DECIMAL(12,2) [default: 0]
+  "V603" DECIMAL(12,2) [default: 0]
+  "V604" DECIMAL(12,2) [default: 0]
+  "V605" DECIMAL(12,2) [default: 0]
+  "V607" DECIMAL(12,2) [default: 0]
+  Indexes {
+    CPF [name: "IRRF"]
+  }
+}
+
+// Origem: irrf01.dbf (DBF)
+Table "irrf01" {
+  Note: "Origem: irrf01.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "DOCUMENTO" VARCHAR(20)
+  "ANO" INTEGER [default: 0]
+  "CGC" VARCHAR(18)
+  "PESSOA" VARCHAR(1)
+  "NOME" VARCHAR(40)
+  "ENDERECO" VARCHAR(40)
+  "BAIRRO" VARCHAR(30)
+  "CIDADE" VARCHAR(30)
+  "ESTADO" VARCHAR(2)
+  "CEP" VARCHAR(9)
+  "DDD" VARCHAR(4)
+  "TELEFONE" VARCHAR(9)
+  "CONTATO" VARCHAR(12)
+  Indexes {
+    NUMERO [name: "IRRF01"]
+  }
+}
+
+// Origem: irrf02.dbf (DBF)
+Table "irrf02" {
+  Note: "Origem: irrf02.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "ITEM" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "DARF" VARCHAR(4)
+  "NATUREZA" VARCHAR(20)
+  "RENDA" DECIMAL(12,2) [default: 0]
+  "ALIQUOTA" DECIMAL(5,2) [default: 0]
+  "IRRF" DECIMAL(8,2) [default: 0]
+  Indexes {
+    STR(NUMERO,8)+STR(ITEM,2) [name: "IRRF02"]
+  }
+}
+
+// Origem: prov13.dbf (DBF)
+Table "prov13" {
+  Note: "Origem: prov13.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "SALARIO" DECIMAL(12,2) [default: 0]
+  "SALVAR" DECIMAL(12,2) [default: 0]
+  "AVOS" INTEGER [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "VALENC" DECIMAL(12,2) [default: 0]
+  "VALTOT" DECIMAL(12,2) [default: 0]
+  "VALPRI" DECIMAL(12,2) [default: 0]
+  "VALLIQ" DECIMAL(12,2) [default: 0]
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "DEPTO" INTEGER [default: 0]
+  "SETOR" INTEGER [default: 0]
+  "SECAO" INTEGER [default: 0]
+  Indexes {
+    STRZERO(NUMERO,8)+STRZERO(ANO,4)+STRZERO(MES,2) [name: "PROV13"]
+  }
+}
+
+// Origem: provfe.dbf (DBF)
+Table "provfe" {
+  Note: "Origem: provfe.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "COMP" DATETIME
+  "SALARIO" DECIMAL(12,2) [default: 0]
+  "SALVAR" DECIMAL(12,2) [default: 0]
+  "AVOS" INTEGER [default: 0]
+  "DIAS" INTEGER [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "VALTER" DECIMAL(12,2) [default: 0]
+  "VALENC" DECIMAL(12,2) [default: 0]
+  "VALTOT" DECIMAL(12,2) [default: 0]
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "DEPTO" INTEGER [default: 0]
+  "SETOR" INTEGER [default: 0]
+  "SECAO" INTEGER [default: 0]
+  "CONTROLE" VARCHAR(24)
+  Indexes {
+    CONTROLE [name: "PROVFE"]
+  }
+}
+
+// Origem: resfor.dbf (DBF)
+Table "resfor" {
+  Note: "Origem: resfor.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "VAL29" DECIMAL(12,2) [default: 0]
+  "HOR29" DECIMAL(6,2) [default: 0]
+  "VAL30" DECIMAL(12,2) [default: 0]
+  "HOR30" DECIMAL(6,2) [default: 0]
+  "VAL31" DECIMAL(12,2) [default: 0]
+  "HOR31" DECIMAL(6,2) [default: 0]
+  "VAL32" DECIMAL(12,2) [default: 0]
+  "HOR32" DECIMAL(6,2) [default: 0]
+  "VAL33" DECIMAL(12,2) [default: 0]
+  "HOR33" DECIMAL(6,2) [default: 0]
+  "VAL34" DECIMAL(12,2) [default: 0]
+  "HOR34" DECIMAL(6,2) [default: 0]
+  "VAL35" DECIMAL(12,2) [default: 0]
+  "HOR35" DECIMAL(6,2) [default: 0]
+  "VAL36" DECIMAL(12,2) [default: 0]
+  "HOR36" DECIMAL(6,2) [default: 0]
+  "VAL37" DECIMAL(12,2) [default: 0]
+  "HOR37" DECIMAL(6,2) [default: 0]
+  "VAL38" DECIMAL(12,2) [default: 0]
+  "HOR38" DECIMAL(6,2) [default: 0]
+  "VAL39" DECIMAL(12,2) [default: 0]
+  "HOR39" DECIMAL(6,2) [default: 0]
+  "VAL40" DECIMAL(12,2) [default: 0]
+  "HOR40" DECIMAL(6,2) [default: 0]
+  "VAL41" DECIMAL(12,2) [default: 0]
+  "HOR41" DECIMAL(6,2) [default: 0]
+  "VAL42" DECIMAL(12,2) [default: 0]
+  "HOR42" DECIMAL(6,2) [default: 0]
+  "VAL43" DECIMAL(12,2) [default: 0]
+  "HOR43" DECIMAL(6,2) [default: 0]
+  "VAL44" DECIMAL(12,2) [default: 0]
+  "HOR44" DECIMAL(6,2) [default: 0]
+  "VAL45" DECIMAL(12,2) [default: 0]
+  "HOR45" DECIMAL(6,2) [default: 0]
+  "VAL46" DECIMAL(12,2) [default: 0]
+  "HOR46" DECIMAL(6,2) [default: 0]
+  "VAL47" DECIMAL(12,2) [default: 0]
+  "HOR47" DECIMAL(6,2) [default: 0]
+  "VAL48" DECIMAL(12,2) [default: 0]
+  "HOR48" DECIMAL(6,2) [default: 0]
+  "VAL49" DECIMAL(12,2) [default: 0]
+  "HOR49" DECIMAL(6,2) [default: 0]
+  "VAL50" DECIMAL(12,2) [default: 0]
+  "HOR50" DECIMAL(6,2) [default: 0]
+  "VAL51" DECIMAL(12,2) [default: 0]
+  "HOR51" DECIMAL(6,2) [default: 0]
+  "VAL52" DECIMAL(12,2) [default: 0]
+  "HOR52" DECIMAL(6,2) [default: 0]
+  "VAL53" DECIMAL(12,2) [default: 0]
+  "HOR53" DECIMAL(6,2) [default: 0]
+  "VAL54" DECIMAL(12,2) [default: 0]
+  "HOR54" DECIMAL(6,2) [default: 0]
+  "VAL55" DECIMAL(12,2) [default: 0]
+  "HOR55" DECIMAL(6,2) [default: 0]
+  "DES29" VARCHAR(20)
+  "DES30" VARCHAR(20)
+  "DES31" VARCHAR(20)
+  "DES32" VARCHAR(20)
+  "DES33" VARCHAR(20)
+  "DES34" VARCHAR(20)
+  "DES35" VARCHAR(20)
+  "DES36" VARCHAR(20)
+  "DES37" VARCHAR(20)
+  "DES38" VARCHAR(20)
+  "DES39" VARCHAR(20)
+  "DES40" VARCHAR(20)
+  "DES41" VARCHAR(20)
+  "DES42" VARCHAR(20)
+  "DES43" VARCHAR(20)
+  "DES44" VARCHAR(20)
+  "DES45" VARCHAR(20)
+  "DES46" VARCHAR(20)
+  "DES47" VARCHAR(20)
+  "DES48" VARCHAR(20)
+  "DES49" VARCHAR(20)
+  "DES50" VARCHAR(20)
+  "DES51" VARCHAR(20)
+  "DES52" VARCHAR(20)
+  "DES53" VARCHAR(20)
+  "DES54" VARCHAR(20)
+  "DES55" VARCHAR(20)
+  Indexes {
+    NUMERO [name: "RESFOR"]
+  }
+}
+
+// Origem: vtavul.dbf (DBF)
+Table "vtavul" {
+  Note: "Origem: vtavul.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(6,2) [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  Indexes {
+    CONTROLE [name: "VTAVUL"]
+  }
+}
+
+// Origem: vtfixo.dbf (DBF)
+Table "vtfixo" {
+  Note: "Origem: vtfixo.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(6,2) [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  "CTACOM" INTEGER [default: 0]
+  Indexes {
+    STR(NUMERO,8)+STR(CONTA,4)+STR(CTACOM,4) [name: "VTFIXO"]
+  }
+}
+
+// Origem: vtfolha.dbf (DBF)
+Table "vtfolha" {
+  Note: "Origem: vtfolha.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(6,2) [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  Indexes {
+    CONTROLE [name: "VTFOLHA"]
+  }
+}
+

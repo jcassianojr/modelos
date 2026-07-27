@@ -1,0 +1,867 @@
+// Origem: acpnc.dbf (DBF)
+Table "acpnc" {
+  Note: "Origem: acpnc.dbf"
+  "ACPNC" INTEGER [default: 0]
+  "DATA" DATETIME
+  "DATAFEC" DATETIME
+  "CLIENTE" INTEGER [default: 0]
+  "CLINOME" VARCHAR(50)
+  "PRODUTO" VARCHAR(24)
+  "DESPRO" VARCHAR(40)
+  "APNC" INTEGER [default: 0]
+  "RNC" INTEGER [default: 0]
+  "RAT" INTEGER [default: 0]
+  "SAIR" TINYINT(1)
+  "QTI01" DECIMAL(9,2) [default: 0]
+  "QTI02" DECIMAL(9,2) [default: 0]
+  "QTI03" DECIMAL(9,2) [default: 0]
+  "QTI04" DECIMAL(9,2) [default: 0]
+  "QTI05" DECIMAL(9,2) [default: 0]
+  "QTI06" DECIMAL(9,2) [default: 0]
+  "QTI07" DECIMAL(9,2) [default: 0]
+  "QTE01" DECIMAL(9,2) [default: 0]
+  "QTE02" DECIMAL(9,2) [default: 0]
+  "QTE03" DECIMAL(9,2) [default: 0]
+  "QTE04" DECIMAL(9,2) [default: 0]
+  "QTE05" DECIMAL(9,2) [default: 0]
+  "QTE06" DECIMAL(9,2) [default: 0]
+  "QTE07" DECIMAL(9,2) [default: 0]
+  "QTE08" DECIMAL(9,2) [default: 0]
+  "QTE09" DECIMAL(9,2) [default: 0]
+  "QTE10" DECIMAL(9,2) [default: 0]
+  "QTE11" DECIMAL(9,2) [default: 0]
+  "VLI01" DECIMAL(12,2) [default: 0]
+  "VLI02" DECIMAL(12,2) [default: 0]
+  "VLI03" DECIMAL(12,2) [default: 0]
+  "VLI04" DECIMAL(12,2) [default: 0]
+  "VLI05" DECIMAL(12,2) [default: 0]
+  "VLI06" DECIMAL(12,2) [default: 0]
+  "VLI07" DECIMAL(12,2) [default: 0]
+  "VLE01" DECIMAL(12,2) [default: 0]
+  "VLE02" DECIMAL(12,2) [default: 0]
+  "VLE03" DECIMAL(12,2) [default: 0]
+  "VLE04" DECIMAL(12,2) [default: 0]
+  "VLE05" DECIMAL(12,2) [default: 0]
+  "VLE06" DECIMAL(12,2) [default: 0]
+  "VLE07" DECIMAL(12,2) [default: 0]
+  "VLE08" DECIMAL(12,2) [default: 0]
+  "VLE09" DECIMAL(12,2) [default: 0]
+  "VLE10" DECIMAL(12,2) [default: 0]
+  "VLE11" DECIMAL(12,2) [default: 0]
+  "PCVALEXT" DECIMAL(18,4) [default: 0]
+  "PCVALINT" DECIMAL(18,4) [default: 0]
+  "SAC" INTEGER [default: 0]
+  "COMPETE" VARCHAR(6)
+  Indexes {
+    ACPNC [name: "ACPNC"]
+    DATA [name: "DATA"]
+    RNC [name: "RNC"]
+    STR(RAT,8)+PRODUTO [name: "RATPRODUTO"]
+    SAC [name: "SAC"]
+    COMPETE [name: "COMPETE"]
+  }
+}
+
+// Origem: adp.dbf (DBF)
+Table "adp" {
+  Note: "Origem: adp.dbf"
+  "ADP" INTEGER [default: 0]
+  "CODIGO" VARCHAR(24)
+  "NOME" VARCHAR(40)
+  "CLIENTE" INTEGER [default: 0]
+  "CLINOME" VARCHAR(50)
+  "NFDEV" VARCHAR(15)
+  "CLIRET" VARCHAR(30)
+  "RASTRO" VARCHAR(10)
+  "INSNUM" INTEGER [default: 0]
+  "INSNOME" VARCHAR(40)
+  "DATA" DATETIME
+  "INIHOR" DECIMAL(5,2) [default: 0]
+  "FIMHOR" DECIMAL(5,2) [default: 0]
+  "HORAS" DECIMAL(5,2) [default: 0]
+  "REQUER" VARCHAR(1)
+  "AREA" VARCHAR(2)
+  "RESPO" VARCHAR(40)
+  "RNC" INTEGER [default: 0]
+  Indexes {
+    ADP [name: "ADP"]
+    RNC [name: "RNC"]
+  }
+}
+
+// Origem: adpi.dbf (DBF)
+Table "adpi" {
+  Note: "Origem: adpi.dbf"
+  "ADP" INTEGER [default: 0]
+  "ESPC" VARCHAR(80)
+  "ENCO" VARCHAR(80)
+  "LAUDO" VARCHAR(1)
+  Indexes {
+    ADP [name: "ADP"]
+  }
+}
+
+// Origem: caf.dbf (DBF)
+Table "caf" {
+  Note: "Origem: caf.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "PREVISTO" DATETIME
+  "EFETUADO" DATETIME
+  "DPLANO" DATETIME
+  "EFICAZ" VARCHAR(1)
+  "OBS" VARCHAR(80)
+  Indexes {
+    NUMERO [name: "NUMERO"]
+  }
+}
+
+// Origem: cfe.dbf (DBF)
+Table "cfe" {
+  Note: "Origem: cfe.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "DATA" DATETIME
+  "TIPOCLI" VARCHAR(1)
+  "CLIFOR" INTEGER [default: 0]
+  "COGNOME" VARCHAR(20)
+  "NOTA" VARCHAR(30)
+  "PESO" DECIMAL(12,2) [default: 0]
+  "MEIOTRAN" VARCHAR(30)
+  "JUSTIFI" VARCHAR(80)
+  "TIPOENT" VARCHAR(1)
+  "PRODUTO" VARCHAR(24)
+  Indexes {
+    NUMERO [name: "NUMERO"]
+  }
+}
+
+// Origem: crdias.dbf (DBF)
+Table "crdias" {
+  Note: "Origem: crdias.dbf"
+  "SEQ" INTEGER [default: 0]
+  "NFOR" INTEGER [default: 0]
+  "DIAS" DECIMAL(7,2) [default: 0]
+  "QTENT" INTEGER [default: 0]
+  "QTPRZ" INTEGER [default: 0]
+  Indexes {
+    SEQ [name: "SEQ"]
+  }
+}
+
+// Origem: crfa.dbf (DBF)
+Table "crfa" {
+  Note: "Origem: crfa.dbf"
+  "SEQ" INTEGER [default: 0]
+  "NFOR" INTEGER [default: 0]
+  "NOME" VARCHAR(40)
+  "QTRA" INTEGER [default: 0]
+  "QTNA" INTEGER [default: 0]
+  "PPMA" INTEGER [default: 0]
+  "DIAA" INTEGER [default: 0]
+  "IAFA" DECIMAL(7,2) [default: 0]
+  "IQFA" INTEGER [default: 0]
+  "MESA" INTEGER [default: 0]
+  "QTRS" INTEGER [default: 0]
+  "QTNS" INTEGER [default: 0]
+  "PPMS" INTEGER [default: 0]
+  "DIAS" INTEGER [default: 0]
+  "IAFS" DECIMAL(7,2) [default: 0]
+  "IQFS" INTEGER [default: 0]
+  "MESS" INTEGER [default: 0]
+  "CONCEITO" VARCHAR(1)
+  "PPM" INTEGER [default: 0]
+  "IAF" DECIMAL(7,2) [default: 0]
+  "SUBRAMO" VARCHAR(3)
+  Indexes {
+    STR(SEQ,3)+STR(NFOR,8) [name: "SEQNFOR"]
+    NFOR [name: "NFOR"]
+  }
+}
+
+// Origem: crfor.dbf (DBF)
+Table "crfor" {
+  Note: "Origem: crfor.dbf"
+  "SEQ" INTEGER [default: 0]
+  "NFOR" INTEGER [default: 0]
+  "QTDREC" INTEGER [default: 0]
+  "QTDNC" INTEGER [default: 0]
+  "PPM" INTEGER [default: 0]
+  "DIAS" INTEGER [default: 0]
+  "IAF" DECIMAL(7,2) [default: 0]
+  "IQF" INTEGER [default: 0]
+  "ANUAL" VARCHAR(1)
+  "SEMES" VARCHAR(1)
+  "DESCRI" VARCHAR(20)
+  "PPMS" INTEGER [default: 0]
+  "PPMA" INTEGER [default: 0]
+  "IAFS" DECIMAL(7,2) [default: 0]
+  "IAFA" DECIMAL(7,2) [default: 0]
+  "NOME" VARCHAR(50)
+  Indexes {
+    SEQ [name: "SEQ"]
+    NFOR [name: "NFOR"]
+    STR(SEQ,3)+STR(NFOR,8) [name: "SEQNFOR"]
+  }
+}
+
+// Origem: crft.dbf (DBF)
+Table "crft" {
+  Note: "Origem: crft.dbf"
+  "NFOR" INTEGER [default: 0]
+  "SEQ" INTEGER [default: 0]
+  "ITEM" INTEGER [default: 0]
+  "DESCRICAO" VARCHAR(15)
+  "VAL01" INTEGER [default: 0]
+  "VAL02" INTEGER [default: 0]
+  "VAL03" INTEGER [default: 0]
+  "VAL04" INTEGER [default: 0]
+  "VAL05" INTEGER [default: 0]
+  "VAL06" INTEGER [default: 0]
+  "VAL07" INTEGER [default: 0]
+  "VAL08" INTEGER [default: 0]
+  "VAL09" INTEGER [default: 0]
+  "VAL10" INTEGER [default: 0]
+  "VAL11" INTEGER [default: 0]
+  "VAL12" INTEGER [default: 0]
+  "TOTAL" INTEGER [default: 0]
+  "IAFS" DECIMAL(7,2) [default: 0]
+  "PPMS" INTEGER [default: 0]
+  Indexes {
+    STR(SEQ,3)+STR(NFOR,8) [name: "SEQNFOR"]
+  }
+}
+
+// Origem: crrsapc.dbf (DBF)
+Table "crrsapc" {
+  Note: "Origem: crrsapc.dbf"
+  "SEQ" INTEGER [default: 0]
+  "CLIENTE" INTEGER [default: 0]
+  "QTDE" INTEGER [default: 0]
+  Indexes {
+    STR(SEQ,3)+STR(CLIENTE,8) [name: "SEQCLIENTE"]
+  }
+}
+
+// Origem: crrsapp.dbf (DBF)
+Table "crrsapp" {
+  Note: "Origem: crrsapp.dbf"
+  "SEQ" INTEGER [default: 0]
+  "CODIGO" VARCHAR(24)
+  "NOME" VARCHAR(40)
+  "PRODUSO" VARCHAR(1)
+  "QTDE" INTEGER [default: 0]
+  "SET01" INTEGER [default: 0]
+  "SET02" INTEGER [default: 0]
+  "SET03" INTEGER [default: 0]
+  "SET04" INTEGER [default: 0]
+  "SET05" INTEGER [default: 0]
+  "SET06" INTEGER [default: 0]
+  "SET07" INTEGER [default: 0]
+  "SET08" INTEGER [default: 0]
+  "SET09" INTEGER [default: 0]
+  "SET00" INTEGER [default: 0]
+  Indexes {
+    STR(SEQ,3)+CODIGO [name: "SEQCODIGO"]
+  }
+}
+
+// Origem: crrsaps.dbf (DBF)
+Table "crrsaps" {
+  Note: "Origem: crrsaps.dbf"
+  "SEQ" INTEGER [default: 0]
+  "SETCOD" VARCHAR(1)
+  "SETOR" VARCHAR(10)
+  "SETCOG" VARCHAR(5)
+  "QTDE" INTEGER [default: 0]
+  "QTDENC" INTEGER [default: 0]
+  "PPM" INTEGER [default: 0]
+  "RET" INTEGER [default: 0]
+  "DEV" INTEGER [default: 0]
+  "SUC" INTEGER [default: 0]
+  "PPMRET" INTEGER [default: 0]
+  "PPMDEV" INTEGER [default: 0]
+  "PPMSUC" INTEGER [default: 0]
+  "SEMRET" INTEGER [default: 0]
+  "SEMSUC" INTEGER [default: 0]
+  "SEMDEV" INTEGER [default: 0]
+  "SEMPPM" INTEGER [default: 0]
+  "SEMPPMRET" INTEGER [default: 0]
+  "SEMPPMSUC" INTEGER [default: 0]
+  "SEMPPMDEV" INTEGER [default: 0]
+  "SEMTOT" INTEGER [default: 0]
+  "SEMPRO" INTEGER [default: 0]
+  "ANURET" INTEGER [default: 0]
+  "ANUSUC" INTEGER [default: 0]
+  "ANUDEV" INTEGER [default: 0]
+  "ANUPPM" INTEGER [default: 0]
+  "ANUPPMRET" INTEGER [default: 0]
+  "ANUPPMSUC" INTEGER [default: 0]
+  "ANUPPMDEV" INTEGER [default: 0]
+  "ANUTOT" INTEGER [default: 0]
+  "ANUPRO" INTEGER [default: 0]
+  Indexes {
+    STR(SEQ,3)+SETCOD [name: "SEQSETOR"]
+  }
+}
+
+// Origem: crrserr.dbf (DBF)
+Table "crrserr" {
+  Note: "Origem: crrserr.dbf"
+  "CODIGO" VARCHAR(3)
+  "NOME" VARCHAR(40)
+  "GRAFICO" TINYINT(1)
+  "COGNOME" VARCHAR(5)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: crrsseq.dbf (DBF)
+Table "crrsseq" {
+  Note: "Origem: crrsseq.dbf"
+  "SEQ" INTEGER [default: 0]
+  "DIAFIM" DATETIME
+  "DIAINI" DATETIME
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "DESCR2" VARCHAR(10)
+  "DESCRI" VARCHAR(30)
+  "RET" INTEGER [default: 0]
+  "SUC" INTEGER [default: 0]
+  "DEV" INTEGER [default: 0]
+  "TOTMES" INTEGER [default: 0]
+  "PPMMES" INTEGER [default: 0]
+  "PPMRET" INTEGER [default: 0]
+  "PPMSUC" INTEGER [default: 0]
+  "PPMDEV" INTEGER [default: 0]
+  "PRODMES" INTEGER [default: 0]
+  "PRODMY" INTEGER [default: 0]
+  "ANUAL" VARCHAR(1)
+  "SEMES" VARCHAR(1)
+  "PRODNF" INTEGER [default: 0]
+  "SEMRET" INTEGER [default: 0]
+  "SEMSUC" INTEGER [default: 0]
+  "SEMDEV" INTEGER [default: 0]
+  "SEMPPMRET" INTEGER [default: 0]
+  "SEMPPMSUC" INTEGER [default: 0]
+  "SEMPPMDEV" INTEGER [default: 0]
+  "SEMTOT" INTEGER [default: 0]
+  "SEMPRO" INTEGER [default: 0]
+  "SEMPPM" INTEGER [default: 0]
+  "SEMINI" DATETIME
+  "SEMFIM" DATETIME
+  "ANURET" INTEGER [default: 0]
+  "ANUSUC" INTEGER [default: 0]
+  "ANUDEV" INTEGER [default: 0]
+  "ANUPPMRET" INTEGER [default: 0]
+  "ANUPPMSUC" INTEGER [default: 0]
+  "ANUPPMDEV" INTEGER [default: 0]
+  "ANUTOT" INTEGER [default: 0]
+  "ANUPRO" INTEGER [default: 0]
+  "ANUPPM" INTEGER [default: 0]
+  "ANUINI" DATETIME
+  "ANUFIM" DATETIME
+  "PLANO01" VARCHAR(120)
+  "PLANO02" VARCHAR(120)
+  "PLANO03" VARCHAR(120)
+  "PLANO04" VARCHAR(120)
+  "PLANO05" VARCHAR(120)
+  "PLANO06" VARCHAR(120)
+  "PLANO07" VARCHAR(120)
+  "ACAO01" VARCHAR(120)
+  "ACAO02" VARCHAR(120)
+  "ACAO03" VARCHAR(120)
+  "ACAO04" VARCHAR(120)
+  "ACAO05" VARCHAR(120)
+  "ACAO06" VARCHAR(120)
+  "ACAO07" VARCHAR(120)
+  "NUMFUN" INTEGER [default: 0]
+  "NUMREG" INTEGER [default: 0]
+  "NUMTEM" INTEGER [default: 0]
+  "ZERO" INTEGER [default: 0]
+  Indexes {
+    SEQ [name: "SEQ"]
+  }
+}
+
+// Origem: crrsset.dbf (DBF)
+Table "crrsset" {
+  Note: "Origem: crrsset.dbf"
+  "CODIGO" VARCHAR(1)
+  "NOME" VARCHAR(10)
+  "GRAFICO" TINYINT(1)
+  "COGNOME" VARCHAR(5)
+  Indexes {
+    CODIGO [name: "SEQ"]
+  }
+}
+
+// Origem: crseq.dbf (DBF)
+Table "crseq" {
+  Note: "Origem: crseq.dbf"
+  "SEQ" INTEGER [default: 0]
+  "DIAFIM" DATETIME
+  "DIAINI" DATETIME
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "DESCRI" VARCHAR(30)
+  "ANUAL" VARCHAR(1)
+  "SEMES" VARCHAR(1)
+  Indexes {
+    SEQ [name: "SEQ"]
+  }
+}
+
+// Origem: crts.dbf (DBF)
+Table "crts" {
+  Note: "Origem: crts.dbf"
+  "SEQ" INTEGER [default: 0]
+  "PRODMES" INTEGER [default: 0]
+  "RET" INTEGER [default: 0]
+  "SUC" INTEGER [default: 0]
+  "DEV" INTEGER [default: 0]
+  "PPMRET" INTEGER [default: 0]
+  "PPMSUC" INTEGER [default: 0]
+  "PPMDEV" INTEGER [default: 0]
+  Indexes {
+    SEQ [name: "SEQ"]
+  }
+}
+
+// Origem: msrd.dbf (DBF)
+Table "msrd" {
+  Note: "Origem: msrd.dbf"
+  "MSRD" INTEGER [default: 0]
+  "CODIGO" VARCHAR(24)
+  "PF" INTEGER [default: 0]
+  "DATA" DATETIME
+  "OCORREU" VARCHAR(20)
+  "DESC01" VARCHAR(80)
+  "DESC02" VARCHAR(80)
+  "INV01" VARCHAR(80)
+  "ACA01" VARCHAR(80)
+  "CLIENTE" INTEGER [default: 0]
+  Indexes {
+    MSRD [name: "MSRD"]
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: pe01tmp.dbf (DBF)
+Table "pe01tmp" {
+  Note: "Origem: pe01tmp.dbf"
+  "TIPPED" VARCHAR(1)
+  "CODIGO" VARCHAR(24)
+  "UNIDADE" VARCHAR(2)
+  "NOME" VARCHAR(50)
+  "NOM2" VARCHAR(50)
+  "NRNOTAINI" DECIMAL(8,2) [default: 0]
+  "DIGCTR" VARCHAR(1)
+  "DATAFAT" DATETIME
+  "VALORINI" DECIMAL(9,2) [default: 0]
+  "TOTKGINI" INTEGER [default: 0]
+  "NRNOTASAI" INTEGER [default: 0]
+  "TOTKGANT" INTEGER [default: 0]
+  "TOTKGSAI" INTEGER [default: 0]
+  "TOTKGEST" INTEGER [default: 0]
+  "TIPOCLI" VARCHAR(1)
+  "CLIENTE" INTEGER [default: 0]
+  "COGNOME" VARCHAR(12)
+  "DATASAI" DATETIME
+  "CRM" INTEGER [default: 0]
+  "PEDIDO" INTEGER [default: 0]
+  "ITEM" INTEGER [default: 0]
+  "RECEBER" VARCHAR(1)
+  "OBS" VARCHAR(20)
+  "RASTROFOR" VARCHAR(20)
+  "DCORTE" DATETIME
+  "AR" INTEGER [default: 0]
+  "ARITEM" INTEGER [default: 0]
+  "RIRM" INTEGER [default: 0]
+  Indexes {
+    STR(PEDIDO,5)+STR(ITEM,2)+DIGCTR [name: "PE01TMP1"]
+    STR(NRNOTASAI,8)+STR(CLIENTE,8) [name: "PE01TMP2"]
+    PEDIDO [name: "PE01TMP3"]
+    CLIENTE [name: "PE01TMP4"]
+    STR(AR,8)+STR(ARITEM,3) [name: "PE01TMP5"]
+    CODIGO [name: "PE01TMP6"]
+    STR(CLIENTE,8)+STR(NRNOTASAI,8)+CODIGO [name: "PE01TMP7"]
+  }
+}
+
+// Origem: racf.dbf (DBF)
+Table "racf" {
+  Note: "Origem: racf.dbf"
+  "RACF" INTEGER [default: 0]
+  "RNC" INTEGER [default: 0]
+  "RAT" INTEGER [default: 0]
+  "DATA" DATETIME
+  "DENO" VARCHAR(40)
+  "DESENHO" VARCHAR(24)
+  "REVISAO" VARCHAR(2)
+  "RASTRO" VARCHAR(20)
+  "FORNECEDO" INTEGER [default: 0]
+  "NOMEF" VARCHAR(40)
+  "RESP" VARCHAR(30)
+  "RESPC" VARCHAR(30)
+  "FONE" VARCHAR(12)
+  "FAX" VARCHAR(12)
+  "EMAIL" VARCHAR(30)
+  "DESC01" VARCHAR(90)
+  "DESC02" VARCHAR(90)
+  "DESC03" VARCHAR(90)
+  "DESC04" VARCHAR(90)
+  "DESC05" VARCHAR(90)
+  "ACAO01" VARCHAR(80)
+  "ACAO02" VARCHAR(80)
+  "CAUSA01" VARCHAR(80)
+  "CAUSA02" VARCHAR(80)
+  "CAUSA03" VARCHAR(80)
+  "CAUSA04" VARCHAR(80)
+  "CORRE01" VARCHAR(80)
+  "CORRE02" VARCHAR(80)
+  "CORRE03" VARCHAR(80)
+  "CORRE04" VARCHAR(80)
+  "DATAI" DATETIME
+  "RESPF" VARCHAR(30)
+  "CARGOF" VARCHAR(30)
+  "DATAF" DATETIME
+  "DATAE" DATETIME
+  "VERI" VARCHAR(25)
+  "APRO" VARCHAR(1)
+  "NOTA" VARCHAR(8)
+  "CNFITA" VARCHAR(8)
+  "CNFFOR" VARCHAR(25)
+  "AREA" VARCHAR(2)
+  "RESPO" VARCHAR(40)
+  "CARGO" VARCHAR(40)
+  "QTL1" INTEGER [default: 0]
+  "QTL2" INTEGER [default: 0]
+  "QTN1" INTEGER [default: 0]
+  "QTN2" INTEGER [default: 0]
+  "QTD1" INTEGER [default: 0]
+  "QTD2" INTEGER [default: 0]
+  "UNID" VARCHAR(3)
+  "CRM" INTEGER [default: 0]
+  "TIPOE" VARCHAR(1)
+  "CBUSCA" VARCHAR(24)
+  "DESCRI" VARCHAR(100)
+  "INCUSER" VARCHAR(10)
+  "INCDATA" DATETIME
+  "EFICAZ" VARCHAR(1)
+  "DEMERITO" VARCHAR(1)
+  "DESCRI01" VARCHAR(50)
+  Indexes {
+    RACF [name: "RACF"]
+    DATA [name: "RACF-2"]
+  }
+}
+
+// Origem: racfsal.dbf (DBF)
+Table "racfsal" {
+  Note: "Origem: racfsal.dbf"
+  "SEQ" INTEGER [default: 0]
+  "CLIFOR" INTEGER [default: 0]
+  "QTDE" INTEGER [default: 0]
+  Indexes {
+    STR(SEQ,3)+STR(CLIFOR,8) [name: "SEQCLIFOR"]
+  }
+}
+
+// Origem: rat.dbf (DBF)
+Table "rat" {
+  Note: "Origem: rat.dbf"
+  "RAT" INTEGER [default: 0]
+  "CLIENTE" INTEGER [default: 0]
+  "CLINOME" VARCHAR(50)
+  "DATA" DATETIME
+  "VISITA" TINYINT(1)
+  "RECCLI" TINYINT(1)
+  "RELCLI" TINYINT(1)
+  Indexes {
+    RAT [name: "RAT"]
+    DATA [name: "DATA"]
+  }
+}
+
+// Origem: rati.dbf (DBF)
+Table "rati" {
+  Note: "Origem: rati.dbf"
+  "RAT" INTEGER [default: 0]
+  "CODIGO" VARCHAR(24)
+  "QTDE" INTEGER [default: 0]
+  "RASTRO" VARCHAR(9)
+  "PROB01" VARCHAR(100)
+  "PROB02" VARCHAR(100)
+  "PROB03" VARCHAR(100)
+  "ANAL01" VARCHAR(100)
+  "ANAL02" VARCHAR(100)
+  "ANAL03" VARCHAR(100)
+  "ANAL04" VARCHAR(100)
+  "ANAL05" VARCHAR(100)
+  "ACAO01" VARCHAR(100)
+  "ACAO02" VARCHAR(100)
+  "ACAO03" VARCHAR(100)
+  "PRAZO" DATETIME
+  "RESNUM" INTEGER [default: 0]
+  "RESNOME" VARCHAR(40)
+  "LACAO" TINYINT(1)
+  "SAC" INTEGER [default: 0]
+  "RACF" INTEGER [default: 0]
+  "PARADA" TINYINT(1)
+  "RELACAO" VARCHAR(1)
+  Indexes {
+    RAT [name: "RAT"]
+  }
+}
+
+// Origem: rnc.dbf (DBF)
+Table "rnc" {
+  Note: "Origem: rnc.dbf"
+  "RNC" INTEGER [default: 0]
+  "CODRNC" VARCHAR(1)
+  "DESCRI" VARCHAR(30)
+  "CODIGO" VARCHAR(20)
+  "REVI" VARCHAR(2)
+  "OFC" VARCHAR(20)
+  "SETOR" VARCHAR(20)
+  "RASTRO" VARCHAR(20)
+  "NOME" VARCHAR(45)
+  "NFC" VARCHAR(20)
+  "RIC" VARCHAR(20)
+  "NFIC" VARCHAR(20)
+  "PED" VARCHAR(20)
+  "QTL" INTEGER [default: 0]
+  "QTLN" INTEGER [default: 0]
+  "DEC01" VARCHAR(100)
+  "DEC02" VARCHAR(100)
+  "DEC03" VARCHAR(100)
+  "DATA" DATETIME
+  "DISPO" VARCHAR(1)
+  "DATAD" DATETIME
+  "RAC" VARCHAR(1)
+  "SACR" VARCHAR(20)
+  "OBS01" VARCHAR(100)
+  "OBS02" VARCHAR(100)
+  "OBS03" VARCHAR(100)
+  "OBS04" VARCHAR(100)
+  "RESP" VARCHAR(30)
+  "ACAO01" VARCHAR(60)
+  "ACAO02" VARCHAR(60)
+  "ACAO03" VARCHAR(60)
+  "ACAO04" VARCHAR(60)
+  "LAUDO" VARCHAR(1)
+  "DATAR" DATETIME
+  "DIST01" VARCHAR(60)
+  "DIST02" VARCHAR(60)
+  "REFDOC" VARCHAR(15)
+  "QTDEREI" INTEGER [default: 0]
+  "TIPCAD" VARCHAR(1)
+  "CLIFOR" INTEGER [default: 0]
+  "TIPACAO" VARCHAR(1)
+  "NSAC" INTEGER [default: 0]
+  "NRACF" INTEGER [default: 0]
+  "TIPERR" VARCHAR(1)
+  "UNID" VARCHAR(2)
+  "AREA" VARCHAR(2)
+  "RESPO" VARCHAR(40)
+  "CARGO" VARCHAR(40)
+  "CODRET" VARCHAR(1)
+  "INCUSER" VARCHAR(10)
+  "INCDATA" DATETIME
+  "FECUSER" VARCHAR(10)
+  "FECDATA" DATETIME
+  "ABRNUM" INTEGER [default: 0]
+  "ABRNOM" VARCHAR(40)
+  "SELHI" DECIMAL(5,2) [default: 0]
+  "SELHF" DECIMAL(5,2) [default: 0]
+  "SELDI" DATETIME
+  "SELDF" DATETIME
+  "SELVL" DECIMAL(12,2) [default: 0]
+  "SELTH" DECIMAL(12,2) [default: 0]
+  "RETHI" DECIMAL(5,2) [default: 0]
+  "RETHF" DECIMAL(5,2) [default: 0]
+  "RETDI" DATETIME
+  "RETDF" DATETIME
+  "RETVL" DECIMAL(12,2) [default: 0]
+  "RETTH" DECIMAL(12,2) [default: 0]
+  "REIQT" DECIMAL(12,2) [default: 0]
+  "REIHI" DECIMAL(5,2) [default: 0]
+  "REIHF" DECIMAL(5,2) [default: 0]
+  "REIDI" DATETIME
+  "REIDF" DATETIME
+  "REIVL" DECIMAL(12,2) [default: 0]
+  "REITH" DECIMAL(12,2) [default: 0]
+  "MATCOD" VARCHAR(20)
+  "MATNOM" VARCHAR(40)
+  "RETOPR" INTEGER [default: 0]
+  "RETOP2" INTEGER [default: 0]
+  "RETOP3" INTEGER [default: 0]
+  "RETNOM" VARCHAR(40)
+  "RETNO2" VARCHAR(40)
+  "RETNO3" VARCHAR(40)
+  "RETVAL" DECIMAL(12,2) [default: 0]
+  "CRM" INTEGER [default: 0]
+  "TIPOE" VARCHAR(1)
+  "DESCE" VARCHAR(40)
+  "CBUSCA" VARCHAR(24)
+  "FECHADA" TINYINT(1)
+  "RAT" INTEGER [default: 0]
+  "REHHI" DECIMAL(5,2) [default: 0]
+  "REHHF" DECIMAL(5,2) [default: 0]
+  "REHDI" DATETIME
+  "REHDF" DATETIME
+  "REHVL" DECIMAL(12,2) [default: 0]
+  "REHTH" DECIMAL(12,2) [default: 0]
+  "VALSUC" DECIMAL(12,2) [default: 0]
+  "QTDSUC" INTEGER [default: 0]
+  "PECSUC" DECIMAL(18,4) [default: 0]
+  Indexes {
+    RNC [name: "RNC"]
+    DATA [name: "RNC-2"]
+  }
+}
+
+// Origem: rnci.dbf (DBF)
+Table "rnci" {
+  Note: "Origem: rnci.dbf"
+  "RNC" INTEGER [default: 0]
+  "QTNC" INTEGER [default: 0]
+  "SETCOD" VARCHAR(1)
+  "CODERR" VARCHAR(3)
+  Indexes {
+    RNC [name: "RNCI"]
+  }
+}
+
+// Origem: sac.dbf (DBF)
+Table "sac" {
+  Note: "Origem: sac.dbf"
+  "RNC" INTEGER [default: 0]
+  "RAT" INTEGER [default: 0]
+  "DOCUMENTO" VARCHAR(25)
+  "RASTRO" VARCHAR(12)
+  "DATA" DATETIME
+  "NOME" VARCHAR(40)
+  "CODIGO" VARCHAR(24)
+  "QTL" INTEGER [default: 0]
+  "QTN" INTEGER [default: 0]
+  "CLIENTE" INTEGER [default: 0]
+  "CLINOME" VARCHAR(50)
+  "DESC01" VARCHAR(100)
+  "DESC02" VARCHAR(100)
+  "DESC03" VARCHAR(100)
+  "DESC04" VARCHAR(80)
+  "OS" DECIMAL(8,2) [default: 0]
+  "NF" INTEGER [default: 0]
+  "ITEM" INTEGER [default: 0]
+  "TIPSAC" VARCHAR(2)
+  "DATOS" DATETIME
+  "DATEN" DATETIME
+  "PRAZO" DATETIME
+  "DATAF" DATETIME
+  "EFICA" VARCHAR(1)
+  "NOVA" INTEGER [default: 0]
+  "TIPO" VARCHAR(1)
+  "FECHO" DATETIME
+  "CONG" VARCHAR(40)
+  "RESUL" VARCHAR(1)
+  "EQP01" VARCHAR(25)
+  "EQP02" VARCHAR(25)
+  "EQP03" VARCHAR(25)
+  "EQP04" VARCHAR(25)
+  "PF" INTEGER [default: 0]
+  "FEMEAREV" INTEGER [default: 0]
+  "FEMEAREVD" DATETIME
+  "INCDATA" DATETIME
+  "INCUSER" VARCHAR(10)
+  "NOTSETOR" VARCHAR(25)
+  "ANTERIOR" INTEGER [default: 0]
+  "FECNOME" VARCHAR(40)
+  "SAC" INTEGER [default: 0]
+  "PMED01" VARCHAR(30)
+  "PMED02" VARCHAR(30)
+  "PMED03" VARCHAR(30)
+  "PMED04" VARCHAR(30)
+  "PMED05" VARCHAR(30)
+  "PAMB01" VARCHAR(30)
+  "PAMB02" VARCHAR(30)
+  "PAMB03" VARCHAR(30)
+  "PAMB04" VARCHAR(30)
+  "PAMB05" VARCHAR(30)
+  "PMAO01" VARCHAR(30)
+  "PMAO02" VARCHAR(30)
+  "PMAO03" VARCHAR(30)
+  "PMAO04" VARCHAR(30)
+  "PMAO05" VARCHAR(30)
+  "PMAQ01" VARCHAR(30)
+  "PMAQ02" VARCHAR(30)
+  "PMAQ03" VARCHAR(30)
+  "PMAQ04" VARCHAR(30)
+  "PMAQ05" VARCHAR(30)
+  "PMET01" VARCHAR(30)
+  "PMET02" VARCHAR(30)
+  "PMET03" VARCHAR(30)
+  "PMET04" VARCHAR(30)
+  "PMET05" VARCHAR(30)
+  "PMAT01" VARCHAR(30)
+  "PMAT02" VARCHAR(30)
+  "PMAT03" VARCHAR(30)
+  "PMAT04" VARCHAR(30)
+  "PMAT05" VARCHAR(30)
+  "POA" INTEGER [default: 0]
+  "REVPF" VARCHAR(1)
+  "REVPC" VARCHAR(1)
+  "REVPFOBS" VARCHAR(30)
+  "REVPCOBS" VARCHAR(30)
+  Indexes {
+    SAC [name: "SAC"]
+    STR(OS,8,2)+STR(NF,8)+STR(ITEM,3) [name: "SAC-2"]
+    CODIGO [name: "SAC-3"]
+  }
+}
+
+// Origem: saci.dbf (DBF)
+Table "saci" {
+  Note: "Origem: saci.dbf"
+  "SAC" INTEGER [default: 0]
+  "CAUSA" INTEGER [default: 0]
+  "ACAO" INTEGER [default: 0]
+  "AREA" VARCHAR(2)
+  "DESARE" VARCHAR(30)
+  "RESPON" VARCHAR(40)
+  "ACAO01" VARCHAR(100)
+  "ACAO02" VARCHAR(100)
+  "ACAO03" VARCHAR(100)
+  "ACAO04" VARCHAR(100)
+  "ACAO05" VARCHAR(100)
+  "ACAO06" VARCHAR(100)
+  "ACAO07" VARCHAR(100)
+  "ACAO08" VARCHAR(100)
+  "ACAO09" VARCHAR(100)
+  "ACAO10" VARCHAR(100)
+  "PRAZO" DATETIME
+  "DATAF" DATETIME
+  "FECHO" DATETIME
+  "POSICAO" VARCHAR(1)
+  "INV01" VARCHAR(100)
+  "INV02" VARCHAR(100)
+  "INV03" VARCHAR(100)
+  "INV04" VARCHAR(100)
+  "INV05" VARCHAR(100)
+  "INV06" VARCHAR(100)
+  "INV07" VARCHAR(100)
+  "INV08" VARCHAR(100)
+  "INV09" VARCHAR(100)
+  "INV10" VARCHAR(100)
+  "ACM01" VARCHAR(100)
+  "ACM02" VARCHAR(100)
+  "ACM03" VARCHAR(100)
+  "ACM04" VARCHAR(100)
+  "ACM05" VARCHAR(100)
+  "ACM06" VARCHAR(100)
+  "LPAE" TINYINT(1)
+  Indexes {
+    SAC [name: "SACI"]
+  }
+}
+

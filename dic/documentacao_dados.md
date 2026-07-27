@@ -1,7 +1,9 @@
-# ??? Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 26/07/2026
+# Dicionario de Estruturas de Dados do Projeto
+> Varredura automatica realizada em: 27/07/2026
 
-## ?? Tabela DBF: `dic.dbf`
+## Tabela DBF: `dic.dbf`
+> **Origem:** `dic.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | ARQUIVO | C | 30 | 0 |
@@ -13,7 +15,9 @@
 - Tag: `MANARQ` Expressao: `ARQUIVO`
 
 ---
-## ?? Tabela DBF: `dici.dbf`
+## Tabela DBF: `dici.dbf`
+> **Origem:** `dici.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | TABELA | C | 30 | 0 |
@@ -28,7 +32,9 @@
 - Tag: `DICI` Expressao: `TABELA+CAMPO`
 
 ---
-## ?? Tabela DBF: `dicidx.dbf`
+## Tabela DBF: `dicidx.dbf`
+> **Origem:** `dicidx.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | ARQUIVO | C | 30 | 0 |

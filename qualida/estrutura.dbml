@@ -1,0 +1,990 @@
+// Origem: ac2.dbf (DBF)
+Table "ac2" {
+  Note: "Origem: ac2.dbf"
+  "ACP" INTEGER [default: 0]
+  "DATA" DATETIME
+  "CLIENTE" INTEGER [default: 0]
+  "CLINOME" VARCHAR(50)
+  "DESENHO" VARCHAR(24)
+  "DESCRI" VARCHAR(40)
+  "AMOSTRA" VARCHAR(25)
+  "INSTRU" VARCHAR(8)
+  "DESCII" VARCHAR(40)
+  "CARAC" VARCHAR(40)
+  "SUMX" DECIMAL(12,4) [default: 0]
+  "MEDX" DECIMAL(9,4) [default: 0]
+  "SUMR" DECIMAL(9,4) [default: 0]
+  "MEDR" DECIMAL(8,4) [default: 0]
+  "MIN" DECIMAL(9,4) [default: 0]
+  "MAX" DECIMAL(9,4) [default: 0]
+  "X01" DECIMAL(9,4) [default: 0]
+  "X02" DECIMAL(9,4) [default: 0]
+  "X03" DECIMAL(9,4) [default: 0]
+  "X04" DECIMAL(9,4) [default: 0]
+  "X05" DECIMAL(9,4) [default: 0]
+  "X06" DECIMAL(9,4) [default: 0]
+  "X07" DECIMAL(9,4) [default: 0]
+  "X08" DECIMAL(9,4) [default: 0]
+  "X09" DECIMAL(9,4) [default: 0]
+  "X10" DECIMAL(9,4) [default: 0]
+  "X11" DECIMAL(9,4) [default: 0]
+  "X12" DECIMAL(9,4) [default: 0]
+  "X13" DECIMAL(9,4) [default: 0]
+  "X14" DECIMAL(9,4) [default: 0]
+  "X15" DECIMAL(9,4) [default: 0]
+  "X16" DECIMAL(9,4) [default: 0]
+  "X17" DECIMAL(9,4) [default: 0]
+  "X18" DECIMAL(9,4) [default: 0]
+  "X19" DECIMAL(9,4) [default: 0]
+  "X20" DECIMAL(9,4) [default: 0]
+  "X21" DECIMAL(9,4) [default: 0]
+  "X22" DECIMAL(9,4) [default: 0]
+  "X23" DECIMAL(9,4) [default: 0]
+  "X24" DECIMAL(9,4) [default: 0]
+  "X25" DECIMAL(9,4) [default: 0]
+  "X26" DECIMAL(9,4) [default: 0]
+  "X27" DECIMAL(9,4) [default: 0]
+  "X28" DECIMAL(9,4) [default: 0]
+  "X29" DECIMAL(9,4) [default: 0]
+  "X30" DECIMAL(9,4) [default: 0]
+  "R01" DECIMAL(8,4) [default: 0]
+  "R02" DECIMAL(8,4) [default: 0]
+  "R03" DECIMAL(8,4) [default: 0]
+  "R04" DECIMAL(8,4) [default: 0]
+  "R05" DECIMAL(8,4) [default: 0]
+  "R06" DECIMAL(8,4) [default: 0]
+  "R07" DECIMAL(8,4) [default: 0]
+  "R08" DECIMAL(8,4) [default: 0]
+  "R09" DECIMAL(8,4) [default: 0]
+  "R10" DECIMAL(8,4) [default: 0]
+  "R11" DECIMAL(8,4) [default: 0]
+  "R12" DECIMAL(8,4) [default: 0]
+  "R13" DECIMAL(8,4) [default: 0]
+  "R14" DECIMAL(8,4) [default: 0]
+  "R15" DECIMAL(8,4) [default: 0]
+  "R16" DECIMAL(8,4) [default: 0]
+  "R17" DECIMAL(8,4) [default: 0]
+  "R18" DECIMAL(8,4) [default: 0]
+  "R19" DECIMAL(8,4) [default: 0]
+  "R20" DECIMAL(8,4) [default: 0]
+  "R21" DECIMAL(8,4) [default: 0]
+  "R22" DECIMAL(8,4) [default: 0]
+  "R23" DECIMAL(8,4) [default: 0]
+  "R24" DECIMAL(8,4) [default: 0]
+  "R25" DECIMAL(8,4) [default: 0]
+  "R26" DECIMAL(8,4) [default: 0]
+  "R27" DECIMAL(8,4) [default: 0]
+  "R28" DECIMAL(8,4) [default: 0]
+  "R29" DECIMAL(8,4) [default: 0]
+  "R30" DECIMAL(8,4) [default: 0]
+  "SIGMA" DECIMAL(12,6) [default: 0]
+  "PP" DECIMAL(10,4) [default: 0]
+  "PPKA" DECIMAL(10,4) [default: 0]
+  "PPKB" DECIMAL(10,4) [default: 0]
+  "PPK" DECIMAL(10,4) [default: 0]
+  "ACD" INTEGER [default: 0]
+  "LIC" DECIMAL(9,4) [default: 0]
+  "LSC" DECIMAL(9,4) [default: 0]
+  "RMAX" DECIMAL(8,4) [default: 0]
+  "RMIN" DECIMAL(8,4) [default: 0]
+  "XMAX" DECIMAL(9,4) [default: 0]
+  "XMIN" DECIMAL(9,4) [default: 0]
+  "DESV" DECIMAL(8,4) [default: 0]
+  "ELANUM" INTEGER [default: 0]
+  "ELANOM" VARCHAR(40)
+  "ELADAT" DATETIME
+  "RESNUM" INTEGER [default: 0]
+  "RESNOM" VARCHAR(40)
+  "RESDAT" DATETIME
+  "FORAE" INTEGER [default: 0]
+  "FORAX" INTEGER [default: 0]
+  "FORAR" INTEGER [default: 0]
+  "RLSC" DECIMAL(8,4) [default: 0]
+  "MODAX" DECIMAL(9,4) [default: 0]
+  "MODAR" DECIMAL(8,4) [default: 0]
+  "MEDIX" DECIMAL(9,4) [default: 0]
+  "MEDIR" DECIMAL(8,4) [default: 0]
+  "SEQ" INTEGER [default: 0]
+  "SSQ" INTEGER [default: 0]
+  "OPERACAO" VARCHAR(70)
+  "REVD" VARCHAR(5)
+  "DATAR" DATETIME
+  "DISTNOR" VARCHAR(1)
+  "OBS" VARCHAR(40)
+  Indexes {
+    ACP [name: "ACP"]
+    ACD [name: "ACD"]
+  }
+}
+
+// Origem: acd.dbf (DBF)
+Table "acd" {
+  Note: "Origem: acd.dbf"
+  "ACD" INTEGER [default: 0]
+  "DATA" DATETIME
+  "CLIENTE" INTEGER [default: 0]
+  "CLINOME" VARCHAR(50)
+  "DESENHO" VARCHAR(24)
+  "DESCRI" VARCHAR(40)
+  "INSTRU" VARCHAR(5)
+  "DESCII" VARCHAR(25)
+  "CARAC" VARCHAR(40)
+  "MIN" DECIMAL(9,4) [default: 0]
+  "MAX" DECIMAL(9,4) [default: 0]
+  "CONV" TINYINT(1)
+  "SEQ" INTEGER [default: 0]
+  "SSQ" INTEGER [default: 0]
+  "OPERACAO" VARCHAR(70)
+  "DATAR" DATETIME
+  "REVD" VARCHAR(5)
+  Indexes {
+    ACD [name: "ACD"]
+  }
+}
+
+// Origem: acdi.dbf (DBF)
+Table "acdi" {
+  Note: "Origem: acdi.dbf"
+  "ACD" INTEGER [default: 0]
+  "VAL01" DECIMAL(9,4) [default: 0]
+  "VAL02" DECIMAL(9,4) [default: 0]
+  "VAL03" DECIMAL(9,4) [default: 0]
+  "VAL04" DECIMAL(9,4) [default: 0]
+  "VAL05" DECIMAL(9,4) [default: 0]
+  "MEDX" DECIMAL(9,4) [default: 0]
+  "VALR" DECIMAL(9,4) [default: 0]
+  "DATA" DATETIME
+  "HORA" DECIMAL(5,2) [default: 0]
+  "ACP" INTEGER [default: 0]
+  "AEP" INTEGER [default: 0]
+  "ORDEM" INTEGER [default: 0]
+  "LIC" DECIMAL(9,4) [default: 0]
+  "LSC" DECIMAL(9,4) [default: 0]
+  Indexes {
+    ACD [name: "ACDI"]
+    STR(ACD,8)+DTOS(DATA)+STR(HORA,5,2) [name: "ACDI-2"]
+    ACP [name: "ACDI-3"]
+    AEP [name: "ACDI-4"]
+  }
+}
+
+// Origem: acp.dbf (DBF)
+Table "acp" {
+  Note: "Origem: acp.dbf"
+  "ACP" INTEGER [default: 0]
+  "DATA" DATETIME
+  "CLIENTE" INTEGER [default: 0]
+  "CLINOME" VARCHAR(50)
+  "DESENHO" VARCHAR(24)
+  "DESCRI" VARCHAR(40)
+  "AMOSTRA" VARCHAR(25)
+  "INSTRU" VARCHAR(8)
+  "DESCII" VARCHAR(40)
+  "CARAC" VARCHAR(40)
+  "SUMX" DECIMAL(12,4) [default: 0]
+  "MEDX" DECIMAL(9,4) [default: 0]
+  "SUMR" DECIMAL(9,4) [default: 0]
+  "MEDR" DECIMAL(8,4) [default: 0]
+  "MIN" DECIMAL(9,4) [default: 0]
+  "MAX" DECIMAL(9,4) [default: 0]
+  "X01" DECIMAL(9,4) [default: 0]
+  "X02" DECIMAL(9,4) [default: 0]
+  "X03" DECIMAL(9,4) [default: 0]
+  "X04" DECIMAL(9,4) [default: 0]
+  "X05" DECIMAL(9,4) [default: 0]
+  "X06" DECIMAL(9,4) [default: 0]
+  "X07" DECIMAL(9,4) [default: 0]
+  "X08" DECIMAL(9,4) [default: 0]
+  "X09" DECIMAL(9,4) [default: 0]
+  "X10" DECIMAL(9,4) [default: 0]
+  "X11" DECIMAL(9,4) [default: 0]
+  "X12" DECIMAL(9,4) [default: 0]
+  "X13" DECIMAL(9,4) [default: 0]
+  "X14" DECIMAL(9,4) [default: 0]
+  "X15" DECIMAL(9,4) [default: 0]
+  "X16" DECIMAL(9,4) [default: 0]
+  "X17" DECIMAL(9,4) [default: 0]
+  "X18" DECIMAL(9,4) [default: 0]
+  "X19" DECIMAL(9,4) [default: 0]
+  "X20" DECIMAL(9,4) [default: 0]
+  "X21" DECIMAL(9,4) [default: 0]
+  "X22" DECIMAL(9,4) [default: 0]
+  "X23" DECIMAL(9,4) [default: 0]
+  "X24" DECIMAL(9,4) [default: 0]
+  "X25" DECIMAL(9,4) [default: 0]
+  "X26" DECIMAL(9,4) [default: 0]
+  "X27" DECIMAL(9,4) [default: 0]
+  "X28" DECIMAL(9,4) [default: 0]
+  "X29" DECIMAL(9,4) [default: 0]
+  "X30" DECIMAL(9,4) [default: 0]
+  "R01" DECIMAL(8,4) [default: 0]
+  "R02" DECIMAL(8,4) [default: 0]
+  "R03" DECIMAL(8,4) [default: 0]
+  "R04" DECIMAL(8,4) [default: 0]
+  "R05" DECIMAL(8,4) [default: 0]
+  "R06" DECIMAL(8,4) [default: 0]
+  "R07" DECIMAL(8,4) [default: 0]
+  "R08" DECIMAL(8,4) [default: 0]
+  "R09" DECIMAL(8,4) [default: 0]
+  "R10" DECIMAL(8,4) [default: 0]
+  "R11" DECIMAL(8,4) [default: 0]
+  "R12" DECIMAL(8,4) [default: 0]
+  "R13" DECIMAL(8,4) [default: 0]
+  "R14" DECIMAL(8,4) [default: 0]
+  "R15" DECIMAL(8,4) [default: 0]
+  "R16" DECIMAL(8,4) [default: 0]
+  "R17" DECIMAL(8,4) [default: 0]
+  "R18" DECIMAL(8,4) [default: 0]
+  "R19" DECIMAL(8,4) [default: 0]
+  "R20" DECIMAL(8,4) [default: 0]
+  "R21" DECIMAL(8,4) [default: 0]
+  "R22" DECIMAL(8,4) [default: 0]
+  "R23" DECIMAL(8,4) [default: 0]
+  "R24" DECIMAL(8,4) [default: 0]
+  "R25" DECIMAL(8,4) [default: 0]
+  "R26" DECIMAL(8,4) [default: 0]
+  "R27" DECIMAL(8,4) [default: 0]
+  "R28" DECIMAL(8,4) [default: 0]
+  "R29" DECIMAL(8,4) [default: 0]
+  "R30" DECIMAL(8,4) [default: 0]
+  "SIGMA" DECIMAL(12,6) [default: 0]
+  "PP" DECIMAL(10,4) [default: 0]
+  "PPKA" DECIMAL(10,4) [default: 0]
+  "PPKB" DECIMAL(10,4) [default: 0]
+  "PPK" DECIMAL(10,4) [default: 0]
+  "ACD" INTEGER [default: 0]
+  "LIC" DECIMAL(9,4) [default: 0]
+  "LSC" DECIMAL(9,4) [default: 0]
+  "RMAX" DECIMAL(8,4) [default: 0]
+  "RMIN" DECIMAL(8,4) [default: 0]
+  "XMAX" DECIMAL(9,4) [default: 0]
+  "XMIN" DECIMAL(9,4) [default: 0]
+  "DESV" DECIMAL(8,4) [default: 0]
+  "ELANUM" INTEGER [default: 0]
+  "ELANOM" VARCHAR(40)
+  "ELADAT" DATETIME
+  "RESNUM" INTEGER [default: 0]
+  "RESNOM" VARCHAR(40)
+  "RESDAT" DATETIME
+  "FORAE" INTEGER [default: 0]
+  "FORAX" INTEGER [default: 0]
+  "FORAR" INTEGER [default: 0]
+  "RLSC" DECIMAL(8,4) [default: 0]
+  "MODAX" DECIMAL(9,4) [default: 0]
+  "MODAR" DECIMAL(8,4) [default: 0]
+  "MEDIX" DECIMAL(9,4) [default: 0]
+  "MEDIR" DECIMAL(8,4) [default: 0]
+  "SEQ" INTEGER [default: 0]
+  "SSQ" INTEGER [default: 0]
+  "OPERACAO" VARCHAR(70)
+  "REVD" VARCHAR(5)
+  "DATAR" DATETIME
+  "DISTNOR" VARCHAR(1)
+  "OBS" VARCHAR(40)
+  Indexes {
+    ACP [name: "ACP"]
+    ACD [name: "ACD"]
+  }
+}
+
+// Origem: acpr.dbf (DBF)
+Table "acpr" {
+  Note: "Origem: acpr.dbf"
+  "ACP" INTEGER [default: 0]
+  "VALOR" DECIMAL(12,4) [default: 0]
+  "QTDE" INTEGER [default: 0]
+  "TOTAL" DECIMAL(15,4) [default: 0]
+  Indexes {
+    STR(ACP,8)+STR(VALOR,10,4) [name: "ACPVALOR"]
+    ACP [name: "ACP"]
+  }
+}
+
+// Origem: acpx.dbf (DBF)
+Table "acpx" {
+  Note: "Origem: acpx.dbf"
+  "ACP" INTEGER [default: 0]
+  "VALOR" DECIMAL(12,4) [default: 0]
+  "QTDE" INTEGER [default: 0]
+  "TOTAL" DECIMAL(15,4) [default: 0]
+  Indexes {
+    STR(ACP,8)+STR(VALOR,10,4) [name: "ACPVALOR"]
+    ACP [name: "ACP"]
+  }
+}
+
+// Origem: aepr.dbf (DBF)
+Table "aepr" {
+  Note: "Origem: aepr.dbf"
+  "ACP" INTEGER [default: 0]
+  "VALOR" DECIMAL(12,4) [default: 0]
+  "QTDE" INTEGER [default: 0]
+  "TOTAL" DECIMAL(15,4) [default: 0]
+  Indexes {
+    STR(ACP,8)+STR(VALOR,10,4) [name: "ACPVALOR"]
+    ACP [name: "ACP"]
+  }
+}
+
+// Origem: aepx.dbf (DBF)
+Table "aepx" {
+  Note: "Origem: aepx.dbf"
+  "ACP" INTEGER [default: 0]
+  "VALOR" DECIMAL(12,4) [default: 0]
+  "QTDE" INTEGER [default: 0]
+  "TOTAL" DECIMAL(15,4) [default: 0]
+  Indexes {
+    STR(ACP,8)+STR(VALOR,10,4) [name: "ACPVALOR"]
+    ACP [name: "ACP"]
+  }
+}
+
+// Origem: ci.dbf (DBF)
+Table "ci" {
+  Note: "Origem: ci.dbf"
+  "CI" INTEGER [default: 0]
+  "TIPOI" VARCHAR(1)
+  "DESCRI" VARCHAR(40)
+  "DESENHO" VARCHAR(24)
+  "REVD" VARCHAR(5)
+  "DATAD" DATETIME
+  "DATAR" DATETIME
+  "PEDIDO" VARCHAR(20)
+  "ORDEM" VARCHAR(20)
+  "QTL" VARCHAR(20)
+  "QTI" VARCHAR(20)
+  "RASTRO" VARCHAR(12)
+  "CLIENTE" INTEGER [default: 0]
+  "CLINOME" VARCHAR(50)
+  "OBS01" VARCHAR(80)
+  "OBS02" VARCHAR(80)
+  "LAUDOF" VARCHAR(1)
+  "DATA" DATETIME
+  "INSNUM" INTEGER [default: 0]
+  "INSNOM" VARCHAR(40)
+  Indexes {
+    CI [name: "CI"]
+  }
+}
+
+// Origem: cic.dbf (DBF)
+Table "cic" {
+  Note: "Origem: cic.dbf"
+  "DESENHO" VARCHAR(24)
+  "DESCRI" VARCHAR(40)
+  "DATAR" DATETIME
+  "DATAD" DATETIME
+  "REVD" VARCHAR(5)
+  "CLIENTE" INTEGER [default: 0]
+  Indexes {
+    DESENHO [name: "DESENHO"]
+  }
+}
+
+// Origem: cici.dbf (DBF)
+Table "cici" {
+  Note: "Origem: cici.dbf"
+  "DESENHO" VARCHAR(24)
+  "ENC" DECIMAL(9,4) [default: 0]
+  "CESPE" VARCHAR(40)
+  "ESPE" DECIMAL(9,2) [default: 0]
+  "MAX" DECIMAL(9,4) [default: 0]
+  "MIN" DECIMAL(9,4) [default: 0]
+  "UND" VARCHAR(20)
+  "LOCALI" VARCHAR(30)
+  Indexes {
+    DESENHO [name: "DESENHO"]
+  }
+}
+
+// Origem: cii.dbf (DBF)
+Table "cii" {
+  Note: "Origem: cii.dbf"
+  "CI" INTEGER [default: 0]
+  "ITEM" INTEGER [default: 0]
+  "DESVIO" DECIMAL(9,4) [default: 0]
+  "ENC" DECIMAL(9,4) [default: 0]
+  "CENC" VARCHAR(30)
+  "CESPE" VARCHAR(40)
+  "ESPE" DECIMAL(9,4) [default: 0]
+  "MAX" DECIMAL(9,4) [default: 0]
+  "MIN" DECIMAL(9,4) [default: 0]
+  "UND" VARCHAR(20)
+  "LOCALI" VARCHAR(30)
+  "LAUDO" VARCHAR(1)
+  Indexes {
+    CI [name: "CI"]
+  }
+}
+
+// Origem: crtaum.dbf (DBF)
+Table "crtaum" {
+  Note: "Origem: crtaum.dbf"
+  "TIPO" VARCHAR(1)
+  "DATA" DATETIME
+  "HORA" DECIMAL(5,2) [default: 0]
+  "VALOR" INTEGER [default: 0]
+  "REFCTR" VARCHAR(1)
+  "SALA" VARCHAR(5)
+  Indexes {
+    DATA [name: "DATA"]
+    REFCTR [name: "REFCTR"]
+  }
+}
+
+// Origem: etippp.dbf (DBF)
+Table "etippp" {
+  Note: "Origem: etippp.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CODIGO" VARCHAR(24)
+  "NOME" VARCHAR(50)
+  "SUFIX" VARCHAR(5)
+  "ENGENHA" VARCHAR(50)
+}
+
+// Origem: gc.dbf (DBF)
+Table "gc" {
+  Note: "Origem: gc.dbf"
+  "GC" INTEGER [default: 0]
+  "CLIENTE" INTEGER [default: 0]
+  "CLINOME" VARCHAR(40)
+  "CODIGO" VARCHAR(24)
+  "NOME" VARCHAR(40)
+  "CODME01" VARCHAR(12)
+  "NOMME01" VARCHAR(40)
+  "SEQ" INTEGER [default: 0]
+  "SSQ" INTEGER [default: 0]
+  "CARAC" VARCHAR(50)
+  "ESPEC" VARCHAR(30)
+  "FREQ" VARCHAR(10)
+  "TAM" VARCHAR(10)
+  "CODME04" VARCHAR(8)
+  "NOMME04" VARCHAR(40)
+  "CO2ME04" VARCHAR(8)
+  "NO2ME04" VARCHAR(40)
+  "UNIDME" VARCHAR(10)
+  "REFCTR" VARCHAR(1)
+  "VALX" DECIMAL(9,4) [default: 0]
+  "LIC" DECIMAL(9,4) [default: 0]
+  "LSC" DECIMAL(9,4) [default: 0]
+  "LIE" DECIMAL(9,4) [default: 0]
+  "LSE" DECIMAL(9,4) [default: 0]
+  "VINI" DECIMAL(9,4) [default: 0]
+  "VDIV" DECIMAL(7,4) [default: 0]
+  "VALR" DECIMAL(7,4) [default: 0]
+  "LSCR" DECIMAL(7,4) [default: 0]
+  "VDIR" DECIMAL(7,4) [default: 0]
+  "VMAX" DECIMAL(9,4) [default: 0]
+  "RMAX" DECIMAL(7,4) [default: 0]
+  "ACP" INTEGER [default: 0]
+  "AEP" INTEGER [default: 0]
+  "OBS" VARCHAR(80)
+  Indexes {
+    GC [name: "GC"]
+    REFCTR [name: "REFCTR"]
+  }
+}
+
+// Origem: gctem.dbf (DBF)
+Table "gctem" {
+  Note: "Origem: gctem.dbf"
+  "ITEM" INTEGER [default: 0]
+  "REFCTR" VARCHAR(1)
+  Indexes {
+    REFCTR [name: "REFCTR"]
+  }
+}
+
+// Origem: gctemp.dbf (DBF)
+Table "gctemp" {
+  Note: "Origem: gctemp.dbf"
+  "ITEM" INTEGER [default: 0]
+  "REFCTR" VARCHAR(1)
+  Indexes {
+    ITEM [name: "ITEM"]
+    REFCTR [name: "REFCTR"]
+  }
+}
+
+// Origem: opae.dbf (DBF)
+Table "opae" {
+  Note: "Origem: opae.dbf"
+  "OPAE" INTEGER [default: 0]
+  "CLIENTE" INTEGER [default: 0]
+  "DATA" DATETIME
+  "CODIGO" VARCHAR(24)
+  "RASTRO" VARCHAR(15)
+  "QTDE" INTEGER [default: 0]
+  "CODMP04" INTEGER [default: 0]
+  Indexes {
+    OPAE [name: "OPAE"]
+  }
+}
+
+// Origem: opai.dbf (DBF)
+Table "opai" {
+  Note: "Origem: opai.dbf"
+  "OPAE" INTEGER [default: 0]
+  "ESPEC" VARCHAR(100)
+  "LAUDO" VARCHAR(1)
+}
+
+// Origem: pac.dbf (DBF)
+Table "pac" {
+  Note: "Origem: pac.dbf"
+  "PAC" INTEGER [default: 0]
+  "ACP" INTEGER [default: 0]
+  "AEP" INTEGER [default: 0]
+  "CLIENTE" INTEGER [default: 0]
+  "CLINOME" VARCHAR(60)
+  "CODIGO" VARCHAR(24)
+  "DATA" DATETIME
+  "NOME" VARCHAR(40)
+  "ESPECI" VARCHAR(40)
+  "CARAC" VARCHAR(40)
+  "INSTRU" VARCHAR(8)
+  "DESCII" VARCHAR(40)
+  "SEQ" INTEGER [default: 0]
+  "SSQ" INTEGER [default: 0]
+  "EQU" VARCHAR(4)
+  "NEQU" VARCHAR(40)
+  "UNID" VARCHAR(2)
+  "RMIN" DECIMAL(9,3) [default: 0]
+  "RMAX" DECIMAL(9,3) [default: 0]
+  "VMAX" DECIMAL(9,3) [default: 0]
+  "VMIN" DECIMAL(9,3) [default: 0]
+  "MEDX" DECIMAL(9,3) [default: 0]
+  "PP" DECIMAL(12,4) [default: 0]
+  "XMAX" DECIMAL(9,3) [default: 0]
+  "XMIN" DECIMAL(9,3) [default: 0]
+  "MEDR" DECIMAL(9,3) [default: 0]
+  "PPK" DECIMAL(12,4) [default: 0]
+  "IDE01" VARCHAR(70)
+  "IDE02" VARCHAR(70)
+  "IDE04" VARCHAR(70)
+  "IDE03" VARCHAR(70)
+  "CAV01" VARCHAR(70)
+  "CAV02" VARCHAR(70)
+  "CAV03" VARCHAR(70)
+  "CAV04" VARCHAR(70)
+  "ACA01" VARCHAR(70)
+  "ACA02" VARCHAR(70)
+  "ACA03" VARCHAR(70)
+  "ACA04" VARCHAR(70)
+  "SETOR" VARCHAR(20)
+  "SETCOD" VARCHAR(1)
+  "DESSEQ" VARCHAR(70)
+  "VALP" DECIMAL(12,2) [default: 0]
+  "NXMIN" DECIMAL(9,3) [default: 0]
+  "NXMAX" DECIMAL(9,3) [default: 0]
+  "NXMED" DECIMAL(9,3) [default: 0]
+  "NRMIN" DECIMAL(9,3) [default: 0]
+  "NRMAX" DECIMAL(9,3) [default: 0]
+  "NRMED" DECIMAL(9,3) [default: 0]
+  "NPP" DECIMAL(12,4) [default: 0]
+  "NPPK" DECIMAL(12,4) [default: 0]
+  "NVALP" DECIMAL(12,2) [default: 0]
+  "NAEP" INTEGER [default: 0]
+  "NACP" INTEGER [default: 0]
+  "NVMIN" DECIMAL(12,3) [default: 0]
+  "NVMAX" DECIMAL(12,3) [default: 0]
+  Indexes {
+    PAC [name: "PAC"]
+  }
+}
+
+// Origem: paee.dbf (DBF)
+Table "paee" {
+  Note: "Origem: paee.dbf"
+  "PAEE" INTEGER [default: 0]
+  "DATA" DATETIME
+  "CLIENTE" INTEGER [default: 0]
+  "CODIGO" VARCHAR(24)
+  "OBS01" VARCHAR(200)
+  "OBS02" VARCHAR(200)
+  "OBS03" VARCHAR(200)
+  Indexes {
+    PAEE [name: "PAEE"]
+  }
+}
+
+// Origem: paei.dbf (DBF)
+Table "paei" {
+  Note: "Origem: paei.dbf"
+  "DESENHO" VARCHAR(24)
+  "ESPEC" VARCHAR(100)
+  Indexes {
+    DESENHO [name: "PAEI"]
+  }
+}
+
+// Origem: ri.dbf (DBF)
+Table "ri" {
+  Note: "Origem: ri.dbf"
+  "RI" INTEGER [default: 0]
+  "TIPOI" VARCHAR(1)
+  "TIPO2" VARCHAR(1)
+  "DESCRI" VARCHAR(40)
+  "DESENHO" VARCHAR(24)
+  "REVD" VARCHAR(5)
+  "DATAD" DATETIME
+  "DATAR" DATETIME
+  "PEDIDO" VARCHAR(20)
+  "ORDEM" VARCHAR(20)
+  "QTL" VARCHAR(20)
+  "QTI" VARCHAR(20)
+  "RASTRO" VARCHAR(10)
+  "CLIENTE" INTEGER [default: 0]
+  "CLINOME" VARCHAR(50)
+  "OBS01" VARCHAR(80)
+  "OBS02" VARCHAR(80)
+  "LAUDOF" VARCHAR(1)
+  "DATA" DATETIME
+  "INSNUM" INTEGER [default: 0]
+  "INSNOM" VARCHAR(40)
+  "SEQ" INTEGER [default: 0]
+  "SSQ" INTEGER [default: 0]
+  "ORIGEM" VARCHAR(5)
+  "CODIGOINT" VARCHAR(24)
+  Indexes {
+    RI [name: "RI"]
+  }
+}
+
+// Origem: rii.dbf (DBF)
+Table "rii" {
+  Note: "Origem: rii.dbf"
+  "RI" INTEGER [default: 0]
+  "ITEM" INTEGER [default: 0]
+  "DESVIO" VARCHAR(20)
+  "ENC" VARCHAR(40)
+  "ESPE" VARCHAR(100)
+  "LOCALI" VARCHAR(30)
+  "LAUDO" VARCHAR(1)
+  "TIPINSP" VARCHAR(1)
+  Indexes {
+    RI [name: "RII"]
+    RI [name: "RI"]
+  }
+}
+
+// Origem: rrl.dbf (DBF)
+Table "rrl" {
+  Note: "Origem: rrl.dbf"
+  "RRS" INTEGER [default: 0]
+  "CLIENTE" INTEGER [default: 0]
+  "CLINOME" VARCHAR(40)
+  "DESENHO" VARCHAR(24)
+  "DESCRI" VARCHAR(40)
+  "INSTRU" VARCHAR(8)
+  "DESCII" VARCHAR(20)
+  "CARAC" VARCHAR(25)
+  "ESPEC" VARCHAR(25)
+  "AVA" VARCHAR(40)
+  "AVB" VARCHAR(40)
+  "AVC" VARCHAR(40)
+  "AVAN" INTEGER [default: 0]
+  "AVBN" INTEGER [default: 0]
+  "AVCN" INTEGER [default: 0]
+  "AMA01" DECIMAL(9,4) [default: 0]
+  "AMA02" DECIMAL(9,4) [default: 0]
+  "AMA03" DECIMAL(9,4) [default: 0]
+  "AMA04" DECIMAL(9,4) [default: 0]
+  "AMA05" DECIMAL(9,4) [default: 0]
+  "AMA06" DECIMAL(9,4) [default: 0]
+  "AMA07" DECIMAL(9,4) [default: 0]
+  "AMA08" DECIMAL(9,4) [default: 0]
+  "AMA09" DECIMAL(9,4) [default: 0]
+  "AMA10" DECIMAL(9,4) [default: 0]
+  "AMAA01" DECIMAL(9,4) [default: 0]
+  "AMAA02" DECIMAL(9,4) [default: 0]
+  "AMAA03" DECIMAL(9,4) [default: 0]
+  "AMAA04" DECIMAL(9,4) [default: 0]
+  "AMAA05" DECIMAL(9,4) [default: 0]
+  "AMAA06" DECIMAL(9,4) [default: 0]
+  "AMAA07" DECIMAL(9,4) [default: 0]
+  "AMAA08" DECIMAL(9,4) [default: 0]
+  "AMAA09" DECIMAL(9,4) [default: 0]
+  "AMAA10" DECIMAL(9,4) [default: 0]
+  "AMAAA01" DECIMAL(9,4) [default: 0]
+  "AMAAA02" DECIMAL(9,4) [default: 0]
+  "AMAAA03" DECIMAL(9,4) [default: 0]
+  "AMAAA04" DECIMAL(9,4) [default: 0]
+  "AMAAA05" DECIMAL(9,4) [default: 0]
+  "AMAAA06" DECIMAL(9,4) [default: 0]
+  "AMAAA07" DECIMAL(9,4) [default: 0]
+  "AMAAA08" DECIMAL(9,4) [default: 0]
+  "AMAAA09" DECIMAL(9,4) [default: 0]
+  "AMAAA10" DECIMAL(9,4) [default: 0]
+  "AMB01" DECIMAL(9,4) [default: 0]
+  "AMB02" DECIMAL(9,4) [default: 0]
+  "AMB03" DECIMAL(9,4) [default: 0]
+  "AMB04" DECIMAL(9,4) [default: 0]
+  "AMB05" DECIMAL(9,4) [default: 0]
+  "AMB06" DECIMAL(9,4) [default: 0]
+  "AMB07" DECIMAL(9,4) [default: 0]
+  "AMB08" DECIMAL(9,4) [default: 0]
+  "AMB09" DECIMAL(9,4) [default: 0]
+  "AMB10" DECIMAL(9,4) [default: 0]
+  "AMBB01" DECIMAL(9,4) [default: 0]
+  "AMBB02" DECIMAL(9,4) [default: 0]
+  "AMBB03" DECIMAL(9,4) [default: 0]
+  "AMBB04" DECIMAL(9,4) [default: 0]
+  "AMBB05" DECIMAL(9,4) [default: 0]
+  "AMBB06" DECIMAL(9,4) [default: 0]
+  "AMBB07" DECIMAL(9,4) [default: 0]
+  "AMBB08" DECIMAL(9,4) [default: 0]
+  "AMBB09" DECIMAL(9,4) [default: 0]
+  "AMBB10" DECIMAL(9,4) [default: 0]
+  "AMBBB01" DECIMAL(9,4) [default: 0]
+  "AMBBB02" DECIMAL(9,4) [default: 0]
+  "AMBBB03" DECIMAL(9,4) [default: 0]
+  "AMBBB04" DECIMAL(9,4) [default: 0]
+  "AMBBB05" DECIMAL(9,4) [default: 0]
+  "AMBBB06" DECIMAL(9,4) [default: 0]
+  "AMBBB07" DECIMAL(9,4) [default: 0]
+  "AMBBB08" DECIMAL(9,4) [default: 0]
+  "AMBBB09" DECIMAL(9,4) [default: 0]
+  "AMBBB10" DECIMAL(9,4) [default: 0]
+  "AMC01" DECIMAL(9,4) [default: 0]
+  "AMC02" DECIMAL(9,4) [default: 0]
+  "AMC03" DECIMAL(9,4) [default: 0]
+  "AMC04" DECIMAL(9,4) [default: 0]
+  "AMC05" DECIMAL(9,4) [default: 0]
+  "AMC06" DECIMAL(9,4) [default: 0]
+  "AMC07" DECIMAL(9,4) [default: 0]
+  "AMC08" DECIMAL(9,4) [default: 0]
+  "AMC09" DECIMAL(9,4) [default: 0]
+  "AMC10" DECIMAL(9,4) [default: 0]
+  "AMCC01" DECIMAL(9,4) [default: 0]
+  "AMCC02" DECIMAL(9,4) [default: 0]
+  "AMCC03" DECIMAL(9,4) [default: 0]
+  "AMCC04" DECIMAL(9,4) [default: 0]
+  "AMCC05" DECIMAL(9,4) [default: 0]
+  "AMCC06" DECIMAL(9,4) [default: 0]
+  "AMCC07" DECIMAL(9,4) [default: 0]
+  "AMCC08" DECIMAL(9,4) [default: 0]
+  "AMCC09" DECIMAL(9,4) [default: 0]
+  "AMCC10" DECIMAL(9,4) [default: 0]
+  "AMCCC01" DECIMAL(9,4) [default: 0]
+  "AMCCC02" DECIMAL(9,4) [default: 0]
+  "AMCCC03" DECIMAL(9,4) [default: 0]
+  "AMCCC04" DECIMAL(9,4) [default: 0]
+  "AMCCC05" DECIMAL(9,4) [default: 0]
+  "AMCCC06" DECIMAL(9,4) [default: 0]
+  "AMCCC07" DECIMAL(9,4) [default: 0]
+  "AMCCC08" DECIMAL(9,4) [default: 0]
+  "AMCCC09" DECIMAL(9,4) [default: 0]
+  "AMCCC10" DECIMAL(9,4) [default: 0]
+  "DIFA01" DECIMAL(7,4) [default: 0]
+  "DIFA02" DECIMAL(7,4) [default: 0]
+  "DIFA03" DECIMAL(7,4) [default: 0]
+  "DIFA04" DECIMAL(7,4) [default: 0]
+  "DIFA05" DECIMAL(7,4) [default: 0]
+  "DIFA06" DECIMAL(7,4) [default: 0]
+  "DIFA07" DECIMAL(7,4) [default: 0]
+  "DIFA08" DECIMAL(7,4) [default: 0]
+  "DIFA09" DECIMAL(7,4) [default: 0]
+  "DIFA10" DECIMAL(7,4) [default: 0]
+  "DIFB01" DECIMAL(7,4) [default: 0]
+  "DIFB02" DECIMAL(7,4) [default: 0]
+  "DIFB03" DECIMAL(7,4) [default: 0]
+  "DIFB04" DECIMAL(7,4) [default: 0]
+  "DIFB05" DECIMAL(7,4) [default: 0]
+  "DIFB06" DECIMAL(7,4) [default: 0]
+  "DIFB07" DECIMAL(7,4) [default: 0]
+  "DIFB08" DECIMAL(7,4) [default: 0]
+  "DIFB09" DECIMAL(7,4) [default: 0]
+  "DIFB10" DECIMAL(7,4) [default: 0]
+  "DIFC01" DECIMAL(7,4) [default: 0]
+  "DIFC02" DECIMAL(7,4) [default: 0]
+  "DIFC03" DECIMAL(7,4) [default: 0]
+  "DIFC04" DECIMAL(7,4) [default: 0]
+  "DIFC05" DECIMAL(7,4) [default: 0]
+  "DIFC06" DECIMAL(7,4) [default: 0]
+  "DIFC07" DECIMAL(7,4) [default: 0]
+  "DIFC08" DECIMAL(7,4) [default: 0]
+  "DIFC09" DECIMAL(7,4) [default: 0]
+  "DIFC10" DECIMAL(7,4) [default: 0]
+  "TOTAA" DECIMAL(11,4) [default: 0]
+  "TOTAB" DECIMAL(11,4) [default: 0]
+  "TOTAC" DECIMAL(11,4) [default: 0]
+  "MEDAA" DECIMAL(7,4) [default: 0]
+  "TOTALA" DECIMAL(11,4) [default: 0]
+  "TOTBA" DECIMAL(11,4) [default: 0]
+  "TOTBB" DECIMAL(11,4) [default: 0]
+  "TOTBC" DECIMAL(11,4) [default: 0]
+  "MEDBB" DECIMAL(7,4) [default: 0]
+  "TOTALB" DECIMAL(11,4) [default: 0]
+  "TOTCA" DECIMAL(11,4) [default: 0]
+  "TOTCB" DECIMAL(11,4) [default: 0]
+  "TOTCC" DECIMAL(11,4) [default: 0]
+  "MEDCC" DECIMAL(7,4) [default: 0]
+  "TOTALC" DECIMAL(11,4) [default: 0]
+  "MEDIA" DECIMAL(9,4) [default: 0]
+  "MEDIB" DECIMAL(9,4) [default: 0]
+  "MEDIC" DECIMAL(9,4) [default: 0]
+  "MEDSOM" DECIMAL(7,4) [default: 0]
+  "MEDMED" DECIMAL(7,4) [default: 0]
+  "DIFMED" DECIMAL(7,4) [default: 0]
+  "VE" DECIMAL(8,5) [default: 0]
+  "VA" DECIMAL(8,5) [default: 0]
+  "RR" DECIMAL(8,5) [default: 0]
+  "VP" DECIMAL(8,5) [default: 0]
+  "VT" DECIMAL(8,5) [default: 0]
+  "PVE" DECIMAL(8,5) [default: 0]
+  "PVA" DECIMAL(8,5) [default: 0]
+  "PRR" DECIMAL(8,5) [default: 0]
+  "DATA" DATETIME
+  "OBS01" VARCHAR(50)
+  "XMAX" DECIMAL(10,5) [default: 0]
+  "XMIN" DECIMAL(10,5) [default: 0]
+  "RP" DECIMAL(8,5) [default: 0]
+  "RPMAX" DECIMAL(10,5) [default: 0]
+  "RPMIN" DECIMAL(10,5) [default: 0]
+  "M01" DECIMAL(10,5) [default: 0]
+  "M02" DECIMAL(10,5) [default: 0]
+  "M03" DECIMAL(10,5) [default: 0]
+  "M04" DECIMAL(10,5) [default: 0]
+  "M05" DECIMAL(10,5) [default: 0]
+  "M06" DECIMAL(10,5) [default: 0]
+  "M07" DECIMAL(10,5) [default: 0]
+  "M08" DECIMAL(10,5) [default: 0]
+  "M09" DECIMAL(10,5) [default: 0]
+  "M10" DECIMAL(10,5) [default: 0]
+  "NCP" DECIMAL(10,5) [default: 0]
+  "K01" DECIMAL(6,4) [default: 0]
+  "K02" DECIMAL(6,4) [default: 0]
+  "K03" DECIMAL(6,4) [default: 0]
+  "K04" DECIMAL(6,4) [default: 0]
+  "PVP" DECIMAL(10,5) [default: 0]
+  "TOLMIN" DECIMAL(9,5) [default: 0]
+  "TOLMAX" DECIMAL(9,5) [default: 0]
+  "NUMASS" INTEGER [default: 0]
+  "DATASS" DATETIME
+  "NOMASS" VARCHAR(40)
+  Indexes {
+    RRS [name: "RRS"]
+  }
+}
+
+// Origem: rrs.dbf (DBF)
+Table "rrs" {
+  Note: "Origem: rrs.dbf"
+  "RRS" INTEGER [default: 0]
+  "CLIENTE" INTEGER [default: 0]
+  "CLINOME" VARCHAR(40)
+  "DESENHO" VARCHAR(24)
+  "DESCRI" VARCHAR(40)
+  "INSTRU" VARCHAR(8)
+  "DESCII" VARCHAR(25)
+  "CARAC" VARCHAR(40)
+  "ESPEC" VARCHAR(40)
+  "AVA" VARCHAR(40)
+  "AVB" VARCHAR(40)
+  "AVAN" INTEGER [default: 0]
+  "AVBN" INTEGER [default: 0]
+  "AMA01" DECIMAL(10,4) [default: 0]
+  "AMA02" DECIMAL(10,4) [default: 0]
+  "AMA03" DECIMAL(10,4) [default: 0]
+  "AMA04" DECIMAL(10,4) [default: 0]
+  "AMA05" DECIMAL(10,4) [default: 0]
+  "AMAA01" DECIMAL(10,4) [default: 0]
+  "AMAA02" DECIMAL(10,4) [default: 0]
+  "AMAA03" DECIMAL(10,4) [default: 0]
+  "AMAA04" DECIMAL(10,4) [default: 0]
+  "AMAA05" DECIMAL(10,4) [default: 0]
+  "AMB01" DECIMAL(10,4) [default: 0]
+  "AMB02" DECIMAL(10,4) [default: 0]
+  "AMB03" DECIMAL(10,4) [default: 0]
+  "AMB04" DECIMAL(10,4) [default: 0]
+  "AMB05" DECIMAL(10,4) [default: 0]
+  "AMBB01" DECIMAL(10,4) [default: 0]
+  "AMBB02" DECIMAL(10,4) [default: 0]
+  "AMBB03" DECIMAL(10,4) [default: 0]
+  "AMBB04" DECIMAL(10,4) [default: 0]
+  "AMBB05" DECIMAL(10,4) [default: 0]
+  "DIFA01" DECIMAL(7,4) [default: 0]
+  "DIFA02" DECIMAL(7,4) [default: 0]
+  "DIFA03" DECIMAL(7,4) [default: 0]
+  "DIFA04" DECIMAL(7,4) [default: 0]
+  "DIFA05" DECIMAL(7,4) [default: 0]
+  "DIFB01" DECIMAL(7,4) [default: 0]
+  "DIFB02" DECIMAL(7,4) [default: 0]
+  "DIFB03" DECIMAL(7,4) [default: 0]
+  "DIFB04" DECIMAL(7,4) [default: 0]
+  "DIFB05" DECIMAL(7,4) [default: 0]
+  "TOTAA" DECIMAL(11,4) [default: 0]
+  "TOTAB" DECIMAL(11,4) [default: 0]
+  "MEDAA" DECIMAL(7,4) [default: 0]
+  "TOTALA" DECIMAL(11,4) [default: 0]
+  "TOTBA" DECIMAL(11,4) [default: 0]
+  "TOTBB" DECIMAL(11,4) [default: 0]
+  "MEDBB" DECIMAL(7,4) [default: 0]
+  "TOTALB" DECIMAL(11,4) [default: 0]
+  "MEDIA" DECIMAL(11,4) [default: 0]
+  "MEDIB" DECIMAL(11,4) [default: 0]
+  "MEDSOM" DECIMAL(11,4) [default: 0]
+  "MEDMED" DECIMAL(7,4) [default: 0]
+  "DIFMED" DECIMAL(7,4) [default: 0]
+  "VE" DECIMAL(7,5) [default: 0]
+  "VA" DECIMAL(7,5) [default: 0]
+  "RR" DECIMAL(7,5) [default: 0]
+  "VP" DECIMAL(10,5) [default: 0]
+  "VT" DECIMAL(10,5) [default: 0]
+  "PRR" DECIMAL(10,5) [default: 0]
+  "DATA" DATETIME
+  "OBS01" VARCHAR(50)
+  "OBS02" VARCHAR(50)
+  "RP" DECIMAL(11,5) [default: 0]
+  "M01" DECIMAL(11,5) [default: 0]
+  "M02" DECIMAL(11,5) [default: 0]
+  "M03" DECIMAL(11,5) [default: 0]
+  "M04" DECIMAL(11,5) [default: 0]
+  "M05" DECIMAL(11,5) [default: 0]
+  "RPMAX" DECIMAL(11,4) [default: 0]
+  "RPMIN" DECIMAL(11,4) [default: 0]
+  "XMAX" DECIMAL(11,4) [default: 0]
+  "XMIN" DECIMAL(11,4) [default: 0]
+  "K01" DECIMAL(6,4) [default: 0]
+  "K02" DECIMAL(6,4) [default: 0]
+  "K03" DECIMAL(6,4) [default: 0]
+  "TOLMIN" DECIMAL(9,5) [default: 0]
+  "TOLMAX" DECIMAL(9,5) [default: 0]
+  "NUMASS" INTEGER [default: 0]
+  "DATASS" DATETIME
+  "NOMASS" VARCHAR(40)
+  Indexes {
+    RRS [name: "RRS"]
+  }
+}
+
+// Origem: teep.dbf (DBF)
+Table "teep" {
+  Note: "Origem: teep.dbf"
+  "TEEP" INTEGER [default: 0]
+  "DATA" DATETIME
+  "DESENHO" VARCHAR(24)
+  "CARAC" VARCHAR(40)
+  "CLIENTE" INTEGER [default: 0]
+  "CLINOME" VARCHAR(50)
+  "RR" VARCHAR(1)
+  "P1" DECIMAL(12,4) [default: 0]
+  "PP" DECIMAL(12,4) [default: 0]
+  "PPK" DECIMAL(12,4) [default: 0]
+  "PLAN01" INTEGER [default: 0]
+  "ESTAVEL" VARCHAR(1)
+  "PLAN02" INTEGER [default: 0]
+  "P2" DECIMAL(12,4) [default: 0]
+  "CP" DECIMAL(12,4) [default: 0]
+  "CPK" DECIMAL(12,4) [default: 0]
+  "PLAN03" INTEGER [default: 0]
+  "ACP" INTEGER [default: 0]
+  "AEP" INTEGER [default: 0]
+  "ACPATR" VARCHAR(1)
+  "AEPATR" VARCHAR(1)
+  Indexes {
+    TEEP [name: "TEEP"]
+  }
+}
+

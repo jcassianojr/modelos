@@ -1,7 +1,9 @@
-# 🗄️ Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 05/12/26
+# Dicionario de Estruturas de Dados do Projeto
+> Varredura automatica realizada em: 27/07/2026
 
-## 📋 Tabela DBF: `agenda.dbf`
+## Tabela DBF: `agenda.dbf`
+> **Origem:** `agenda.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CDDATA | D | 8 | 0 |
@@ -14,11 +16,13 @@
 | OBS7 | C | 60 | 0 |
 | OBS8 | C | 60 | 0 |
 
-**Índices vinculados:**
-- Tag: `AGENDA` Expressão: `CDDATA`
+**Indices vinculados:**
+- Tag: `AGENDA` Expressao: `CDDATA`
 
 ---
-## 📋 Tabela DBF: `codimp.dbf`
+## Tabela DBF: `codimp.dbf`
+> **Origem:** `codimp.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 6 | 0 |
@@ -26,11 +30,13 @@
 | DESCRICAO | C | 50 | 0 |
 | CONTEUDO | C | 70 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIMP` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CODIMP` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `cores.dbf`
+## Tabela DBF: `cores.dbf`
+> **Origem:** `cores.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 7 | 0 |
@@ -42,50 +48,43 @@
 | COR5 | C | 6 | 0 |
 | COR6 | C | 6 | 0 |
 
-**Índices vinculados:**
-- Tag: `CORES` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `CORES` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `dici.dbf`
-| Campo | Tipo | Tam | Dec |
-| :--- | :--- | :--- | :--- |
-| TABELA | C | 10 | 0 |
-| CAMPO | C | 10 | 0 |
-| TIPO | C | 1 | 0 |
-| TAM | N | 3 | 0 |
-| DEC | N | 2 | 0 |
-| EXCLUIDO | C | 10 | 0 |
+## Tabela DBF: `macess.dbf`
+> **Origem:** `macess.dbf` (Driver: DBFCDX)
 
-**Índices vinculados:**
-- Tag: `DICI` Expressão: `TABELA+CAMPO`
-
----
-## 📋 Tabela DBF: `macess.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 6 | 0 |
 | DESCRICAO | C | 60 | 0 |
 | SENHA | C | 5 | 0 |
 
-**Índices vinculados:**
-- Tag: `MACESS` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `MACESS` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `manaman.dbf`
+## Tabela DBF: `manaman.dbf`
+> **Origem:** `manaman.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | DESCRICAO | C | 76 | 0 |
 | ARQUIVO | C | 12 | 0 |
 
-**Índices vinculados:**
-- Tag: `MANAMAN` Expressão: `ARQUIVO`
+**Indices vinculados:**
+- Tag: `MANAMAN` Expressao: `ARQUIVO`
 
 ---
-## 📋 Tabela DBF: `manarq.dbf`
+## Tabela DBF: `manarq.dbf`
+> **Origem:** `manarq.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | ARQUIVO | C | 8 | 0 |
 | DESCRICAO | C | 60 | 0 |
+| CAMINHO | C | 40 | 0 |
 | FIXAR | C | 1 | 0 |
 | LACHI | N | 4 | 0 |
 | PADRAO | C | 1 | 0 |
@@ -98,17 +97,18 @@
 | CBAS | C | 78 | 0 |
 | IBUS | N | 2 | 0 |
 | IEXI | N | 2 | 0 |
-| CAMINHO | C | 30 | 0 |
 | ARQMES | N | 2 | 0 |
 | ARQANO | N | 4 | 0 |
 | PULAFIX | C | 1 | 0 |
 | DRIVER | C | 10 | 0 |
 
-**Índices vinculados:**
-- Tag: `MANARQ` Expressão: `ARQUIVO`
+**Indices vinculados:**
+- Tag: `MANARQ` Expressao: `ARQUIVO`
 
 ---
-## 📋 Tabela DBF: `manarq1.dbf`
+## Tabela DBF: `manarq1.dbf`
+> **Origem:** `manarq1.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | ARQUIVO | C | 8 | 0 |
@@ -130,22 +130,26 @@
 | DES3 | C | 30 | 0 |
 | FORMULA | C | 60 | 0 |
 
-**Índices vinculados:**
-- Tag: `MANARQ1` Expressão: `ARQUIVO+STR(ITEM,2)`
+**Indices vinculados:**
+- Tag: `MANARQ1` Expressao: `ARQUIVO+STR(ITEM,2)`
 
 ---
-## 📋 Tabela DBF: `manatu.dbf`
+## Tabela DBF: `manatu.dbf`
+> **Origem:** `manatu.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | ARQUIVO1 | C | 8 | 0 |
 | ARQUIVO2 | C | 8 | 0 |
 | INDICE | N | 2 | 0 |
 
-**Índices vinculados:**
-- Tag: `MANATU` Expressão: `ARQUIVO1`
+**Indices vinculados:**
+- Tag: `MANATU` Expressao: `ARQUIVO1`
 
 ---
-## 📋 Tabela DBF: `manerr.dbf`
+## Tabela DBF: `manerr.dbf`
+> **Origem:** `manerr.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | USUARIO | C | 10 | 0 |
@@ -155,11 +159,13 @@
 | OPR | C | 3 | 0 |
 | ARQUIVO | C | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `MANERR` Expressão: `USUARIO+DTOS(DATA)`
+**Indices vinculados:**
+- Tag: `MANERR` Expressao: `USUARIO+DTOS(DATA)`
 
 ---
-## 📋 Tabela DBF: `manfec.dbf`
+## Tabela DBF: `manfec.dbf`
+> **Origem:** `manfec.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | ARQORI | C | 8 | 0 |
@@ -179,24 +185,28 @@
 | OPER07 | C | 200 | 0 |
 | FECHAAUTO | C | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `MANFEC` Expressão: `ARQORI`
-- Tag: `MANFEC-2` Expressão: `STRANO`
-- Tag: `MANFEC-3` Expressão: `STRDES`
+**Indices vinculados:**
+- Tag: `MANFEC` Expressao: `ARQORI`
+- Tag: `MANFEC-2` Expressao: `STRANO`
+- Tag: `MANFEC-3` Expressao: `STRDES`
 
 ---
-## 📋 Tabela DBF: `manfer.dbf`
+## Tabela DBF: `manfer.dbf`
+> **Origem:** `manfer.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | DIA | N | 2 | 0 |
 | MES | N | 2 | 0 |
 | DESCRICAO | C | 40 | 0 |
 
-**Índices vinculados:**
-- Tag: `MANFER` Expressão: `STR(DIA)+STR(MES)`
+**Indices vinculados:**
+- Tag: `MANFER` Expressao: `STR(DIA)+STR(MES)`
 
 ---
-## 📋 Tabela DBF: `manget.dbf`
+## Tabela DBF: `manget.dbf`
+> **Origem:** `manget.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 6 | 0 |
@@ -212,11 +222,13 @@
 | CONDICAO | C | 200 | 0 |
 | PRECOND | C | 200 | 0 |
 
-**Índices vinculados:**
-- Tag: `MANGET` Expressão: `CODIGO+STR(SEQ,3)`
+**Indices vinculados:**
+- Tag: `MANGET` Expressao: `CODIGO+STR(SEQ,3)`
 
 ---
-## 📋 Tabela DBF: `manopt.dbf`
+## Tabela DBF: `manopt.dbf`
+> **Origem:** `manopt.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | ITEMENU | C | 1 | 0 |
@@ -228,11 +240,13 @@
 | TECLA | N | 3 | 0 |
 | EXECUTAR | C | 254 | 0 |
 
-**Índices vinculados:**
-- Tag: `MANOPT` Expressão: `ITEMENU+STR(POSICAO,2)`
+**Indices vinculados:**
+- Tag: `MANOPT` Expressao: `ITEMENU+STR(POSICAO,2)`
 
 ---
-## 📋 Tabela DBF: `manre1.dbf`
+## Tabela DBF: `manre1.dbf`
+> **Origem:** `manre1.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | ARQUIVO | N | 3 | 0 |
@@ -249,23 +263,27 @@
 | FORMULA | C | 35 | 0 |
 | QUEBRAR | N | 2 | 0 |
 
-**Índices vinculados:**
-- Tag: `MANRE1-1` Expressão: `MENU+CODIGO+STR(ARQUIVO)+STR(SEQUENCIA)+STR(COLUNA)`
+**Indices vinculados:**
+- Tag: `MANRE1-1` Expressao: `MENU+CODIGO+STR(ARQUIVO)+STR(SEQUENCIA)+STR(COLUNA)`
 
 ---
-## 📋 Tabela DBF: `manreg.dbf`
+## Tabela DBF: `manreg.dbf`
+> **Origem:** `manreg.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | POSICAO | N | 2 | 0 |
 | GRUPO | C | 2 | 0 |
 | DESCRICAO | C | 70 | 0 |
 
-**Índices vinculados:**
-- Tag: `MANREG-1` Expressão: `POSICAO`
-- Tag: `MANREG-2` Expressão: `GRUPO`
+**Indices vinculados:**
+- Tag: `MANREG-1` Expressao: `POSICAO`
+- Tag: `MANREG-2` Expressao: `GRUPO`
 
 ---
-## 📋 Tabela DBF: `manrel.dbf`
+## Tabela DBF: `manrel.dbf`
+> **Origem:** `manrel.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | MENU | C | 2 | 0 |
@@ -363,11 +381,13 @@
 | ACESSOS | N | 8 | 0 |
 | DATAULT | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `MANREL` Expressão: `MENU+CODIGO`
+**Indices vinculados:**
+- Tag: `MANREL` Expressao: `MENU+CODIGO`
 
 ---
-## 📋 Tabela DBF: `mansub.dbf`
+## Tabela DBF: `mansub.dbf`
+> **Origem:** `mansub.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | ITEMENU | C | 4 | 0 |
@@ -379,11 +399,13 @@
 | TECLA | N | 3 | 0 |
 | EXECUTAR | C | 200 | 0 |
 
-**Índices vinculados:**
-- Tag: `MANSUB` Expressão: `ITEMENU+STR(POSICAO,2)`
+**Indices vinculados:**
+- Tag: `MANSUB` Expressao: `ITEMENU+STR(POSICAO,2)`
 
 ---
-## 📋 Tabela DBF: `mantel.dbf`
+## Tabela DBF: `mantel.dbf`
+> **Origem:** `mantel.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 6 | 0 |
@@ -396,11 +418,13 @@
 | DIZER | C | 80 | 0 |
 | ESTILO | C | 20 | 0 |
 
-**Índices vinculados:**
-- Tag: `MANTEL` Expressão: `CODIGO+STR(SEQ,3)`
+**Indices vinculados:**
+- Tag: `MANTEL` Expressao: `CODIGO+STR(SEQ,3)`
 
 ---
-## 📋 Tabela DBF: `mcarta.dbf`
+## Tabela DBF: `mcarta.dbf`
+> **Origem:** `mcarta.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | ARQUIVO | C | 8 | 0 |
@@ -413,11 +437,13 @@
 | MARCOL | N | 3 | 0 |
 | MARLIN | N | 2 | 0 |
 
-**Índices vinculados:**
-- Tag: `MCARTA` Expressão: `ARQUIVO`
+**Indices vinculados:**
+- Tag: `MCARTA` Expressao: `ARQUIVO`
 
 ---
-## 📋 Tabela DBF: `mcopia.dbf`
+## Tabela DBF: `mcopia.dbf`
+> **Origem:** `mcopia.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NOME | C | 6 | 0 |
@@ -463,11 +489,13 @@
 | ARQ39 | C | 12 | 0 |
 | ARQ40 | C | 12 | 0 |
 
-**Índices vinculados:**
-- Tag: `MCOPIA` Expressão: `NOME`
+**Indices vinculados:**
+- Tag: `MCOPIA` Expressao: `NOME`
 
 ---
-## 📋 Tabela DBF: `metiq.dbf`
+## Tabela DBF: `metiq.dbf`
+> **Origem:** `metiq.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 6 | 0 |
@@ -495,11 +523,13 @@
 | PFIL | C | 1 | 0 |
 | SETUPFIM | C | 20 | 0 |
 
-**Índices vinculados:**
-- Tag: `METIQ` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `METIQ` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `mexpor.dbf`
+## Tabela DBF: `mexpor.dbf`
+> **Origem:** `mexpor.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | ARQORI | C | 8 | 0 |
@@ -515,33 +545,39 @@
 | ARQORIEXT | C | 3 | 0 |
 | ARQDESEXT | C | 3 | 0 |
 
-**Índices vinculados:**
-- Tag: `MEXPOR` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `MEXPOR` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `mexpor1.dbf`
+## Tabela DBF: `mexpor1.dbf`
+> **Origem:** `mexpor1.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 6 | 0 |
 | VARDES | C | 20 | 0 |
 | VARDRI | C | 100 | 0 |
 
-**Índices vinculados:**
-- Tag: `MEXPOR1` Expressão: `CODIGO+VARDES`
+**Indices vinculados:**
+- Tag: `MEXPOR1` Expressao: `CODIGO+VARDES`
 
 ---
-## 📋 Tabela DBF: `mf11.dbf`
+## Tabela DBF: `mf11.dbf`
+> **Origem:** `mf11.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | VARIAVEL | C | 10 | 0 |
 | EXECUTE | C | 120 | 0 |
 | ARQUIVO | C | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `MF11-1` Expressão: `VARIAVEL+ARQUIVO`
+**Indices vinculados:**
+- Tag: `MF11-1` Expressao: `VARIAVEL+ARQUIVO`
 
 ---
-## 📋 Tabela DBF: `mmes.dbf`
+## Tabela DBF: `mmes.dbf`
+> **Origem:** `mmes.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 6 | 0 |
@@ -549,11 +585,13 @@
 | MENSAGEM | C | 50 | 0 |
 | DESCRICAO | M | 10 | 0 |
 
-**Índices vinculados:**
-- Tag: `MMES` Expressão: `CODIGO`
+**Indices vinculados:**
+- Tag: `MMES` Expressao: `CODIGO`
 
 ---
-## 📋 Tabela DBF: `muser.dbf`
+## Tabela DBF: `muser.dbf`
+> **Origem:** `muser.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | USUARIO | C | 10 | 0 |
@@ -592,20 +630,24 @@
 | CHAVEWW | C | 64 | 0 |
 | CHAVEWS | C | 64 | 0 |
 
-**Índices vinculados:**
-- Tag: `MUSER` Expressão: `USUARIO`
+**Indices vinculados:**
+- Tag: `MUSER` Expressao: `USUARIO`
 
 ---
-## 📋 Tabela DBF: `musera.dbf`
+## Tabela DBF: `musera.dbf`
+> **Origem:** `musera.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CONTROLE | C | 20 | 0 |
 
-**Índices vinculados:**
-- Tag: `MUSERA` Expressão: `CONTROLE`
+**Indices vinculados:**
+- Tag: `MUSERA` Expressao: `CONTROLE`
 
 ---
-## 📋 Tabela DBF: `muserb.dbf`
+## Tabela DBF: `muserb.dbf`
+> **Origem:** `muserb.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CONTROLE | C | 20 | 0 |
@@ -613,58 +655,70 @@
 | POSICAO | N | 3 | 0 |
 | POSTELA | C | 30 | 0 |
 
-**Índices vinculados:**
-- Tag: `MUSERB` Expressão: `CONTROLE`
-- Tag: `MUSERB-2` Expressão: `ITEMENU+STRZERO(POSICAO,3)+POSTELA`
+**Indices vinculados:**
+- Tag: `MUSERB` Expressao: `CONTROLE`
+- Tag: `MUSERB-2` Expressao: `ITEMENU+STRZERO(POSICAO,3)+POSTELA`
 
 ---
-## 📋 Tabela DBF: `muserf.dbf`
+## Tabela DBF: `muserf.dbf`
+> **Origem:** `muserf.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CONTROLE | C | 20 | 0 |
 
-**Índices vinculados:**
-- Tag: `MUSERF` Expressão: `CONTROLE`
+**Indices vinculados:**
+- Tag: `MUSERF` Expressao: `CONTROLE`
 
 ---
-## 📋 Tabela DBF: `muserm.dbf`
+## Tabela DBF: `muserm.dbf`
+> **Origem:** `muserm.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CONTROLE | C | 13 | 0 |
 
-**Índices vinculados:**
-- Tag: `MUSERM` Expressão: `CONTROLE`
+**Indices vinculados:**
+- Tag: `MUSERM` Expressao: `CONTROLE`
 
 ---
-## 📋 Tabela DBF: `musern.dbf`
+## Tabela DBF: `musern.dbf`
+> **Origem:** `musern.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | USUARIO | C | 10 | 0 |
 | ID | C | 40 | 0 |
 
-**Índices vinculados:**
-- Tag: `MUSERN` Expressão: `USUARIO`
+**Indices vinculados:**
+- Tag: `MUSERN` Expressao: `USUARIO`
 
 ---
-## 📋 Tabela DBF: `musero.dbf`
+## Tabela DBF: `musero.dbf`
+> **Origem:** `musero.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CONTROLE | C | 20 | 0 |
 
-**Índices vinculados:**
-- Tag: `MUSERO` Expressão: `CONTROLE`
+**Indices vinculados:**
+- Tag: `MUSERO` Expressao: `CONTROLE`
 
 ---
-## 📋 Tabela DBF: `muserr.dbf`
+## Tabela DBF: `muserr.dbf`
+> **Origem:** `muserr.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CONTROLE | C | 20 | 0 |
 
-**Índices vinculados:**
-- Tag: `MUSERR` Expressão: `CONTROLE`
+**Indices vinculados:**
+- Tag: `MUSERR` Expressao: `CONTROLE`
 
 ---
-## 📋 Tabela DBF: `muserw.dbf`
+## Tabela DBF: `muserw.dbf`
+> **Origem:** `muserw.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CONTROLE | C | 20 | 0 |
@@ -672,12 +726,14 @@
 | POSICAO | N | 3 | 0 |
 | POSTELA | C | 30 | 0 |
 
-**Índices vinculados:**
-- Tag: `MUSERW` Expressão: `CONTROLE`
-- Tag: `MUSERW-2` Expressão: `ITEMENU+STRZERO(POSICAO,3)+POSTELA`
+**Indices vinculados:**
+- Tag: `MUSERW` Expressao: `CONTROLE`
+- Tag: `MUSERW-2` Expressao: `ITEMENU+STRZERO(POSICAO,3)+POSTELA`
 
 ---
-## 📋 Tabela DBF: `nota.dbf`
+## Tabela DBF: `nota.dbf`
+> **Origem:** `nota.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NOME | C | 10 | 0 |
@@ -689,11 +745,13 @@
 | OBS6 | C | 60 | 0 |
 | OBS7 | C | 60 | 0 |
 
-**Índices vinculados:**
-- Tag: `NOTA` Expressão: `NOME`
+**Indices vinculados:**
+- Tag: `NOTA` Expressao: `NOME`
 
 ---
-## 📋 Tabela DBF: `padre1.dbf`
+## Tabela DBF: `padre1.dbf`
+> **Origem:** `padre1.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | ARQUIVO | N | 3 | 0 |
@@ -710,11 +768,13 @@
 | FORMULA | C | 35 | 0 |
 | QUEBRAR | N | 2 | 0 |
 
-**Índices vinculados:**
-- Tag: `PADRE1-1` Expressão: `MENU+CODIGO+STR(ARQUIVO)+STR(SEQUENCIA)+STR(COLUNA)`
+**Indices vinculados:**
+- Tag: `PADRE1-1` Expressao: `MENU+CODIGO+STR(ARQUIVO)+STR(SEQUENCIA)+STR(COLUNA)`
 
 ---
-## 📋 Tabela DBF: `padrel.dbf`
+## Tabela DBF: `padrel.dbf`
+> **Origem:** `padrel.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | MENU | C | 2 | 0 |
@@ -812,11 +872,13 @@
 | ACESSOS | N | 8 | 0 |
 | DATAULT | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `PADREL-1` Expressão: `MENU+CODIGO`
+**Indices vinculados:**
+- Tag: `PADREL-1` Expressao: `MENU+CODIGO`
 
 ---
-## 📋 Tabela DBF: `sysopt.dbf`
+## Tabela DBF: `sysopt.dbf`
+> **Origem:** `sysopt.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | ITEMENU | C | 3 | 0 |
@@ -828,11 +890,13 @@
 | TECLA | N | 3 | 0 |
 | EXECUTAR | C | 200 | 0 |
 
-**Índices vinculados:**
-- Tag: `SYSOPT` Expressão: `ITEMENU+STR(POSICAO,2)`
+**Indices vinculados:**
+- Tag: `SYSOPT` Expressao: `ITEMENU+STR(POSICAO,2)`
 
 ---
-## 📋 Tabela DBF: `telememo.dbf`
+## Tabela DBF: `telememo.dbf`
+> **Origem:** `telememo.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NOME | C | 15 | 0 |
@@ -840,11 +904,13 @@
 | TELEF | C | 15 | 0 |
 | FAX | C | 15 | 0 |
 
-**Índices vinculados:**
-- Tag: `TELEMEMO` Expressão: `NOME`
+**Indices vinculados:**
+- Tag: `TELEMEMO` Expressao: `NOME`
 
 ---
-## 📋 Tabela DBF: `winopt.dbf`
+## Tabela DBF: `winopt.dbf`
+> **Origem:** `winopt.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | ITEMENU | C | 3 | 0 |
@@ -856,7 +922,7 @@
 | TECLA | N | 3 | 0 |
 | EXECUTAR | C | 200 | 0 |
 
-**Índices vinculados:**
-- Tag: `WINOPT` Expressão: `ITEMENU+STR(POSICAO,3)`
+**Indices vinculados:**
+- Tag: `WINOPT` Expressao: `ITEMENU+STR(POSICAO,3)`
 
 ---

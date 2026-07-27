@@ -1,0 +1,396 @@
+// Origem: bs1.dbf (DBF)
+Table "bs1" {
+  Note: "Origem: bs1.dbf"
+  "QTDDE" INTEGER [default: 0]
+  "QTD01" INTEGER [default: 0]
+  "QTD02" INTEGER [default: 0]
+  "QTD03" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "PER01" DECIMAL(7,2) [default: 0]
+  "PER02" DECIMAL(7,2) [default: 0]
+  "PER03" DECIMAL(7,2) [default: 0]
+  "PEQ01" DECIMAL(7,2) [default: 0]
+  "PEQ02" DECIMAL(7,2) [default: 0]
+  "PEQ03" DECIMAL(7,2) [default: 0]
+  "F0" INTEGER [default: 0]
+  "F1" INTEGER [default: 0]
+  "F2" INTEGER [default: 0]
+  "ENT" INTEGER [default: 0]
+  "EMPLOGIX" VARCHAR(2)
+  Indexes {
+    STR(ANO,4)+STR(MES,2) [name: "BS1-1"]
+  }
+}
+
+// Origem: bs2.dbf (DBF)
+Table "bs2" {
+  Note: "Origem: bs2.dbf"
+  "GRUPO" VARCHAR(12)
+  "QTDDE" INTEGER [default: 0]
+  "QTD01" INTEGER [default: 0]
+  "QTD02" INTEGER [default: 0]
+  "QTD03" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "PER01" DECIMAL(7,2) [default: 0]
+  "PER02" DECIMAL(7,2) [default: 0]
+  "PER03" DECIMAL(7,2) [default: 0]
+  "PEQ01" DECIMAL(7,2) [default: 0]
+  "PEQ02" DECIMAL(7,2) [default: 0]
+  "PEQ03" DECIMAL(7,2) [default: 0]
+  "F0" INTEGER [default: 0]
+  "F1" INTEGER [default: 0]
+  "F2" INTEGER [default: 0]
+  "ENT" INTEGER [default: 0]
+  "EMPLOGIX" VARCHAR(2)
+  Indexes {
+    STR(ANO,4)+STR(MES,2)+GRUPO [name: "BS2-1"]
+  }
+}
+
+// Origem: bs3.dbf (DBF)
+Table "bs3" {
+  Note: "Origem: bs3.dbf"
+  "CODIGO" VARCHAR(12)
+  "NOME" VARCHAR(30)
+  "GRUPOUTL" VARCHAR(3)
+  "ESTOQUE" INTEGER [default: 0]
+  "ESTOQU3" INTEGER [default: 0]
+  "USO01" INTEGER [default: 0]
+  "USO02" INTEGER [default: 0]
+  "USO03" INTEGER [default: 0]
+  "USO04" INTEGER [default: 0]
+  "SAL01" INTEGER [default: 0]
+  "SAL02" INTEGER [default: 0]
+  "SAL03" INTEGER [default: 0]
+  "SAL04" INTEGER [default: 0]
+  "SA301" INTEGER [default: 0]
+  "SA302" INTEGER [default: 0]
+  "SA303" INTEGER [default: 0]
+  "SA304" INTEGER [default: 0]
+  "EMPLOGIX" VARCHAR(2)
+}
+
+// Origem: bs5.dbf (DBF)
+Table "bs5" {
+  Note: "Origem: bs5.dbf"
+  "CLIENTE" INTEGER [default: 0]
+  "COGCLI" VARCHAR(12)
+  "GRUPO" VARCHAR(12)
+  "CODIGO" VARCHAR(24)
+  "NOME" VARCHAR(40)
+  "QTDDE" INTEGER [default: 0]
+  "QTD01" INTEGER [default: 0]
+  "QTD02" INTEGER [default: 0]
+  "QTD03" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "PER01" DECIMAL(7,2) [default: 0]
+  "PER02" DECIMAL(7,2) [default: 0]
+  "PER03" DECIMAL(7,2) [default: 0]
+  "PEQ01" DECIMAL(7,2) [default: 0]
+  "PEQ02" DECIMAL(7,2) [default: 0]
+  "PEQ03" DECIMAL(7,2) [default: 0]
+  "F0" INTEGER [default: 0]
+  "F1" INTEGER [default: 0]
+  "F2" INTEGER [default: 0]
+  "ENT" INTEGER [default: 0]
+  "EMPLOGIX" VARCHAR(2)
+  Indexes {
+    STR(ANO,4)+STR(MES,2)+STR(CLIENTE,8)+CODIGO [name: "BS5-1"]
+    CODIGO+STR(ANO,4)+STR(MES,2) [name: "BS5-2"]
+  }
+}
+
+// Origem: bs6.dbf (DBF)
+Table "bs6" {
+  Note: "Origem: bs6.dbf"
+  "CLIENTE" INTEGER [default: 0]
+  "COGCLI" VARCHAR(12)
+  "GRUPO" VARCHAR(12)
+  "NOME" VARCHAR(40)
+  "QTDDE" INTEGER [default: 0]
+  "QTD01" INTEGER [default: 0]
+  "QTD02" INTEGER [default: 0]
+  "QTD03" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "PER01" DECIMAL(7,2) [default: 0]
+  "PER02" DECIMAL(7,2) [default: 0]
+  "PER03" DECIMAL(7,2) [default: 0]
+  "PEQ01" DECIMAL(7,2) [default: 0]
+  "PEQ02" DECIMAL(7,2) [default: 0]
+  "PEQ03" DECIMAL(7,2) [default: 0]
+  "F0" INTEGER [default: 0]
+  "F1" INTEGER [default: 0]
+  "F2" INTEGER [default: 0]
+  "ENT" INTEGER [default: 0]
+  "EMPLOGIX" VARCHAR(2)
+  Indexes {
+    STR(ANO,4)+STR(MES,2)+STR(CLIENTE,8) [name: "BS6-1"]
+  }
+}
+
+// Origem: iacseq.dbf (DBF)
+Table "iacseq" {
+  Note: "Origem: iacseq.dbf"
+  "SEQ" INTEGER [default: 0]
+  "DIAFIM" DATETIME
+  "DIAINI" DATETIME
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "DESCRI" VARCHAR(30)
+  "ANUAL" VARCHAR(1)
+  "SEMES" VARCHAR(1)
+  "DESCR2" VARCHAR(10)
+  Indexes {
+    SEQ [name: "SEQ"]
+  }
+}
+
+// Origem: mm02iac.dbf (DBF)
+Table "mm02iac" {
+  Note: "Origem: mm02iac.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "DATA" DATETIME
+  "FORNECEDO" INTEGER [default: 0]
+  "OS" INTEGER [default: 0]
+  "QTDE" DECIMAL(10,3) [default: 0]
+  "CODIGO" VARCHAR(24)
+  "ENTREGA" DATETIME
+  "QTDESAL" DECIMAL(10,3) [default: 0]
+  "OSITEM" INTEGER [default: 0]
+  "CODIGOINT" VARCHAR(24)
+  "CODCLIENTE" VARCHAR(20)
+  "PRECO" DECIMAL(12,5) [default: 0]
+  "NOME" VARCHAR(25)
+  "VALORMER" DECIMAL(12,2) [default: 0]
+  "CLASSIPI" VARCHAR(10)
+  "TIPOENT" VARCHAR(1)
+  "CGC" VARCHAR(18)
+  "COGNOME" VARCHAR(20)
+  "EMPLOGIX" VARCHAR(2)
+}
+
+// Origem: rd.dbf (DBF)
+Table "rd" {
+  Note: "Origem: rd.dbf"
+  "SEQ" INTEGER [default: 0]
+  "DIAINI" DATETIME
+  "DIAFIM" DATETIME
+  "ANUAL" VARCHAR(1)
+  "SEMES" VARCHAR(1)
+  "DESCRI" VARCHAR(30)
+  "DESCR2" VARCHAR(10)
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "EQPU" DECIMAL(10,2) [default: 0]
+  "EQPE" DECIMAL(10,2) [default: 0]
+  "EQPP" DECIMAL(10,2) [default: 0]
+  "FUPU" DECIMAL(10,2) [default: 0]
+  "FUPE" DECIMAL(10,2) [default: 0]
+  "FUPP" DECIMAL(10,2) [default: 0]
+  "EQHT" DECIMAL(10,2) [default: 0]
+  "EQHP" DECIMAL(10,2) [default: 0]
+  "EQH24" DECIMAL(10,2) [default: 0]
+  "EQHD" DECIMAL(10,2) [default: 0]
+  "EQQP" INTEGER [default: 0]
+  "FUHT" DECIMAL(10,2) [default: 0]
+  "FUHP" DECIMAL(10,2) [default: 0]
+  "FUHD" DECIMAL(10,2) [default: 0]
+  "FUQP" INTEGER [default: 0]
+  "PAHP" DECIMAL(10,2) [default: 0]
+  "EQPERE" DECIMAL(10,2) [default: 0]
+  "EQPPRE" DECIMAL(10,2) [default: 0]
+  "EQPURE" DECIMAL(10,2) [default: 0]
+  "EQPE24" DECIMAL(10,2) [default: 0]
+  "EQPP24" DECIMAL(10,2) [default: 0]
+  "EQPU24" DECIMAL(10,2) [default: 0]
+  "PRPE" DECIMAL(10,2) [default: 0]
+  Indexes {
+    SEQ [name: "RD"]
+    STR(ANO,4)+STR(MES,2) [name: "RD-2"]
+  }
+}
+
+// Origem: rde.dbf (DBF)
+Table "rde" {
+  Note: "Origem: rde.dbf"
+  "SEQ" INTEGER [default: 0]
+  "NUMERO" VARCHAR(4)
+  "NOME" VARCHAR(40)
+  "HT" DECIMAL(10,2) [default: 0]
+  "HP" DECIMAL(10,2) [default: 0]
+  "HD" DECIMAL(10,2) [default: 0]
+  "HDRE" DECIMAL(10,2) [default: 0]
+  "HD24" DECIMAL(10,2) [default: 0]
+  "QP" INTEGER [default: 0]
+  "MEDIA" INTEGER [default: 0]
+  "PU" DECIMAL(10,2) [default: 0]
+  "PE" DECIMAL(10,2) [default: 0]
+  "PP" DECIMAL(10,2) [default: 0]
+  "PE24" DECIMAL(10,2) [default: 0]
+  "PERE" DECIMAL(10,2) [default: 0]
+  "PU24" DECIMAL(10,2) [default: 0]
+  "PURE" DECIMAL(10,2) [default: 0]
+  "PP24" DECIMAL(10,2) [default: 0]
+  "PPRE" DECIMAL(10,2) [default: 0]
+  Indexes {
+    SEQ [name: "RDE"]
+  }
+}
+
+// Origem: rdf.dbf (DBF)
+Table "rdf" {
+  Note: "Origem: rdf.dbf"
+  "SEQ" INTEGER [default: 0]
+  "NUMERO" INTEGER [default: 0]
+  "NOME" VARCHAR(40)
+  "HT" DECIMAL(10,2) [default: 0]
+  "HP" DECIMAL(10,2) [default: 0]
+  "HD" DECIMAL(10,2) [default: 0]
+  "QP" INTEGER [default: 0]
+  "MEDIA" INTEGER [default: 0]
+  "PU" DECIMAL(10,2) [default: 0]
+  "PE" DECIMAL(10,2) [default: 0]
+  "PP" DECIMAL(10,2) [default: 0]
+  Indexes {
+    SEQ [name: "RDF"]
+  }
+}
+
+// Origem: rdp.dbf (DBF)
+Table "rdp" {
+  Note: "Origem: rdp.dbf"
+  "SEQ" INTEGER [default: 0]
+  "NUMERO" VARCHAR(3)
+  "NOME" VARCHAR(40)
+  "HP" DECIMAL(10,2) [default: 0]
+  "ANUAL" VARCHAR(1)
+  "MES" INTEGER [default: 0]
+  Indexes {
+    SEQ [name: "RDP"]
+    NUMERO [name: "RDP-2"]
+  }
+}
+
+// Origem: rdpd.dbf (DBF)
+Table "rdpd" {
+  Note: "Origem: rdpd.dbf"
+  "SEQ" INTEGER [default: 0]
+  "NUMERO" VARCHAR(2)
+  "NOME" VARCHAR(40)
+  "HP" DECIMAL(10,2) [default: 0]
+  Indexes {
+    SEQ [name: "RDPD"]
+  }
+}
+
+// Origem: rdpt.dbf (DBF)
+Table "rdpt" {
+  Note: "Origem: rdpt.dbf"
+  "NUMERO" VARCHAR(3)
+  "NOME" VARCHAR(40)
+  "VAL01" DECIMAL(10,2) [default: 0]
+  "POS01" INTEGER [default: 0]
+  "POX01" INTEGER [default: 0]
+  "VAL02" DECIMAL(10,2) [default: 0]
+  "POS02" INTEGER [default: 0]
+  "POX02" INTEGER [default: 0]
+  "VAL03" DECIMAL(10,2) [default: 0]
+  "POS03" INTEGER [default: 0]
+  "POX03" INTEGER [default: 0]
+  "VAL04" DECIMAL(10,2) [default: 0]
+  "POS04" INTEGER [default: 0]
+  "POX04" INTEGER [default: 0]
+  "VAL05" DECIMAL(10,2) [default: 0]
+  "POS05" INTEGER [default: 0]
+  "POX05" INTEGER [default: 0]
+  "VAL06" DECIMAL(10,2) [default: 0]
+  "POS06" INTEGER [default: 0]
+  "POX06" INTEGER [default: 0]
+  "VAL07" DECIMAL(10,2) [default: 0]
+  "POS07" INTEGER [default: 0]
+  "POX07" INTEGER [default: 0]
+  "VAL08" DECIMAL(10,2) [default: 0]
+  "POS08" INTEGER [default: 0]
+  "POX08" INTEGER [default: 0]
+  "VAL09" DECIMAL(10,2) [default: 0]
+  "POS09" INTEGER [default: 0]
+  "POX09" INTEGER [default: 0]
+  "VAL10" DECIMAL(10,2) [default: 0]
+  "POS10" INTEGER [default: 0]
+  "POX10" INTEGER [default: 0]
+  "VAL11" DECIMAL(10,2) [default: 0]
+  "POS11" INTEGER [default: 0]
+  "POX11" INTEGER [default: 0]
+  "VAL12" DECIMAL(10,2) [default: 0]
+  "POS12" INTEGER [default: 0]
+  "POX12" INTEGER [default: 0]
+  "TOTAL" DECIMAL(12,2) [default: 0]
+  "POS00" INTEGER [default: 0]
+  "POX00" INTEGER [default: 0]
+  Indexes {
+    NUMERO [name: "RDPT"]
+    DESCEND(TOTAL) [name: "TOTAL"]
+    DESCEND(VAL01) [name: "VAL01"]
+    DESCEND(VAL02) [name: "VAL02"]
+    DESCEND(VAL03) [name: "VAL03"]
+    DESCEND(VAL04) [name: "VAL04"]
+    DESCEND(VAL05) [name: "VAL05"]
+    DESCEND(VAL06) [name: "VAL06"]
+    DESCEND(VAL07) [name: "VAL07"]
+    DESCEND(VAL08) [name: "VAL08"]
+    DESCEND(VAL09) [name: "VAL09"]
+    DESCEND(VAL10) [name: "VAL10"]
+    DESCEND(VAL11) [name: "VAL11"]
+    DESCEND(VAL12) [name: "VAL12"]
+  }
+}
+
+// Origem: rdt.dbf (DBF)
+Table "rdt" {
+  Note: "Origem: rdt.dbf"
+  "CODIGO" VARCHAR(24)
+  "SEQ" INTEGER [default: 0]
+  "SSQ" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "PQTDDE" INTEGER [default: 0]
+  "PHORAS" DECIMAL(7,2) [default: 0]
+  "QTDDE" DECIMAL(9,2) [default: 0]
+  "PADRAO" INTEGER [default: 0]
+  "PADRA4" INTEGER [default: 0]
+  "MEDIA" DECIMAL(7,2) [default: 0]
+  "MEDI4" DECIMAL(7,2) [default: 0]
+  "SIMETRICA" TINYINT(1)
+  "DATAAPU" DATETIME
+  Indexes {
+    CODIGO+STR(SEQ,3)+STR(SSQ,3)+STR(ANO,4)+STR(MES,2) [name: "RDT"]
+  }
+}
+
+// Origem: rdtbx.dbf (DBF)
+Table "rdtbx" {
+  Note: "Origem: rdtbx.dbf"
+  "CODIGO" VARCHAR(24)
+  "SEQ" INTEGER [default: 0]
+  "SSQ" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "PQTDDE" INTEGER [default: 0]
+  "PHORAS" DECIMAL(6,2) [default: 0]
+  "QTDDE" DECIMAL(9,2) [default: 0]
+  "PADRAO" INTEGER [default: 0]
+  "PADRA4" INTEGER [default: 0]
+  "MEDIA" DECIMAL(6,2) [default: 0]
+  "MEDI4" DECIMAL(6,2) [default: 0]
+  "SIMETRICA" TINYINT(1)
+  "DATAAPU" DATETIME
+  "DATABAI" DATETIME
+  Indexes {
+    CODIGO+STR(SEQ,3)+STR(SSQ,3)+STR(ANO,4)+STR(MES,2) [name: "RDTBX"]
+  }
+}
+

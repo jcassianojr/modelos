@@ -1,0 +1,789 @@
+// Origem: anp.dbf (DBF)
+Table "anp" {
+  Note: "Origem: anp.dbf"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: cartaobandeira.dbf (DBF)
+Table "cartaobandeira" {
+  Note: "Origem: cartaobandeira.dbf"
+  "CODIGO" VARCHAR(2)
+  "NOME" VARCHAR(20)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: cest.dbf (DBF)
+Table "cest" {
+  Note: "Origem: cest.dbf"
+  "CODIGO" VARCHAR(7)
+  "NCM" VARCHAR(8)
+  "DESCRICAO" VARCHAR(255)
+  "SEGMENTO" VARCHAR(2)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: cest_ncm.dbf (DBF)
+Table "cest_ncm" {
+  Note: "Origem: cest_ncm.dbf"
+  "CEST_ID" VARCHAR(7)
+  "NCM_ID" VARCHAR(8)
+  "TAMANHO" VARCHAR(1)
+  "FAIXA_I" VARCHAR(8)
+  "FAIXA_F" VARCHAR(8)
+  "CEST_SEGME" VARCHAR(2)
+  Indexes {
+    CEST_ID [name: "CEST_NCM01"]
+    NCM_ID [name: "CEST_NCM02"]
+    CEST_SEGME [name: "CEST_NCM03"]
+    CEST_SEGME+NCM_ID [name: "CEST_NCM04"]
+  }
+}
+
+// Origem: cest_segmento.dbf (DBF)
+Table "cest_segmento" {
+  Note: "Origem: cest_segmento.dbf"
+  "ID" VARCHAR(2)
+  "ANEXO" VARCHAR(10)
+  "DESCRICAO" VARCHAR(120)
+  Indexes {
+    ID [name: "SEGMENTO01"]
+    DESCRICAO [name: "SEGMENTO02"]
+  }
+}
+
+// Origem: cl_enq_ipi.dbf (DBF)
+Table "cl_enq_ipi" {
+  Note: "Origem: cl_enq_ipi.dbf"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: cst_cofins.dbf (DBF)
+Table "cst_cofins" {
+  Note: "Origem: cst_cofins.dbf"
+  "CODIGO" VARCHAR(2)
+  "NOME" VARCHAR(150)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+    NOME [name: "NOME"]
+  }
+}
+
+// Origem: cst_icm.dbf (DBF)
+Table "cst_icm" {
+  Note: "Origem: cst_icm.dbf"
+  "CODIGO" VARCHAR(3)
+  "NOME" VARCHAR(150)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+    NOME [name: "NOME"]
+  }
+}
+
+// Origem: cst_icms.dbf (DBF)
+Table "cst_icms" {
+  Note: "Origem: cst_icms.dbf"
+  "CODIGO" VARCHAR(30)
+  "NOME" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: cst_ipi.dbf (DBF)
+Table "cst_ipi" {
+  Note: "Origem: cst_ipi.dbf"
+  "CODIGO" VARCHAR(2)
+  "NOME" VARCHAR(150)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+    NOME [name: "NOME"]
+  }
+}
+
+// Origem: cst_pis.dbf (DBF)
+Table "cst_pis" {
+  Note: "Origem: cst_pis.dbf"
+  "CODIGO" VARCHAR(2)
+  "NOME" VARCHAR(150)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+    NOME [name: "NOME"]
+  }
+}
+
+// Origem: ctecret.dbf (DBF)
+Table "ctecret" {
+  Note: "Origem: ctecret.dbf"
+  "CODIGO" VARCHAR(3)
+  "DESCRICAO" VARCHAR(120)
+  Indexes {
+    CODIGO [name: "NFECRET"]
+  }
+}
+
+// Origem: efdtprod.dbf (DBF)
+Table "efdtprod" {
+  Note: "Origem: efdtprod.dbf"
+  "CODIGO" VARCHAR(2)
+  "NOME" VARCHAR(30)
+  Indexes {
+    CODIGO [name: "EFDPROD"]
+  }
+}
+
+// Origem: fi_cai.dbf (DBF)
+Table "fi_cai" {
+  Note: "Origem: fi_cai.dbf"
+  "SEQ" INTEGER [default: 0]
+  "DATA" DATETIME
+  "DESCR" VARCHAR(30)
+  "CREDITO" DECIMAL(12,2) [default: 0]
+  "DEBITO" DECIMAL(12,2) [default: 0]
+  "SALDO" DECIMAL(15,2) [default: 0]
+  "CONTA" VARCHAR(11)
+  Indexes {
+    SEQ [name: "FI_CAI"]
+  }
+}
+
+// Origem: fi_cdipam.dbf (DBF)
+Table "fi_cdipam" {
+  Note: "Origem: fi_cdipam.dbf"
+  "CODIGO" VARCHAR(8)
+  "NOME" VARCHAR(35)
+  "UF" VARCHAR(2)
+  "UFIBGE" VARCHAR(2)
+  "DIPAM" VARCHAR(4)
+  Indexes {
+    CODIGO [name: "FI_CDIPAM"]
+    UF+NOME [name: "FI_CDIPAM2"]
+  }
+}
+
+// Origem: fi_ciap.dbf (DBF)
+Table "fi_ciap" {
+  Note: "Origem: fi_ciap.dbf"
+  "CIAP" INTEGER [default: 0]
+  "ATIVO" VARCHAR(10)
+  "NOME" VARCHAR(40)
+  "FORNECEDO" INTEGER [default: 0]
+  "FORNOME" VARCHAR(40)
+  "NRNOTA" INTEGER [default: 0]
+  "NRITEM" INTEGER [default: 0]
+  "LRE" VARCHAR(3)
+  "LREF" VARCHAR(3)
+  "NRENTREGA" DATETIME
+  "VALORICM" DECIMAL(10,2) [default: 0]
+  "NRSAIDA" INTEGER [default: 0]
+  "MODSAIDA" VARCHAR(3)
+  "DTSAIDA" DATETIME
+  "DTINICIO" DATETIME
+  "OBSNF" VARCHAR(20)
+  Indexes {
+    CIAP [name: "FI_CIAP"]
+  }
+}
+
+// Origem: fi_ciapi.dbf (DBF)
+Table "fi_ciapi" {
+  Note: "Origem: fi_ciapi.dbf"
+  "CIAP" INTEGER [default: 0]
+  "ITEM" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "VALOR" DECIMAL(8,2) [default: 0]
+  "SOMAR" VARCHAR(1)
+  Indexes {
+    STR(CIAP,8)+STR(ITEM,2) [name: "FI_CIAPI"]
+    CIAP [name: "FI_CIAP2"]
+  }
+}
+
+// Origem: fi_con.dbf (DBF)
+Table "fi_con" {
+  Note: "Origem: fi_con.dbf"
+  "CODSER" VARCHAR(5)
+  "DESSER" VARCHAR(60)
+  "TIPSER" VARCHAR(1)
+}
+
+// Origem: fi_dipam.dbf (DBF)
+Table "fi_dipam" {
+  Note: "Origem: fi_dipam.dbf"
+  "DIPAM" VARCHAR(2)
+  "NOME" VARCHAR(100)
+  Indexes {
+    DIPAM [name: "FI_DIPAM"]
+  }
+}
+
+// Origem: fi_esp.dbf (DBF)
+Table "fi_esp" {
+  Note: "Origem: fi_esp.dbf"
+  "CODSER" VARCHAR(7)
+  "DESSER" VARCHAR(60)
+  "TIPSER" VARCHAR(1)
+  "EXPCONT" VARCHAR(1)
+  Indexes {
+    CODSER [name: "FI_ESP"]
+  }
+}
+
+// Origem: fi_inv.dbf (DBF)
+Table "fi_inv" {
+  Note: "Origem: fi_inv.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CODIPI" VARCHAR(2)
+  "CLASSIFI" VARCHAR(14)
+  "NOME" VARCHAR(40)
+  "QTDDE" DECIMAL(10,2) [default: 0]
+  "UNIDADE" VARCHAR(2)
+  "VALORUNI" DECIMAL(10,2) [default: 0]
+  "VALORPAR" DECIMAL(10,2) [default: 0]
+  "OBS" VARCHAR(15)
+  Indexes {
+    NUMERO [name: "FI_INV01"]
+  }
+}
+
+// Origem: fi_mens.dbf (DBF)
+Table "fi_mens" {
+  Note: "Origem: fi_mens.dbf"
+  "CODIGO" INTEGER [default: 0]
+  "OCORR" VARCHAR(254)
+  "FLEGAL" VARCHAR(100)
+  "OPERACAO" VARCHAR(1)
+  Indexes {
+    CODIGO [name: "FI_MENS"]
+  }
+}
+
+// Origem: fi_mes.dbf (DBF)
+Table "fi_mes" {
+  Note: "Origem: fi_mes.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "FIFECE" DATETIME
+  "FIFECS" DATETIME
+  "FIFECICM" DATETIME
+  "FIFECIPI" DATETIME
+  "FIFECISS" DATETIME
+  "FIFECISE" DATETIME
+  "FILIVE" INTEGER [default: 0]
+  "FILIVS" INTEGER [default: 0]
+  "FILIVICM" INTEGER [default: 0]
+  "FILIVIPI" INTEGER [default: 0]
+  "FILIVISS" INTEGER [default: 0]
+  "FILIVISE" INTEGER [default: 0]
+  "FIPAGE" INTEGER [default: 0]
+  "FIPAGS" INTEGER [default: 0]
+  "FIPAGICM" INTEGER [default: 0]
+  "FIPAGIPI" INTEGER [default: 0]
+  "FIPAGISS" INTEGER [default: 0]
+  "FIPAGISE" INTEGER [default: 0]
+  "FIPAXICM" INTEGER [default: 0]
+  "FIPAXIPI" INTEGER [default: 0]
+  "FILIME" INTEGER [default: 0]
+  "FILIMS" INTEGER [default: 0]
+  "FILIMICM" INTEGER [default: 0]
+  "FILIMIPI" INTEGER [default: 0]
+  "FILIMISS" INTEGER [default: 0]
+  "FILIMISE" INTEGER [default: 0]
+  "FISEQE" INTEGER [default: 0]
+  "FISEQS" INTEGER [default: 0]
+  "FISEQISS" INTEGER [default: 0]
+  "FISEQISE" INTEGER [default: 0]
+  "FILANE" DATETIME
+  "FILANS" DATETIME
+  "FILANISS" DATETIME
+  "FILANISE" DATETIME
+  "FILAICM" DATETIME
+  "FILAIPI" DATETIME
+  "FILAISS" DATETIME
+  "FILAISE" DATETIME
+  "FISALICM" DECIMAL(18,2) [default: 0]
+  "FISALIPI" DECIMAL(18,2) [default: 0]
+  "FISALISS" DECIMAL(18,2) [default: 0]
+  "FISALISE" DECIMAL(18,2) [default: 0]
+  "FILIFE" INTEGER [default: 0]
+  "FILIFS" INTEGER [default: 0]
+  "FILIFICM" INTEGER [default: 0]
+  "FILIFIPI" INTEGER [default: 0]
+  "FILIFISS" INTEGER [default: 0]
+  "FILIFISE" INTEGER [default: 0]
+  Indexes {
+    STR(NUMERO,5)+STRZERO(ANO,4)+STRZERO(MES,2) [name: "FI_MES"]
+  }
+}
+
+// Origem: fi_nbm.dbf (DBF)
+Table "fi_nbm" {
+  Note: "Origem: fi_nbm.dbf"
+  "NUMERONBM" VARCHAR(8)
+  "DESCRI" VARCHAR(100)
+  "IPI_NBM" DECIMAL(5,2) [default: 0]
+  "ICMS_NBM" DECIMAL(5,2) [default: 0]
+  "TIPO" VARCHAR(1)
+  "CODNBM" VARCHAR(10)
+  "TRIBUTAR" VARCHAR(1)
+  "ALIQNAC" DECIMAL(5,2) [default: 0]
+  "ALIQIMP" DECIMAL(5,2) [default: 0]
+  "EX" DECIMAL(5,2) [default: 0]
+  "ALIQEST" DECIMAL(5,2) [default: 0]
+  "ALIQMUN" DECIMAL(5,2) [default: 0]
+  "DATAIMP" DATETIME
+  Indexes {
+    NUMERONBM [name: "FI_NBM"]
+    CODNBM [name: "FI_NBM-2"]
+  }
+}
+
+// Origem: fi_nbmcnv.dbf (DBF)
+Table "fi_nbmcnv" {
+  Note: "Origem: fi_nbmcnv.dbf"
+  "NUMERONBM" VARCHAR(8)
+  "CODNBM" VARCHAR(10)
+  "NOMENBM" VARCHAR(55)
+  Indexes {
+    NUMERONBM [name: "FI_NBM"]
+    CODNBM [name: "FI_NBM-2"]
+  }
+}
+
+// Origem: fi_nbms.dbf (DBF)
+Table "fi_nbms" {
+  Note: "Origem: fi_nbms.dbf"
+  "NUMERONBM" VARCHAR(9)
+  "DESCRI" VARCHAR(100)
+  "IPI_NBM" DECIMAL(5,2) [default: 0]
+  "ICMS_NBM" DECIMAL(5,2) [default: 0]
+  "TIPO" VARCHAR(1)
+  "CODNBM" VARCHAR(10)
+  "TRIBUTAR" VARCHAR(1)
+  "ALIQNAC" DECIMAL(5,2) [default: 0]
+  "ALIQIMP" DECIMAL(5,2) [default: 0]
+  "EX" DECIMAL(5,2) [default: 0]
+  "ALIQEST" DECIMAL(5,2) [default: 0]
+  "ALIQMUN" DECIMAL(5,2) [default: 0]
+  "DATAIMP" DATETIME
+  Indexes {
+    NUMERONBM [name: "FI_NBM"]
+    CODNBM [name: "FI_NBM-2"]
+  }
+}
+
+// Origem: fi_oco.dbf (DBF)
+Table "fi_oco" {
+  Note: "Origem: fi_oco.dbf"
+  "ANO" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "TIPO" VARCHAR(1)
+  "ITEM" INTEGER [default: 0]
+  "DESCRICAO" VARCHAR(50)
+  "VALICM" DECIMAL(12,2) [default: 0]
+  "VALIPI" DECIMAL(12,2) [default: 0]
+  Indexes {
+    STR(ANO,4)+STR(MES,2)+TIPO+STR(ITEM,2) [name: "FI_OCO"]
+  }
+}
+
+// Origem: fi_ser.dbf (DBF)
+Table "fi_ser" {
+  Note: "Origem: fi_ser.dbf"
+  "CODSER" VARCHAR(5)
+  "DESSER" VARCHAR(60)
+  "TIPSER" VARCHAR(1)
+  "EXPCONT" VARCHAR(1)
+  Indexes {
+    CODSER [name: "FI_SER01"]
+  }
+}
+
+// Origem: fi_temp1.dbf (DBF)
+Table "fi_temp1" {
+  Note: "Origem: fi_temp1.dbf"
+  "CFO" VARCHAR(3)
+  "CFONEW" VARCHAR(4)
+  "SUBCFO" VARCHAR(1)
+  "ICM" DECIMAL(5,2) [default: 0]
+  "IPI" DECIMAL(5,2) [default: 0]
+  "CONTABIL" DECIMAL(18,2) [default: 0]
+  "ICMBAS" DECIMAL(18,2) [default: 0]
+  "ICMVAL" DECIMAL(18,2) [default: 0]
+  "ICMISE" DECIMAL(18,2) [default: 0]
+  "ICMOUT" DECIMAL(18,2) [default: 0]
+  "OBSICM" DECIMAL(18,2) [default: 0]
+  "IPIBAS" DECIMAL(18,2) [default: 0]
+  "IPIVAL" DECIMAL(18,2) [default: 0]
+  "IPIISE" DECIMAL(18,2) [default: 0]
+  "IPIOUT" DECIMAL(18,2) [default: 0]
+  "OBSIPI" DECIMAL(18,2) [default: 0]
+  Indexes {
+    CFO+SUBCFO+STR(ICM,5,2) [name: "FI_TEM11"]
+    CFONEW+STR(ICM,5,2) [name: "FI_TEM12"]
+    CFO+SUBCFO+STR(IPI,5,2) [name: "FI_TEM13"]
+    CFONEW+STR(IPI,5,2) [name: "FI_TEM14"]
+  }
+}
+
+// Origem: ibs.dbf (DBF)
+Table "ibs" {
+  Note: "Origem: ibs.dbf"
+  "IBS" VARCHAR(3)
+  "DESCRIBS" VARCHAR(55)
+  "CLASTRIB" VARCHAR(6)
+  "NOMECLAST1" VARCHAR(250)
+  "NOMECLAST2" VARCHAR(250)
+  "DESCRTRIB1" VARCHAR(250)
+  "DESCRTRIB2" VARCHAR(250)
+  "DESCRLC01" VARCHAR(250)
+  "DESCRLC02" VARCHAR(250)
+  "LC" VARCHAR(20)
+  "TIPOALIQ" VARCHAR(100)
+  "PREDIBS" VARCHAR(100)
+  "PREDCBS" VARCHAR(100)
+  "INDREDBC" VARCHAR(100)
+  "INDGTRREG" VARCHAR(100)
+  "INDCREDP" VARCHAR(100)
+  "INDMONO" VARCHAR(100)
+  "INDMORETEN" VARCHAR(100)
+  "INDMONORET" VARCHAR(100)
+  "INDMONODIF" VARCHAR(100)
+  "CREDPARA" VARCHAR(100)
+  "DINIVIG" VARCHAR(100)
+  "DFIMVIG" VARCHAR(100)
+  "ULTATUALIZ" VARCHAR(100)
+  Indexes {
+    IBS [name: "IBS"]
+  }
+}
+
+// Origem: indicador_presenca.dbf (DBF)
+Table "indicador_presenca" {
+  Note: "Origem: indicador_presenca.dbf"
+  "CODIGO" VARCHAR(1)
+  "DESCRICAO" VARCHAR(50)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: md03.dbf (DBF)
+Table "md03" {
+  Note: "Origem: md03.dbf"
+  "CODIGO" VARCHAR(2)
+  "CLASSIFIC" VARCHAR(14)
+  "DESCRICAO" VARCHAR(50)
+  "ALIQUOTA" INTEGER [default: 0]
+  "ALIQUOTAR" DECIMAL(5,2) [default: 0]
+  "ALIQUOTAI" DECIMAL(5,2) [default: 0]
+  "DSTA" VARCHAR(1)
+}
+
+// Origem: md04.dbf (DBF)
+Table "md04" {
+  Note: "Origem: md04.dbf"
+  "CFONEW" VARCHAR(4)
+  "DESCRICAO" VARCHAR(150)
+  "CFO" VARCHAR(3)
+  "NOMENOTA" VARCHAR(25)
+  "TIPO" VARCHAR(1)
+  "DIPAM" VARCHAR(2)
+  "FIN" VARCHAR(1)
+  "PIS" VARCHAR(1)
+  "REMESSA" VARCHAR(1)
+  "DIPIPI" VARCHAR(1)
+  "DIPICM" VARCHAR(1)
+  "CODICM" VARCHAR(3)
+  "EXPCONT" VARCHAR(1)
+  "CONTACRE" VARCHAR(11)
+  "CONTADEB" VARCHAR(11)
+  "CONTAS" VARCHAR(1)
+  "APURA" VARCHAR(1)
+  "ZERAIPI" VARCHAR(1)
+  "FICHA" VARCHAR(1)
+  "FATURA" VARCHAR(1)
+  "IRENDA" VARCHAR(1)
+  "ST" VARCHAR(1)
+  "STFRETE" VARCHAR(1)
+  "BENEF" VARCHAR(1)
+  "ICMS" VARCHAR(1)
+  "IPI" VARCHAR(1)
+  "ISS" VARCHAR(1)
+  "DEVOLUCAO" VARCHAR(1)
+  "SERVPROD" VARCHAR(1)
+  "ESTOQUE" VARCHAR(1)
+  "TIPO2" VARCHAR(1)
+  "NFE" VARCHAR(1)
+  "COMUNICA" VARCHAR(1)
+  "TRANSP" VARCHAR(1)
+  Indexes {
+    CFO+CFONEW [name: "MD04-1"]
+    CFONEW [name: "MD04-2"]
+    CFO [name: "MD04-3"]
+  }
+}
+
+// Origem: md05x.dbf (DBF)
+Table "md05x" {
+  Note: "Origem: md05x.dbf"
+  "UFICMS" VARCHAR(2)
+  "UFDEST" VARCHAR(2)
+  "NOMEEXT" VARCHAR(20)
+  "ALIQUOTA" DECIMAL(5,2) [default: 0]
+  "ALIQUOTAR" DECIMAL(5,2) [default: 0]
+  "ZONAFRANCA" VARCHAR(1)
+  Indexes {
+    UFICMS [name: "MD05X-1"]
+    NOMEEXT [name: "MD05X-2"]
+    UFICMS+UFDEST [name: "MD05X-3"]
+  }
+}
+
+// Origem: modais_frete.dbf (DBF)
+Table "modais_frete" {
+  Note: "Origem: modais_frete.dbf"
+  "CODIGO" VARCHAR(1)
+  "DESCRICAO" VARCHAR(30)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: modalidade_frete.dbf (DBF)
+Table "modalidade_frete" {
+  Note: "Origem: modalidade_frete.dbf"
+  "CODIGO" VARCHAR(1)
+  "DESCRICAO" VARCHAR(55)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: modalidade_frete_anp.dbf (DBF)
+Table "modalidade_frete_anp" {
+  Note: "Origem: modalidade_frete_anp.dbf"
+  "CODIGO" VARCHAR(2)
+  "DESCRICAO" VARCHAR(50)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: modelo_cobranca.dbf (DBF)
+Table "modelo_cobranca" {
+  Note: "Origem: modelo_cobranca.dbf"
+  "CODIGO" VARCHAR(1)
+  "DESCRICAO" VARCHAR(50)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: modelo_cobranca_cst.dbf (DBF)
+Table "modelo_cobranca_cst" {
+  Note: "Origem: modelo_cobranca_cst.dbf"
+  "CODIGO" VARCHAR(1)
+  "DESCRICAO" VARCHAR(50)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: moeda.dbf (DBF)
+Table "moeda" {
+  Note: "Origem: moeda.dbf"
+  "CODIGO" INTEGER [default: 0]
+  "NOME" VARCHAR(17)
+  "DATA_INI" DATETIME
+  "DATA_FIM" DATETIME
+  "PAIS" VARCHAR(60)
+  "SIMBOLO" VARCHAR(3)
+  "BACEN" INTEGER [default: 0]
+  "TIPO" VARCHAR(1)
+  "MOEDA" VARCHAR(60)
+  "NUMINT" INTEGER [default: 0]
+  "NUMDEC" INTEGER [default: 0]
+  Indexes {
+    CODIGO [name: "MOEDA"]
+    SIMBOLO [name: "SIMBOLO"]
+    PAIS [name: "PAIS"]
+    NOME [name: "NOME"]
+  }
+}
+
+// Origem: nbs.dbf (DBF)
+Table "nbs" {
+  Note: "Origem: nbs.dbf"
+  "NBS" VARCHAR(12)
+  "DESC_NBS" VARCHAR(999)
+  "ITEM" VARCHAR(5)
+  "DESC_ITEM" VARCHAR(300)
+  "ONEROSA" VARCHAR(1)
+  "EXTERIOR" VARCHAR(1)
+  "INDOP" VARCHAR(6)
+  "LOCAL_INC" VARCHAR(300)
+  "CLASSTRIB" VARCHAR(6)
+  "DESC_CLAS" VARCHAR(999)
+  Indexes {
+    NBS [name: "NBS"]
+  }
+}
+
+// Origem: ncmuf.dbf (DBF)
+Table "ncmuf" {
+  Note: "Origem: ncmuf.dbf"
+  "COD_NBM" VARCHAR(12)
+  "COD_NCM" VARCHAR(10)
+  "AC" DECIMAL(6,2) [default: 0]
+  "AL" DECIMAL(6,2) [default: 0]
+  "AM" DECIMAL(6,2) [default: 0]
+  "AP" DECIMAL(6,2) [default: 0]
+  "BA" DECIMAL(6,2) [default: 0]
+  "CE" DECIMAL(6,2) [default: 0]
+  "DF" DECIMAL(6,2) [default: 0]
+  "ES" DECIMAL(6,2) [default: 0]
+  "GO" DECIMAL(6,2) [default: 0]
+  "MA" DECIMAL(6,2) [default: 0]
+  "MT" DECIMAL(6,2) [default: 0]
+  "MS" DECIMAL(6,2) [default: 0]
+  "MG" DECIMAL(6,2) [default: 0]
+  "PA" DECIMAL(6,2) [default: 0]
+  "PB" DECIMAL(6,2) [default: 0]
+  "PR" DECIMAL(6,2) [default: 0]
+  "PE" DECIMAL(6,2) [default: 0]
+  "PI" DECIMAL(6,2) [default: 0]
+  "RN" DECIMAL(6,2) [default: 0]
+  "RS" DECIMAL(6,2) [default: 0]
+  "RJ" DECIMAL(6,2) [default: 0]
+  "RO" DECIMAL(6,2) [default: 0]
+  "RR" DECIMAL(6,2) [default: 0]
+  "SC" DECIMAL(6,2) [default: 0]
+  "SP" DECIMAL(6,2) [default: 0]
+  "SE" DECIMAL(6,2) [default: 0]
+  "TO" DECIMAL(6,2) [default: 0]
+}
+
+// Origem: nfecorrecao.dbf (DBF)
+Table "nfecorrecao" {
+  Note: "Origem: nfecorrecao.dbf"
+  "CODIGO" VARCHAR(2)
+  "DESCRICAO" VARCHAR(30)
+  Indexes {
+    CODIGO [name: "NFECRET"]
+  }
+}
+
+// Origem: nfecret.dbf (DBF)
+Table "nfecret" {
+  Note: "Origem: nfecret.dbf"
+  "CODIGO" VARCHAR(3)
+  "DESCRICAO" VARCHAR(120)
+  Indexes {
+    CODIGO [name: "NFECRET"]
+  }
+}
+
+// Origem: qualif_assinante.dbf (DBF)
+Table "qualif_assinante" {
+  Note: "Origem: qualif_assinante.dbf"
+  "CODIGO" VARCHAR(3)
+  "DESCRICAO" VARCHAR(70)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: sintdoc.dbf (DBF)
+Table "sintdoc" {
+  Note: "Origem: sintdoc.dbf"
+  "CODIGO" VARCHAR(2)
+  "NOME" VARCHAR(70)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+    NOME [name: "NOME"]
+    CODIGO [name: "SINTDOC"]
+    NOME [name: "SINTDOC2"]
+  }
+}
+
+// Origem: sintsitu.dbf (DBF)
+Table "sintsitu" {
+  Note: "Origem: sintsitu.dbf"
+  "CODIGO" VARCHAR(1)
+  "NOME" VARCHAR(20)
+  Indexes {
+    CODIGO [name: "SINTSITU"]
+    NOME [name: "SINTSIT2"]
+  }
+}
+
+// Origem: tabenqipi.dbf (DBF)
+Table "tabenqipi" {
+  Note: "Origem: tabenqipi.dbf"
+  "CODIGO" VARCHAR(3)
+  "GRUPOCST" VARCHAR(10)
+  "DESCR1" VARCHAR(254)
+  "DESCR2" VARCHAR(180)
+  "DESCRICAO" VARCHAR(255)
+  Indexes {
+    field->CODIGO [name: "ENQIPI01"]
+    field->GRUPOCST [name: "ENQIPI02"]
+    upper( left( field->DESCR1, 240 ) ) [name: "ENQIPI03"]
+  }
+}
+
+// Origem: tipo_pagamento.dbf (DBF)
+Table "tipo_pagamento" {
+  Note: "Origem: tipo_pagamento.dbf"
+  "CODIGO" VARCHAR(2)
+  "DESCRICAO" VARCHAR(60)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: unidade_medida_comercial.dbf (DBF)
+Table "unidade_medida_comercial" {
+  Note: "Origem: unidade_medida_comercial.dbf"
+  "UNIDADE" VARCHAR(7)
+  "UNIDDES" VARCHAR(25)
+  "UNIDDEC" VARCHAR(1)
+  Indexes {
+    UNIDADE [name: "CODIGO"]
+  }
+}
+

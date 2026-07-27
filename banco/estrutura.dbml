@@ -1,0 +1,96 @@
+// Origem: ba01.dbf (DBF)
+Table "ba01" {
+  Note: "Origem: ba01.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "SUB" VARCHAR(1)
+  "DATA" DATETIME
+  "NRCONTA" INTEGER [default: 0]
+  "CODIGO" VARCHAR(4)
+  "HISTORICO" VARCHAR(30)
+  "ITEM" VARCHAR(4)
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "TIPO" VARCHAR(1)
+  "DATADEP" DATETIME
+  "CHAVE" VARCHAR(24)
+  Indexes {
+    STR(NRCONTA,2)+STR(NUMERO,7) [name: "BA01-1"]
+    STR(NUMERO,7)+SUB [name: "BA01-2"]
+    CHAVE [name: "BA01-3"]
+    DATA [name: "BA01-4"]
+    ITEM [name: "BA01-5"]
+  }
+}
+
+// Origem: bc01.dbf (DBF)
+Table "bc01" {
+  Note: "Origem: bc01.dbf"
+  "CODIGO" VARCHAR(4)
+  "DESCRICAO" VARCHAR(35)
+  "VALOR" DECIMAL(15,2) [default: 0]
+  "VALOR1" DECIMAL(15,2) [default: 0]
+  "TIPO" VARCHAR(1)
+  "ITEM" VARCHAR(3)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+    DESCRICAO [name: "DESCRICAO"]
+  }
+}
+
+// Origem: bd01.dbf (DBF)
+Table "bd01" {
+  Note: "Origem: bd01.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "COGNOME" VARCHAR(15)
+  "NOME" VARCHAR(40)
+  "ENDERECO" VARCHAR(40)
+  "BAIRRO" VARCHAR(30)
+  "CIDADE" VARCHAR(30)
+  "ESTADO" VARCHAR(2)
+  "CEP" VARCHAR(9)
+  "DDD" VARCHAR(2)
+  "TELEFONE" VARCHAR(12)
+  "RAMAL" VARCHAR(4)
+  "CONTATO" VARCHAR(22)
+  "DDDFAX" VARCHAR(2)
+  "TELEFAX" VARCHAR(12)
+  "CGC" VARCHAR(18)
+  "IESTADUAL" VARCHAR(16)
+  "DDD1" VARCHAR(2)
+  "TELEFONE1" VARCHAR(12)
+  "RAMAL1" VARCHAR(4)
+  "CONTATO1" VARCHAR(22)
+  "PESSOA" VARCHAR(1)
+  "SITE" VARCHAR(30)
+  "EMAIL" VARCHAR(30)
+  Indexes {
+    NUMERO [name: "NUMERO"]
+    COGNOME [name: "COGNOME"]
+  }
+}
+
+// Origem: be01.dbf (DBF)
+Table "be01" {
+  Note: "Origem: be01.dbf"
+  "CODIGO" VARCHAR(24)
+  "NOME" VARCHAR(40)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+    NOME [name: "NOME"]
+  }
+}
+
+// Origem: bf01.dbf (DBF)
+Table "bf01" {
+  Note: "Origem: bf01.dbf"
+  "VENDA" INTEGER [default: 0]
+  "NUMERO" INTEGER [default: 0]
+  "CODIGO" VARCHAR(24)
+  "DATA" DATETIME
+  "VALOR" DECIMAL(10,2) [default: 0]
+  Indexes {
+    VENDA [name: "VENDA"]
+    NUMERO [name: "NUMERO"]
+    CODIGO [name: "CODIGO"]
+  }
+}
+

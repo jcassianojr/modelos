@@ -1,0 +1,202 @@
+// Origem: apu5cd2.dbf (DBF)
+Table "apu5cd2" {
+  Note: "Origem: apu5cd2.dbf"
+  "CLIENTE" INTEGER [default: 0]
+  "COGCLI" VARCHAR(12)
+  "CODIGO" VARCHAR(24)
+  "ANO" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "INTCOM" INTEGER [default: 0]
+  "CLIENTE2" INTEGER [default: 0]
+  "COGCLI2" VARCHAR(12)
+  "CODIGO2" VARCHAR(24)
+  "INTCOM2" INTEGER [default: 0]
+  "CLIENT3" INTEGER [default: 0]
+  "COGCLI3" VARCHAR(12)
+  "CODIGO3" VARCHAR(24)
+  "INTCOM3" INTEGER [default: 0]
+  "JUNTO" VARCHAR(105)
+  "JUNTOA" VARCHAR(30)
+  "JUNTOB" VARCHAR(30)
+  "JUNTOC" VARCHAR(30)
+  "PERCOM" DECIMAL(7,2) [default: 0]
+  "PERCOM2" DECIMAL(7,2) [default: 0]
+  "PERCOM3" DECIMAL(7,2) [default: 0]
+  Indexes {
+    STR(ANO,4)+STR(MES,2) [name: "APU5CD2"]
+  }
+}
+
+// Origem: apu5em2.dbf (DBF)
+Table "apu5em2" {
+  Note: "Origem: apu5em2.dbf"
+  "CLI1" INTEGER [default: 0]
+  "CLI2" INTEGER [default: 0]
+  "COGCLI1" VARCHAR(12)
+  "COGCLI2" VARCHAR(12)
+  "JUNTO" VARCHAR(40)
+  "PERCLI1" DECIMAL(7,2) [default: 0]
+  "PERCLI2" DECIMAL(7,2) [default: 0]
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "ANOMES" INTEGER [default: 0]
+  Indexes {
+    STR(ANO,4)+STR(MES,2) [name: "APU5EM21"]
+  }
+}
+
+// Origem: apu5emp.dbf (DBF)
+Table "apu5emp" {
+  Note: "Origem: apu5emp.dbf"
+  "CLIENTE" INTEGER [default: 0]
+  "COGCLI" VARCHAR(12)
+  "VALORTOT" DECIMAL(12,2) [default: 0]
+  "PERCLI" DECIMAL(6,2) [default: 0]
+  "PERPRO" DECIMAL(6,2) [default: 0]
+  "INTPERC" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "TGRUPO" VARCHAR(1)
+  "LEXPORTA" TINYINT(1)
+  "VALOREXP" DECIMAL(12,2) [default: 0]
+  "SUBGER" VARCHAR(3)
+  Indexes {
+    STR(CLIENTE,8)+STR(ANO,4)+STR(MES,2) [name: "APU5EMP1"]
+    STR(ANO,4)+STR(MES,2)+STR(PERCLI,7,2) [name: "APU5EMP2"]
+  }
+}
+
+// Origem: apu5g.dbf (DBF)
+Table "apu5g" {
+  Note: "Origem: apu5g.dbf"
+  "CLIENTE" INTEGER [default: 0]
+  "COGCLI" VARCHAR(12)
+  "GRUPO" VARCHAR(12)
+  "CODIGO" VARCHAR(24)
+  "NOME" VARCHAR(40)
+  "ICM" DECIMAL(5,2) [default: 0]
+  "PARTI" DECIMAL(8,2) [default: 0]
+  "PPLAN" DECIMAL(8,4) [default: 0]
+  "PPLANL" VARCHAR(1)
+  "PPCAL" DECIMAL(8,4) [default: 0]
+  "QTDDE" INTEGER [default: 0]
+  "VALORMER" DECIMAL(10,2) [default: 0]
+  "VALORTOT" DECIMAL(10,2) [default: 0]
+  "PRECOM" DECIMAL(7,2) [default: 0]
+  "PERCLI" DECIMAL(7,2) [default: 0]
+  "PERLUC" DECIMAL(7,2) [default: 0]
+  "VALLUC" DECIMAL(10,2) [default: 0]
+  "DIFLUC" DECIMAL(7,2) [default: 0]
+  "SUBGER" VARCHAR(2)
+  "CLITOTPER" DECIMAL(7,2) [default: 0]
+  "CLITOTVAL" DECIMAL(10,2) [default: 0]
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  Indexes {
+    STR(ANO,4)+STR(MES,2) [name: "APU5G"]
+  }
+}
+
+// Origem: apu5g2.dbf (DBF)
+Table "apu5g2" {
+  Note: "Origem: apu5g2.dbf"
+  "CLIENTE" INTEGER [default: 0]
+  "COGCLI" VARCHAR(12)
+  "CODIGO" VARCHAR(24)
+  "NOME" VARCHAR(40)
+  "PARTI" DECIMAL(6,2) [default: 0]
+  "PPLAN" DECIMAL(9,4) [default: 0]
+  "QTDDE" INTEGER [default: 0]
+  "VALORMER" DECIMAL(12,2) [default: 0]
+  "VALORTOT" DECIMAL(12,2) [default: 0]
+  "PRECOM" DECIMAL(8,2) [default: 0]
+  "PERCLI" DECIMAL(6,2) [default: 0]
+  "INTCOM" INTEGER [default: 0]
+  "INTCLI" INTEGER [default: 0]
+  "JUNTO" VARCHAR(40)
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  Indexes {
+    STR(ANO,4)+STR(MES,2) [name: "APU5G2"]
+  }
+}
+
+// Origem: apu5g3.dbf (DBF)
+Table "apu5g3" {
+  Note: "Origem: apu5g3.dbf"
+  "CLIENTE" INTEGER [default: 0]
+  "COGCLI" VARCHAR(12)
+  "CODIGO" VARCHAR(24)
+  "NOME" VARCHAR(40)
+  "PARTI" DECIMAL(6,2) [default: 0]
+  "PPLAN" DECIMAL(9,4) [default: 0]
+  "QTDDE" INTEGER [default: 0]
+  "VALORMER" DECIMAL(12,2) [default: 0]
+  "VALORTOT" DECIMAL(12,2) [default: 0]
+  "PRECOM" DECIMAL(8,2) [default: 0]
+  "PERCLI" DECIMAL(6,2) [default: 0]
+  "INTCOM" INTEGER [default: 0]
+  "INTCLI" INTEGER [default: 0]
+  "JUNTO" VARCHAR(40)
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "ORDEM" INTEGER [default: 0]
+  "PERCLITOR" DECIMAL(6,2) [default: 0]
+  Indexes {
+    STR(ANO,4)+STR(MES,2) [name: "APU5G3"]
+  }
+}
+
+// Origem: apu5g4.dbf (DBF)
+Table "apu5g4" {
+  Note: "Origem: apu5g4.dbf"
+  "JUNTO" VARCHAR(40)
+  "PERLUC" DECIMAL(6,2) [default: 0]
+  "INTPER" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  Indexes {
+    STR(ANO,4)+STR(MES,2) [name: "APU5G4"]
+  }
+}
+
+// Origem: apu5g5.dbf (DBF)
+Table "apu5g5" {
+  Note: "Origem: apu5g5.dbf"
+  "JUNTO" VARCHAR(40)
+  "CODIGO" VARCHAR(24)
+  "PERDIF" DECIMAL(7,2) [default: 0]
+  "INTDIF" INTEGER [default: 0]
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "COGCLI" VARCHAR(15)
+  Indexes {
+    STR(ANO,4)+STR(MES,2) [name: "APU5G5"]
+  }
+}
+
+// Origem: apu5lin.dbf (DBF)
+Table "apu5lin" {
+  Note: "Origem: apu5lin.dbf"
+  "ANO" INTEGER [default: 0]
+  "SUBGER" VARCHAR(2)
+  "PERFAT" DECIMAL(5,2) [default: 0]
+  "VALORTOT" DECIMAL(12,2) [default: 0]
+  Indexes {
+    STR(ANO,4)+SUBGER [name: "APU5LIN"]
+  }
+}
+
+// Origem: apu5tot.dbf (DBF)
+Table "apu5tot" {
+  Note: "Origem: apu5tot.dbf"
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "VALORTOT" DECIMAL(18,2) [default: 0]
+  "VALOREXP" DECIMAL(18,2) [default: 0]
+  "JUNTO" VARCHAR(7)
+  Indexes {
+    STR(ANO,4)+STR(MES,2) [name: "APU5TOT"]
+  }
+}
+

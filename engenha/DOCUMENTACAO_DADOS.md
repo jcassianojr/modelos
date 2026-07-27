@@ -1,7 +1,9 @@
-# 🗄️ Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 05/12/26
+# Dicionario de Estruturas de Dados do Projeto
+> Varredura automatica realizada em: 27/07/2026
 
-## 📋 Tabela DBF: `lc.dbf`
+## Tabela DBF: `lc.dbf`
+> **Origem:** `lc.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | DOCUMENTO | C | 20 | 0 |
@@ -13,18 +15,20 @@
 | PASTA | C | 10 | 0 |
 | NUMERO | N | 10 | 0 |
 
-**Índices vinculados:**
-- Tag: `DOCUMENTO` Expressão: `DOCUMENTO`
-- Tag: `NOVODOC` Expressão: `NOVODOC`
-- Tag: `TIPONUMERO` Expressão: `TIPO+STR(NUMERO,20)`
+**Indices vinculados:**
+- Tag: `DOCUMENTO` Expressao: `DOCUMENTO`
+- Tag: `NOVODOC` Expressao: `NOVODOC`
+- Tag: `TIPONUMERO` Expressao: `TIPO+STR(NUMERO,20)`
 
 ---
-## 📋 Tabela DBF: `lct.dbf`
+## Tabela DBF: `lct.dbf`
+> **Origem:** `lct.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | TIPO | C | 20 | 0 |
 
-**Índices vinculados:**
-- Tag: `TIPO` Expressão: `TIPO`
+**Indices vinculados:**
+- Tag: `TIPO` Expressao: `TIPO`
 
 ---

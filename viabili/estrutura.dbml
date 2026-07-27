@@ -1,0 +1,1372 @@
+// Origem: bti.dbf (DBF)
+Table "bti" {
+  Note: "Origem: bti.dbf"
+  "BTI" INTEGER [default: 0]
+  "CLIENTE" INTEGER [default: 0]
+  "CLINOME" VARCHAR(50)
+  "CODIGO" VARCHAR(24)
+  "NOME" VARCHAR(50)
+  "DUNS" VARCHAR(20)
+  "RFQ" VARCHAR(20)
+  "DATA" DATETIME
+  Indexes {
+    BTI [name: "BTI"]
+  }
+}
+
+// Origem: btii.dbf (DBF)
+Table "btii" {
+  Note: "Origem: btii.dbf"
+  "BTI" INTEGER [default: 0]
+  "QTDE" INTEGER [default: 0]
+  "DESCRICAO" VARCHAR(80)
+  "CAVIDADE" INTEGER [default: 0]
+  "PRECO" DECIMAL(12,2) [default: 0]
+  "CICLO" VARCHAR(20)
+  "CAPACIDA" VARCHAR(20)
+  Indexes {
+    BTI [name: "BTI"]
+  }
+}
+
+// Origem: cd.dbf (DBF)
+Table "cd" {
+  Note: "Origem: cd.dbf"
+  "CD" INTEGER [default: 0]
+  "DIGCTR" VARCHAR(1)
+  "CHAVE" VARCHAR(9)
+  "DATA" DATETIME
+  "CLIENTE" INTEGER [default: 0]
+  "CLINOME" VARCHAR(50)
+  "CLICOGN" VARCHAR(15)
+  "COMPRADOR" VARCHAR(5)
+  "COMPNOME" VARCHAR(40)
+  "PECA" VARCHAR(24)
+  "PROJETO" VARCHAR(50)
+  "NOME" VARCHAR(100)
+  "ENGENHA" VARCHAR(50)
+  "PLANTA" VARCHAR(50)
+  "DATAAUT" DATETIME
+  "PT" TINYINT(1)
+  "PTQT" INTEGER [default: 0]
+  "FD" TINYINT(1)
+  "DC" TINYINT(1)
+  "PCMP" TINYINT(1)
+  "PCMO" TINYINT(1)
+  "MP" TINYINT(1)
+  "OUT" TINYINT(1)
+  "OUTOBS" VARCHAR(80)
+  "OBS01" VARCHAR(80)
+  "OBS02" VARCHAR(80)
+  "OBS03" VARCHAR(80)
+  "OBS04" VARCHAR(80)
+  "OBS05" VARCHAR(80)
+  "DATADIM" VARCHAR(80)
+  "DATAPRO" VARCHAR(80)
+  "EP" TINYINT(1)
+  "MM" TINYINT(1)
+  "NT" TINYINT(1)
+  "FE" TINYINT(1)
+  "DE" TINYINT(1)
+  "AMO" TINYINT(1)
+  "OUTANX" TINYINT(1)
+  "OUTANXOBS" VARCHAR(80)
+  "FUNNUM" INTEGER [default: 0]
+  "FUNNOM" VARCHAR(40)
+  "DATAEMI" DATETIME
+  "DATAOBS" DATETIME
+  "OBSG01" VARCHAR(80)
+  "OBSG02" VARCHAR(80)
+  "OBSG03" VARCHAR(80)
+  "ATUAL" TINYINT(1)
+  "LOTEANUAL" INTEGER [default: 0]
+  "SETOR" VARCHAR(2)
+  "CARGO" VARCHAR(40)
+  "RESPO" VARCHAR(40)
+  "CODIGOINT" VARCHAR(24)
+  "LOTEENTR" INTEGER [default: 0]
+  "RET" TINYINT(1)
+  "VALPEC" DECIMAL(10,5) [default: 0]
+  "IMPOSTO" VARCHAR(1)
+  "CPAGP" VARCHAR(50)
+  "CEMB" VARCHAR(50)
+  "FRETE" VARCHAR(1)
+  "FERRA" DECIMAL(10,2) [default: 0]
+  "IMPFER" VARCHAR(1)
+  "CPAGF" VARCHAR(50)
+  "OBSC01" VARCHAR(80)
+  "OBSC02" VARCHAR(80)
+  "OBSC03" VARCHAR(80)
+  "NUMPRE" INTEGER [default: 0]
+  "NOMPRE" VARCHAR(50)
+  "DATAPRE" DATETIME
+  "VIABILI" INTEGER [default: 0]
+  "CODCLI" VARCHAR(15)
+  Indexes {
+    CHAVE [name: "CD-1"]
+    PECA [name: "CD-2"]
+    CODIGOINT [name: "CD-3"]
+    STR(CLIENTE,8)+PECA [name: "CD-4"]
+    VIABILI [name: "CD-5"]
+  }
+}
+
+// Origem: cdapuprd.dbf (DBF)
+Table "cdapuprd" {
+  Note: "Origem: cdapuprd.dbf"
+  "CD" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "CODIGO" VARCHAR(24)
+  "CODIGOINT" VARCHAR(24)
+  "DATAINI" DATETIME
+  "DATAPRO" DATETIME
+  "EAC" INTEGER [default: 0]
+  "ATIVA" VARCHAR(1)
+  "MES01" INTEGER [default: 0]
+  "MES02" INTEGER [default: 0]
+  "MES03" INTEGER [default: 0]
+  "MES04" INTEGER [default: 0]
+  "MES05" INTEGER [default: 0]
+  "MES06" INTEGER [default: 0]
+  "MES07" INTEGER [default: 0]
+  "MES08" INTEGER [default: 0]
+  "MES09" INTEGER [default: 0]
+  "MES10" INTEGER [default: 0]
+  "MES11" INTEGER [default: 0]
+  "MES12" INTEGER [default: 0]
+  "PRC01" DECIMAL(8,4) [default: 0]
+  "PRC02" DECIMAL(8,4) [default: 0]
+  "PRC03" DECIMAL(8,4) [default: 0]
+  "PRC04" DECIMAL(8,4) [default: 0]
+  "PRC05" DECIMAL(8,4) [default: 0]
+  "PRC06" DECIMAL(8,4) [default: 0]
+  "PRC07" DECIMAL(8,4) [default: 0]
+  "PRC08" DECIMAL(8,4) [default: 0]
+  "PRC09" DECIMAL(8,4) [default: 0]
+  "PRC10" DECIMAL(8,4) [default: 0]
+  "PRC11" DECIMAL(8,4) [default: 0]
+  "PRC12" DECIMAL(8,4) [default: 0]
+  "MESESF" INTEGER [default: 0]
+  "MESESP" INTEGER [default: 0]
+  "PRECO" DECIMAL(8,4) [default: 0]
+  "CLIENTE" INTEGER [default: 0]
+  "COGCLI" VARCHAR(15)
+  Indexes {
+    CD [name: "CD01"]
+    STR(ANO,4)+CODIGO [name: "CD02"]
+    CODIGO+STR(ANO,4) [name: "CD03"]
+    CODIGOINT+STR(ANO,4) [name: "CD04"]
+  }
+}
+
+// Origem: cdi.dbf (DBF)
+Table "cdi" {
+  Note: "Origem: cdi.dbf"
+  "CD" INTEGER [default: 0]
+  "DIGCTR" VARCHAR(1)
+  "CHAVE" VARCHAR(9)
+  "DESENHO" VARCHAR(24)
+  "DESTEM" TINYINT(1)
+  "REV" VARCHAR(20)
+  "DATAREV" DATETIME
+  Indexes {
+    CHAVE [name: "CHAVE"]
+  }
+}
+
+// Origem: declmot.dbf (DBF)
+Table "declmot" {
+  Note: "Origem: declmot.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "NOME" VARCHAR(40)
+  Indexes {
+    NUMERO [name: "DECLMOT"]
+  }
+}
+
+// Origem: esc.dbf (DBF)
+Table "esc" {
+  Note: "Origem: esc.dbf"
+  "CLIENTE" INTEGER [default: 0]
+  "COGCLI" VARCHAR(12)
+  "CODIGO" VARCHAR(24)
+  "NOME" VARCHAR(75)
+  "VCOM" DECIMAL(7,4) [default: 0]
+  "VCOMI" DECIMAL(7,4) [default: 0]
+  "VCOML" DECIMAL(7,4) [default: 0]
+  "VMAT" DECIMAL(9,4) [default: 0]
+  "VMATI" DECIMAL(9,4) [default: 0]
+  "VMATL" DECIMAL(9,4) [default: 0]
+  "VTER" DECIMAL(7,4) [default: 0]
+  "VMAOM" DECIMAL(7,4) [default: 0]
+  "VMAOO" DECIMAL(7,4) [default: 0]
+  "VREJ" DECIMAL(7,4) [default: 0]
+  "VMAR" DECIMAL(9,4) [default: 0]
+  "FMAR" DECIMAL(7,4) [default: 0]
+  "PUF" VARCHAR(2)
+  "PMAK" DECIMAL(5,2) [default: 0]
+  "PICM" DECIMAL(5,2) [default: 0]
+  "PMAR" DECIMAL(5,2) [default: 0]
+  "LANU" INTEGER [default: 0]
+  "LMES" INTEGER [default: 0]
+  "LMIN" INTEGER [default: 0]
+  "VFER" DECIMAL(10,2) [default: 0]
+  "VFERHR" INTEGER [default: 0]
+  "VFERID" DECIMAL(6,2) [default: 0]
+  "PRAZO" DATETIME
+  "PVEN" DECIMAL(9,4) [default: 0]
+  "PVEN2" DECIMAL(9,4) [default: 0]
+  "PREF" DECIMAL(9,4) [default: 0]
+  "DLUC" DECIMAL(7,2) [default: 0]
+  "DPRE" DECIMAL(7,2) [default: 0]
+  "OBS01" VARCHAR(80)
+  "OBS02" VARCHAR(80)
+  "OBS03" VARCHAR(80)
+  "OBS04" VARCHAR(80)
+  "OBS05" VARCHAR(80)
+  "OBS06" VARCHAR(80)
+  "OBS07" VARCHAR(80)
+  "OBS08" VARCHAR(80)
+  "OBC01" VARCHAR(80)
+  "OBC02" VARCHAR(80)
+  "OBC03" VARCHAR(80)
+  "OBC04" VARCHAR(80)
+  "OBC05" VARCHAR(80)
+  "OBE01" VARCHAR(60)
+  "OBE02" VARCHAR(60)
+  "OBE03" VARCHAR(60)
+  "SUBTOT01" DECIMAL(9,4) [default: 0]
+  "SUBTOT02" DECIMAL(9,4) [default: 0]
+  "REV" VARCHAR(1)
+  "VIABILI" INTEGER [default: 0]
+  "DUNS" VARCHAR(5)
+  "PROJETO" VARCHAR(5)
+  "NIVELDAT" DATETIME
+  "VIGENDAT" DATETIME
+  "DATA" DATETIME
+  "USUMEDIO" DECIMAL(7,2) [default: 0]
+  "ELANUM" INTEGER [default: 0]
+  "ELANOM" VARCHAR(40)
+  "ELADAT" DATETIME
+  "ELAHOR" VARCHAR(8)
+  "PCPRGMED" INTEGER [default: 0]
+  "TIPOIMP" VARCHAR(1)
+  "PPIS" DECIMAL(5,2) [default: 0]
+  "PCON" DECIMAL(5,2) [default: 0]
+  "TIPMEDIA" VARCHAR(1)
+  "PLUC" DECIMAL(5,2) [default: 0]
+  "PADM" DECIMAL(5,2) [default: 0]
+  "PCOM" DECIMAL(5,2) [default: 0]
+  "PCPM" DECIMAL(5,2) [default: 0]
+  "LICM" TINYINT(1)
+  "PRRJ" DECIMAL(5,2) [default: 0]
+  "CAPPRO" VARCHAR(5)
+  "OV" INTEGER [default: 0]
+  "DATACALC" DATETIME
+  "OVORI" INTEGER [default: 0]
+  "PISCON" VARCHAR(1)
+  "VTERI" DECIMAL(7,4) [default: 0]
+  "VTERL" DECIMAL(7,4) [default: 0]
+  "OBSP01" VARCHAR(60)
+  "OBSP02" VARCHAR(60)
+  "OVREV" VARCHAR(1)
+  "VSIMP" DECIMAL(7,4) [default: 0]
+  Indexes {
+    OV [name: "OV"]
+    CODIGO [name: "CODIGO"]
+    VIABILI [name: "VIABILI"]
+  }
+}
+
+// Origem: escms03.dbf (DBF)
+Table "escms03" {
+  Note: "Origem: escms03.dbf"
+  "OV" INTEGER [default: 0]
+  "CODIGO" VARCHAR(24)
+  "TIPOENT" VARCHAR(1)
+  "CODCOMP" VARCHAR(24)
+  "NOMECOMP" VARCHAR(120)
+  "ORIGEM" VARCHAR(20)
+  "QTDDE" DECIMAL(10,5) [default: 0]
+  "PRECO" DECIMAL(12,4) [default: 0]
+  "TOTAL" DECIMAL(12,4) [default: 0]
+  "IICM" TINYINT(1)
+  "REDICM" DECIMAL(6,2) [default: 0]
+  "CODFOLHA" INTEGER [default: 0]
+  "OBS01" VARCHAR(80)
+  "ULTDATA" DATETIME
+  "ULTUND" VARCHAR(2)
+  Indexes {
+    OV [name: "OV"]
+  }
+}
+
+// Origem: escms06.dbf (DBF)
+Table "escms06" {
+  Note: "Origem: escms06.dbf"
+  "OV" INTEGER [default: 0]
+  "CODIGO" VARCHAR(24)
+  "SEQ" INTEGER [default: 0]
+  "SSQ" INTEGER [default: 0]
+  "DESCRI" VARCHAR(70)
+  "CODMP01" VARCHAR(12)
+  "NOMMP01" VARCHAR(30)
+  "CODMP02" VARCHAR(12)
+  "NOMMP02" VARCHAR(30)
+  "CODMP02B" VARCHAR(12)
+  "NOMMP02B" VARCHAR(30)
+  "CODMP02C" VARCHAR(12)
+  "NOMMP02C" VARCHAR(30)
+  "CODMP02D" VARCHAR(12)
+  "NOMMP02D" VARCHAR(30)
+  "CODMP03" VARCHAR(24)
+  "NOMMP03" VARCHAR(30)
+  "PCHORA" INTEGER [default: 0]
+  "AREA" VARCHAR(2)
+  "HRFER" INTEGER [default: 0]
+  "CODFOLHA" INTEGER [default: 0]
+  "PRECO" DECIMAL(12,4) [default: 0]
+  "QTDDE" DECIMAL(10,5) [default: 0]
+  "TOTAL" DECIMAL(12,4) [default: 0]
+  "COGMP01" VARCHAR(10)
+  "PCMEDIA" INTEGER [default: 0]
+  "FLUXO" INTEGER [default: 0]
+  "FATOR" DECIMAL(5,2) [default: 0]
+  Indexes {
+    OV [name: "OV"]
+  }
+}
+
+// Origem: esf.dbf (DBF)
+Table "esf" {
+  Note: "Origem: esf.dbf"
+  "CLIENTE" INTEGER [default: 0]
+  "COGCLI" VARCHAR(12)
+  "CODIGO" VARCHAR(24)
+  "NOME" VARCHAR(75)
+  "VCOM" DECIMAL(7,4) [default: 0]
+  "VCOMI" DECIMAL(7,4) [default: 0]
+  "VCOML" DECIMAL(7,4) [default: 0]
+  "VMAT" DECIMAL(9,4) [default: 0]
+  "VMATI" DECIMAL(9,4) [default: 0]
+  "VMATL" DECIMAL(9,4) [default: 0]
+  "VTER" DECIMAL(7,4) [default: 0]
+  "VMAOM" DECIMAL(7,4) [default: 0]
+  "VMAOO" DECIMAL(7,4) [default: 0]
+  "VREJ" DECIMAL(7,4) [default: 0]
+  "VMAR" DECIMAL(9,4) [default: 0]
+  "FMAR" DECIMAL(7,4) [default: 0]
+  "PUF" VARCHAR(2)
+  "PMAK" DECIMAL(5,2) [default: 0]
+  "PICM" DECIMAL(5,2) [default: 0]
+  "PMAR" DECIMAL(5,2) [default: 0]
+  "LANU" INTEGER [default: 0]
+  "LMES" INTEGER [default: 0]
+  "LMIN" INTEGER [default: 0]
+  "VFER" DECIMAL(10,2) [default: 0]
+  "VFERHR" INTEGER [default: 0]
+  "VFERID" DECIMAL(6,2) [default: 0]
+  "PRAZO" DATETIME
+  "PVEN" DECIMAL(9,4) [default: 0]
+  "PVEN2" DECIMAL(9,4) [default: 0]
+  "PREF" DECIMAL(9,4) [default: 0]
+  "DLUC" DECIMAL(7,2) [default: 0]
+  "DPRE" DECIMAL(7,2) [default: 0]
+  "OBS01" VARCHAR(80)
+  "OBS02" VARCHAR(80)
+  "OBS03" VARCHAR(80)
+  "OBS04" VARCHAR(80)
+  "OBS05" VARCHAR(80)
+  "OBS06" VARCHAR(80)
+  "OBS07" VARCHAR(80)
+  "OBS08" VARCHAR(80)
+  "OBC01" VARCHAR(80)
+  "OBC02" VARCHAR(80)
+  "OBC03" VARCHAR(80)
+  "OBC04" VARCHAR(80)
+  "OBC05" VARCHAR(80)
+  "OBE01" VARCHAR(60)
+  "OBE02" VARCHAR(60)
+  "OBE03" VARCHAR(60)
+  "SUBTOT01" DECIMAL(9,4) [default: 0]
+  "SUBTOT02" DECIMAL(9,4) [default: 0]
+  "REV" VARCHAR(1)
+  "VIABILI" INTEGER [default: 0]
+  "DUNS" VARCHAR(5)
+  "PROJETO" VARCHAR(5)
+  "NIVELDAT" DATETIME
+  "VIGENDAT" DATETIME
+  "DATA" DATETIME
+  "USUMEDIO" DECIMAL(7,2) [default: 0]
+  "ELANUM" INTEGER [default: 0]
+  "ELANOM" VARCHAR(40)
+  "ELADAT" DATETIME
+  "ELAHOR" VARCHAR(8)
+  "PCPRGMED" INTEGER [default: 0]
+  "TIPOIMP" VARCHAR(1)
+  "PPIS" DECIMAL(5,2) [default: 0]
+  "PCON" DECIMAL(5,2) [default: 0]
+  "TIPMEDIA" VARCHAR(1)
+  "PLUC" DECIMAL(5,2) [default: 0]
+  "PADM" DECIMAL(5,2) [default: 0]
+  "PCOM" DECIMAL(5,2) [default: 0]
+  "PCPM" DECIMAL(5,2) [default: 0]
+  "LICM" TINYINT(1)
+  "PRRJ" DECIMAL(5,2) [default: 0]
+  "CAPPRO" VARCHAR(5)
+  "OV" INTEGER [default: 0]
+  "DATACALC" DATETIME
+  "OVORI" INTEGER [default: 0]
+  "PISCON" VARCHAR(1)
+  "VTERI" DECIMAL(7,4) [default: 0]
+  "VTERL" DECIMAL(7,4) [default: 0]
+  "OBSP01" VARCHAR(60)
+  "OBSP02" VARCHAR(60)
+  "OVREV" VARCHAR(1)
+  "VSIMP" DECIMAL(7,4) [default: 0]
+  Indexes {
+    OV [name: "OV"]
+    CODIGO [name: "CODIGO"]
+    VIABILI [name: "VIABILI"]
+  }
+}
+
+// Origem: esfms03.dbf (DBF)
+Table "esfms03" {
+  Note: "Origem: esfms03.dbf"
+  "OV" INTEGER [default: 0]
+  "CODIGO" VARCHAR(24)
+  "TIPOENT" VARCHAR(1)
+  "CODCOMP" VARCHAR(24)
+  "NOMECOMP" VARCHAR(120)
+  "ORIGEM" VARCHAR(20)
+  "QTDDE" DECIMAL(10,5) [default: 0]
+  "PRECO" DECIMAL(12,4) [default: 0]
+  "TOTAL" DECIMAL(12,4) [default: 0]
+  "IICM" TINYINT(1)
+  "REDICM" DECIMAL(6,2) [default: 0]
+  "CODFOLHA" INTEGER [default: 0]
+  "OBS01" VARCHAR(80)
+  "ULTDATA" DATETIME
+  "ULTUND" VARCHAR(2)
+  Indexes {
+    OV [name: "OV"]
+  }
+}
+
+// Origem: esfms06.dbf (DBF)
+Table "esfms06" {
+  Note: "Origem: esfms06.dbf"
+  "OV" INTEGER [default: 0]
+  "CODIGO" VARCHAR(24)
+  "SEQ" INTEGER [default: 0]
+  "SSQ" INTEGER [default: 0]
+  "DESCRI" VARCHAR(70)
+  "CODMP01" VARCHAR(12)
+  "NOMMP01" VARCHAR(30)
+  "CODMP02" VARCHAR(12)
+  "NOMMP02" VARCHAR(30)
+  "CODMP02B" VARCHAR(12)
+  "NOMMP02B" VARCHAR(30)
+  "CODMP02C" VARCHAR(12)
+  "NOMMP02C" VARCHAR(30)
+  "CODMP02D" VARCHAR(12)
+  "NOMMP02D" VARCHAR(30)
+  "CODMP03" VARCHAR(24)
+  "NOMMP03" VARCHAR(30)
+  "PCHORA" INTEGER [default: 0]
+  "AREA" VARCHAR(2)
+  "HRFER" INTEGER [default: 0]
+  "CODFOLHA" INTEGER [default: 0]
+  "PRECO" DECIMAL(12,4) [default: 0]
+  "QTDDE" DECIMAL(10,5) [default: 0]
+  "TOTAL" DECIMAL(12,4) [default: 0]
+  "COGMP01" VARCHAR(10)
+  "PCMEDIA" INTEGER [default: 0]
+  "FLUXO" INTEGER [default: 0]
+  "FATOR" DECIMAL(5,2) [default: 0]
+  Indexes {
+    OV [name: "OV"]
+  }
+}
+
+// Origem: eso.dbf (DBF)
+Table "eso" {
+  Note: "Origem: eso.dbf"
+  "CLIENTE" INTEGER [default: 0]
+  "COGCLI" VARCHAR(12)
+  "CODIGO" VARCHAR(24)
+  "NOME" VARCHAR(75)
+  "VCOM" DECIMAL(7,4) [default: 0]
+  "VCOMI" DECIMAL(7,4) [default: 0]
+  "VCOML" DECIMAL(7,4) [default: 0]
+  "VMAT" DECIMAL(9,4) [default: 0]
+  "VMATI" DECIMAL(9,4) [default: 0]
+  "VMATL" DECIMAL(9,4) [default: 0]
+  "VTER" DECIMAL(7,4) [default: 0]
+  "VMAOM" DECIMAL(7,4) [default: 0]
+  "VMAOO" DECIMAL(7,4) [default: 0]
+  "VREJ" DECIMAL(7,4) [default: 0]
+  "VMAR" DECIMAL(9,4) [default: 0]
+  "FMAR" DECIMAL(7,4) [default: 0]
+  "PUF" VARCHAR(2)
+  "PMAK" DECIMAL(5,2) [default: 0]
+  "PICM" DECIMAL(5,2) [default: 0]
+  "PMAR" DECIMAL(5,2) [default: 0]
+  "LANU" INTEGER [default: 0]
+  "LMES" INTEGER [default: 0]
+  "LMIN" INTEGER [default: 0]
+  "VFER" DECIMAL(10,2) [default: 0]
+  "VFERHR" INTEGER [default: 0]
+  "VFERID" DECIMAL(6,2) [default: 0]
+  "PRAZO" DATETIME
+  "PVEN" DECIMAL(9,4) [default: 0]
+  "PVEN2" DECIMAL(9,4) [default: 0]
+  "PREF" DECIMAL(9,4) [default: 0]
+  "DLUC" DECIMAL(7,2) [default: 0]
+  "DPRE" DECIMAL(7,2) [default: 0]
+  "OBS01" VARCHAR(80)
+  "OBS02" VARCHAR(80)
+  "OBS03" VARCHAR(80)
+  "OBS04" VARCHAR(80)
+  "OBS05" VARCHAR(80)
+  "OBS06" VARCHAR(80)
+  "OBS07" VARCHAR(80)
+  "OBS08" VARCHAR(80)
+  "OBC01" VARCHAR(80)
+  "OBC02" VARCHAR(80)
+  "OBC03" VARCHAR(80)
+  "OBC04" VARCHAR(80)
+  "OBC05" VARCHAR(80)
+  "OBE01" VARCHAR(60)
+  "OBE02" VARCHAR(60)
+  "OBE03" VARCHAR(60)
+  "SUBTOT01" DECIMAL(9,4) [default: 0]
+  "SUBTOT02" DECIMAL(9,4) [default: 0]
+  "REV" VARCHAR(1)
+  "VIABILI" INTEGER [default: 0]
+  "DUNS" VARCHAR(5)
+  "PROJETO" VARCHAR(5)
+  "NIVELDAT" DATETIME
+  "VIGENDAT" DATETIME
+  "DATA" DATETIME
+  "USUMEDIO" DECIMAL(7,2) [default: 0]
+  "ELANUM" INTEGER [default: 0]
+  "ELANOM" VARCHAR(40)
+  "ELADAT" DATETIME
+  "ELAHOR" VARCHAR(8)
+  "PCPRGMED" INTEGER [default: 0]
+  "TIPOIMP" VARCHAR(1)
+  "PPIS" DECIMAL(5,2) [default: 0]
+  "PCON" DECIMAL(5,2) [default: 0]
+  "TIPMEDIA" VARCHAR(1)
+  "PLUC" DECIMAL(5,2) [default: 0]
+  "PADM" DECIMAL(5,2) [default: 0]
+  "PCOM" DECIMAL(5,2) [default: 0]
+  "PCPM" DECIMAL(5,2) [default: 0]
+  "LICM" TINYINT(1)
+  "PRRJ" DECIMAL(5,2) [default: 0]
+  "CAPPRO" VARCHAR(5)
+  "OV" INTEGER [default: 0]
+  "DATACALC" DATETIME
+  "OVORI" INTEGER [default: 0]
+  "PISCON" VARCHAR(1)
+  "VTERI" DECIMAL(7,4) [default: 0]
+  "VTERL" DECIMAL(7,4) [default: 0]
+  "OBSP01" VARCHAR(60)
+  "OBSP02" VARCHAR(60)
+  "OVREV" VARCHAR(1)
+  "VSIMP" DECIMAL(7,4) [default: 0]
+  Indexes {
+    OV [name: "OV"]
+    CODIGO [name: "CODIGO"]
+    VIABILI [name: "VIABILI"]
+  }
+}
+
+// Origem: esoms03.dbf (DBF)
+Table "esoms03" {
+  Note: "Origem: esoms03.dbf"
+  "OV" INTEGER [default: 0]
+  "CODIGO" VARCHAR(24)
+  "TIPOENT" VARCHAR(1)
+  "CODCOMP" VARCHAR(24)
+  "NOMECOMP" VARCHAR(120)
+  "ORIGEM" VARCHAR(20)
+  "QTDDE" DECIMAL(10,5) [default: 0]
+  "PRECO" DECIMAL(12,4) [default: 0]
+  "TOTAL" DECIMAL(12,4) [default: 0]
+  "IICM" TINYINT(1)
+  "REDICM" DECIMAL(6,2) [default: 0]
+  "CODFOLHA" INTEGER [default: 0]
+  "OBS01" VARCHAR(80)
+  "ULTDATA" DATETIME
+  "ULTUND" VARCHAR(2)
+  Indexes {
+    OV [name: "OV"]
+  }
+}
+
+// Origem: esoms06.dbf (DBF)
+Table "esoms06" {
+  Note: "Origem: esoms06.dbf"
+  "OV" INTEGER [default: 0]
+  "CODIGO" VARCHAR(24)
+  "SEQ" INTEGER [default: 0]
+  "SSQ" INTEGER [default: 0]
+  "DESCRI" VARCHAR(70)
+  "CODMP01" VARCHAR(12)
+  "NOMMP01" VARCHAR(30)
+  "CODMP02" VARCHAR(12)
+  "NOMMP02" VARCHAR(30)
+  "CODMP02B" VARCHAR(12)
+  "NOMMP02B" VARCHAR(30)
+  "CODMP02C" VARCHAR(12)
+  "NOMMP02C" VARCHAR(30)
+  "CODMP02D" VARCHAR(12)
+  "NOMMP02D" VARCHAR(30)
+  "CODMP03" VARCHAR(24)
+  "NOMMP03" VARCHAR(30)
+  "PCHORA" INTEGER [default: 0]
+  "AREA" VARCHAR(2)
+  "HRFER" INTEGER [default: 0]
+  "CODFOLHA" INTEGER [default: 0]
+  "PRECO" DECIMAL(12,4) [default: 0]
+  "QTDDE" DECIMAL(10,5) [default: 0]
+  "TOTAL" DECIMAL(12,4) [default: 0]
+  "COGMP01" VARCHAR(10)
+  "PCMEDIA" INTEGER [default: 0]
+  "FLUXO" INTEGER [default: 0]
+  "FATOR" DECIMAL(5,2) [default: 0]
+}
+
+// Origem: esp.dbf (DBF)
+Table "esp" {
+  Note: "Origem: esp.dbf"
+  "CLIENTE" INTEGER [default: 0]
+  "COGCLI" VARCHAR(12)
+  "CODIGO" VARCHAR(24)
+  "NOME" VARCHAR(75)
+  "VCOM" DECIMAL(7,4) [default: 0]
+  "VCOMI" DECIMAL(7,4) [default: 0]
+  "VCOML" DECIMAL(7,4) [default: 0]
+  "VMAT" DECIMAL(9,4) [default: 0]
+  "VMATI" DECIMAL(9,4) [default: 0]
+  "VMATL" DECIMAL(9,4) [default: 0]
+  "VTER" DECIMAL(7,4) [default: 0]
+  "VMAOM" DECIMAL(7,4) [default: 0]
+  "VMAOO" DECIMAL(7,4) [default: 0]
+  "VREJ" DECIMAL(7,4) [default: 0]
+  "VMAR" DECIMAL(9,4) [default: 0]
+  "FMAR" DECIMAL(7,4) [default: 0]
+  "PUF" VARCHAR(2)
+  "PMAK" DECIMAL(5,2) [default: 0]
+  "PICM" DECIMAL(5,2) [default: 0]
+  "PMAR" DECIMAL(5,2) [default: 0]
+  "LANU" INTEGER [default: 0]
+  "LMES" INTEGER [default: 0]
+  "LMIN" INTEGER [default: 0]
+  "VFER" DECIMAL(10,2) [default: 0]
+  "VFERHR" INTEGER [default: 0]
+  "VFERID" DECIMAL(6,2) [default: 0]
+  "PRAZO" DATETIME
+  "PVEN" DECIMAL(9,4) [default: 0]
+  "PVEN2" DECIMAL(9,4) [default: 0]
+  "PREF" DECIMAL(9,4) [default: 0]
+  "DLUC" DECIMAL(7,2) [default: 0]
+  "DPRE" DECIMAL(7,2) [default: 0]
+  "OBS01" VARCHAR(80)
+  "OBS02" VARCHAR(80)
+  "OBS03" VARCHAR(80)
+  "OBS04" VARCHAR(80)
+  "OBS05" VARCHAR(80)
+  "OBS06" VARCHAR(80)
+  "OBS07" VARCHAR(80)
+  "OBS08" VARCHAR(80)
+  "OBC01" VARCHAR(80)
+  "OBC02" VARCHAR(80)
+  "OBC03" VARCHAR(80)
+  "OBC04" VARCHAR(80)
+  "OBC05" VARCHAR(80)
+  "OBE01" VARCHAR(60)
+  "OBE02" VARCHAR(60)
+  "OBE03" VARCHAR(60)
+  "SUBTOT01" DECIMAL(9,4) [default: 0]
+  "SUBTOT02" DECIMAL(9,4) [default: 0]
+  "REV" VARCHAR(1)
+  "VIABILI" INTEGER [default: 0]
+  "DUNS" VARCHAR(5)
+  "PROJETO" VARCHAR(5)
+  "NIVELDAT" DATETIME
+  "VIGENDAT" DATETIME
+  "DATA" DATETIME
+  "USUMEDIO" DECIMAL(7,2) [default: 0]
+  "ELANUM" INTEGER [default: 0]
+  "ELANOM" VARCHAR(40)
+  "ELADAT" DATETIME
+  "ELAHOR" VARCHAR(8)
+  "PCPRGMED" INTEGER [default: 0]
+  "TIPOIMP" VARCHAR(1)
+  "PPIS" DECIMAL(5,2) [default: 0]
+  "PCON" DECIMAL(5,2) [default: 0]
+  "TIPMEDIA" VARCHAR(1)
+  "PLUC" DECIMAL(5,2) [default: 0]
+  "PADM" DECIMAL(5,2) [default: 0]
+  "PCOM" DECIMAL(5,2) [default: 0]
+  "PCPM" DECIMAL(5,2) [default: 0]
+  "LICM" TINYINT(1)
+  "PRRJ" DECIMAL(5,2) [default: 0]
+  "CAPPRO" VARCHAR(5)
+  "OV" INTEGER [default: 0]
+  "DATACALC" DATETIME
+  "OVORI" INTEGER [default: 0]
+  "PISCON" VARCHAR(1)
+  "VTERI" DECIMAL(7,4) [default: 0]
+  "VTERL" DECIMAL(7,4) [default: 0]
+  "OBSP01" VARCHAR(60)
+  "OBSP02" VARCHAR(60)
+  "OVREV" VARCHAR(1)
+  "VSIMP" DECIMAL(7,4) [default: 0]
+  Indexes {
+    OV [name: "OV"]
+    CODIGO [name: "CODIGO"]
+    VIABILI [name: "VIABILI"]
+  }
+}
+
+// Origem: espms03.dbf (DBF)
+Table "espms03" {
+  Note: "Origem: espms03.dbf"
+  "OV" INTEGER [default: 0]
+  "CODIGO" VARCHAR(24)
+  "TIPOENT" VARCHAR(1)
+  "CODCOMP" VARCHAR(24)
+  "NOMECOMP" VARCHAR(120)
+  "ORIGEM" VARCHAR(20)
+  "QTDDE" DECIMAL(10,5) [default: 0]
+  "PRECO" DECIMAL(12,4) [default: 0]
+  "TOTAL" DECIMAL(12,4) [default: 0]
+  "IICM" TINYINT(1)
+  "REDICM" DECIMAL(6,2) [default: 0]
+  "CODFOLHA" INTEGER [default: 0]
+  "OBS01" VARCHAR(80)
+  "ULTDATA" DATETIME
+  "ULTUND" VARCHAR(2)
+  Indexes {
+    OV [name: "OV"]
+  }
+}
+
+// Origem: espms06.dbf (DBF)
+Table "espms06" {
+  Note: "Origem: espms06.dbf"
+  "OV" INTEGER [default: 0]
+  "CODIGO" VARCHAR(24)
+  "SEQ" INTEGER [default: 0]
+  "SSQ" INTEGER [default: 0]
+  "DESCRI" VARCHAR(70)
+  "CODMP01" VARCHAR(12)
+  "NOMMP01" VARCHAR(30)
+  "CODMP02" VARCHAR(12)
+  "NOMMP02" VARCHAR(30)
+  "CODMP02B" VARCHAR(12)
+  "NOMMP02B" VARCHAR(30)
+  "CODMP02C" VARCHAR(12)
+  "NOMMP02C" VARCHAR(30)
+  "CODMP02D" VARCHAR(12)
+  "NOMMP02D" VARCHAR(30)
+  "CODMP03" VARCHAR(24)
+  "NOMMP03" VARCHAR(30)
+  "PCHORA" INTEGER [default: 0]
+  "AREA" VARCHAR(2)
+  "HRFER" INTEGER [default: 0]
+  "CODFOLHA" INTEGER [default: 0]
+  "PRECO" DECIMAL(12,4) [default: 0]
+  "QTDDE" DECIMAL(10,5) [default: 0]
+  "TOTAL" DECIMAL(12,4) [default: 0]
+  "COGMP01" VARCHAR(10)
+  "PCMEDIA" INTEGER [default: 0]
+  "FLUXO" INTEGER [default: 0]
+  "FATOR" DECIMAL(5,2) [default: 0]
+  Indexes {
+    OV [name: "OV"]
+  }
+}
+
+// Origem: fluxo.dbf (DBF)
+Table "fluxo" {
+  Note: "Origem: fluxo.dbf"
+  "CODIGO" VARCHAR(1)
+  "NOME" VARCHAR(50)
+  "NUMERO" INTEGER [default: 0]
+  Indexes {
+    NUMERO [name: "FLUXO-1"]
+  }
+}
+
+// Origem: np.dbf (DBF)
+Table "np" {
+  Note: "Origem: np.dbf"
+  "NP" INTEGER [default: 0]
+  "CODIGO" VARCHAR(24)
+  "NOME" VARCHAR(40)
+  "CLIENTE" INTEGER [default: 0]
+  "CLINOME" VARCHAR(40)
+  "VEICULO" VARCHAR(20)
+  "PRSICM" DECIMAL(10,4) [default: 0]
+  "PRCICM" DECIMAL(10,4) [default: 0]
+  "VLFER" DECIMAL(12,2) [default: 0]
+  "PRAZO" DATETIME
+  "QTDMES" INTEGER [default: 0]
+  "COMPRADOR" VARCHAR(5)
+  "COMPNOME" VARCHAR(40)
+  "DESANUAL" INTEGER [default: 0]
+  "OS" VARCHAR(20)
+  "ANO" INTEGER [default: 0]
+  "PENDENTE" TINYINT(1)
+  Indexes {
+    NP [name: "NP"]
+    CLIENTE [name: "CLIENTE"]
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: orca.dbf (DBF)
+Table "orca" {
+  Note: "Origem: orca.dbf"
+  "ORCA" INTEGER [default: 0]
+  "CLIENTE" INTEGER [default: 0]
+  "CLINOME" VARCHAR(50)
+  "AC" VARCHAR(40)
+  "REFER" VARCHAR(20)
+  "DATA" DATETIME
+  "ORC" VARCHAR(40)
+  "ORC01" VARCHAR(100)
+  "ORC02" VARCHAR(100)
+  "PRAZO" VARCHAR(150)
+  "PRAZ2" VARCHAR(150)
+  "PRAZ3" VARCHAR(150)
+  "PRAZ4" VARCHAR(150)
+  "CPAG" VARCHAR(50)
+  "CFER" VARCHAR(100)
+  "CVAL" VARCHAR(20)
+  "OBS01" VARCHAR(200)
+  "OBS02" VARCHAR(200)
+  "OBS03" VARCHAR(200)
+  "OBS04" VARCHAR(200)
+  "OBS05" VARCHAR(200)
+  "OBS06" VARCHAR(200)
+  "OBS07" VARCHAR(200)
+  "OBS08" VARCHAR(200)
+  "SETOR" VARCHAR(2)
+  "CARGO" VARCHAR(40)
+  "RESPO" VARCHAR(40)
+  "NIVEL" DATETIME
+  "CAMBIO" VARCHAR(15)
+  "REVI" VARCHAR(1)
+  Indexes {
+    ORCA [name: "ORCA"]
+  }
+}
+
+// Origem: orcai.dbf (DBF)
+Table "orcai" {
+  Note: "Origem: orcai.dbf"
+  "ORCA" INTEGER [default: 0]
+  "ORD" INTEGER [default: 0]
+  "QTDDE" INTEGER [default: 0]
+  "UNID" VARCHAR(2)
+  "DESCR" VARCHAR(100)
+  "UNIPEC" VARCHAR(2)
+  "VALPEC" DECIMAL(10,5) [default: 0]
+  "FERRA" DECIMAL(10,2) [default: 0]
+  "LOTEMIN" INTEGER [default: 0]
+  "VIABILI" INTEGER [default: 0]
+  "OBSITEM" VARCHAR(80)
+  "OBSITE2" VARCHAR(80)
+  "OBSITE3" VARCHAR(80)
+  "OBSITE4" VARCHAR(80)
+  "OBSITE5" VARCHAR(80)
+  "DESENHO" VARCHAR(20)
+  "REV" VARCHAR(20)
+  "DATAREV" VARCHAR(10)
+  Indexes {
+    ORCA [name: "ORCA"]
+  }
+}
+
+// Origem: vfms03.dbf (DBF)
+Table "vfms03" {
+  Note: "Origem: vfms03.dbf"
+  "OV" INTEGER [default: 0]
+  "CODIGO" VARCHAR(24)
+  "TIPOENT" VARCHAR(1)
+  "CODCOMP" VARCHAR(24)
+  "NOMECOMP" VARCHAR(120)
+  "ORIGEM" VARCHAR(20)
+  "QTDDE" DECIMAL(10,5) [default: 0]
+  "PRECO" DECIMAL(12,4) [default: 0]
+  "TOTAL" DECIMAL(12,4) [default: 0]
+  "IICM" TINYINT(1)
+  "REDICM" DECIMAL(6,2) [default: 0]
+  "CODFOLHA" INTEGER [default: 0]
+  "OBS01" VARCHAR(80)
+  "ULTDATA" DATETIME
+  "ULTUND" VARCHAR(2)
+  Indexes {
+    OV [name: "OV"]
+  }
+}
+
+// Origem: vfms06.dbf (DBF)
+Table "vfms06" {
+  Note: "Origem: vfms06.dbf"
+  "OV" INTEGER [default: 0]
+  "CODIGO" VARCHAR(24)
+  "SEQ" INTEGER [default: 0]
+  "SSQ" INTEGER [default: 0]
+  "DESCRI" VARCHAR(70)
+  "CODMP01" VARCHAR(12)
+  "NOMMP01" VARCHAR(30)
+  "CODMP02" VARCHAR(12)
+  "NOMMP02" VARCHAR(30)
+  "CODMP02B" VARCHAR(12)
+  "NOMMP02B" VARCHAR(30)
+  "CODMP02C" VARCHAR(12)
+  "NOMMP02C" VARCHAR(30)
+  "CODMP02D" VARCHAR(12)
+  "NOMMP02D" VARCHAR(30)
+  "CODMP03" VARCHAR(24)
+  "NOMMP03" VARCHAR(30)
+  "PCHORA" INTEGER [default: 0]
+  "AREA" VARCHAR(2)
+  "HRFER" INTEGER [default: 0]
+  "CODFOLHA" INTEGER [default: 0]
+  "PRECO" DECIMAL(12,4) [default: 0]
+  "QTDDE" DECIMAL(10,5) [default: 0]
+  "TOTAL" DECIMAL(12,4) [default: 0]
+  "COGMP01" VARCHAR(10)
+  "PCMEDIA" INTEGER [default: 0]
+  "FLUXO" INTEGER [default: 0]
+  "FATOR" DECIMAL(5,2) [default: 0]
+  Indexes {
+    OV [name: "OV"]
+  }
+}
+
+// Origem: vforc.dbf (DBF)
+Table "vforc" {
+  Note: "Origem: vforc.dbf"
+  "CLIENTE" INTEGER [default: 0]
+  "COGCLI" VARCHAR(12)
+  "CODIGO" VARCHAR(24)
+  "NOME" VARCHAR(75)
+  "VCOM" DECIMAL(7,4) [default: 0]
+  "VCOMI" DECIMAL(7,4) [default: 0]
+  "VCOML" DECIMAL(7,4) [default: 0]
+  "VMAT" DECIMAL(9,4) [default: 0]
+  "VMATI" DECIMAL(9,4) [default: 0]
+  "VMATL" DECIMAL(9,4) [default: 0]
+  "VTER" DECIMAL(7,4) [default: 0]
+  "VMAOM" DECIMAL(7,4) [default: 0]
+  "VMAOO" DECIMAL(7,4) [default: 0]
+  "VREJ" DECIMAL(7,4) [default: 0]
+  "VMAR" DECIMAL(9,4) [default: 0]
+  "FMAR" DECIMAL(7,4) [default: 0]
+  "PUF" VARCHAR(2)
+  "PMAK" DECIMAL(5,2) [default: 0]
+  "PICM" DECIMAL(5,2) [default: 0]
+  "PMAR" DECIMAL(5,2) [default: 0]
+  "LANU" INTEGER [default: 0]
+  "LMES" INTEGER [default: 0]
+  "LMIN" INTEGER [default: 0]
+  "VFER" DECIMAL(10,2) [default: 0]
+  "VFERHR" INTEGER [default: 0]
+  "VFERID" DECIMAL(6,2) [default: 0]
+  "PRAZO" DATETIME
+  "PVEN" DECIMAL(9,4) [default: 0]
+  "PVEN2" DECIMAL(9,4) [default: 0]
+  "PREF" DECIMAL(9,4) [default: 0]
+  "DLUC" DECIMAL(7,2) [default: 0]
+  "DPRE" DECIMAL(7,2) [default: 0]
+  "OBS01" VARCHAR(80)
+  "OBS02" VARCHAR(80)
+  "OBS03" VARCHAR(80)
+  "OBS04" VARCHAR(80)
+  "OBS05" VARCHAR(80)
+  "OBS06" VARCHAR(80)
+  "OBS07" VARCHAR(80)
+  "OBS08" VARCHAR(80)
+  "OBC01" VARCHAR(80)
+  "OBC02" VARCHAR(80)
+  "OBC03" VARCHAR(80)
+  "OBC04" VARCHAR(80)
+  "OBC05" VARCHAR(80)
+  "OBE01" VARCHAR(60)
+  "OBE02" VARCHAR(60)
+  "OBE03" VARCHAR(60)
+  "SUBTOT01" DECIMAL(9,4) [default: 0]
+  "SUBTOT02" DECIMAL(9,4) [default: 0]
+  "REV" VARCHAR(1)
+  "VIABILI" INTEGER [default: 0]
+  "DUNS" VARCHAR(5)
+  "PROJETO" VARCHAR(5)
+  "NIVELDAT" DATETIME
+  "VIGENDAT" DATETIME
+  "DATA" DATETIME
+  "USUMEDIO" DECIMAL(7,2) [default: 0]
+  "ELANUM" INTEGER [default: 0]
+  "ELANOM" VARCHAR(40)
+  "ELADAT" DATETIME
+  "ELAHOR" VARCHAR(8)
+  "PCPRGMED" INTEGER [default: 0]
+  "TIPOIMP" VARCHAR(1)
+  "PPIS" DECIMAL(5,2) [default: 0]
+  "PCON" DECIMAL(5,2) [default: 0]
+  "TIPMEDIA" VARCHAR(1)
+  "PLUC" DECIMAL(5,2) [default: 0]
+  "PADM" DECIMAL(5,2) [default: 0]
+  "PCOM" DECIMAL(5,2) [default: 0]
+  "PCPM" DECIMAL(5,2) [default: 0]
+  "LICM" TINYINT(1)
+  "PRRJ" DECIMAL(5,2) [default: 0]
+  "CAPPRO" VARCHAR(5)
+  "OV" INTEGER [default: 0]
+  "DATACALC" DATETIME
+  "OVORI" INTEGER [default: 0]
+  "PISCON" VARCHAR(1)
+  "VTERI" DECIMAL(7,4) [default: 0]
+  "VTERL" DECIMAL(7,4) [default: 0]
+  "OBSP01" VARCHAR(60)
+  "OBSP02" VARCHAR(60)
+  "OVREV" VARCHAR(1)
+  "VSIMP" DECIMAL(7,4) [default: 0]
+  Indexes {
+    OV [name: "OV"]
+    CODIGO [name: "CODIGO"]
+    VIABILI [name: "VIABILI"]
+  }
+}
+
+// Origem: viabiii.dbf (DBF)
+Table "viabiii" {
+  Note: "Origem: viabiii.dbf"
+  "OV" INTEGER [default: 0]
+  "ITEM" INTEGER [default: 0]
+  "TIPO" VARCHAR(1)
+  "REV" VARCHAR(10)
+  "SITUACAO" VARCHAR(1)
+  "SITUSER" VARCHAR(10)
+  "SITDATA" DATETIME
+  "SITHORA" VARCHAR(10)
+  "PRECO" DECIMAL(12,2) [default: 0]
+  "PRECODT" DATETIME
+  "PRECOUN" VARCHAR(2)
+  "CLIFOR" INTEGER [default: 0]
+  "CLICOG" VARCHAR(12)
+  "APROVACAO" VARCHAR(1)
+  "APRUSER" VARCHAR(10)
+  "APRDATA" DATETIME
+  "APRTIME" VARCHAR(10)
+  "COTUSR" VARCHAR(10)
+  "COTDATA" DATETIME
+  "COTTIME" VARCHAR(10)
+  "DATALC" DATETIME
+  "PRAZOI" DATETIME
+  "DADO" LONGTEXT
+  "SITOBS" LONGTEXT
+  "APROBS" LONGTEXT
+  Indexes {
+    STR(OV,8)+STR(ITEM,3) [name: "OVITEM"]
+    OV [name: "OV"]
+  }
+}
+
+// Origem: viabili.dbf (DBF)
+Table "viabili" {
+  Note: "Origem: viabili.dbf"
+  "OV" INTEGER [default: 0]
+  "OVORI" INTEGER [default: 0]
+  "CLIENTE" INTEGER [default: 0]
+  "CLINOME" VARCHAR(50)
+  "CLICOGN" VARCHAR(12)
+  "COMCOMP" VARCHAR(40)
+  "COMPRADOR" VARCHAR(5)
+  "DESENHO" VARCHAR(20)
+  "PECA" VARCHAR(20)
+  "GPS" VARCHAR(20)
+  "DENOMINA" VARCHAR(100)
+  "NORMAT" VARCHAR(10)
+  "AM" VARCHAR(1)
+  "QTDEANO" INTEGER [default: 0]
+  "LOTEMIN" INTEGER [default: 0]
+  "PR" VARCHAR(1)
+  "DATAS" DATETIME
+  "COTAR" VARCHAR(1)
+  "DATAV" DATETIME
+  "DATAEC" DATETIME
+  "SITUACAO" VARCHAR(1)
+  "EAC" VARCHAR(35)
+  "VIAVEL" VARCHAR(1)
+  "VIA01" VARCHAR(50)
+  "VIA02" VARCHAR(50)
+  "FESP" VARCHAR(1)
+  "OBSF01" VARCHAR(50)
+  "OBSF02" VARCHAR(50)
+  "MATM" VARCHAR(1)
+  "MATS" VARCHAR(1)
+  "OBSM01" VARCHAR(50)
+  "TRATM" VARCHAR(1)
+  "TRATS" VARCHAR(1)
+  "OBST01" VARCHAR(50)
+  "OBST02" VARCHAR(50)
+  "DISPE" VARCHAR(1)
+  "OBSE01" VARCHAR(50)
+  "OBSE02" VARCHAR(50)
+  "DISPO" VARCHAR(1)
+  "OBSO01" VARCHAR(50)
+  "OBSG01" VARCHAR(80)
+  "OBSG02" VARCHAR(80)
+  "OBSG03" VARCHAR(80)
+  "OBSG04" VARCHAR(80)
+  "OBSG05" VARCHAR(80)
+  "OBSG06" VARCHAR(80)
+  "OBSG07" VARCHAR(80)
+  "OBSG08" VARCHAR(80)
+  "COT01" TINYINT(1)
+  "COT02" TINYINT(1)
+  "COT03" TINYINT(1)
+  "COT04" TINYINT(1)
+  "COT05" TINYINT(1)
+  "COT06" TINYINT(1)
+  "COT07" TINYINT(1)
+  "REQC" VARCHAR(1)
+  "REQ01" VARCHAR(50)
+  "PEDCLI" VARCHAR(20)
+  "PRZCLI" DATETIME
+  "DATAPRE" DATETIME
+  "OBSVEN" VARCHAR(100)
+  "VALORFER" DECIMAL(12,2) [default: 0]
+  "VALORUNI" DECIMAL(12,4) [default: 0]
+  "QTDENEG" INTEGER [default: 0]
+  "ORCAMENTO" INTEGER [default: 0]
+  "ITEM" INTEGER [default: 0]
+  "FVALORFER" DECIMAL(12,2) [default: 0]
+  "FVALORUNI" DECIMAL(12,4) [default: 0]
+  "FDATA" DATETIME
+  "INCUSER" VARCHAR(10)
+  "INCDATA" DATETIME
+  "INCHORA" VARCHAR(10)
+  "ESP" INTEGER [default: 0]
+  "OBSCUS01" VARCHAR(100)
+  "OBSCUS02" VARCHAR(100)
+  "OBSCUS03" VARCHAR(100)
+  "RFQN" VARCHAR(15)
+  "DUNS" VARCHAR(30)
+  "PROJETO" VARCHAR(20)
+  "RISCO" VARCHAR(1)
+  "OBSR01" VARCHAR(50)
+  "TIPOVIA" VARCHAR(1)
+  "CODIGOINT" VARCHAR(24)
+  "REV" VARCHAR(1)
+  "OBSCLI" VARCHAR(50)
+  "DESORC" VARCHAR(24)
+  "DESORCREV" VARCHAR(20)
+  "DESORCDAT" DATETIME
+  "CANCELADO" TINYINT(1)
+  "ENVELOPE" VARCHAR(5)
+  "DECLINADO" TINYINT(1)
+  "FOLLOWUP" TINYINT(1)
+  "GI" VARCHAR(1)
+  "SEGMENTO" VARCHAR(2)
+  "DECLMOT" INTEGER [default: 0]
+  "VENDEDOR" VARCHAR(5)
+  "COMVEND" VARCHAR(40)
+  Indexes {
+    CODIGOINT [name: "CODIGOIN"]
+    OV [name: "OV"]
+    DESENHO [name: "DESENHO"]
+    PEDCLI [name: "PEDCLI"]
+    CODIGOINT [name: "CODIGOINT"]
+  }
+}
+
+// Origem: viarev.dbf (DBF)
+Table "viarev" {
+  Note: "Origem: viarev.dbf"
+  "OV" INTEGER [default: 0]
+  "OPR" VARCHAR(1)
+  "REV" VARCHAR(1)
+  "DATA" DATETIME
+  "HORA" VARCHAR(8)
+  "USUARIO" VARCHAR(10)
+  "MOTIVO" VARCHAR(255)
+  Indexes {
+    OV [name: "VIAREV"]
+  }
+}
+
+// Origem: vmark.dbf (DBF)
+Table "vmark" {
+  Note: "Origem: vmark.dbf"
+  "SEQ" INTEGER [default: 0]
+  "DESCRI" VARCHAR(12)
+  "PERCE" DECIMAL(6,2) [default: 0]
+  Indexes {
+    SEQ [name: "SEQ"]
+  }
+}
+
+// Origem: vms03.dbf (DBF)
+Table "vms03" {
+  Note: "Origem: vms03.dbf"
+  "OV" INTEGER [default: 0]
+  "CODIGO" VARCHAR(24)
+  "TIPOENT" VARCHAR(1)
+  "CODCOMP" VARCHAR(24)
+  "NOMECOMP" VARCHAR(120)
+  "ORIGEM" VARCHAR(20)
+  "QTDDE" DECIMAL(10,5) [default: 0]
+  "PRECO" DECIMAL(12,4) [default: 0]
+  "TOTAL" DECIMAL(12,4) [default: 0]
+  "IICM" TINYINT(1)
+  "REDICM" DECIMAL(6,2) [default: 0]
+  "CODFOLHA" INTEGER [default: 0]
+  "OBS01" VARCHAR(80)
+  "ULTDATA" DATETIME
+  "ULTUND" VARCHAR(2)
+  Indexes {
+    OV [name: "OV"]
+  }
+}
+
+// Origem: vms06.dbf (DBF)
+Table "vms06" {
+  Note: "Origem: vms06.dbf"
+  "OV" INTEGER [default: 0]
+  "CODIGO" VARCHAR(24)
+  "SEQ" INTEGER [default: 0]
+  "SSQ" INTEGER [default: 0]
+  "DESCRI" VARCHAR(70)
+  "CODMP01" VARCHAR(12)
+  "NOMMP01" VARCHAR(30)
+  "CODMP02" VARCHAR(12)
+  "NOMMP02" VARCHAR(30)
+  "CODMP02B" VARCHAR(12)
+  "NOMMP02B" VARCHAR(30)
+  "CODMP02C" VARCHAR(12)
+  "NOMMP02C" VARCHAR(30)
+  "CODMP02D" VARCHAR(12)
+  "NOMMP02D" VARCHAR(30)
+  "CODMP03" VARCHAR(24)
+  "NOMMP03" VARCHAR(30)
+  "PCHORA" INTEGER [default: 0]
+  "AREA" VARCHAR(2)
+  "HRFER" INTEGER [default: 0]
+  "CODFOLHA" INTEGER [default: 0]
+  "PRECO" DECIMAL(12,4) [default: 0]
+  "QTDDE" DECIMAL(10,5) [default: 0]
+  "TOTAL" DECIMAL(12,4) [default: 0]
+  "COGMP01" VARCHAR(10)
+  "PCMEDIA" INTEGER [default: 0]
+  "FLUXO" INTEGER [default: 0]
+  "FATOR" DECIMAL(5,2) [default: 0]
+  Indexes {
+    OV [name: "OV"]
+  }
+}
+
+// Origem: vporc.dbf (DBF)
+Table "vporc" {
+  Note: "Origem: vporc.dbf"
+  "CLIENTE" INTEGER [default: 0]
+  "COGCLI" VARCHAR(12)
+  "CODIGO" VARCHAR(24)
+  "NOME" VARCHAR(75)
+  "VCOM" DECIMAL(7,4) [default: 0]
+  "VCOMI" DECIMAL(7,4) [default: 0]
+  "VCOML" DECIMAL(7,4) [default: 0]
+  "VMAT" DECIMAL(9,4) [default: 0]
+  "VMATI" DECIMAL(9,4) [default: 0]
+  "VMATL" DECIMAL(9,4) [default: 0]
+  "VTER" DECIMAL(7,4) [default: 0]
+  "VMAOM" DECIMAL(7,4) [default: 0]
+  "VMAOO" DECIMAL(7,4) [default: 0]
+  "VREJ" DECIMAL(7,4) [default: 0]
+  "VMAR" DECIMAL(9,4) [default: 0]
+  "FMAR" DECIMAL(7,4) [default: 0]
+  "PUF" VARCHAR(2)
+  "PMAK" DECIMAL(5,2) [default: 0]
+  "PICM" DECIMAL(5,2) [default: 0]
+  "PMAR" DECIMAL(5,2) [default: 0]
+  "LANU" INTEGER [default: 0]
+  "LMES" INTEGER [default: 0]
+  "LMIN" INTEGER [default: 0]
+  "VFER" DECIMAL(10,2) [default: 0]
+  "VFERHR" INTEGER [default: 0]
+  "VFERID" DECIMAL(6,2) [default: 0]
+  "PRAZO" DATETIME
+  "PVEN" DECIMAL(9,4) [default: 0]
+  "PVEN2" DECIMAL(9,4) [default: 0]
+  "PREF" DECIMAL(9,4) [default: 0]
+  "DLUC" DECIMAL(7,2) [default: 0]
+  "DPRE" DECIMAL(7,2) [default: 0]
+  "OBS01" VARCHAR(80)
+  "OBS02" VARCHAR(80)
+  "OBS03" VARCHAR(80)
+  "OBS04" VARCHAR(80)
+  "OBS05" VARCHAR(80)
+  "OBS06" VARCHAR(80)
+  "OBS07" VARCHAR(80)
+  "OBS08" VARCHAR(80)
+  "OBC01" VARCHAR(80)
+  "OBC02" VARCHAR(80)
+  "OBC03" VARCHAR(80)
+  "OBC04" VARCHAR(80)
+  "OBC05" VARCHAR(80)
+  "OBE01" VARCHAR(60)
+  "OBE02" VARCHAR(60)
+  "OBE03" VARCHAR(60)
+  "SUBTOT01" DECIMAL(9,4) [default: 0]
+  "SUBTOT02" DECIMAL(9,4) [default: 0]
+  "REV" VARCHAR(1)
+  "VIABILI" INTEGER [default: 0]
+  "DUNS" VARCHAR(5)
+  "PROJETO" VARCHAR(5)
+  "NIVELDAT" DATETIME
+  "VIGENDAT" DATETIME
+  "DATA" DATETIME
+  "USUMEDIO" DECIMAL(7,2) [default: 0]
+  "ELANUM" INTEGER [default: 0]
+  "ELANOM" VARCHAR(40)
+  "ELADAT" DATETIME
+  "ELAHOR" VARCHAR(8)
+  "PCPRGMED" INTEGER [default: 0]
+  "TIPOIMP" VARCHAR(1)
+  "PPIS" DECIMAL(5,2) [default: 0]
+  "PCON" DECIMAL(5,2) [default: 0]
+  "TIPMEDIA" VARCHAR(1)
+  "PLUC" DECIMAL(5,2) [default: 0]
+  "PADM" DECIMAL(5,2) [default: 0]
+  "PCOM" DECIMAL(5,2) [default: 0]
+  "PCPM" DECIMAL(5,2) [default: 0]
+  "LICM" TINYINT(1)
+  "PRRJ" DECIMAL(5,2) [default: 0]
+  "CAPPRO" VARCHAR(5)
+  "OV" INTEGER [default: 0]
+  "DATACALC" DATETIME
+  "OVORI" INTEGER [default: 0]
+  "PISCON" VARCHAR(1)
+  "VTERI" DECIMAL(7,4) [default: 0]
+  "VTERL" DECIMAL(7,4) [default: 0]
+  "OBSP01" VARCHAR(60)
+  "OBSP02" VARCHAR(60)
+  "OVREV" VARCHAR(1)
+  "VSIMP" DECIMAL(7,4) [default: 0]
+  Indexes {
+    OV [name: "OV"]
+    CODIGO [name: "CODIGO"]
+    VIABILI [name: "VIABILI"]
+  }
+}
+

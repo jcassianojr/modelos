@@ -1,0 +1,50 @@
+// Origem: mail.dbf (DBF)
+Table "mail" {
+  Note: "Origem: mail.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "ERRO" VARCHAR(8)
+  "DATA" DATETIME
+  "HORA" VARCHAR(8)
+  "DE" VARCHAR(12)
+  "DESTINO" VARCHAR(12)
+  "ASSUNTO" VARCHAR(120)
+  "TEXTO" LONGTEXT
+  "DATAOK" DATETIME
+  "HORAOK" VARCHAR(8)
+}
+
+// Origem: mailerro.dbf (DBF)
+Table "mailerro" {
+  Note: "Origem: mailerro.dbf"
+  "ERRO" VARCHAR(8)
+  "ASSUNTO" VARCHAR(120)
+  Indexes {
+    ERRO [name: "MAILERRO"]
+  }
+}
+
+// Origem: mailpara.dbf (DBF)
+Table "mailpara" {
+  Note: "Origem: mailpara.dbf"
+  "ERRO" VARCHAR(8)
+  "DESTINO" VARCHAR(12)
+  Indexes {
+    ERRO [name: "MAILPARA"]
+  }
+}
+
+// Origem: mailpg.dbf (DBF)
+Table "mailpg" {
+  Note: "Origem: mailpg.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "ERRO" VARCHAR(8)
+  "DATA" DATETIME
+  "HORA" VARCHAR(8)
+  "DE" VARCHAR(12)
+  "DESTINO" VARCHAR(12)
+  "ASSUNTO" VARCHAR(120)
+  "TEXTO" LONGTEXT
+  "DATAOK" DATETIME
+  "HORAOK" VARCHAR(8)
+}
+

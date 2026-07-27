@@ -1,7 +1,9 @@
-# 🗄️ Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 05/12/26
+# Dicionario de Estruturas de Dados do Projeto
+> Varredura automatica realizada em: 27/07/2026
 
-## 📋 Tabela DBF: `configu.dbf`
+## Tabela DBF: `configu.dbf`
+> **Origem:** `configu.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | HELP | C | 8 | 0 |
@@ -31,7 +33,9 @@
 | DRIVER | C | 8 | 0 |
 
 ---
-## 📋 Tabela DBF: `manemp.dbf`
+## Tabela DBF: `manemp.dbf`
+> **Origem:** `manemp.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 5 | 0 |
@@ -110,11 +114,13 @@
 | CODEMPMIG | C | 2 | 0 |
 | IMGCON | C | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `MANEMP` Expressão: `NUMERO`
+**Indices vinculados:**
+- Tag: `MANEMP` Expressao: `NUMERO`
 
 ---
-## 📋 Tabela DBF: `manhel.dbf`
+## Tabela DBF: `manhel.dbf`
+> **Origem:** `manhel.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | DBF | C | 8 | 0 |
@@ -126,7 +132,7 @@
 | PRELAN | C | 20 | 0 |
 | CONDICAO | C | 20 | 0 |
 
-**Índices vinculados:**
-- Tag: `MANHEL` Expressão: `DBF+CAMPO`
+**Indices vinculados:**
+- Tag: `MANHEL` Expressao: `DBF+CAMPO`
 
 ---

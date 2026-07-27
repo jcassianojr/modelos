@@ -1,0 +1,488 @@
+// Origem: rpt.sqlite (SQLite)
+Table "RPTGRP" {
+  Note: "Origem: rpt.sqlite"
+  "NOME" varchar (50)
+  "CODIGO" varchar (8)
+  "GRP" varchar (8)
+  "CAMINHO" varchar (255)
+  "LIBERAR" boolean
+  "ID" INTEGER
+  Indexes {
+    (GRP) [name: "IDXRPTGRP_GRP"]
+  }
+}
+
+// Origem: rpt.sqlite (SQLite)
+Table "RPT" {
+  Note: "Origem: rpt.sqlite"
+  "RPT" varchar (8)
+  "COGNOME" varchar (100)
+  "NOME" varchar (100)
+  "ARVORE" boolean
+  "BUSCA" boolean
+  "ARQUIVO" varchar (100)
+  "DATAIMP" datetime
+  "UTILIZADO" INT
+  "DATACRI" datetime
+  "SUBGRP" varchar (4)
+  "CAMINHO" varchar (200)
+  "MENSAGEM" longtext
+  "CAMINH2" varchar (200)
+  "CAMINH3" varchar (200)
+  "CAMINH4" varchar (200)
+  "CARQUSO" varchar (8)
+  "CARQBAI" varchar (8)
+  "CARQFEC" varchar (2)
+  "CARQACU" varchar (8)
+  "COBSMSG" varchar (50)
+  "LFILTRO" boolean
+  "TABALIAS" varchar (8)
+  "TABNAME" varchar (8)
+  "PREFILTRO" varchar (255)
+  "ABRIRCOM" varchar (30)
+  "CODIGO" varchar (8)
+  "TITULO" varchar (250)
+  "GRP" varchar (8)
+  "SQLUSO" longtext
+  "ID" INTEGER
+  Indexes {
+    (GRP) [name: "IDXRPT_GRP"]
+  }
+}
+
+// Origem: rpt.sqlite (SQLite)
+Table "RPTMAIN" {
+  Note: "Origem: rpt.sqlite"
+  "NOME" varchar (50)
+  "CODIGO" varchar (8)
+  "CAMINHO" varchar (255)
+  "ID" INTEGER
+  "DISPONIVEL" boolean
+  Indexes {
+    (CODIGO) [name: "GRPMAIN"]
+  }
+}
+
+// Origem: rptfol.sqlite (SQLite)
+Table "RPT" {
+  Note: "Origem: rptfol.sqlite"
+  "GRP" varchar (4)
+  "RPT" varchar (8)
+  "COGNOME" varchar (100)
+  "NOME" varchar (100)
+  "ARVORE" boolean
+  "BUSCA" boolean
+  "ARQUIVO" varchar (100)
+  "ABRIRCOM" varchar (30)
+  "DATAIMP" datetime
+  "UTILIZADO" INT
+  "DATACRI" datetime
+  "SUBGRP" varchar (4)
+  "CAMINHO" varchar (200)
+  "MENSAGEM" longtext
+  "CAMINH2" varchar (200)
+  "CAMINH3" varchar (200)
+  "CAMINH4" varchar (200)
+  "CARQUSO" varchar (8)
+  "CARQBAI" varchar (8)
+  "CARQFEC" varchar (2)
+  "CARQACU" varchar (8)
+  "COBSMSG" varchar (50)
+  "LFILTRO" boolean
+  "PREFILTRO" varchar (255)
+  "TABALIAS" varchar (8)
+  "TABNAME" varchar (8)
+  "TITULO" varchar (255)
+  "CODIGO" varchar (8)
+  "SQLUSO" longtext
+  "ID" INT
+  Indexes {
+    (GRP) [name: "IDX_RPT_GRP"]
+    (ID) [name: "sqlite_autoindex_RPT_1"]
+  }
+}
+
+// Origem: rptfol.sqlite (SQLite)
+Table "RPTGRP" {
+  Note: "Origem: rptfol.sqlite"
+  "GRP" varchar (4)
+  "NOME" varchar (50)
+  "CODIGO" varchar (8)
+  "CAMINHO" varchar (255)
+  "LIBERAR" boolean
+  "ID" INTEGER
+  Indexes {
+    (GRP) [name: "IDXRPTGRP_GRP"]
+    (CODIGO) [name: "IDXRPTGRP_CODIGO"]
+  }
+}
+
+// Origem: rptfol.sqlite (SQLite)
+Table "RPTMAIN" {
+  Note: "Origem: rptfol.sqlite"
+  "NOME" varchar (50)
+  "CODIGO" varchar (8)
+  "CAMINHO" varchar (255)
+  "ID" INTEGER
+  "DISPONIVEL" boolean
+  Indexes {
+    (CODIGO) [name: "GRPMAIN"]
+  }
+}
+
+// Origem: rptint.sqlite (SQLite)
+Table "RPTMAIN" {
+  Note: "Origem: rptint.sqlite"
+  "NOME" varchar (50)
+  "CODIGO" varchar (8)
+  "CAMINHO" varchar (255)
+  "ID" INTEGER
+  "DISPONIVEL" boolean
+  Indexes {
+    (CODIGO) [name: "GRPMAIN"]
+  }
+}
+
+// Origem: rptint.sqlite (SQLite)
+Table "RPTGRP" {
+  Note: "Origem: rptint.sqlite"
+  "GRP" varchar (4)
+  "NOME" varchar (50)
+  "CODIGO" varchar (8)
+  "CAMINHO" varchar (255)
+  "LIBERAR" boolean
+  "ID" INTEGER
+  Indexes {
+    (GRP) [name: "IDXRPTGRP_GRP"]
+    (CODIGO) [name: "IDXRPTGRP_CODIGO"]
+  }
+}
+
+// Origem: rptint.sqlite (SQLite)
+Table "RPT" {
+  Note: "Origem: rptint.sqlite"
+  "GRP" varchar (4)
+  "RPT" varchar (8)
+  "COGNOME" varchar (100)
+  "NOME" varchar (100)
+  "ARVORE" boolean
+  "BUSCA" boolean
+  "ARQUIVO" varchar (100)
+  "ABRIRCOM" varchar (30)
+  "DATAIMP" datetime
+  "UTILIZADO" INT
+  "DATACRI" datetime
+  "SUBGRP" varchar (4)
+  "CAMINHO" varchar (200)
+  "MENSAGEM" longtext
+  "CAMINH2" varchar (200)
+  "CAMINH3" varchar (200)
+  "CAMINH4" varchar (200)
+  "CARQUSO" varchar (8)
+  "CARQBAI" varchar (8)
+  "CARQFEC" varchar (2)
+  "CARQACU" varchar (8)
+  "COBSMSG" varchar (50)
+  "LFILTRO" boolean
+  "PREFILTRO" varchar (255)
+  "TABALIAS" varchar (8)
+  "TITULO" varchar (255)
+  "CODIGO" varchar (8)
+  "SQLUSO" longtext
+  "ID" INTEGER
+  "tabname" varchar (50)
+  Indexes {
+    (GRP) [name: "IDX_RPT_GRP"]
+  }
+}
+
+// Origem: rtf.sqlite (SQLite)
+Table "RPTGRP" {
+  Note: "Origem: rtf.sqlite"
+  "NOME" varchar (50)
+  "GRP" varchar (8)
+  "CODIGO" varchar (8)
+  "CAMINHO" varchar (255)
+  "LIBERAR" boolean
+  "ID" INTEGER
+  Indexes {
+    (GRP) [name: "IDX_RPTGRP_GRP"]
+  }
+}
+
+// Origem: rtf.sqlite (SQLite)
+Table "RPTMAIN" {
+  Note: "Origem: rtf.sqlite"
+  "NOME" varchar (50)
+  "CODIGO" varchar (8)
+  "CAMINHO" varchar (255)
+  "DISPONIVEL" boolean
+  "ID" INTEGER
+  Indexes {
+    (CODIGO) [name: "GRPMAIN"]
+  }
+}
+
+// Origem: rtf.sqlite (SQLite)
+Table "RPT" {
+  Note: "Origem: rtf.sqlite"
+  "RPT" varchar (8)
+  "COGNOME" varchar (100)
+  "NOME" varchar (100)
+  "ARVORE" boolean
+  "BUSCA" boolean
+  "ARQUIVO" varchar (100)
+  "DATAIMP" datetime
+  "UTILIZADO" INT
+  "DATACRI" datetime
+  "SUBGRP" varchar (4)
+  "CAMINHO" varchar (200)
+  "MENSAGEM" longtext
+  "CAMINH2" varchar (200)
+  "CAMINH3" varchar (200)
+  "CAMINH4" varchar (200)
+  "CARQUSO" varchar (8)
+  "CARQBAI" varchar (8)
+  "CARQFEC" varchar (2)
+  "CARQACU" varchar (8)
+  "COBSMSG" varchar (8)
+  "LFILTRO" boolean
+  "TABALIAS" varchar (8)
+  "TABNAME" varchar (8)
+  "PREFILTRO" varchar (255)
+  "ABRIRCOM" varchar (30)
+  "CODIGO" varchar (8)
+  "GRP" varchar (8)
+  "TITULO" varchar (250)
+  "SQLUSO" longtext
+  "ID" INTEGER
+  Indexes {
+    (GRP) [name: "IDX_RPT_GRP"]
+  }
+}
+
+// Origem: wrpt.sqlite (SQLite)
+Table "RPTUSR" {
+  Note: "Origem: wrpt.sqlite"
+  "IDUSUARIO" INT
+  "RPT" varchar (8)
+  "IMPRIME" boolean
+  "EXPORTA" boolean
+  "VISUALIZA" boolean
+  "SALVARTF" boolean
+  "SALVATXT" boolean
+  "NOVO" boolean
+  "ABRIR" boolean
+  "EDITAR" boolean
+  "ABRIRCOM" varchar (50)
+  "GRP" varchar (8)
+  Indexes {
+    (GRP, RPT, IDUSUARIO) [name: "rptusr1"]
+  }
+}
+
+// Origem: wrpt.sqlite (SQLite)
+Table "MENU" {
+  Note: "Origem: wrpt.sqlite"
+  "MENU" varchar (12)
+  "DESCRICAO" varchar (50)
+  "INDICE" smallint
+  "LIGADO" boolean
+  "CADASTRO" smallint
+  "HOTKEY" varchar (20)
+  Indexes {
+    (CADASTRO) [name: "IDXMENU_CADASTRO"]
+    (MENU, INDICE) [name: "sqlite_autoindex_MENU_1"]
+  }
+}
+
+// Origem: wrpt.sqlite (SQLite)
+Table "CONTROLE" {
+  Note: "Origem: wrpt.sqlite"
+  "FORM" varchar (20)
+  "CONTROLE" varchar (20)
+  "INDICE" INT
+  "IMAGEM" smallint
+  "CAPTION" varchar (20)
+  "TOOLTIP" varchar (50)
+  "TOP" INT
+  "LEFT" INT
+  "HEIGHT" INT
+  "WIDTH" INT
+  "MAXLEN" INT
+  "CORFRENTE" varchar (12)
+  "CORFUNDO" varchar (12)
+  "FONTE" varchar (12)
+  "TAMANHO" smallint
+  "LIGADO" boolean
+  "ATUALIZADO" boolean
+  "DISPONIVEL" boolean
+  Indexes {
+    (FORM, CONTROLE, INDICE) [name: "sqlite_autoindex_CONTROLE_1"]
+  }
+}
+
+// Origem: wrpt.sqlite (SQLite)
+Table "RPTFOLUSR" {
+  Note: "Origem: wrpt.sqlite"
+  "IDUSUARIO" INT
+  "IMPRIME" boolean
+  "RPT" varchar (8)
+  "EXPORTA" boolean
+  "VISUALIZA" boolean
+  "SALVARTF" boolean
+  "SALVATXT" boolean
+  "NOVO" boolean
+  "ABRIR" boolean
+  "EDITAR" boolean
+  "ABRIRCOM" varchar (50)
+  "GRP" varchar (8)
+  Indexes {
+    (GRP, RPT, IDUSUARIO) [name: "rptfolusr1"]
+  }
+}
+
+// Origem: wrpt.sqlite (SQLite)
+Table "RPTINTUSR" {
+  Note: "Origem: wrpt.sqlite"
+  "IDUSUARIO" INT
+  "RPT" varchar (8)
+  "IMPRIME" boolean
+  "EXPORTA" boolean
+  "VISUALIZA" boolean
+  "SALVARTF" boolean
+  "SALVATXT" boolean
+  "NOVO" boolean
+  "ABRIR" boolean
+  "EDITAR" boolean
+  "ABRIRCOM" varchar (50)
+  "GRP" varchar (8)
+  Indexes {
+    (GRP, RPT, IDUSUARIO) [name: "rptintusr1"]
+  }
+}
+
+// Origem: wrpt.sqlite (SQLite)
+Table "USUCAD" {
+  Note: "Origem: wrpt.sqlite"
+  "IDUSUARIO" INT
+  "FORM" varchar (20)
+  "CADASTRO" smallint
+  "CONTROLE" varchar (20)
+  "INDICE" INT
+  "CAPTION" varchar (20)
+  "TOOLTIP" varchar (50)
+  "CORFRENTE" varchar (12)
+  "CORFUNDO" varchar (12)
+  "FONTE" varchar (12)
+  "LIGADO" boolean
+  "ATUALIZADO" boolean
+  Indexes {
+    (IDUSUARIO, FORM, CADASTRO, CONTROLE, INDICE) [name: "USUCAD1"]
+    (IDUSUARIO, FORM, CADASTRO, CONTROLE, INDICE) [name: "sqlite_autoindex_USUCAD_1"]
+  }
+}
+
+// Origem: wrpt.sqlite (SQLite)
+Table "MENUUSU" {
+  Note: "Origem: wrpt.sqlite"
+  "IDUSUARIO" INT
+  "MENU" varchar (12)
+  "INDICE" smallint
+  "LIGADO" boolean
+  "ATUALIZADO" boolean
+  Indexes {
+    (IDUSUARIO, MENU, INDICE) [name: "MENUUSU1"]
+    (IDUSUARIO, MENU, INDICE) [name: "sqlite_autoindex_MENUUSU_1"]
+  }
+}
+
+// Origem: wrpt.sqlite (SQLite)
+Table "EMPRESA" {
+  Note: "Origem: wrpt.sqlite"
+  "NUMERO" smallint
+  "NOME" varchar (40)
+  "ENDERECO" varchar (40)
+  "ENDNUM" smallint
+  "ENDCOM" varchar (20)
+  "BAIRRO" varchar (30)
+  "CIDADE" varchar (30)
+  "ESTADO" varchar (2)
+  "CEP" varchar (9)
+  "DDD" varchar (4)
+  "TELEFONE" varchar (9)
+  "FAX" varchar (9)
+  "MAXCAIXA" double
+  "COBRANCA" boolean
+  "DIACOBR" smallint
+  "JUROS" boolean
+  "TXJUROS" double
+  "NUMUSER" smallint
+  "REF" varchar (50)
+  "CGC" varchar (19)
+  "INSCR" varchar (16)
+  "NUMSOC" smallint
+  "CONTRATO" longtext
+  "VLCLIENTE" currency
+  "IOF" currency
+  "ISS" currency
+  "SERVICO" currency
+  "CAPTACAO" currency
+  "LIMITECGC" currency
+  "CPMF" currency
+  "COGNOME" varchar (20)
+  "idempresa" INTEGER
+  Indexes {
+    (NUMERO) [name: "IDX_EMPRESA_numero"]
+    (NUMERO) [name: "numero"]
+  }
+}
+
+// Origem: wrpt.sqlite (SQLite)
+Table "RTFUSR" {
+  Note: "Origem: wrpt.sqlite"
+  "IDUSUARIO" INT
+  "RPT" varchar (8)
+  "IMPRIME" boolean
+  "EXPORTA" boolean
+  "VISUALIZA" boolean
+  "SALVARTF" boolean
+  "SALVATXT" boolean
+  "NOVO" boolean
+  "ABRIR" boolean
+  "EDITAR" boolean
+  "ABRIRCOM" varchar (50)
+  "GRP" varchar (8)
+  Indexes {
+    (GRP, RPT, IDUSUARIO) [name: "rtfusr1"]
+    (IDUSUARIO) [name: "sqlite_autoindex_RTFUSR_1"]
+  }
+}
+
+// Origem: wrpt.sqlite (SQLite)
+Table "USUARIO" {
+  Note: "Origem: wrpt.sqlite"
+  "IDUSUARIO" INTEGER
+  "USUARIO" TEXT (10)
+  "SENHA" TEXT (8)
+  "DATAVAL" TEXT
+  "DATAULT" TEXT
+  "EQUIVALENTE" INTEGER
+  "ATIVO" INTEGER
+  "HORAINI" TEXT
+  "HORAFIM" TEXT
+  "WEEKEND" INTEGER
+  "IDFOLHA" INTEGER
+  "NOMEFOLHA" TEXT (50)
+  "TROCAR" TEXT
+  "ID" INTEGER
+  "postelaa" TEXT (30)
+  "postelaB" TEXT (30)
+  "CHAVEH" TEXT (64)
+  "CHAVEV" TEXT (64)
+  Indexes {
+    (IDUSUARIO) [name: "IDXUSUARIO_IDUSUARIO"]
+    (IDFOLHA) [name: "IDXUSUARIO_IDFOLHA"]
+  }
+}
+

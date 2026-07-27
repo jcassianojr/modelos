@@ -1,7 +1,9 @@
-# ??? Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 24/07/2026
+# Dicionario de Estruturas de Dados do Projeto
+> Varredura automatica realizada em: 27/07/2026
 
-## ?? Tabela DBF: `ba01.dbf`
+## Tabela DBF: `ba01.dbf`
+> **Origem:** `ba01.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -24,140 +26,9 @@
 - Tag: `BA01-5` Expressao: `ITEM`
 
 ---
+## Tabela DBF: `bc01.dbf`
+> **Origem:** `bc01.dbf` (Driver: DBFCDX)
 
-#### ?? Tabela: `table_metadata`
-| Campo | Tipo | PK | NotNull |
-| :--- | :--- | :---: | :---: |
-| nome_tabela | TEXT |   |   |
-| column_name | TEXT |   |   |
-| original_type | TEXT |   |   |
-| tamanho | INTEGER |   |   |
-| precisao | INTEGER |   |   |
-| is_nullable | INTEGER |   |   |
-| field_visual_picture | TEXT |   |   |
-
-**Indices e Chaves:**
-> *Nenhum indice definido.*
-
----
-
-#### ?? Tabela: `index_metadata`
-| Campo | Tipo | PK | NotNull |
-| :--- | :--- | :---: | :---: |
-| nome_tabela | TEXT |   |   |
-| index_name | TEXT |   |   |
-| expression | TEXT |   |   |
-| sql_expression | TEXT |   |   |
-| filter_expression | TEXT |   |   |
-| is_unique | INTEGER |   |   |
-| is_bag | INTEGER |   |   |
-
-**Indices e Chaves:**
-> *Nenhum indice definido.*
-
----
-
-#### ?? Tabela: `ba01`
-| Campo | Tipo | PK | NotNull |
-| :--- | :--- | :---: | :---: |
-| NUMERO | INTEGER |   |   |
-| SUB | TEXT |   | Sim |
-| DATA | DATE |   | Sim |
-| NRCONTA | INTEGER |   |   |
-| CODIGO | TEXT |   | Sim |
-| HISTORICO | TEXT |   | Sim |
-| ITEM | TEXT |   | Sim |
-| VALOR | FLOAT |   |   |
-| TIPO | TEXT |   | Sim |
-| DATADEP | DATE |   | Sim |
-| CHAVE | TEXT |   | Sim |
-
-**Indices e Chaves:**
-- **IDX_ba01_BA01_5**: `ITEM`
-- **IDX_ba01_BA01_4**: `DATA`
-- **IDX_ba01_BA01_3**: `CHAVE`
-- **IDX_ba01_BA01_2**: `NUMERO, SUB`
-- **IDX_ba01_BA01_1**: `NRCONTA, NUMERO`
-
----
-
-#### ?? Tabela: `bc01`
-| Campo | Tipo | PK | NotNull |
-| :--- | :--- | :---: | :---: |
-| CODIGO | TEXT |   | Sim |
-| DESCRICAO | TEXT |   | Sim |
-| VALOR | FLOAT |   |   |
-| VALOR1 | FLOAT |   |   |
-| TIPO | TEXT |   | Sim |
-| ITEM | TEXT |   | Sim |
-
-**Indices e Chaves:**
-- **IDX_bc01_DESCRICAO**: `DESCRICAO`
-- **IDX_bc01_CODIGO**: `CODIGO`
-
----
-
-#### ?? Tabela: `bd01`
-| Campo | Tipo | PK | NotNull |
-| :--- | :--- | :---: | :---: |
-| NUMERO | INTEGER |   |   |
-| COGNOME | TEXT |   | Sim |
-| NOME | TEXT |   | Sim |
-| ENDERECO | TEXT |   | Sim |
-| BAIRRO | TEXT |   | Sim |
-| CIDADE | TEXT |   | Sim |
-| ESTADO | TEXT |   | Sim |
-| CEP | TEXT |   | Sim |
-| DDD | TEXT |   | Sim |
-| TELEFONE | TEXT |   | Sim |
-| RAMAL | TEXT |   | Sim |
-| CONTATO | TEXT |   | Sim |
-| DDDFAX | TEXT |   | Sim |
-| TELEFAX | TEXT |   | Sim |
-| CGC | TEXT |   | Sim |
-| IESTADUAL | TEXT |   | Sim |
-| DDD1 | TEXT |   | Sim |
-| TELEFONE1 | TEXT |   | Sim |
-| RAMAL1 | TEXT |   | Sim |
-| CONTATO1 | TEXT |   | Sim |
-| PESSOA | TEXT |   | Sim |
-| SITE | TEXT |   | Sim |
-| EMAIL | TEXT |   | Sim |
-
-**Indices e Chaves:**
-- **IDX_bd01_COGNOME**: `COGNOME`
-- **IDX_bd01_NUMERO**: `NUMERO`
-
----
-
-#### ?? Tabela: `be01`
-| Campo | Tipo | PK | NotNull |
-| :--- | :--- | :---: | :---: |
-| CODIGO | TEXT |   | Sim |
-| NOME | TEXT |   | Sim |
-
-**Indices e Chaves:**
-- **IDX_be01_NOME**: `NOME`
-- **IDX_be01_CODIGO**: `CODIGO`
-
----
-
-#### ?? Tabela: `bf01`
-| Campo | Tipo | PK | NotNull |
-| :--- | :--- | :---: | :---: |
-| VENDA | INTEGER |   |   |
-| NUMERO | INTEGER |   |   |
-| CODIGO | TEXT |   | Sim |
-| DATA | DATE |   | Sim |
-| VALOR | FLOAT |   |   |
-
-**Indices e Chaves:**
-- **IDX_bf01_CODIGO**: `CODIGO`
-- **IDX_bf01_NUMERO**: `NUMERO`
-- **IDX_bf01_VENDA**: `VENDA`
-
----
-## ?? Tabela DBF: `bc01.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 4 | 0 |
@@ -172,7 +43,9 @@
 - Tag: `DESCRICAO` Expressao: `DESCRICAO`
 
 ---
-## ?? Tabela DBF: `bd01.dbf`
+## Tabela DBF: `bd01.dbf`
+> **Origem:** `bd01.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 5 | 0 |
@@ -204,7 +77,9 @@
 - Tag: `COGNOME` Expressao: `COGNOME`
 
 ---
-## ?? Tabela DBF: `be01.dbf`
+## Tabela DBF: `be01.dbf`
+> **Origem:** `be01.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 24 | 0 |
@@ -215,7 +90,9 @@
 - Tag: `NOME` Expressao: `NOME`
 
 ---
-## ?? Tabela DBF: `bf01.dbf`
+## Tabela DBF: `bf01.dbf`
+> **Origem:** `bf01.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | VENDA | N | 8 | 0 |

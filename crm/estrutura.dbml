@@ -1,0 +1,989 @@
+// Origem: aut.dbf (DBF)
+Table "aut" {
+  Note: "Origem: aut.dbf"
+  "AUT" INTEGER [default: 0]
+  "USADA" TINYINT(1)
+  "USER" INTEGER [default: 0]
+  "MOTIVO" VARCHAR(150)
+  "MOTIV2" VARCHAR(150)
+  "CARTA" VARCHAR(1)
+  "DATA" DATETIME
+  "DATABX" DATETIME
+  "CRM" INTEGER [default: 0]
+  "DATACR" DATETIME
+  "FISOBS01" VARCHAR(80)
+  "FISOBS02" VARCHAR(80)
+  "FISOBS03" VARCHAR(80)
+  "LIBPOR" VARCHAR(15)
+  "LIBFISCAL" VARCHAR(1)
+  Indexes {
+    AUT [name: "AUT"]
+  }
+}
+
+// Origem: crgec.dbf (DBF)
+Table "crgec" {
+  Note: "Origem: crgec.dbf"
+  "CRGEX" INTEGER [default: 0]
+  "DATA" DATETIME
+  "FORNECEDO" INTEGER [default: 0]
+  "COGNOME" VARCHAR(20)
+  "NOTA" VARCHAR(50)
+  "PESONF" INTEGER [default: 0]
+  "PESOEC" INTEGER [default: 0]
+  "PESOLQ" INTEGER [default: 0]
+  "PERCEX" DECIMAL(8,3) [default: 0]
+  Indexes {
+    CRGEX [name: "CRGEX"]
+  }
+}
+
+// Origem: crgex.dbf (DBF)
+Table "crgex" {
+  Note: "Origem: crgex.dbf"
+  "CRGEX" INTEGER [default: 0]
+  "DATA" DATETIME
+  "FORNECEDO" INTEGER [default: 0]
+  "COGNOME" VARCHAR(20)
+  "NOTA" VARCHAR(50)
+  "PESONF" INTEGER [default: 0]
+  "PESOEC" INTEGER [default: 0]
+  "PESOLQ" INTEGER [default: 0]
+  "PERCEX" DECIMAL(8,3) [default: 0]
+  Indexes {
+    CRGEX [name: "CRGEX"]
+  }
+}
+
+// Origem: crm.dbf (DBF)
+Table "crm" {
+  Note: "Origem: crm.dbf"
+  "CRM" INTEGER [default: 0]
+  "TIPCAD" VARCHAR(1)
+  "CLIFOR" INTEGER [default: 0]
+  "COGNOME" VARCHAR(15)
+  "DATA" DATETIME
+  "TIPOE" VARCHAR(1)
+  "DESCRI" VARCHAR(40)
+  "PEDIDO" VARCHAR(20)
+  "NRNOTA" INTEGER [default: 0]
+  "NRNOTB" INTEGER [default: 0]
+  "QTDE" DECIMAL(12,3) [default: 0]
+  "QTDEA" DECIMAL(12,3) [default: 0]
+  "QTDEB" DECIMAL(12,3) [default: 0]
+  "NIVEL" VARCHAR(10)
+  "INSP" VARCHAR(1)
+  "LAUDO" VARCHAR(1)
+  "TECNICO" INTEGER [default: 0]
+  "OBS" VARCHAR(100)
+  "CBUSCA" VARCHAR(24)
+  "NOMEF" VARCHAR(40)
+  "UNID" VARCHAR(4)
+  "RIST" INTEGER [default: 0]
+  "RIRM" INTEGER [default: 0]
+  "APLICACAO" VARCHAR(30)
+  "PRODUTO" VARCHAR(24)
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "GRAVOU" VARCHAR(1)
+  "GRAVOUY" VARCHAR(1)
+  "PROGRAMA" DECIMAL(8,2) [default: 0]
+  "GRAVAUP" VARCHAR(1)
+  "PRPED" INTEGER [default: 0]
+  "PRITE" INTEGER [default: 0]
+  "PRCLI" INTEGER [default: 0]
+  "PEPED" INTEGER [default: 0]
+  "PEITE" INTEGER [default: 0]
+  "CERT" VARCHAR(40)
+  "PEREQ" INTEGER [default: 0]
+  "AUT" INTEGER [default: 0]
+  "USERNM" VARCHAR(10)
+  "USERDT" DATETIME
+  "USERHT" VARCHAR(8)
+  "NRDATA" DATETIME
+  "RASTRO" VARCHAR(12)
+  "PRECO" DECIMAL(15,6) [default: 0]
+  "PRECOPR" DECIMAL(15,6) [default: 0]
+  "PRECONF" DECIMAL(15,6) [default: 0]
+  "CLOTECRT" VARCHAR(1)
+  "PRECOOK" VARCHAR(1)
+  "QTDEPED" DECIMAL(12,3) [default: 0]
+  "PESONFA" DECIMAL(9,3) [default: 0]
+  "PESONFB" DECIMAL(9,3) [default: 0]
+  "PEDCLI" VARCHAR(1)
+  "ENTREGA" DATETIME
+  "ENTREG2" DATETIME
+  "TRIANGULAR" VARCHAR(1)
+  Indexes {
+    CRM [name: "CRM"]
+    DATA [name: "CRM-2"]
+    RASTRO [name: "CRM-3"]
+    STR(NRNOTA,8)+STR(CLIFOR,8) [name: "CRM-4"]
+    STR(NRNOTB,8)+STR(CLIFOR,8) [name: "CRM-5"]
+  }
+}
+
+// Origem: crm3l.dbf (DBF)
+Table "crm3l" {
+  Note: "Origem: crm3l.dbf"
+  "CODIGO" VARCHAR(24)
+  "NVEZES" INTEGER [default: 0]
+  "RACF" INTEGER [default: 0]
+  "DESC01" VARCHAR(90)
+  "DESC02" VARCHAR(90)
+  "DESC03" VARCHAR(90)
+  "DESC04" VARCHAR(90)
+  "DESC05" VARCHAR(90)
+  Indexes {
+    CODIGO [name: "CRM3L"]
+  }
+}
+
+// Origem: crma.dbf (DBF)
+Table "crma" {
+  Note: "Origem: crma.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "DATA" DATETIME
+  "TIPOENT" VARCHAR(1)
+  "CODIGO" VARCHAR(24)
+  "FORNECEDO" INTEGER [default: 0]
+  "COGFOR" VARCHAR(15)
+  "NF" INTEGER [default: 0]
+  "PRODUTO" VARCHAR(24)
+  "CLIENTE" INTEGER [default: 0]
+  "COGCLI" VARCHAR(12)
+  "RASTROA" VARCHAR(12)
+  "RASTROOK" VARCHAR(12)
+  "DATAOK" DATETIME
+  "MOTIVO" VARCHAR(3)
+  "CRM" INTEGER [default: 0]
+  Indexes {
+    NUMERO [name: "CRMA-1"]
+    RASTROA [name: "CRMA-2"]
+  }
+}
+
+// Origem: crmar.dbf (DBF)
+Table "crmar" {
+  Note: "Origem: crmar.dbf"
+  "TIPOENT" VARCHAR(1)
+  "CODIGO" VARCHAR(24)
+  "UNIDADE" VARCHAR(2)
+  "NOME" VARCHAR(100)
+  "NRNOTA" INTEGER [default: 0]
+  "DATA" DATETIME
+  "QTDE" INTEGER [default: 0]
+  "TIPOCLI" VARCHAR(1)
+  "FORNECEDO" INTEGER [default: 0]
+  "COGNOME" VARCHAR(12)
+  "CRM" INTEGER [default: 0]
+  "AR" INTEGER [default: 0]
+  "ITEM" INTEGER [default: 0]
+  "RIRM" INTEGER [default: 0]
+  "RIST" INTEGER [default: 0]
+  "CODFORN" VARCHAR(18)
+  "EMPRESA" VARCHAR(2)
+  "CODIGOINT" VARCHAR(24)
+  "MC" INTEGER [default: 0]
+  Indexes {
+    EMPRESA+STR(AR,8)+STR(ITEM,2) [name: "CRMAR-1"]
+    STR(NRNOTA,8)+STR(FORNECEDO,8)+CODIGO [name: "CRMAR-2"]
+    CODIGOINT [name: "CRMAR-3"]
+  }
+}
+
+// Origem: crmcesp.dbf (DBF)
+Table "crmcesp" {
+  Note: "Origem: crmcesp.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "NOME" VARCHAR(100)
+  "TIPOENT" VARCHAR(1)
+  "CODIGO" VARCHAR(24)
+  Indexes {
+    NUMERO [name: "CRMCESP"]
+    NOME [name: "CRMCESP2"]
+    CODIGO [name: "CRMCESP3"]
+  }
+}
+
+// Origem: crmdev.dbf (DBF)
+Table "crmdev" {
+  Note: "Origem: crmdev.dbf"
+  "CRM" INTEGER [default: 0]
+  "TIPCAD" VARCHAR(1)
+  "CLIFOR" INTEGER [default: 0]
+  "COGNOME" VARCHAR(15)
+  "DATA" DATETIME
+  "TIPOE" VARCHAR(1)
+  "DESCRI" VARCHAR(40)
+  "PEDIDO" VARCHAR(20)
+  "NRNOTA" INTEGER [default: 0]
+  "NRNOTB" INTEGER [default: 0]
+  "QTDE" DECIMAL(12,3) [default: 0]
+  "QTDEA" DECIMAL(12,3) [default: 0]
+  "QTDEB" DECIMAL(12,3) [default: 0]
+  "NIVEL" VARCHAR(10)
+  "INSP" VARCHAR(1)
+  "LAUDO" VARCHAR(1)
+  "TECNICO" INTEGER [default: 0]
+  "OBS" VARCHAR(100)
+  "CBUSCA" VARCHAR(24)
+  "NOMEF" VARCHAR(40)
+  "UNID" VARCHAR(4)
+  "RIST" INTEGER [default: 0]
+  "RIRM" INTEGER [default: 0]
+  "APLICACAO" VARCHAR(30)
+  "PRODUTO" VARCHAR(24)
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "GRAVOU" VARCHAR(1)
+  "GRAVOUY" VARCHAR(1)
+  "PROGRAMA" DECIMAL(8,2) [default: 0]
+  "GRAVAUP" VARCHAR(1)
+  "PRPED" INTEGER [default: 0]
+  "PRITE" INTEGER [default: 0]
+  "PRCLI" INTEGER [default: 0]
+  "PEPED" INTEGER [default: 0]
+  "PEITE" INTEGER [default: 0]
+  "CERT" VARCHAR(40)
+  "PEREQ" INTEGER [default: 0]
+  "AUT" INTEGER [default: 0]
+  "USERNM" VARCHAR(10)
+  "USERDT" DATETIME
+  "USERHT" VARCHAR(8)
+  "NRDATA" DATETIME
+  "RASTRO" VARCHAR(12)
+  "PRECO" DECIMAL(15,6) [default: 0]
+  "PRECOPR" DECIMAL(15,6) [default: 0]
+  "PRECONF" DECIMAL(15,6) [default: 0]
+  "CLOTECRT" VARCHAR(1)
+  "PRECOOK" VARCHAR(1)
+  "QTDEPED" DECIMAL(12,3) [default: 0]
+  "PESONFA" DECIMAL(9,3) [default: 0]
+  "PESONFB" DECIMAL(9,3) [default: 0]
+  "PEDCLI" VARCHAR(1)
+  "ENTREGA" DATETIME
+  "ENTREG2" DATETIME
+  "TRIANGULAR" VARCHAR(1)
+  Indexes {
+    CRM [name: "CRM"]
+    DATA [name: "CRM-2"]
+    RASTRO [name: "CRM-3"]
+    STR(NRNOTA,8)+STR(CLIFOR,8) [name: "CRM-4"]
+    STR(NRNOTB,8)+STR(CLIFOR,8) [name: "CRM-5"]
+  }
+}
+
+// Origem: crme01.dbf (DBF)
+Table "crme01" {
+  Note: "Origem: crme01.dbf"
+  "RASTRO" VARCHAR(10)
+  "DATA" DATETIME
+}
+
+// Origem: crme02.dbf (DBF)
+Table "crme02" {
+  Note: "Origem: crme02.dbf"
+  "RASTRO" VARCHAR(12)
+  "DATA" DATETIME
+  "NOME" VARCHAR(30)
+  "NOM2" VARCHAR(35)
+  "NOM3" VARCHAR(35)
+  "APLICACAO" VARCHAR(50)
+  "FORNECEDOR" INTEGER [default: 0]
+  "RESPO" VARCHAR(40)
+  "NRNOTA" INTEGER [default: 0]
+  "NRNOTB" INTEGER [default: 0]
+  "PESONFA" DECIMAL(9,3) [default: 0]
+  "PESONFB" DECIMAL(9,3) [default: 0]
+  "QTDEA" DECIMAL(12,3) [default: 0]
+  "QTDEB" DECIMAL(12,3) [default: 0]
+  "POS" VARCHAR(11)
+  "CODIGO" VARCHAR(24)
+  "CERT" VARCHAR(50)
+}
+
+// Origem: crme03.dbf (DBF)
+Table "crme03" {
+  Note: "Origem: crme03.dbf"
+  "ESPE" VARCHAR(80)
+  "USUARIO" VARCHAR(10)
+  "SETOR" VARCHAR(30)
+  "DATA" DATETIME
+  "CODIGO" VARCHAR(24)
+  "NOME" VARCHAR(40)
+  "NCLI" INTEGER [default: 0]
+  "CLIENTE" VARCHAR(30)
+  "RASTRO" VARCHAR(12)
+  "QTAMO" INTEGER [default: 0]
+  "REFNUM" INTEGER [default: 0]
+  "CERT" VARCHAR(50)
+}
+
+// Origem: crmebx.dbf (DBF)
+Table "crmebx" {
+  Note: "Origem: crmebx.dbf"
+  "CODIGO" VARCHAR(24)
+  "UNIDADE" VARCHAR(2)
+  "NOME" VARCHAR(30)
+  "NRNOTAINI" INTEGER [default: 0]
+  "DIGCTR" VARCHAR(1)
+  "SERIE" VARCHAR(3)
+  "DATAFAT" DATETIME
+  "OSINI" DECIMAL(8,2) [default: 0]
+  "VALORINI" DECIMAL(10,2) [default: 0]
+  "TOTKGINI" DECIMAL(9,2) [default: 0]
+  "NRNOTASAI" INTEGER [default: 0]
+  "TOTKGANT" DECIMAL(9,2) [default: 0]
+  "TOTKGSAI" DECIMAL(9,2) [default: 0]
+  "TOTKGEST" DECIMAL(9,2) [default: 0]
+  "TIPOCLI" VARCHAR(1)
+  "CLIENTE" INTEGER [default: 0]
+  "COGNOME" VARCHAR(12)
+  "DATASAI" DATETIME
+  "CRM" INTEGER [default: 0]
+  "PESOREF" DECIMAL(12,5) [default: 0]
+  "CLASSIPI" VARCHAR(14)
+  "PRECO" DECIMAL(10,2) [default: 0]
+  "TIPOENT" VARCHAR(1)
+  "OBS" VARCHAR(30)
+  "RASTRO" VARCHAR(12)
+  "DIFSALDO" DECIMAL(9,2) [default: 0]
+  "LOCAL" VARCHAR(7)
+  "QTDEEMB" INTEGER [default: 0]
+  Indexes {
+    CODIGO+STR(NRNOTAINI,8)+DIGCTR [name: "CRMEBX-1"]
+    STR(NRNOTAINI,8)+CODIGO [name: "CRMEBX-2"]
+    NRNOTAINI [name: "CRMEBX-3"]
+    CLIENTE [name: "CRREBX-4"]
+    OSINI [name: "CRMEBX-5"]
+  }
+}
+
+// Origem: crmens.dbf (DBF)
+Table "crmens" {
+  Note: "Origem: crmens.dbf"
+  "CODIGO" VARCHAR(10)
+  "NOME" VARCHAR(40)
+  "VALOR" DECIMAL(12,8) [default: 0]
+  Indexes {
+    CODIGO [name: "CRMENS"]
+  }
+}
+
+// Origem: crmest.dbf (DBF)
+Table "crmest" {
+  Note: "Origem: crmest.dbf"
+  "CODIGO" VARCHAR(24)
+  "UNIDADE" VARCHAR(2)
+  "NOME" VARCHAR(30)
+  "NRNOTAINI" INTEGER [default: 0]
+  "DIGCTR" VARCHAR(1)
+  "SERIE" VARCHAR(3)
+  "DATAFAT" DATETIME
+  "OSINI" DECIMAL(8,2) [default: 0]
+  "VALORINI" DECIMAL(10,2) [default: 0]
+  "TOTKGINI" DECIMAL(9,2) [default: 0]
+  "NRNOTASAI" INTEGER [default: 0]
+  "TOTKGANT" DECIMAL(9,2) [default: 0]
+  "TOTKGSAI" DECIMAL(9,2) [default: 0]
+  "TOTKGEST" DECIMAL(9,2) [default: 0]
+  "TIPOCLI" VARCHAR(1)
+  "CLIENTE" INTEGER [default: 0]
+  "COGNOME" VARCHAR(12)
+  "DATASAI" DATETIME
+  "CRM" INTEGER [default: 0]
+  "PESOREF" DECIMAL(12,5) [default: 0]
+  "CLASSIPI" VARCHAR(14)
+  "PRECO" DECIMAL(10,2) [default: 0]
+  "TIPOENT" VARCHAR(1)
+  "OBS" VARCHAR(30)
+  "RASTRO" VARCHAR(12)
+  "DIFSALDO" DECIMAL(9,2) [default: 0]
+  "LOCAL" VARCHAR(7)
+  "QTDEEMB" INTEGER [default: 0]
+  Indexes {
+    CODIGO+STR(NRNOTAINI,8)+DIGCTR [name: "CRMEST-1"]
+    STR(NRNOTAINI,8)+CODIGO [name: "CRMEST-2"]
+    NRNOTAINI [name: "CRMEST-3"]
+    CLIENTE [name: "CRMEST-4"]
+    OSINI [name: "CRMEST-5"]
+  }
+}
+
+// Origem: crmfn.dbf (DBF)
+Table "crmfn" {
+  Note: "Origem: crmfn.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "DATA" DATETIME
+  "RASTRO" VARCHAR(12)
+  "FORNECEDO" INTEGER [default: 0]
+  "COGNOME" VARCHAR(12)
+  "CODIGO" VARCHAR(24)
+  "CLIENTE" INTEGER [default: 0]
+  "PESOUNI" DECIMAL(7,3) [default: 0]
+  "CODMR01" VARCHAR(10)
+  "NOMMR01" VARCHAR(30)
+  "PCEMB" INTEGER [default: 0]
+  "PCEMBQ" INTEGER [default: 0]
+  "QTDEKG" DECIMAL(9,3) [default: 0]
+  "QTDEPC" INTEGER [default: 0]
+  Indexes {
+    NUMERO [name: "CRMFN"]
+    DATA [name: "CRMFN-2"]
+    RASTRO [name: "CRMFN-3"]
+  }
+}
+
+// Origem: crmgp12.dbf (DBF)
+Table "crmgp12" {
+  Note: "Origem: crmgp12.dbf"
+  "CODIGO" VARCHAR(24)
+  Indexes {
+    CODIGO [name: "CRMGP12"]
+  }
+}
+
+// Origem: crml.dbf (DBF)
+Table "crml" {
+  Note: "Origem: crml.dbf"
+  "CLIFOR" INTEGER [default: 0]
+  "CODIGO" VARCHAR(24)
+  "LOTE" INTEGER [default: 0]
+  Indexes {
+    STR(CLIFOR,8)+CODIGO [name: "CRML"]
+  }
+}
+
+// Origem: crmmot.dbf (DBF)
+Table "crmmot" {
+  Note: "Origem: crmmot.dbf"
+  "CODIGO" VARCHAR(2)
+  "DIZER" VARCHAR(50)
+  Indexes {
+    CODIGO [name: "CRMMOT"]
+  }
+}
+
+// Origem: crmnf.dbf (DBF)
+Table "crmnf" {
+  Note: "Origem: crmnf.dbf"
+  "FORNECEDO" INTEGER [default: 0]
+  "NRNOTA" INTEGER [default: 0]
+  "DATA" DATETIME
+  Indexes {
+    FORNECEDO [name: "CRMNF"]
+  }
+}
+
+// Origem: crmr.dbf (DBF)
+Table "crmr" {
+  Note: "Origem: crmr.dbf"
+  "RASTRO" VARCHAR(10)
+  "RASTRON" INTEGER [default: 0]
+  "RASTROA" INTEGER [default: 0]
+  "CRM" INTEGER [default: 0]
+  "RIRM" INTEGER [default: 0]
+  "RIST" INTEGER [default: 0]
+  "DATAF" DATETIME
+  "OBS" VARCHAR(100)
+  "DATA" DATETIME
+  "PRODUTO" VARCHAR(50)
+  Indexes {
+    RASTRON [name: "CRMR"]
+  }
+}
+
+// Origem: crmss.dbf (DBF)
+Table "crmss" {
+  Note: "Origem: crmss.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CODIGO" VARCHAR(24)
+  "CODIGOINT" VARCHAR(24)
+  "NORMA" VARCHAR(14)
+  "APLICACAO" VARCHAR(30)
+  "FORNECEDO" INTEGER [default: 0]
+  "FORNOME" VARCHAR(40)
+  "ESPE" VARCHAR(60)
+  "RASTRO" VARCHAR(12)
+  "DATA" DATETIME
+  "RIST" INTEGER [default: 0]
+  "AR" INTEGER [default: 0]
+  "ITEM" INTEGER [default: 0]
+  "DATAENV" DATETIME
+  "HORAENV" VARCHAR(5)
+  Indexes {
+    NUMERO [name: "CRMSS-1"]
+    RASTRO [name: "CRMSS-2"]
+    CODIGO [name: "CRMSS-3"]
+  }
+}
+
+// Origem: mp01i.dbf (DBF)
+Table "mp01i" {
+  Note: "Origem: mp01i.dbf"
+  "CODIGO" VARCHAR(12)
+  "ITEM" INTEGER [default: 0]
+  "ESPE" VARCHAR(60)
+  "ENCO" VARCHAR(60)
+  "VALPAD" DECIMAL(8,2) [default: 0]
+  "VALMAX" DECIMAL(8,2) [default: 0]
+  "VALMIN" DECIMAL(8,2) [default: 0]
+  "TOLMAX" DECIMAL(8,2) [default: 0]
+  "TOLMIN" DECIMAL(8,2) [default: 0]
+  "UNIDADE" VARCHAR(3)
+  "TIPA" VARCHAR(3)
+  "UNIDREF" VARCHAR(4)
+  "QTDEREF" DECIMAL(8,2) [default: 0]
+  Indexes {
+    CODIGO+STR(ITEM,3) [name: "MP01I-1"]
+  }
+}
+
+// Origem: mp01r.dbf (DBF)
+Table "mp01r" {
+  Note: "Origem: mp01r.dbf"
+  "CODIGO" VARCHAR(12)
+  "ITEM" INTEGER [default: 0]
+  "ESPE" VARCHAR(60)
+  "ENCO" VARCHAR(60)
+  "VALPAD" DECIMAL(8,2) [default: 0]
+  "VALMAX" DECIMAL(8,2) [default: 0]
+  "VALMIN" DECIMAL(8,2) [default: 0]
+  "TOLMAX" DECIMAL(8,2) [default: 0]
+  "TOLMIN" DECIMAL(8,2) [default: 0]
+  "UNIDADE" VARCHAR(3)
+  "TIPA" VARCHAR(3)
+  "UNIDREF" VARCHAR(4)
+  "QTDEREF" DECIMAL(8,2) [default: 0]
+  "CHECADO" VARCHAR(1)
+  Indexes {
+    CODIGO+STR(ITEM,3) [name: "MP01R-1"]
+  }
+}
+
+// Origem: mp02i.dbf (DBF)
+Table "mp02i" {
+  Note: "Origem: mp02i.dbf"
+  "CODIGO" VARCHAR(12)
+  "ITEM" INTEGER [default: 0]
+  "ESPE" VARCHAR(60)
+  "ENCO" VARCHAR(60)
+  "VALPAD" DECIMAL(8,2) [default: 0]
+  "VALMAX" DECIMAL(8,2) [default: 0]
+  "VALMIN" DECIMAL(8,2) [default: 0]
+  "TOLMAX" DECIMAL(8,2) [default: 0]
+  "TOLMIN" DECIMAL(8,2) [default: 0]
+  "UNIDADE" VARCHAR(3)
+  "TIPA" VARCHAR(3)
+  "UNIDREF" VARCHAR(4)
+  "QTDEREF" DECIMAL(8,2) [default: 0]
+  Indexes {
+    CODIGO+STR(ITEM,3) [name: "MP02I-1"]
+  }
+}
+
+// Origem: mp02r.dbf (DBF)
+Table "mp02r" {
+  Note: "Origem: mp02r.dbf"
+  "CODIGO" VARCHAR(12)
+  "ITEM" INTEGER [default: 0]
+  "ESPE" VARCHAR(60)
+  "ENCO" VARCHAR(60)
+  "VALPAD" DECIMAL(8,2) [default: 0]
+  "VALMAX" DECIMAL(8,2) [default: 0]
+  "VALMIN" DECIMAL(8,2) [default: 0]
+  "TOLMAX" DECIMAL(8,2) [default: 0]
+  "TOLMIN" DECIMAL(8,2) [default: 0]
+  "UNIDADE" VARCHAR(3)
+  "TIPA" VARCHAR(3)
+  "UNIDREF" VARCHAR(4)
+  "QTDEREF" DECIMAL(8,2) [default: 0]
+  "CHECADO" VARCHAR(1)
+  Indexes {
+    CODIGO+STR(ITEM,3) [name: "MP02R-1"]
+  }
+}
+
+// Origem: mp03i.dbf (DBF)
+Table "mp03i" {
+  Note: "Origem: mp03i.dbf"
+  "CODIGO" VARCHAR(24)
+  "ITEM" INTEGER [default: 0]
+  "ESPE" VARCHAR(60)
+  "ENCO" VARCHAR(60)
+  "VALPAD" DECIMAL(8,2) [default: 0]
+  "VALMAX" DECIMAL(8,2) [default: 0]
+  "VALMIN" DECIMAL(8,2) [default: 0]
+  "TOLMAX" DECIMAL(8,2) [default: 0]
+  "TOLMIN" DECIMAL(8,2) [default: 0]
+  "UNIDADE" VARCHAR(3)
+  "TIPA" VARCHAR(3)
+  "UNIDREF" VARCHAR(4)
+  "QTDEREF" DECIMAL(8,2) [default: 0]
+  Indexes {
+    CODIGO+STR(ITEM,3) [name: "MP03I-1"]
+  }
+}
+
+// Origem: mp03r.dbf (DBF)
+Table "mp03r" {
+  Note: "Origem: mp03r.dbf"
+  "CODIGO" VARCHAR(24)
+  "ITEM" INTEGER [default: 0]
+  "ESPE" VARCHAR(60)
+  "ENCO" VARCHAR(60)
+  "VALPAD" DECIMAL(8,2) [default: 0]
+  "VALMAX" DECIMAL(8,2) [default: 0]
+  "VALMIN" DECIMAL(8,2) [default: 0]
+  "TOLMAX" DECIMAL(8,2) [default: 0]
+  "TOLMIN" DECIMAL(8,2) [default: 0]
+  "UNIDADE" VARCHAR(3)
+  "TIPA" VARCHAR(3)
+  "UNIDREF" VARCHAR(4)
+  "QTDEREF" DECIMAL(8,2) [default: 0]
+  "CHECADO" VARCHAR(1)
+  Indexes {
+    CODIGO+STR(ITEM,3) [name: "MP03R-1"]
+  }
+}
+
+// Origem: mq01i.dbf (DBF)
+Table "mq01i" {
+  Note: "Origem: mq01i.dbf"
+  "CODIGO" VARCHAR(10)
+  "ITEM" INTEGER [default: 0]
+  "ESPE" VARCHAR(60)
+  "ENCO" VARCHAR(60)
+  "VALPAD" DECIMAL(8,2) [default: 0]
+  "VALMAX" DECIMAL(8,2) [default: 0]
+  "VALMIN" DECIMAL(8,2) [default: 0]
+  "TOLMAX" DECIMAL(8,2) [default: 0]
+  "TOLMIN" DECIMAL(8,2) [default: 0]
+  "UNIDADE" VARCHAR(3)
+  "TIPA" VARCHAR(3)
+  "UNIDREF" VARCHAR(4)
+  "QTDEREF" DECIMAL(8,2) [default: 0]
+  Indexes {
+    CODIGO+STR(ITEM,3) [name: "MQ01I-1"]
+  }
+}
+
+// Origem: mq01r.dbf (DBF)
+Table "mq01r" {
+  Note: "Origem: mq01r.dbf"
+  "CODIGO" VARCHAR(10)
+  "ITEM" INTEGER [default: 0]
+  "ESPE" VARCHAR(60)
+  "ENCO" VARCHAR(60)
+  "VALPAD" DECIMAL(8,2) [default: 0]
+  "VALMAX" DECIMAL(8,2) [default: 0]
+  "VALMIN" DECIMAL(8,2) [default: 0]
+  "TOLMAX" DECIMAL(8,2) [default: 0]
+  "TOLMIN" DECIMAL(8,2) [default: 0]
+  "UNIDADE" VARCHAR(3)
+  "TIPA" VARCHAR(3)
+  "UNIDREF" VARCHAR(4)
+  "QTDEREF" DECIMAL(8,2) [default: 0]
+  "CHECADO" VARCHAR(1)
+  Indexes {
+    CODIGO+STR(ITEM,3) [name: "MQ01R-1"]
+  }
+}
+
+// Origem: mr01i.dbf (DBF)
+Table "mr01i" {
+  Note: "Origem: mr01i.dbf"
+  "CODIGO" VARCHAR(10)
+  "ITEM" INTEGER [default: 0]
+  "ESPE" VARCHAR(60)
+  "ENCO" VARCHAR(60)
+  "VALPAD" DECIMAL(8,2) [default: 0]
+  "VALMAX" DECIMAL(8,2) [default: 0]
+  "VALMIN" DECIMAL(8,2) [default: 0]
+  "TOLMAX" DECIMAL(8,2) [default: 0]
+  "TOLMIN" DECIMAL(8,2) [default: 0]
+  "UNIDADE" VARCHAR(3)
+  "TIPA" VARCHAR(3)
+  "UNIDREF" VARCHAR(4)
+  "QTDEREF" DECIMAL(8,2) [default: 0]
+  Indexes {
+    CODIGO+STR(ITEM,3) [name: "MR01I-1"]
+  }
+}
+
+// Origem: mr01r.dbf (DBF)
+Table "mr01r" {
+  Note: "Origem: mr01r.dbf"
+  "CODIGO" VARCHAR(10)
+  "ITEM" INTEGER [default: 0]
+  "ESPE" VARCHAR(60)
+  "ENCO" VARCHAR(60)
+  "VALPAD" DECIMAL(8,2) [default: 0]
+  "VALMAX" DECIMAL(8,2) [default: 0]
+  "VALMIN" DECIMAL(8,2) [default: 0]
+  "TOLMAX" DECIMAL(8,2) [default: 0]
+  "TOLMIN" DECIMAL(8,2) [default: 0]
+  "UNIDADE" VARCHAR(3)
+  "TIPA" VARCHAR(3)
+  "UNIDREF" VARCHAR(4)
+  "QTDEREF" DECIMAL(8,2) [default: 0]
+  "CHECADO" VARCHAR(1)
+  Indexes {
+    CODIGO+STR(ITEM,3) [name: "MR01R-1"]
+  }
+}
+
+// Origem: ms01i.dbf (DBF)
+Table "ms01i" {
+  Note: "Origem: ms01i.dbf"
+  "CODIGO" VARCHAR(24)
+  "ITEM" INTEGER [default: 0]
+  "ESPE" VARCHAR(60)
+  "ENCO" VARCHAR(60)
+  "VALPAD" DECIMAL(8,2) [default: 0]
+  "VALMAX" DECIMAL(8,2) [default: 0]
+  "VALMIN" DECIMAL(8,2) [default: 0]
+  "TOLMAX" DECIMAL(8,2) [default: 0]
+  "TOLMIN" DECIMAL(8,2) [default: 0]
+  "UNIDADE" VARCHAR(3)
+  "TIPA" VARCHAR(3)
+  "UNIDREF" VARCHAR(4)
+  "QTDEREF" DECIMAL(8,2) [default: 0]
+  Indexes {
+    CODIGO+STR(ITEM,3) [name: "MS01I-1"]
+  }
+}
+
+// Origem: ms01r.dbf (DBF)
+Table "ms01r" {
+  Note: "Origem: ms01r.dbf"
+  "CODIGO" VARCHAR(24)
+  "ITEM" INTEGER [default: 0]
+  "ESPE" VARCHAR(60)
+  "ENCO" VARCHAR(60)
+  "VALPAD" DECIMAL(8,2) [default: 0]
+  "VALMAX" DECIMAL(8,2) [default: 0]
+  "VALMIN" DECIMAL(8,2) [default: 0]
+  "TOLMAX" DECIMAL(8,2) [default: 0]
+  "TOLMIN" DECIMAL(8,2) [default: 0]
+  "UNIDADE" VARCHAR(3)
+  "TIPA" VARCHAR(3)
+  "UNIDREF" VARCHAR(4)
+  "QTDEREF" DECIMAL(8,2) [default: 0]
+  "CHECADO" VARCHAR(1)
+  Indexes {
+    CODIGO+STR(ITEM,3) [name: "MS01R-1"]
+  }
+}
+
+// Origem: mt01i.dbf (DBF)
+Table "mt01i" {
+  Note: "Origem: mt01i.dbf"
+  "CODIGO" VARCHAR(10)
+  "ITEM" INTEGER [default: 0]
+  "ESPE" VARCHAR(60)
+  "ENCO" VARCHAR(60)
+  "VALPAD" DECIMAL(8,2) [default: 0]
+  "VALMAX" DECIMAL(8,2) [default: 0]
+  "VALMIN" DECIMAL(8,2) [default: 0]
+  "TOLMAX" DECIMAL(8,2) [default: 0]
+  "TOLMIN" DECIMAL(8,2) [default: 0]
+  "UNIDADE" VARCHAR(3)
+  "TIPA" VARCHAR(3)
+  "UNIDREF" VARCHAR(4)
+  "QTDEREF" DECIMAL(8,2) [default: 0]
+  Indexes {
+    CODIGO+STR(ITEM,3) [name: "MT01I-1"]
+  }
+}
+
+// Origem: mt01r.dbf (DBF)
+Table "mt01r" {
+  Note: "Origem: mt01r.dbf"
+  "CODIGO" VARCHAR(10)
+  "ITEM" INTEGER [default: 0]
+  "ESPE" VARCHAR(60)
+  "ENCO" VARCHAR(60)
+  "VALPAD" DECIMAL(8,2) [default: 0]
+  "VALMAX" DECIMAL(8,2) [default: 0]
+  "VALMIN" DECIMAL(8,2) [default: 0]
+  "TOLMAX" DECIMAL(8,2) [default: 0]
+  "TOLMIN" DECIMAL(8,2) [default: 0]
+  "UNIDADE" VARCHAR(3)
+  "TIPA" VARCHAR(3)
+  "UNIDREF" VARCHAR(4)
+  "QTDEREF" DECIMAL(8,2) [default: 0]
+  "CHECADO" VARCHAR(1)
+  Indexes {
+    CODIGO+STR(ITEM,3) [name: "MT01R-1"]
+  }
+}
+
+// Origem: mu01i.dbf (DBF)
+Table "mu01i" {
+  Note: "Origem: mu01i.dbf"
+  "CODIGO" VARCHAR(10)
+  "ITEM" INTEGER [default: 0]
+  "ESPE" VARCHAR(60)
+  "ENCO" VARCHAR(60)
+  "VALPAD" DECIMAL(8,2) [default: 0]
+  "VALMAX" DECIMAL(8,2) [default: 0]
+  "VALMIN" DECIMAL(8,2) [default: 0]
+  "TOLMAX" DECIMAL(8,2) [default: 0]
+  "TOLMIN" DECIMAL(8,2) [default: 0]
+  "UNIDADE" VARCHAR(3)
+  "TIPA" VARCHAR(3)
+  "UNIDREF" VARCHAR(4)
+  "QTDEREF" DECIMAL(8,2) [default: 0]
+  Indexes {
+    CODIGO+STR(ITEM,3) [name: "MU01I-1"]
+  }
+}
+
+// Origem: mu01r.dbf (DBF)
+Table "mu01r" {
+  Note: "Origem: mu01r.dbf"
+  "CODIGO" VARCHAR(10)
+  "ITEM" INTEGER [default: 0]
+  "ESPE" VARCHAR(60)
+  "ENCO" VARCHAR(60)
+  "VALPAD" DECIMAL(8,2) [default: 0]
+  "VALMAX" DECIMAL(8,2) [default: 0]
+  "VALMIN" DECIMAL(8,2) [default: 0]
+  "TOLMAX" DECIMAL(8,2) [default: 0]
+  "TOLMIN" DECIMAL(8,2) [default: 0]
+  "UNIDADE" VARCHAR(3)
+  "TIPA" VARCHAR(3)
+  "UNIDREF" VARCHAR(4)
+  "QTDEREF" DECIMAL(8,2) [default: 0]
+  "CHECADO" VARCHAR(1)
+  Indexes {
+    CODIGO+STR(ITEM,3) [name: "MU01R-1"]
+  }
+}
+
+// Origem: rirm.dbf (DBF)
+Table "rirm" {
+  Note: "Origem: rirm.dbf"
+  "RIRM" INTEGER [default: 0]
+  "CLASSI" VARCHAR(1)
+  "RASTRO" VARCHAR(12)
+  "DESENHO" VARCHAR(24)
+  "DESCR" VARCHAR(40)
+  "INSTRU" VARCHAR(40)
+  "NFORN" INTEGER [default: 0]
+  "FORNE" VARCHAR(40)
+  "PEDIDO" VARCHAR(8)
+  "NRNOTA" INTEGER [default: 0]
+  "NRNOTB" INTEGER [default: 0]
+  "DATANF" DATETIME
+  "QTDE" DECIMAL(12,3) [default: 0]
+  "CERT" VARCHAR(40)
+  "LAUDOF" VARCHAR(1)
+  "DATAL" DATETIME
+  "OBS01" VARCHAR(80)
+  "OBS02" VARCHAR(80)
+  "OBS03" VARCHAR(80)
+  "OBS04" VARCHAR(80)
+  "UNID" VARCHAR(4)
+  "TIPOENT" VARCHAR(1)
+  "APLICACAO" VARCHAR(30)
+  "AREA" VARCHAR(2)
+  "CARGO" VARCHAR(40)
+  "RESPO" VARCHAR(40)
+  "CLOTECRT" VARCHAR(1)
+  "CRM" INTEGER [default: 0]
+  "DATA" DATETIME
+  "LLAUDO" TINYINT(1)
+  "CONTIG" TINYINT(1)
+  "QTAMO" INTEGER [default: 0]
+  "INSP" VARCHAR(1)
+  Indexes {
+    RIRM [name: "RIRM"]
+    RASTRO [name: "RIRM-2"]
+    DESENHO [name: "RIRM-3"]
+    NRNOTA [name: "RIRM-4"]
+    DATA [name: "RIRM-5"]
+  }
+}
+
+// Origem: rirmi.dbf (DBF)
+Table "rirmi" {
+  Note: "Origem: rirmi.dbf"
+  "RIRM" INTEGER [default: 0]
+  "ITEM" INTEGER [default: 0]
+  "TIPA" VARCHAR(3)
+  "QTITEM" INTEGER [default: 0]
+  "ESPE" VARCHAR(60)
+  "ENCO" VARCHAR(40)
+  "LAUDO" VARCHAR(1)
+  "UNIITEM" VARCHAR(4)
+  "PULAAPU" VARCHAR(1)
+  Indexes {
+    RIRM [name: "RIRMI"]
+  }
+}
+
+// Origem: rist.dbf (DBF)
+Table "rist" {
+  Note: "Origem: rist.dbf"
+  "RIST" INTEGER [default: 0]
+  "RASTRO" VARCHAR(12)
+  "TIPO" VARCHAR(1)
+  "NFORN" INTEGER [default: 0]
+  "FORNE" VARCHAR(30)
+  "CLASSI" VARCHAR(1)
+  "NF" INTEGER [default: 0]
+  "NFB" INTEGER [default: 0]
+  "DATANF" DATETIME
+  "CERT" VARCHAR(40)
+  "CODIGO" VARCHAR(24)
+  "DENO" VARCHAR(40)
+  "NCLI" INTEGER [default: 0]
+  "CLIENTE" VARCHAR(30)
+  "OS" VARCHAR(8)
+  "INSP" VARCHAR(1)
+  "NIVEL" VARCHAR(5)
+  "QTAMO" INTEGER [default: 0]
+  "CORPO" VARCHAR(1)
+  "LAUDOF" VARCHAR(1)
+  "DATAL" DATETIME
+  "OBS01" VARCHAR(60)
+  "OBS02" VARCHAR(60)
+  "DATA" DATETIME
+  "UNID" VARCHAR(4)
+  "APLICACAO" VARCHAR(25)
+  "AREA" VARCHAR(2)
+  "CARGO" VARCHAR(25)
+  "RESPO" VARCHAR(40)
+  "CLOTECRT" VARCHAR(1)
+  "CRM" INTEGER [default: 0]
+  "LLAUDO" TINYINT(1)
+  "QTDE" DECIMAL(10,3) [default: 0]
+  "CONTIG" TINYINT(1)
+  Indexes {
+    RIST [name: "RIST"]
+    RASTRO [name: "RIST-2"]
+    CODIGO [name: "RIST-3"]
+    NF [name: "RIST-4"]
+    DATA [name: "RIST-5"]
+  }
+}
+
+// Origem: risti.dbf (DBF)
+Table "risti" {
+  Note: "Origem: risti.dbf"
+  "RIST" INTEGER [default: 0]
+  "ITEM" INTEGER [default: 0]
+  "ESPE" VARCHAR(60)
+  "ENCO" VARCHAR(45)
+  "LAUDO" VARCHAR(1)
+  "TIPA" VARCHAR(3)
+  "DATAENV" DATETIME
+  "HORAENV" VARCHAR(5)
+  "DATALAU" DATETIME
+  "PULAAPU" VARCHAR(1)
+  Indexes {
+    RIST [name: "RIST"]
+  }
+}
+

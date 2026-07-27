@@ -1,0 +1,27 @@
+// Origem: lc.dbf (DBF)
+Table "lc" {
+  Note: "Origem: lc.dbf"
+  "DOCUMENTO" VARCHAR(20)
+  "DATA" VARCHAR(10)
+  "NOVODOC" VARCHAR(40)
+  "NOVODATA" VARCHAR(10)
+  "TIPO" VARCHAR(20)
+  "NUMCOMP" VARCHAR(10)
+  "PASTA" VARCHAR(10)
+  "NUMERO" INTEGER [default: 0]
+  Indexes {
+    DOCUMENTO [name: "DOCUMENTO"]
+    NOVODOC [name: "NOVODOC"]
+    TIPO+STR(NUMERO,20) [name: "TIPONUMERO"]
+  }
+}
+
+// Origem: lct.dbf (DBF)
+Table "lct" {
+  Note: "Origem: lct.dbf"
+  "TIPO" VARCHAR(20)
+  Indexes {
+    TIPO [name: "TIPO"]
+  }
+}
+

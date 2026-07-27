@@ -1,0 +1,26 @@
+// Origem: imagens.sqlite (SQLite)
+Table "IMAGENS" {
+  Note: "Origem: imagens.sqlite"
+  "CODIGO" TEXT
+  "IMAGEM" BLOB
+  "NUMERO" REAL
+  "idimg" INTEGER
+  Indexes {
+    (NUMERO) [name: "IDXIMAGENS_NUMERO"]
+    (CODIGO) [name: "IDXIMAGENS_CODIGO"]
+  }
+}
+
+// Origem: imgmw05.sqlite (SQLite)
+Table "IMAGENS" {
+  Note: "Origem: imgmw05.sqlite"
+  "CODIGO" TEXT
+  "IMAGEM" BLOB
+  "NUMERO" REAL
+  "idimg" INTEGER
+  Indexes {
+    (NUMERO) [name: "IDXIMAGENS_NUMERO"]
+    (CODIGO) [name: "IDXIMAGENS_CODIGO"]
+  }
+}
+

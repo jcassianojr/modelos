@@ -1,7 +1,9 @@
-# 🗄️ Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 05/12/26
+# Dicionario de Estruturas de Dados do Projeto
+> Varredura automatica realizada em: 27/07/2026
 
-## 📋 Tabela DBF: `afdterr.dbf`
+## Tabela DBF: `afdterr.dbf`
+> **Origem:** `afdterr.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -10,11 +12,13 @@
 | MOTIVO | N | 8 | 0 |
 | MOTOCO | C | 70 | 0 |
 
-**Índices vinculados:**
-- Tag: `AFDTERR` Expressão: `STR(NUMERO,8)+DTOS(DATA)+STR(HORA,5,2)`
+**Indices vinculados:**
+- Tag: `AFDTERR` Expressao: `STR(NUMERO,8)+DTOS(DATA)+STR(HORA,5,2)`
 
 ---
-## 📋 Tabela DBF: `ajudira.dbf`
+## Tabela DBF: `ajudira.dbf`
+> **Origem:** `ajudira.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CPF | C | 14 | 0 |
@@ -35,11 +39,13 @@
 | VALUF6 | N | 12 | 2 |
 | VALUF7 | N | 12 | 2 |
 
-**Índices vinculados:**
-- Tag: `D:\DEVELOP` Expressão: `CPF+STR(MES,2)`
+**Indices vinculados:**
+- Tag: `AJUDIRA` Expressao: `CPF+STR(MES,2)`
 
 ---
-## 📋 Tabela DBF: `ajudird.dbf`
+## Tabela DBF: `ajudird.dbf`
+> **Origem:** `ajudird.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CPF | C | 14 | 0 |
@@ -60,11 +66,13 @@
 | VALUF6 | N | 12 | 2 |
 | VALUF7 | N | 12 | 2 |
 
-**Índices vinculados:**
-- Tag: `D:\DEVELOP` Expressão: `CPF+STR(MES,2)`
+**Indices vinculados:**
+- Tag: `AJUDIRD` Expressao: `CPF+STR(MES,2)`
 
 ---
-## 📋 Tabela DBF: `ajudirf.dbf`
+## Tabela DBF: `ajudirf.dbf`
+> **Origem:** `ajudirf.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CPF | C | 14 | 0 |
@@ -85,11 +93,13 @@
 | VALUF6 | N | 12 | 2 |
 | VALUF7 | N | 12 | 2 |
 
-**Índices vinculados:**
-- Tag: `D:\DEVELOP` Expressão: `CPF+STR(MES,2)`
+**Indices vinculados:**
+- Tag: `AJUDIRF` Expressao: `CPF+STR(MES,2)`
 
 ---
-## 📋 Tabela DBF: `bcobak.dbf`
+## Tabela DBF: `bcobak.dbf`
+> **Origem:** `bcobak.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -104,11 +114,13 @@
 | DIADEB | N | 8 | 2 |
 | DIASAL | N | 8 | 2 |
 
-**Índices vinculados:**
-- Tag: `BCOBAK` Expressão: `STR(NUMERO,8)+STR(ANO,4)+STR(MES,2)`
+**Indices vinculados:**
+- Tag: `BCOBAK` Expressao: `STR(NUMERO,8)+STR(ANO,4)+STR(MES,2)`
 
 ---
-## 📋 Tabela DBF: `bcodek.dbf`
+## Tabela DBF: `bcodek.dbf`
+> **Origem:** `bcodek.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -123,11 +135,13 @@
 | DIADEB | N | 8 | 2 |
 | DIASAL | N | 8 | 2 |
 
-**Índices vinculados:**
-- Tag: `BCODEK` Expressão: `STR(NUMERO,8)+STR(ANO,4)+STR(MES,2)`
+**Indices vinculados:**
+- Tag: `BCODEK` Expressao: `STR(NUMERO,8)+STR(ANO,4)+STR(MES,2)`
 
 ---
-## 📋 Tabela DBF: `bcodem.dbf`
+## Tabela DBF: `bcodem.dbf`
+> **Origem:** `bcodem.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -142,11 +156,13 @@
 | DIADEB | N | 8 | 2 |
 | DIASAL | N | 8 | 2 |
 
-**Índices vinculados:**
-- Tag: `BCODEM` Expressão: `STR(NUMERO,8)+STR(ANO,4)+STR(MES,2)`
+**Indices vinculados:**
+- Tag: `BCODEM` Expressao: `STR(NUMERO,8)+STR(ANO,4)+STR(MES,2)`
 
 ---
-## 📋 Tabela DBF: `bcohrs.dbf`
+## Tabela DBF: `bcohrs.dbf`
+> **Origem:** `bcohrs.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -161,11 +177,13 @@
 | DIADEB | N | 8 | 2 |
 | DIASAL | N | 8 | 2 |
 
-**Índices vinculados:**
-- Tag: `BCOHRS` Expressão: `STR(NUMERO,8)+STR(ANO,4)+STR(MES,2)`
+**Indices vinculados:**
+- Tag: `BCOHRS` Expressao: `STR(NUMERO,8)+STR(ANO,4)+STR(MES,2)`
 
 ---
-## 📋 Tabela DBF: `bcoreq.dbf`
+## Tabela DBF: `bcoreq.dbf`
+> **Origem:** `bcoreq.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | REQUISI | N | 8 | 0 |
@@ -178,7 +196,9 @@
 | IMP | C | 6 | 0 |
 
 ---
-## 📋 Tabela DBF: `bcrbak.dbf`
+## Tabela DBF: `bcrbak.dbf`
+> **Origem:** `bcrbak.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | REQUISI | N | 8 | 0 |
@@ -190,11 +210,13 @@
 | OBS | C | 60 | 0 |
 | IMP | C | 6 | 0 |
 
-**Índices vinculados:**
-- Tag: `BCRBAK` Expressão: `REQUISI`
+**Indices vinculados:**
+- Tag: `BCRBAK` Expressao: `REQUISI`
 
 ---
-## 📋 Tabela DBF: `cesta.dbf`
+## Tabela DBF: `cesta.dbf`
+> **Origem:** `cesta.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -203,11 +225,13 @@
 | ADMITIDO | D | 8 | 0 |
 | OBS | C | 40 | 0 |
 
-**Índices vinculados:**
-- Tag: `CESTA` Expressão: `NUMERO`
+**Indices vinculados:**
+- Tag: `CESTA` Expressao: `NUMERO`
 
 ---
-## 📋 Tabela DBF: `ctrhor.dbf`
+## Tabela DBF: `ctrhor.dbf`
+> **Origem:** `ctrhor.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | DEPTO | N | 4 | 0 |
@@ -225,11 +249,13 @@
 | UNIFUN | C | 10 | 0 |
 | MODIRETO | C | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `CTRHOR` Expressão: `STR(ANO,4)+STR(MES,2)+STR(DEPTO,4)`
+**Indices vinculados:**
+- Tag: `CTRHOR` Expressao: `STR(ANO,4)+STR(MES,2)+STR(DEPTO,4)`
 
 ---
-## 📋 Tabela DBF: `ferias.dbf`
+## Tabela DBF: `ferias.dbf`
+> **Origem:** `ferias.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 5 | 0 |
@@ -257,13 +283,15 @@
 | SITUACAO | C | 2 | 0 |
 | SALADM | N | 12 | 2 |
 
-**Índices vinculados:**
-- Tag: `FERIAS01` Expressão: `NUMERO`
-- Tag: `FERIAS02` Expressão: `INIPER`
-- Tag: `FERIAS03` Expressão: `STR(NUMERO,8)+DTOS(INIPER)`
+**Indices vinculados:**
+- Tag: `FERIAS01` Expressao: `NUMERO`
+- Tag: `FERIAS02` Expressao: `INIPER`
+- Tag: `FERIAS03` Expressao: `STR(NUMERO,8)+DTOS(INIPER)`
 
 ---
-## 📋 Tabela DBF: `foopes.dbf`
+## Tabela DBF: `foopes.dbf`
+> **Origem:** `foopes.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -391,16 +419,18 @@
 | RIC | C | 32 | 0 |
 | RICEMI | C | 3 | 0 |
 
-**Índices vinculados:**
-- Tag: `FO_PES` Expressão: `NUMERO`
-- Tag: `FO_PES2` Expressão: `NOME`
-- Tag: `FO_PES3` Expressão: `CPF`
-- Tag: `FO_PES4` Expressão: `PIS`
-- Tag: `FO_PES5` Expressão: `ordem`
-- Tag: `TEMP` Expressão: `PIS+DTOS(ADMITIDO)`
+**Indices vinculados:**
+- Tag: `FO_PES` Expressao: `NUMERO`
+- Tag: `FO_PES2` Expressao: `NOME`
+- Tag: `FO_PES3` Expressao: `CPF`
+- Tag: `FO_PES4` Expressao: `PIS`
+- Tag: `FO_PES5` Expressao: `ordem`
+- Tag: `TEMP` Expressao: `PIS+DTOS(ADMITIDO)`
 
 ---
-## 📋 Tabela DBF: `foptoatr.dbf`
+## Tabela DBF: `foptoatr.dbf`
+> **Origem:** `foptoatr.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -417,11 +447,13 @@
 | OBSATR | C | 78 | 0 |
 | HORXXX | N | 5 | 2 |
 
-**Índices vinculados:**
-- Tag: `FOPTOATR` Expressão: `STR(NUMERO,8)+DTOS(DATA)+CODANL`
+**Indices vinculados:**
+- Tag: `FOPTOATR` Expressao: `STR(NUMERO,8)+DTOS(DATA)+CODANL`
 
 ---
-## 📋 Tabela DBF: `foptoeve.dbf`
+## Tabela DBF: `foptoeve.dbf`
+> **Origem:** `foptoeve.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | DIA | N | 2 | 0 |
@@ -432,11 +464,13 @@
 | REDSN | C | 1 | 0 |
 | FOLSN | C | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `FOPTOEVE` Expressão: `STR(DIA,2)+STR(MES,2)`
+**Indices vinculados:**
+- Tag: `FOPTOEVE` Expressao: `STR(DIA,2)+STR(MES,2)`
 
 ---
-## 📋 Tabela DBF: `foptoprd.dbf`
+## Tabela DBF: `foptoprd.dbf`
+> **Origem:** `foptoprd.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | ORIGEM | N | 8 | 0 |
@@ -444,11 +478,13 @@
 | DATA | D | 8 | 0 |
 | NOME | C | 30 | 0 |
 
-**Índices vinculados:**
-- Tag: `FOPTOPRD` Expressão: `STR(ORIGEM,8)+DTOS(DATA)`
+**Indices vinculados:**
+- Tag: `FOPTOPRD` Expressao: `STR(ORIGEM,8)+DTOS(DATA)`
 
 ---
-## 📋 Tabela DBF: `foptorev.dbf`
+## Tabela DBF: `foptorev.dbf`
+> **Origem:** `foptorev.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | GRUPO | C | 2 | 0 |
@@ -466,7 +502,9 @@
 | HORARIO | N | 8 | 0 |
 
 ---
-## 📋 Tabela DBF: `forais.dbf`
+## Tabela DBF: `forais.dbf`
+> **Origem:** `forais.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | ANO | N | 4 | 0 |
@@ -536,12 +574,14 @@
 | ALVARA | C | 1 | 0 |
 | TIPOADM | C | 2 | 0 |
 
-**Índices vinculados:**
-- Tag: `FORAIS` Expressão: `STR(ANO,4)+STR(NUMERO,8)`
-- Tag: `FORAIS-2` Expressão: `STR(ANO,4)+NOME`
+**Indices vinculados:**
+- Tag: `FORAIS` Expressao: `STR(ANO,4)+STR(NUMERO,8)`
+- Tag: `FORAIS-2` Expressao: `STR(ANO,4)+NOME`
 
 ---
-## 📋 Tabela DBF: `fosfam.dbf`
+## Tabela DBF: `fosfam.dbf`
+> **Origem:** `fosfam.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | REQUISI | N | 8 | 0 |
@@ -577,15 +617,15 @@
 | RGEMIS | C | 6 | 0 |
 | RGDATA | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `FOSFAM2` Expressão: `CPFTIT+CPF`
-- Tag: `FOSFAM3` Expressão: `CPFTIT+NOME`
-- Tag: `FOSFAM` Expressão: `STR(NUMERO,8)+STR(REQUISI,8)`
-- Tag: `FOSFAM-2` Expressão: `CPFTIT+CPF`
-- Tag: `FOSFAM-3` Expressão: `CPFTIT+NOME`
+**Indices vinculados:**
+- Tag: `FOSFAM` Expressao: `STR(NUMERO,8)+STR(REQUISI,8)`
+- Tag: `FOSFAM-2` Expressao: `CPFTIT+CPF`
+- Tag: `FOSFAM-3` Expressao: `CPFTIT+NOME`
 
 ---
-## 📋 Tabela DBF: `fo_comp.dbf`
+## Tabela DBF: `fo_comp.dbf`
+> **Origem:** `fo_comp.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 5 | 0 |
@@ -604,11 +644,13 @@
 | MES1 | N | 2 | 0 |
 | MES2 | N | 2 | 0 |
 
-**Índices vinculados:**
-- Tag: `FO_COMP` Expressão: `CONTROLE`
+**Indices vinculados:**
+- Tag: `FO_COMP` Expressao: `CONTROLE`
 
 ---
-## 📋 Tabela DBF: `fo_dio.dbf`
+## Tabela DBF: `fo_dio.dbf`
+> **Origem:** `fo_dio.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -619,7 +661,9 @@
 | TIPOR | C | 1 | 0 |
 
 ---
-## 📋 Tabela DBF: `fo_exp.dbf`
+## Tabela DBF: `fo_exp.dbf`
+> **Origem:** `fo_exp.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | DEPTO | N | 4 | 0 |
@@ -639,12 +683,13 @@
 | OBS4 | C | 60 | 0 |
 | OBS5 | C | 60 | 0 |
 
-**Índices vinculados:**
-- Tag: `FO_EXP` Expressão: `NUMERO`
-- Tag: `D:\DEVELOP` Expressão: `NUMERO`
+**Indices vinculados:**
+- Tag: `FO_EXP` Expressao: `NUMERO`
 
 ---
-## 📋 Tabela DBF: `fo_fer.dbf`
+## Tabela DBF: `fo_fer.dbf`
+> **Origem:** `fo_fer.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | DEPTO | N | 4 | 0 |
@@ -693,11 +738,13 @@
 | COMPABOI | D | 8 | 0 |
 | COMPABOF | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `D:\DEVELOP` Expressão: `CONTROLE`
+**Indices vinculados:**
+- Tag: `FO_FER` Expressao: `CONTROLE`
 
 ---
-## 📋 Tabela DBF: `fo_ffe.dbf`
+## Tabela DBF: `fo_ffe.dbf`
+> **Origem:** `fo_ffe.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CONTA | N | 3 | 0 |
@@ -706,11 +753,13 @@
 | VALOR | N | 18 | 2 |
 | CONTROLE | N | 5 | 0 |
 
-**Índices vinculados:**
-- Tag: `FO_FFE` Expressão: `CONTROLE`
+**Indices vinculados:**
+- Tag: `FO_FFE` Expressao: `CONTROLE`
 
 ---
-## 📋 Tabela DBF: `fo_fp13a.dbf`
+## Tabela DBF: `fo_fp13a.dbf`
+> **Origem:** `fo_fp13a.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 5 | 0 |
@@ -725,11 +774,13 @@
 | TIPO | N | 1 | 0 |
 | VALORBASE | N | 10 | 2 |
 
-**Índices vinculados:**
-- Tag: `D:\DEVELOP` Expressão: `CONTROLE`
+**Indices vinculados:**
+- Tag: `FO_FP13A` Expressao: `CONTROLE`
 
 ---
-## 📋 Tabela DBF: `fo_fp13b.dbf`
+## Tabela DBF: `fo_fp13b.dbf`
+> **Origem:** `fo_fp13b.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 5 | 0 |
@@ -744,11 +795,13 @@
 | TIPO | N | 1 | 0 |
 | VALORBASE | N | 10 | 2 |
 
-**Índices vinculados:**
-- Tag: `D:\DEVELOP` Expressão: `CONTROLE`
+**Indices vinculados:**
+- Tag: `FO_FP13B` Expressao: `CONTROLE`
 
 ---
-## 📋 Tabela DBF: `fo_fp13c.dbf`
+## Tabela DBF: `fo_fp13c.dbf`
+> **Origem:** `fo_fp13c.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 5 | 0 |
@@ -763,11 +816,13 @@
 | TIPO | N | 1 | 0 |
 | VALORBASE | N | 10 | 2 |
 
-**Índices vinculados:**
-- Tag: `D:\DEVELOP` Expressão: `CONTROLE`
+**Indices vinculados:**
+- Tag: `FO_FP13C` Expressao: `CONTROLE`
 
 ---
-## 📋 Tabela DBF: `fo_hor.dbf`
+## Tabela DBF: `fo_hor.dbf`
+> **Origem:** `fo_hor.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 5 | 0 |
@@ -780,11 +835,13 @@
 | D6 | C | 60 | 0 |
 | D7 | C | 60 | 0 |
 
-**Índices vinculados:**
-- Tag: `FO_HOR` Expressão: `NUMERO`
+**Indices vinculados:**
+- Tag: `FO_HOR` Expressao: `NUMERO`
 
 ---
-## 📋 Tabela DBF: `fo_ira.dbf`
+## Tabela DBF: `fo_ira.dbf`
+> **Origem:** `fo_ira.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 6 | 0 |
@@ -796,11 +853,13 @@
 | CPF | C | 14 | 0 |
 | CONTROL2 | C | 20 | 0 |
 
-**Índices vinculados:**
-- Tag: `D:\DEVELOP` Expressão: `CONTROL2`
+**Indices vinculados:**
+- Tag: `FO_IRA` Expressao: `CONTROL2`
 
 ---
-## 📋 Tabela DBF: `fo_ird.dbf`
+## Tabela DBF: `fo_ird.dbf`
+> **Origem:** `fo_ird.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 6 | 0 |
@@ -812,11 +871,13 @@
 | CPF | C | 14 | 0 |
 | CONTROL2 | C | 20 | 0 |
 
-**Índices vinculados:**
-- Tag: `D:\DEVELOP` Expressão: `CONTROL2`
+**Indices vinculados:**
+- Tag: `FO_IRD` Expressao: `CONTROL2`
 
 ---
-## 📋 Tabela DBF: `fo_irr.dbf`
+## Tabela DBF: `fo_irr.dbf`
+> **Origem:** `fo_irr.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 6 | 0 |
@@ -828,11 +889,13 @@
 | CPF | C | 14 | 0 |
 | CONTROL2 | C | 20 | 0 |
 
-**Índices vinculados:**
-- Tag: `D:\DEVELOP` Expressão: `CONTROL2`
+**Indices vinculados:**
+- Tag: `FO_IRR` Expressao: `CONTROL2`
 
 ---
-## 📋 Tabela DBF: `fo_oco.dbf`
+## Tabela DBF: `fo_oco.dbf`
+> **Origem:** `fo_oco.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -863,11 +926,13 @@
 | DIASS | N | 2 | 0 |
 | DIASR | N | 2 | 0 |
 
-**Índices vinculados:**
-- Tag: `FO_OCO` Expressão: `STR(NUMERO,8)+DTOS(DATASAIDA)`
+**Indices vinculados:**
+- Tag: `FO_OCO` Expressao: `STR(NUMERO,8)+DTOS(DATASAIDA)`
 
 ---
-## 📋 Tabela DBF: `fo_pdes.dbf`
+## Tabela DBF: `fo_pdes.dbf`
+> **Origem:** `fo_pdes.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -878,7 +943,9 @@
 | HORA2 | N | 6 | 2 |
 
 ---
-## 📋 Tabela DBF: `fo_pes.dbf`
+## Tabela DBF: `fo_pes.dbf`
+> **Origem:** `fo_pes.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -1006,16 +1073,17 @@
 | RIC | C | 32 | 0 |
 | RICEMI | C | 3 | 0 |
 
-**Índices vinculados:**
-- Tag: `TEMP` Expressão: `PIS+DTOS(ADMITIDO)`
-- Tag: `FO_PES` Expressão: `NUMERO`
-- Tag: `FO_PES2` Expressão: `NOME`
-- Tag: `FO_PES3` Expressão: `CPF`
-- Tag: `FO_PES4` Expressão: `PIS`
-- Tag: `FO_PES5` Expressão: `ORDEM`
+**Indices vinculados:**
+- Tag: `FO_PES` Expressao: `NUMERO`
+- Tag: `FO_PES2` Expressao: `NOME`
+- Tag: `FO_PES3` Expressao: `CPF`
+- Tag: `FO_PES4` Expressao: `PIS`
+- Tag: `FO_PES5` Expressao: `ORDEM`
 
 ---
-## 📋 Tabela DBF: `fo_pfe.dbf`
+## Tabela DBF: `fo_pfe.dbf`
+> **Origem:** `fo_pfe.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 5 | 0 |
@@ -1035,11 +1103,13 @@
 | MES2 | N | 2 | 0 |
 | DATACOMP | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `D:\DEVELOP` Expressão: `CONTROLE`
+**Indices vinculados:**
+- Tag: `FO_PFE` Expressao: `CONTROLE`
 
 ---
-## 📋 Tabela DBF: `fo_phor.dbf`
+## Tabela DBF: `fo_phor.dbf`
+> **Origem:** `fo_phor.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -1050,7 +1120,9 @@
 | MOTIVO | N | 8 | 0 |
 
 ---
-## 📋 Tabela DBF: `fo_pman.dbf`
+## Tabela DBF: `fo_pman.dbf`
+> **Origem:** `fo_pman.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -1065,7 +1137,9 @@
 | ZERHOR | C | 1 | 0 |
 
 ---
-## 📋 Tabela DBF: `fo_poco.dbf`
+## Tabela DBF: `fo_poco.dbf`
+> **Origem:** `fo_poco.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -1088,7 +1162,9 @@
 | MOTIVO | N | 8 | 0 |
 
 ---
-## 📋 Tabela DBF: `fo_pon.dbf`
+## Tabela DBF: `fo_pon.dbf`
+> **Origem:** `fo_pon.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -1135,7 +1211,9 @@
 | HORARIO | N | 8 | 0 |
 
 ---
-## 📋 Tabela DBF: `fo_pos.dbf`
+## Tabela DBF: `fo_pos.dbf`
+> **Origem:** `fo_pos.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -1195,7 +1273,9 @@
 | ANO | N | 4 | 0 |
 
 ---
-## 📋 Tabela DBF: `fo_pot.dbf`
+## Tabela DBF: `fo_pot.dbf`
+> **Origem:** `fo_pot.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -1253,7 +1333,9 @@
 | BCOHRS | N | 7 | 2 |
 
 ---
-## 📋 Tabela DBF: `fo_psl.dbf`
+## Tabela DBF: `fo_psl.dbf`
+> **Origem:** `fo_psl.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 5 | 0 |
@@ -1266,11 +1348,13 @@
 | TAXA1 | N | 6 | 2 |
 | TAXA2 | N | 6 | 2 |
 
-**Índices vinculados:**
-- Tag: `FO_PSL` Expressão: `NUMERO`
+**Indices vinculados:**
+- Tag: `FO_PSL` Expressao: `NUMERO`
 
 ---
-## 📋 Tabela DBF: `fo_ptt.dbf`
+## Tabela DBF: `fo_ptt.dbf`
+> **Origem:** `fo_ptt.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -1311,11 +1395,13 @@
 | VAL16 | N | 12 | 2 |
 | BCOHRS | N | 7 | 2 |
 
-**Índices vinculados:**
-- Tag: `FO_PTT` Expressão: `STR(NUMERO,8)+STR(ANO,4)+STR(MES,2)`
+**Indices vinculados:**
+- Tag: `FO_PTT` Expressao: `STR(NUMERO,8)+STR(ANO,4)+STR(MES,2)`
 
 ---
-## 📋 Tabela DBF: `fo_rdd.dbf`
+## Tabela DBF: `fo_rdd.dbf`
+> **Origem:** `fo_rdd.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 5 | 0 |
@@ -1325,8 +1411,13 @@
 | VALOR | N | 12 | 2 |
 | CONTROLE | N | 18 | 0 |
 
+**Indices vinculados:**
+- Tag: `FO_RDD` Expressao: `CONTROLE`
+
 ---
-## 📋 Tabela DBF: `fo_relhr.dbf`
+## Tabela DBF: `fo_relhr.dbf`
+> **Origem:** `fo_relhr.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -1340,11 +1431,13 @@
 | MARMES | C | 1 | 0 |
 | DATAREF1 | D | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `FO_RELHR` Expressão: `NUMERO`
+**Indices vinculados:**
+- Tag: `FO_RELHR` Expressao: `NUMERO`
 
 ---
-## 📋 Tabela DBF: `fo_res.dbf`
+## Tabela DBF: `fo_res.dbf`
+> **Origem:** `fo_res.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 5 | 0 |
@@ -1354,11 +1447,13 @@
 | VALOR | N | 12 | 2 |
 | CONTROLE | N | 18 | 0 |
 
-**Índices vinculados:**
-- Tag: `D:\DEVELOP` Expressão: `CONTROLE`
+**Indices vinculados:**
+- Tag: `FO_RES` Expressao: `CONTROLE`
 
 ---
-## 📋 Tabela DBF: `fo_rss.dbf`
+## Tabela DBF: `fo_rss.dbf`
+> **Origem:** `fo_rss.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 5 | 0 |
@@ -1377,11 +1472,13 @@
 | MES2 | N | 2 | 0 |
 | VALORMES2 | N | 18 | 2 |
 
-**Índices vinculados:**
-- Tag: `D:\DEVELOP` Expressão: `CONTROLE`
+**Indices vinculados:**
+- Tag: `FO_RSS` Expressao: `CONTROLE`
 
 ---
-## 📋 Tabela DBF: `fo_sal.dbf`
+## Tabela DBF: `fo_sal.dbf`
+> **Origem:** `fo_sal.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -1411,8 +1508,13 @@
 | SALDEZ | N | 12 | 2 |
 | MOT12 | C | 2 | 0 |
 
+**Indices vinculados:**
+- Tag: `FO_SAL` Expressao: `STR(NUMERO,8)+STR(ANO,4)`
+
 ---
-## 📋 Tabela DBF: `fo_var.dbf`
+## Tabela DBF: `fo_var.dbf`
+> **Origem:** `fo_var.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 10 | 0 |
@@ -1428,11 +1530,13 @@
 | NIVRES | N | 1 | 0 |
 | NIV13S | N | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `D:\DEVELOP` Expressão: `CONTROLE`
+**Indices vinculados:**
+- Tag: `FO_VAR` Expressao: `CONTROLE`
 
 ---
-## 📋 Tabela DBF: `fo_vbr.dbf`
+## Tabela DBF: `fo_vbr.dbf`
+> **Origem:** `fo_vbr.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 10 | 0 |
@@ -1448,11 +1552,13 @@
 | NIVRES | N | 1 | 0 |
 | NIV13S | N | 1 | 0 |
 
-**Índices vinculados:**
-- Tag: `D:\DEVELOP` Expressão: `CONTROLE`
+**Indices vinculados:**
+- Tag: `FO_VBR` Expressao: `CONTROLE`
 
 ---
-## 📋 Tabela DBF: `fp000100.dbf`
+## Tabela DBF: `fp000100.dbf`
+> **Origem:** `fp000100.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 5 | 0 |
@@ -1468,26 +1574,9 @@
 | VALORBASE | N | 10 | 2 |
 
 ---
-## 📋 Tabela DBF: `fp000101.dbf`
-| Campo | Tipo | Tam | Dec |
-| :--- | :--- | :--- | :--- |
-| NUMERO | N | 5 | 0 |
-| CONTA | N | 4 | 0 |
-| HORAS | N | 6 | 2 |
-| VALOR | N | 12 | 2 |
-| CONTROLE | N | 9 | 0 |
-| FATOR | N | 6 | 4 |
-| TRIBUTIRR | N | 1 | 0 |
-| TRIBUTINPS | N | 1 | 0 |
-| TRIB_FGTS | N | 1 | 0 |
-| TIPO | N | 1 | 0 |
-| VALORBASE | N | 10 | 2 |
+## Tabela DBF: `fp000101.dbf`
+> **Origem:** `fp000101.dbf` (Driver: DBFCDX)
 
-**Índices vinculados:**
-- Tag: `C:\DEVELOP` Expressão: `CONTROLE`
-
----
-## 📋 Tabela DBF: `fp000102.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 5 | 0 |
@@ -1503,45 +1592,9 @@
 | VALORBASE | N | 10 | 2 |
 
 ---
-## 📋 Tabela DBF: `fp000103.dbf`
-| Campo | Tipo | Tam | Dec |
-| :--- | :--- | :--- | :--- |
-| NUMERO | N | 5 | 0 |
-| CONTA | N | 4 | 0 |
-| HORAS | N | 6 | 2 |
-| VALOR | N | 12 | 2 |
-| CONTROLE | N | 9 | 0 |
-| FATOR | N | 6 | 4 |
-| TRIBUTIRR | N | 1 | 0 |
-| TRIBUTINPS | N | 1 | 0 |
-| TRIB_FGTS | N | 1 | 0 |
-| TIPO | N | 1 | 0 |
-| VALORBASE | N | 10 | 2 |
+## Tabela DBF: `fp000102.dbf`
+> **Origem:** `fp000102.dbf` (Driver: DBFCDX)
 
-**Índices vinculados:**
-- Tag: `C:\DEVELOP` Expressão: `CONTROLE`
-
----
-## 📋 Tabela DBF: `fp000104.dbf`
-| Campo | Tipo | Tam | Dec |
-| :--- | :--- | :--- | :--- |
-| NUMERO | N | 5 | 0 |
-| CONTA | N | 4 | 0 |
-| HORAS | N | 6 | 2 |
-| VALOR | N | 12 | 2 |
-| CONTROLE | N | 9 | 0 |
-| FATOR | N | 6 | 4 |
-| TRIBUTIRR | N | 1 | 0 |
-| TRIBUTINPS | N | 1 | 0 |
-| TRIB_FGTS | N | 1 | 0 |
-| TIPO | N | 1 | 0 |
-| VALORBASE | N | 10 | 2 |
-
-**Índices vinculados:**
-- Tag: `C:\DEVELOP` Expressão: `CONTROLE`
-
----
-## 📋 Tabela DBF: `fp000105.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 5 | 0 |
@@ -1557,7 +1610,9 @@
 | VALORBASE | N | 10 | 2 |
 
 ---
-## 📋 Tabela DBF: `fp000106.dbf`
+## Tabela DBF: `fp000103.dbf`
+> **Origem:** `fp000103.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 5 | 0 |
@@ -1573,7 +1628,9 @@
 | VALORBASE | N | 10 | 2 |
 
 ---
-## 📋 Tabela DBF: `fp000107.dbf`
+## Tabela DBF: `fp000104.dbf`
+> **Origem:** `fp000104.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 5 | 0 |
@@ -1589,27 +1646,9 @@
 | VALORBASE | N | 10 | 2 |
 
 ---
-## 📋 Tabela DBF: `fp000108.dbf`
-| Campo | Tipo | Tam | Dec |
-| :--- | :--- | :--- | :--- |
-| NUMERO | N | 5 | 0 |
-| CONTA | N | 4 | 0 |
-| HORAS | N | 6 | 2 |
-| VALOR | N | 12 | 2 |
-| CONTROLE | N | 9 | 0 |
-| FATOR | N | 6 | 4 |
-| TRIBUTIRR | N | 1 | 0 |
-| TRIBUTINPS | N | 1 | 0 |
-| TRIB_FGTS | N | 1 | 0 |
-| TIPO | N | 1 | 0 |
-| VALORBASE | N | 10 | 2 |
+## Tabela DBF: `fp000105.dbf`
+> **Origem:** `fp000105.dbf` (Driver: DBFCDX)
 
-**Índices vinculados:**
-- Tag: `D:\DEVELOP` Expressão: `CONTROLE`
-- Tag: `FOL` Expressão: `CONTROLE`
-
----
-## 📋 Tabela DBF: `fp000109.dbf`
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 5 | 0 |
@@ -1625,7 +1664,9 @@
 | VALORBASE | N | 10 | 2 |
 
 ---
-## 📋 Tabela DBF: `fp000110.dbf`
+## Tabela DBF: `fp000106.dbf`
+> **Origem:** `fp000106.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 5 | 0 |
@@ -1641,7 +1682,9 @@
 | VALORBASE | N | 10 | 2 |
 
 ---
-## 📋 Tabela DBF: `fp000111.dbf`
+## Tabela DBF: `fp000107.dbf`
+> **Origem:** `fp000107.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 5 | 0 |
@@ -1657,7 +1700,9 @@
 | VALORBASE | N | 10 | 2 |
 
 ---
-## 📋 Tabela DBF: `fp000112.dbf`
+## Tabela DBF: `fp000108.dbf`
+> **Origem:** `fp000108.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 5 | 0 |
@@ -1672,11 +1717,82 @@
 | TIPO | N | 1 | 0 |
 | VALORBASE | N | 10 | 2 |
 
-**Índices vinculados:**
-- Tag: `C:\DEVELOP` Expressão: `CONTROLE`
+---
+## Tabela DBF: `fp000109.dbf`
+> **Origem:** `fp000109.dbf` (Driver: DBFCDX)
+
+| Campo | Tipo | Tam | Dec |
+| :--- | :--- | :--- | :--- |
+| NUMERO | N | 5 | 0 |
+| CONTA | N | 4 | 0 |
+| HORAS | N | 6 | 2 |
+| VALOR | N | 12 | 2 |
+| CONTROLE | N | 9 | 0 |
+| FATOR | N | 6 | 4 |
+| TRIBUTIRR | N | 1 | 0 |
+| TRIBUTINPS | N | 1 | 0 |
+| TRIB_FGTS | N | 1 | 0 |
+| TIPO | N | 1 | 0 |
+| VALORBASE | N | 10 | 2 |
 
 ---
-## 📋 Tabela DBF: `htttroca.dbf`
+## Tabela DBF: `fp000110.dbf`
+> **Origem:** `fp000110.dbf` (Driver: DBFCDX)
+
+| Campo | Tipo | Tam | Dec |
+| :--- | :--- | :--- | :--- |
+| NUMERO | N | 5 | 0 |
+| CONTA | N | 4 | 0 |
+| HORAS | N | 6 | 2 |
+| VALOR | N | 12 | 2 |
+| CONTROLE | N | 9 | 0 |
+| FATOR | N | 6 | 4 |
+| TRIBUTIRR | N | 1 | 0 |
+| TRIBUTINPS | N | 1 | 0 |
+| TRIB_FGTS | N | 1 | 0 |
+| TIPO | N | 1 | 0 |
+| VALORBASE | N | 10 | 2 |
+
+---
+## Tabela DBF: `fp000111.dbf`
+> **Origem:** `fp000111.dbf` (Driver: DBFCDX)
+
+| Campo | Tipo | Tam | Dec |
+| :--- | :--- | :--- | :--- |
+| NUMERO | N | 5 | 0 |
+| CONTA | N | 4 | 0 |
+| HORAS | N | 6 | 2 |
+| VALOR | N | 12 | 2 |
+| CONTROLE | N | 9 | 0 |
+| FATOR | N | 6 | 4 |
+| TRIBUTIRR | N | 1 | 0 |
+| TRIBUTINPS | N | 1 | 0 |
+| TRIB_FGTS | N | 1 | 0 |
+| TIPO | N | 1 | 0 |
+| VALORBASE | N | 10 | 2 |
+
+---
+## Tabela DBF: `fp000112.dbf`
+> **Origem:** `fp000112.dbf` (Driver: DBFCDX)
+
+| Campo | Tipo | Tam | Dec |
+| :--- | :--- | :--- | :--- |
+| NUMERO | N | 5 | 0 |
+| CONTA | N | 4 | 0 |
+| HORAS | N | 6 | 2 |
+| VALOR | N | 12 | 2 |
+| CONTROLE | N | 9 | 0 |
+| FATOR | N | 6 | 4 |
+| TRIBUTIRR | N | 1 | 0 |
+| TRIBUTINPS | N | 1 | 0 |
+| TRIB_FGTS | N | 1 | 0 |
+| TIPO | N | 1 | 0 |
+| VALORBASE | N | 10 | 2 |
+
+---
+## Tabela DBF: `htttroca.dbf`
+> **Origem:** `htttroca.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -1685,11 +1801,13 @@
 | ANT | C | 10 | 0 |
 | HTT | C | 10 | 0 |
 
-**Índices vinculados:**
-- Tag: `HTTTROCA` Expressão: `NUMERO`
+**Indices vinculados:**
+- Tag: `HTTTROCA` Expressao: `NUMERO`
 
 ---
-## 📋 Tabela DBF: `irrf.dbf`
+## Tabela DBF: `irrf.dbf`
+> **Origem:** `irrf.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CGC | C | 18 | 0 |
@@ -1726,11 +1844,13 @@
 | V605 | N | 12 | 2 |
 | V607 | N | 12 | 2 |
 
-**Índices vinculados:**
-- Tag: `D:\DEVELOP` Expressão: `CPF`
+**Indices vinculados:**
+- Tag: `IRRF` Expressao: `CPF`
 
 ---
-## 📋 Tabela DBF: `irrf01.dbf`
+## Tabela DBF: `irrf01.dbf`
+> **Origem:** `irrf01.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -1748,11 +1868,13 @@
 | TELEFONE | C | 9 | 0 |
 | CONTATO | C | 12 | 0 |
 
-**Índices vinculados:**
-- Tag: `D:\DEVELOP` Expressão: `NUMERO`
+**Indices vinculados:**
+- Tag: `IRRF01` Expressao: `NUMERO`
 
 ---
-## 📋 Tabela DBF: `irrf02.dbf`
+## Tabela DBF: `irrf02.dbf`
+> **Origem:** `irrf02.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -1764,11 +1886,13 @@
 | ALIQUOTA | N | 5 | 2 |
 | IRRF | N | 8 | 2 |
 
-**Índices vinculados:**
-- Tag: `D:\DEVELOP` Expressão: `STR(NUMERO,8)+STR(ITEM,2)`
+**Indices vinculados:**
+- Tag: `IRRF02` Expressao: `STR(NUMERO,8)+STR(ITEM,2)`
 
 ---
-## 📋 Tabela DBF: `prov13.dbf`
+## Tabela DBF: `prov13.dbf`
+> **Origem:** `prov13.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -1786,11 +1910,13 @@
 | SETOR | N | 3 | 0 |
 | SECAO | N | 3 | 0 |
 
-**Índices vinculados:**
-- Tag: `D:\DEVELOP` Expressão: `STRZERO(NUMERO,8)+STRZERO(ANO,4)+STRZERO(MES,2)`
+**Indices vinculados:**
+- Tag: `PROV13` Expressao: `STRZERO(NUMERO,8)+STRZERO(ANO,4)+STRZERO(MES,2)`
 
 ---
-## 📋 Tabela DBF: `provfe.dbf`
+## Tabela DBF: `provfe.dbf`
+> **Origem:** `provfe.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -1810,11 +1936,13 @@
 | SECAO | N | 3 | 0 |
 | CONTROLE | C | 24 | 0 |
 
-**Índices vinculados:**
-- Tag: `D:\DEVELOP` Expressão: `CONTROLE`
+**Indices vinculados:**
+- Tag: `PROVFE` Expressao: `CONTROLE`
 
 ---
-## 📋 Tabela DBF: `resfor.dbf`
+## Tabela DBF: `resfor.dbf`
+> **Origem:** `resfor.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -1900,11 +2028,13 @@
 | DES54 | C | 20 | 0 |
 | DES55 | C | 20 | 0 |
 
-**Índices vinculados:**
-- Tag: `D:\DEVELOP` Expressão: `NUMERO`
+**Indices vinculados:**
+- Tag: `RESFOR` Expressao: `NUMERO`
 
 ---
-## 📋 Tabela DBF: `vtavul.dbf`
+## Tabela DBF: `vtavul.dbf`
+> **Origem:** `vtavul.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 5 | 0 |
@@ -1913,11 +2043,13 @@
 | VALOR | N | 12 | 2 |
 | CONTROLE | N | 9 | 0 |
 
-**Índices vinculados:**
-- Tag: `VTAVUL` Expressão: `CONTROLE`
+**Indices vinculados:**
+- Tag: `VTAVUL` Expressao: `CONTROLE`
 
 ---
-## 📋 Tabela DBF: `vtfixo.dbf`
+## Tabela DBF: `vtfixo.dbf`
+> **Origem:** `vtfixo.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 8 | 0 |
@@ -1927,11 +2059,13 @@
 | CONTROLE | N | 9 | 0 |
 | CTACOM | N | 4 | 0 |
 
-**Índices vinculados:**
-- Tag: `VTFIXO` Expressão: `STR(NUMERO,8)+STR(CONTA,4)+STR(CTACOM,4)`
+**Indices vinculados:**
+- Tag: `VTFIXO` Expressao: `STR(NUMERO,8)+STR(CONTA,4)+STR(CTACOM,4)`
 
 ---
-## 📋 Tabela DBF: `vtfolha.dbf`
+## Tabela DBF: `vtfolha.dbf`
+> **Origem:** `vtfolha.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NUMERO | N | 5 | 0 |
@@ -1940,7 +2074,7 @@
 | VALOR | N | 12 | 2 |
 | CONTROLE | N | 9 | 0 |
 
-**Índices vinculados:**
-- Tag: `VTFOLHA` Expressão: `CONTROLE`
+**Indices vinculados:**
+- Tag: `VTFOLHA` Expressao: `CONTROLE`
 
 ---

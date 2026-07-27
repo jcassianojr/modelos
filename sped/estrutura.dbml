@@ -1,0 +1,26 @@
+// Origem: regc170for.dbf (DBF)
+Table "regc170for" {
+  Note: "Origem: regc170for.dbf"
+  "COD_PART" VARCHAR(20)
+  "COD_ITEM" VARCHAR(20)
+  "COD_FORN" VARCHAR(30)
+  "DESCR_FORN" VARCHAR(120)
+  "NCM_FORN" VARCHAR(8)
+  "QTD_DESCR" INTEGER [default: 0]
+  Indexes {
+    COD_PART+  COD_item+  COD_forn [name: "REGC170FOR"]
+  }
+}
+
+// Origem: regh010lxval.dbf (DBF)
+Table "regh010lxval" {
+  Note: "Origem: regh010lxval.dbf"
+  "COD_ITEM" VARCHAR(60)
+  "VL_UNIT" DECIMAL(14,6) [default: 0]
+  "TIPOPRECO" VARCHAR(1)
+  Indexes {
+    TIPOPRECO+  COD_ITEM [name: "REGH10LXV1"]
+    cod_item [name: "REGH010XV2"]
+  }
+}
+

@@ -1,0 +1,389 @@
+// Origem: ME04.dbf (DBF)
+Table "ME04" {
+  Note: "Origem: ME04.dbf"
+  "CODIGO" VARCHAR(8)
+  "TIPO" VARCHAR(30)
+  "MARCA" VARCHAR(20)
+  "CAPACI" VARCHAR(30)
+  "DIVI" VARCHAR(10)
+  "NOMTIPO" VARCHAR(30)
+  "CODTIPO" VARCHAR(3)
+  "CODFOR" INTEGER [default: 0]
+  "COGFOR" VARCHAR(12)
+  "COMPRA" DATETIME
+  "VALOR" DECIMAL(9,2) [default: 0]
+  "SITUACAO" VARCHAR(1)
+  "DATAUSO" DATETIME
+  "DATAFIM" DATETIME
+  "NORMA" VARCHAR(30)
+  "APLIC" VARCHAR(30)
+  "TIPCAL" VARCHAR(1)
+  "CALIBRAR" INTEGER [default: 0]
+  "ATIVO" VARCHAR(1)
+  "ERROADM" VARCHAR(15)
+  "OBS01" VARCHAR(70)
+  "OBS02" VARCHAR(70)
+  "OBS03" VARCHAR(70)
+  "MODELO" VARCHAR(20)
+  "CALULT" DATETIME
+  "CALPRO" DATETIME
+  "CADTIP" VARCHAR(1)
+  "DIME" VARCHAR(1)
+  "MATE" VARCHAR(1)
+  "CARA" VARCHAR(1)
+  "PRECO" DECIMAL(9,2) [default: 0]
+  "ULTPRC" DECIMAL(9,2) [default: 0]
+  "ULTUND" VARCHAR(2)
+  "ULTDATA" DATETIME
+  "NOME" VARCHAR(1)
+  "APLICACAO" VARCHAR(24)
+  "DESENHO" VARCHAR(25)
+  "DATAEXT" DATETIME
+  "CLASSIPI" VARCHAR(10)
+  "UNIDADE" VARCHAR(2)
+  "PF" INTEGER [default: 0]
+  "RRMDATA" DATETIME
+  "CODIGOINT" VARCHAR(15)
+  Indexes {
+    CODIGO [name: "ME04-1"]
+    CODTIPO+CODIGO [name: "ME04-2"]
+    CALPRO [name: "ME04-3"]
+  }
+}
+
+// Origem: ME04C.dbf (DBF)
+Table "ME04C" {
+  Note: "Origem: ME04C.dbf"
+  "OCC" INTEGER [default: 0]
+  "CODIGO" VARCHAR(10)
+  "DATA" DATETIME
+  "DATAP" DATETIME
+  "CODFOR" INTEGER [default: 0]
+  "COGFOR" VARCHAR(20)
+  "CERTIFI" VARCHAR(10)
+  "NFCC" INTEGER [default: 0]
+  Indexes {
+    OCC [name: "ME04C-1"]
+    CODIGO [name: "ME04C-2"]
+    CERTIFI [name: "ME04C-3"]
+  }
+}
+
+// Origem: ME04CI.dbf (DBF)
+Table "ME04CI" {
+  Note: "Origem: ME04CI.dbf"
+  "OCC" INTEGER [default: 0]
+  "ITEM" INTEGER [default: 0]
+  "ESPECI" VARCHAR(30)
+  "ENCTR" VARCHAR(30)
+  "DESVIO" VARCHAR(10)
+  "INCTOT" VARCHAR(10)
+  "LAUDO" VARCHAR(1)
+  "NRELAT" VARCHAR(5)
+  "ASSNOM" VARCHAR(10)
+  "ASSDAT" DATETIME
+  Indexes {
+    STR(OCC,8)+STR(ITEM,3) [name: "ME04CI-1"]
+    OCC [name: "ME04CI-2"]
+  }
+}
+
+// Origem: ME04D.dbf (DBF)
+Table "ME04D" {
+  Note: "Origem: ME04D.dbf"
+  "OCD" INTEGER [default: 0]
+  "CODIGO" VARCHAR(24)
+  "MOTIVO" VARCHAR(1)
+  "OBS01" VARCHAR(50)
+  "OBS02" VARCHAR(50)
+  "OBS03" VARCHAR(50)
+  "INVALIDA" VARCHAR(1)
+  "VERIFI" VARCHAR(20)
+  "INSPECAO" VARCHAR(1)
+  "CODIGOS" VARCHAR(40)
+  "CLINOME" VARCHAR(40)
+  "NF" VARCHAR(30)
+  "ACLI01" VARCHAR(50)
+  "ACLI02" VARCHAR(50)
+  "INCIDE" VARCHAR(1)
+  "FREQ1" VARCHAR(20)
+  "FREQ2" VARCHAR(20)
+  "ACOR01" VARCHAR(75)
+  "ACOR02" VARCHAR(75)
+  "ACOR03" VARCHAR(75)
+  "ACOR04" VARCHAR(75)
+  "RESPON" VARCHAR(30)
+  "DATAOCD" DATETIME
+  Indexes {
+    OCD [name: "ME04D-1"]
+    CODIGO [name: "ME04D-2"]
+  }
+}
+
+// Origem: ME04R.dbf (DBF)
+Table "ME04R" {
+  Note: "Origem: ME04R.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CODIGO" VARCHAR(8)
+  "CODOPER" INTEGER [default: 0]
+  "SAIDA" DATETIME
+  "HORASAI" DECIMAL(6,2) [default: 0]
+  "DEVOLUCAO" DATETIME
+  "HORADEV" DECIMAL(6,2) [default: 0]
+  "AREA" VARCHAR(2)
+  "SETOR" VARCHAR(3)
+  Indexes {
+    NUMERO [name: "ME04R-1"]
+    CODOPER [name: "ME04R-2"]
+    CODIGO [name: "ME04R-3"]
+  }
+}
+
+// Origem: ME06.dbf (DBF)
+Table "ME06" {
+  Note: "Origem: ME06.dbf"
+  "CODIGO" VARCHAR(8)
+  "TIPO" VARCHAR(30)
+  "MARCA" VARCHAR(20)
+  "CAPACI" VARCHAR(30)
+  "DIVI" VARCHAR(10)
+  "NOMTIPO" VARCHAR(30)
+  "CODTIPO" VARCHAR(3)
+  "CODFOR" INTEGER [default: 0]
+  "COGFOR" VARCHAR(12)
+  "COMPRA" DATETIME
+  "VALOR" DECIMAL(9,2) [default: 0]
+  "SITUACAO" VARCHAR(1)
+  "DATAUSO" DATETIME
+  "DATAFIM" DATETIME
+  "NORMA" VARCHAR(30)
+  "APLIC" VARCHAR(30)
+  "TIPCAL" VARCHAR(1)
+  "CALIBRAR" INTEGER [default: 0]
+  "ATIVO" VARCHAR(1)
+  "ERROADM" VARCHAR(15)
+  "OBS01" VARCHAR(70)
+  "OBS02" VARCHAR(70)
+  "OBS03" VARCHAR(70)
+  "MODELO" VARCHAR(20)
+  "CALULT" DATETIME
+  "CALPRO" DATETIME
+  "CADTIP" VARCHAR(1)
+  "DIME" VARCHAR(1)
+  "MATE" VARCHAR(1)
+  "CARA" VARCHAR(1)
+  "PRECO" DECIMAL(9,2) [default: 0]
+  "ULTPRC" DECIMAL(9,2) [default: 0]
+  "ULTUND" VARCHAR(2)
+  "ULTDATA" DATETIME
+  "NOME" VARCHAR(1)
+  "APLICACAO" VARCHAR(24)
+  "DESENHO" VARCHAR(25)
+  "DATAEXT" DATETIME
+  "CLASSIPI" VARCHAR(10)
+  "UNIDADE" VARCHAR(2)
+  "PF" INTEGER [default: 0]
+  "RRMDATA" DATETIME
+  Indexes {
+    CODIGO [name: "ME06-1"]
+    CODTIPO+CODIGO [name: "ME06-2"]
+    CALPRO [name: "ME06-3"]
+  }
+}
+
+// Origem: ME06R.dbf (DBF)
+Table "ME06R" {
+  Note: "Origem: ME06R.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "CODIGO" VARCHAR(8)
+  "CODOPER" INTEGER [default: 0]
+  "SAIDA" DATETIME
+  "HORASAI" DECIMAL(6,2) [default: 0]
+  "DEVOLUCAO" DATETIME
+  "HORADEV" DECIMAL(6,2) [default: 0]
+  "AREA" VARCHAR(2)
+  "SETOR" VARCHAR(3)
+  Indexes {
+    NUMERO [name: "ME06R-1"]
+    CODOPER [name: "ME06R-2"]
+    CODIGO [name: "ME06R-3"]
+  }
+}
+
+// Origem: ME06X.dbf (DBF)
+Table "ME06X" {
+  Note: "Origem: ME06X.dbf"
+  "CODIGO" VARCHAR(8)
+  "TIPO" VARCHAR(30)
+  "MARCA" VARCHAR(20)
+  "CAPACI" VARCHAR(30)
+  "DIVI" VARCHAR(10)
+  "NOMTIPO" VARCHAR(30)
+  "CODTIPO" VARCHAR(3)
+  "CODFOR" INTEGER [default: 0]
+  "COGFOR" VARCHAR(12)
+  "COMPRA" DATETIME
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "SITUACAO" VARCHAR(1)
+  "DATAUSO" DATETIME
+  "DATAFIM" DATETIME
+  "NORMA" VARCHAR(30)
+  "APLIC" VARCHAR(30)
+  "TIPCAL" VARCHAR(1)
+  "CALIBRAR" INTEGER [default: 0]
+  "ATIVO" VARCHAR(8)
+  "ERROADM" VARCHAR(15)
+  "OBS01" VARCHAR(70)
+  "OBS02" VARCHAR(70)
+  "OBS03" VARCHAR(70)
+  "MODELO" VARCHAR(20)
+  "CALULT" DATETIME
+  "CALPRO" DATETIME
+  "CADTIP" VARCHAR(1)
+  "DIME" VARCHAR(40)
+  "MATE" VARCHAR(30)
+  "CARA" VARCHAR(50)
+  "PRECO" DECIMAL(12,2) [default: 0]
+  "RRMDATA" DATETIME
+  Indexes {
+    CODIGO [name: "ME06X-1"]
+    CODTIPO+CODIGO [name: "ME06X-2"]
+    CALPRO [name: "ME06X-3"]
+  }
+}
+
+// Origem: ME4CC.dbf (DBF)
+Table "ME4CC" {
+  Note: "Origem: ME4CC.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "DATA" DATETIME
+  "CODIGO" VARCHAR(24)
+  "DATAREV" DATETIME
+  "CODME04A" VARCHAR(8)
+  "CODME04" VARCHAR(8)
+  "NOMME04" VARCHAR(30)
+  "TEMPER" VARCHAR(10)
+  "UMIDADE" VARCHAR(5)
+  "NOVO" TINYINT(1)
+  "SUJOEXT" TINYINT(1)
+  "SUJOINT" TINYINT(1)
+  "DANIFIC" TINYINT(1)
+  "LAUDOF" VARCHAR(1)
+  "LAUDOD" DATETIME
+  "NUMTEC" INTEGER [default: 0]
+  "NOMTEC" VARCHAR(40)
+  "VALPAD" DATETIME
+  "INSTRU" VARCHAR(20)
+  "DISPLIN" TINYINT(1)
+  "DISPMAT" TINYINT(1)
+  Indexes {
+    NUMERO [name: "NUMERO"]
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: ME4CCI.dbf (DBF)
+Table "ME4CCI" {
+  Note: "Origem: ME4CCI.dbf"
+  "NUMERO" INTEGER [default: 0]
+  "DIMENSAO" VARCHAR(50)
+  "ENCONTRA" VARCHAR(30)
+  "TENDENCIA" VARCHAR(10)
+  "LAUDO" VARCHAR(1)
+  "INCTOT" VARCHAR(10)
+  Indexes {
+    NUMERO [name: "NUMERO"]
+  }
+}
+
+// Origem: RRM.dbf (DBF)
+Table "RRM" {
+  Note: "Origem: RRM.dbf"
+  "RRS" INTEGER [default: 0]
+  "CLIENTE" INTEGER [default: 0]
+  "CLINOME" VARCHAR(40)
+  "DESENHO" VARCHAR(24)
+  "DESCRI" VARCHAR(40)
+  "INSTRU" VARCHAR(8)
+  "DESCII" VARCHAR(25)
+  "CARAC" VARCHAR(40)
+  "ESPEC" VARCHAR(40)
+  "AVA" VARCHAR(40)
+  "AVB" VARCHAR(40)
+  "AVAN" INTEGER [default: 0]
+  "AVBN" INTEGER [default: 0]
+  "AMA01" DECIMAL(10,4) [default: 0]
+  "AMA02" DECIMAL(10,4) [default: 0]
+  "AMA03" DECIMAL(10,4) [default: 0]
+  "AMA04" DECIMAL(10,4) [default: 0]
+  "AMA05" DECIMAL(10,4) [default: 0]
+  "AMAA01" DECIMAL(10,4) [default: 0]
+  "AMAA02" DECIMAL(10,4) [default: 0]
+  "AMAA03" DECIMAL(10,4) [default: 0]
+  "AMAA04" DECIMAL(10,4) [default: 0]
+  "AMAA05" DECIMAL(10,4) [default: 0]
+  "AMB01" DECIMAL(10,4) [default: 0]
+  "AMB02" DECIMAL(10,4) [default: 0]
+  "AMB03" DECIMAL(10,4) [default: 0]
+  "AMB04" DECIMAL(10,4) [default: 0]
+  "AMB05" DECIMAL(10,4) [default: 0]
+  "AMBB01" DECIMAL(10,4) [default: 0]
+  "AMBB02" DECIMAL(10,4) [default: 0]
+  "AMBB03" DECIMAL(10,4) [default: 0]
+  "AMBB04" DECIMAL(10,4) [default: 0]
+  "AMBB05" DECIMAL(10,4) [default: 0]
+  "DIFA01" DECIMAL(7,4) [default: 0]
+  "DIFA02" DECIMAL(7,4) [default: 0]
+  "DIFA03" DECIMAL(7,4) [default: 0]
+  "DIFA04" DECIMAL(7,4) [default: 0]
+  "DIFA05" DECIMAL(7,4) [default: 0]
+  "DIFB01" DECIMAL(7,4) [default: 0]
+  "DIFB02" DECIMAL(7,4) [default: 0]
+  "DIFB03" DECIMAL(7,4) [default: 0]
+  "DIFB04" DECIMAL(7,4) [default: 0]
+  "DIFB05" DECIMAL(7,4) [default: 0]
+  "TOTAA" DECIMAL(11,4) [default: 0]
+  "TOTAB" DECIMAL(11,4) [default: 0]
+  "MEDAA" DECIMAL(7,4) [default: 0]
+  "TOTALA" DECIMAL(11,4) [default: 0]
+  "TOTBA" DECIMAL(11,4) [default: 0]
+  "TOTBB" DECIMAL(11,4) [default: 0]
+  "MEDBB" DECIMAL(7,4) [default: 0]
+  "TOTALB" DECIMAL(11,4) [default: 0]
+  "MEDIA" DECIMAL(11,4) [default: 0]
+  "MEDIB" DECIMAL(11,4) [default: 0]
+  "MEDSOM" DECIMAL(11,4) [default: 0]
+  "MEDMED" DECIMAL(7,4) [default: 0]
+  "DIFMED" DECIMAL(7,4) [default: 0]
+  "VE" DECIMAL(7,5) [default: 0]
+  "VA" DECIMAL(7,5) [default: 0]
+  "RR" DECIMAL(7,5) [default: 0]
+  "VP" DECIMAL(10,5) [default: 0]
+  "VT" DECIMAL(10,5) [default: 0]
+  "PRR" DECIMAL(10,5) [default: 0]
+  "DATA" DATETIME
+  "OBS01" VARCHAR(50)
+  "OBS02" VARCHAR(50)
+  "RP" DECIMAL(11,5) [default: 0]
+  "M01" DECIMAL(11,5) [default: 0]
+  "M02" DECIMAL(11,5) [default: 0]
+  "M03" DECIMAL(11,5) [default: 0]
+  "M04" DECIMAL(11,5) [default: 0]
+  "M05" DECIMAL(11,5) [default: 0]
+  "RPMAX" DECIMAL(11,4) [default: 0]
+  "RPMIN" DECIMAL(11,4) [default: 0]
+  "XMAX" DECIMAL(11,4) [default: 0]
+  "XMIN" DECIMAL(11,4) [default: 0]
+  "K01" DECIMAL(6,4) [default: 0]
+  "K02" DECIMAL(6,4) [default: 0]
+  "K03" DECIMAL(6,4) [default: 0]
+  "TOLMIN" DECIMAL(9,5) [default: 0]
+  "TOLMAX" DECIMAL(9,5) [default: 0]
+  "NUMASS" INTEGER [default: 0]
+  "DATASS" DATETIME
+  "NOMASS" VARCHAR(40)
+  Indexes {
+    RRS [name: "RRS"]
+  }
+}
+

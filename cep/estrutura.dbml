@@ -1,0 +1,238 @@
+// Origem: cepbai.dbf (DBF)
+Table "cepbai" {
+  Note: "Origem: cepbai.dbf"
+  "BAI_NU_SEQ" INTEGER [default: 0]
+  "BAI_NO" VARCHAR(63)
+  Indexes {
+    BAI_NU_SEQ [name: "CEPBAI01"]
+    BAI_NO [name: "CEPBAI02"]
+  }
+}
+
+// Origem: cepbailx.dbf (DBF)
+Table "cepbailx" {
+  Note: "Origem: cepbailx.dbf"
+  "CODIBGE" VARCHAR(7)
+  "BAI_NU_NEW" INTEGER [default: 0]
+  "CODBAILX" INTEGER [default: 0]
+  Indexes {
+    CODIBGE+STR(BAI_NU_NEW,7) [name: "CEPBAILX-1"]
+  }
+}
+
+// Origem: cepgeo.dbf (DBF)
+Table "cepgeo" {
+  Note: "Origem: cepgeo.dbf"
+  "CEP" VARCHAR(8)
+  "DDD" VARCHAR(2)
+  "LATITUDE" VARCHAR(8)
+  "LONGITUDE" VARCHAR(8)
+  "HEMISFERIO" VARCHAR(1)
+}
+
+// Origem: ceprua.dbf (DBF)
+Table "ceprua" {
+  Note: "Origem: ceprua.dbf"
+  "RUA" VARCHAR(70)
+  "CEP" VARCHAR(8)
+  "TIPO" VARCHAR(20)
+  "CHVBAI" INTEGER [default: 0]
+  "NINI" INTEGER [default: 0]
+  "NFIM" INTEGER [default: 0]
+  "PARID" VARCHAR(1)
+  "TITULO" VARCHAR(1)
+}
+
+// Origem: cidconv.dbf (DBF)
+Table "cidconv" {
+  Note: "Origem: cidconv.dbf"
+  "ESTADO" VARCHAR(2)
+  "CIDORI" VARCHAR(60)
+  "ESTDES" VARCHAR(2)
+  "CIDDES" VARCHAR(35)
+  Indexes {
+    ESTADO + CIDORI [name: "CIDORI"]
+  }
+}
+
+// Origem: md05.dbf (DBF)
+Table "md05" {
+  Note: "Origem: md05.dbf"
+  "UFICMS" VARCHAR(2)
+  "ZONAFRANCA" VARCHAR(1)
+  "ALIQUOTA" DECIMAL(5,2) [default: 0]
+  "ALIQUOTAR" DECIMAL(5,2) [default: 0]
+  "NOMEEXT" VARCHAR(20)
+  "CAPITAL" VARCHAR(20)
+  "INICEP" VARCHAR(9)
+  "FIMCEP" VARCHAR(9)
+  "INICEP2" VARCHAR(9)
+  "FIMCEP2" VARCHAR(9)
+  "REGIAO" VARCHAR(2)
+  "CODMUN" VARCHAR(2)
+  "CORREIO" INTEGER [default: 0]
+  "AREATEL" VARCHAR(1)
+  "ALIQTEL" DECIMAL(5,2) [default: 0]
+  "QTDECID" INTEGER [default: 0]
+  "REGCOD" VARCHAR(1)
+  "AREA" DECIMAL(12,3) [default: 0]
+  "TAMIE" INTEGER [default: 0]
+  "MASCIE" VARCHAR(20)
+  "UFDEST" VARCHAR(2)
+  Indexes {
+    UFICMS [name: "MD05-1"]
+    NOMEEXT [name: "MD05-2"]
+  }
+}
+
+// Origem: md10.dbf (DBF)
+Table "md10" {
+  Note: "Origem: md10.dbf"
+  "UF" VARCHAR(2)
+  "NOME" VARCHAR(35)
+  "DDD" VARCHAR(2)
+  "CODIRRF" VARCHAR(5)
+  "CODIBGE" VARCHAR(7)
+  "CODBACEN" VARCHAR(5)
+  "ZONAELE" INTEGER [default: 0]
+  "CODTEL" VARCHAR(5)
+  "NOMTEL" VARCHAR(4)
+  "INICEP" VARCHAR(8)
+  "FIMCEP" VARCHAR(8)
+  "INICEP2" VARCHAR(8)
+  "FIMCEP2" VARCHAR(8)
+  "ALTITUDE" INTEGER [default: 0]
+  "AREA" DECIMAL(12,3) [default: 0]
+  "LATITUDE" VARCHAR(8)
+  "LONGITUDE" VARCHAR(8)
+  "HEMISFERIO" VARCHAR(1)
+  "LOGIX" VARCHAR(5)
+  "CODSIAFI" VARCHAR(4)
+  Indexes {
+    UF+NOME [name: "MD10-1"]
+    INICEP [name: "MD10-2"]
+    CODIBGE [name: "MD10-3"]
+    CODIRRF [name: "MD10-4"]
+  }
+}
+
+// Origem: md10nao.dbf (DBF)
+Table "md10nao" {
+  Note: "Origem: md10nao.dbf"
+  "UF" VARCHAR(2)
+  "NOME" VARCHAR(35)
+  "DDD" VARCHAR(2)
+  "CODIRRF" VARCHAR(5)
+  "CODIBGE" VARCHAR(7)
+  "CODBACEN" VARCHAR(5)
+  "ZONAELE" INTEGER [default: 0]
+  "CODTEL" VARCHAR(5)
+  "NOMTEL" VARCHAR(4)
+  "INICEP" VARCHAR(8)
+  "FIMCEP" VARCHAR(8)
+  "INICEP2" VARCHAR(8)
+  "FIMCEP2" VARCHAR(8)
+  "ALTITUDE" INTEGER [default: 0]
+  "AREA" DECIMAL(12,3) [default: 0]
+  "LATITUDE" VARCHAR(8)
+  "LONGITUDE" VARCHAR(8)
+  "HEMISFERIO" VARCHAR(1)
+  "LOGIX" VARCHAR(5)
+  "CODSIAFI" VARCHAR(4)
+  Indexes {
+    UF+NOME [name: "MD10-1"]
+    INICEP [name: "MD10-2"]
+    CODIBGE [name: "MD10-3"]
+    CODIRRF [name: "MD10-4"]
+  }
+}
+
+// Origem: md11.dbf (DBF)
+Table "md11" {
+  Note: "Origem: md11.dbf"
+  "CEP" VARCHAR(5)
+  Indexes {
+    CEP [name: "MD11-1"]
+  }
+}
+
+// Origem: mdtip.dbf (DBF)
+Table "mdtip" {
+  Note: "Origem: mdtip.dbf"
+  "CODIGO" VARCHAR(8)
+  "NOME" VARCHAR(22)
+  "ID" INTEGER [default: 0]
+  "ESOCIAL" VARCHAR(3)
+  Indexes {
+    CODIGO [name: "MDTIP1"]
+    NOME [name: "MDTIP2"]
+  }
+}
+
+// Origem: mdtit.dbf (DBF)
+Table "mdtit" {
+  Note: "Origem: mdtit.dbf"
+  "CODIGO" VARCHAR(15)
+  "DESCRICAO" VARCHAR(30)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+    DESCRICAO [name: "DESCRICAO"]
+  }
+}
+
+// Origem: mdufddd.dbf (DBF)
+Table "mdufddd" {
+  Note: "Origem: mdufddd.dbf"
+  "UF" VARCHAR(2)
+  "DDD" VARCHAR(2)
+  Indexes {
+    UF+DDD [name: "MDUFDD-1"]
+    UF [name: "MDUFDDD-2"]
+    DDD [name: "MDUFDDD-3"]
+  }
+}
+
+// Origem: paises.dbf (DBF)
+Table "paises" {
+  Note: "Origem: paises.dbf"
+  "BACEN" INTEGER [default: 0]
+  "NOME" VARCHAR(35)
+  "UF" VARCHAR(2)
+  "DDD" VARCHAR(3)
+  "DDDDIRETO" VARCHAR(1)
+  "ISO3166A" VARCHAR(2)
+  "ISO3166B" VARCHAR(3)
+  "ISO3166C" VARCHAR(3)
+  "NOMEINT" VARCHAR(35)
+  "AREA" INTEGER [default: 0]
+  "PERIM" INTEGER [default: 0]
+  "INDEPYEAR" INTEGER [default: 0]
+  "CONTINENT" VARCHAR(25)
+  "CONTI_COD" INTEGER [default: 0]
+  "LOGIXCONT" INTEGER [default: 0]
+  "MOEDA" VARCHAR(5)
+  "MOEDA_NOME" VARCHAR(39)
+  "MOEDA_SYMB" VARCHAR(6)
+  "CONTREGIAO" VARCHAR(25)
+  "CONTREGCOD" INTEGER [default: 0]
+  "CAPITAL" VARCHAR(20)
+  "URLPAIS" VARCHAR(5)
+  "NATIVE" VARCHAR(50)
+  "POPULACAO" INTEGER [default: 0]
+  "GDP" INTEGER [default: 0]
+  "NATIONALIT" VARCHAR(39)
+  "CEP_FORMAT" VARCHAR(55)
+  "CEP_REGEX" VARCHAR(173)
+  "LATITUDE" DECIMAL(15,8) [default: 0]
+  "LONGITUDE" DECIMAL(15,8) [default: 0]
+  "WIKIDATAID" VARCHAR(8)
+  Indexes {
+    ISO3166A [name: "PAISES1"]
+    ISO3166B [name: "PAISES2"]
+    NOME [name: "PAISES3"]
+    DDD [name: "PAISES4"]
+    BACEN [name: "PAISES5"]
+    NOMEINT [name: "PAISES6"]
+  }
+}
+

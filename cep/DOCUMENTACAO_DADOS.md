@@ -1,29 +1,35 @@
-# 🗄️ Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 05/12/26
+# Dicionario de Estruturas de Dados do Projeto
+> Varredura automatica realizada em: 27/07/2026
 
-## 📋 Tabela DBF: `cepbai.dbf`
+## Tabela DBF: `cepbai.dbf`
+> **Origem:** `cepbai.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | BAI_NU_SEQ | N | 7 | 0 |
 | BAI_NO | C | 63 | 0 |
 
-**Índices vinculados:**
-- Tag: `CEPBAI01` Expressão: `BAI_NU_SEQ`
-- Tag: `CEPBAI02` Expressão: `BAI_NO`
+**Indices vinculados:**
+- Tag: `CEPBAI01` Expressao: `BAI_NU_SEQ`
+- Tag: `CEPBAI02` Expressao: `BAI_NO`
 
 ---
-## 📋 Tabela DBF: `cepbailx.dbf`
+## Tabela DBF: `cepbailx.dbf`
+> **Origem:** `cepbailx.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIBGE | C | 7 | 0 |
 | BAI_NU_NEW | N | 7 | 0 |
 | CODBAILX | N | 5 | 0 |
 
-**Índices vinculados:**
-- Tag: `CEPBAILX-1` Expressão: `CODIBGE+STR(BAI_NU_NEW,7)`
+**Indices vinculados:**
+- Tag: `CEPBAILX-1` Expressao: `CODIBGE+STR(BAI_NU_NEW,7)`
 
 ---
-## 📋 Tabela DBF: `cepgeo.dbf`
+## Tabela DBF: `cepgeo.dbf`
+> **Origem:** `cepgeo.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CEP | C | 8 | 0 |
@@ -33,7 +39,9 @@
 | HEMISFERIO | C | 1 | 0 |
 
 ---
-## 📋 Tabela DBF: `ceprua.dbf`
+## Tabela DBF: `ceprua.dbf`
+> **Origem:** `ceprua.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | RUA | C | 70 | 0 |
@@ -46,7 +54,9 @@
 | TITULO | C | 1 | 0 |
 
 ---
-## 📋 Tabela DBF: `cidconv.dbf`
+## Tabela DBF: `cidconv.dbf`
+> **Origem:** `cidconv.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | ESTADO | C | 2 | 0 |
@@ -54,11 +64,13 @@
 | ESTDES | C | 2 | 0 |
 | CIDDES | C | 35 | 0 |
 
-**Índices vinculados:**
-- Tag: `CIDORI` Expressão: `ESTADO + CIDORI`
+**Indices vinculados:**
+- Tag: `CIDORI` Expressao: `ESTADO + CIDORI`
 
 ---
-## 📋 Tabela DBF: `md05.dbf`
+## Tabela DBF: `md05.dbf`
+> **Origem:** `md05.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | UFICMS | C | 2 | 0 |
@@ -83,12 +95,14 @@
 | MASCIE | C | 20 | 0 |
 | UFDEST | C | 2 | 0 |
 
-**Índices vinculados:**
-- Tag: `MD05-1` Expressão: `UFICMS`
-- Tag: `MD05-2` Expressão: `NOMEEXT`
+**Indices vinculados:**
+- Tag: `MD05-1` Expressao: `UFICMS`
+- Tag: `MD05-2` Expressao: `NOMEEXT`
 
 ---
-## 📋 Tabela DBF: `md10.dbf`
+## Tabela DBF: `md10.dbf`
+> **Origem:** `md10.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | UF | C | 2 | 0 |
@@ -112,14 +126,16 @@
 | LOGIX | C | 5 | 0 |
 | CODSIAFI | C | 4 | 0 |
 
-**Índices vinculados:**
-- Tag: `MD10-1` Expressão: `UF+NOME`
-- Tag: `MD10-2` Expressão: `INICEP`
-- Tag: `MD10-3` Expressão: `CODIBGE`
-- Tag: `MD10-4` Expressão: `CODIRRF`
+**Indices vinculados:**
+- Tag: `MD10-1` Expressao: `UF+NOME`
+- Tag: `MD10-2` Expressao: `INICEP`
+- Tag: `MD10-3` Expressao: `CODIBGE`
+- Tag: `MD10-4` Expressao: `CODIRRF`
 
 ---
-## 📋 Tabela DBF: `md10nao.dbf`
+## Tabela DBF: `md10nao.dbf`
+> **Origem:** `md10nao.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | UF | C | 2 | 0 |
@@ -143,23 +159,27 @@
 | LOGIX | C | 5 | 0 |
 | CODSIAFI | C | 4 | 0 |
 
-**Índices vinculados:**
-- Tag: `MD10-1` Expressão: `UF+NOME`
-- Tag: `MD10-2` Expressão: `INICEP`
-- Tag: `MD10-3` Expressão: `CODIBGE`
-- Tag: `MD10-4` Expressão: `CODIRRF`
+**Indices vinculados:**
+- Tag: `MD10-1` Expressao: `UF+NOME`
+- Tag: `MD10-2` Expressao: `INICEP`
+- Tag: `MD10-3` Expressao: `CODIBGE`
+- Tag: `MD10-4` Expressao: `CODIRRF`
 
 ---
-## 📋 Tabela DBF: `md11.dbf`
+## Tabela DBF: `md11.dbf`
+> **Origem:** `md11.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CEP | C | 5 | 0 |
 
-**Índices vinculados:**
-- Tag: `MD11-1` Expressão: `CEP`
+**Indices vinculados:**
+- Tag: `MD11-1` Expressao: `CEP`
 
 ---
-## 📋 Tabela DBF: `mdtip.dbf`
+## Tabela DBF: `mdtip.dbf`
+> **Origem:** `mdtip.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 8 | 0 |
@@ -167,35 +187,41 @@
 | ID | N | 4 | 0 |
 | ESOCIAL | C | 3 | 0 |
 
-**Índices vinculados:**
-- Tag: `MDTIP1` Expressão: `CODIGO`
-- Tag: `MDTIP2` Expressão: `NOME`
+**Indices vinculados:**
+- Tag: `MDTIP1` Expressao: `CODIGO`
+- Tag: `MDTIP2` Expressao: `NOME`
 
 ---
-## 📋 Tabela DBF: `mdtit.dbf`
+## Tabela DBF: `mdtit.dbf`
+> **Origem:** `mdtit.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 15 | 0 |
 | DESCRICAO | C | 30 | 0 |
 
-**Índices vinculados:**
-- Tag: `CODIGO` Expressão: `CODIGO`
-- Tag: `DESCRICAO` Expressão: `DESCRICAO`
+**Indices vinculados:**
+- Tag: `CODIGO` Expressao: `CODIGO`
+- Tag: `DESCRICAO` Expressao: `DESCRICAO`
 
 ---
-## 📋 Tabela DBF: `mdufddd.dbf`
+## Tabela DBF: `mdufddd.dbf`
+> **Origem:** `mdufddd.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | UF | C | 2 | 0 |
 | DDD | C | 2 | 0 |
 
-**Índices vinculados:**
-- Tag: `MDUFDD-1` Expressão: `UF+DDD`
-- Tag: `MDUFDDD-2` Expressão: `UF`
-- Tag: `MDUFDDD-3` Expressão: `DDD`
+**Indices vinculados:**
+- Tag: `MDUFDD-1` Expressao: `UF+DDD`
+- Tag: `MDUFDDD-2` Expressao: `UF`
+- Tag: `MDUFDDD-3` Expressao: `DDD`
 
 ---
-## 📋 Tabela DBF: `paises.dbf`
+## Tabela DBF: `paises.dbf`
+> **Origem:** `paises.dbf` (Driver: DBFCDX)
+
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | BACEN | N | 4 | 0 |
@@ -230,12 +256,12 @@
 | LONGITUDE | N | 15 | 8 |
 | WIKIDATAID | C | 8 | 0 |
 
-**Índices vinculados:**
-- Tag: `PAISES1` Expressão: `ISO3166A`
-- Tag: `PAISES2` Expressão: `ISO3166B`
-- Tag: `PAISES3` Expressão: `NOME`
-- Tag: `PAISES4` Expressão: `DDD`
-- Tag: `PAISES5` Expressão: `BACEN`
-- Tag: `PAISES6` Expressão: `NOMEINT`
+**Indices vinculados:**
+- Tag: `PAISES1` Expressao: `ISO3166A`
+- Tag: `PAISES2` Expressao: `ISO3166B`
+- Tag: `PAISES3` Expressao: `NOME`
+- Tag: `PAISES4` Expressao: `DDD`
+- Tag: `PAISES5` Expressao: `BACEN`
+- Tag: `PAISES6` Expressao: `NOMEINT`
 
 ---

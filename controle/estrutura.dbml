@@ -1,0 +1,5237 @@
+// Origem: controle.sqlite (SQLite)
+Table "CONTROLE" {
+  Note: "Origem: controle.sqlite"
+  "FORM" varchar(20)
+  "CONTROLE" varchar(20)
+  "INDICE" INT
+  "IMAGEM" smallint
+  "CAPTION" varchar(20)
+  "TOOLTIP" varchar(50)
+  "TOP" INT
+  "LEFT" INT
+  "HEIGHT" INT
+  "WIDTH" INT
+  "MAXLEN" INT
+  "CORFRENTE" varchar(12)
+  "CORFUNDO" varchar(12)
+  "FONTE" varchar(12)
+  "TAMANHO" smallint
+  "LIGADO" boolean
+  "ATUALIZADO" boolean
+  "DISPONIVEL" boolean
+  Indexes {
+    (FORM, CONTROLE, INDICE) [name: "IDXCONTROLE_FORM_CONTROLE_INDICE"]
+  }
+}
+
+// Origem: controle.sqlite (SQLite)
+Table "EMPRESA" {
+  Note: "Origem: controle.sqlite"
+  "NUMERO" smallint
+  "NOME" varchar(40)
+  "ENDERECO" varchar(40)
+  "ENDNUM" smallint
+  "ENDCOM" varchar(20)
+  "BAIRRO" varchar(30)
+  "CIDADE" varchar(30)
+  "ESTADO" varchar(2)
+  "CEP" varchar(9)
+  "DDD" varchar(4)
+  "TELEFONE" varchar(9)
+  "FAX" varchar(9)
+  "MAXCAIXA" double
+  "COBRANCA" boolean
+  "DIACOBR" smallint
+  "JUROS" boolean
+  "TXJUROS" double
+  "NUMUSER" smallint
+  "REF" varchar(50)
+  "CGC" varchar(19)
+  "INSCR" varchar(16)
+  "NUMSOC" smallint
+  "CONTRATO" longtext
+  "VLCLIENTE" currency
+  "IOF" currency
+  "ISS" currency
+  "SERVICO" currency
+  "CAPTACAO" currency
+  "LIMITECGC" currency
+  "CPMF" currency
+}
+
+// Origem: controle.sqlite (SQLite)
+Table "MENU" {
+  Note: "Origem: controle.sqlite"
+  "MENU" varchar(12)
+  "DESCRICAO" varchar(50)
+  "INDICE" smallint
+  "LIGADO" boolean
+  "CADASTRO" smallint
+  "HOTKEY" varchar(20)
+  Indexes {
+    (CADASTRO) [name: "IDXMENU_CADASTRO"]
+    (MENU, INDICE) [name: "sqlite_autoindex_MENU_1"]
+  }
+}
+
+// Origem: controle.sqlite (SQLite)
+Table "MENUUSU" {
+  Note: "Origem: controle.sqlite"
+  "IDUSUARIO" INT
+  "MENU" varchar(12)
+  "INDICE" smallint
+  "LIGADO" boolean
+  "ATUALIZADO" boolean
+  Indexes {
+    (IDUSUARIO, MENU, INDICE) [name: "sqlite_autoindex_MENUUSU_1"]
+  }
+}
+
+// Origem: controle.sqlite (SQLite)
+Table "USUCAD" {
+  Note: "Origem: controle.sqlite"
+  "IDUSUARIO" INT
+  "FORM" varchar(20)
+  "CADASTRO" smallint
+  "CONTROLE" varchar(20)
+  "INDICE" INT
+  "CAPTION" varchar(20)
+  "TOOLTIP" varchar(50)
+  "CORFRENTE" varchar(12)
+  "CORFUNDO" varchar(12)
+  "FONTE" varchar(12)
+  "LIGADO" boolean
+  "ATUALIZADO" boolean
+  Indexes {
+    (IDUSUARIO, FORM, CONTROLE, INDICE) [name: "sqlite_autoindex_USUCAD_1"]
+  }
+}
+
+// Origem: controle.sqlite (SQLite)
+Table "USUARIO" {
+  Note: "Origem: controle.sqlite"
+  "IDUSUARIO" INTEGER
+  "USUARIO" varchar (10)
+  "SENHA" varchar (8)
+  "DATAVAL" TEXT
+  "DATAULT" TEXT
+  "EQUIVALENTE" INTEGER
+  "ATIVO" boolean
+  "HORAINI" TEXT
+  "HORAFIM" TEXT
+  "WEEKEND" boolean
+  "IDFOLHA" INTEGER
+  "NOMEFOLHA" varchar (50)
+  "TROCAR" TEXT
+  "ID" INTEGER
+  "postelaa" varchar (30)
+  "postelaB" varchar (30)
+  "CHAVEH" varchar (64)
+  "CHAVEV" varchar (64)
+  Indexes {
+    (IDUSUARIO) [name: "IDX_USUARIO_IDUSUARIO"]
+    (IDUSUARIO) [name: "IDXUSUARIO_IDUSUARIO"]
+    (USUARIO, ID) [name: "sqlite_autoindex_USUARIO_1"]
+  }
+}
+
+// Origem: desenho.sqlite (SQLite)
+Table "atual" {
+  Note: "Origem: desenho.sqlite"
+  "conjunto" varchar(50)
+  "desenho" varchar(50)
+  "descricao" varchar(200)
+  "rev" INT
+  "data" datetime
+  "recebido" datetime
+  "obs" longtext
+  "padronizado" boolean
+  "fitadat" INT
+  "cdrom" INT
+  "revc" varchar(2)
+  Indexes {
+    (conjunto) [name: "IDXatual_conjunto"]
+    (conjunto, desenho) [name: "IDXatual_conjunto_desenho"]
+  }
+}
+
+// Origem: desenho.sqlite (SQLite)
+Table "baixado" {
+  Note: "Origem: desenho.sqlite"
+  "conjunto" varchar(50)
+  "desenho" varchar(50)
+  "descricao" varchar(200)
+  "rev" INT
+  "data" datetime
+  "recebido" datetime
+  "obs" longtext
+  "padronizado" boolean
+  "fitadat" INT
+  "cdrom" INT
+  "revc" varchar(2)
+  Indexes {
+    (conjunto) [name: "IDXbaixado_conjunto"]
+    (conjunto, desenho) [name: "IDXbaixado_conjunto_desenho"]
+  }
+}
+
+// Origem: desenho.sqlite (SQLite)
+Table "CLIENTE" {
+  Note: "Origem: desenho.sqlite"
+  "CLIENTE" INT
+  "CLINOME" varchar(50)
+  Indexes {
+    (CLIENTE) [name: "IDXCLIENTE_CLIENTE"]
+  }
+}
+
+// Origem: desenho.sqlite (SQLite)
+Table "conjunto" {
+  Note: "Origem: desenho.sqlite"
+  "conjunto" varchar(50)
+  "cliente" INT
+  "clinome" varchar(50)
+  "descricao" varchar(200)
+  Indexes {
+    (conjunto) [name: "IDXconjunto_conjunto"]
+  }
+}
+
+// Origem: desenho.sqlite (SQLite)
+Table "PRODENG" {
+  Note: "Origem: desenho.sqlite"
+  "TIPO" varchar(1)
+  "NUMERO" INT
+  "PRODUTO" varchar(50)
+  "NOME" varchar(200)
+  "DATA" datetime
+  "REVISAO" varchar(10)
+  "RESCLI" varchar(15)
+  Indexes {
+    (TIPO, NUMERO) [name: "IDXPRODENG_TIPO_NUMERO"]
+    (PRODUTO) [name: "IDXPRODENG_PRODUTO"]
+  }
+}
+
+// Origem: desenho.sqlite (SQLite)
+Table "PRODUTO" {
+  Note: "Origem: desenho.sqlite"
+  "CLIENTE" INT
+  "NUMERO" INT
+  "CODIGO" varchar(50)
+  "NOME" varchar(50)
+  "INATIVO" boolean
+  "ITEM" INT
+  Indexes {
+    (CLIENTE) [name: "IDXPRODUTO_CLIENTE"]
+  }
+}
+
+// Origem: desenho.sqlite (SQLite)
+Table "PROTO" {
+  Note: "Origem: desenho.sqlite"
+  "CLIENTE" INT
+  "CLINOME" varchar(50)
+  "PARTNUMBER" varchar(50)
+  "PROJETO" varchar(50)
+  "NOME" varchar(50)
+  "COTACAO" boolean
+  "ENGENHEIRO" varchar(50)
+  "COTDATA" datetime
+  "COTVAL" double
+  "ENGRAMAL" varchar(50)
+  Indexes {
+    (PARTNUMBER) [name: "IDXPROTO_PARTNUMBER"]
+  }
+}
+
+// Origem: desenho.sqlite (SQLite)
+Table "PROTOI" {
+  Note: "Origem: desenho.sqlite"
+  "PARTNUMBER" varchar(50)
+  "PEDDATA" datetime
+  "PEDIDO" varchar(50)
+  "PEDENTR" datetime
+  "QTDDE" INT
+  "VALOR" double
+  "SSMT" varchar(50)
+  "SSMTDAT" datetime
+  "FASE" varchar(50)
+  "DESENHO" varchar(50)
+  "SSMTREQ" datetime
+  "COMPRADOR" varchar(50)
+  "GP11" boolean
+  "GP11DAPR" datetime
+  "TELEFONE" varchar(50)
+  "GP11DFIN" varchar(50)
+  "NFNUMERO" varchar(50)
+  "ENTRDATA" datetime
+  "NFTIPO" varchar(1)
+  "ENTREGA" varchar(50)
+  "NFDATA" datetime
+  "OBS" longtext
+  "DESENH2" varchar(50)
+  "PPAP" INT
+  "DESENH3" varchar(50)
+  "REV" varchar(50)
+  "RE2" varchar(50)
+  "RE3" varchar(50)
+  Indexes {
+    (PARTNUMBER) [name: "IDXPROTOI_PARTNUMBER"]
+  }
+}
+
+// Origem: femea.sqlite (SQLite)
+Table "FEMADC" {
+  Note: "Origem: femea.sqlite"
+  "FALTIP" longtext
+  "FALEFE" longtext
+  "FALCAU" longtext
+  "CRTATU" longtext
+  "INDOCO" double
+  "INDSEV" double
+  "INDDET" double
+  "INDRIS" double
+  "TITULO" varchar(50)
+  "SEGGRA" INT
+  "CARAPREV" longtext
+  "ACAREC" longtext
+  "ACATOM" longtext
+  "RINDSER" double
+  "RINDOCO" double
+  "RINDDET" double
+  "RINDRIS" double
+  "CRATU" longtext
+  "SITUACAO" varchar(1)
+  "ACAO" boolean
+  "ACADAT" datetime
+  "SIGI" varchar(1)
+  "RESCOD" INT
+  "RESCOD3" INT
+  "RESNOM" varchar(40)
+  "RESNOM2" varchar(40)
+  "RESNOM3" varchar(40)
+  "RESDAT" datetime
+  "RESDAT2" datetime
+  "RESDAT3" datetime
+  "RESCOD2" INT
+  "PRONUM" smallint
+  "FALNUM" smallint
+  "EFENUM" smallint
+  "CAUNUM" smallint
+  "PROCESSO" varchar(255)
+  "ITEM" smallint
+  "EXCRPN" boolean
+  "ALTMAN" boolean
+  "MUDPAD" boolean
+  "PF" double
+  "PSA" varchar(20)
+  "FXSEQ" smallint
+  "FXSSQ" smallint
+  "FXITEM" smallint
+  "BLOQUEADO" boolean
+  "TIPOAPU" varchar(1)
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "subtipo" varchar(1)
+  "fxitems" INT
+  "FEMEAREV" double
+  "elemento" varchar(200)
+  "estacao" varchar(200)
+  "trabalho" varchar(200)
+  "funcaoitem" varchar(200)
+  "funcaoetapa" varchar(200)
+  "funcaoelemento" varchar(200)
+  "pafemea" varchar(1)
+  "caraespecial" varchar(1)
+  "filtroespecial" varchar(1)
+  "acaoprev" varchar(200)
+  "acaodet" varchar(200)
+  "rpafemea" varchar(1)
+  "observacao" varchar(200)
+  Indexes {
+    (PF) [name: "IDXFEMADC_PF"]
+  }
+}
+
+// Origem: femea.sqlite (SQLite)
+Table "FEMAVU" {
+  Note: "Origem: femea.sqlite"
+  "FALTIP" longtext
+  "FALEFE" longtext
+  "FALCAU" longtext
+  "CRTATU" longtext
+  "INDOCO" double
+  "INDSEV" double
+  "INDDET" double
+  "INDRIS" double
+  "TITULO" varchar(50)
+  "SEGGRA" INT
+  "CARAPREV" longtext
+  "ACAREC" longtext
+  "ACATOM" longtext
+  "RINDSER" double
+  "RINDOCO" double
+  "RINDDET" double
+  "RINDRIS" double
+  "CRATU" longtext
+  "SITUACAO" varchar(1)
+  "ACAO" boolean
+  "ACADAT" datetime
+  "SIGI" varchar(1)
+  "RESCOD" INT
+  "RESCOD3" INT
+  "RESNOM" varchar(40)
+  "RESNOM2" varchar(40)
+  "RESNOM3" varchar(40)
+  "RESDAT" datetime
+  "RESDAT2" datetime
+  "RESDAT3" datetime
+  "RESCOD2" INT
+  "PRONUM" smallint
+  "FALNUM" smallint
+  "EFENUM" smallint
+  "CAUNUM" smallint
+  "PROCESSO" varchar(255)
+  "ITEM" smallint
+  "EXCRPN" boolean
+  "ALTMAN" boolean
+  "MUDPAD" boolean
+  "PF" double
+  "PSA" varchar(20)
+  "FXSEQ" smallint
+  "FXSSQ" smallint
+  "FXITEM" smallint
+  "BLOQUEADO" boolean
+  "TIPOAPU" varchar(1)
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "subtipo" varchar(1)
+  "fxitems" INT
+  "FEMEAREV" double
+  "elemento" varchar(200)
+  "estacao" varchar(200)
+  "trabalho" varchar(200)
+  "funcaoitem" varchar(200)
+  "funcaoetapa" varchar(200)
+  "funcaoelemento" varchar(200)
+  "pafemea" varchar(1)
+  "caraespecial" varchar(1)
+  "filtroespecial" varchar(1)
+  "acaoprev" varchar(200)
+  "acaodet" varchar(200)
+  "rpafemea" varchar(1)
+  "observacao" varchar(200)
+  Indexes {
+    (PF) [name: "IDXFEMAVU_PF"]
+    (PRONUM, FALNUM, EFENUM, CAUNUM) [name: "IDXFEMAVU_PRONUM_FALNUM_EFENUM_CAUNUM"]
+    (PRONUM) [name: "IDXFEMAVU_PRONUM"]
+  }
+}
+
+// Origem: femea.sqlite (SQLite)
+Table "FEMCAU" {
+  Note: "Origem: femea.sqlite"
+  "FALTIP" longtext
+  "FALEFE" longtext
+  "FALCAU" longtext
+  "CRTATU" longtext
+  "INDOCO" double
+  "INDSEV" double
+  "INDDET" double
+  "INDRIS" double
+  "TITULO" varchar(50)
+  "SEGGRA" INTEGER
+  "CARAPREV" longtext
+  "ACAREC" longtext
+  "ACATOM" longtext
+  "RINDSER" double
+  "RINDOCO" double
+  "RINDDET" double
+  "RINDRIS" double
+  "CRATU" longtext
+  "SITUACAO" varchar(1)
+  "ACAO" boolean
+  "ACADAT" datetime
+  "SIGI" varchar(1)
+  "RESCOD" INT
+  "RESCOD3" INT
+  "RESNOM" varchar(40)
+  "RESNOM2" varchar(40)
+  "RESNOM3" varchar(40)
+  "RESDAT" datetime
+  "RESDAT2" datetime
+  "RESDAT3" datetime
+  "RESCOD2" INT
+  "PRONUM" smallint
+  "FALNUM" smallint
+  "EFENUM" smallint
+  "CAUNUM" smallint
+  "PROCESSO" varchar(255)
+  "EXCRPN" boolean
+  "ITEM" smallint
+  "ALTMAN" boolean
+  "MUDPAD" boolean
+  "PF" double
+  "PSA" varchar(20)
+  "FXSEQ" smallint
+  "FXSSQ" smallint
+  "FXITEM" smallint
+  "BLOQUEADO" boolean
+  "TIPOAPU" varchar(1)
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "subtipo" varchar(1)
+  "fxitems" INT
+  "FEMEAREV" double
+  "elemento" varchar(200)
+  "estacao" varchar(200)
+  "trabalho" varchar(200)
+  "funcaoitem" varchar(200)
+  "funcaoetapa" varchar(200)
+  "funcaoelemento" varchar(200)
+  "pafemea" varchar(1)
+  "caraespecial" varchar(1)
+  "filtroespecial" varchar(1)
+  "acaoprev" varchar(200)
+  "acaodet" varchar(200)
+  "rpafemea" varchar(1)
+  "observacao" varchar(200)
+  Indexes {
+    (PRONUM, FALNUM, EFENUM, CAUNUM) [name: "IDXFEMCAU_PRONUM_FALNUM_EFENUM_CAUNUM"]
+    (PRONUM) [name: "IDXFEMCAU_PRONUM"]
+  }
+}
+
+// Origem: femea.sqlite (SQLite)
+Table "FEMCAUREV" {
+  Note: "Origem: femea.sqlite"
+  "FALTIP" longtext
+  "FALEFE" longtext
+  "FALCAU" longtext
+  "CRTATU" longtext
+  "INDOCO" double
+  "INDSEV" double
+  "INDDET" double
+  "INDRIS" double
+  "TITULO" varchar(50)
+  "SEGGRA" INT
+  "CARAPREV" longtext
+  "ACAREC" longtext
+  "ACATOM" longtext
+  "RINDSER" double
+  "RINDOCO" double
+  "RINDDET" double
+  "RINDRIS" double
+  "CRATU" longtext
+  "SITUACAO" varchar(1)
+  "ACAO" boolean
+  "ACADAT" datetime
+  "SIGI" varchar(1)
+  "RESCOD" INT
+  "RESCOD3" INT
+  "RESNOM" varchar(40)
+  "RESNOM2" varchar(40)
+  "RESNOM3" varchar(40)
+  "RESDAT" datetime
+  "RESDAT2" datetime
+  "RESDAT3" datetime
+  "RESCOD2" INT
+  "PRONUM" smallint
+  "FALNUM" smallint
+  "EFENUM" smallint
+  "CAUNUM" smallint
+  "PROCESSO" varchar(255)
+  "ITEM" smallint
+  "EXCRPN" boolean
+  "ALTMAN" boolean
+  "MUDPAD" boolean
+  "PF" double
+  "PSA" varchar(20)
+  "FXSEQ" smallint
+  "FXSSQ" smallint
+  "FXITEM" smallint
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "subtipo" varchar(1)
+  "FEMEAREV" double
+  "estacao" varchar(200)
+  "trabalho" varchar(200)
+  "funcaoitem" varchar(200)
+  "funcaoetapa" varchar(200)
+  "funcaoelemento" varchar(200)
+  "pafemea" varchar(1)
+  "caraespecial" varchar(1)
+  "filtroespecial" varchar(1)
+  "acaoprev" varchar(200)
+  "acaodet" varchar(200)
+  "rpafemea" varchar(1)
+  "observacao" varchar(200)
+  "elemento" varchar(200)
+  Indexes {
+    (PF) [name: "IDXFEMCAUREV_PF"]
+    (PRONUM, FALNUM, EFENUM, CAUNUM) [name: "IDXFEMCAUREV_PRONUM_FALNUM_EFENUM_CAUNUM"]
+    (PRONUM) [name: "IDXFEMCAUREV_PRONUM"]
+  }
+}
+
+// Origem: femea.sqlite (SQLite)
+Table "FEMEA" {
+  Note: "Origem: femea.sqlite"
+  "FALTIP" longtext
+  "FALEFE" longtext
+  "FALCAU" longtext
+  "CRTATU" longtext
+  "INDOCO" double
+  "INDSEV" double
+  "INDDET" double
+  "INDRIS" double
+  "TITULO" varchar(50)
+  "SEGGRA" INT
+  "CARAPREV" longtext
+  "ACAREC" longtext
+  "ACATOM" longtext
+  "RINDSER" double
+  "RINDOCO" double
+  "RINDDET" double
+  "RINDRIS" double
+  "CRATU" longtext
+  "SITUACAO" varchar(1)
+  "ACAO" boolean
+  "ACADAT" datetime
+  "SIGI" varchar(1)
+  "RESCOD" INT
+  "RESCOD3" INT
+  "RESNOM" varchar(40)
+  "RESNOM2" varchar(40)
+  "RESNOM3" varchar(40)
+  "RESDAT" datetime
+  "RESDAT2" datetime
+  "RESDAT3" datetime
+  "RESCOD2" INT
+  "PRONUM" smallint
+  "FALNUM" smallint
+  "EFENUM" smallint
+  "CAUNUM" smallint
+  "PROCESSO" longtext
+  "ITEM" smallint
+  "EXCRPN" boolean
+  "ALTMAN" boolean
+  "MUDPAD" boolean
+  "PF" double
+  "PSA" varchar(10)
+  "FXITEM" smallint
+  "FXSEQ" smallint
+  "FXSSQ" smallint
+  "BLOQUEADO" boolean
+  "TIPOAPU" varchar(1)
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "subtipo" varchar(1)
+  "fxitems" INT
+  "FEMEAREV" double
+  "elemento" varchar(200)
+  "estacao" varchar(200)
+  "trabalho" varchar(200)
+  "funcaoitem" varchar(200)
+  "funcaoetapa" varchar(200)
+  "funcaoelemento" varchar(200)
+  "pafemea" varchar(1)
+  "caraespecial" varchar(1)
+  "filtroespecial" varchar(1)
+  "acaoprev" varchar(200)
+  "acaodet" varchar(200)
+  "rpafemea" varchar(1)
+  "observacao" varchar(200)
+  Indexes {
+    (INDRIS) [name: "IDXFEMEA_INDRIS"]
+    (PF, ITEM) [name: "IDXFEMEA_PF_ITEM"]
+    (PRONUM) [name: "IDXFEMEA_PRONUM"]
+    (PRONUM, FALNUM, EFENUM, CAUNUM, PF) [name: "IDXFEMEA_PRONUM_FALNUM_EFENUM_CAUNUM_PF"]
+    (PRONUM, FALNUM, EFENUM, CAUNUM) [name: "IDXFEMEA_PRONUM_FALNUM_EFENUM_CAUNUM"]
+    (PF) [name: "IDXFEMEA_PF"]
+    (ITEM) [name: "IDXFEMEA_ITEM"]
+  }
+}
+
+// Origem: femea.sqlite (SQLite)
+Table "FEMEAPAD" {
+  Note: "Origem: femea.sqlite"
+  "FALTIP" longtext
+  "FALEFE" longtext
+  "FALCAU" longtext
+  "CRTATU" longtext
+  "INDOCO" double
+  "INDSEV" double
+  "INDDET" double
+  "INDRIS" double
+  "TITULO" varchar(50)
+  "SEGGRA" INT
+  "CARAPREV" longtext
+  "ACAREC" longtext
+  "ACATOM" longtext
+  "RINDSER" double
+  "RINDOCO" double
+  "RINDDET" double
+  "RINDRIS" double
+  "CRATU" longtext
+  "SITUACAO" varchar(1)
+  "ACAO" boolean
+  "ACADAT" datetime
+  "SIGI" varchar(1)
+  "RESCOD" INT
+  "RESCOD3" INT
+  "RESNOM" varchar(40)
+  "RESNOM2" varchar(40)
+  "RESNOM3" varchar(40)
+  "RESDAT" datetime
+  "RESDAT2" datetime
+  "RESDAT3" datetime
+  "RESCOD2" INT
+  "PRONUM" smallint
+  "FALNUM" smallint
+  "EFENUM" smallint
+  "CAUNUM" smallint
+  "PROCESSO" longtext
+  "ITEM" smallint
+  "EXCRPN" boolean
+  "ALTMAN" boolean
+  "MUDPAD" boolean
+  "PF" double
+  "PSA" varchar(10)
+  "FXITEM" smallint
+  "FXSEQ" smallint
+  "FXSSQ" smallint
+  "BLOQUEADO" boolean
+  "TIPOAPU" varchar(1)
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "subtipo" varchar(1)
+  "fxitems" INT
+  "FEMEAREV" double
+  "elemento" varchar(200)
+  "estacao" varchar(200)
+  "trabalho" varchar(200)
+  "funcaoitem" varchar(200)
+  "funcaoetapa" varchar(200)
+  "funcaoelemento" varchar(200)
+  "pafemea" varchar(1)
+  "caraespecial" varchar(1)
+  "filtroespecial" varchar(1)
+  "acaoprev" varchar(200)
+  "acaodet" varchar(200)
+  "rpafemea" varchar(1)
+  "observacao" varchar(200)
+  Indexes {
+    (INDRIS) [name: "IDXFEMEAPAD_INDRIS"]
+    (PF) [name: "IDXFEMEAPAD_PF"]
+    (PRONUM, FALNUM, EFENUM, CAUNUM, PF) [name: "IDXFEMEAPAD_PRONUM_FALNUM_EFENUM_CAUNUM_PF"]
+    (PRONUM, FALNUM, EFENUM, CAUNUM) [name: "IDXFEMEAPAD_PRONUM_FALNUM_EFENUM_CAUNUM"]
+    (PRONUM) [name: "IDXFEMEAPAD_PRONUM"]
+  }
+}
+
+// Origem: femea.sqlite (SQLite)
+Table "femearpn" {
+  Note: "Origem: femea.sqlite"
+  "SEQ" smallint
+  "DIAFIM" datetime
+  "DIAINI" datetime
+  "MES" smallint
+  "ANO" smallint
+  "ANUAL" boolean
+  "DESCRI" varchar(30)
+  "FX01" double
+  "FX02" double
+  "FX03" double
+  "FX04" double
+  "FX05" double
+  "FX06" double
+  "FX07" double
+  "FX08" double
+  "apurado" boolean
+  "apudata" datetime
+  "SEMES" boolean
+  Indexes {
+    (SEQ, MES, ANO) [name: "IDXfemearpn_SEQ_MES_ANO"]
+    (SEQ) [name: "IDXfemearpn_SEQ"]
+  }
+}
+
+// Origem: femea.sqlite (SQLite)
+Table "femearpni" {
+  Note: "Origem: femea.sqlite"
+  "seq" smallint
+  "ano" smallint
+  "mes" smallint
+  "cliente" INT
+  "cognome" varchar(12)
+  "grupoemp" varchar(12)
+  "qtdesac" smallint
+  "qtderdp" smallint
+  "qtdetot" smallint
+  "CODIGO" varchar(24)
+  "clinome" varchar(50)
+  Indexes {
+    (seq) [name: "IDXfemearpni_seq"]
+  }
+}
+
+// Origem: femea.sqlite (SQLite)
+Table "FEMEFE" {
+  Note: "Origem: femea.sqlite"
+  "PRONUM" smallint
+  "FALNUM" smallint
+  "EFENUM" smallint
+  "FALEFE" longtext
+  Indexes {
+    (EFENUM) [name: "IDXFEMEFE_EFENUM"]
+    (FALNUM, EFENUM) [name: "IDXFEMEFE_FALNUM_EFENUM"]
+    (FALNUM) [name: "IDXFEMEFE_FALNUM"]
+    (PRONUM) [name: "IDXFEMEFE_PRONUM"]
+  }
+}
+
+// Origem: femea.sqlite (SQLite)
+Table "FEMFAL" {
+  Note: "Origem: femea.sqlite"
+  "PRONUM" smallint
+  "FALNUM" smallint
+  "FALTIP" longtext
+  "FALTIPO" longtext
+  Indexes {
+    (FALNUM) [name: "IDXFEMFAL_FALNUM"]
+    (PRONUM) [name: "IDXFEMFAL_PRONUM"]
+  }
+}
+
+// Origem: femea.sqlite (SQLite)
+Table "FEMHIS" {
+  Note: "Origem: femea.sqlite"
+  "FALTIP" longtext
+  "FALEFE" longtext
+  "FALCAU" longtext
+  "CRTATU" longtext
+  "INDOCO" double
+  "INDSEV" double
+  "INDDET" double
+  "INDRIS" double
+  "TITULO" varchar(50)
+  "SEGGRA" INT
+  "CARAPREV" longtext
+  "ACAREC" longtext
+  "ACATOM" longtext
+  "RINDSER" double
+  "RINDOCO" double
+  "RINDDET" double
+  "RINDRIS" double
+  "CRATU" longtext
+  "SITUACAO" varchar(1)
+  "ACAO" boolean
+  "ACADAT" datetime
+  "SIGI" varchar(1)
+  "RESCOD" INT
+  "RESCOD3" INT
+  "RESNOM" varchar(40)
+  "RESNOM2" varchar(40)
+  "RESNOM3" varchar(40)
+  "RESDAT" datetime
+  "RESDAT2" datetime
+  "RESDAT3" datetime
+  "RESCOD2" INT
+  "PRONUM" smallint
+  "FALNUM" smallint
+  "EFENUM" smallint
+  "CAUNUM" smallint
+  "PROCESSO" varchar(255)
+  "ITEM" smallint
+  "EXCRPN" boolean
+  "ALTMAN" boolean
+  "MUDPAD" boolean
+  "PF" double
+  "PSA" varchar(20)
+  "FXSEQ" smallint
+  "FXSSQ" smallint
+  "FXITEM" smallint
+  "BLOQUEADO" boolean
+  "TIPOAPU" varchar(1)
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "subtipo" varchar(1)
+  "fxitems" INT
+  "FEMEAREV" double
+  "elemento" varchar(200)
+  "estacao" varchar(200)
+  "trabalho" varchar(200)
+  "funcaoitem" varchar(200)
+  "funcaoetapa" varchar(200)
+  "funcaoelemento" varchar(200)
+  "pafemea" varchar(1)
+  "caraespecial" varchar(1)
+  "filtroespecial" varchar(1)
+  "acaoprev" varchar(200)
+  "acaodet" varchar(200)
+  "rpafemea" varchar(1)
+  "observacao" varchar(200)
+  Indexes {
+    (PF) [name: "IDXFEMHIS_PF"]
+    (PRONUM, FALNUM, EFENUM, CAUNUM) [name: "IDXFEMHIS_PRONUM_FALNUM_EFENUM_CAUNUM"]
+    (PRONUM) [name: "IDXFEMHIS_PRONUM"]
+  }
+}
+
+// Origem: femea.sqlite (SQLite)
+Table "FEMMAQ" {
+  Note: "Origem: femea.sqlite"
+  "FALTIP" longtext
+  "FALEFE" longtext
+  "FALCAU" longtext
+  "CRTATU" longtext
+  "INDOCO" double
+  "INDSEV" double
+  "INDDET" double
+  "INDRIS" double
+  "TITULO" varchar(50)
+  "SEGGRA" INT
+  "CARAPREV" longtext
+  "ACAREC" longtext
+  "ACATOM" longtext
+  "RINDSER" double
+  "RINDOCO" double
+  "RINDDET" double
+  "RINDRIS" double
+  "CRATU" longtext
+  "SITUACAO" varchar(1)
+  "ACAO" boolean
+  "ACADAT" datetime
+  "SIGI" varchar(1)
+  "RESCOD" INT
+  "RESCOD3" INT
+  "RESNOM" varchar(40)
+  "RESNOM2" varchar(40)
+  "RESNOM3" varchar(40)
+  "RESDAT" datetime
+  "RESDAT2" datetime
+  "RESDAT3" datetime
+  "RESCOD2" INT
+  "PRONUM" smallint
+  "FALNUM" smallint
+  "EFENUM" smallint
+  "CAUNUM" smallint
+  "PROCESSO" varchar(255)
+  "ITEM" smallint
+  "EXCRPN" boolean
+  "ALTMAN" boolean
+  "MUDPAD" boolean
+  "PF" double
+  "PSA" varchar(20)
+  "FXSEQ" smallint
+  "FXSSQ" smallint
+  "FXITEM" smallint
+  "BLOQUEADO" boolean
+  "TIPOAPU" varchar(1)
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "subtipo" varchar(1)
+  "fxitems" INT
+  "FEMEAREV" double
+  "elemento" varchar(200)
+  "estacao" varchar(200)
+  "trabalho" varchar(200)
+  "funcaoitem" varchar(200)
+  "funcaoetapa" varchar(200)
+  "funcaoelemento" varchar(200)
+  "pafemea" varchar(1)
+  "caraespecial" varchar(1)
+  "filtroespecial" varchar(1)
+  "acaoprev" varchar(200)
+  "acaodet" varchar(200)
+  "rpafemea" varchar(1)
+  "observacao" varchar(200)
+  Indexes {
+    (PF) [name: "IDXFEMMAQ_PF"]
+  }
+}
+
+// Origem: femea.sqlite (SQLite)
+Table "FEMPF" {
+  Note: "Origem: femea.sqlite"
+  "PRONUM" smallint
+  "FALNUM" smallint
+  "PF" INT
+  Indexes {
+    (PF) [name: "IDXFEMPF_PF"]
+    (PF, PRONUM, FALNUM) [name: "IDXFEMPF_PF_PRONUM_FALNUM"]
+    (PRONUM, FALNUM) [name: "IDXFEMPF_PRONUM_FALNUM"]
+  }
+}
+
+// Origem: femea.sqlite (SQLite)
+Table "FEMPFHIS" {
+  Note: "Origem: femea.sqlite"
+  "PRONUM" smallint
+  "FALNUM" smallint
+  "PF" INT
+  Indexes {
+    (PF) [name: "IDXFEMPFHIS_PF"]
+    (PF, PRONUM, FALNUM) [name: "IDXFEMPFHIS_PF_PRONUM_FALNUM"]
+    (PRONUM, FALNUM) [name: "IDXFEMPFHIS_PRONUM_FALNUM"]
+  }
+}
+
+// Origem: femea.sqlite (SQLite)
+Table "FEMPRE" {
+  Note: "Origem: femea.sqlite"
+  "FALTIP" longtext
+  "FALEFE" longtext
+  "FALCAU" longtext
+  "CRTATU" longtext
+  "INDOCO" double
+  "INDSEV" double
+  "INDDET" double
+  "INDRIS" double
+  "TITULO" varchar(50)
+  "SEGGRA" INTEGER
+  "CARAPREV" longtext
+  "ACAREC" longtext
+  "ACATOM" longtext
+  "RINDSER" double
+  "RINDOCO" double
+  "RINDDET" double
+  "RINDRIS" double
+  "SITUACAO" varchar(1)
+  "ACAO" boolean
+  "ACADAT" datetime
+  "SIGI" varchar(1)
+  "RESCOD" INT
+  "RESCOD3" INT
+  "RESNOM" varchar(40)
+  "RESNOM2" varchar(40)
+  "RESNOM3" varchar(40)
+  "RESDAT" datetime
+  "RESDAT2" datetime
+  "RESDAT3" datetime
+  "RESCOD2" INT
+  "EXCRPN" boolean
+  "PF" double
+  "ITEM" double
+  "PROCESSO" varchar(255)
+  "ALTMAN" boolean
+  "MUDPAD" boolean
+  "PSA" varchar(20)
+  "FXSEQ" smallint
+  "FXSSQ" smallint
+  "FXITEM" smallint
+  "PRONUM" smallint
+  "EFENUM" smallint
+  "FALNUM" smallint
+  "CAUNUM" smallint
+  "CRATU" longtext
+  "bloqueado" boolean
+  "tipoapu" varchar(1)
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "subtipo" varchar(1)
+  "fxitems" INT
+  "FEMEAREV" double
+  "suptipo" varchar(1)
+  "elemento" varchar(200)
+  "estacao" varchar(200)
+  "trabalho" varchar(200)
+  "funcaoitem" varchar(200)
+  "funcaoetapa" varchar(200)
+  "funcaoelemento" varchar(200)
+  "pafemea" varchar(1)
+  "caraespecial" varchar(1)
+  "filtroespecial" varchar(1)
+  "acaoprev" varchar(200)
+  "acaodet" varchar(200)
+  "rpafemea" varchar(1)
+  "observacao" varchar(200)
+  Indexes {
+    (TITULO) [name: "IDXFEMPRE_TITULO"]
+    (SEGGRA) [name: "IDXFEMPRE_SEGGRA"]
+  }
+}
+
+// Origem: femea.sqlite (SQLite)
+Table "FEMPRO" {
+  Note: "Origem: femea.sqlite"
+  "PROCESSO" varchar(255)
+  "PRONUM" smallint
+  Indexes {
+    (PRONUM) [name: "IDXFEMPRO_PRONUM"]
+  }
+}
+
+// Origem: femea.sqlite (SQLite)
+Table "femrevi" {
+  Note: "Origem: femea.sqlite"
+  "FALTIP" longtext
+  "FALEFE" longtext
+  "FALCAU" longtext
+  "CRTATU" longtext
+  "INDOCO" double
+  "INDSEV" double
+  "INDDET" double
+  "INDRIS" double
+  "TITULO" varchar(50)
+  "SEGGRA" INT
+  "CARAPREV" longtext
+  "ACAREC" longtext
+  "ACATOM" longtext
+  "RINDSER" double
+  "RINDOCO" double
+  "RINDDET" double
+  "RINDRIS" double
+  "CRATU" longtext
+  "SITUACAO" varchar(1)
+  "ACAO" boolean
+  "ACADAT" datetime
+  "SIGI" varchar(1)
+  "RESCOD" INT
+  "RESCOD3" INT
+  "RESNOM" varchar(40)
+  "RESNOM2" varchar(40)
+  "RESNOM3" varchar(40)
+  "RESDAT" datetime
+  "RESDAT2" datetime
+  "RESDAT3" datetime
+  "RESCOD2" INT
+  "PRONUM" smallint
+  "FALNUM" smallint
+  "EFENUM" smallint
+  "CAUNUM" smallint
+  "PROCESSO" varchar(255)
+  "ITEM" smallint
+  "EXCRPN" boolean
+  "ALTMAN" boolean
+  "MUDPAD" boolean
+  "PF" double
+  "PSA" varchar(20)
+  "FXSEQ" smallint
+  "FXSSQ" smallint
+  "FXITEM" smallint
+  "TIPOAPU" varchar(1)
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "subtipo" varchar(1)
+  "fxitems" INT
+  "FEMEAREV" double
+  "elemento" varchar(200)
+  "estacao" varchar(200)
+  "trabalho" varchar(200)
+  "funcaoitem" varchar(200)
+  "funcaoetapa" varchar(200)
+  "funcaoelemento" varchar(200)
+  "pafemea" varchar(1)
+  "caraespecial" varchar(1)
+  "filtroespecial" varchar(1)
+  "acaoprev" varchar(200)
+  "acaodet" varchar(200)
+  "rpafemea" varchar(1)
+  "observacao" varchar(200)
+  Indexes {
+    (PF) [name: "IDXfemrevi_PF"]
+    (PRONUM, FALNUM, EFENUM, CAUNUM, PF) [name: "IDXfemrevi_PRONUM_FALNUM_EFENUM_CAUNUM_PF"]
+    (PRONUM, FALNUM, EFENUM, CAUNUM) [name: "IDXfemrevi_PRONUM_FALNUM_EFENUM_CAUNUM"]
+    (PRONUM) [name: "IDXfemrevi_PRONUM"]
+  }
+}
+
+// Origem: femea.sqlite (SQLite)
+Table "femrpng" {
+  Note: "Origem: femea.sqlite"
+  "ANO" smallint
+  "MES" smallint
+  "PF" double
+  "FX01" smallint
+  "FX02" smallint
+  "FX03" smallint
+  "ANODIZ" smallint
+  "MESDIZ" smallint
+  Indexes {
+    (ANO, MES) [name: "IDXfemrpng_ANO_MES"]
+  }
+}
+
+// Origem: femea.sqlite (SQLite)
+Table "FEMRPNO" {
+  Note: "Origem: femea.sqlite"
+  "PF" double
+  "SEQ" smallint
+  "MES" smallint
+  "ANO" smallint
+  "PRONUM" smallint
+  "TOTCAU" smallint
+  "TOTM40" smallint
+  "MAIRPN" smallint
+  "TOTRPN" INT
+  "TOTRPN01" INT
+  "TOTRPN02" INT
+  "TOTRPN03" INT
+  "TOTFX01" INT
+  "TOTFX02" INT
+  "TOTFX03" INT
+  "TOTFXA1" INT
+  "TOTFXB1" INT
+  "TOTFXC1" INT
+  "TOTFXA2" INT
+  "TOTFXB2" INT
+  "TOTFXC2" INT
+  "TOTFXC3" INT
+  "TOTFXB3" INT
+  "TOTFXA3" INT
+  Indexes {
+    (PF) [name: "IDXFEMRPNO_PF"]
+    (ANO, MES) [name: "IDXFEMRPNO_ANO_MES"]
+    (SEQ) [name: "IDXFEMRPNO_SEQ"]
+  }
+}
+
+// Origem: femea.sqlite (SQLite)
+Table "femrpnt" {
+  Note: "Origem: femea.sqlite"
+  "FALTIP" longtext
+  "FALEFE" longtext
+  "FALCAU" longtext
+  "CRTATU" longtext
+  "INDOCO" double
+  "INDSEV" double
+  "INDDET" double
+  "INDRIS" double
+  "TITULO" varchar(50)
+  "SEGGRA" INT
+  "CARAPREV" longtext
+  "ACAREC" longtext
+  "ACATOM" longtext
+  "RINDSER" double
+  "RINDOCO" double
+  "RINDDET" double
+  "RINDRIS" double
+  "CRATU" longtext
+  "SITUACAO" varchar(1)
+  "ACAO" boolean
+  "ACADAT" datetime
+  "SIGI" varchar(1)
+  "RESCOD" INT
+  "RESCOD3" INT
+  "RESNOM" varchar(40)
+  "RESNOM2" varchar(40)
+  "RESNOM3" varchar(40)
+  "RESDAT" datetime
+  "RESDAT2" datetime
+  "RESDAT3" datetime
+  "RESCOD2" INT
+  "PRONUM" smallint
+  "FALNUM" smallint
+  "EFENUM" smallint
+  "CAUNUM" smallint
+  "PROCESSO" varchar(255)
+  "ITEM" smallint
+  "EXCRPN" boolean
+  "ALTMAN" boolean
+  "MUDPAD" boolean
+  "PF" double
+  "SEQ" smallint
+  "MES" smallint
+  "ANO" smallint
+  "PSA" varchar(20)
+  "FXSEQ" smallint
+  "FXSSQ" smallint
+  "FXITEM" smallint
+  "TIPOAPU" varchar(1)
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "subtipo" varchar(1)
+  "FEMEAREV" double
+  "elemento" varchar(200)
+  "estacao" varchar(200)
+  "trabalho" varchar(200)
+  "funcaoitem" varchar(200)
+  "funcaoetapa" varchar(200)
+  "funcaoelemento" varchar(200)
+  "pafemea" varchar(1)
+  "caraespecial" varchar(1)
+  "filtroespecial" varchar(1)
+  "acaoprev" varchar(200)
+  "acaodet" varchar(200)
+  "rpafemea" varchar(1)
+  "observacao" varchar(200)
+  Indexes {
+    (SEQ) [name: "IDXfemrpnt_SEQ"]
+  }
+}
+
+// Origem: ie.sqlite (SQLite)
+Table "IE" {
+  Note: "Origem: ie.sqlite"
+  "PF" double
+  "DETALHE" longtext
+  "TIPO" longtext
+  "FECHA" longtext
+  "NPED" double
+  "IDENT" longtext
+  "PROTE" longtext
+  "QML" double
+  "COM" double
+  "LAR" double
+  "ALT" double
+  "UND" double
+  "TOTL" double
+  "TARA" double
+  "BRUTO" double
+  "METODO" longtext
+  "OBS" longtext
+  "DATA" datetime
+  "REVISAO" double
+  "LOCAL" longtext
+  "CODMR01" varchar(10)
+  "NOMMR01" varchar(100)
+  "DATAREV" datetime
+  "CODDIR" varchar(50)
+  "CODESQ" varchar(50)
+  "CODIGOINT" varchar(50)
+  "codigocli" varchar(50)
+  "elaborador" varchar(40)
+  "FOTODIR" BLOB
+  "FOTOESQ" BLOB
+  "IMAGEM" BLOB
+  Indexes {
+    (PF) [name: "sqlite_autoindex_IE_1"]
+  }
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "AP" {
+  Note: "Origem: pf.sqlite"
+  "SEQ" INT
+  "DESCRICAO" longtext
+  Indexes {
+    (SEQ) [name: "IDXAP_SEQ"]
+  }
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "CFLX" {
+  Note: "Origem: pf.sqlite"
+  "LETRA" varchar(1)
+  "DESCRICAO" varchar(50)
+  "LETRA_x" varchar(1)
+  "NUMERO" smallint
+  Indexes {
+    (NUMERO) [name: "IDXCFLX_NUMERO"]
+    (LETRA) [name: "IDXCFLX_LETRA"]
+  }
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "DUPLICAR" {
+  Note: "Origem: pf.sqlite"
+  "TABELA" varchar(50)
+  "CAMPO" varchar(50)
+  Indexes {
+    (TABELA, CAMPO) [name: "IDXDUPLICAR_TABELA_CAMPO"]
+  }
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "EMPRESA" {
+  Note: "Origem: pf.sqlite"
+  "NOME" varchar(50)
+  "TELEFONE" varchar(50)
+  "FAX" varchar(50)
+  "ENDERECO" varchar(50)
+  "CIDADE" varchar(50)
+  "ESTADO" varchar(2)
+  "CEP" varchar(9)
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "FEMEA" {
+  Note: "Origem: pf.sqlite"
+  "PF" double
+  "ITEM" double
+  "PROCESSO" varchar(255)
+  "FALTIP" longtext
+  "FALEFE" longtext
+  "FALCAU" longtext
+  "CRTATU" longtext
+  "INDOCO" double
+  "INDSEV" double
+  "INDDET" double
+  "INDRIS" double
+  "ACAREC" longtext
+  "RESCOD" double
+  "RESNOM" varchar(40)
+  "RESDAT" datetime
+  "ACATOM" longtext
+  "ACADAT" datetime
+  "RINDOCO" double
+  "RINDSER" double
+  "RINDDET" double
+  "RINDRIS" double
+  "RESCOD2" double
+  "RESNOM3" varchar(40)
+  "RESNOM2" varchar(40)
+  "RESDAT2" datetime
+  "RESDAT3" datetime
+  "ACAO" boolean
+  "RESCOD3" double
+  "SITUACAO" varchar(1)
+  "SIGI" varchar(1)
+  "CARAPREV" longtext
+  "EXCRPN" boolean
+  "ALTMAN" boolean
+  "MUDPAD" boolean
+  "PSA" varchar(20)
+  "FXSEQ" smallint
+  "FXSSQ" smallint
+  "FXITEM" smallint
+  "PRONUM" smallint
+  "EFENUM" smallint
+  "FALNUM" smallint
+  "CAUNUM" smallint
+  "SEGGRA" smallint
+  "TITULO" varchar(50)
+  "BLOQUEADO" boolean
+  "TIPOAPU" varchar(1)
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "subtipo" varchar(1)
+  "fxitems" INT
+  "FEMEAREV" double
+  "CRATU" longtext
+  "elemento" varchar(200)
+  "estacao" varchar(200)
+  "trabalho" varchar(200)
+  "funcaoitem" varchar(200)
+  "funcaoetapa" varchar(200)
+  "funcaoelemento" varchar(200)
+  "pafemea" varchar(1)
+  "caraespecial" varchar(1)
+  "filtroespecial" varchar(1)
+  "acaoprev" varchar(200)
+  "acaodet" varchar(200)
+  "rpafemea" varchar(1)
+  "observacao" varchar(200)
+  Indexes {
+    (PF) [name: "IDXFEMEA_PF"]
+    (ITEM) [name: "IDXFEMEA_ITEM"]
+    (PF, ITEM) [name: "IDXFEMEA_PF_ITEM2"]
+    (PF, ITEM) [name: "IDXFEMEA_PF_ITEM"]
+  }
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "FEMPRE" {
+  Note: "Origem: pf.sqlite"
+  "FALTIP" longtext
+  "FALEFE" longtext
+  "FALCAU" longtext
+  "CRTATU" longtext
+  "INDOCO" double
+  "INDSEV" double
+  "INDDET" double
+  "INDRIS" double
+  "TITULO" varchar(50)
+  "SEGGRA" INTEGER
+  "SEGGRA_x" INT
+  "CARAPREV" longtext
+  "ACAREC" longtext
+  "ACATOM" longtext
+  "RINDSER" double
+  "RINDOCO" double
+  "RINDDET" double
+  "RINDRIS" double
+  "CRATU" longtext
+  "SITUACAO" varchar(1)
+  "ACAO" boolean
+  "ACADAT" datetime
+  "SIGI" varchar(1)
+  "RESCOD" INT
+  "RESCOD3" INT
+  "RESNOM" varchar(40)
+  "RESNOM2" varchar(40)
+  "RESNOM3" varchar(40)
+  "RESDAT" datetime
+  "RESDAT2" datetime
+  "RESDAT3" datetime
+  "RESCOD2" INT
+  "EXCRPN" boolean
+  "PF" double
+  "ITEM" double
+  "PROCESSO" varchar(255)
+  "ALTMAN" boolean
+  "MUDPAD" boolean
+  "PSA" varchar(20)
+  "FXSEQ" smallint
+  "FXSSQ" smallint
+  "FXITEM" smallint
+  "PRONUM" smallint
+  "EFENUM" smallint
+  "FALNUM" smallint
+  "CAUNUM" smallint
+  "bloqueado" boolean
+  "tipoapu" varchar(1)
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "subtipo" varchar(1)
+  "suptipo" varchar(1)
+  "fxitems" INT
+  "FEMEAREV" double
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "IE" {
+  Note: "Origem: pf.sqlite"
+  "PF" double
+  "DETALHE" longtext
+  "TIPO" longtext
+  "FECHA" longtext
+  "NPED" double
+  "IDENT" longtext
+  "PROTE" longtext
+  "QML" double
+  "COM" double
+  "LAR" double
+  "ALT" double
+  "UND" double
+  "TOTL" double
+  "TARA" double
+  "BRUTO" double
+  "METODO" longtext
+  "OBS" longtext
+  "DATA" datetime
+  "REVISAO" double
+  "LOCAL" longtext
+  "CODMR01" varchar(10)
+  "NOMMR01" varchar(100)
+  "DATAREV" datetime
+  "CODDIR" varchar(50)
+  "CODESQ" varchar(50)
+  "CODIGOINT" varchar(50)
+  "codigocli" varchar(50)
+  "elaborador" varchar(40)
+  "FOTOESQ" BLOB
+  "IMAGEM" BLOB
+  "FOTODIR" BLOB
+  Indexes {
+    (PF) [name: "sqlite_autoindex_IE_1"]
+  }
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "IED" {
+  Note: "Origem: pf.sqlite"
+  "TIPO" varchar(1)
+  "DESCRITIVO" varchar(50)
+  "ITEM" INTEGER
+  "DETALHE" longtext
+  "Valor" INT
+  Indexes {
+    (TIPO) [name: "IDXIED_TIPO"]
+  }
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "PCTIPO" {
+  Note: "Origem: pf.sqlite"
+  "IDTIPO" INTEGER
+  "DESCRICAO" varchar(50)
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "PF" {
+  Note: "Origem: pf.sqlite"
+  "PF" double
+  "CPF" varchar(10)
+  "CODIGO" varchar(24)
+  "DESCR" varchar(40)
+  "CLIENTE" double
+  "CLINOME" varchar(50)
+  "CLIDES" varchar(24)
+  "CLIREV" varchar(10)
+  "CLIDAT" datetime
+  "NOSDES" varchar(24)
+  "NOSREV" varchar(10)
+  "NOSDAT" datetime
+  "CONDES" varchar(24)
+  "CONREV" varchar(10)
+  "CONDAT" datetime
+  "CONPES" double
+  "CONQTD" double
+  "PESLIQ" double
+  "MOTREV" longtext
+  "OPCAO" tinyint
+  "CODMU011" varchar(10)
+  "CODMU012" varchar(10)
+  "CODMU013" varchar(10)
+  "NOMMU011" varchar(101)
+  "NOMMU012" varchar(101)
+  "NOMMU013" varchar(101)
+  "OBSMU011" longtext
+  "OBSMU012" longtext
+  "OBSMU013" longtext
+  "PASMU011" double
+  "PASMU012" double
+  "PASMU013" double
+  "PESMU011" double
+  "PESMU012" double
+  "PESMU013" double
+  "QTDMU011" double
+  "QTDMU012" double
+  "QTDMU013" double
+  "PERMU011" double
+  "PERMU012" double
+  "PERMU013" double
+  "TIPO" varchar(50)
+  "OBS" longtext
+  "SITUACAO" varchar(1)
+  "ELADAT" datetime
+  "ELANUM" INT
+  "RESDAT" datetime
+  "ELANOM" varchar(40)
+  "RESNUM" INT
+  "RESNOM" varchar(50)
+  "FEMEAD" datetime
+  "FEMEAF" double
+  "FEMEAG" longtext
+  "FEMEAC" longtext
+  "FEMEAR" varchar(40)
+  "FEMEAREV" double
+  "FEMEAREVD" datetime
+  "FEMEAOBS" varchar(100)
+  "REVPRO" double
+  "REVDAT" datetime
+  "PCELANUM" double
+  "PCELANOM" varchar(50)
+  "PCELADAT" datetime
+  "PCREV" double
+  "PCREVD" datetime
+  "PCLIBNUM" double
+  "PCLIBNOM" varchar(50)
+  "PCLIBDATE" datetime
+  "TIPOSITU" varchar(1)
+  "BLOQUEADO" boolean
+  "BLOQMOTIVO" varchar(50)
+  "PCDINI" datetime
+  "CODCLIENTE" varchar(50)
+  "STPFFE" boolean
+  "STPFPC" boolean
+  "STFEPC" boolean
+  "PCGRUPO" longtext
+  "PCRTIPO" varchar(1)
+  "PCLTIPO" varchar(1)
+  "PCPTIPO" varchar(1)
+  "PCFTIPO" varchar(1)
+  "PCCTIPO" varchar(1)
+  "PCRREV" double
+  "PCLREV" double
+  "PCPREV" double
+  "PCFREV" double
+  "PCCREV" double
+  "PCRDAT" datetime
+  "PCLDAT" datetime
+  "PCPDAT" datetime
+  "PCFDAT" datetime
+  "PCCDAT" datetime
+  "SEQMU011" double
+  "SEQMU012" double
+  "SEQMU013" double
+  "SSQMU011" double
+  "SSQMU012" double
+  "SSQMU013" single
+  "FEMEAEF" double
+  "FEMEAED" datetime
+  "FEMEAEN" varchar(50)
+  "FEMEAPRO" datetime
+  "FEMEACRG" boolean
+  "CODFINAL" varchar(50)
+  "PCBLOQ" boolean
+  "FILIAL" varchar(5)
+  "CLIESP" varchar(50)
+  "SEL100" boolean
+  "CODFISCAL" varchar(24)
+  "seldata" datetime
+  "EXCRPN" boolean
+  "CRITICO" boolean
+  "CRITIOBS" longtext
+  "OUTRAAPR" varchar(50)
+  "FEMMUDPAD" boolean
+  "CODIGOINT" varchar(24)
+  "FLX01" varchar(1)
+  "FLX02" varchar(1)
+  "FLX03" varchar(1)
+  "FLX04" varchar(1)
+  "FLX05" varchar(1)
+  "FLX06" varchar(1)
+  "FLX07" varchar(1)
+  "FLX08" varchar(1)
+  "FLX09" varchar(1)
+  "FLX10" varchar(1)
+  "clientelx" varchar(15)
+  "clientepr" varchar(6)
+  "FEMEAREVD2" datetime
+  "PCREVD2" datetime
+  "seguranca" boolean
+  "takt" double
+  "taktat" double
+  "CONTATONUM" double
+  "CONTATONOM" varchar(50)
+  "femeaprepro" datetime
+  "segnum" INT
+  "segnom" varchar(50)
+  "segdat" datetime
+  "prdnum" INT
+  "prdnom" varchar(50)
+  "prddat" datetime
+  "numversaocli" varchar(4)
+  "femeaano" varchar(10)
+  "femeaproj" varchar(100)
+  "FIGMU012" BLOB
+  "FIGMU013" BLOB
+  "FIGMU011" BLOB
+  Indexes {
+    (CODIGO) [name: "IDXPF_CODIGO"]
+    (CODFINAL) [name: "IDXPF_CODFINAL"]
+    (CLIENTE) [name: "IDXPF_CLIENTE"]
+    (PF) [name: "sqlite_autoindex_PF_1"]
+  }
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "PFC" {
+  Note: "Origem: pf.sqlite"
+  "pf" double
+  "seq" double
+  "ssq" double
+  "item" double
+  "CITEM" varchar(3)
+  "COP" longtext
+  "DESCR" longtext
+  "CARAC" longtext
+  "SIGI" varchar(1)
+  "ESPE" longtext
+  "TOL" longtext
+  "CQTDE" longtext
+  "FREQ" longtext
+  "TIPINS" varchar(12)
+  "INSTR" varchar(50)
+  "CAPA" longtext
+  "REACAO" longtext
+  "SETOR" varchar(1)
+  "CARTA" longtext
+  "PROCESSO" longtext
+  "CERTFOR" boolean
+  "codme04" varchar(20)
+  "FILIAL" varchar(5)
+  "codme04b" varchar(20)
+  "TIPINSB" varchar(12)
+  "INSTRB" varchar(50)
+  "SAIPROC" boolean
+  "SAIRI" boolean
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "imagem" BLOB
+  Indexes {
+    (pf) [name: "IDXPFC_pf"]
+    (pf, seq, ssq, item) [name: "IDXPFC_pf_seq_ssq_item"]
+  }
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "PFCMS03" {
+  Note: "Origem: pf.sqlite"
+  "PF" double
+  "SEQ" double
+  "SSQ" double
+  "ITEM" double
+  "CITEM" varchar(3)
+  "COP" longtext
+  "DESCR" longtext
+  "CARAC" longtext
+  "SIGI" varchar(1)
+  "ESPE" longtext
+  "TOL" longtext
+  "CQTDE" longtext
+  "FREQ" longtext
+  "TIPINS" varchar(12)
+  "INSTR" varchar(50)
+  "CAPA" longtext
+  "REACAO" longtext
+  "SETOR" varchar(1)
+  "CARTA" longtext
+  "TIPOENT" varchar(1)
+  "CERTFOR" boolean
+  "PROCESSO" longtext
+  "CODCOMP" varchar(50)
+  "codme04" varchar(20)
+  "codme04b" varchar(20)
+  "FILIAL" varchar(5)
+  "TIPINSB" varchar(12)
+  "INSTRB" varchar(50)
+  "SAIPROC" boolean
+  "SAIRI" boolean
+  "TEMP" varchar(50)
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "imagem" BLOB
+  Indexes {
+    (PF) [name: "IDXPFCMS03_PF"]
+    (PF, CODCOMP, ITEM) [name: "IDXPFCMS03_PF_CODCOMP_ITEM"]
+  }
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "pfco" {
+  Note: "Origem: pf.sqlite"
+  "PF" double
+  "SEQ" double
+  "SSQ" double
+  "ITEM" double
+  "CITEM" varchar(3)
+  "COP" longtext
+  "DESCR" longtext
+  "CARAC" longtext
+  "SIGI" varchar(1)
+  "ESPE" longtext
+  "TOL" longtext
+  "CQTDE" longtext
+  "FREQ" longtext
+  "TIPINS" varchar(12)
+  "INSTR" varchar(50)
+  "CAPA" longtext
+  "REACAO" longtext
+  "SETOR" varchar(1)
+  "CARTA" longtext
+  "PROCESSO" longtext
+  "CERTFOR" boolean
+  "codme04" varchar(20)
+  "FILIAL" varchar(5)
+  "codme04b" varchar(20)
+  "TIPINSB" varchar(12)
+  "INSTRB" varchar(50)
+  "SAIPROC" boolean
+  "SAIRI" boolean
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "imagem" BLOB
+  Indexes {
+    (PF) [name: "IDXpfco_PF"]
+    (PF, SEQ, SSQ, ITEM) [name: "IDXpfco_PF_SEQ_SSQ_ITEM"]
+  }
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "PFD" {
+  Note: "Origem: pf.sqlite"
+  "CQTDE" longtext
+  "FREQ" longtext
+  "ID" INTEGER
+  "SETOR" varchar(1)
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "PFI" {
+  Note: "Origem: pf.sqlite"
+  "PF" double
+  "SEQ" double
+  "SSQ" double
+  "ITEM" double
+  "DESCR" varchar(255)
+  "NORMA" varchar(20)
+  "TEMPOMAN" double
+  "TEMPOMAQ" double
+  "TEMPOMOV" double
+  "PTOCHAVE" varchar(78)
+  "RAZAO" varchar(78)
+  "takt" INT
+  "taktat" INT
+  "5SOQUE" varchar(255)
+  "5SCOMO" varchar(255)
+  "5SPORQUE" varchar(255)
+  "5SSIMB01" varchar(1)
+  "5SSIMB02" varchar(1)
+  "5SSIMB03" varchar(1)
+  "5SSIMB04" varchar(1)
+  "5ssimb05" varchar(1)
+  "5ssimb06" varchar(1)
+  "imagem" BLOB
+  Indexes {
+    (ITEM) [name: "IDXPFI_ITEM"]
+    (PF) [name: "IDXPFI_PF"]
+    (PF, SEQ, SSQ, ITEM) [name: "IDXPFI_PF_SEQ_SSQ_ITEM"]
+  }
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "PFMS03" {
+  Note: "Origem: pf.sqlite"
+  "PF" double
+  "TIPOENT" varchar(1)
+  "DESCRI" longtext
+  "QTDDE" double
+  "PRECO" double
+  "TOTAL" double
+  "BAIXAC" varchar(1)
+  "SEQ" INT
+  "SSQ" INT
+  "OPCAO" tinyint
+  "PCOBS" longtext
+  "PCTIPO" varchar(50)
+  "CODCOMP" varchar(50)
+  "prdori" varchar(10)
+  "CODINT" varchar(24)
+  "FIGSEQ02" BLOB
+  "FIGSEQ01" BLOB
+  Indexes {
+    (PF, CODCOMP) [name: "IDXPFMS03_PF_CODCOMP"]
+    (PF) [name: "IDXPFMS03_PF"]
+    (CODCOMP) [name: "IDXPFMS03_CODCOMP"]
+    (PF, TIPOENT, CODCOMP) [name: "IDXPFMS03_PF_TIPOENT_CODCOMP"]
+  }
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "PFQSBLEP" {
+  Note: "Origem: pf.sqlite"
+  "PF" double
+  "SEQ" INT
+  "SSQ" INT
+  "ITEM" INT
+  "FLUXO" varchar(20)
+  "CLASS02" varchar(1)
+  "CARAC" varchar(255)
+  "REQUER" varchar(255)
+  "MUD" varchar(1)
+  "DESCRICAO" varchar(255)
+  "FLX01" varchar(1)
+  "FLX02" varchar(1)
+  "FLX03" varchar(1)
+  "FLX04" varchar(1)
+  "FLX05" varchar(1)
+  "FLX06" varchar(1)
+  "FLX07" varchar(1)
+  "FLX08" varchar(1)
+  "CLASS01" varchar(6)
+  "REQUERSAI" varchar(255)
+  "CARA2" varchar(1)
+  "CARA3" varchar(1)
+  Indexes {
+    (ITEM) [name: "IDXPFQSBLEP_ITEM"]
+    (PF) [name: "IDXPFQSBLEP_PF"]
+    (PF, SEQ, SSQ, ITEM) [name: "IDXPFQSBLEP_PF_SEQ_SSQ_ITEM"]
+  }
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "PFREV" {
+  Note: "Origem: pf.sqlite"
+  "PF" INT
+  "REV" smallint
+  "PFDATA" datetime
+  "FEMEAD" datetime
+  "FEMEAN" varchar(50)
+  "PCPD" datetime
+  "PCPN" varchar(50)
+  "PCRD" datetime
+  "PCRN" varchar(50)
+  "PCLD" datetime
+  "PCLN" varchar(50)
+  "PCFD" datetime
+  "PCFN" varchar(50)
+  "PCCD" datetime
+  "PCCN" varchar(50)
+  Indexes {
+    (PF, REV) [name: "IDXPFREV_PF_REV"]
+    (PF) [name: "IDXPFREV_PF"]
+  }
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "PFS" {
+  Note: "Origem: pf.sqlite"
+  "PF" double
+  "SEQ" double
+  "SSQ" double
+  "descri" varchar(150)
+  "REGULAR" longtext
+  "NOMMP01" varchar(30)
+  "NOMMP02" varchar(30)
+  "NOMMP03" varchar(30)
+  "NOMMP02D" varchar(30)
+  "NOMMP02C" varchar(30)
+  "NOMMP02B" varchar(30)
+  "CODMP01" varchar(12)
+  "CODMP02" varchar(12)
+  "CODMP02C" varchar(12)
+  "CODMP02D" varchar(12)
+  "CODMP02B" varchar(12)
+  "CODMP03" varchar(12)
+  "FATBAT" double
+  "FATCORTE" double
+  "PCHORA" double
+  "FERRAMEN" varchar(24)
+  "FERRAME2" varchar(24)
+  "FERRAME3" varchar(24)
+  "FERRAME4" varchar(24)
+  "FLX01" varchar(1)
+  "FLX02" varchar(1)
+  "FLX03" varchar(1)
+  "FLX04" varchar(1)
+  "FLX05" varchar(1)
+  "FLX06" varchar(1)
+  "FLX07" varchar(1)
+  "FLX08" varchar(1)
+  "FLX09" varchar(1)
+  "FLX10" varchar(1)
+  "obs" varchar(250)
+  "FERCOD" varchar(24)
+  "fernom" varchar(25)
+  "CODIGOE" varchar(24)
+  "CODIGOD" varchar(24)
+  "pcobs" varchar(200)
+  "pctipo" varchar(40)
+  "OPCAO" tinyint
+  "QTHOMEM" tinyint
+  "SETORREF" varchar(1)
+  "SETORINS" varchar(3)
+  "FEITO" varchar(1)
+  "MONTAGEM" varchar(1)
+  "FILIAL" varchar(5)
+  "CODINT" varchar(24)
+  "ESQTIP" varchar(1)
+  "ESQL01" varchar(8)
+  "ESQL02" varchar(8)
+  "ESQL03" varchar(8)
+  "ESQL04" varchar(8)
+  "ESQL05" varchar(8)
+  "ESQL06" varchar(8)
+  "ESQL07" varchar(8)
+  "ESQL08" varchar(8)
+  "ferajm" varchar(10)
+  "feruci" varchar(15)
+  "feravf" varchar(10)
+  "ferpin" varchar(5)
+  "ferqtd" varchar(10)
+  "ferdim" varchar(5)
+  "fercom" varchar(10)
+  "ferpre" varchar(15)
+  "SIMBOLOSEG" varchar(1)
+  "TAKTIME" double
+  "SIMBOLOSE2" varchar(1)
+  "SIMBOLOSE3" varchar(1)
+  "EPI01" boolean
+  "EPI02" boolean
+  "EPI03" boolean
+  "EPI04" boolean
+  "EPI05" boolean
+  "EPI06" boolean
+  "EPI07" boolean
+  "PCCICLO" double
+  "CICLOPC" double
+  "CODIGOCLI" varchar(30)
+  "EMBALCOD" varchar(10)
+  "embalnome" varchar(25)
+  "EMBALQTDE" double
+  "embalmetodo" varchar(25)
+  "COMPON01" varchar(50)
+  "COMPON02" varchar(50)
+  "COMPON03" varchar(50)
+  "COMPON04" varchar(50)
+  "COMPON05" varchar(50)
+  "COMPON06" varchar(50)
+  "COMPON07" varchar(50)
+  "COMPON08" varchar(50)
+  "COMPON09" varchar(50)
+  "ferralt" varchar(30)
+  "FERRPASSO" double
+  "ferrforca" varchar(25)
+  "ferrfixA" varchar(15)
+  "qtdmp01" double
+  "qtdmp02" double
+  "qtdmp02b" double
+  "qtdmp02c" double
+  "qtdmp02d" double
+  "subtipo" varchar(1)
+  "COMPON10" varchar(50)
+  "COMPON11" varchar(50)
+  "COMPON12" varchar(50)
+  "COMPON13" varchar(50)
+  "COMPON14" varchar(50)
+  "COMPON15" varchar(50)
+  "FIG02" BLOB
+  "figembal" BLOB
+  "FIGSEQ01" BLOB
+  "FIGSEQ02" BLOB
+  "imgalerta" BLOB
+  "imgcroqui" BLOB
+  "FIG01" BLOB
+  Indexes {
+    (PF) [name: "IDXPFS_PF"]
+    (PF, SEQ, SSQ) [name: "IDXPFS_PF_SEQ_SSQ"]
+    (CODINT) [name: "IDXPFS_CODINT"]
+  }
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "PFSCHECKLIST" {
+  Note: "Origem: pf.sqlite"
+  "PF" double
+  "SEQ" double
+  "SSQ" double
+  "ORDEM" double
+  "DESCRICAO" varchar(255)
+  Indexes {
+    (PF, SEQ, SSQ, ORDEM) [name: "IDXPFSCHECKLIST_PF_SEQ_SSQ_ORDEM"]
+  }
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "pfso" {
+  Note: "Origem: pf.sqlite"
+  "PF" double
+  "SEQ" double
+  "SSQ" double
+  "DESCRI" longtext
+  "PCOBS" longtext
+  "PCTIPO" varchar(50)
+  "TIPOENT" varchar(1)
+  "CODCOMP" varchar(11)
+  "CODINT" varchar(24)
+  "FIGSEQ02" BLOB
+  "FIGSEQ01" BLOB
+  Indexes {
+    (SSQ) [name: "IDXpfso_SSQ"]
+    (PF) [name: "IDXpfso_PF"]
+    (PF, SEQ, SSQ) [name: "IDXpfso_PF_SEQ_SSQ"]
+    (SEQ) [name: "IDXpfso_SEQ"]
+  }
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "PFSONTHEJOB" {
+  Note: "Origem: pf.sqlite"
+  "PF" double
+  "SEQ" double
+  "SSQ" double
+  "ORDEM" double
+  "DESCRICAO" varchar(255)
+  Indexes {
+    (PF, SEQ, SSQ, ORDEM) [name: "IDXPFSONTHEJOB_PF_SEQ_SSQ_ORDEM"]
+  }
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "PPAF" {
+  Note: "Origem: pf.sqlite"
+  "CLIENTE" INT
+  "CLINOME" varchar(50)
+  "COMPRADOR" varchar(5)
+  "COMNOME" varchar(40)
+  "CODIGO" varchar(24)
+  "NOME" varchar(40)
+  "DATAALT" datetime
+  "ITEM" boolean
+  "PESO" double
+  "OBSADC01" varchar(80)
+  "OBSADC02" varchar(80)
+  "SUB01" boolean
+  "SUB02" boolean
+  "SUB03" boolean
+  "SUB04" boolean
+  "SUB05" boolean
+  "SUB06" boolean
+  "SUB07" boolean
+  "SUB08" boolean
+  "SUB09" boolean
+  "NIVEL" varchar(1)
+  "RES01" boolean
+  "RES02" boolean
+  "RES03" boolean
+  "RES04" boolean
+  "APLIC" boolean
+  "SUB10" boolean
+  "DESENHO" varchar(80)
+  "NOT01" boolean
+  "NOT02" boolean
+  "INF01" boolean
+  "INF02" boolean
+  "INF03" boolean
+  "EXPOSTO" varchar(80)
+  "PEDOM" varchar(80)
+  "AUXILIAR" varchar(80)
+  "NIVELALT" varchar(80)
+  "NIVELDAT" datetime
+  "DIVISAO" varchar(80)
+  "APLICACAO" varchar(80)
+  "DATA" datetime
+  "MOLDE" varchar(50)
+  "DISPO" varchar(1)
+  "APRO" varchar(1)
+  "RESNOME" varchar(50)
+  "RESCARGO" varchar(50)
+  "EXP01" varchar(150)
+  "EXP02" varchar(150)
+  "TIPCOM" varchar(1)
+  "CODCOM" varchar(24)
+  "NOMCOM" varchar(50)
+  "FORNECEDOR" INT
+  "FORNOM" varchar(50)
+  "COMPRAS" INT
+  "COMITEM" INT
+  "PRGENT" INT
+  "INATIVO" boolean
+  "SITUACAO" varchar(1)
+  "PF" INT
+  "PPAP" INTEGER
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "PPAFC" {
+  Note: "Origem: pf.sqlite"
+  "PPAP" INT
+  "DATA" datetime
+  "PREVISTO" datetime
+  "EFETUADO" datetime
+  "OBS" longtext
+  "DISPO" varchar(1)
+  "CODIGO" varchar(50)
+  "ITEM" INTEGER
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "PPAFI" {
+  Note: "Origem: pf.sqlite"
+  "DATA" datetime
+  "OBS" longtext
+  "DISPO" varchar(1)
+  "ITEM" double
+  "PPAP" INT
+  "PRAZO" datetime
+  "APROVADO" datetime
+  "dispnome" varchar(40)
+  "dispdate" datetime
+  "dispnum" INT
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "PPAFP" {
+  Note: "Origem: pf.sqlite"
+  "PPAP" INT
+  "CODIGO" varchar(50)
+  "PF" INT
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "PPAG" {
+  Note: "Origem: pf.sqlite"
+  "CLIENTE" INT
+  "CLINOME" varchar(50)
+  "COMPRADOR" varchar(5)
+  "COMNOME" varchar(40)
+  "CODIGO" varchar(24)
+  "DATAALT" datetime
+  "NOME" varchar(40)
+  "ITEM" boolean
+  "PESO" double
+  "OBSADC01" varchar(80)
+  "OBSADC02" varchar(80)
+  "SUB01" boolean
+  "SUB02" boolean
+  "SUB03" boolean
+  "SUB04" boolean
+  "SUB05" boolean
+  "SUB06" boolean
+  "SUB07" boolean
+  "SUB08" boolean
+  "SUB09" boolean
+  "NIVEL" varchar(1)
+  "RES01" boolean
+  "RES02" boolean
+  "RES03" boolean
+  "RES04" boolean
+  "APLIC" boolean
+  "SUB10" boolean
+  "DESENHO" varchar(80)
+  "NOT01" boolean
+  "NOT02" boolean
+  "INF01" boolean
+  "INF02" boolean
+  "INF03" boolean
+  "EXPOSTO" varchar(80)
+  "PEDOM" varchar(80)
+  "AUXILIAR" varchar(80)
+  "NIVELALT" varchar(80)
+  "NIVELDAT" datetime
+  "DIVISAO" varchar(80)
+  "APLICACAO" varchar(80)
+  "DATA" datetime
+  "MOLDE" varchar(50)
+  "DISPO" varchar(1)
+  "APRO" varchar(1)
+  "RESNOME" varchar(50)
+  "RESCARGO" varchar(50)
+  "EXP01" varchar(150)
+  "EXP02" varchar(150)
+  "TIPCOM" varchar(1)
+  "CODCOM" varchar(24)
+  "FORNECEDOR" INT
+  "NOMCOM" varchar(50)
+  "COMPRAS" INT
+  "FORNOM" varchar(50)
+  "COMITEM" INT
+  "PRGENT" INT
+  "INATIVO" boolean
+  "PF" INT
+  "SITUACAO" varchar(1)
+  "SSMT" varchar(50)
+  "PPAP" INTEGER
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "PPAGC" {
+  Note: "Origem: pf.sqlite"
+  "PPAP" INT
+  "DATA" datetime
+  "PREVISTO" datetime
+  "EFETUADO" datetime
+  "OBS" longtext
+  "DISPO" varchar(1)
+  "CODIGO" varchar(50)
+  "ITEM" INTEGER
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "PPAGI" {
+  Note: "Origem: pf.sqlite"
+  "DATA" datetime
+  "OBS" longtext
+  "DISPO" varchar(1)
+  "ITEM" double
+  "PPAP" INT
+  "PRAZO" datetime
+  "APROVADO" datetime
+  "dispnome" varchar(40)
+  "dispdate" datetime
+  "dispnum" INT
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "PPAGP" {
+  Note: "Origem: pf.sqlite"
+  "PPAP" INT
+  "CODIGO" varchar(50)
+  "PF" INT
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "PPAP" {
+  Note: "Origem: pf.sqlite"
+  "CLIENTE" INT
+  "CLINOME" varchar(50)
+  "COMPRADOR" varchar(5)
+  "COMNOME" varchar(40)
+  "CODIGO" varchar(24)
+  "NOME" varchar(40)
+  "DATAALT" datetime
+  "ITEM" boolean
+  "PESO" double
+  "OBSADC01" varchar(80)
+  "OBSADC02" varchar(80)
+  "SUB01" boolean
+  "SUB02" boolean
+  "SUB03" boolean
+  "SUB04" boolean
+  "SUB05" boolean
+  "SUB06" boolean
+  "SUB07" boolean
+  "SUB08" boolean
+  "SUB09" boolean
+  "NIVEL" varchar(1)
+  "RES01" boolean
+  "RES02" boolean
+  "RES03" boolean
+  "RES04" boolean
+  "APLIC" boolean
+  "SUB10" boolean
+  "DESENHO" varchar(80)
+  "NOT01" boolean
+  "NOT02" boolean
+  "INF01" boolean
+  "INF02" boolean
+  "INF03" boolean
+  "EXPOSTO" varchar(80)
+  "PEDOM" varchar(80)
+  "AUXILIAR" varchar(80)
+  "NIVELALT" varchar(80)
+  "NIVELDAT" datetime
+  "DIVISAO" varchar(80)
+  "APLICACAO" varchar(80)
+  "DATA" datetime
+  "MOLDE" varchar(50)
+  "DISPO" varchar(1)
+  "APRO" varchar(1)
+  "RESNOME" varchar(50)
+  "RESCARGO" varchar(50)
+  "EXP01" varchar(150)
+  "EXP02" varchar(150)
+  "TIPCOM" varchar(1)
+  "CODCOM" varchar(24)
+  "NOMCOM" varchar(50)
+  "FORNECEDOR" INT
+  "FORNOM" varchar(50)
+  "COMPRAS" INT
+  "COMITEM" INT
+  "PRGENT" INT
+  "INATIVO" boolean
+  "SITUACOA" varchar(1)
+  "PF" INT
+  "PPAP" INTEGER
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "PPAPC" {
+  Note: "Origem: pf.sqlite"
+  "PPAP" INT
+  "DATA" datetime
+  "PREVISTO" datetime
+  "EFETUADO" datetime
+  "OBS" longtext
+  "DISPO" varchar(1)
+  "CODIGO" varchar(50)
+  "item" INTEGER
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "PPAPI" {
+  Note: "Origem: pf.sqlite"
+  "DATA" datetime
+  "OBS" longtext
+  "PPAP" INT
+  "DISPO" varchar(1)
+  "ITEM" double
+  "PRAZO" datetime
+  "APROVADO" datetime
+  "dispnome" varchar(40)
+  "dispdate" datetime
+  "dispnum" INT
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "PPAPP" {
+  Note: "Origem: pf.sqlite"
+  "PPAP" INT
+  "CODIGO" varchar(50)
+  "PF" INT
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "REV" {
+  Note: "Origem: pf.sqlite"
+  "PF" double
+  "TIPO" varchar(3)
+  "REVISAO" INT
+  "DATA" datetime
+  "recsetor" varchar(40)
+  "recnome" varchar(40)
+  "copias" INT
+  "copiasdev" INT
+  "copiasext" INT
+  "obsoleto" varchar(40)
+  "recnum" INT
+  "datarec" datetime
+  Indexes {
+    (PF) [name: "IDXREV_PF"]
+    (PF, TIPO, REVISAO) [name: "IDXREV_PF_TIPO_REVISAO"]
+  }
+}
+
+// Origem: pf.sqlite (SQLite)
+Table "REVI" {
+  Note: "Origem: pf.sqlite"
+  "PF" double
+  "TIPO" varchar(3)
+  "REVISAO" INT
+  "ITEM" INT
+  "MOTIVO" longtext
+  Indexes {
+    (PF) [name: "IDXREVI_PF"]
+    (PF, TIPO, REVISAO, ITEM) [name: "IDXREVI_PF_TIPO_REVISAO_ITEM"]
+  }
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "AP" {
+  Note: "Origem: pfg.sqlite"
+  "SEQ" INT
+  "DESCRICAO" longtext
+  Indexes {
+    (SEQ) [name: "IDXAP_SEQ"]
+  }
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "CFLX" {
+  Note: "Origem: pfg.sqlite"
+  "LETRA" varchar(1)
+  "DESCRICAO" varchar(50)
+  "LETRA_x" varchar(1)
+  "NUMERO" smallint
+  Indexes {
+    (NUMERO) [name: "IDXCFLX_NUMERO"]
+    (LETRA) [name: "IDXCFLX_LETRA"]
+  }
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "DUPLICAR" {
+  Note: "Origem: pfg.sqlite"
+  "TABELA" varchar(50)
+  "CAMPO" varchar(50)
+  Indexes {
+    (TABELA, CAMPO) [name: "IDXDUPLICAR_TABELA_CAMPO"]
+  }
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "EMPRESA" {
+  Note: "Origem: pfg.sqlite"
+  "NOME" varchar(50)
+  "TELEFONE" varchar(50)
+  "FAX" varchar(50)
+  "ENDERECO" varchar(50)
+  "CIDADE" varchar(50)
+  "ESTADO" varchar(2)
+  "CEP" varchar(9)
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "FEMEA" {
+  Note: "Origem: pfg.sqlite"
+  "PF" double
+  "ITEM" double
+  "PROCESSO" varchar(255)
+  "FALTIP" longtext
+  "FALEFE" longtext
+  "FALCAU" longtext
+  "CRTATU" longtext
+  "INDOCO" double
+  "INDSEV" double
+  "INDDET" double
+  "INDRIS" double
+  "ACAREC" longtext
+  "RESCOD" double
+  "RESNOM" varchar(40)
+  "RESDAT" datetime
+  "ACATOM" longtext
+  "ACADAT" datetime
+  "RINDOCO" double
+  "RINDSER" double
+  "RINDDET" double
+  "RINDRIS" double
+  "RESCOD2" double
+  "RESNOM3" varchar(40)
+  "RESNOM2" varchar(40)
+  "RESDAT2" datetime
+  "RESDAT3" datetime
+  "ACAO" boolean
+  "RESCOD3" double
+  "SITUACAO" varchar(1)
+  "SIGI" varchar(1)
+  "CARAPREV" longtext
+  "EXCRPN" boolean
+  "ALTMAN" boolean
+  "MUDPAD" boolean
+  "PSA" varchar(20)
+  "FXSEQ" smallint
+  "FXSSQ" smallint
+  "FXITEM" smallint
+  "PRONUM" smallint
+  "EFENUM" smallint
+  "FALNUM" smallint
+  "CAUNUM" smallint
+  "SEGGRA" smallint
+  "TITULO" varchar(50)
+  "BLOQUEADO" boolean
+  "TIPOAPU" varchar(1)
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "subtipo" varchar(1)
+  "fxitems" INT
+  "FEMEAREV" double
+  "CRATU" longtext
+  "elemento" varchar(200)
+  "estacao" varchar(200)
+  "trabalho" varchar(200)
+  "funcaoitem" varchar(200)
+  "funcaoetapa" varchar(200)
+  "funcaoelemento" varchar(200)
+  "pafemea" varchar(1)
+  "caraespecial" varchar(1)
+  "filtroespecial" varchar(1)
+  "acaoprev" varchar(200)
+  "acaodet" varchar(200)
+  "rpafemea" varchar(1)
+  "observacao" varchar(200)
+  Indexes {
+    (PF, ITEM) [name: "IDXFEMEA_PF_ITEM2"]
+    (PF, ITEM) [name: "IDXFEMEA_PF_ITEM"]
+    (PF) [name: "IDXFEMEA_PF"]
+    (ITEM) [name: "IDXFEMEA_ITEM"]
+  }
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "FEMPRE" {
+  Note: "Origem: pfg.sqlite"
+  "FALTIP" longtext
+  "FALEFE" longtext
+  "FALCAU" longtext
+  "CRTATU" longtext
+  "INDOCO" double
+  "INDSEV" double
+  "INDDET" double
+  "INDRIS" double
+  "TITULO" varchar(50)
+  "SEGGRA" INTEGER
+  "SEGGRA_x" INT
+  "CARAPREV" longtext
+  "ACAREC" longtext
+  "ACATOM" longtext
+  "RINDSER" double
+  "RINDOCO" double
+  "RINDDET" double
+  "RINDRIS" double
+  "CRATU" longtext
+  "SITUACAO" varchar(1)
+  "ACAO" boolean
+  "ACADAT" datetime
+  "SIGI" varchar(1)
+  "RESCOD" INT
+  "RESCOD3" INT
+  "RESNOM" varchar(40)
+  "RESNOM2" varchar(40)
+  "RESNOM3" varchar(40)
+  "RESDAT" datetime
+  "RESDAT2" datetime
+  "RESDAT3" datetime
+  "RESCOD2" INT
+  "EXCRPN" boolean
+  "PF" double
+  "ITEM" double
+  "PROCESSO" varchar(255)
+  "ALTMAN" boolean
+  "MUDPAD" boolean
+  "PSA" varchar(20)
+  "FXSEQ" smallint
+  "FXSSQ" smallint
+  "FXITEM" smallint
+  "PRONUM" smallint
+  "EFENUM" smallint
+  "FALNUM" smallint
+  "CAUNUM" smallint
+  "bloqueado" boolean
+  "tipoapu" varchar(1)
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "subtipo" varchar(1)
+  "suptipo" varchar(1)
+  "fxitems" INT
+  "FEMEAREV" double
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "IE" {
+  Note: "Origem: pfg.sqlite"
+  "PF" double
+  "DETALHE" longtext
+  "TIPO" longtext
+  "FECHA" longtext
+  "NPED" double
+  "IDENT" longtext
+  "PROTE" longtext
+  "QML" double
+  "COM" double
+  "LAR" double
+  "ALT" double
+  "UND" double
+  "TOTL" double
+  "TARA" double
+  "BRUTO" double
+  "METODO" longtext
+  "OBS" longtext
+  "DATA" datetime
+  "REVISAO" double
+  "LOCAL" longtext
+  "CODMR01" varchar(10)
+  "NOMMR01" varchar(100)
+  "DATAREV" datetime
+  "CODDIR" varchar(50)
+  "CODESQ" varchar(50)
+  "CODIGOINT" varchar(50)
+  "codigocli" varchar(50)
+  "elaborador" varchar(40)
+  "FOTOESQ" BLOB
+  "IMAGEM" BLOB
+  "FOTODIR" BLOB
+  Indexes {
+    (PF) [name: "sqlite_autoindex_IE_1"]
+  }
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "IED" {
+  Note: "Origem: pfg.sqlite"
+  "TIPO" varchar(1)
+  "DESCRITIVO" varchar(50)
+  "ITEM" INTEGER
+  "DETALHE" longtext
+  "Valor" INT
+  Indexes {
+    (TIPO) [name: "IDXIED_TIPO"]
+  }
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "PCTIPO" {
+  Note: "Origem: pfg.sqlite"
+  "IDTIPO" INTEGER
+  "DESCRICAO" varchar(50)
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "PF" {
+  Note: "Origem: pfg.sqlite"
+  "PF" double
+  "CPF" varchar(10)
+  "CODIGO" varchar(24)
+  "DESCR" varchar(40)
+  "CLIENTE" double
+  "CLINOME" varchar(50)
+  "CLIDES" varchar(24)
+  "CLIREV" varchar(10)
+  "CLIDAT" datetime
+  "NOSDES" varchar(24)
+  "NOSREV" varchar(10)
+  "NOSDAT" datetime
+  "CONDES" varchar(24)
+  "CONREV" varchar(10)
+  "CONDAT" datetime
+  "CONPES" double
+  "CONQTD" double
+  "PESLIQ" double
+  "MOTREV" longtext
+  "OPCAO" tinyint
+  "CODMU011" varchar(10)
+  "CODMU012" varchar(10)
+  "CODMU013" varchar(10)
+  "NOMMU011" varchar(101)
+  "NOMMU012" varchar(101)
+  "NOMMU013" varchar(101)
+  "OBSMU011" longtext
+  "OBSMU012" longtext
+  "OBSMU013" longtext
+  "PASMU011" double
+  "PASMU012" double
+  "PASMU013" double
+  "PESMU011" double
+  "PESMU012" double
+  "PESMU013" double
+  "QTDMU011" double
+  "QTDMU012" double
+  "QTDMU013" double
+  "PERMU011" double
+  "PERMU012" double
+  "PERMU013" double
+  "TIPO" varchar(50)
+  "OBS" longtext
+  "SITUACAO" varchar(1)
+  "ELADAT" datetime
+  "ELANUM" INT
+  "RESDAT" datetime
+  "ELANOM" varchar(40)
+  "RESNUM" INT
+  "RESNOM" varchar(50)
+  "FEMEAD" datetime
+  "FEMEAF" double
+  "FEMEAG" longtext
+  "FEMEAC" longtext
+  "FEMEAR" varchar(40)
+  "FEMEAREV" double
+  "FEMEAREVD" datetime
+  "FEMEAOBS" varchar(100)
+  "REVPRO" double
+  "REVDAT" datetime
+  "PCELANUM" double
+  "PCELANOM" varchar(50)
+  "PCELADAT" datetime
+  "PCREV" double
+  "PCREVD" datetime
+  "PCLIBNUM" double
+  "PCLIBNOM" varchar(50)
+  "PCLIBDATE" datetime
+  "TIPOSITU" varchar(1)
+  "BLOQUEADO" boolean
+  "BLOQMOTIVO" varchar(50)
+  "PCDINI" datetime
+  "CODCLIENTE" varchar(50)
+  "STPFFE" boolean
+  "STPFPC" boolean
+  "STFEPC" boolean
+  "PCGRUPO" longtext
+  "PCRTIPO" varchar(1)
+  "PCLTIPO" varchar(1)
+  "PCPTIPO" varchar(1)
+  "PCFTIPO" varchar(1)
+  "PCCTIPO" varchar(1)
+  "PCRREV" double
+  "PCLREV" double
+  "PCPREV" double
+  "PCFREV" double
+  "PCCREV" double
+  "PCRDAT" datetime
+  "PCLDAT" datetime
+  "PCPDAT" datetime
+  "PCFDAT" datetime
+  "PCCDAT" datetime
+  "SEQMU011" double
+  "SEQMU012" double
+  "SEQMU013" double
+  "SSQMU011" double
+  "SSQMU012" double
+  "SSQMU013" single
+  "FEMEAEF" double
+  "FEMEAED" datetime
+  "FEMEAEN" varchar(50)
+  "FEMEAPRO" datetime
+  "FEMEACRG" boolean
+  "CODFINAL" varchar(50)
+  "PCBLOQ" boolean
+  "FILIAL" varchar(5)
+  "CLIESP" varchar(50)
+  "SEL100" boolean
+  "CODFISCAL" varchar(24)
+  "seldata" datetime
+  "EXCRPN" boolean
+  "CRITICO" boolean
+  "CRITIOBS" longtext
+  "OUTRAAPR" varchar(50)
+  "FEMMUDPAD" boolean
+  "CODIGOINT" varchar(24)
+  "FLX01" varchar(1)
+  "FLX02" varchar(1)
+  "FLX03" varchar(1)
+  "FLX04" varchar(1)
+  "FLX05" varchar(1)
+  "FLX06" varchar(1)
+  "FLX07" varchar(1)
+  "FLX08" varchar(1)
+  "FLX09" varchar(1)
+  "FLX10" varchar(1)
+  "clientelx" varchar(15)
+  "clientepr" varchar(6)
+  "FEMEAREVD2" datetime
+  "PCREVD2" datetime
+  "seguranca" boolean
+  "takt" double
+  "taktat" double
+  "CONTATONUM" double
+  "CONTATONOM" varchar(50)
+  "femeaprepro" datetime
+  "segnum" INT
+  "segnom" varchar(50)
+  "segdat" datetime
+  "prdnum" INT
+  "prdnom" varchar(50)
+  "prddat" datetime
+  "numversaocli" varchar(4)
+  "femeaano" varchar(10)
+  "femeaproj" varchar(100)
+  "FIGMU012" BLOB
+  "FIGMU013" BLOB
+  "FIGMU011" BLOB
+  Indexes {
+    (CODIGO) [name: "IDXPF_CODIGO"]
+    (CODFINAL) [name: "IDXPF_CODFINAL"]
+    (CLIENTE) [name: "IDXPF_CLIENTE"]
+    (PF) [name: "sqlite_autoindex_PF_1"]
+  }
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "PFC" {
+  Note: "Origem: pfg.sqlite"
+  "pf" double
+  "seq" double
+  "ssq" double
+  "item" double
+  "CITEM" varchar(3)
+  "COP" longtext
+  "DESCR" longtext
+  "CARAC" longtext
+  "SIGI" varchar(1)
+  "ESPE" longtext
+  "TOL" longtext
+  "CQTDE" longtext
+  "FREQ" longtext
+  "TIPINS" varchar(12)
+  "INSTR" varchar(50)
+  "CAPA" longtext
+  "REACAO" longtext
+  "SETOR" varchar(1)
+  "CARTA" longtext
+  "PROCESSO" longtext
+  "CERTFOR" boolean
+  "codme04" varchar(20)
+  "FILIAL" varchar(5)
+  "codme04b" varchar(20)
+  "TIPINSB" varchar(12)
+  "INSTRB" varchar(50)
+  "SAIPROC" boolean
+  "SAIRI" boolean
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "imagem" BLOB
+  Indexes {
+    (pf, seq, ssq, item) [name: "IDXPFC_pf_seq_ssq_item"]
+    (pf) [name: "IDXPFC_pf"]
+  }
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "PFCMS03" {
+  Note: "Origem: pfg.sqlite"
+  "PF" double
+  "SEQ" double
+  "SSQ" double
+  "ITEM" double
+  "CITEM" varchar(3)
+  "COP" longtext
+  "DESCR" longtext
+  "CARAC" longtext
+  "SIGI" varchar(1)
+  "ESPE" longtext
+  "TOL" longtext
+  "CQTDE" longtext
+  "FREQ" longtext
+  "TIPINS" varchar(12)
+  "INSTR" varchar(50)
+  "CAPA" longtext
+  "REACAO" longtext
+  "SETOR" varchar(1)
+  "CARTA" longtext
+  "TIPOENT" varchar(1)
+  "CERTFOR" boolean
+  "PROCESSO" longtext
+  "CODCOMP" varchar(50)
+  "codme04" varchar(20)
+  "codme04b" varchar(20)
+  "FILIAL" varchar(5)
+  "TIPINSB" varchar(12)
+  "INSTRB" varchar(50)
+  "SAIPROC" boolean
+  "SAIRI" boolean
+  "TEMP" varchar(50)
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "imagem" BLOB
+  Indexes {
+    (PF, CODCOMP, ITEM) [name: "IDXPFCMS03_PF_CODCOMP_ITEM"]
+    (PF) [name: "IDXPFCMS03_PF"]
+  }
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "pfco" {
+  Note: "Origem: pfg.sqlite"
+  "PF" double
+  "SEQ" double
+  "SSQ" double
+  "ITEM" double
+  "CITEM" varchar(3)
+  "COP" longtext
+  "DESCR" longtext
+  "CARAC" longtext
+  "SIGI" varchar(1)
+  "ESPE" longtext
+  "TOL" longtext
+  "CQTDE" longtext
+  "FREQ" longtext
+  "TIPINS" varchar(12)
+  "INSTR" varchar(50)
+  "CAPA" longtext
+  "REACAO" longtext
+  "SETOR" varchar(1)
+  "CARTA" longtext
+  "PROCESSO" longtext
+  "CERTFOR" boolean
+  "codme04" varchar(20)
+  "FILIAL" varchar(5)
+  "codme04b" varchar(20)
+  "TIPINSB" varchar(12)
+  "INSTRB" varchar(50)
+  "SAIPROC" boolean
+  "SAIRI" boolean
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "imagem" BLOB
+  Indexes {
+    (PF, SEQ, SSQ, ITEM) [name: "IDXpfco_PF_SEQ_SSQ_ITEM"]
+    (PF) [name: "IDXpfco_PF"]
+  }
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "PFD" {
+  Note: "Origem: pfg.sqlite"
+  "CQTDE" longtext
+  "FREQ" longtext
+  "ID" INTEGER
+  "SETOR" varchar(1)
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "PFI" {
+  Note: "Origem: pfg.sqlite"
+  "PF" double
+  "SEQ" double
+  "SSQ" double
+  "ITEM" double
+  "DESCR" varchar(255)
+  "NORMA" varchar(20)
+  "TEMPOMAN" double
+  "TEMPOMAQ" double
+  "TEMPOMOV" double
+  "PTOCHAVE" varchar(78)
+  "RAZAO" varchar(78)
+  "takt" INT
+  "taktat" INT
+  "5SOQUE" varchar(255)
+  "5SCOMO" varchar(255)
+  "5SPORQUE" varchar(255)
+  "5SSIMB01" varchar(1)
+  "5SSIMB02" varchar(1)
+  "5SSIMB03" varchar(1)
+  "5SSIMB04" varchar(1)
+  "5ssimb05" varchar(1)
+  "5ssimb06" varchar(1)
+  "imagem" BLOB
+  Indexes {
+    (PF, SEQ, SSQ, ITEM) [name: "IDXPFI_PF_SEQ_SSQ_ITEM"]
+    (PF) [name: "IDXPFI_PF"]
+    (ITEM) [name: "IDXPFI_ITEM"]
+  }
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "PFMS03" {
+  Note: "Origem: pfg.sqlite"
+  "PF" double
+  "TIPOENT" varchar(1)
+  "DESCRI" longtext
+  "QTDDE" double
+  "PRECO" double
+  "TOTAL" double
+  "BAIXAC" varchar(1)
+  "SEQ" INT
+  "SSQ" INT
+  "OPCAO" tinyint
+  "PCOBS" longtext
+  "PCTIPO" varchar(50)
+  "CODCOMP" varchar(50)
+  "prdori" varchar(10)
+  "CODINT" varchar(24)
+  "FIGSEQ02" BLOB
+  "FIGSEQ01" BLOB
+  Indexes {
+    (PF, TIPOENT, CODCOMP) [name: "IDXPFMS03_PF_TIPOENT_CODCOMP"]
+    (PF, CODCOMP) [name: "IDXPFMS03_PF_CODCOMP"]
+    (PF) [name: "IDXPFMS03_PF"]
+    (CODCOMP) [name: "IDXPFMS03_CODCOMP"]
+  }
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "PFQSBLEP" {
+  Note: "Origem: pfg.sqlite"
+  "PF" double
+  "SEQ" INT
+  "SSQ" INT
+  "ITEM" INT
+  "FLUXO" varchar(20)
+  "CLASS02" varchar(1)
+  "CARAC" varchar(255)
+  "REQUER" varchar(255)
+  "MUD" varchar(1)
+  "DESCRICAO" varchar(255)
+  "FLX01" varchar(1)
+  "FLX02" varchar(1)
+  "FLX03" varchar(1)
+  "FLX04" varchar(1)
+  "FLX05" varchar(1)
+  "FLX06" varchar(1)
+  "FLX07" varchar(1)
+  "FLX08" varchar(1)
+  "CLASS01" varchar(6)
+  "REQUERSAI" varchar(255)
+  "CARA2" varchar(1)
+  "CARA3" varchar(1)
+  Indexes {
+    (PF, SEQ, SSQ, ITEM) [name: "IDXPFQSBLEP_PF_SEQ_SSQ_ITEM"]
+    (PF) [name: "IDXPFQSBLEP_PF"]
+    (ITEM) [name: "IDXPFQSBLEP_ITEM"]
+  }
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "PFREV" {
+  Note: "Origem: pfg.sqlite"
+  "PF" INT
+  "REV" smallint
+  "PFDATA" datetime
+  "FEMEAD" datetime
+  "FEMEAN" varchar(50)
+  "PCPD" datetime
+  "PCPN" varchar(50)
+  "PCRD" datetime
+  "PCRN" varchar(50)
+  "PCLD" datetime
+  "PCLN" varchar(50)
+  "PCFD" datetime
+  "PCFN" varchar(50)
+  "PCCD" datetime
+  "PCCN" varchar(50)
+  Indexes {
+    (PF, REV) [name: "IDXPFREV_PF_REV"]
+    (PF) [name: "IDXPFREV_PF"]
+  }
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "PFS" {
+  Note: "Origem: pfg.sqlite"
+  "PF" double
+  "SEQ" double
+  "SSQ" double
+  "descri" varchar(150)
+  "REGULAR" longtext
+  "NOMMP01" varchar(30)
+  "NOMMP02" varchar(30)
+  "NOMMP03" varchar(30)
+  "NOMMP02D" varchar(30)
+  "NOMMP02C" varchar(30)
+  "NOMMP02B" varchar(30)
+  "CODMP01" varchar(12)
+  "CODMP02" varchar(12)
+  "CODMP02C" varchar(12)
+  "CODMP02D" varchar(12)
+  "CODMP02B" varchar(12)
+  "CODMP03" varchar(12)
+  "FATBAT" double
+  "FATCORTE" double
+  "PCHORA" double
+  "FERRAMEN" varchar(24)
+  "FERRAME2" varchar(24)
+  "FERRAME3" varchar(24)
+  "FERRAME4" varchar(24)
+  "FLX01" varchar(1)
+  "FLX02" varchar(1)
+  "FLX03" varchar(1)
+  "FLX04" varchar(1)
+  "FLX05" varchar(1)
+  "FLX06" varchar(1)
+  "FLX07" varchar(1)
+  "FLX08" varchar(1)
+  "FLX09" varchar(1)
+  "FLX10" varchar(1)
+  "obs" varchar(250)
+  "FERCOD" varchar(24)
+  "fernom" varchar(25)
+  "CODIGOE" varchar(24)
+  "CODIGOD" varchar(24)
+  "pcobs" varchar(200)
+  "pctipo" varchar(40)
+  "OPCAO" tinyint
+  "QTHOMEM" tinyint
+  "SETORREF" varchar(1)
+  "SETORINS" varchar(3)
+  "FEITO" varchar(1)
+  "MONTAGEM" varchar(1)
+  "FILIAL" varchar(5)
+  "CODINT" varchar(24)
+  "ESQTIP" varchar(1)
+  "ESQL01" varchar(8)
+  "ESQL02" varchar(8)
+  "ESQL03" varchar(8)
+  "ESQL04" varchar(8)
+  "ESQL05" varchar(8)
+  "ESQL06" varchar(8)
+  "ESQL07" varchar(8)
+  "ESQL08" varchar(8)
+  "ferajm" varchar(10)
+  "feruci" varchar(15)
+  "feravf" varchar(10)
+  "ferpin" varchar(5)
+  "ferqtd" varchar(10)
+  "ferdim" varchar(5)
+  "fercom" varchar(10)
+  "ferpre" varchar(15)
+  "SIMBOLOSEG" varchar(1)
+  "TAKTIME" double
+  "SIMBOLOSE2" varchar(1)
+  "SIMBOLOSE3" varchar(1)
+  "EPI01" boolean
+  "EPI02" boolean
+  "EPI03" boolean
+  "EPI04" boolean
+  "EPI05" boolean
+  "EPI06" boolean
+  "EPI07" boolean
+  "PCCICLO" double
+  "CICLOPC" double
+  "CODIGOCLI" varchar(30)
+  "EMBALCOD" varchar(10)
+  "embalnome" varchar(25)
+  "EMBALQTDE" double
+  "embalmetodo" varchar(25)
+  "COMPON01" varchar(50)
+  "COMPON02" varchar(50)
+  "COMPON03" varchar(50)
+  "COMPON04" varchar(50)
+  "COMPON05" varchar(50)
+  "COMPON06" varchar(50)
+  "COMPON07" varchar(50)
+  "COMPON08" varchar(50)
+  "COMPON09" varchar(50)
+  "ferralt" varchar(30)
+  "FERRPASSO" double
+  "ferrforca" varchar(25)
+  "ferrfixA" varchar(15)
+  "qtdmp01" double
+  "qtdmp02" double
+  "qtdmp02b" double
+  "qtdmp02c" double
+  "qtdmp02d" double
+  "subtipo" varchar(1)
+  "COMPON10" varchar(50)
+  "COMPON11" varchar(50)
+  "COMPON12" varchar(50)
+  "COMPON13" varchar(50)
+  "COMPON14" varchar(50)
+  "COMPON15" varchar(50)
+  "FIG02" BLOB
+  "figembal" BLOB
+  "FIGSEQ01" BLOB
+  "FIGSEQ02" BLOB
+  "imgalerta" BLOB
+  "imgcroqui" BLOB
+  "FIG01" BLOB
+  Indexes {
+    (SEQ) [name: "IDX_PFS_SEQ"]
+    (SSQ) [name: "IDX_PFS_SSQ"]
+    (PF, SEQ, SSQ) [name: "IDXPFS_PF_SEQ_SSQ"]
+    (PF) [name: "IDXPFS_PF"]
+    (CODINT) [name: "IDXPFS_CODINT"]
+  }
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "PFSCHECKLIST" {
+  Note: "Origem: pfg.sqlite"
+  "PF" double
+  "SEQ" double
+  "SSQ" double
+  "ORDEM" double
+  "DESCRICAO" varchar(255)
+  Indexes {
+    (PF, SEQ, SSQ, ORDEM) [name: "IDXPFSCHECKLIST_PF_SEQ_SSQ_ORDEM"]
+  }
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "pfso" {
+  Note: "Origem: pfg.sqlite"
+  "PF" double
+  "SEQ" double
+  "SSQ" double
+  "DESCRI" longtext
+  "PCOBS" longtext
+  "PCTIPO" varchar(50)
+  "TIPOENT" varchar(1)
+  "CODCOMP" varchar(11)
+  "CODINT" varchar(24)
+  "FIGSEQ02" BLOB
+  "FIGSEQ01" BLOB
+  Indexes {
+    (SSQ) [name: "IDXpfso_SSQ"]
+    (SEQ) [name: "IDXpfso_SEQ"]
+    (PF, SEQ, SSQ) [name: "IDXpfso_PF_SEQ_SSQ"]
+    (PF) [name: "IDXpfso_PF"]
+  }
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "PFSONTHEJOB" {
+  Note: "Origem: pfg.sqlite"
+  "PF" double
+  "SEQ" double
+  "SSQ" double
+  "ORDEM" double
+  "DESCRICAO" varchar(255)
+  Indexes {
+    (PF, SEQ, SSQ, ORDEM) [name: "IDXPFSONTHEJOB_PF_SEQ_SSQ_ORDEM"]
+  }
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "PPAF" {
+  Note: "Origem: pfg.sqlite"
+  "CLIENTE" INT
+  "CLINOME" varchar(50)
+  "COMPRADOR" varchar(5)
+  "COMNOME" varchar(40)
+  "CODIGO" varchar(24)
+  "NOME" varchar(40)
+  "DATAALT" datetime
+  "ITEM" boolean
+  "PESO" double
+  "OBSADC01" varchar(80)
+  "OBSADC02" varchar(80)
+  "SUB01" boolean
+  "SUB02" boolean
+  "SUB03" boolean
+  "SUB04" boolean
+  "SUB05" boolean
+  "SUB06" boolean
+  "SUB07" boolean
+  "SUB08" boolean
+  "SUB09" boolean
+  "NIVEL" varchar(1)
+  "RES01" boolean
+  "RES02" boolean
+  "RES03" boolean
+  "RES04" boolean
+  "APLIC" boolean
+  "SUB10" boolean
+  "DESENHO" varchar(80)
+  "NOT01" boolean
+  "NOT02" boolean
+  "INF01" boolean
+  "INF02" boolean
+  "INF03" boolean
+  "EXPOSTO" varchar(80)
+  "PEDOM" varchar(80)
+  "AUXILIAR" varchar(80)
+  "NIVELALT" varchar(80)
+  "NIVELDAT" datetime
+  "DIVISAO" varchar(80)
+  "APLICACAO" varchar(80)
+  "DATA" datetime
+  "MOLDE" varchar(50)
+  "DISPO" varchar(1)
+  "APRO" varchar(1)
+  "RESNOME" varchar(50)
+  "RESCARGO" varchar(50)
+  "EXP01" varchar(150)
+  "EXP02" varchar(150)
+  "TIPCOM" varchar(1)
+  "CODCOM" varchar(24)
+  "NOMCOM" varchar(50)
+  "FORNECEDOR" INT
+  "FORNOM" varchar(50)
+  "COMPRAS" INT
+  "COMITEM" INT
+  "PRGENT" INT
+  "INATIVO" boolean
+  "SITUACAO" varchar(1)
+  "PF" INT
+  "PPAP" INTEGER
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "PPAFC" {
+  Note: "Origem: pfg.sqlite"
+  "PPAP" INT
+  "DATA" datetime
+  "PREVISTO" datetime
+  "EFETUADO" datetime
+  "OBS" longtext
+  "DISPO" varchar(1)
+  "CODIGO" varchar(50)
+  "ITEM" INTEGER
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "PPAFI" {
+  Note: "Origem: pfg.sqlite"
+  "DATA" datetime
+  "OBS" longtext
+  "DISPO" varchar(1)
+  "ITEM" double
+  "PPAP" INT
+  "PRAZO" datetime
+  "APROVADO" datetime
+  "dispnome" varchar(40)
+  "dispdate" datetime
+  "dispnum" INT
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "PPAFP" {
+  Note: "Origem: pfg.sqlite"
+  "PPAP" INT
+  "CODIGO" varchar(50)
+  "PF" INT
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "PPAG" {
+  Note: "Origem: pfg.sqlite"
+  "CLIENTE" INT
+  "CLINOME" varchar(50)
+  "COMPRADOR" varchar(5)
+  "COMNOME" varchar(40)
+  "CODIGO" varchar(24)
+  "DATAALT" datetime
+  "NOME" varchar(40)
+  "ITEM" boolean
+  "PESO" double
+  "OBSADC01" varchar(80)
+  "OBSADC02" varchar(80)
+  "SUB01" boolean
+  "SUB02" boolean
+  "SUB03" boolean
+  "SUB04" boolean
+  "SUB05" boolean
+  "SUB06" boolean
+  "SUB07" boolean
+  "SUB08" boolean
+  "SUB09" boolean
+  "NIVEL" varchar(1)
+  "RES01" boolean
+  "RES02" boolean
+  "RES03" boolean
+  "RES04" boolean
+  "APLIC" boolean
+  "SUB10" boolean
+  "DESENHO" varchar(80)
+  "NOT01" boolean
+  "NOT02" boolean
+  "INF01" boolean
+  "INF02" boolean
+  "INF03" boolean
+  "EXPOSTO" varchar(80)
+  "PEDOM" varchar(80)
+  "AUXILIAR" varchar(80)
+  "NIVELALT" varchar(80)
+  "NIVELDAT" datetime
+  "DIVISAO" varchar(80)
+  "APLICACAO" varchar(80)
+  "DATA" datetime
+  "MOLDE" varchar(50)
+  "DISPO" varchar(1)
+  "APRO" varchar(1)
+  "RESNOME" varchar(50)
+  "RESCARGO" varchar(50)
+  "EXP01" varchar(150)
+  "EXP02" varchar(150)
+  "TIPCOM" varchar(1)
+  "CODCOM" varchar(24)
+  "FORNECEDOR" INT
+  "NOMCOM" varchar(50)
+  "COMPRAS" INT
+  "FORNOM" varchar(50)
+  "COMITEM" INT
+  "PRGENT" INT
+  "INATIVO" boolean
+  "PF" INT
+  "SITUACAO" varchar(1)
+  "SSMT" varchar(50)
+  "PPAP" INTEGER
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "PPAGC" {
+  Note: "Origem: pfg.sqlite"
+  "PPAP" INT
+  "DATA" datetime
+  "PREVISTO" datetime
+  "EFETUADO" datetime
+  "OBS" longtext
+  "DISPO" varchar(1)
+  "CODIGO" varchar(50)
+  "ITEM" INTEGER
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "PPAGI" {
+  Note: "Origem: pfg.sqlite"
+  "DATA" datetime
+  "OBS" longtext
+  "DISPO" varchar(1)
+  "ITEM" double
+  "PPAP" INT
+  "PRAZO" datetime
+  "APROVADO" datetime
+  "dispnome" varchar(40)
+  "dispdate" datetime
+  "dispnum" INT
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "PPAGP" {
+  Note: "Origem: pfg.sqlite"
+  "PPAP" INT
+  "CODIGO" varchar(50)
+  "PF" INT
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "PPAP" {
+  Note: "Origem: pfg.sqlite"
+  "CLIENTE" INT
+  "CLINOME" varchar(50)
+  "COMPRADOR" varchar(5)
+  "COMNOME" varchar(40)
+  "CODIGO" varchar(24)
+  "NOME" varchar(40)
+  "DATAALT" datetime
+  "ITEM" boolean
+  "PESO" double
+  "OBSADC01" varchar(80)
+  "OBSADC02" varchar(80)
+  "SUB01" boolean
+  "SUB02" boolean
+  "SUB03" boolean
+  "SUB04" boolean
+  "SUB05" boolean
+  "SUB06" boolean
+  "SUB07" boolean
+  "SUB08" boolean
+  "SUB09" boolean
+  "NIVEL" varchar(1)
+  "RES01" boolean
+  "RES02" boolean
+  "RES03" boolean
+  "RES04" boolean
+  "APLIC" boolean
+  "SUB10" boolean
+  "DESENHO" varchar(80)
+  "NOT01" boolean
+  "NOT02" boolean
+  "INF01" boolean
+  "INF02" boolean
+  "INF03" boolean
+  "EXPOSTO" varchar(80)
+  "PEDOM" varchar(80)
+  "AUXILIAR" varchar(80)
+  "NIVELALT" varchar(80)
+  "NIVELDAT" datetime
+  "DIVISAO" varchar(80)
+  "APLICACAO" varchar(80)
+  "DATA" datetime
+  "MOLDE" varchar(50)
+  "DISPO" varchar(1)
+  "APRO" varchar(1)
+  "RESNOME" varchar(50)
+  "RESCARGO" varchar(50)
+  "EXP01" varchar(150)
+  "EXP02" varchar(150)
+  "TIPCOM" varchar(1)
+  "CODCOM" varchar(24)
+  "NOMCOM" varchar(50)
+  "FORNECEDOR" INT
+  "FORNOM" varchar(50)
+  "COMPRAS" INT
+  "COMITEM" INT
+  "PRGENT" INT
+  "INATIVO" boolean
+  "SITUACOA" varchar(1)
+  "PF" INT
+  "PPAP" INTEGER
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "PPAPC" {
+  Note: "Origem: pfg.sqlite"
+  "PPAP" INT
+  "DATA" datetime
+  "PREVISTO" datetime
+  "EFETUADO" datetime
+  "OBS" longtext
+  "DISPO" varchar(1)
+  "CODIGO" varchar(50)
+  "item" INTEGER
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "PPAPI" {
+  Note: "Origem: pfg.sqlite"
+  "DATA" datetime
+  "OBS" longtext
+  "PPAP" INT
+  "DISPO" varchar(1)
+  "ITEM" double
+  "PRAZO" datetime
+  "APROVADO" datetime
+  "dispnome" varchar(40)
+  "dispdate" datetime
+  "dispnum" INT
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "PPAPP" {
+  Note: "Origem: pfg.sqlite"
+  "PPAP" INT
+  "CODIGO" varchar(50)
+  "PF" INT
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "REV" {
+  Note: "Origem: pfg.sqlite"
+  "PF" double
+  "TIPO" varchar(3)
+  "REVISAO" INT
+  "DATA" datetime
+  "recsetor" varchar(40)
+  "recnome" varchar(40)
+  "copias" INT
+  "copiasdev" INT
+  "copiasext" INT
+  "obsoleto" varchar(40)
+  "recnum" INT
+  "datarec" datetime
+  Indexes {
+    (PF, TIPO, REVISAO) [name: "IDXREV_PF_TIPO_REVISAO"]
+    (PF) [name: "IDXREV_PF"]
+  }
+}
+
+// Origem: pfg.sqlite (SQLite)
+Table "REVI" {
+  Note: "Origem: pfg.sqlite"
+  "PF" double
+  "TIPO" varchar(3)
+  "REVISAO" INT
+  "ITEM" INT
+  "MOTIVO" longtext
+  Indexes {
+    (PF, TIPO, REVISAO, ITEM) [name: "IDXREVI_PF_TIPO_REVISAO_ITEM"]
+    (PF) [name: "IDXREVI_PF"]
+  }
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "AP" {
+  Note: "Origem: pfp.sqlite"
+  "SEQ" INT
+  "DESCRICAO" longtext
+  Indexes {
+    (SEQ) [name: "IDXAP_SEQ"]
+  }
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "CFLX" {
+  Note: "Origem: pfp.sqlite"
+  "LETRA" varchar(1)
+  "DESCRICAO" varchar(50)
+  "LETRA_x" varchar(1)
+  "NUMERO" smallint
+  Indexes {
+    (NUMERO) [name: "IDXCFLX_NUMERO"]
+    (LETRA) [name: "IDXCFLX_LETRA"]
+  }
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "DUPLICAR" {
+  Note: "Origem: pfp.sqlite"
+  "TABELA" varchar(50)
+  "CAMPO" varchar(50)
+  Indexes {
+    (TABELA, CAMPO) [name: "IDXDUPLICAR_TABELA_CAMPO"]
+  }
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "EMPRESA" {
+  Note: "Origem: pfp.sqlite"
+  "NOME" varchar(50)
+  "TELEFONE" varchar(50)
+  "FAX" varchar(50)
+  "ENDERECO" varchar(50)
+  "CIDADE" varchar(50)
+  "ESTADO" varchar(2)
+  "CEP" varchar(9)
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "FEMEA" {
+  Note: "Origem: pfp.sqlite"
+  "PF" double
+  "ITEM" double
+  "PROCESSO" varchar(255)
+  "FALTIP" longtext
+  "FALEFE" longtext
+  "FALCAU" longtext
+  "CRTATU" longtext
+  "INDOCO" double
+  "INDSEV" double
+  "INDDET" double
+  "INDRIS" double
+  "ACAREC" longtext
+  "RESCOD" double
+  "RESNOM" varchar(40)
+  "RESDAT" datetime
+  "ACATOM" longtext
+  "ACADAT" datetime
+  "RINDOCO" double
+  "RINDSER" double
+  "RINDDET" double
+  "RINDRIS" double
+  "RESCOD2" double
+  "RESNOM3" varchar(40)
+  "RESNOM2" varchar(40)
+  "RESDAT2" datetime
+  "RESDAT3" datetime
+  "ACAO" boolean
+  "RESCOD3" double
+  "SITUACAO" varchar(1)
+  "SIGI" varchar(1)
+  "CARAPREV" longtext
+  "EXCRPN" boolean
+  "ALTMAN" boolean
+  "MUDPAD" boolean
+  "PSA" varchar(20)
+  "FXSEQ" smallint
+  "FXSSQ" smallint
+  "FXITEM" smallint
+  "PRONUM" smallint
+  "EFENUM" smallint
+  "FALNUM" smallint
+  "CAUNUM" smallint
+  "SEGGRA" smallint
+  "TITULO" varchar(50)
+  "BLOQUEADO" boolean
+  "TIPOAPU" varchar(1)
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "subtipo" varchar(1)
+  "fxitems" INT
+  "FEMEAREV" double
+  "CRATU" longtext
+  "elemento" varchar(200)
+  "estacao" varchar(200)
+  "trabalho" varchar(200)
+  "funcaoitem" varchar(200)
+  "funcaoetapa" varchar(200)
+  "funcaoelemento" varchar(200)
+  "pafemea" varchar(1)
+  "caraespecial" varchar(1)
+  "filtroespecial" varchar(1)
+  "acaoprev" varchar(200)
+  "acaodet" varchar(200)
+  "rpafemea" varchar(1)
+  "observacao" varchar(200)
+  Indexes {
+    (PF, ITEM) [name: "IDXFEMEA_PF_ITEM2"]
+    (PF, ITEM) [name: "IDXFEMEA_PF_ITEM"]
+    (PF) [name: "IDXFEMEA_PF"]
+    (ITEM) [name: "IDXFEMEA_ITEM"]
+  }
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "FEMPRE" {
+  Note: "Origem: pfp.sqlite"
+  "FALTIP" longtext
+  "FALEFE" longtext
+  "FALCAU" longtext
+  "CRTATU" longtext
+  "INDOCO" double
+  "INDSEV" double
+  "INDDET" double
+  "INDRIS" double
+  "TITULO" varchar(50)
+  "SEGGRA" INTEGER
+  "SEGGRA_x" INT
+  "CARAPREV" longtext
+  "ACAREC" longtext
+  "ACATOM" longtext
+  "RINDSER" double
+  "RINDOCO" double
+  "RINDDET" double
+  "RINDRIS" double
+  "CRATU" longtext
+  "SITUACAO" varchar(1)
+  "ACAO" boolean
+  "ACADAT" datetime
+  "SIGI" varchar(1)
+  "RESCOD" INT
+  "RESCOD3" INT
+  "RESNOM" varchar(40)
+  "RESNOM2" varchar(40)
+  "RESNOM3" varchar(40)
+  "RESDAT" datetime
+  "RESDAT2" datetime
+  "RESDAT3" datetime
+  "RESCOD2" INT
+  "EXCRPN" boolean
+  "PF" double
+  "ITEM" double
+  "PROCESSO" varchar(255)
+  "ALTMAN" boolean
+  "MUDPAD" boolean
+  "PSA" varchar(20)
+  "FXSEQ" smallint
+  "FXSSQ" smallint
+  "FXITEM" smallint
+  "PRONUM" smallint
+  "EFENUM" smallint
+  "FALNUM" smallint
+  "CAUNUM" smallint
+  "bloqueado" boolean
+  "tipoapu" varchar(1)
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "subtipo" varchar(1)
+  "suptipo" varchar(1)
+  "fxitems" INT
+  "FEMEAREV" double
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "IE" {
+  Note: "Origem: pfp.sqlite"
+  "PF" double
+  "DETALHE" longtext
+  "TIPO" longtext
+  "FECHA" longtext
+  "NPED" double
+  "IDENT" longtext
+  "PROTE" longtext
+  "QML" double
+  "COM" double
+  "LAR" double
+  "ALT" double
+  "UND" double
+  "TOTL" double
+  "TARA" double
+  "BRUTO" double
+  "METODO" longtext
+  "OBS" longtext
+  "DATA" datetime
+  "REVISAO" double
+  "LOCAL" longtext
+  "CODMR01" varchar(10)
+  "NOMMR01" varchar(100)
+  "DATAREV" datetime
+  "CODDIR" varchar(50)
+  "CODESQ" varchar(50)
+  "CODIGOINT" varchar(50)
+  "codigocli" varchar(50)
+  "elaborador" varchar(40)
+  "FOTOESQ" BLOB
+  "IMAGEM" BLOB
+  "FOTODIR" BLOB
+  Indexes {
+    (PF) [name: "sqlite_autoindex_IE_1"]
+  }
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "IED" {
+  Note: "Origem: pfp.sqlite"
+  "TIPO" varchar(1)
+  "DESCRITIVO" varchar(50)
+  "ITEM" INTEGER
+  "DETALHE" longtext
+  "Valor" INT
+  Indexes {
+    (TIPO) [name: "IDXIED_TIPO"]
+  }
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "PCTIPO" {
+  Note: "Origem: pfp.sqlite"
+  "IDTIPO" INTEGER
+  "DESCRICAO" varchar(50)
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "PF" {
+  Note: "Origem: pfp.sqlite"
+  "PF" double
+  "CPF" varchar(10)
+  "CODIGO" varchar(24)
+  "DESCR" varchar(40)
+  "CLIENTE" double
+  "CLINOME" varchar(50)
+  "CLIDES" varchar(24)
+  "CLIREV" varchar(10)
+  "CLIDAT" datetime
+  "NOSDES" varchar(24)
+  "NOSREV" varchar(10)
+  "NOSDAT" datetime
+  "CONDES" varchar(24)
+  "CONREV" varchar(10)
+  "CONDAT" datetime
+  "CONPES" double
+  "CONQTD" double
+  "PESLIQ" double
+  "MOTREV" longtext
+  "OPCAO" tinyint
+  "CODMU011" varchar(10)
+  "CODMU012" varchar(10)
+  "CODMU013" varchar(10)
+  "NOMMU011" varchar(101)
+  "NOMMU012" varchar(101)
+  "NOMMU013" varchar(101)
+  "OBSMU011" longtext
+  "OBSMU012" longtext
+  "OBSMU013" longtext
+  "PASMU011" double
+  "PASMU012" double
+  "PASMU013" double
+  "PESMU011" double
+  "PESMU012" double
+  "PESMU013" double
+  "QTDMU011" double
+  "QTDMU012" double
+  "QTDMU013" double
+  "PERMU011" double
+  "PERMU012" double
+  "PERMU013" double
+  "TIPO" varchar(50)
+  "OBS" longtext
+  "SITUACAO" varchar(1)
+  "ELADAT" datetime
+  "ELANUM" INT
+  "RESDAT" datetime
+  "ELANOM" varchar(40)
+  "RESNUM" INT
+  "RESNOM" varchar(50)
+  "FEMEAD" datetime
+  "FEMEAF" double
+  "FEMEAG" longtext
+  "FEMEAC" longtext
+  "FEMEAR" varchar(40)
+  "FEMEAREV" double
+  "FEMEAREVD" datetime
+  "FEMEAOBS" varchar(100)
+  "REVPRO" double
+  "REVDAT" datetime
+  "PCELANUM" double
+  "PCELANOM" varchar(50)
+  "PCELADAT" datetime
+  "PCREV" double
+  "PCREVD" datetime
+  "PCLIBNUM" double
+  "PCLIBNOM" varchar(50)
+  "PCLIBDATE" datetime
+  "TIPOSITU" varchar(1)
+  "BLOQUEADO" boolean
+  "BLOQMOTIVO" varchar(50)
+  "PCDINI" datetime
+  "CODCLIENTE" varchar(50)
+  "STPFFE" boolean
+  "STPFPC" boolean
+  "STFEPC" boolean
+  "PCGRUPO" longtext
+  "PCRTIPO" varchar(1)
+  "PCLTIPO" varchar(1)
+  "PCPTIPO" varchar(1)
+  "PCFTIPO" varchar(1)
+  "PCCTIPO" varchar(1)
+  "PCRREV" double
+  "PCLREV" double
+  "PCPREV" double
+  "PCFREV" double
+  "PCCREV" double
+  "PCRDAT" datetime
+  "PCLDAT" datetime
+  "PCPDAT" datetime
+  "PCFDAT" datetime
+  "PCCDAT" datetime
+  "SEQMU011" double
+  "SEQMU012" double
+  "SEQMU013" double
+  "SSQMU011" double
+  "SSQMU012" double
+  "SSQMU013" single
+  "FEMEAEF" double
+  "FEMEAED" datetime
+  "FEMEAEN" varchar(50)
+  "FEMEAPRO" datetime
+  "FEMEACRG" boolean
+  "CODFINAL" varchar(50)
+  "PCBLOQ" boolean
+  "FILIAL" varchar(5)
+  "CLIESP" varchar(50)
+  "SEL100" boolean
+  "CODFISCAL" varchar(24)
+  "seldata" datetime
+  "EXCRPN" boolean
+  "CRITICO" boolean
+  "CRITIOBS" longtext
+  "OUTRAAPR" varchar(50)
+  "FEMMUDPAD" boolean
+  "CODIGOINT" varchar(24)
+  "FLX01" varchar(1)
+  "FLX02" varchar(1)
+  "FLX03" varchar(1)
+  "FLX04" varchar(1)
+  "FLX05" varchar(1)
+  "FLX06" varchar(1)
+  "FLX07" varchar(1)
+  "FLX08" varchar(1)
+  "FLX09" varchar(1)
+  "FLX10" varchar(1)
+  "clientelx" varchar(15)
+  "clientepr" varchar(6)
+  "FEMEAREVD2" datetime
+  "PCREVD2" datetime
+  "seguranca" boolean
+  "takt" double
+  "taktat" double
+  "CONTATONUM" double
+  "CONTATONOM" varchar(50)
+  "femeaprepro" datetime
+  "segnum" INT
+  "segnom" varchar(50)
+  "segdat" datetime
+  "prdnum" INT
+  "prdnom" varchar(50)
+  "prddat" datetime
+  "numversaocli" varchar(4)
+  "femeaano" varchar(10)
+  "femeaproj" varchar(100)
+  "FIGMU012" BLOB
+  "FIGMU013" BLOB
+  "FIGMU011" BLOB
+  Indexes {
+    (CODIGO) [name: "IDXPF_CODIGO"]
+    (CODFINAL) [name: "IDXPF_CODFINAL"]
+    (CLIENTE) [name: "IDXPF_CLIENTE"]
+    (PF) [name: "sqlite_autoindex_PF_1"]
+  }
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "PFC" {
+  Note: "Origem: pfp.sqlite"
+  "pf" double
+  "seq" double
+  "ssq" double
+  "item" double
+  "CITEM" varchar(3)
+  "COP" longtext
+  "DESCR" longtext
+  "CARAC" longtext
+  "SIGI" varchar(1)
+  "ESPE" longtext
+  "TOL" longtext
+  "CQTDE" longtext
+  "FREQ" longtext
+  "TIPINS" varchar(12)
+  "INSTR" varchar(50)
+  "CAPA" longtext
+  "REACAO" longtext
+  "SETOR" varchar(1)
+  "CARTA" longtext
+  "PROCESSO" longtext
+  "CERTFOR" boolean
+  "codme04" varchar(20)
+  "FILIAL" varchar(5)
+  "codme04b" varchar(20)
+  "TIPINSB" varchar(12)
+  "INSTRB" varchar(50)
+  "SAIPROC" boolean
+  "SAIRI" boolean
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "imagem" BLOB
+  Indexes {
+    (pf, seq, ssq, item) [name: "IDXPFC_pf_seq_ssq_item"]
+    (pf) [name: "IDXPFC_pf"]
+  }
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "PFCMS03" {
+  Note: "Origem: pfp.sqlite"
+  "PF" double
+  "SEQ" double
+  "SSQ" double
+  "ITEM" double
+  "CITEM" varchar(3)
+  "COP" longtext
+  "DESCR" longtext
+  "CARAC" longtext
+  "SIGI" varchar(1)
+  "ESPE" longtext
+  "TOL" longtext
+  "CQTDE" longtext
+  "FREQ" longtext
+  "TIPINS" varchar(12)
+  "INSTR" varchar(50)
+  "CAPA" longtext
+  "REACAO" longtext
+  "SETOR" varchar(1)
+  "CARTA" longtext
+  "TIPOENT" varchar(1)
+  "CERTFOR" boolean
+  "PROCESSO" longtext
+  "CODCOMP" varchar(50)
+  "codme04" varchar(20)
+  "codme04b" varchar(20)
+  "FILIAL" varchar(5)
+  "TIPINSB" varchar(12)
+  "INSTRB" varchar(50)
+  "SAIPROC" boolean
+  "SAIRI" boolean
+  "TEMP" varchar(50)
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "imagem" BLOB
+  Indexes {
+    (PF, CODCOMP, ITEM) [name: "IDXPFCMS03_PF_CODCOMP_ITEM"]
+    (PF) [name: "IDXPFCMS03_PF"]
+  }
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "pfco" {
+  Note: "Origem: pfp.sqlite"
+  "PF" double
+  "SEQ" double
+  "SSQ" double
+  "ITEM" double
+  "CITEM" varchar(3)
+  "COP" longtext
+  "DESCR" longtext
+  "CARAC" longtext
+  "SIGI" varchar(1)
+  "ESPE" longtext
+  "TOL" longtext
+  "CQTDE" longtext
+  "FREQ" longtext
+  "TIPINS" varchar(12)
+  "INSTR" varchar(50)
+  "CAPA" longtext
+  "REACAO" longtext
+  "SETOR" varchar(1)
+  "CARTA" longtext
+  "PROCESSO" longtext
+  "CERTFOR" boolean
+  "codme04" varchar(20)
+  "FILIAL" varchar(5)
+  "codme04b" varchar(20)
+  "TIPINSB" varchar(12)
+  "INSTRB" varchar(50)
+  "SAIPROC" boolean
+  "SAIRI" boolean
+  "SIG2" varchar(1)
+  "SIG3" varchar(1)
+  "imagem" BLOB
+  Indexes {
+    (PF, SEQ, SSQ, ITEM) [name: "IDXpfco_PF_SEQ_SSQ_ITEM"]
+    (PF) [name: "IDXpfco_PF"]
+  }
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "PFD" {
+  Note: "Origem: pfp.sqlite"
+  "CQTDE" longtext
+  "FREQ" longtext
+  "ID" INTEGER
+  "SETOR" varchar(1)
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "PFI" {
+  Note: "Origem: pfp.sqlite"
+  "PF" double
+  "SEQ" double
+  "SSQ" double
+  "ITEM" double
+  "DESCR" varchar(255)
+  "NORMA" varchar(20)
+  "TEMPOMAN" double
+  "TEMPOMAQ" double
+  "TEMPOMOV" double
+  "PTOCHAVE" varchar(78)
+  "RAZAO" varchar(78)
+  "takt" INT
+  "taktat" INT
+  "5SOQUE" varchar(255)
+  "5SCOMO" varchar(255)
+  "5SPORQUE" varchar(255)
+  "5SSIMB01" varchar(1)
+  "5SSIMB02" varchar(1)
+  "5SSIMB03" varchar(1)
+  "5SSIMB04" varchar(1)
+  "5ssimb05" varchar(1)
+  "5ssimb06" varchar(1)
+  "imagem" BLOB
+  Indexes {
+    (PF, SEQ, SSQ, ITEM) [name: "IDXPFI_PF_SEQ_SSQ_ITEM"]
+    (PF) [name: "IDXPFI_PF"]
+    (ITEM) [name: "IDXPFI_ITEM"]
+  }
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "PFMS03" {
+  Note: "Origem: pfp.sqlite"
+  "PF" double
+  "TIPOENT" varchar(1)
+  "DESCRI" longtext
+  "QTDDE" double
+  "PRECO" double
+  "TOTAL" double
+  "BAIXAC" varchar(1)
+  "SEQ" INT
+  "SSQ" INT
+  "OPCAO" tinyint
+  "PCOBS" longtext
+  "PCTIPO" varchar(50)
+  "CODCOMP" varchar(50)
+  "prdori" varchar(10)
+  "CODINT" varchar(24)
+  "FIGSEQ02" BLOB
+  "FIGSEQ01" BLOB
+  Indexes {
+    (PF, TIPOENT, CODCOMP) [name: "IDXPFMS03_PF_TIPOENT_CODCOMP"]
+    (PF, CODCOMP) [name: "IDXPFMS03_PF_CODCOMP"]
+    (PF) [name: "IDXPFMS03_PF"]
+    (CODCOMP) [name: "IDXPFMS03_CODCOMP"]
+  }
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "PFQSBLEP" {
+  Note: "Origem: pfp.sqlite"
+  "PF" double
+  "SEQ" INT
+  "SSQ" INT
+  "ITEM" INT
+  "FLUXO" varchar(20)
+  "CLASS02" varchar(1)
+  "CARAC" varchar(255)
+  "REQUER" varchar(255)
+  "MUD" varchar(1)
+  "DESCRICAO" varchar(255)
+  "FLX01" varchar(1)
+  "FLX02" varchar(1)
+  "FLX03" varchar(1)
+  "FLX04" varchar(1)
+  "FLX05" varchar(1)
+  "FLX06" varchar(1)
+  "FLX07" varchar(1)
+  "FLX08" varchar(1)
+  "CLASS01" varchar(6)
+  "REQUERSAI" varchar(255)
+  "CARA2" varchar(1)
+  "CARA3" varchar(1)
+  Indexes {
+    (PF, SEQ, SSQ, ITEM) [name: "IDXPFQSBLEP_PF_SEQ_SSQ_ITEM"]
+    (PF) [name: "IDXPFQSBLEP_PF"]
+    (ITEM) [name: "IDXPFQSBLEP_ITEM"]
+  }
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "PFREV" {
+  Note: "Origem: pfp.sqlite"
+  "PF" INT
+  "REV" smallint
+  "PFDATA" datetime
+  "FEMEAD" datetime
+  "FEMEAN" varchar(50)
+  "PCPD" datetime
+  "PCPN" varchar(50)
+  "PCRD" datetime
+  "PCRN" varchar(50)
+  "PCLD" datetime
+  "PCLN" varchar(50)
+  "PCFD" datetime
+  "PCFN" varchar(50)
+  "PCCD" datetime
+  "PCCN" varchar(50)
+  Indexes {
+    (PF, REV) [name: "IDXPFREV_PF_REV"]
+    (PF) [name: "IDXPFREV_PF"]
+  }
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "PFS" {
+  Note: "Origem: pfp.sqlite"
+  "PF" double
+  "SEQ" double
+  "SSQ" double
+  "descri" varchar(150)
+  "REGULAR" longtext
+  "NOMMP01" varchar(30)
+  "NOMMP02" varchar(30)
+  "NOMMP03" varchar(30)
+  "NOMMP02D" varchar(30)
+  "NOMMP02C" varchar(30)
+  "NOMMP02B" varchar(30)
+  "CODMP01" varchar(12)
+  "CODMP02" varchar(12)
+  "CODMP02C" varchar(12)
+  "CODMP02D" varchar(12)
+  "CODMP02B" varchar(12)
+  "CODMP03" varchar(12)
+  "FATBAT" double
+  "FATCORTE" double
+  "PCHORA" double
+  "FERRAMEN" varchar(24)
+  "FERRAME2" varchar(24)
+  "FERRAME3" varchar(24)
+  "FERRAME4" varchar(24)
+  "FLX01" varchar(1)
+  "FLX02" varchar(1)
+  "FLX03" varchar(1)
+  "FLX04" varchar(1)
+  "FLX05" varchar(1)
+  "FLX06" varchar(1)
+  "FLX07" varchar(1)
+  "FLX08" varchar(1)
+  "FLX09" varchar(1)
+  "FLX10" varchar(1)
+  "obs" varchar(250)
+  "FERCOD" varchar(24)
+  "fernom" varchar(25)
+  "CODIGOE" varchar(24)
+  "CODIGOD" varchar(24)
+  "pcobs" varchar(200)
+  "pctipo" varchar(40)
+  "OPCAO" tinyint
+  "QTHOMEM" tinyint
+  "SETORREF" varchar(1)
+  "SETORINS" varchar(3)
+  "FEITO" varchar(1)
+  "MONTAGEM" varchar(1)
+  "FILIAL" varchar(5)
+  "CODINT" varchar(24)
+  "ESQTIP" varchar(1)
+  "ESQL01" varchar(8)
+  "ESQL02" varchar(8)
+  "ESQL03" varchar(8)
+  "ESQL04" varchar(8)
+  "ESQL05" varchar(8)
+  "ESQL06" varchar(8)
+  "ESQL07" varchar(8)
+  "ESQL08" varchar(8)
+  "ferajm" varchar(10)
+  "feruci" varchar(15)
+  "feravf" varchar(10)
+  "ferpin" varchar(5)
+  "ferqtd" varchar(10)
+  "ferdim" varchar(5)
+  "fercom" varchar(10)
+  "ferpre" varchar(15)
+  "SIMBOLOSEG" varchar(1)
+  "TAKTIME" double
+  "SIMBOLOSE2" varchar(1)
+  "SIMBOLOSE3" varchar(1)
+  "EPI01" boolean
+  "EPI02" boolean
+  "EPI03" boolean
+  "EPI04" boolean
+  "EPI05" boolean
+  "EPI06" boolean
+  "EPI07" boolean
+  "PCCICLO" double
+  "CICLOPC" double
+  "CODIGOCLI" varchar(30)
+  "EMBALCOD" varchar(10)
+  "embalnome" varchar(25)
+  "EMBALQTDE" double
+  "embalmetodo" varchar(25)
+  "COMPON01" varchar(50)
+  "COMPON02" varchar(50)
+  "COMPON03" varchar(50)
+  "COMPON04" varchar(50)
+  "COMPON05" varchar(50)
+  "COMPON06" varchar(50)
+  "COMPON07" varchar(50)
+  "COMPON08" varchar(50)
+  "COMPON09" varchar(50)
+  "ferralt" varchar(30)
+  "FERRPASSO" double
+  "ferrforca" varchar(25)
+  "ferrfixA" varchar(15)
+  "qtdmp01" double
+  "qtdmp02" double
+  "qtdmp02b" double
+  "qtdmp02c" double
+  "qtdmp02d" double
+  "subtipo" varchar(1)
+  "COMPON10" varchar(50)
+  "COMPON11" varchar(50)
+  "COMPON12" varchar(50)
+  "COMPON13" varchar(50)
+  "COMPON14" varchar(50)
+  "COMPON15" varchar(50)
+  "FIG02" BLOB
+  "figembal" BLOB
+  "FIGSEQ01" BLOB
+  "FIGSEQ02" BLOB
+  "imgalerta" BLOB
+  "imgcroqui" BLOB
+  "FIG01" BLOB
+  Indexes {
+    (SEQ) [name: "IDX_PFS_SEQ"]
+    (SSQ) [name: "IDX_PFS_SSQ"]
+    (PF, SEQ, SSQ) [name: "IDXPFS_PF_SEQ_SSQ"]
+    (PF) [name: "IDXPFS_PF"]
+    (CODINT) [name: "IDXPFS_CODINT"]
+  }
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "PFSCHECKLIST" {
+  Note: "Origem: pfp.sqlite"
+  "PF" double
+  "SEQ" double
+  "SSQ" double
+  "ORDEM" double
+  "DESCRICAO" varchar(255)
+  Indexes {
+    (PF, SEQ, SSQ, ORDEM) [name: "IDXPFSCHECKLIST_PF_SEQ_SSQ_ORDEM"]
+  }
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "pfso" {
+  Note: "Origem: pfp.sqlite"
+  "PF" double
+  "SEQ" double
+  "SSQ" double
+  "DESCRI" longtext
+  "PCOBS" longtext
+  "PCTIPO" varchar(50)
+  "TIPOENT" varchar(1)
+  "CODCOMP" varchar(11)
+  "CODINT" varchar(24)
+  "FIGSEQ02" BLOB
+  "FIGSEQ01" BLOB
+  Indexes {
+    (SSQ) [name: "IDXpfso_SSQ"]
+    (SEQ) [name: "IDXpfso_SEQ"]
+    (PF, SEQ, SSQ) [name: "IDXpfso_PF_SEQ_SSQ"]
+    (PF) [name: "IDXpfso_PF"]
+  }
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "PFSONTHEJOB" {
+  Note: "Origem: pfp.sqlite"
+  "PF" double
+  "SEQ" double
+  "SSQ" double
+  "ORDEM" double
+  "DESCRICAO" varchar(255)
+  Indexes {
+    (PF, SEQ, SSQ, ORDEM) [name: "IDXPFSONTHEJOB_PF_SEQ_SSQ_ORDEM"]
+  }
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "PPAF" {
+  Note: "Origem: pfp.sqlite"
+  "CLIENTE" INT
+  "CLINOME" varchar(50)
+  "COMPRADOR" varchar(5)
+  "COMNOME" varchar(40)
+  "CODIGO" varchar(24)
+  "NOME" varchar(40)
+  "DATAALT" datetime
+  "ITEM" boolean
+  "PESO" double
+  "OBSADC01" varchar(80)
+  "OBSADC02" varchar(80)
+  "SUB01" boolean
+  "SUB02" boolean
+  "SUB03" boolean
+  "SUB04" boolean
+  "SUB05" boolean
+  "SUB06" boolean
+  "SUB07" boolean
+  "SUB08" boolean
+  "SUB09" boolean
+  "NIVEL" varchar(1)
+  "RES01" boolean
+  "RES02" boolean
+  "RES03" boolean
+  "RES04" boolean
+  "APLIC" boolean
+  "SUB10" boolean
+  "DESENHO" varchar(80)
+  "NOT01" boolean
+  "NOT02" boolean
+  "INF01" boolean
+  "INF02" boolean
+  "INF03" boolean
+  "EXPOSTO" varchar(80)
+  "PEDOM" varchar(80)
+  "AUXILIAR" varchar(80)
+  "NIVELALT" varchar(80)
+  "NIVELDAT" datetime
+  "DIVISAO" varchar(80)
+  "APLICACAO" varchar(80)
+  "DATA" datetime
+  "MOLDE" varchar(50)
+  "DISPO" varchar(1)
+  "APRO" varchar(1)
+  "RESNOME" varchar(50)
+  "RESCARGO" varchar(50)
+  "EXP01" varchar(150)
+  "EXP02" varchar(150)
+  "TIPCOM" varchar(1)
+  "CODCOM" varchar(24)
+  "NOMCOM" varchar(50)
+  "FORNECEDOR" INT
+  "FORNOM" varchar(50)
+  "COMPRAS" INT
+  "COMITEM" INT
+  "PRGENT" INT
+  "INATIVO" boolean
+  "SITUACAO" varchar(1)
+  "PF" INT
+  "PPAP" INTEGER
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "PPAFC" {
+  Note: "Origem: pfp.sqlite"
+  "PPAP" INT
+  "DATA" datetime
+  "PREVISTO" datetime
+  "EFETUADO" datetime
+  "OBS" longtext
+  "DISPO" varchar(1)
+  "CODIGO" varchar(50)
+  "ITEM" INTEGER
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "PPAFI" {
+  Note: "Origem: pfp.sqlite"
+  "DATA" datetime
+  "OBS" longtext
+  "DISPO" varchar(1)
+  "ITEM" double
+  "PPAP" INT
+  "PRAZO" datetime
+  "APROVADO" datetime
+  "dispnome" varchar(40)
+  "dispdate" datetime
+  "dispnum" INT
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "PPAFP" {
+  Note: "Origem: pfp.sqlite"
+  "PPAP" INT
+  "CODIGO" varchar(50)
+  "PF" INT
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "PPAG" {
+  Note: "Origem: pfp.sqlite"
+  "CLIENTE" INT
+  "CLINOME" varchar(50)
+  "COMPRADOR" varchar(5)
+  "COMNOME" varchar(40)
+  "CODIGO" varchar(24)
+  "DATAALT" datetime
+  "NOME" varchar(40)
+  "ITEM" boolean
+  "PESO" double
+  "OBSADC01" varchar(80)
+  "OBSADC02" varchar(80)
+  "SUB01" boolean
+  "SUB02" boolean
+  "SUB03" boolean
+  "SUB04" boolean
+  "SUB05" boolean
+  "SUB06" boolean
+  "SUB07" boolean
+  "SUB08" boolean
+  "SUB09" boolean
+  "NIVEL" varchar(1)
+  "RES01" boolean
+  "RES02" boolean
+  "RES03" boolean
+  "RES04" boolean
+  "APLIC" boolean
+  "SUB10" boolean
+  "DESENHO" varchar(80)
+  "NOT01" boolean
+  "NOT02" boolean
+  "INF01" boolean
+  "INF02" boolean
+  "INF03" boolean
+  "EXPOSTO" varchar(80)
+  "PEDOM" varchar(80)
+  "AUXILIAR" varchar(80)
+  "NIVELALT" varchar(80)
+  "NIVELDAT" datetime
+  "DIVISAO" varchar(80)
+  "APLICACAO" varchar(80)
+  "DATA" datetime
+  "MOLDE" varchar(50)
+  "DISPO" varchar(1)
+  "APRO" varchar(1)
+  "RESNOME" varchar(50)
+  "RESCARGO" varchar(50)
+  "EXP01" varchar(150)
+  "EXP02" varchar(150)
+  "TIPCOM" varchar(1)
+  "CODCOM" varchar(24)
+  "FORNECEDOR" INT
+  "NOMCOM" varchar(50)
+  "COMPRAS" INT
+  "FORNOM" varchar(50)
+  "COMITEM" INT
+  "PRGENT" INT
+  "INATIVO" boolean
+  "PF" INT
+  "SITUACAO" varchar(1)
+  "SSMT" varchar(50)
+  "PPAP" INTEGER
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "PPAGC" {
+  Note: "Origem: pfp.sqlite"
+  "PPAP" INT
+  "DATA" datetime
+  "PREVISTO" datetime
+  "EFETUADO" datetime
+  "OBS" longtext
+  "DISPO" varchar(1)
+  "CODIGO" varchar(50)
+  "ITEM" INTEGER
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "PPAGI" {
+  Note: "Origem: pfp.sqlite"
+  "DATA" datetime
+  "OBS" longtext
+  "DISPO" varchar(1)
+  "ITEM" double
+  "PPAP" INT
+  "PRAZO" datetime
+  "APROVADO" datetime
+  "dispnome" varchar(40)
+  "dispdate" datetime
+  "dispnum" INT
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "PPAGP" {
+  Note: "Origem: pfp.sqlite"
+  "PPAP" INT
+  "CODIGO" varchar(50)
+  "PF" INT
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "PPAP" {
+  Note: "Origem: pfp.sqlite"
+  "CLIENTE" INT
+  "CLINOME" varchar(50)
+  "COMPRADOR" varchar(5)
+  "COMNOME" varchar(40)
+  "CODIGO" varchar(24)
+  "NOME" varchar(40)
+  "DATAALT" datetime
+  "ITEM" boolean
+  "PESO" double
+  "OBSADC01" varchar(80)
+  "OBSADC02" varchar(80)
+  "SUB01" boolean
+  "SUB02" boolean
+  "SUB03" boolean
+  "SUB04" boolean
+  "SUB05" boolean
+  "SUB06" boolean
+  "SUB07" boolean
+  "SUB08" boolean
+  "SUB09" boolean
+  "NIVEL" varchar(1)
+  "RES01" boolean
+  "RES02" boolean
+  "RES03" boolean
+  "RES04" boolean
+  "APLIC" boolean
+  "SUB10" boolean
+  "DESENHO" varchar(80)
+  "NOT01" boolean
+  "NOT02" boolean
+  "INF01" boolean
+  "INF02" boolean
+  "INF03" boolean
+  "EXPOSTO" varchar(80)
+  "PEDOM" varchar(80)
+  "AUXILIAR" varchar(80)
+  "NIVELALT" varchar(80)
+  "NIVELDAT" datetime
+  "DIVISAO" varchar(80)
+  "APLICACAO" varchar(80)
+  "DATA" datetime
+  "MOLDE" varchar(50)
+  "DISPO" varchar(1)
+  "APRO" varchar(1)
+  "RESNOME" varchar(50)
+  "RESCARGO" varchar(50)
+  "EXP01" varchar(150)
+  "EXP02" varchar(150)
+  "TIPCOM" varchar(1)
+  "CODCOM" varchar(24)
+  "NOMCOM" varchar(50)
+  "FORNECEDOR" INT
+  "FORNOM" varchar(50)
+  "COMPRAS" INT
+  "COMITEM" INT
+  "PRGENT" INT
+  "INATIVO" boolean
+  "SITUACOA" varchar(1)
+  "PF" INT
+  "PPAP" INTEGER
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "PPAPC" {
+  Note: "Origem: pfp.sqlite"
+  "PPAP" INT
+  "DATA" datetime
+  "PREVISTO" datetime
+  "EFETUADO" datetime
+  "OBS" longtext
+  "DISPO" varchar(1)
+  "CODIGO" varchar(50)
+  "item" INTEGER
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "PPAPI" {
+  Note: "Origem: pfp.sqlite"
+  "DATA" datetime
+  "OBS" longtext
+  "PPAP" INT
+  "DISPO" varchar(1)
+  "ITEM" double
+  "PRAZO" datetime
+  "APROVADO" datetime
+  "dispnome" varchar(40)
+  "dispdate" datetime
+  "dispnum" INT
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "PPAPP" {
+  Note: "Origem: pfp.sqlite"
+  "PPAP" INT
+  "CODIGO" varchar(50)
+  "PF" INT
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "REV" {
+  Note: "Origem: pfp.sqlite"
+  "PF" double
+  "TIPO" varchar(3)
+  "REVISAO" INT
+  "DATA" datetime
+  "recsetor" varchar(40)
+  "recnome" varchar(40)
+  "copias" INT
+  "copiasdev" INT
+  "copiasext" INT
+  "obsoleto" varchar(40)
+  "recnum" INT
+  "datarec" datetime
+  Indexes {
+    (PF, TIPO, REVISAO) [name: "IDXREV_PF_TIPO_REVISAO"]
+    (PF) [name: "IDXREV_PF"]
+  }
+}
+
+// Origem: pfp.sqlite (SQLite)
+Table "REVI" {
+  Note: "Origem: pfp.sqlite"
+  "PF" double
+  "TIPO" varchar(3)
+  "REVISAO" INT
+  "ITEM" INT
+  "MOTIVO" longtext
+  Indexes {
+    (PF, TIPO, REVISAO, ITEM) [name: "IDXREVI_PF_TIPO_REVISAO_ITEM"]
+    (PF) [name: "IDXREVI_PF"]
+  }
+}
+
+// Origem: poa.sqlite (SQLite)
+Table "DISPO" {
+  Note: "Origem: poa.sqlite"
+  "NUMERO" INT
+  "pf" double
+  "seq" double
+  "ssq" double
+  "RESDAT" datetime
+  "RESNUM" INT
+  "RESNOM" varchar(60)
+  "ELANOM" varchar(60)
+  "ELADAT" datetime
+  "ELANUM" INT
+  "CODIGO" varchar(24)
+  "CODIGOINT" varchar(24)
+  "NOME" varchar(50)
+  "revisao" INT
+  "datarev" datetime
+  "item" INT
+  Indexes {
+    (pf, seq, ssq) [name: "IDXDISPO_pf_seq_ssq"]
+    (NUMERO) [name: "IDXDISPO_NUMERO"]
+  }
+}
+
+// Origem: poa.sqlite (SQLite)
+Table "DISPOI" {
+  Note: "Origem: poa.sqlite"
+  "NUMERO" INT
+  "ITEM" double
+  "DESCRICAO" varchar(255)
+  "imagem" BLOB
+  Indexes {
+    (NUMERO, ITEM) [name: "IDXDISPOI_NUMERO_ITEM"]
+  }
+}
+
+// Origem: poa.sqlite (SQLite)
+Table "POA" {
+  Note: "Origem: poa.sqlite"
+  "NUMERO" INT
+  "CODIGO" varchar(24)
+  "NOME" varchar(50)
+  "PROBLEMA" longtext
+  "NUMFUN" INT
+  "NOMFUN" varchar(50)
+  "ANALISE" longtext
+  "SAC" INT
+  "DATASAC" datetime
+  "SACSN" varchar(1)
+  "pf" double
+  "seq" double
+  "ssq" double
+  "RESDAT" datetime
+  "RESNUM" INT
+  "RESNOM" varchar(60)
+  "ELANOM" varchar(60)
+  "ELADAT" datetime
+  "ELANUM" INT
+  "item" INT
+  "FOTO" BLOB
+  Indexes {
+    (pf, seq, ssq) [name: "IDXPOA_pf_seq_ssq"]
+    (NUMERO) [name: "IDXPOA_NUMERO"]
+    (CODIGO) [name: "IDXPOA_CODIGO"]
+  }
+}
+
+// Origem: poa.sqlite (SQLite)
+Table "POKA" {
+  Note: "Origem: poa.sqlite"
+  "NUMERO" INT
+  "PASSO01" longtext
+  "PASSO02" longtext
+  "PASSO03" longtext
+  "PASSO04" longtext
+  "OBSPASSO01" longtext
+  "OBSPASSO02" longtext
+  "OBSPASSO03" longtext
+  "OBSPASSO04" longtext
+  "5SOQUE" varchar(255)
+  "5SCOMO" varchar(255)
+  "5SPORQUE" varchar(255)
+  "5SONDE" varchar(255)
+  "pf" double
+  "seq" double
+  "ssq" double
+  "RESDAT" datetime
+  "RESNUM" INT
+  "RESNOM" varchar(60)
+  "ELANOM" varchar(60)
+  "ELADAT" datetime
+  "ELANUM" INT
+  "CODIGO" varchar(24)
+  "NOME" varchar(50)
+  "5SOQUEm" varchar(255)
+  "revisao" INT
+  "datarev" datetime
+  "item" INT
+  "FOTOPASSO02" BLOB
+  "FOTOPASSO03" BLOB
+  "FOTOPASSO04" BLOB
+  "FOTOPASSO01" BLOB
+  Indexes {
+    (pf, seq, ssq) [name: "IDXPOKA_pf_seq_ssq"]
+    (NUMERO) [name: "IDXPOKA_NUMERO"]
+  }
+}
+
+// Origem: ppap.sqlite (SQLite)
+Table "PPAF" {
+  Note: "Origem: ppap.sqlite"
+  "CLIENTE" INT
+  "CLINOME" varchar(50)
+  "COMPRADOR" varchar(5)
+  "COMNOME" varchar(40)
+  "CODIGO" varchar(24)
+  "NOME" varchar(40)
+  "DATAALT" datetime
+  "ITEM" boolean
+  "PESO" double
+  "OBSADC01" varchar(80)
+  "OBSADC02" varchar(80)
+  "SUB01" boolean
+  "SUB02" boolean
+  "SUB03" boolean
+  "SUB04" boolean
+  "SUB05" boolean
+  "SUB06" boolean
+  "SUB07" boolean
+  "SUB08" boolean
+  "SUB09" boolean
+  "NIVEL" varchar(1)
+  "RES01" boolean
+  "RES02" boolean
+  "RES03" boolean
+  "RES04" boolean
+  "APLIC" boolean
+  "SUB10" boolean
+  "DESENHO" varchar(80)
+  "NOT01" boolean
+  "NOT02" boolean
+  "INF01" boolean
+  "INF02" boolean
+  "INF03" boolean
+  "EXPOSTO" varchar(80)
+  "PEDOM" varchar(80)
+  "AUXILIAR" varchar(80)
+  "NIVELALT" varchar(80)
+  "NIVELDAT" datetime
+  "DIVISAO" varchar(80)
+  "APLICACAO" varchar(80)
+  "DATA" datetime
+  "MOLDE" varchar(50)
+  "DISPO" varchar(1)
+  "APRO" varchar(1)
+  "RESNOME" varchar(50)
+  "RESCARGO" varchar(50)
+  "EXP01" varchar(150)
+  "EXP02" varchar(150)
+  "TIPCOM" varchar(1)
+  "CODCOM" varchar(24)
+  "NOMCOM" varchar(50)
+  "FORNECEDOR" INT
+  "FORNOM" varchar(50)
+  "PPAP" INTEGER
+  "COMPRAS" INT
+  "COMITEM" INT
+  "PRGENT" INT
+  "INATIVO" boolean
+  "SITUACAO" varchar(1)
+  "PF" INT
+  Indexes {
+    (PPAP) [name: "IDXPPAF_PPAP"]
+  }
+}
+
+// Origem: ppap.sqlite (SQLite)
+Table "PPAFC" {
+  Note: "Origem: ppap.sqlite"
+  "PPAP" INT
+  "DATA" datetime
+  "PREVISTO" datetime
+  "EFETUADO" datetime
+  "OBS" longtext
+  "DISPO" varchar(1)
+  "CODIGO" varchar(50)
+  "ITEM" INTEGER
+  Indexes {
+    (PPAP) [name: "IDXPPAFC_PPAP"]
+  }
+}
+
+// Origem: ppap.sqlite (SQLite)
+Table "PPAFI" {
+  Note: "Origem: ppap.sqlite"
+  "DATA" datetime
+  "OBS" longtext
+  "DISPO" varchar(1)
+  "ITEM" double
+  "PPAP" INT
+  "PRAZO" datetime
+  "APROVADO" datetime
+  "dispnome" varchar(40)
+  "dispdate" datetime
+  "dispnum" INT
+  Indexes {
+    (PPAP) [name: "IDXPPAFI_PPAP"]
+  }
+}
+
+// Origem: ppap.sqlite (SQLite)
+Table "PPAFP" {
+  Note: "Origem: ppap.sqlite"
+  "PPAP" INT
+  "CODIGO" varchar(50)
+  "PF" INT
+  Indexes {
+    (PPAP) [name: "IDXPPAFP_PPAP"]
+  }
+}
+
+// Origem: ppap.sqlite (SQLite)
+Table "PPAG" {
+  Note: "Origem: ppap.sqlite"
+  "CLIENTE" INT
+  "CLINOME" varchar(50)
+  "COMPRADOR" varchar(5)
+  "COMNOME" varchar(40)
+  "CODIGO" varchar(24)
+  "NOME" varchar(40)
+  "DATAALT" datetime
+  "ITEM" boolean
+  "PESO" double
+  "OBSADC01" varchar(80)
+  "OBSADC02" varchar(80)
+  "SUB01" boolean
+  "SUB02" boolean
+  "SUB03" boolean
+  "SUB04" boolean
+  "SUB05" boolean
+  "SUB06" boolean
+  "SUB07" boolean
+  "SUB08" boolean
+  "SUB09" boolean
+  "NIVEL" varchar(1)
+  "RES01" boolean
+  "RES02" boolean
+  "RES03" boolean
+  "RES04" boolean
+  "APLIC" boolean
+  "SUB10" boolean
+  "DESENHO" varchar(80)
+  "NOT01" boolean
+  "NOT02" boolean
+  "INF01" boolean
+  "INF02" boolean
+  "INF03" boolean
+  "EXPOSTO" varchar(80)
+  "PEDOM" varchar(80)
+  "AUXILIAR" varchar(80)
+  "NIVELALT" varchar(80)
+  "NIVELDAT" datetime
+  "DIVISAO" varchar(80)
+  "APLICACAO" varchar(80)
+  "DATA" datetime
+  "MOLDE" varchar(50)
+  "DISPO" varchar(1)
+  "APRO" varchar(1)
+  "RESNOME" varchar(50)
+  "RESCARGO" varchar(50)
+  "EXP01" varchar(150)
+  "EXP02" varchar(150)
+  "TIPCOM" varchar(1)
+  "CODCOM" varchar(24)
+  "NOMCOM" varchar(50)
+  "FORNECEDOR" INT
+  "FORNOM" varchar(50)
+  "COMPRAS" INT
+  "COMITEM" INT
+  "PRGENT" INT
+  "INATIVO" boolean
+  "SITUACAO" varchar(1)
+  "PF" INT
+  "PPAP" INTEGER
+  "SSMT" varchar(50)
+  Indexes {
+    (PPAP) [name: "IDXPPAG_PPAP"]
+  }
+}
+
+// Origem: ppap.sqlite (SQLite)
+Table "PPAGC" {
+  Note: "Origem: ppap.sqlite"
+  "PPAP" INT
+  "DATA" datetime
+  "PREVISTO" datetime
+  "EFETUADO" datetime
+  "OBS" longtext
+  "DISPO" varchar(1)
+  "CODIGO" varchar(50)
+  "ITEM" INTEGER
+  Indexes {
+    (PPAP) [name: "IDXPPAGC_PPAP"]
+  }
+}
+
+// Origem: ppap.sqlite (SQLite)
+Table "PPAGI" {
+  Note: "Origem: ppap.sqlite"
+  "DATA" datetime
+  "OBS" longtext
+  "DISPO" varchar(1)
+  "ITEM" double
+  "PPAP" INT
+  "PRAZO" datetime
+  "APROVADO" datetime
+  "dispnome" varchar(40)
+  "dispdate" datetime
+  "dispnum" INT
+  Indexes {
+    (PPAP) [name: "IDXPPAGI_PPAP"]
+  }
+}
+
+// Origem: ppap.sqlite (SQLite)
+Table "PPAGP" {
+  Note: "Origem: ppap.sqlite"
+  "PPAP" INT
+  "CODIGO" varchar(50)
+  "PF" INT
+  Indexes {
+    (PPAP) [name: "IDXPPAGP_PPAP"]
+  }
+}
+
+// Origem: ppap.sqlite (SQLite)
+Table "PPAP" {
+  Note: "Origem: ppap.sqlite"
+  "CLIENTE" INT
+  "CLINOME" varchar(50)
+  "COMPRADOR" varchar(5)
+  "COMNOME" varchar(40)
+  "CODIGO" varchar(24)
+  "NOME" varchar(40)
+  "DATAALT" datetime
+  "ITEM" boolean
+  "PESO" double
+  "OBSADC01" varchar(80)
+  "OBSADC02" varchar(80)
+  "SUB01" boolean
+  "SUB02" boolean
+  "SUB03" boolean
+  "SUB04" boolean
+  "SUB05" boolean
+  "SUB06" boolean
+  "SUB07" boolean
+  "SUB08" boolean
+  "SUB09" boolean
+  "NIVEL" varchar(1)
+  "RES01" boolean
+  "RES02" boolean
+  "RES03" boolean
+  "RES04" boolean
+  "APLIC" boolean
+  "SUB10" boolean
+  "DESENHO" varchar(80)
+  "NOT01" boolean
+  "NOT02" boolean
+  "INF01" boolean
+  "INF02" boolean
+  "INF03" boolean
+  "EXPOSTO" varchar(80)
+  "PEDOM" varchar(80)
+  "AUXILIAR" varchar(80)
+  "NIVELALT" varchar(80)
+  "NIVELDAT" datetime
+  "DIVISAO" varchar(80)
+  "APLICACAO" varchar(80)
+  "DATA" datetime
+  "MOLDE" varchar(50)
+  "DISPO" varchar(1)
+  "APRO" varchar(1)
+  "RESNOME" varchar(50)
+  "RESCARGO" varchar(50)
+  "EXP01" varchar(150)
+  "EXP02" varchar(150)
+  "PPAP" INTEGER
+  "TIPCOM" varchar(1)
+  "CODCOM" varchar(24)
+  "NOMCOM" varchar(50)
+  "FORNECEDOR" INT
+  "FORNOM" varchar(50)
+  "COMPRAS" INT
+  "COMITEM" INT
+  "PRGENT" INT
+  "INATIVO" boolean
+  "SITUACOA" varchar(1)
+  "PF" INT
+  Indexes {
+    (PPAP) [name: "IDXPPAP_PPAP"]
+  }
+}
+
+// Origem: ppap.sqlite (SQLite)
+Table "PPAPC" {
+  Note: "Origem: ppap.sqlite"
+  "PPAP" INT
+  "DATA" datetime
+  "PREVISTO" datetime
+  "EFETUADO" datetime
+  "OBS" longtext
+  "DISPO" varchar(1)
+  "CODIGO" varchar(50)
+  "item" INTEGER
+  Indexes {
+    (PPAP) [name: "IDXPPAPC_PPAP"]
+  }
+}
+
+// Origem: ppap.sqlite (SQLite)
+Table "PPAPI" {
+  Note: "Origem: ppap.sqlite"
+  "DATA" datetime
+  "OBS" longtext
+  "PPAP" INT
+  "DISPO" varchar(1)
+  "ITEM" double
+  "PRAZO" datetime
+  "APROVADO" datetime
+  "dispnome" varchar(40)
+  "dispdate" datetime
+  "dispnum" INT
+  Indexes {
+    (PPAP) [name: "IDXPPAPI_PPAP"]
+  }
+}
+
+// Origem: ppap.sqlite (SQLite)
+Table "PPAPP" {
+  Note: "Origem: ppap.sqlite"
+  "PPAP" INT
+  "CODIGO" varchar(50)
+  "PF" INT
+  Indexes {
+    (PPAP) [name: "IDXPPAPP_PPAP"]
+  }
+}
+

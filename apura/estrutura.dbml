@@ -1,0 +1,102 @@
+// Origem: adipie.dbf (DBF)
+Table "adipie" {
+  Note: "Origem: adipie.dbf"
+  "FORNECEDO" INTEGER [default: 0]
+  "DCLASSIPI" VARCHAR(14)
+  "DOPER" VARCHAR(3)
+  "DVALORNF" DECIMAL(18,2) [default: 0]
+  "DVALIPI" DECIMAL(18,2) [default: 0]
+  "CGC" VARCHAR(18)
+  "COGNOME" VARCHAR(20)
+  "DCFONEW" VARCHAR(4)
+  "FICHA" TINYINT(1)
+  "DESCRI" VARCHAR(60)
+  Indexes {
+    STR(FORNECEDO,8)+DOPER+DCLASSIPI [name: "ADIPIE-1"]
+    STR(FORNECEDO,8)+DCFONEW+DCLASSIPI [name: "ADIPIE-2"]
+    DCFONEW [name: "ADIPIE-3"]
+  }
+}
+
+// Origem: adipig.dbf (DBF)
+Table "adipig" {
+  Note: "Origem: adipig.dbf"
+  "GRUPO" VARCHAR(5)
+  "CFOP" VARCHAR(4)
+  Indexes {
+    GRUPO+CFOP [name: "ADIPIG"]
+    CFOP [name: "ADIPIG-2"]
+  }
+}
+
+// Origem: adipis.dbf (DBF)
+Table "adipis" {
+  Note: "Origem: adipis.dbf"
+  "FORNECEDO" INTEGER [default: 0]
+  "DCLASSIPI" VARCHAR(14)
+  "DOPER" VARCHAR(3)
+  "DVALORNF" DECIMAL(18,2) [default: 0]
+  "DVALIPI" DECIMAL(18,2) [default: 0]
+  "CGC" VARCHAR(18)
+  "COGNOME" VARCHAR(20)
+  "DCFONEW" VARCHAR(4)
+  "FICHA" TINYINT(1)
+  "DESCRI" VARCHAR(60)
+  Indexes {
+    STR(FORNECEDO,8)+DOPER+DCLASSIPI [name: "ADIPIS-1"]
+    STR(FORNECEDO,8)+DCFONEW+DCLASSIPI [name: "ADIPIS-2"]
+    DCFONEW [name: "ADIPIS-3"]
+  }
+}
+
+// Origem: bpforc.dbf (DBF)
+Table "bpforc" {
+  Note: "Origem: bpforc.dbf"
+  "FORNECEDO" INTEGER [default: 0]
+  "SAI" VARCHAR(1)
+  Indexes {
+    FORNECEDO [name: "BPFORC"]
+  }
+}
+
+// Origem: bpforr.dbf (DBF)
+Table "bpforr" {
+  Note: "Origem: bpforr.dbf"
+  "FORNECEDO" INTEGER [default: 0]
+  "TIPO" VARCHAR(1)
+  "VALOR" DECIMAL(18,2) [default: 0]
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "GRUPO" VARCHAR(4)
+  "COGNOME" VARCHAR(15)
+  "PERC" DECIMAL(15,6) [default: 0]
+  Indexes {
+    STR(ANO,4)+STR(MES,2)+STR(FORNECEDO,8) [name: "BPFORR"]
+  }
+}
+
+// Origem: bs3.dbf (DBF)
+Table "bs3" {
+  Note: "Origem: bs3.dbf"
+  "CODIGO" VARCHAR(12)
+  "NOME" VARCHAR(30)
+  "GRUPOUTL" VARCHAR(3)
+  "ESTOQUE" INTEGER [default: 0]
+  "ESTOQU3" INTEGER [default: 0]
+  "USO01" INTEGER [default: 0]
+  "USO02" INTEGER [default: 0]
+  "USO03" INTEGER [default: 0]
+  "USO04" INTEGER [default: 0]
+  "SAL01" INTEGER [default: 0]
+  "SAL02" INTEGER [default: 0]
+  "SAL03" INTEGER [default: 0]
+  "SAL04" INTEGER [default: 0]
+  "SA301" INTEGER [default: 0]
+  "SA302" INTEGER [default: 0]
+  "SA303" INTEGER [default: 0]
+  "SA304" INTEGER [default: 0]
+  Indexes {
+    CODIGO [name: "BS3-1"]
+  }
+}
+
