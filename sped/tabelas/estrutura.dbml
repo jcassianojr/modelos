@@ -1,0 +1,3992 @@
+// Origem: aj_apur_ded (DBFCDX)
+Table "aj_apur_ded" {
+  Note: "Origem: aj_apur_ded"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: aj_apur_ipi (DBFCDX)
+Table "aj_apur_ipi" {
+  Note: "Origem: aj_apur_ipi"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: aj_contrib_cred (DBFCDX)
+Table "aj_contrib_cred" {
+  Note: "Origem: aj_contrib_cred"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: aj_preco_parametro_exp (DBFCDX)
+Table "aj_preco_parametro_exp" {
+  Note: "Origem: aj_preco_parametro_exp"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: aj_preco_parametro_imp (DBFCDX)
+Table "aj_preco_parametro_imp" {
+  Note: "Origem: aj_preco_parametro_imp"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: aliq_agro_frigo (DBFCDX)
+Table "aliq_agro_frigo" {
+  Note: "Origem: aliq_agro_frigo"
+  "CODIGO" VARCHAR(3)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "LISTA_COD_" VARCHAR(254)
+  "LISTA_COD2" VARCHAR(254)
+  "EX_IPI" VARCHAR(3)
+  "ALIQ_PIS" DECIMAL(15,4) [default: 0]
+  "ALIQ_COFIN" DECIMAL(15,4) [default: 0]
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: ativos_exterior (DBFCDX)
+Table "ativos_exterior" {
+  Note: "Origem: ativos_exterior"
+  "CODIGO" VARCHAR(8)
+  "NOME" VARCHAR(86)
+  "DATAINICIO" VARCHAR(8)
+  "DATAFIM" DATETIME
+  "GRUPO" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: bc_cred (DBFCDX)
+Table "bc_cred" {
+  Note: "Origem: bc_cred"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: beneficio_fiscal (DBFCDX)
+Table "beneficio_fiscal" {
+  Note: "Origem: beneficio_fiscal"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: CBC_MOEDA_CONVERSAO (DBFCDX)
+Table "CBC_MOEDA_CONVERSAO" {
+  Note: "Origem: CBC_MOEDA_CONVERSAO"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "TIPO" VARCHAR(8)
+  "REAL_COMPR" VARCHAR(9)
+  "REAL_VENDA" VARCHAR(9)
+  "DOLAR_COMP" VARCHAR(11)
+  "DOLAR_VEND" VARCHAR(11)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: cbc_pais_acordo (DBFCDX)
+Table "cbc_pais_acordo" {
+  Note: "Origem: cbc_pais_acordo"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: cbc_pais_falha (DBFCDX)
+Table "cbc_pais_falha" {
+  Note: "Origem: cbc_pais_falha"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: cfop_credito (DBFCDX)
+Table "cfop_credito" {
+  Note: "Origem: cfop_credito"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "NAT_BC_CRE" VARCHAR(2)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: cfop_devolucao (DBFCDX)
+Table "cfop_devolucao" {
+  Note: "Origem: cfop_devolucao"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: cfop_devolucao_venda (DBFCDX)
+Table "cfop_devolucao_venda" {
+  Note: "Origem: cfop_devolucao_venda"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: cfop_receita (DBFCDX)
+Table "cfop_receita" {
+  Note: "Origem: cfop_receita"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "DESC_REC" VARCHAR(254)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: classificacao_item (DBFCDX)
+Table "classificacao_item" {
+  Note: "Origem: classificacao_item"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: class_contrib_ipi (DBFCDX)
+Table "class_contrib_ipi" {
+  Note: "Origem: class_contrib_ipi"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: cl_itens_eng_com_telecom (DBFCDX)
+Table "cl_itens_eng_com_telecom" {
+  Note: "Origem: cl_itens_eng_com_telecom"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: cnc (DBFCDX)
+Table "cnc" {
+  Note: "Origem: cnc"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: cod_ajus_base_calculo_contrib (DBFCDX)
+Table "cod_ajus_base_calculo_contrib" {
+  Note: "Origem: cod_ajus_base_calculo_contrib"
+  "COD_AJUSTE" VARCHAR(8)
+  "DESCRICAO" VARCHAR(89)
+  "OBRIGA_DET" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  Indexes {
+    COD_AJUSTE [name: "CHAVE"]
+  }
+}
+
+// Origem: cod_atividade (DBFCDX)
+Table "cod_atividade" {
+  Note: "Origem: cod_atividade"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "NCM_ATV" VARCHAR(8)
+  "ALIQ_ATV" DECIMAL(6,2) [default: 0]
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: cod_detalham (DBFCDX)
+Table "cod_detalham" {
+  Note: "Origem: cod_detalham"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: cod_enq (DBFCDX)
+Table "cod_enq" {
+  Note: "Origem: cod_enq"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: cod_natureza_ajus_base_calculo (DBFCDX)
+Table "cod_natureza_ajus_base_calculo" {
+  Note: "Origem: cod_natureza_ajus_base_calculo"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: cod_prod_usinas (DBFCDX)
+Table "cod_prod_usinas" {
+  Note: "Origem: cod_prod_usinas"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: cod_rec_f600 (DBFCDX)
+Table "cod_rec_f600" {
+  Note: "Origem: cod_rec_f600"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "PERIODICID" VARCHAR(10)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: cod_rec_p200 (DBFCDX)
+Table "cod_rec_p200" {
+  Note: "Origem: cod_rec_p200"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "PERIODICID" VARCHAR(10)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: cod_sit (DBFCDX)
+Table "cod_sit" {
+  Note: "Origem: cod_sit"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: cond_pessoa_envolv_operacao (DBFCDX)
+Table "cond_pessoa_envolv_operacao" {
+  Note: "Origem: cond_pessoa_envolv_operacao"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: consumo_agua (DBFCDX)
+Table "consumo_agua" {
+  Note: "Origem: consumo_agua"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: consumo_energia (DBFCDX)
+Table "consumo_energia" {
+  Note: "Origem: consumo_energia"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: consumo_gas (DBFCDX)
+Table "consumo_gas" {
+  Note: "Origem: consumo_gas"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: consumo_telecom (DBFCDX)
+Table "consumo_telecom" {
+  Note: "Origem: consumo_telecom"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: contasref (DBFCDX)
+Table "contasref" {
+  Note: "Origem: contasref"
+  "CODIGO" VARCHAR(20)
+  "NOME" VARCHAR(110)
+  "DATAINICIO" DATETIME
+  "DATAFIM" DATETIME
+  "TIPO_CONTA" VARCHAR(1)
+  "COD_CTA_SU" VARCHAR(9)
+  "NIVEL_CONT" VARCHAR(1)
+  "COD_NAT" VARCHAR(1)
+  "UTILIZACAO" VARCHAR(1)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: contasref_bacen (DBFCDX)
+Table "contasref_bacen" {
+  Note: "Origem: contasref_bacen"
+  "CODIGO" VARCHAR(8)
+  "NOME" VARCHAR(60)
+  "DATAINICIO" DATETIME
+  "DATAFIM" DATETIME
+  "TIPO_CONTA" VARCHAR(1)
+  "COD_CTA_SU" VARCHAR(8)
+  "NIVEL_CONT" VARCHAR(1)
+  "COD_NAT" VARCHAR(1)
+  "UTILIZACAO" VARCHAR(1)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: contasref_susep (DBFCDX)
+Table "contasref_susep" {
+  Note: "Origem: contasref_susep"
+  "CODIGO" VARCHAR(8)
+  "NOME" VARCHAR(100)
+  "DATAINICIO" DATETIME
+  "DATAFIM" DATETIME
+  "TIPO_CONTA" VARCHAR(1)
+  "COD_CTA_SU" VARCHAR(8)
+  "NIVEL_CONT" VARCHAR(1)
+  "COD_NAT" VARCHAR(1)
+  "UTILIZACAO" VARCHAR(1)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: contasref_tse (DBFCDX)
+Table "contasref_tse" {
+  Note: "Origem: contasref_tse"
+  "CODIGO" VARCHAR(20)
+  "DESCRICAO" VARCHAR(110)
+  "DATAINICIO" DATETIME
+  "DATAFIM" DATETIME
+  "TIPO_CONTA" VARCHAR(1)
+  "COD_CTA_SU" VARCHAR(20)
+  "NIVEL_CONT" VARCHAR(1)
+  "COD_NAT" VARCHAR(1)
+  "UTILIZACAO" VARCHAR(1)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: contribuicoes_cofins (DBFCDX)
+Table "contribuicoes_cofins" {
+  Note: "Origem: contribuicoes_cofins"
+  "CODIGO" VARCHAR(6)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "PERIODICID" VARCHAR(10)
+  Indexes {
+    recno() [name: "REGISTRO"]
+  }
+}
+
+// Origem: contribuicoes_pispasep (DBFCDX)
+Table "contribuicoes_pispasep" {
+  Note: "Origem: contribuicoes_pispasep"
+  "CODIGO" VARCHAR(6)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "PERIODICID" VARCHAR(10)
+  Indexes {
+    recno() [name: "REGISTRO"]
+  }
+}
+
+// Origem: csll (DBFCDX)
+Table "csll" {
+  Note: "Origem: csll"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(15)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ALIQUOTA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: cs_apur (DBFCDX)
+Table "cs_apur" {
+  Note: "Origem: cs_apur"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: data_limite_entrega (DBFCDX)
+Table "data_limite_entrega" {
+  Note: "Origem: data_limite_entrega"
+  "MES_ANO" VARCHAR(8)
+  "DATA_LIMIT" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  Indexes {
+    MES_ANO [name: "CHAVE"]
+  }
+}
+
+// Origem: deducoes (DBFCDX)
+Table "deducoes" {
+  Note: "Origem: deducoes"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "IND_ATIV" VARCHAR(15)
+  "IND_AJUSTE" VARCHAR(1)
+  "GRUPO" VARCHAR(3)
+  "IND_OUTROS" VARCHAR(1)
+  "TIPO_DEDUC" VARCHAR(1)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: deducoes_grupo000 (DBFCDX)
+Table "deducoes_grupo000" {
+  Note: "Origem: deducoes_grupo000"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "IND_ATIV" VARCHAR(15)
+  "IND_AJUSTE" VARCHAR(1)
+  "GRUPO" VARCHAR(3)
+  "SUBGRUPO" VARCHAR(5)
+  "IND_OUTROS" VARCHAR(1)
+  Indexes {
+    recno() [name: "REGISTRO"]
+  }
+}
+
+// Origem: deducoes_grupo100 (DBFCDX)
+Table "deducoes_grupo100" {
+  Note: "Origem: deducoes_grupo100"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "IND_ATIV" VARCHAR(15)
+  "IND_AJUSTE" VARCHAR(1)
+  "GRUPO" VARCHAR(3)
+  "SUBGRUPO" VARCHAR(5)
+  "IND_OUTROS" VARCHAR(1)
+  Indexes {
+    recno() [name: "REGISTRO"]
+  }
+}
+
+// Origem: deducoes_grupo200 (DBFCDX)
+Table "deducoes_grupo200" {
+  Note: "Origem: deducoes_grupo200"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "IND_ATIV" VARCHAR(15)
+  "IND_AJUSTE" VARCHAR(1)
+  "GRUPO" VARCHAR(3)
+  "SUBGRUPO" VARCHAR(5)
+  "IND_OUTROS" VARCHAR(1)
+  Indexes {
+    recno() [name: "REGISTRO"]
+  }
+}
+
+// Origem: deducoes_grupo300 (DBFCDX)
+Table "deducoes_grupo300" {
+  Note: "Origem: deducoes_grupo300"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "IND_ATIV" VARCHAR(15)
+  "IND_AJUSTE" VARCHAR(1)
+  "GRUPO" VARCHAR(3)
+  "SUBGRUPO" VARCHAR(5)
+  "IND_OUTROS" VARCHAR(1)
+  Indexes {
+    recno() [name: "REGISTRO"]
+  }
+}
+
+// Origem: deducoes_grupo400 (DBFCDX)
+Table "deducoes_grupo400" {
+  Note: "Origem: deducoes_grupo400"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "IND_ATIV" VARCHAR(15)
+  "IND_AJUSTE" VARCHAR(1)
+  "GRUPO" VARCHAR(3)
+  "SUBGRUPO" VARCHAR(5)
+  "IND_OUTROS" VARCHAR(1)
+  Indexes {
+    recno() [name: "REGISTRO"]
+  }
+}
+
+// Origem: deducoes_grupo500 (DBFCDX)
+Table "deducoes_grupo500" {
+  Note: "Origem: deducoes_grupo500"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "IND_ATIV" VARCHAR(15)
+  "IND_AJUSTE" VARCHAR(1)
+  "GRUPO" VARCHAR(3)
+  "SUBGRUPO" VARCHAR(5)
+  "IND_OUTROS" VARCHAR(1)
+  Indexes {
+    recno() [name: "REGISTRO"]
+  }
+}
+
+// Origem: deducoes_grupo600 (DBFCDX)
+Table "deducoes_grupo600" {
+  Note: "Origem: deducoes_grupo600"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "IND_ATIV" VARCHAR(15)
+  "IND_AJUSTE" VARCHAR(1)
+  "GRUPO" VARCHAR(3)
+  "SUBGRUPO" VARCHAR(5)
+  "IND_OUTROS" VARCHAR(1)
+  Indexes {
+    recno() [name: "REGISTRO"]
+  }
+}
+
+// Origem: deducoes_grupo700 (DBFCDX)
+Table "deducoes_grupo700" {
+  Note: "Origem: deducoes_grupo700"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "IND_ATIV" VARCHAR(15)
+  "IND_AJUSTE" VARCHAR(1)
+  "GRUPO" VARCHAR(3)
+  "SUBGRUPO" VARCHAR(5)
+  "IND_OUTROS" VARCHAR(1)
+  Indexes {
+    recno() [name: "REGISTRO"]
+  }
+}
+
+// Origem: deducoes_grupo800 (DBFCDX)
+Table "deducoes_grupo800" {
+  Note: "Origem: deducoes_grupo800"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "IND_ATIV" VARCHAR(15)
+  "IND_AJUSTE" VARCHAR(1)
+  "GRUPO" VARCHAR(3)
+  "SUBGRUPO" VARCHAR(5)
+  "IND_OUTROS" VARCHAR(1)
+  Indexes {
+    recno() [name: "REGISTRO"]
+  }
+}
+
+// Origem: derex_documento (DBFCDX)
+Table "derex_documento" {
+  Note: "Origem: derex_documento"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: enq_legal_ipi (DBFCDX)
+Table "enq_legal_ipi" {
+  Note: "Origem: enq_legal_ipi"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: entidades (DBFCDX)
+Table "entidades" {
+  Note: "Origem: entidades"
+  "CODIGO" VARCHAR(2)
+  "NOME" VARCHAR(82)
+  "DATAINICIO" DATETIME
+  "DATAFIM" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: entrega (DBFCDX)
+Table "entrega" {
+  Note: "Origem: entrega"
+  "ANOCALENDA" VARCHAR(8)
+  "DTLIMITE" VARCHAR(8)
+  "DATAINICIO" VARCHAR(8)
+  "DATAFIM" DATETIME
+  Indexes {
+    ANOCALENDA [name: "CHAVE"]
+  }
+}
+
+// Origem: faixa_cons_eng_elet (DBFCDX)
+Table "faixa_cons_eng_elet" {
+  Note: "Origem: faixa_cons_eng_elet"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: fontes_preco_parametro (DBFCDX)
+Table "fontes_preco_parametro" {
+  Note: "Origem: fontes_preco_parametro"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(92)
+  "DATAINICIO" VARCHAR(8)
+  "DATAFIM" DATETIME
+  "EXP_IMP" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: forma_doacao (DBFCDX)
+Table "forma_doacao" {
+  Note: "Origem: forma_doacao"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: forma_recto_pagto (DBFCDX)
+Table "forma_recto_pagto" {
+  Note: "Origem: forma_recto_pagto"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: forma_tributacao (DBFCDX)
+Table "forma_tributacao" {
+  Note: "Origem: forma_tributacao"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: genero_item (DBFCDX)
+Table "genero_item" {
+  Note: "Origem: genero_item"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: gen_item_merc_serv (DBFCDX)
+Table "gen_item_merc_serv" {
+  Note: "Origem: gen_item_merc_serv"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: grupos_deducoes (DBFCDX)
+Table "grupos_deducoes" {
+  Note: "Origem: grupos_deducoes"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "ANP"]
+  }
+}
+
+// Origem: grupos_receitas (DBFCDX)
+Table "grupos_receitas" {
+  Note: "Origem: grupos_receitas"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: in86manad_campos (DBFCDX)
+Table "in86manad_campos" {
+  Note: "Origem: in86manad_campos"
+  "SISTEMA" VARCHAR(5)
+  "SUB" VARCHAR(3)
+  "BLOCO" VARCHAR(4)
+  "SEQ" VARCHAR(2)
+  "CAMPO" VARCHAR(24)
+  "DESCRICAO" VARCHAR(46)
+  "TIPO" VARCHAR(1)
+  "VALIDACAO" VARCHAR(37)
+  "OBRIGATORI" VARCHAR(1)
+  "INICIO" VARCHAR(3)
+  "COMPRIMENT" VARCHAR(3)
+  "DECIMAIS" VARCHAR(1)
+  "TAMANHO" VARCHAR(3)
+  "SEQSALVAR" VARCHAR(2)
+  Indexes {
+    SISTEMA+SUB+BLOCO [name: "BLOCOS"]
+  }
+}
+
+// Origem: incentivo_fiscal (DBFCDX)
+Table "incentivo_fiscal" {
+  Note: "Origem: incentivo_fiscal"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: indicador_inicio_periodo (DBFCDX)
+Table "indicador_inicio_periodo" {
+  Note: "Origem: indicador_inicio_periodo"
+  "CODIGO" VARCHAR(1)
+  "NOME" VARCHAR(172)
+  "DATAINICIO" DATETIME
+  "DATAFIM" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: ind_emit (DBFCDX)
+Table "ind_emit" {
+  Note: "Origem: ind_emit"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: instituicoes (DBFCDX)
+Table "instituicoes" {
+  Note: "Origem: instituicoes"
+  "CODIGO" VARCHAR(2)
+  "NOME" VARCHAR(153)
+  "DATAINICIO" DATETIME
+  "DATAFIM" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: l100_a (DBFCDX)
+Table "l100_a" {
+  Note: "Origem: l100_a"
+  "CODIGO" VARCHAR(13)
+  "DESCRICAO" VARCHAR(167)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "COD_SUP" VARCHAR(10)
+  "NIVEL" VARCHAR(8)
+  "NATUREZA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: l100_a_regras (DBFCDX)
+Table "l100_a_regras" {
+  Note: "Origem: l100_a_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(58)
+  "MENSAGEM" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: l100_b (DBFCDX)
+Table "l100_b" {
+  Note: "Origem: l100_b"
+  "CODIGO" VARCHAR(15)
+  "DESCRICAO" VARCHAR(118)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "COD_SUP" VARCHAR(15)
+  "NIVEL" VARCHAR(8)
+  "NATUREZA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: l100_c (DBFCDX)
+Table "l100_c" {
+  Note: "Origem: l100_c"
+  "CODIGO" VARCHAR(10)
+  "DESCRICAO" VARCHAR(88)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "COD_SUP" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "NATUREZA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: l210 (DBFCDX)
+Table "l210" {
+  Note: "Origem: l210"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(93)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(44)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: l210_regras (DBFCDX)
+Table "l210_regras" {
+  Note: "Origem: l210_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(90)
+  "MENSAGEM" VARCHAR(164)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: l300_a (DBFCDX)
+Table "l300_a" {
+  Note: "Origem: l300_a"
+  "CODIGO" VARCHAR(16)
+  "DESCRICAO" VARCHAR(138)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "COD_SUP" VARCHAR(13)
+  "NIVEL" VARCHAR(8)
+  "NATUREZA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: l300_a_regras (DBFCDX)
+Table "l300_a_regras" {
+  Note: "Origem: l300_a_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(16)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(110)
+  "MENSAGEM" VARCHAR(174)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: l300_b (DBFCDX)
+Table "l300_b" {
+  Note: "Origem: l300_b"
+  "CODIGO" VARCHAR(15)
+  "DESCRICAO" VARCHAR(115)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "COD_SUP" VARCHAR(15)
+  "NIVEL" VARCHAR(8)
+  "NATUREZA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: l300_b_regras (DBFCDX)
+Table "l300_b_regras" {
+  Note: "Origem: l300_b_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(15)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(99)
+  "MENSAGEM" VARCHAR(218)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: l300_c (DBFCDX)
+Table "l300_c" {
+  Note: "Origem: l300_c"
+  "CODIGO" VARCHAR(19)
+  "DESCRICAO" VARCHAR(158)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "COD_SUP" VARCHAR(16)
+  "NIVEL" VARCHAR(8)
+  "NATUREZA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: l300_c_regras (DBFCDX)
+Table "l300_c_regras" {
+  Note: "Origem: l300_c_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(13)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(58)
+  "MENSAGEM" VARCHAR(156)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: l300_r (DBFCDX)
+Table "l300_r" {
+  Note: "Origem: l300_r"
+  "CODIGO" VARCHAR(16)
+  "DESCRICAO" VARCHAR(138)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "COD_SUP" VARCHAR(13)
+  "NIVEL" VARCHAR(8)
+  "NATUREZA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: l300_r_regras (DBFCDX)
+Table "l300_r_regras" {
+  Note: "Origem: l300_r_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(13)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(94)
+  "MENSAGEM" VARCHAR(126)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: m300_a (DBFCDX)
+Table "m300_a" {
+  Note: "Origem: m300_a"
+  "CODIGO" VARCHAR(6)
+  "DESCRICAO" VARCHAR(215)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(47)
+  "TIPO" VARCHAR(62)
+  "FORMATO" VARCHAR(41)
+  "LINHA_ECF" VARCHAR(27)
+  "FORMULA" VARCHAR(127)
+  "TIPO_LANC" VARCHAR(30)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: m300_a_regras (DBFCDX)
+Table "m300_a_regras" {
+  Note: "Origem: m300_a_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(213)
+  "MENSAGEM" VARCHAR(193)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: m300_b (DBFCDX)
+Table "m300_b" {
+  Note: "Origem: m300_b"
+  "CODIGO" VARCHAR(6)
+  "DESCRICAO" VARCHAR(215)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(47)
+  "TIPO" VARCHAR(62)
+  "FORMATO" VARCHAR(41)
+  "LINHA_ECF" VARCHAR(27)
+  "FORMULA" VARCHAR(127)
+  "TIPO_LANC" VARCHAR(30)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: m300_b_regras (DBFCDX)
+Table "m300_b_regras" {
+  Note: "Origem: m300_b_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(152)
+  "MENSAGEM" VARCHAR(193)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: m300_c (DBFCDX)
+Table "m300_c" {
+  Note: "Origem: m300_c"
+  "CODIGO" VARCHAR(6)
+  "DESCRICAO" VARCHAR(215)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(47)
+  "TIPO" VARCHAR(62)
+  "FORMATO" VARCHAR(41)
+  "LINHA_ECF" VARCHAR(27)
+  "FORMULA" VARCHAR(127)
+  "TIPO_LANC" VARCHAR(30)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: m300_c_regras (DBFCDX)
+Table "m300_c_regras" {
+  Note: "Origem: m300_c_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(152)
+  "MENSAGEM" VARCHAR(193)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: m300_r (DBFCDX)
+Table "m300_r" {
+  Note: "Origem: m300_r"
+  "CODIGO" VARCHAR(6)
+  "DESCRICAO" VARCHAR(215)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(47)
+  "TIPO" VARCHAR(62)
+  "FORMATO" VARCHAR(41)
+  "LINHA_ECF" VARCHAR(27)
+  "FORMULA" VARCHAR(127)
+  "TIPO_LANC" VARCHAR(30)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: m300_r_regras (DBFCDX)
+Table "m300_r_regras" {
+  Note: "Origem: m300_r_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(213)
+  "MENSAGEM" VARCHAR(193)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: m350_a (DBFCDX)
+Table "m350_a" {
+  Note: "Origem: m350_a"
+  "CODIGO" VARCHAR(6)
+  "DESCRICAO" VARCHAR(215)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(47)
+  "TIPO" VARCHAR(62)
+  "FORMATO" VARCHAR(41)
+  "LINHA_ECF" VARCHAR(27)
+  "FORMULA" VARCHAR(127)
+  "TIPO_LANC" VARCHAR(30)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: m350_a_regras (DBFCDX)
+Table "m350_a_regras" {
+  Note: "Origem: m350_a_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(213)
+  "MENSAGEM" VARCHAR(193)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: m350_b (DBFCDX)
+Table "m350_b" {
+  Note: "Origem: m350_b"
+  "CODIGO" VARCHAR(6)
+  "DESCRICAO" VARCHAR(215)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(47)
+  "TIPO" VARCHAR(62)
+  "FORMATO" VARCHAR(41)
+  "LINHA_ECF" VARCHAR(27)
+  "FORMULA" VARCHAR(127)
+  "TIPO_LANC" VARCHAR(30)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: m350_b_regras (DBFCDX)
+Table "m350_b_regras" {
+  Note: "Origem: m350_b_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(152)
+  "MENSAGEM" VARCHAR(193)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: m350_c (DBFCDX)
+Table "m350_c" {
+  Note: "Origem: m350_c"
+  "CODIGO" VARCHAR(6)
+  "DESCRICAO" VARCHAR(215)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(47)
+  "TIPO" VARCHAR(62)
+  "FORMATO" VARCHAR(41)
+  "LINHA_ECF" VARCHAR(27)
+  "FORMULA" VARCHAR(127)
+  "TIPO_LANC" VARCHAR(30)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: m350_c_regras (DBFCDX)
+Table "m350_c_regras" {
+  Note: "Origem: m350_c_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(152)
+  "MENSAGEM" VARCHAR(193)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: m350_r (DBFCDX)
+Table "m350_r" {
+  Note: "Origem: m350_r"
+  "CODIGO" VARCHAR(6)
+  "DESCRICAO" VARCHAR(215)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(47)
+  "TIPO" VARCHAR(62)
+  "FORMATO" VARCHAR(41)
+  "LINHA_ECF" VARCHAR(27)
+  "FORMULA" VARCHAR(127)
+  "TIPO_LANC" VARCHAR(30)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: m350_r_regras (DBFCDX)
+Table "m350_r_regras" {
+  Note: "Origem: m350_r_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(213)
+  "MENSAGEM" VARCHAR(193)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: metodo_avaliacao_estoque (DBFCDX)
+Table "metodo_avaliacao_estoque" {
+  Note: "Origem: metodo_avaliacao_estoque"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: metodo_control (DBFCDX)
+Table "metodo_control" {
+  Note: "Origem: metodo_control"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: metodo_export (DBFCDX)
+Table "metodo_export" {
+  Note: "Origem: metodo_export"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: metodo_import (DBFCDX)
+Table "metodo_import" {
+  Note: "Origem: metodo_import"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: modelos (DBFCDX)
+Table "modelos" {
+  Note: "Origem: modelos"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: motivo_dispensa_entrega (DBFCDX)
+Table "motivo_dispensa_entrega" {
+  Note: "Origem: motivo_dispensa_entrega"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: motivo_situacao_cadastral (DBFCDX)
+Table "motivo_situacao_cadastral" {
+  Note: "Origem: motivo_situacao_cadastral"
+  "CODIGO" VARCHAR(2)
+  "DESCRICAO" VARCHAR(90)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: motivo_substituicao (DBFCDX)
+Table "motivo_substituicao" {
+  Note: "Origem: motivo_substituicao"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: n500 (DBFCDX)
+Table "n500" {
+  Note: "Origem: n500"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(71)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: n500_regras (DBFCDX)
+Table "n500_regras" {
+  Note: "Origem: n500_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(22)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(69)
+  "MENSAGEM" VARCHAR(186)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: n600 (DBFCDX)
+Table "n600" {
+  Note: "Origem: n600"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(202)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(159)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: n600_regras (DBFCDX)
+Table "n600_regras" {
+  Note: "Origem: n600_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(101)
+  "MENSAGEM" VARCHAR(129)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: n610 (DBFCDX)
+Table "n610" {
+  Note: "Origem: n610"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(90)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(161)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: n610_regras (DBFCDX)
+Table "n610_regras" {
+  Note: "Origem: n610_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(121)
+  "MENSAGEM" VARCHAR(61)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: n620 (DBFCDX)
+Table "n620" {
+  Note: "Origem: n620"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(128)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(178)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: n620_regras (DBFCDX)
+Table "n620_regras" {
+  Note: "Origem: n620_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(30)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(244)
+  "MENSAGEM" VARCHAR(231)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: n630_a (DBFCDX)
+Table "n630_a" {
+  Note: "Origem: n630_a"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(128)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(178)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: n630_a_regras (DBFCDX)
+Table "n630_a_regras" {
+  Note: "Origem: n630_a_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(156)
+  "MENSAGEM" VARCHAR(220)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: n630_b (DBFCDX)
+Table "n630_b" {
+  Note: "Origem: n630_b"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(123)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(103)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: n630_b_regras (DBFCDX)
+Table "n630_b_regras" {
+  Note: "Origem: n630_b_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(139)
+  "MENSAGEM" VARCHAR(143)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: n630_c (DBFCDX)
+Table "n630_c" {
+  Note: "Origem: n630_c"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(123)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(103)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: n630_c_regras (DBFCDX)
+Table "n630_c_regras" {
+  Note: "Origem: n630_c_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(139)
+  "MENSAGEM" VARCHAR(143)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: n650 (DBFCDX)
+Table "n650" {
+  Note: "Origem: n650"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(71)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: n650_regras (DBFCDX)
+Table "n650_regras" {
+  Note: "Origem: n650_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(21)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(69)
+  "MENSAGEM" VARCHAR(191)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: n660 (DBFCDX)
+Table "n660" {
+  Note: "Origem: n660"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(131)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(96)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: n660_regras (DBFCDX)
+Table "n660_regras" {
+  Note: "Origem: n660_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(30)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(244)
+  "MENSAGEM" VARCHAR(199)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: n670 (DBFCDX)
+Table "n670" {
+  Note: "Origem: n670"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(131)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(26)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: n670_regras (DBFCDX)
+Table "n670_regras" {
+  Note: "Origem: n670_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(134)
+  "MENSAGEM" VARCHAR(115)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: natureza (DBFCDX)
+Table "natureza" {
+  Note: "Origem: natureza"
+  "CODIGO" VARCHAR(2)
+  "NOME" VARCHAR(65)
+  "DATAINICIO" DATETIME
+  "DATAFIM" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: natureza_acao_judicial (DBFCDX)
+Table "natureza_acao_judicial" {
+  Note: "Origem: natureza_acao_judicial"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: natureza_juridica (DBFCDX)
+Table "natureza_juridica" {
+  Note: "Origem: natureza_juridica"
+  "CODIGO" VARCHAR(4)
+  "DESCRICAO" VARCHAR(80)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: natureza_operacao (DBFCDX)
+Table "natureza_operacao" {
+  Note: "Origem: natureza_operacao"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: natureza_processo_adm (DBFCDX)
+Table "natureza_processo_adm" {
+  Note: "Origem: natureza_processo_adm"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: natureza_subconta (DBFCDX)
+Table "natureza_subconta" {
+  Note: "Origem: natureza_subconta"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: obr_icms_recol (DBFCDX)
+Table "obr_icms_recol" {
+  Note: "Origem: obr_icms_recol"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: oper_com_isencao (DBFCDX)
+Table "oper_com_isencao" {
+  Note: "Origem: oper_com_isencao"
+  "CODIGO" VARCHAR(3)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "LISTA_COD_" VARCHAR(254)
+  "LISTA_COD2" VARCHAR(254)
+  "EX_IPI" VARCHAR(3)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: oper_com_suspensao (DBFCDX)
+Table "oper_com_suspensao" {
+  Note: "Origem: oper_com_suspensao"
+  "CODIGO" VARCHAR(3)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "LISTA_COD_" VARCHAR(254)
+  "LISTA_COD2" VARCHAR(254)
+  "EX_IPI" VARCHAR(3)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: oper_sem_incidencia (DBFCDX)
+Table "oper_sem_incidencia" {
+  Note: "Origem: oper_sem_incidencia"
+  "CODIGO" VARCHAR(3)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "LISTA_COD_" VARCHAR(254)
+  "LISTA_COD2" VARCHAR(254)
+  "EX_IPI" VARCHAR(3)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: outros_aliq_difer (DBFCDX)
+Table "outros_aliq_difer" {
+  Note: "Origem: outros_aliq_difer"
+  "CODIGO" VARCHAR(3)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "LISTA_COD_" VARCHAR(254)
+  "LISTA_COD2" VARCHAR(254)
+  "EX_IPI" VARCHAR(3)
+  "ALIQ_PIS_C" DECIMAL(15,4) [default: 0]
+  "ALIQ_PIS2" DECIMAL(15,4) [default: 0]
+  "ALIQ_COFIN" DECIMAL(15,4) [default: 0]
+  "ALIQ_COFI2" DECIMAL(15,4) [default: 0]
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: p100 (DBFCDX)
+Table "p100" {
+  Note: "Origem: p100"
+  "CODIGO" VARCHAR(13)
+  "DESCRICAO" VARCHAR(167)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "COD_SUP" VARCHAR(10)
+  "NIVEL" VARCHAR(8)
+  "NATUREZA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: p100_b (DBFCDX)
+Table "p100_b" {
+  Note: "Origem: p100_b"
+  "CODIGO" VARCHAR(15)
+  "DESCRICAO" VARCHAR(118)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "COD_SUP" VARCHAR(15)
+  "NIVEL" VARCHAR(8)
+  "NATUREZA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: p100_b_regras (DBFCDX)
+Table "p100_b_regras" {
+  Note: "Origem: p100_b_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(15)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(58)
+  "MENSAGEM" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: p100_regras (DBFCDX)
+Table "p100_regras" {
+  Note: "Origem: p100_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(58)
+  "MENSAGEM" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: p130 (DBFCDX)
+Table "p130" {
+  Note: "Origem: p130"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(68)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(95)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: p130_regras (DBFCDX)
+Table "p130_regras" {
+  Note: "Origem: p130_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(189)
+  "MENSAGEM" VARCHAR(142)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: p150 (DBFCDX)
+Table "p150" {
+  Note: "Origem: p150"
+  "CODIGO" VARCHAR(16)
+  "DESCRICAO" VARCHAR(138)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "COD_SUP" VARCHAR(13)
+  "NIVEL" VARCHAR(8)
+  "NATUREZA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: p150_b (DBFCDX)
+Table "p150_b" {
+  Note: "Origem: p150_b"
+  "CODIGO" VARCHAR(15)
+  "DESCRICAO" VARCHAR(115)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "COD_SUP" VARCHAR(15)
+  "NIVEL" VARCHAR(8)
+  "NATUREZA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: p150_b_regras (DBFCDX)
+Table "p150_b_regras" {
+  Note: "Origem: p150_b_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(15)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(99)
+  "MENSAGEM" VARCHAR(218)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: p150_r (DBFCDX)
+Table "p150_r" {
+  Note: "Origem: p150_r"
+  "CODIGO" VARCHAR(16)
+  "DESCRICAO" VARCHAR(138)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "COD_SUP" VARCHAR(13)
+  "NIVEL" VARCHAR(8)
+  "NATUREZA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: p150_regras (DBFCDX)
+Table "p150_regras" {
+  Note: "Origem: p150_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(16)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(110)
+  "MENSAGEM" VARCHAR(164)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: p150_r_regras (DBFCDX)
+Table "p150_r_regras" {
+  Note: "Origem: p150_r_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(13)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(94)
+  "MENSAGEM" VARCHAR(126)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: p200 (DBFCDX)
+Table "p200" {
+  Note: "Origem: p200"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(219)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(203)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: p200_regras (DBFCDX)
+Table "p200_regras" {
+  Note: "Origem: p200_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(205)
+  "MENSAGEM" VARCHAR(228)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: p230 (DBFCDX)
+Table "p230" {
+  Note: "Origem: p230"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(59)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(147)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: p230_regras (DBFCDX)
+Table "p230_regras" {
+  Note: "Origem: p230_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(120)
+  "MENSAGEM" VARCHAR(111)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: p300 (DBFCDX)
+Table "p300" {
+  Note: "Origem: p300"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(121)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(122)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: p300_regras (DBFCDX)
+Table "p300_regras" {
+  Note: "Origem: p300_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(128)
+  "MENSAGEM" VARCHAR(201)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: p400 (DBFCDX)
+Table "p400" {
+  Note: "Origem: p400"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(219)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(141)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: p400_regras (DBFCDX)
+Table "p400_regras" {
+  Note: "Origem: p400_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(246)
+  "MENSAGEM" VARCHAR(208)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: p500 (DBFCDX)
+Table "p500" {
+  Note: "Origem: p500"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(131)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(26)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: p500_regras (DBFCDX)
+Table "p500_regras" {
+  Note: "Origem: p500_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(133)
+  "MENSAGEM" VARCHAR(114)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: parteb_padrao (DBFCDX)
+Table "parteb_padrao" {
+  Note: "Origem: parteb_padrao"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(242)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "TRIBUTO" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: parteb_partea (DBFCDX)
+Table "parteb_partea" {
+  Note: "Origem: parteb_partea"
+  "COD_PB_RFB" VARCHAR(8)
+  "COD_PART_A" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "COD_QUALIF" VARCHAR(8)
+  Indexes {
+    COD_PB_RFB [name: "CHAVE"]
+  }
+}
+
+// Origem: prod_aliq_zero (DBFCDX)
+Table "prod_aliq_zero" {
+  Note: "Origem: prod_aliq_zero"
+  "CODIGO" VARCHAR(3)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "LISTA_COD_" VARCHAR(254)
+  "LISTA_COD2" VARCHAR(254)
+  "EX_IPI" VARCHAR(3)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: prod_mono_aliq_difer (DBFCDX)
+Table "prod_mono_aliq_difer" {
+  Note: "Origem: prod_mono_aliq_difer"
+  "CODIGO" VARCHAR(3)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "LISTA_COD_" VARCHAR(254)
+  "LISTA_COD2" VARCHAR(254)
+  "EX_IPI" VARCHAR(3)
+  "ALIQ_PIS" DECIMAL(15,4) [default: 0]
+  "ALIQ_COFIN" DECIMAL(15,4) [default: 0]
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: prod_mono_aliq_unid (DBFCDX)
+Table "prod_mono_aliq_unid" {
+  Note: "Origem: prod_mono_aliq_unid"
+  "CODIGO" VARCHAR(6)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "LISTA_COD_" VARCHAR(254)
+  "LISTA_CO2" VARCHAR(254)
+  "EX_IPI" VARCHAR(3)
+  "ALIQ_PIS_Q" DECIMAL(15,4) [default: 0]
+  "ALIQ_COFIN" DECIMAL(15,4) [default: 0]
+  "UNID" VARCHAR(254)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: prod_st (DBFCDX)
+Table "prod_st" {
+  Note: "Origem: prod_st"
+  "CODIGO" VARCHAR(3)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "LISTA_COD_" VARCHAR(254)
+  "LISTA_COD2" VARCHAR(254)
+  "EX_IPI" VARCHAR(3)
+  "ALIQ_PIS" DECIMAL(15,4) [default: 0]
+  "ALIQ_COFIN" DECIMAL(15,4) [default: 0]
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: projeto (DBFCDX)
+Table "projeto" {
+  Note: "Origem: projeto"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: qualificacao (DBFCDX)
+Table "qualificacao" {
+  Note: "Origem: qualificacao"
+  "CODIGO" VARCHAR(3)
+  "NOME" VARCHAR(161)
+  "DATAINICIO" DATETIME
+  "DATAFIM" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: qualif_assin_termo (DBFCDX)
+Table "qualif_assin_termo" {
+  Note: "Origem: qualif_assin_termo"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: qualif_pessoa_juridica (DBFCDX)
+Table "qualif_pessoa_juridica" {
+  Note: "Origem: qualif_pessoa_juridica"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: qualif_repres_legal (DBFCDX)
+Table "qualif_repres_legal" {
+  Note: "Origem: qualif_repres_legal"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: qualif_socio_cnpj (DBFCDX)
+Table "qualif_socio_cnpj" {
+  Note: "Origem: qualif_socio_cnpj"
+  "CODIGO" VARCHAR(2)
+  "DESCRICAO" VARCHAR(80)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: qualif_socio_titular (DBFCDX)
+Table "qualif_socio_titular" {
+  Note: "Origem: qualif_socio_titular"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: receitas (DBFCDX)
+Table "receitas" {
+  Note: "Origem: receitas"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "IND_ATIV" VARCHAR(15)
+  "IND_AJUSTE" VARCHAR(1)
+  "GRUPO" VARCHAR(3)
+  "IND_OUTROS" VARCHAR(1)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: receitas_grupo000 (DBFCDX)
+Table "receitas_grupo000" {
+  Note: "Origem: receitas_grupo000"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "IND_ATIV" VARCHAR(15)
+  "IND_AJUSTE" VARCHAR(1)
+  "GRUPO" VARCHAR(3)
+  "SUBGRUPO" VARCHAR(5)
+  "IND_OUTROS" VARCHAR(1)
+  Indexes {
+    recno() [name: "REGISTRO"]
+  }
+}
+
+// Origem: receitas_grupo100 (DBFCDX)
+Table "receitas_grupo100" {
+  Note: "Origem: receitas_grupo100"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "IND_ATIV" VARCHAR(15)
+  "IND_AJUSTE" VARCHAR(1)
+  "GRUPO" VARCHAR(3)
+  "SUBGRUPO" VARCHAR(5)
+  "IND_OUTROS" VARCHAR(1)
+  Indexes {
+    recno() [name: "REGISTRO"]
+  }
+}
+
+// Origem: receitas_grupo200 (DBFCDX)
+Table "receitas_grupo200" {
+  Note: "Origem: receitas_grupo200"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "IND_ATIV" VARCHAR(15)
+  "IND_AJUSTE" VARCHAR(1)
+  "GRUPO" VARCHAR(3)
+  "SUBGRUPO" VARCHAR(5)
+  "IND_OUTROS" VARCHAR(1)
+  Indexes {
+    recno() [name: "REGISTRO"]
+  }
+}
+
+// Origem: receitas_grupo300 (DBFCDX)
+Table "receitas_grupo300" {
+  Note: "Origem: receitas_grupo300"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "IND_ATIV" VARCHAR(15)
+  "IND_AJUSTE" VARCHAR(1)
+  "GRUPO" VARCHAR(3)
+  "SUBGRUPO" VARCHAR(5)
+  "IND_OUTROS" VARCHAR(1)
+  Indexes {
+    recno() [name: "REGISTRO"]
+  }
+}
+
+// Origem: receitas_grupo400 (DBFCDX)
+Table "receitas_grupo400" {
+  Note: "Origem: receitas_grupo400"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "IND_ATIV" VARCHAR(15)
+  "IND_AJUSTE" VARCHAR(1)
+  "GRUPO" VARCHAR(3)
+  "SUBGRUPO" VARCHAR(5)
+  "IND_OUTROS" VARCHAR(1)
+  Indexes {
+    recno() [name: "REGISTRO"]
+  }
+}
+
+// Origem: receitas_grupo500 (DBFCDX)
+Table "receitas_grupo500" {
+  Note: "Origem: receitas_grupo500"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "IND_ATIV" VARCHAR(15)
+  "IND_AJUSTE" VARCHAR(1)
+  "GRUPO" VARCHAR(3)
+  "SUBGRUPO" VARCHAR(5)
+  "IND_OUTROS" VARCHAR(1)
+  Indexes {
+    recno() [name: "REGISTRO"]
+  }
+}
+
+// Origem: receitas_grupo600 (DBFCDX)
+Table "receitas_grupo600" {
+  Note: "Origem: receitas_grupo600"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "IND_ATIV" VARCHAR(15)
+  "IND_AJUSTE" VARCHAR(1)
+  "GRUPO" VARCHAR(3)
+  "SUBGRUPO" VARCHAR(5)
+  "IND_OUTROS" VARCHAR(1)
+  Indexes {
+    recno() [name: "REGISTRO"]
+  }
+}
+
+// Origem: receitas_grupo700 (DBFCDX)
+Table "receitas_grupo700" {
+  Note: "Origem: receitas_grupo700"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "IND_ATIV" VARCHAR(15)
+  "IND_AJUSTE" VARCHAR(1)
+  "GRUPO" VARCHAR(3)
+  "SUBGRUPO" VARCHAR(5)
+  "IND_OUTROS" VARCHAR(1)
+  Indexes {
+    recno() [name: "REGISTRO"]
+  }
+}
+
+// Origem: receitas_visao_analit_refer (DBFCDX)
+Table "receitas_visao_analit_refer" {
+  Note: "Origem: receitas_visao_analit_refer"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "IND_ATIV" VARCHAR(15)
+  "IND_AJUSTE" VARCHAR(1)
+  "GRUPO" VARCHAR(3)
+  "IND_OUTROS" VARCHAR(1)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: rec_ref_obrigacao (DBFCDX)
+Table "rec_ref_obrigacao" {
+  Note: "Origem: rec_ref_obrigacao"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: REGRAS_GERAIS (DBFCDX)
+Table "REGRAS_GERAIS" {
+  Note: "Origem: REGRAS_GERAIS"
+  "CODIGO" VARCHAR(20)
+  "DESCRICAO" VARCHAR(83)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "REGISTRO" VARCHAR(8)
+  "CAMPO_REF" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(63)
+  "MENSAGEM" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: relacionamentos (DBFCDX)
+Table "relacionamentos" {
+  Note: "Origem: relacionamentos"
+  "CODIGO" VARCHAR(2)
+  "NOME" VARCHAR(255)
+  "DATAINICIO" DATETIME
+  "DATAFIM" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: retencao_fonte (DBFCDX)
+Table "retencao_fonte" {
+  Note: "Origem: retencao_fonte"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(111)
+  "DATAINICIO" VARCHAR(8)
+  "DATAFIM" DATETIME
+  "BENEFIC" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: selo_cont_ipi (DBFCDX)
+Table "selo_cont_ipi" {
+  Note: "Origem: selo_cont_ipi"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: servico_lcp_116 (DBFCDX)
+Table "servico_lcp_116" {
+  Note: "Origem: servico_lcp_116"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: siscomex_paises (DBFCDX)
+Table "siscomex_paises" {
+  Note: "Origem: siscomex_paises"
+  "CODIGO" VARCHAR(3)
+  "DESCRICAO" VARCHAR(40)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: situacao (DBFCDX)
+Table "situacao" {
+  Note: "Origem: situacao"
+  "CODIGO" VARCHAR(1)
+  "NOME" VARCHAR(37)
+  "DATAINICIO" DATETIME
+  "DATAFIM" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: sit_trib_icms_a (DBFCDX)
+Table "sit_trib_icms_a" {
+  Note: "Origem: sit_trib_icms_a"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: sit_trib_icms_b (DBFCDX)
+Table "sit_trib_icms_b" {
+  Note: "Origem: sit_trib_icms_b"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: sped_contabil_campos (DBFCDX)
+Table "sped_contabil_campos" {
+  Note: "Origem: sped_contabil_campos"
+  "BLOCO" VARCHAR(4)
+  "SEQUENCIA" VARCHAR(2)
+  "CAMPO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "TIPO" VARCHAR(1)
+  "TAMANHO" VARCHAR(4)
+}
+
+// Origem: sped_contabil_registros (DBFCDX)
+Table "sped_contabil_registros" {
+  Note: "Origem: sped_contabil_registros"
+  "CODIGO" VARCHAR(4)
+  "DESCRICAO" VARCHAR(254)
+}
+
+// Origem: sped_contribuicoes_campos (DBFCDX)
+Table "sped_contribuicoes_campos" {
+  Note: "Origem: sped_contribuicoes_campos"
+  "BLOCO" VARCHAR(4)
+  "SEQUENCIA" VARCHAR(2)
+  "CAMPO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "TIPO" VARCHAR(1)
+  "TAMANHO" VARCHAR(4)
+}
+
+// Origem: sped_contribuicoes_registros (DBFCDX)
+Table "sped_contribuicoes_registros" {
+  Note: "Origem: sped_contribuicoes_registros"
+  "CODIGO" VARCHAR(4)
+  "DESCRICAO" VARCHAR(254)
+}
+
+// Origem: sped_fcont_campos (DBFCDX)
+Table "sped_fcont_campos" {
+  Note: "Origem: sped_fcont_campos"
+  "BLOCO" VARCHAR(4)
+  "SEQUENCIA" VARCHAR(2)
+  "CAMPO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "TIPO" VARCHAR(1)
+  "TAMANHO" VARCHAR(4)
+}
+
+// Origem: sped_fcont_registros (DBFCDX)
+Table "sped_fcont_registros" {
+  Note: "Origem: sped_fcont_registros"
+  "CODIGO" VARCHAR(4)
+  "DESCRICAO" VARCHAR(254)
+}
+
+// Origem: sped_fiscal_campos (DBFCDX)
+Table "sped_fiscal_campos" {
+  Note: "Origem: sped_fiscal_campos"
+  "BLOCO" VARCHAR(4)
+  "SEQUENCIA" VARCHAR(2)
+  "CAMPO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "TIPO" VARCHAR(1)
+  "TAMANHO" VARCHAR(4)
+}
+
+// Origem: sped_fiscal_registros (DBFCDX)
+Table "sped_fiscal_registros" {
+  Note: "Origem: sped_fiscal_registros"
+  "CODIGO" VARCHAR(4)
+  "DESCRICAO" VARCHAR(254)
+}
+
+// Origem: sped_paises (DBFCDX)
+Table "sped_paises" {
+  Note: "Origem: sped_paises"
+  "BACEN" INTEGER [default: 0]
+  "NOME" VARCHAR(35)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    BACEN [name: "BACEN"]
+  }
+}
+
+// Origem: subgrupos_receitas (DBFCDX)
+Table "subgrupos_receitas" {
+  Note: "Origem: subgrupos_receitas"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  "GRUPO" VARCHAR(3)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: t120 (DBFCDX)
+Table "t120" {
+  Note: "Origem: t120"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(219)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(229)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: t120_regras (DBFCDX)
+Table "t120_regras" {
+  Note: "Origem: t120_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(94)
+  "MENSAGEM" VARCHAR(126)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: t150 (DBFCDX)
+Table "t150" {
+  Note: "Origem: t150"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(121)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(122)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: t150_regras (DBFCDX)
+Table "t150_regras" {
+  Note: "Origem: t150_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(133)
+  "MENSAGEM" VARCHAR(168)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: t170 (DBFCDX)
+Table "t170" {
+  Note: "Origem: t170"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(219)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(103)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: t170_regras (DBFCDX)
+Table "t170_regras" {
+  Note: "Origem: t170_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(133)
+  "MENSAGEM" VARCHAR(168)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: t181 (DBFCDX)
+Table "t181" {
+  Note: "Origem: t181"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(131)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(34)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: t181_regras (DBFCDX)
+Table "t181_regras" {
+  Note: "Origem: t181_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(42)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(53)
+  "MENSAGEM" VARCHAR(46)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: tipo_beneficiario (DBFCDX)
+Table "tipo_beneficiario" {
+  Note: "Origem: tipo_beneficiario"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: tipo_cred (DBFCDX)
+Table "tipo_cred" {
+  Note: "Origem: tipo_cred"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: tipo_ct_e (DBFCDX)
+Table "tipo_ct_e" {
+  Note: "Origem: tipo_ct_e"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: tipo_doc (DBFCDX)
+Table "tipo_doc" {
+  Note: "Origem: tipo_doc"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: tipo_empresa (DBFCDX)
+Table "tipo_empresa" {
+  Note: "Origem: tipo_empresa"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: tipo_entidade (DBFCDX)
+Table "tipo_entidade" {
+  Note: "Origem: tipo_entidade"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: tipo_export_import (DBFCDX)
+Table "tipo_export_import" {
+  Note: "Origem: tipo_export_import"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: tipo_plano_ref (DBFCDX)
+Table "tipo_plano_ref" {
+  Note: "Origem: tipo_plano_ref"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: tipo_termo (DBFCDX)
+Table "tipo_termo" {
+  Note: "Origem: tipo_termo"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: tot_parc_redz (DBFCDX)
+Table "tot_parc_redz" {
+  Note: "Origem: tot_parc_redz"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: tp_conhec_trans (DBFCDX)
+Table "tp_conhec_trans" {
+  Note: "Origem: tp_conhec_trans"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: tp_util_cred_fiscais (DBFCDX)
+Table "tp_util_cred_fiscais" {
+  Note: "Origem: tp_util_cred_fiscais"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: u100_a (DBFCDX)
+Table "u100_a" {
+  Note: "Origem: u100_a"
+  "CODIGO" VARCHAR(13)
+  "DESCRICAO" VARCHAR(88)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "COD_SUP" VARCHAR(10)
+  "NIVEL" VARCHAR(8)
+  "NATUREZA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: u100_b (DBFCDX)
+Table "u100_b" {
+  Note: "Origem: u100_b"
+  "CODIGO" VARCHAR(15)
+  "DESCRICAO" VARCHAR(118)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "COD_SUP" VARCHAR(15)
+  "NIVEL" VARCHAR(8)
+  "NATUREZA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: u100_c (DBFCDX)
+Table "u100_c" {
+  Note: "Origem: u100_c"
+  "CODIGO" VARCHAR(10)
+  "DESCRICAO" VARCHAR(88)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "COD_SUP" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "NATUREZA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: u100_d (DBFCDX)
+Table "u100_d" {
+  Note: "Origem: u100_d"
+  "CODIGO" VARCHAR(16)
+  "DESCRICAO" VARCHAR(72)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "COD_SUP" VARCHAR(13)
+  "NIVEL" VARCHAR(8)
+  "NATUREZA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: u100_e (DBFCDX)
+Table "u100_e" {
+  Note: "Origem: u100_e"
+  "CODIGO" VARCHAR(14)
+  "DESCRICAO" VARCHAR(108)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "COD_SUP" VARCHAR(11)
+  "NIVEL" VARCHAR(8)
+  "NATUREZA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: u150_a (DBFCDX)
+Table "u150_a" {
+  Note: "Origem: u150_a"
+  "CODIGO" VARCHAR(19)
+  "DESCRICAO" VARCHAR(150)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "COD_SUP" VARCHAR(16)
+  "NIVEL" VARCHAR(8)
+  "NATUREZA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: u150_a_regras (DBFCDX)
+Table "u150_a_regras" {
+  Note: "Origem: u150_a_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(10)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(67)
+  "MENSAGEM" VARCHAR(140)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: u150_b (DBFCDX)
+Table "u150_b" {
+  Note: "Origem: u150_b"
+  "CODIGO" VARCHAR(15)
+  "DESCRICAO" VARCHAR(115)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "COD_SUP" VARCHAR(15)
+  "NIVEL" VARCHAR(8)
+  "NATUREZA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: u150_b_regras (DBFCDX)
+Table "u150_b_regras" {
+  Note: "Origem: u150_b_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(15)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(72)
+  "MENSAGEM" VARCHAR(185)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: u150_c (DBFCDX)
+Table "u150_c" {
+  Note: "Origem: u150_c"
+  "CODIGO" VARCHAR(19)
+  "DESCRICAO" VARCHAR(158)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "COD_SUP" VARCHAR(16)
+  "NIVEL" VARCHAR(8)
+  "NATUREZA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: u150_c_regras (DBFCDX)
+Table "u150_c_regras" {
+  Note: "Origem: u150_c_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(16)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(73)
+  "MENSAGEM" VARCHAR(128)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: u150_d (DBFCDX)
+Table "u150_d" {
+  Note: "Origem: u150_d"
+  "CODIGO" VARCHAR(16)
+  "DESCRICAO" VARCHAR(64)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "COD_SUP" VARCHAR(13)
+  "NIVEL" VARCHAR(8)
+  "NATUREZA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: u150_d_regras (DBFCDX)
+Table "u150_d_regras" {
+  Note: "Origem: u150_d_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(60)
+  "MENSAGEM" VARCHAR(92)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: u150_e (DBFCDX)
+Table "u150_e" {
+  Note: "Origem: u150_e"
+  "CODIGO" VARCHAR(14)
+  "DESCRICAO" VARCHAR(115)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "COD_SUP" VARCHAR(11)
+  "NIVEL" VARCHAR(8)
+  "NATUREZA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: u150_e_regras (DBFCDX)
+Table "u150_e_regras" {
+  Note: "Origem: u150_e_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(62)
+  "MENSAGEM" VARCHAR(112)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: u180 (DBFCDX)
+Table "u180" {
+  Note: "Origem: u180"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(121)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(62)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: u180_regras (DBFCDX)
+Table "u180_regras" {
+  Note: "Origem: u180_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(18)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(95)
+  "MENSAGEM" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: u182 (DBFCDX)
+Table "u182" {
+  Note: "Origem: u182"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(131)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(26)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: u182_regras (DBFCDX)
+Table "u182_regras" {
+  Note: "Origem: u182_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(37)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(95)
+  "MENSAGEM" VARCHAR(62)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: uf_codigo_sigla (DBFCDX)
+Table "uf_codigo_sigla" {
+  Note: "Origem: uf_codigo_sigla"
+  "CODIGO" VARCHAR(2)
+  "DESCRICAO" VARCHAR(2)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: uf_nire (DBFCDX)
+Table "uf_nire" {
+  Note: "Origem: uf_nire"
+  "UF" VARCHAR(2)
+  "CODIGONIRE" VARCHAR(2)
+  "DATAINICIO" DATETIME
+  "DATAFIM" DATETIME
+  Indexes {
+    UF [name: "UF"]
+  }
+}
+
+// Origem: uf_sigla_nome (DBFCDX)
+Table "uf_sigla_nome" {
+  Note: "Origem: uf_sigla_nome"
+  "CODIGO" VARCHAR(2)
+  "DESCRICAO" VARCHAR(25)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: unid_medida (DBFCDX)
+Table "unid_medida" {
+  Note: "Origem: unid_medida"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: v100 (DBFCDX)
+Table "v100" {
+  Note: "Origem: v100"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(55)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(95)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: v100_regras (DBFCDX)
+Table "v100_regras" {
+  Note: "Origem: v100_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(74)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(67)
+  "MENSAGEM" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: versao (DBFCDX)
+Table "versao" {
+  Note: "Origem: versao"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: versoes_leiaute (DBFCDX)
+Table "versoes_leiaute" {
+  Note: "Origem: versoes_leiaute"
+  "CODIGO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(254)
+  "DT_INI" DATETIME
+  "DT_FIN" DATETIME
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: x291 (DBFCDX)
+Table "x291" {
+  Note: "Origem: x291"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(99)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: x291_regras (DBFCDX)
+Table "x291_regras" {
+  Note: "Origem: x291_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(30)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(179)
+  "MENSAGEM" VARCHAR(192)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: x292 (DBFCDX)
+Table "x292" {
+  Note: "Origem: x292"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(63)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: x390 (DBFCDX)
+Table "x390" {
+  Note: "Origem: x390"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(78)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(18)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: x390_regras (DBFCDX)
+Table "x390_regras" {
+  Note: "Origem: x390_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(125)
+  "MENSAGEM" VARCHAR(180)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: x400 (DBFCDX)
+Table "x400" {
+  Note: "Origem: x400"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(95)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(20)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: x460 (DBFCDX)
+Table "x460" {
+  Note: "Origem: x460"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(160)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: x460_regras (DBFCDX)
+Table "x460_regras" {
+  Note: "Origem: x460_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(38)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(105)
+  "MENSAGEM" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: x470 (DBFCDX)
+Table "x470" {
+  Note: "Origem: x470"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(213)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: x480 (DBFCDX)
+Table "x480" {
+  Note: "Origem: x480"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(245)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: x480_regras (DBFCDX)
+Table "x480_regras" {
+  Note: "Origem: x480_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(181)
+  "MENSAGEM" VARCHAR(116)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: x490 (DBFCDX)
+Table "x490" {
+  Note: "Origem: x490"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(187)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: x500 (DBFCDX)
+Table "x500" {
+  Note: "Origem: x500"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(107)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: x510 (DBFCDX)
+Table "x510" {
+  Note: "Origem: x510"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(148)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: y681 (DBFCDX)
+Table "y681" {
+  Note: "Origem: y681"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(133)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "ORDEM" VARCHAR(8)
+  "TIPO" VARCHAR(8)
+  "FORMATO" VARCHAR(8)
+  "LINHA_ECF" VARCHAR(8)
+  "FORMULA" VARCHAR(27)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: y681_regras (DBFCDX)
+Table "y681_regras" {
+  Note: "Origem: y681_regras"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(175)
+  "MENSAGEM" VARCHAR(122)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+
+// Origem: Y682_REGRAS (DBFCDX)
+Table "Y682_REGRAS" {
+  Note: "Origem: Y682_REGRAS"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(8)
+  "DT_INI" DATETIME
+  "DT_FIM" DATETIME
+  "CAMPO_REF" VARCHAR(8)
+  "CHAVE" VARCHAR(8)
+  "NIVEL" VARCHAR(8)
+  "FORMULA" VARCHAR(82)
+  "MENSAGEM" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "CHAVE"]
+  }
+}
+

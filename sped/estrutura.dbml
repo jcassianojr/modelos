@@ -1,6 +1,6 @@
-// Origem: regc170for.dbf (DBF)
+// Origem: regc170for (DBFCDX)
 Table "regc170for" {
-  Note: "Origem: regc170for.dbf"
+  Note: "Origem: regc170for"
   "COD_PART" VARCHAR(20)
   "COD_ITEM" VARCHAR(20)
   "COD_FORN" VARCHAR(30)
@@ -12,9 +12,9 @@ Table "regc170for" {
   }
 }
 
-// Origem: regh010lxval.dbf (DBF)
+// Origem: regh010lxval (DBFCDX)
 Table "regh010lxval" {
-  Note: "Origem: regh010lxval.dbf"
+  Note: "Origem: regh010lxval"
   "COD_ITEM" VARCHAR(60)
   "VL_UNIT" DECIMAL(14,6) [default: 0]
   "TIPOPRECO" VARCHAR(1)

@@ -1,8 +1,8 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 27/07/2026
+> Varredura automatica realizada em: 28/07/2026
 
-## Tabela DBF: `regc170for.dbf`
-> **Origem:** `regc170for.dbf` (Driver: DBFCDX)
+## Tabela DBF: `regc170for`
+> **Origem:** `regc170for` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -17,8 +17,8 @@
 - Tag: `REGC170FOR` Expressao: `COD_PART+  COD_item+  COD_forn`
 
 ---
-## Tabela DBF: `regh010lxval.dbf`
-> **Origem:** `regh010lxval.dbf` (Driver: DBFCDX)
+## Tabela DBF: `regh010lxval`
+> **Origem:** `regh010lxval` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
