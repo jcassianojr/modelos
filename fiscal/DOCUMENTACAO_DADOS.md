@@ -1,5 +1,5 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 27/07/2026
+> Varredura automatica realizada em: 28/07/2026
 
 ## Tabela DBF: `anp.dbf`
 > **Origem:** `anp.dbf` (Driver: DBFCDX)
@@ -525,26 +525,26 @@
 | DESCRIBS | C | 55 | 0 |
 | CLASTRIB | C | 6 | 0 |
 | NOMECLAST1 | C | 250 | 0 |
-| NOMECLAST2 | C | 250 | 0 |
+| NOMECLAST2 | C | 10 | 0 |
 | DESCRTRIB1 | C | 250 | 0 |
 | DESCRTRIB2 | C | 250 | 0 |
 | DESCRLC01 | C | 250 | 0 |
 | DESCRLC02 | C | 250 | 0 |
 | LC | C | 20 | 0 |
-| TIPOALIQ | C | 100 | 0 |
-| PREDIBS | C | 100 | 0 |
-| PREDCBS | C | 100 | 0 |
-| INDREDBC | C | 100 | 0 |
-| INDGTRREG | C | 100 | 0 |
-| INDCREDP | C | 100 | 0 |
-| INDMONO | C | 100 | 0 |
-| INDMORETEN | C | 100 | 0 |
-| INDMONORET | C | 100 | 0 |
+| TIPOALIQ | C | 30 | 0 |
+| PREDIBS | C | 3 | 0 |
+| PREDCBS | C | 3 | 0 |
+| INDREDBC | C | 3 | 0 |
+| INDGTRREG | C | 1 | 0 |
+| INDCREDP | C | 1 | 0 |
+| INDMONO | C | 1 | 0 |
+| INDMORETEN | C | 1 | 0 |
+| INDMONORET | C | 1 | 0 |
 | INDMONODIF | C | 100 | 0 |
 | CREDPARA | C | 100 | 0 |
-| DINIVIG | C | 100 | 0 |
-| DFIMVIG | C | 100 | 0 |
-| ULTATUALIZ | C | 100 | 0 |
+| DINIVIG | C | 10 | 0 |
+| DFIMVIG | C | 10 | 0 |
+| ULTATUALIZ | C | 10 | 0 |
 
 **Indices vinculados:**
 - Tag: `IBS` Expressao: `IBS`
@@ -730,15 +730,15 @@
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | NBS | C | 12 | 0 |
-| DESC_NBS | C | 999 | 0 |
+| DESC_NBS | C | 200 | 0 |
 | ITEM | C | 5 | 0 |
-| DESC_ITEM | C | 300 | 0 |
+| DESC_ITEM | C | 250 | 0 |
 | ONEROSA | C | 1 | 0 |
 | EXTERIOR | C | 1 | 0 |
 | INDOP | C | 6 | 0 |
-| LOCAL_INC | C | 300 | 0 |
+| LOCAL_INC | C | 40 | 0 |
 | CLASSTRIB | C | 6 | 0 |
-| DESC_CLAS | C | 999 | 0 |
+| DESC_CLAS | C | 160 | 0 |
 
 **Indices vinculados:**
 - Tag: `NBS` Expressao: `NBS`
@@ -778,6 +778,9 @@
 | SP | N | 6 | 2 |
 | SE | N | 6 | 2 |
 | TO | N | 6 | 2 |
+
+**Indices vinculados:**
+- Tag: `CODNCM` Expressao: `COD_NCM`
 
 ---
 ## Tabela DBF: `nfecorrecao.dbf`
@@ -846,6 +849,54 @@
 **Indices vinculados:**
 - Tag: `SINTSITU` Expressao: `CODIGO`
 - Tag: `SINTSIT2` Expressao: `NOME`
+
+---
+## Tabela DBF: `tabela_cst_ibscbs.dbf`
+> **Origem:** `tabela_cst_ibscbs.dbf` (Driver: DBFCDX)
+
+| Campo | Tipo | Tam | Dec |
+| :--- | :--- | :--- | :--- |
+| CST | C | 3 | 0 |
+| DESCRICAO | C | 30 | 0 |
+| INDGIBS | C | 1 | 0 |
+| INDGIBSM | C | 1 | 0 |
+| INDGRED | C | 1 | 0 |
+| INDGDIF | C | 1 | 0 |
+| INDGTCRE | C | 1 | 0 |
+| INDNFE | C | 1 | 0 |
+| INDNFCE | C | 1 | 0 |
+| INDCTE | C | 1 | 0 |
+| INDCTEOS | C | 1 | 0 |
+| NDBPE | C | 1 | 0 |
+| INDBPETM | C | 1 | 0 |
+| INDNF3E | C | 1 | 0 |
+| INDNFCOM | C | 1 | 0 |
+| NDNFSE | C | 1 | 0 |
+| DT_INI | D | 8 | 0 |
+| DT_FIN | D | 8 | 0 |
+
+**Indices vinculados:**
+- Tag: `CST` Expressao: `CST`
+
+---
+## Tabela DBF: `tabela_nbs.dbf`
+> **Origem:** `tabela_nbs.dbf` (Driver: DBFCDX)
+
+| Campo | Tipo | Tam | Dec |
+| :--- | :--- | :--- | :--- |
+| NBS | C | 12 | 0 |
+| ITEM | C | 5 | 0 |
+| INDOP | C | 6 | 0 |
+| DESC_NBS | C | 200 | 0 |
+| DESC_ITEM | C | 250 | 0 |
+| ONEROSA | C | 1 | 0 |
+| EXTERIOR | C | 1 | 0 |
+| LOCAL_INC | C | 40 | 0 |
+| CLASSTRIB | C | 6 | 0 |
+| DESC_CLAS | C | 160 | 0 |
+
+**Indices vinculados:**
+- Tag: `NBSITEM` Expressao: `NBS+ITEM`
 
 ---
 ## Tabela DBF: `tabenqipi.dbf`
