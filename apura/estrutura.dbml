@@ -1,6 +1,6 @@
-// Origem: adipie.dbf (DBF)
+// Origem: adipie (DBFCDX)
 Table "adipie" {
-  Note: "Origem: adipie.dbf"
+  Note: "Origem: adipie"
   "FORNECEDO" INTEGER [default: 0]
   "DCLASSIPI" VARCHAR(14)
   "DOPER" VARCHAR(3)
@@ -18,9 +18,9 @@ Table "adipie" {
   }
 }
 
-// Origem: adipig.dbf (DBF)
+// Origem: adipig (DBFCDX)
 Table "adipig" {
-  Note: "Origem: adipig.dbf"
+  Note: "Origem: adipig"
   "GRUPO" VARCHAR(5)
   "CFOP" VARCHAR(4)
   Indexes {
@@ -29,9 +29,9 @@ Table "adipig" {
   }
 }
 
-// Origem: adipis.dbf (DBF)
+// Origem: adipis (DBFCDX)
 Table "adipis" {
-  Note: "Origem: adipis.dbf"
+  Note: "Origem: adipis"
   "FORNECEDO" INTEGER [default: 0]
   "DCLASSIPI" VARCHAR(14)
   "DOPER" VARCHAR(3)
@@ -49,9 +49,9 @@ Table "adipis" {
   }
 }
 
-// Origem: bpforc.dbf (DBF)
+// Origem: bpforc (DBFCDX)
 Table "bpforc" {
-  Note: "Origem: bpforc.dbf"
+  Note: "Origem: bpforc"
   "FORNECEDO" INTEGER [default: 0]
   "SAI" VARCHAR(1)
   Indexes {
@@ -59,9 +59,9 @@ Table "bpforc" {
   }
 }
 
-// Origem: bpforr.dbf (DBF)
+// Origem: bpforr (DBFCDX)
 Table "bpforr" {
-  Note: "Origem: bpforr.dbf"
+  Note: "Origem: bpforr"
   "FORNECEDO" INTEGER [default: 0]
   "TIPO" VARCHAR(1)
   "VALOR" DECIMAL(18,2) [default: 0]
@@ -75,9 +75,9 @@ Table "bpforr" {
   }
 }
 
-// Origem: bs3.dbf (DBF)
+// Origem: bs3 (DBFCDX)
 Table "bs3" {
-  Note: "Origem: bs3.dbf"
+  Note: "Origem: bs3"
   "CODIGO" VARCHAR(12)
   "NOME" VARCHAR(30)
   "GRUPOUTL" VARCHAR(3)

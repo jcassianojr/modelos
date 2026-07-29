@@ -1,6 +1,6 @@
-// Origem: ba01.dbf (DBF)
+// Origem: ba01 (DBFCDX)
 Table "ba01" {
-  Note: "Origem: ba01.dbf"
+  Note: "Origem: ba01"
   "NUMERO" INTEGER [default: 0]
   "SUB" VARCHAR(1)
   "DATA" DATETIME
@@ -21,9 +21,9 @@ Table "ba01" {
   }
 }
 
-// Origem: bc01.dbf (DBF)
+// Origem: bc01 (DBFCDX)
 Table "bc01" {
-  Note: "Origem: bc01.dbf"
+  Note: "Origem: bc01"
   "CODIGO" VARCHAR(4)
   "DESCRICAO" VARCHAR(35)
   "VALOR" DECIMAL(15,2) [default: 0]
@@ -36,9 +36,9 @@ Table "bc01" {
   }
 }
 
-// Origem: bd01.dbf (DBF)
+// Origem: bd01 (DBFCDX)
 Table "bd01" {
-  Note: "Origem: bd01.dbf"
+  Note: "Origem: bd01"
   "NUMERO" INTEGER [default: 0]
   "COGNOME" VARCHAR(15)
   "NOME" VARCHAR(40)
@@ -68,9 +68,9 @@ Table "bd01" {
   }
 }
 
-// Origem: be01.dbf (DBF)
+// Origem: be01 (DBFCDX)
 Table "be01" {
-  Note: "Origem: be01.dbf"
+  Note: "Origem: be01"
   "CODIGO" VARCHAR(24)
   "NOME" VARCHAR(40)
   Indexes {
@@ -79,9 +79,9 @@ Table "be01" {
   }
 }
 
-// Origem: bf01.dbf (DBF)
+// Origem: bf01 (DBFCDX)
 Table "bf01" {
-  Note: "Origem: bf01.dbf"
+  Note: "Origem: bf01"
   "VENDA" INTEGER [default: 0]
   "NUMERO" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)

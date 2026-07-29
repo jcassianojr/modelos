@@ -1,0 +1,19 @@
+ O volume na unidade C n∆o tem nome.
+ O N£mero de SÇrie do Volume Ç 18F1-FB5E
+
+ Pasta de c:\develop\modelos\banco\ddl
+
+29/07/2026  07:42    <DIR>          .
+29/07/2026  07:42    <DIR>          ..
+28/07/2026  21:00               631 ACCESS.zip
+28/07/2026  21:00             6.741 dbf_dbe.zip
+28/07/2026  21:00               628 DUCKDB.zip
+28/07/2026  21:00               707 FIREBIRD.zip
+29/07/2026  07:42                 0 lista.txt
+28/07/2026  21:01               610 MSSQL.zip
+28/07/2026  21:00               665 MYSQL.zip
+28/07/2026  21:00               634 ORACLE.zip
+28/07/2026  21:00               637 POSTGRESQL.zip
+28/07/2026  21:01               778 SQLITE.zip
+              10 arquivo(s)         12.031 bytes
+               2 pasta(s)   28.268.765.184 bytes dispon°veis

@@ -1,6 +1,6 @@
-// Origem: cepbai.dbf (DBF)
+// Origem: cepbai (DBFCDX)
 Table "cepbai" {
-  Note: "Origem: cepbai.dbf"
+  Note: "Origem: cepbai"
   "BAI_NU_SEQ" INTEGER [default: 0]
   "BAI_NO" VARCHAR(63)
   Indexes {
@@ -9,9 +9,9 @@ Table "cepbai" {
   }
 }
 
-// Origem: cepbailx.dbf (DBF)
+// Origem: cepbailx (DBFCDX)
 Table "cepbailx" {
-  Note: "Origem: cepbailx.dbf"
+  Note: "Origem: cepbailx"
   "CODIBGE" VARCHAR(7)
   "BAI_NU_NEW" INTEGER [default: 0]
   "CODBAILX" INTEGER [default: 0]
@@ -20,9 +20,9 @@ Table "cepbailx" {
   }
 }
 
-// Origem: cepgeo.dbf (DBF)
+// Origem: cepgeo (DBFCDX)
 Table "cepgeo" {
-  Note: "Origem: cepgeo.dbf"
+  Note: "Origem: cepgeo"
   "CEP" VARCHAR(8)
   "DDD" VARCHAR(2)
   "LATITUDE" VARCHAR(8)
@@ -30,9 +30,9 @@ Table "cepgeo" {
   "HEMISFERIO" VARCHAR(1)
 }
 
-// Origem: ceprua.dbf (DBF)
+// Origem: ceprua (DBFCDX)
 Table "ceprua" {
-  Note: "Origem: ceprua.dbf"
+  Note: "Origem: ceprua"
   "RUA" VARCHAR(70)
   "CEP" VARCHAR(8)
   "TIPO" VARCHAR(20)
@@ -43,9 +43,9 @@ Table "ceprua" {
   "TITULO" VARCHAR(1)
 }
 
-// Origem: cidconv.dbf (DBF)
+// Origem: cidconv (DBFCDX)
 Table "cidconv" {
-  Note: "Origem: cidconv.dbf"
+  Note: "Origem: cidconv"
   "ESTADO" VARCHAR(2)
   "CIDORI" VARCHAR(60)
   "ESTDES" VARCHAR(2)
@@ -55,9 +55,9 @@ Table "cidconv" {
   }
 }
 
-// Origem: md05.dbf (DBF)
+// Origem: md05 (DBFCDX)
 Table "md05" {
-  Note: "Origem: md05.dbf"
+  Note: "Origem: md05"
   "UFICMS" VARCHAR(2)
   "ZONAFRANCA" VARCHAR(1)
   "ALIQUOTA" DECIMAL(5,2) [default: 0]
@@ -85,9 +85,9 @@ Table "md05" {
   }
 }
 
-// Origem: md10.dbf (DBF)
+// Origem: md10 (DBFCDX)
 Table "md10" {
-  Note: "Origem: md10.dbf"
+  Note: "Origem: md10"
   "UF" VARCHAR(2)
   "NOME" VARCHAR(35)
   "DDD" VARCHAR(2)
@@ -116,9 +116,9 @@ Table "md10" {
   }
 }
 
-// Origem: md10nao.dbf (DBF)
+// Origem: md10nao (DBFCDX)
 Table "md10nao" {
-  Note: "Origem: md10nao.dbf"
+  Note: "Origem: md10nao"
   "UF" VARCHAR(2)
   "NOME" VARCHAR(35)
   "DDD" VARCHAR(2)
@@ -147,18 +147,18 @@ Table "md10nao" {
   }
 }
 
-// Origem: md11.dbf (DBF)
+// Origem: md11 (DBFCDX)
 Table "md11" {
-  Note: "Origem: md11.dbf"
+  Note: "Origem: md11"
   "CEP" VARCHAR(5)
   Indexes {
     CEP [name: "MD11-1"]
   }
 }
 
-// Origem: mdtip.dbf (DBF)
+// Origem: mdtip (DBFCDX)
 Table "mdtip" {
-  Note: "Origem: mdtip.dbf"
+  Note: "Origem: mdtip"
   "CODIGO" VARCHAR(8)
   "NOME" VARCHAR(22)
   "ID" INTEGER [default: 0]
@@ -169,9 +169,9 @@ Table "mdtip" {
   }
 }
 
-// Origem: mdtit.dbf (DBF)
+// Origem: mdtit (DBFCDX)
 Table "mdtit" {
-  Note: "Origem: mdtit.dbf"
+  Note: "Origem: mdtit"
   "CODIGO" VARCHAR(15)
   "DESCRICAO" VARCHAR(30)
   Indexes {
@@ -180,9 +180,9 @@ Table "mdtit" {
   }
 }
 
-// Origem: mdufddd.dbf (DBF)
+// Origem: mdufddd (DBFCDX)
 Table "mdufddd" {
-  Note: "Origem: mdufddd.dbf"
+  Note: "Origem: mdufddd"
   "UF" VARCHAR(2)
   "DDD" VARCHAR(2)
   Indexes {
@@ -192,9 +192,9 @@ Table "mdufddd" {
   }
 }
 
-// Origem: paises.dbf (DBF)
+// Origem: paises (DBFCDX)
 Table "paises" {
-  Note: "Origem: paises.dbf"
+  Note: "Origem: paises"
   "BACEN" INTEGER [default: 0]
   "NOME" VARCHAR(35)
   "UF" VARCHAR(2)

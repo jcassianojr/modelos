@@ -1,8 +1,8 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 27/07/2026
+> Varredura automatica realizada em: 28/07/2026
 
-## Tabela DBF: `ba01.dbf`
-> **Origem:** `ba01.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ba01`
+> **Origem:** `ba01` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -26,8 +26,8 @@
 - Tag: `BA01-5` Expressao: `ITEM`
 
 ---
-## Tabela DBF: `bc01.dbf`
-> **Origem:** `bc01.dbf` (Driver: DBFCDX)
+## Tabela DBF: `bc01`
+> **Origem:** `bc01` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -43,8 +43,8 @@
 - Tag: `DESCRICAO` Expressao: `DESCRICAO`
 
 ---
-## Tabela DBF: `bd01.dbf`
-> **Origem:** `bd01.dbf` (Driver: DBFCDX)
+## Tabela DBF: `bd01`
+> **Origem:** `bd01` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -77,8 +77,8 @@
 - Tag: `COGNOME` Expressao: `COGNOME`
 
 ---
-## Tabela DBF: `be01.dbf`
-> **Origem:** `be01.dbf` (Driver: DBFCDX)
+## Tabela DBF: `be01`
+> **Origem:** `be01` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -90,8 +90,8 @@
 - Tag: `NOME` Expressao: `NOME`
 
 ---
-## Tabela DBF: `bf01.dbf`
-> **Origem:** `bf01.dbf` (Driver: DBFCDX)
+## Tabela DBF: `bf01`
+> **Origem:** `bf01` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |

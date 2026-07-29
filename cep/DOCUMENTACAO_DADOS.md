@@ -1,8 +1,8 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 27/07/2026
+> Varredura automatica realizada em: 28/07/2026
 
-## Tabela DBF: `cepbai.dbf`
-> **Origem:** `cepbai.dbf` (Driver: DBFCDX)
+## Tabela DBF: `cepbai`
+> **Origem:** `cepbai` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -14,8 +14,8 @@
 - Tag: `CEPBAI02` Expressao: `BAI_NO`
 
 ---
-## Tabela DBF: `cepbailx.dbf`
-> **Origem:** `cepbailx.dbf` (Driver: DBFCDX)
+## Tabela DBF: `cepbailx`
+> **Origem:** `cepbailx` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -27,8 +27,8 @@
 - Tag: `CEPBAILX-1` Expressao: `CODIBGE+STR(BAI_NU_NEW,7)`
 
 ---
-## Tabela DBF: `cepgeo.dbf`
-> **Origem:** `cepgeo.dbf` (Driver: DBFCDX)
+## Tabela DBF: `cepgeo`
+> **Origem:** `cepgeo` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -39,8 +39,8 @@
 | HEMISFERIO | C | 1 | 0 |
 
 ---
-## Tabela DBF: `ceprua.dbf`
-> **Origem:** `ceprua.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ceprua`
+> **Origem:** `ceprua` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -54,8 +54,8 @@
 | TITULO | C | 1 | 0 |
 
 ---
-## Tabela DBF: `cidconv.dbf`
-> **Origem:** `cidconv.dbf` (Driver: DBFCDX)
+## Tabela DBF: `cidconv`
+> **Origem:** `cidconv` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -68,8 +68,8 @@
 - Tag: `CIDORI` Expressao: `ESTADO + CIDORI`
 
 ---
-## Tabela DBF: `md05.dbf`
-> **Origem:** `md05.dbf` (Driver: DBFCDX)
+## Tabela DBF: `md05`
+> **Origem:** `md05` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -100,8 +100,8 @@
 - Tag: `MD05-2` Expressao: `NOMEEXT`
 
 ---
-## Tabela DBF: `md10.dbf`
-> **Origem:** `md10.dbf` (Driver: DBFCDX)
+## Tabela DBF: `md10`
+> **Origem:** `md10` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -133,8 +133,8 @@
 - Tag: `MD10-4` Expressao: `CODIRRF`
 
 ---
-## Tabela DBF: `md10nao.dbf`
-> **Origem:** `md10nao.dbf` (Driver: DBFCDX)
+## Tabela DBF: `md10nao`
+> **Origem:** `md10nao` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -166,8 +166,8 @@
 - Tag: `MD10-4` Expressao: `CODIRRF`
 
 ---
-## Tabela DBF: `md11.dbf`
-> **Origem:** `md11.dbf` (Driver: DBFCDX)
+## Tabela DBF: `md11`
+> **Origem:** `md11` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -177,8 +177,8 @@
 - Tag: `MD11-1` Expressao: `CEP`
 
 ---
-## Tabela DBF: `mdtip.dbf`
-> **Origem:** `mdtip.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mdtip`
+> **Origem:** `mdtip` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -192,8 +192,8 @@
 - Tag: `MDTIP2` Expressao: `NOME`
 
 ---
-## Tabela DBF: `mdtit.dbf`
-> **Origem:** `mdtit.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mdtit`
+> **Origem:** `mdtit` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -205,8 +205,8 @@
 - Tag: `DESCRICAO` Expressao: `DESCRICAO`
 
 ---
-## Tabela DBF: `mdufddd.dbf`
-> **Origem:** `mdufddd.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mdufddd`
+> **Origem:** `mdufddd` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -219,8 +219,8 @@
 - Tag: `MDUFDDD-3` Expressao: `DDD`
 
 ---
-## Tabela DBF: `paises.dbf`
-> **Origem:** `paises.dbf` (Driver: DBFCDX)
+## Tabela DBF: `paises`
+> **Origem:** `paises` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |

@@ -1,8 +1,8 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 27/07/2026
+> Varredura automatica realizada em: 28/07/2026
 
-## Tabela DBF: `adipie.dbf`
-> **Origem:** `adipie.dbf` (Driver: DBFCDX)
+## Tabela DBF: `adipie`
+> **Origem:** `adipie` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -23,8 +23,8 @@
 - Tag: `ADIPIE-3` Expressao: `DCFONEW`
 
 ---
-## Tabela DBF: `adipig.dbf`
-> **Origem:** `adipig.dbf` (Driver: DBFCDX)
+## Tabela DBF: `adipig`
+> **Origem:** `adipig` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -36,8 +36,8 @@
 - Tag: `ADIPIG-2` Expressao: `CFOP`
 
 ---
-## Tabela DBF: `adipis.dbf`
-> **Origem:** `adipis.dbf` (Driver: DBFCDX)
+## Tabela DBF: `adipis`
+> **Origem:** `adipis` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -58,8 +58,8 @@
 - Tag: `ADIPIS-3` Expressao: `DCFONEW`
 
 ---
-## Tabela DBF: `bpforc.dbf`
-> **Origem:** `bpforc.dbf` (Driver: DBFCDX)
+## Tabela DBF: `bpforc`
+> **Origem:** `bpforc` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -70,8 +70,8 @@
 - Tag: `BPFORC` Expressao: `FORNECEDO`
 
 ---
-## Tabela DBF: `bpforr.dbf`
-> **Origem:** `bpforr.dbf` (Driver: DBFCDX)
+## Tabela DBF: `bpforr`
+> **Origem:** `bpforr` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -88,8 +88,8 @@
 - Tag: `BPFORR` Expressao: `STR(ANO,4)+STR(MES,2)+STR(FORNECEDO,8)`
 
 ---
-## Tabela DBF: `bs3.dbf`
-> **Origem:** `bs3.dbf` (Driver: DBFCDX)
+## Tabela DBF: `bs3`
+> **Origem:** `bs3` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
