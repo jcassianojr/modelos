@@ -1,8 +1,8 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 27/07/2026
+> Varredura automatica realizada em: 29/07/2026
 
-## Tabela DBF: `cs.dbf`
-> **Origem:** `cs.dbf` (Driver: DBFCDX)
+## Tabela DBF: `cs`
+> **Origem:** `cs` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -37,8 +37,8 @@
 - Tag: `CS` Expressao: `CS`
 
 ---
-## Tabela DBF: `fapu.dbf`
-> **Origem:** `fapu.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fapu`
+> **Origem:** `fapu` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -54,8 +54,8 @@
 - Tag: `FAPU` Expressao: `SEQ`
 
 ---
-## Tabela DBF: `fapubai.dbf`
-> **Origem:** `fapubai.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fapubai`
+> **Origem:** `fapubai` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -68,8 +68,8 @@
 - Tag: `FAPUBAI` Expressao: `STR(SEQ,3)+FERRAM`
 
 ---
-## Tabela DBF: `fapufer.dbf`
-> **Origem:** `fapufer.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fapufer`
+> **Origem:** `fapufer` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -83,8 +83,8 @@
 - Tag: `FAPUFER2` Expressao: `FERRAM`
 
 ---
-## Tabela DBF: `fapui.dbf`
-> **Origem:** `fapui.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fapui`
+> **Origem:** `fapui` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -97,8 +97,8 @@
 - Tag: `FAPUI` Expressao: `SEQ`
 
 ---
-## Tabela DBF: `fapumaq.dbf`
-> **Origem:** `fapumaq.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fapumaq`
+> **Origem:** `fapumaq` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -112,8 +112,8 @@
 - Tag: `FAPUMAQ2` Expressao: `FERRAM`
 
 ---
-## Tabela DBF: `fe02.dbf`
-> **Origem:** `fe02.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fe02`
+> **Origem:** `fe02` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -127,8 +127,8 @@
 - Tag: `FE02-1` Expressao: `TIPO+CODIGO+STR(ANO,4)+STR(MES,2)`
 
 ---
-## Tabela DBF: `fe99.dbf`
-> **Origem:** `fe99.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fe99`
+> **Origem:** `fe99` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -150,8 +150,8 @@
 - Tag: `FE99-2` Expressao: `CODIGO+DTOS(DATA)`
 
 ---
-## Tabela DBF: `fergi.dbf`
-> **Origem:** `fergi.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fergi`
+> **Origem:** `fergi` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -181,8 +181,8 @@
 - Tag: `FERGI-2` Expressao: `FERRAM+CODIGO`
 
 ---
-## Tabela DBF: `fergrp.dbf`
-> **Origem:** `fergrp.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fergrp`
+> **Origem:** `fergrp` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -192,8 +192,8 @@
 - Tag: `FERGRP` Expressao: `GRUPO`
 
 ---
-## Tabela DBF: `ferhg.dbf`
-> **Origem:** `ferhg.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ferhg`
+> **Origem:** `ferhg` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -211,8 +211,8 @@
 - Tag: `CODFERR` Expressao: `CODFERR`
 
 ---
-## Tabela DBF: `ferhgi.dbf`
-> **Origem:** `ferhgi.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ferhgi`
+> **Origem:** `ferhgi` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -227,8 +227,8 @@
 - Tag: `OS` Expressao: `OS`
 
 ---
-## Tabela DBF: `fernf.dbf`
-> **Origem:** `fernf.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fernf`
+> **Origem:** `fernf` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -247,8 +247,8 @@
 - Tag: `FERNF-2` Expressao: `FERRAM`
 
 ---
-## Tabela DBF: `feros.dbf`
-> **Origem:** `feros.dbf` (Driver: DBFCDX)
+## Tabela DBF: `feros`
+> **Origem:** `feros` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -298,8 +298,8 @@
 - Tag: `FEROS-4` Expressao: `PEDIDOCLI`
 
 ---
-## Tabela DBF: `ferram.dbf`
-> **Origem:** `ferram.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ferram`
+> **Origem:** `ferram` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -396,8 +396,8 @@
 - Tag: `FERRAM3` Expressao: `NUMERO`
 
 ---
-## Tabela DBF: `ferrami.dbf`
-> **Origem:** `ferrami.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ferrami`
+> **Origem:** `ferrami` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -409,8 +409,8 @@
 - Tag: `FERRAMI` Expressao: `FERRAM`
 
 ---
-## Tabela DBF: `lvf.dbf`
-> **Origem:** `lvf.dbf` (Driver: DBFCDX)
+## Tabela DBF: `lvf`
+> **Origem:** `lvf` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -436,8 +436,8 @@
 - Tag: `LVF` Expressao: `LVF`
 
 ---
-## Tabela DBF: `lvfi.dbf`
-> **Origem:** `lvfi.dbf` (Driver: DBFCDX)
+## Tabela DBF: `lvfi`
+> **Origem:** `lvfi` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -451,8 +451,8 @@
 - Tag: `LVFI` Expressao: `LVF`
 
 ---
-## Tabela DBF: `lvfp.dbf`
-> **Origem:** `lvfp.dbf` (Driver: DBFCDX)
+## Tabela DBF: `lvfp`
+> **Origem:** `lvfp` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -464,8 +464,8 @@
 - Tag: `LVFP` Expressao: `ITEM`
 
 ---
-## Tabela DBF: `lvm.dbf`
-> **Origem:** `lvm.dbf` (Driver: DBFCDX)
+## Tabela DBF: `lvm`
+> **Origem:** `lvm` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -492,8 +492,8 @@
 - Tag: `LVM` Expressao: `LVM`
 
 ---
-## Tabela DBF: `lvmi.dbf`
-> **Origem:** `lvmi.dbf` (Driver: DBFCDX)
+## Tabela DBF: `lvmi`
+> **Origem:** `lvmi` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -508,8 +508,8 @@
 - Tag: `LVMI` Expressao: `LVM`
 
 ---
-## Tabela DBF: `lvmp.dbf`
-> **Origem:** `lvmp.dbf` (Driver: DBFCDX)
+## Tabela DBF: `lvmp`
+> **Origem:** `lvmp` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -521,8 +521,8 @@
 - Tag: `LVMP` Expressao: `STR(ITEM,2)+GRUPO`
 
 ---
-## Tabela DBF: `mapu.dbf`
-> **Origem:** `mapu.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mapu`
+> **Origem:** `mapu` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -538,8 +538,8 @@
 - Tag: `MAPU` Expressao: `SEQ`
 
 ---
-## Tabela DBF: `mapubai.dbf`
-> **Origem:** `mapubai.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mapubai`
+> **Origem:** `mapubai` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -552,8 +552,8 @@
 - Tag: `MAPUBAI` Expressao: `STR(SEQ,3)+FERRAM`
 
 ---
-## Tabela DBF: `mapui.dbf`
-> **Origem:** `mapui.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mapui`
+> **Origem:** `mapui` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -566,8 +566,8 @@
 - Tag: `MUPUI` Expressao: `SEQ`
 
 ---
-## Tabela DBF: `me01cr.dbf`
-> **Origem:** `me01cr.dbf` (Driver: DBFCDX)
+## Tabela DBF: `me01cr`
+> **Origem:** `me01cr` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -583,8 +583,8 @@
 - Tag: `ME01CR` Expressao: `CODIGO+DTOS(PROGRAMA)`
 
 ---
-## Tabela DBF: `rl.dbf`
-> **Origem:** `rl.dbf` (Driver: DBFCDX)
+## Tabela DBF: `rl`
+> **Origem:** `rl` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -595,8 +595,8 @@
 - Tag: `RL` Expressao: `RL`
 
 ---
-## Tabela DBF: `rli.dbf`
-> **Origem:** `rli.dbf` (Driver: DBFCDX)
+## Tabela DBF: `rli`
+> **Origem:** `rli` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -612,8 +612,8 @@
 - Tag: `RL` Expressao: `RL`
 
 ---
-## Tabela DBF: `ro.dbf`
-> **Origem:** `ro.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ro`
+> **Origem:** `ro` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -676,8 +676,8 @@
 - Tag: `RO-5` Expressao: `TIPO+FERRAM+DTOS(DATAFIM)`
 
 ---
-## Tabela DBF: `roapud.dbf`
-> **Origem:** `roapud.dbf` (Driver: DBFCDX)
+## Tabela DBF: `roapud`
+> **Origem:** `roapud` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -685,8 +685,8 @@
 | DIAFIM | D | 8 | 0 |
 
 ---
-## Tabela DBF: `roi.dbf`
-> **Origem:** `roi.dbf` (Driver: DBFCDX)
+## Tabela DBF: `roi`
+> **Origem:** `roi` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -698,8 +698,8 @@
 - Tag: `ROI` Expressao: `RO`
 
 ---
-## Tabela DBF: `sm.dbf`
-> **Origem:** `sm.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sm`
+> **Origem:** `sm` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |

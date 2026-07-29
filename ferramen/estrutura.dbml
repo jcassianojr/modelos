@@ -1,6 +1,6 @@
-// Origem: cs.dbf (DBF)
+// Origem: cs (DBFCDX)
 Table "cs" {
-  Note: "Origem: cs.dbf"
+  Note: "Origem: cs"
   "CS" INTEGER [default: 0]
   "DATA" DATETIME
   "TIPO" VARCHAR(1)
@@ -32,9 +32,9 @@ Table "cs" {
   }
 }
 
-// Origem: fapu.dbf (DBF)
+// Origem: fapu (DBFCDX)
 Table "fapu" {
-  Note: "Origem: fapu.dbf"
+  Note: "Origem: fapu"
   "SEQ" INTEGER [default: 0]
   "DINI" DATETIME
   "DFIM" DATETIME
@@ -47,9 +47,9 @@ Table "fapu" {
   }
 }
 
-// Origem: fapubai.dbf (DBF)
+// Origem: fapubai (DBFCDX)
 Table "fapubai" {
-  Note: "Origem: fapubai.dbf"
+  Note: "Origem: fapubai"
   "SEQ" INTEGER [default: 0]
   "FERRAM" VARCHAR(24)
   "QTDE" INTEGER [default: 0]
@@ -59,9 +59,9 @@ Table "fapubai" {
   }
 }
 
-// Origem: fapufer.dbf (DBF)
+// Origem: fapufer (DBFCDX)
 Table "fapufer" {
-  Note: "Origem: fapufer.dbf"
+  Note: "Origem: fapufer"
   "SEQ" INTEGER [default: 0]
   "FERRAM" VARCHAR(24)
   "QTDE" INTEGER [default: 0]
@@ -72,9 +72,9 @@ Table "fapufer" {
   }
 }
 
-// Origem: fapui.dbf (DBF)
+// Origem: fapui (DBFCDX)
 Table "fapui" {
-  Note: "Origem: fapui.dbf"
+  Note: "Origem: fapui"
   "SEQ" INTEGER [default: 0]
   "FERRAM" VARCHAR(24)
   "QTDE" INTEGER [default: 0]
@@ -84,9 +84,9 @@ Table "fapui" {
   }
 }
 
-// Origem: fapumaq.dbf (DBF)
+// Origem: fapumaq (DBFCDX)
 Table "fapumaq" {
-  Note: "Origem: fapumaq.dbf"
+  Note: "Origem: fapumaq"
   "SEQ" INTEGER [default: 0]
   "FERRAM" VARCHAR(4)
   "QTDE" INTEGER [default: 0]
@@ -97,9 +97,9 @@ Table "fapumaq" {
   }
 }
 
-// Origem: fe02.dbf (DBF)
+// Origem: fe02 (DBFCDX)
 Table "fe02" {
-  Note: "Origem: fe02.dbf"
+  Note: "Origem: fe02"
   "TIPO" VARCHAR(24)
   "CODIGO" VARCHAR(20)
   "ANO" INTEGER [default: 0]
@@ -110,9 +110,9 @@ Table "fe02" {
   }
 }
 
-// Origem: fe99.dbf (DBF)
+// Origem: fe99 (DBFCDX)
 Table "fe99" {
-  Note: "Origem: fe99.dbf"
+  Note: "Origem: fe99"
   "ARQUIVO" VARCHAR(8)
   "DOCUMENTO" VARCHAR(40)
   "OPERACAO" VARCHAR(1)
@@ -131,9 +131,9 @@ Table "fe99" {
   }
 }
 
-// Origem: fergi.dbf (DBF)
+// Origem: fergi (DBFCDX)
 Table "fergi" {
-  Note: "Origem: fergi.dbf"
+  Note: "Origem: fergi"
   "FERRAM" VARCHAR(24)
   "CODIGO" VARCHAR(20)
   "NOME" VARCHAR(40)
@@ -160,18 +160,18 @@ Table "fergi" {
   }
 }
 
-// Origem: fergrp.dbf (DBF)
+// Origem: fergrp (DBFCDX)
 Table "fergrp" {
-  Note: "Origem: fergrp.dbf"
+  Note: "Origem: fergrp"
   "GRUPO" VARCHAR(24)
   Indexes {
     GRUPO [name: "FERGRP"]
   }
 }
 
-// Origem: ferhg.dbf (DBF)
+// Origem: ferhg (DBFCDX)
 Table "ferhg" {
-  Note: "Origem: ferhg.dbf"
+  Note: "Origem: ferhg"
   "OS" INTEGER [default: 0]
   "CODFERR" VARCHAR(24)
   "CODME01" VARCHAR(4)
@@ -186,9 +186,9 @@ Table "ferhg" {
   }
 }
 
-// Origem: ferhgi.dbf (DBF)
+// Origem: ferhgi (DBFCDX)
 Table "ferhgi" {
-  Note: "Origem: ferhgi.dbf"
+  Note: "Origem: ferhgi"
   "OS" INTEGER [default: 0]
   "DATA" DATETIME
   "HINI" DECIMAL(5,2) [default: 0]
@@ -200,9 +200,9 @@ Table "ferhgi" {
   }
 }
 
-// Origem: fernf.dbf (DBF)
+// Origem: fernf (DBFCDX)
 Table "fernf" {
-  Note: "Origem: fernf.dbf"
+  Note: "Origem: fernf"
   "FERRAM" VARCHAR(24)
   "TIPO" VARCHAR(2)
   "NRNOTA" INTEGER [default: 0]
@@ -218,9 +218,9 @@ Table "fernf" {
   }
 }
 
-// Origem: feros.dbf (DBF)
+// Origem: feros (DBFCDX)
 Table "feros" {
-  Note: "Origem: feros.dbf"
+  Note: "Origem: feros"
   "FEROS" INTEGER [default: 0]
   "REVISAO" VARCHAR(1)
   "CHAVE" VARCHAR(9)
@@ -267,9 +267,9 @@ Table "feros" {
   }
 }
 
-// Origem: ferram.dbf (DBF)
+// Origem: ferram (DBFCDX)
 Table "ferram" {
-  Note: "Origem: ferram.dbf"
+  Note: "Origem: ferram"
   "FERRAM" VARCHAR(24)
   "GRUPO" VARCHAR(24)
   "NUMERO" INTEGER [default: 0]
@@ -363,9 +363,9 @@ Table "ferram" {
   }
 }
 
-// Origem: ferrami.dbf (DBF)
+// Origem: ferrami (DBFCDX)
 Table "ferrami" {
-  Note: "Origem: ferrami.dbf"
+  Note: "Origem: ferrami"
   "FERRAM" VARCHAR(24)
   "ITEM" INTEGER [default: 0]
   "LIN01" VARCHAR(80)
@@ -374,9 +374,9 @@ Table "ferrami" {
   }
 }
 
-// Origem: lvf.dbf (DBF)
+// Origem: lvf (DBFCDX)
 Table "lvf" {
-  Note: "Origem: lvf.dbf"
+  Note: "Origem: lvf"
   "LVF" INTEGER [default: 0]
   "FERRAM" VARCHAR(24)
   "AREA" VARCHAR(2)
@@ -399,9 +399,9 @@ Table "lvf" {
   }
 }
 
-// Origem: lvfi.dbf (DBF)
+// Origem: lvfi (DBFCDX)
 Table "lvfi" {
-  Note: "Origem: lvfi.dbf"
+  Note: "Origem: lvfi"
   "LVF" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
   "DESCRI" VARCHAR(50)
@@ -412,9 +412,9 @@ Table "lvfi" {
   }
 }
 
-// Origem: lvfp.dbf (DBF)
+// Origem: lvfp (DBFCDX)
 Table "lvfp" {
-  Note: "Origem: lvfp.dbf"
+  Note: "Origem: lvfp"
   "ITEM" INTEGER [default: 0]
   "DESCRI" VARCHAR(60)
   "GRUPO" VARCHAR(1)
@@ -423,9 +423,9 @@ Table "lvfp" {
   }
 }
 
-// Origem: lvm.dbf (DBF)
+// Origem: lvm (DBFCDX)
 Table "lvm" {
-  Note: "Origem: lvm.dbf"
+  Note: "Origem: lvm"
   "LVM" INTEGER [default: 0]
   "NUMERO" VARCHAR(24)
   "NOME" VARCHAR(40)
@@ -449,9 +449,9 @@ Table "lvm" {
   }
 }
 
-// Origem: lvmi.dbf (DBF)
+// Origem: lvmi (DBFCDX)
 Table "lvmi" {
-  Note: "Origem: lvmi.dbf"
+  Note: "Origem: lvmi"
   "LVM" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
   "DESCRI" VARCHAR(150)
@@ -463,9 +463,9 @@ Table "lvmi" {
   }
 }
 
-// Origem: lvmp.dbf (DBF)
+// Origem: lvmp (DBFCDX)
 Table "lvmp" {
-  Note: "Origem: lvmp.dbf"
+  Note: "Origem: lvmp"
   "ITEM" INTEGER [default: 0]
   "DESCRI" VARCHAR(200)
   "GRUPO" VARCHAR(3)
@@ -474,9 +474,9 @@ Table "lvmp" {
   }
 }
 
-// Origem: mapu.dbf (DBF)
+// Origem: mapu (DBFCDX)
 Table "mapu" {
-  Note: "Origem: mapu.dbf"
+  Note: "Origem: mapu"
   "SEQ" INTEGER [default: 0]
   "DINI" DATETIME
   "DFIM" DATETIME
@@ -489,9 +489,9 @@ Table "mapu" {
   }
 }
 
-// Origem: mapubai.dbf (DBF)
+// Origem: mapubai (DBFCDX)
 Table "mapubai" {
-  Note: "Origem: mapubai.dbf"
+  Note: "Origem: mapubai"
   "SEQ" INTEGER [default: 0]
   "FERRAM" VARCHAR(4)
   "QTDE" INTEGER [default: 0]
@@ -501,9 +501,9 @@ Table "mapubai" {
   }
 }
 
-// Origem: mapui.dbf (DBF)
+// Origem: mapui (DBFCDX)
 Table "mapui" {
-  Note: "Origem: mapui.dbf"
+  Note: "Origem: mapui"
   "SEQ" INTEGER [default: 0]
   "FERRAM" VARCHAR(4)
   "QTDE" INTEGER [default: 0]
@@ -513,9 +513,9 @@ Table "mapui" {
   }
 }
 
-// Origem: me01cr.dbf (DBF)
+// Origem: me01cr (DBFCDX)
 Table "me01cr" {
-  Note: "Origem: me01cr.dbf"
+  Note: "Origem: me01cr"
   "CODIGO" VARCHAR(4)
   "NOME" VARCHAR(40)
   "PROGRAMA" DATETIME
@@ -528,9 +528,9 @@ Table "me01cr" {
   }
 }
 
-// Origem: rl.dbf (DBF)
+// Origem: rl (DBFCDX)
 Table "rl" {
-  Note: "Origem: rl.dbf"
+  Note: "Origem: rl"
   "RL" INTEGER [default: 0]
   "DATA" DATETIME
   Indexes {
@@ -538,9 +538,9 @@ Table "rl" {
   }
 }
 
-// Origem: rli.dbf (DBF)
+// Origem: rli (DBFCDX)
 Table "rli" {
-  Note: "Origem: rli.dbf"
+  Note: "Origem: rli"
   "RL" INTEGER [default: 0]
   "CODME01" VARCHAR(5)
   "LUB01" VARCHAR(1)
@@ -553,9 +553,9 @@ Table "rli" {
   }
 }
 
-// Origem: ro.dbf (DBF)
+// Origem: ro (DBFCDX)
 Table "ro" {
-  Note: "Origem: ro.dbf"
+  Note: "Origem: ro"
   "RO" INTEGER [default: 0]
   "AREA" VARCHAR(2)
   "DESCRI" VARCHAR(20)
@@ -615,16 +615,16 @@ Table "ro" {
   }
 }
 
-// Origem: roapud.dbf (DBF)
+// Origem: roapud (DBFCDX)
 Table "roapud" {
-  Note: "Origem: roapud.dbf"
+  Note: "Origem: roapud"
   "DIAINI" DATETIME
   "DIAFIM" DATETIME
 }
 
-// Origem: roi.dbf (DBF)
+// Origem: roi (DBFCDX)
 Table "roi" {
-  Note: "Origem: roi.dbf"
+  Note: "Origem: roi"
   "RO" INTEGER [default: 0]
   "CODIGO" VARCHAR(20)
   "QTDE" INTEGER [default: 0]
@@ -633,9 +633,9 @@ Table "roi" {
   }
 }
 
-// Origem: sm.dbf (DBF)
+// Origem: sm (DBFCDX)
 Table "sm" {
-  Note: "Origem: sm.dbf"
+  Note: "Origem: sm"
   "SM" INTEGER [default: 0]
   "DATA" DATETIME
   "TIPO" VARCHAR(1)
