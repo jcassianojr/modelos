@@ -1,6 +1,6 @@
-// Origem: dic.dbf (DBF)
+// Origem: dic (DBFCDX)
 Table "dic" {
-  Note: "Origem: dic.dbf"
+  Note: "Origem: dic"
   "ARQUIVO" VARCHAR(30)
   "DESCRICAO" VARCHAR(60)
   "CAMINHO" VARCHAR(40)
@@ -10,9 +10,9 @@ Table "dic" {
   }
 }
 
-// Origem: dici.dbf (DBF)
+// Origem: dici (DBFCDX)
 Table "dici" {
-  Note: "Origem: dici.dbf"
+  Note: "Origem: dici"
   "TABELA" VARCHAR(30)
   "CAMPO" VARCHAR(10)
   "TIPO" VARCHAR(1)
@@ -25,9 +25,9 @@ Table "dici" {
   }
 }
 
-// Origem: dicidx.dbf (DBF)
+// Origem: dicidx (DBFCDX)
 Table "dicidx" {
-  Note: "Origem: dicidx.dbf"
+  Note: "Origem: dicidx"
   "ARQUIVO" VARCHAR(30)
   "SEQ" INTEGER [default: 0]
   "TAG" VARCHAR(20)

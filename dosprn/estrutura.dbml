@@ -1,6 +1,6 @@
-// Origem: dosprn1.dbf (DBF)
+// Origem: dosprn1 (DBFCDX)
 Table "dosprn1" {
-  Note: "Origem: dosprn1.dbf"
+  Note: "Origem: dosprn1"
   "PR_NO" INTEGER [default: 0]
   "PR_NAME" VARCHAR(50)
   "INIT_PR" VARCHAR(50)
@@ -32,9 +32,9 @@ Table "dosprn1" {
   }
 }
 
-// Origem: dosprn2.dbf (DBF)
+// Origem: dosprn2 (DBFCDX)
 Table "dosprn2" {
-  Note: "Origem: dosprn2.dbf"
+  Note: "Origem: dosprn2"
   "EMPRESA" VARCHAR(15)
   "IMPRESS" VARCHAR(14)
   "EMULA" VARCHAR(14)
@@ -105,9 +105,9 @@ Table "dosprn2" {
   }
 }
 
-// Origem: dosprn3.dbf (DBF)
+// Origem: dosprn3 (DBFCDX)
 Table "dosprn3" {
-  Note: "Origem: dosprn3.dbf"
+  Note: "Origem: dosprn3"
   "NOME" VARCHAR(22)
   "C_10CPI" VARCHAR(20)
   "C_17CPI" VARCHAR(20)

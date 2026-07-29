@@ -1,8 +1,8 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 27/07/2026
+> Varredura automatica realizada em: 29/07/2026
 
-## Tabela DBF: `dosprn1.dbf`
-> **Origem:** `dosprn1.dbf` (Driver: DBFCDX)
+## Tabela DBF: `dosprn1`
+> **Origem:** `dosprn1` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -37,8 +37,8 @@
 - Tag: `DOSPRN` Expressao: `PR_NAME`
 
 ---
-## Tabela DBF: `dosprn2.dbf`
-> **Origem:** `dosprn2.dbf` (Driver: DBFCDX)
+## Tabela DBF: `dosprn2`
+> **Origem:** `dosprn2` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -112,8 +112,8 @@
 - Tag: `DOSPRN2` Expressao: `EMPRESA+IMPRESS`
 
 ---
-## Tabela DBF: `dosprn3.dbf`
-> **Origem:** `dosprn3.dbf` (Driver: DBFCDX)
+## Tabela DBF: `dosprn3`
+> **Origem:** `dosprn3` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
