@@ -1,8 +1,8 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 27/07/2026
+> Varredura automatica realizada em: 29/07/2026
 
-## Tabela DBF: `RIF.dbf`
-> **Origem:** `RIF.dbf` (Driver: DBFCDX)
+## Tabela DBF: `RIF`
+> **Origem:** `RIF` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -32,8 +32,8 @@
 - Tag: `RIF` Expressao: `RASTRO`
 
 ---
-## Tabela DBF: `RIFI.dbf`
-> **Origem:** `RIFI.dbf` (Driver: DBFCDX)
+## Tabela DBF: `RIFI`
+> **Origem:** `RIFI` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -48,8 +48,8 @@
 - Tag: `RIFI` Expressao: `RIF`
 
 ---
-## Tabela DBF: `rifpr.dbf`
-> **Origem:** `rifpr.dbf` (Driver: DBFCDX)
+## Tabela DBF: `rifpr`
+> **Origem:** `rifpr` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |

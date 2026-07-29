@@ -1,6 +1,6 @@
-// Origem: RIF.dbf (DBF)
+// Origem: RIF (DBFCDX)
 Table "RIF" {
-  Note: "Origem: RIF.dbf"
+  Note: "Origem: RIF"
   "RIF" INTEGER [default: 0]
   "PF" INTEGER [default: 0]
   "CLIENTE" INTEGER [default: 0]
@@ -27,9 +27,9 @@ Table "RIF" {
   }
 }
 
-// Origem: RIFI.dbf (DBF)
+// Origem: RIFI (DBFCDX)
 Table "RIFI" {
-  Note: "Origem: RIFI.dbf"
+  Note: "Origem: RIFI"
   "RIF" INTEGER [default: 0]
   "TOL" VARCHAR(150)
   "MIN" DECIMAL(12,4) [default: 0]
@@ -41,9 +41,9 @@ Table "RIFI" {
   }
 }
 
-// Origem: rifpr.dbf (DBF)
+// Origem: rifpr (DBFCDX)
 Table "rifpr" {
-  Note: "Origem: rifpr.dbf"
+  Note: "Origem: rifpr"
   "PRODUTO" VARCHAR(24)
   "QTDE" INTEGER [default: 0]
   "RIF1200" INTEGER [default: 0]
