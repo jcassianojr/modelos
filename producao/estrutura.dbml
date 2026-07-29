@@ -1,6 +1,6 @@
-// Origem: bs1.dbf (DBF)
+// Origem: bs1 (DBFCDX)
 Table "bs1" {
-  Note: "Origem: bs1.dbf"
+  Note: "Origem: bs1"
   "QTDDE" INTEGER [default: 0]
   "QTD01" INTEGER [default: 0]
   "QTD02" INTEGER [default: 0]
@@ -23,9 +23,9 @@ Table "bs1" {
   }
 }
 
-// Origem: bs2.dbf (DBF)
+// Origem: bs2 (DBFCDX)
 Table "bs2" {
-  Note: "Origem: bs2.dbf"
+  Note: "Origem: bs2"
   "GRUPO" VARCHAR(12)
   "QTDDE" INTEGER [default: 0]
   "QTD01" INTEGER [default: 0]
@@ -49,9 +49,9 @@ Table "bs2" {
   }
 }
 
-// Origem: bs3.dbf (DBF)
+// Origem: bs3 (DBFCDX)
 Table "bs3" {
-  Note: "Origem: bs3.dbf"
+  Note: "Origem: bs3"
   "CODIGO" VARCHAR(12)
   "NOME" VARCHAR(30)
   "GRUPOUTL" VARCHAR(3)
@@ -72,9 +72,9 @@ Table "bs3" {
   "EMPLOGIX" VARCHAR(2)
 }
 
-// Origem: bs5.dbf (DBF)
+// Origem: bs5 (DBFCDX)
 Table "bs5" {
-  Note: "Origem: bs5.dbf"
+  Note: "Origem: bs5"
   "CLIENTE" INTEGER [default: 0]
   "COGCLI" VARCHAR(12)
   "GRUPO" VARCHAR(12)
@@ -103,9 +103,9 @@ Table "bs5" {
   }
 }
 
-// Origem: bs6.dbf (DBF)
+// Origem: bs6 (DBFCDX)
 Table "bs6" {
-  Note: "Origem: bs6.dbf"
+  Note: "Origem: bs6"
   "CLIENTE" INTEGER [default: 0]
   "COGCLI" VARCHAR(12)
   "GRUPO" VARCHAR(12)
@@ -132,9 +132,9 @@ Table "bs6" {
   }
 }
 
-// Origem: iacseq.dbf (DBF)
+// Origem: iacseq (DBFCDX)
 Table "iacseq" {
-  Note: "Origem: iacseq.dbf"
+  Note: "Origem: iacseq"
   "SEQ" INTEGER [default: 0]
   "DIAFIM" DATETIME
   "DIAINI" DATETIME
@@ -149,9 +149,9 @@ Table "iacseq" {
   }
 }
 
-// Origem: mm02iac.dbf (DBF)
+// Origem: mm02iac (DBFCDX)
 Table "mm02iac" {
-  Note: "Origem: mm02iac.dbf"
+  Note: "Origem: mm02iac"
   "NUMERO" INTEGER [default: 0]
   "DATA" DATETIME
   "FORNECEDO" INTEGER [default: 0]
@@ -173,9 +173,9 @@ Table "mm02iac" {
   "EMPLOGIX" VARCHAR(2)
 }
 
-// Origem: rd.dbf (DBF)
+// Origem: rd (DBFCDX)
 Table "rd" {
-  Note: "Origem: rd.dbf"
+  Note: "Origem: rd"
   "SEQ" INTEGER [default: 0]
   "DIAINI" DATETIME
   "DIAFIM" DATETIME
@@ -214,9 +214,9 @@ Table "rd" {
   }
 }
 
-// Origem: rde.dbf (DBF)
+// Origem: rde (DBFCDX)
 Table "rde" {
-  Note: "Origem: rde.dbf"
+  Note: "Origem: rde"
   "SEQ" INTEGER [default: 0]
   "NUMERO" VARCHAR(4)
   "NOME" VARCHAR(40)
@@ -241,9 +241,9 @@ Table "rde" {
   }
 }
 
-// Origem: rdf.dbf (DBF)
+// Origem: rdf (DBFCDX)
 Table "rdf" {
-  Note: "Origem: rdf.dbf"
+  Note: "Origem: rdf"
   "SEQ" INTEGER [default: 0]
   "NUMERO" INTEGER [default: 0]
   "NOME" VARCHAR(40)
@@ -260,9 +260,9 @@ Table "rdf" {
   }
 }
 
-// Origem: rdp.dbf (DBF)
+// Origem: rdp (DBFCDX)
 Table "rdp" {
-  Note: "Origem: rdp.dbf"
+  Note: "Origem: rdp"
   "SEQ" INTEGER [default: 0]
   "NUMERO" VARCHAR(3)
   "NOME" VARCHAR(40)
@@ -275,9 +275,9 @@ Table "rdp" {
   }
 }
 
-// Origem: rdpd.dbf (DBF)
+// Origem: rdpd (DBFCDX)
 Table "rdpd" {
-  Note: "Origem: rdpd.dbf"
+  Note: "Origem: rdpd"
   "SEQ" INTEGER [default: 0]
   "NUMERO" VARCHAR(2)
   "NOME" VARCHAR(40)
@@ -287,9 +287,9 @@ Table "rdpd" {
   }
 }
 
-// Origem: rdpt.dbf (DBF)
+// Origem: rdpt (DBFCDX)
 Table "rdpt" {
-  Note: "Origem: rdpt.dbf"
+  Note: "Origem: rdpt"
   "NUMERO" VARCHAR(3)
   "NOME" VARCHAR(40)
   "VAL01" DECIMAL(10,2) [default: 0]
@@ -349,9 +349,9 @@ Table "rdpt" {
   }
 }
 
-// Origem: rdt.dbf (DBF)
+// Origem: rdt (DBFCDX)
 Table "rdt" {
-  Note: "Origem: rdt.dbf"
+  Note: "Origem: rdt"
   "CODIGO" VARCHAR(24)
   "SEQ" INTEGER [default: 0]
   "SSQ" INTEGER [default: 0]
@@ -371,9 +371,9 @@ Table "rdt" {
   }
 }
 
-// Origem: rdtbx.dbf (DBF)
+// Origem: rdtbx (DBFCDX)
 Table "rdtbx" {
-  Note: "Origem: rdtbx.dbf"
+  Note: "Origem: rdtbx"
   "CODIGO" VARCHAR(24)
   "SEQ" INTEGER [default: 0]
   "SSQ" INTEGER [default: 0]

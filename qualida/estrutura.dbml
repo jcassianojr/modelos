@@ -1,6 +1,6 @@
-// Origem: ac2.dbf (DBF)
+// Origem: ac2 (DBFCDX)
 Table "ac2" {
-  Note: "Origem: ac2.dbf"
+  Note: "Origem: ac2"
   "ACP" INTEGER [default: 0]
   "DATA" DATETIME
   "CLIENTE" INTEGER [default: 0]
@@ -117,9 +117,9 @@ Table "ac2" {
   }
 }
 
-// Origem: acd.dbf (DBF)
+// Origem: acd (DBFCDX)
 Table "acd" {
-  Note: "Origem: acd.dbf"
+  Note: "Origem: acd"
   "ACD" INTEGER [default: 0]
   "DATA" DATETIME
   "CLIENTE" INTEGER [default: 0]
@@ -142,9 +142,9 @@ Table "acd" {
   }
 }
 
-// Origem: acdi.dbf (DBF)
+// Origem: acdi (DBFCDX)
 Table "acdi" {
-  Note: "Origem: acdi.dbf"
+  Note: "Origem: acdi"
   "ACD" INTEGER [default: 0]
   "VAL01" DECIMAL(9,4) [default: 0]
   "VAL02" DECIMAL(9,4) [default: 0]
@@ -168,9 +168,9 @@ Table "acdi" {
   }
 }
 
-// Origem: acp.dbf (DBF)
+// Origem: acp (DBFCDX)
 Table "acp" {
-  Note: "Origem: acp.dbf"
+  Note: "Origem: acp"
   "ACP" INTEGER [default: 0]
   "DATA" DATETIME
   "CLIENTE" INTEGER [default: 0]
@@ -287,9 +287,9 @@ Table "acp" {
   }
 }
 
-// Origem: acpr.dbf (DBF)
+// Origem: acpr (DBFCDX)
 Table "acpr" {
-  Note: "Origem: acpr.dbf"
+  Note: "Origem: acpr"
   "ACP" INTEGER [default: 0]
   "VALOR" DECIMAL(12,4) [default: 0]
   "QTDE" INTEGER [default: 0]
@@ -300,9 +300,9 @@ Table "acpr" {
   }
 }
 
-// Origem: acpx.dbf (DBF)
+// Origem: acpx (DBFCDX)
 Table "acpx" {
-  Note: "Origem: acpx.dbf"
+  Note: "Origem: acpx"
   "ACP" INTEGER [default: 0]
   "VALOR" DECIMAL(12,4) [default: 0]
   "QTDE" INTEGER [default: 0]
@@ -313,9 +313,9 @@ Table "acpx" {
   }
 }
 
-// Origem: aepr.dbf (DBF)
+// Origem: aepr (DBFCDX)
 Table "aepr" {
-  Note: "Origem: aepr.dbf"
+  Note: "Origem: aepr"
   "ACP" INTEGER [default: 0]
   "VALOR" DECIMAL(12,4) [default: 0]
   "QTDE" INTEGER [default: 0]
@@ -326,9 +326,9 @@ Table "aepr" {
   }
 }
 
-// Origem: aepx.dbf (DBF)
+// Origem: aepx (DBFCDX)
 Table "aepx" {
-  Note: "Origem: aepx.dbf"
+  Note: "Origem: aepx"
   "ACP" INTEGER [default: 0]
   "VALOR" DECIMAL(12,4) [default: 0]
   "QTDE" INTEGER [default: 0]
@@ -339,9 +339,9 @@ Table "aepx" {
   }
 }
 
-// Origem: ci.dbf (DBF)
+// Origem: ci (DBFCDX)
 Table "ci" {
-  Note: "Origem: ci.dbf"
+  Note: "Origem: ci"
   "CI" INTEGER [default: 0]
   "TIPOI" VARCHAR(1)
   "DESCRI" VARCHAR(40)
@@ -367,9 +367,9 @@ Table "ci" {
   }
 }
 
-// Origem: cic.dbf (DBF)
+// Origem: cic (DBFCDX)
 Table "cic" {
-  Note: "Origem: cic.dbf"
+  Note: "Origem: cic"
   "DESENHO" VARCHAR(24)
   "DESCRI" VARCHAR(40)
   "DATAR" DATETIME
@@ -381,9 +381,9 @@ Table "cic" {
   }
 }
 
-// Origem: cici.dbf (DBF)
+// Origem: cici (DBFCDX)
 Table "cici" {
-  Note: "Origem: cici.dbf"
+  Note: "Origem: cici"
   "DESENHO" VARCHAR(24)
   "ENC" DECIMAL(9,4) [default: 0]
   "CESPE" VARCHAR(40)
@@ -397,9 +397,9 @@ Table "cici" {
   }
 }
 
-// Origem: cii.dbf (DBF)
+// Origem: cii (DBFCDX)
 Table "cii" {
-  Note: "Origem: cii.dbf"
+  Note: "Origem: cii"
   "CI" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
   "DESVIO" DECIMAL(9,4) [default: 0]
@@ -417,9 +417,9 @@ Table "cii" {
   }
 }
 
-// Origem: crtaum.dbf (DBF)
+// Origem: crtaum (DBFCDX)
 Table "crtaum" {
-  Note: "Origem: crtaum.dbf"
+  Note: "Origem: crtaum"
   "TIPO" VARCHAR(1)
   "DATA" DATETIME
   "HORA" DECIMAL(5,2) [default: 0]
@@ -432,9 +432,9 @@ Table "crtaum" {
   }
 }
 
-// Origem: etippp.dbf (DBF)
+// Origem: etippp (DBFCDX)
 Table "etippp" {
-  Note: "Origem: etippp.dbf"
+  Note: "Origem: etippp"
   "NUMERO" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "NOME" VARCHAR(50)
@@ -442,9 +442,9 @@ Table "etippp" {
   "ENGENHA" VARCHAR(50)
 }
 
-// Origem: gc.dbf (DBF)
+// Origem: gc (DBFCDX)
 Table "gc" {
-  Note: "Origem: gc.dbf"
+  Note: "Origem: gc"
   "GC" INTEGER [default: 0]
   "CLIENTE" INTEGER [default: 0]
   "CLINOME" VARCHAR(40)
@@ -485,9 +485,9 @@ Table "gc" {
   }
 }
 
-// Origem: gctem.dbf (DBF)
+// Origem: gctem (DBFCDX)
 Table "gctem" {
-  Note: "Origem: gctem.dbf"
+  Note: "Origem: gctem"
   "ITEM" INTEGER [default: 0]
   "REFCTR" VARCHAR(1)
   Indexes {
@@ -495,9 +495,9 @@ Table "gctem" {
   }
 }
 
-// Origem: gctemp.dbf (DBF)
+// Origem: gctemp (DBFCDX)
 Table "gctemp" {
-  Note: "Origem: gctemp.dbf"
+  Note: "Origem: gctemp"
   "ITEM" INTEGER [default: 0]
   "REFCTR" VARCHAR(1)
   Indexes {
@@ -506,9 +506,9 @@ Table "gctemp" {
   }
 }
 
-// Origem: opae.dbf (DBF)
+// Origem: opae (DBFCDX)
 Table "opae" {
-  Note: "Origem: opae.dbf"
+  Note: "Origem: opae"
   "OPAE" INTEGER [default: 0]
   "CLIENTE" INTEGER [default: 0]
   "DATA" DATETIME
@@ -521,17 +521,17 @@ Table "opae" {
   }
 }
 
-// Origem: opai.dbf (DBF)
+// Origem: opai (DBFCDX)
 Table "opai" {
-  Note: "Origem: opai.dbf"
+  Note: "Origem: opai"
   "OPAE" INTEGER [default: 0]
   "ESPEC" VARCHAR(100)
   "LAUDO" VARCHAR(1)
 }
 
-// Origem: pac.dbf (DBF)
+// Origem: pac (DBFCDX)
 Table "pac" {
-  Note: "Origem: pac.dbf"
+  Note: "Origem: pac"
   "PAC" INTEGER [default: 0]
   "ACP" INTEGER [default: 0]
   "AEP" INTEGER [default: 0]
@@ -593,9 +593,9 @@ Table "pac" {
   }
 }
 
-// Origem: paee.dbf (DBF)
+// Origem: paee (DBFCDX)
 Table "paee" {
-  Note: "Origem: paee.dbf"
+  Note: "Origem: paee"
   "PAEE" INTEGER [default: 0]
   "DATA" DATETIME
   "CLIENTE" INTEGER [default: 0]
@@ -608,9 +608,9 @@ Table "paee" {
   }
 }
 
-// Origem: paei.dbf (DBF)
+// Origem: paei (DBFCDX)
 Table "paei" {
-  Note: "Origem: paei.dbf"
+  Note: "Origem: paei"
   "DESENHO" VARCHAR(24)
   "ESPEC" VARCHAR(100)
   Indexes {
@@ -618,9 +618,9 @@ Table "paei" {
   }
 }
 
-// Origem: ri.dbf (DBF)
+// Origem: ri (DBFCDX)
 Table "ri" {
-  Note: "Origem: ri.dbf"
+  Note: "Origem: ri"
   "RI" INTEGER [default: 0]
   "TIPOI" VARCHAR(1)
   "TIPO2" VARCHAR(1)
@@ -651,9 +651,9 @@ Table "ri" {
   }
 }
 
-// Origem: rii.dbf (DBF)
+// Origem: rii (DBFCDX)
 Table "rii" {
-  Note: "Origem: rii.dbf"
+  Note: "Origem: rii"
   "RI" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
   "DESVIO" VARCHAR(20)
@@ -668,9 +668,9 @@ Table "rii" {
   }
 }
 
-// Origem: rrl.dbf (DBF)
+// Origem: rrl (DBFCDX)
 Table "rrl" {
-  Note: "Origem: rrl.dbf"
+  Note: "Origem: rrl"
   "RRS" INTEGER [default: 0]
   "CLIENTE" INTEGER [default: 0]
   "CLINOME" VARCHAR(40)
@@ -868,9 +868,9 @@ Table "rrl" {
   }
 }
 
-// Origem: rrs.dbf (DBF)
+// Origem: rrs (DBFCDX)
 Table "rrs" {
-  Note: "Origem: rrs.dbf"
+  Note: "Origem: rrs"
   "RRS" INTEGER [default: 0]
   "CLIENTE" INTEGER [default: 0]
   "CLINOME" VARCHAR(40)
@@ -959,9 +959,9 @@ Table "rrs" {
   }
 }
 
-// Origem: teep.dbf (DBF)
+// Origem: teep (DBFCDX)
 Table "teep" {
-  Note: "Origem: teep.dbf"
+  Note: "Origem: teep"
   "TEEP" INTEGER [default: 0]
   "DATA" DATETIME
   "DESENHO" VARCHAR(24)

@@ -1,8 +1,8 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 27/07/2026
+> Varredura automatica realizada em: 29/07/2026
 
-## Tabela DBF: `ac2.dbf`
-> **Origem:** `ac2.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ac2`
+> **Origem:** `ac2` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -122,8 +122,8 @@
 - Tag: `ACD` Expressao: `ACD`
 
 ---
-## Tabela DBF: `acd.dbf`
-> **Origem:** `acd.dbf` (Driver: DBFCDX)
+## Tabela DBF: `acd`
+> **Origem:** `acd` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -149,8 +149,8 @@
 - Tag: `ACD` Expressao: `ACD`
 
 ---
-## Tabela DBF: `acdi.dbf`
-> **Origem:** `acdi.dbf` (Driver: DBFCDX)
+## Tabela DBF: `acdi`
+> **Origem:** `acdi` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -177,8 +177,8 @@
 - Tag: `ACDI-4` Expressao: `AEP`
 
 ---
-## Tabela DBF: `acp.dbf`
-> **Origem:** `acp.dbf` (Driver: DBFCDX)
+## Tabela DBF: `acp`
+> **Origem:** `acp` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -298,8 +298,8 @@
 - Tag: `ACD` Expressao: `ACD`
 
 ---
-## Tabela DBF: `acpr.dbf`
-> **Origem:** `acpr.dbf` (Driver: DBFCDX)
+## Tabela DBF: `acpr`
+> **Origem:** `acpr` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -313,8 +313,8 @@
 - Tag: `ACP` Expressao: `ACP`
 
 ---
-## Tabela DBF: `acpx.dbf`
-> **Origem:** `acpx.dbf` (Driver: DBFCDX)
+## Tabela DBF: `acpx`
+> **Origem:** `acpx` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -328,8 +328,8 @@
 - Tag: `ACP` Expressao: `ACP`
 
 ---
-## Tabela DBF: `aepr.dbf`
-> **Origem:** `aepr.dbf` (Driver: DBFCDX)
+## Tabela DBF: `aepr`
+> **Origem:** `aepr` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -343,8 +343,8 @@
 - Tag: `ACP` Expressao: `ACP`
 
 ---
-## Tabela DBF: `aepx.dbf`
-> **Origem:** `aepx.dbf` (Driver: DBFCDX)
+## Tabela DBF: `aepx`
+> **Origem:** `aepx` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -358,8 +358,8 @@
 - Tag: `ACP` Expressao: `ACP`
 
 ---
-## Tabela DBF: `ci.dbf`
-> **Origem:** `ci.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ci`
+> **Origem:** `ci` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -388,8 +388,8 @@
 - Tag: `CI` Expressao: `CI`
 
 ---
-## Tabela DBF: `cic.dbf`
-> **Origem:** `cic.dbf` (Driver: DBFCDX)
+## Tabela DBF: `cic`
+> **Origem:** `cic` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -404,8 +404,8 @@
 - Tag: `DESENHO` Expressao: `DESENHO`
 
 ---
-## Tabela DBF: `cici.dbf`
-> **Origem:** `cici.dbf` (Driver: DBFCDX)
+## Tabela DBF: `cici`
+> **Origem:** `cici` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -422,8 +422,8 @@
 - Tag: `DESENHO` Expressao: `DESENHO`
 
 ---
-## Tabela DBF: `cii.dbf`
-> **Origem:** `cii.dbf` (Driver: DBFCDX)
+## Tabela DBF: `cii`
+> **Origem:** `cii` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -444,8 +444,8 @@
 - Tag: `CI` Expressao: `CI`
 
 ---
-## Tabela DBF: `crtaum.dbf`
-> **Origem:** `crtaum.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crtaum`
+> **Origem:** `crtaum` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -461,8 +461,8 @@
 - Tag: `REFCTR` Expressao: `REFCTR`
 
 ---
-## Tabela DBF: `etippp.dbf`
-> **Origem:** `etippp.dbf` (Driver: DBFCDX)
+## Tabela DBF: `etippp`
+> **Origem:** `etippp` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -473,8 +473,8 @@
 | ENGENHA | C | 50 | 0 |
 
 ---
-## Tabela DBF: `gc.dbf`
-> **Origem:** `gc.dbf` (Driver: DBFCDX)
+## Tabela DBF: `gc`
+> **Origem:** `gc` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -518,8 +518,8 @@
 - Tag: `REFCTR` Expressao: `REFCTR`
 
 ---
-## Tabela DBF: `gctem.dbf`
-> **Origem:** `gctem.dbf` (Driver: DBFCDX)
+## Tabela DBF: `gctem`
+> **Origem:** `gctem` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -530,8 +530,8 @@
 - Tag: `REFCTR` Expressao: `REFCTR`
 
 ---
-## Tabela DBF: `gctemp.dbf`
-> **Origem:** `gctemp.dbf` (Driver: DBFCDX)
+## Tabela DBF: `gctemp`
+> **Origem:** `gctemp` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -543,8 +543,8 @@
 - Tag: `REFCTR` Expressao: `REFCTR`
 
 ---
-## Tabela DBF: `opae.dbf`
-> **Origem:** `opae.dbf` (Driver: DBFCDX)
+## Tabela DBF: `opae`
+> **Origem:** `opae` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -560,8 +560,8 @@
 - Tag: `OPAE` Expressao: `OPAE`
 
 ---
-## Tabela DBF: `opai.dbf`
-> **Origem:** `opai.dbf` (Driver: DBFCDX)
+## Tabela DBF: `opai`
+> **Origem:** `opai` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -570,8 +570,8 @@
 | LAUDO | C | 1 | 0 |
 
 ---
-## Tabela DBF: `pac.dbf`
-> **Origem:** `pac.dbf` (Driver: DBFCDX)
+## Tabela DBF: `pac`
+> **Origem:** `pac` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -636,8 +636,8 @@
 - Tag: `PAC` Expressao: `PAC`
 
 ---
-## Tabela DBF: `paee.dbf`
-> **Origem:** `paee.dbf` (Driver: DBFCDX)
+## Tabela DBF: `paee`
+> **Origem:** `paee` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -653,8 +653,8 @@
 - Tag: `PAEE` Expressao: `PAEE`
 
 ---
-## Tabela DBF: `paei.dbf`
-> **Origem:** `paei.dbf` (Driver: DBFCDX)
+## Tabela DBF: `paei`
+> **Origem:** `paei` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -665,8 +665,8 @@
 - Tag: `PAEI` Expressao: `DESENHO`
 
 ---
-## Tabela DBF: `ri.dbf`
-> **Origem:** `ri.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ri`
+> **Origem:** `ri` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -700,8 +700,8 @@
 - Tag: `RI` Expressao: `RI`
 
 ---
-## Tabela DBF: `rii.dbf`
-> **Origem:** `rii.dbf` (Driver: DBFCDX)
+## Tabela DBF: `rii`
+> **Origem:** `rii` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -719,8 +719,8 @@
 - Tag: `RI` Expressao: `RI`
 
 ---
-## Tabela DBF: `rrl.dbf`
-> **Origem:** `rrl.dbf` (Driver: DBFCDX)
+## Tabela DBF: `rrl`
+> **Origem:** `rrl` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -921,8 +921,8 @@
 - Tag: `RRS` Expressao: `RRS`
 
 ---
-## Tabela DBF: `rrs.dbf`
-> **Origem:** `rrs.dbf` (Driver: DBFCDX)
+## Tabela DBF: `rrs`
+> **Origem:** `rrs` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1014,8 +1014,8 @@
 - Tag: `RRS` Expressao: `RRS`
 
 ---
-## Tabela DBF: `teep.dbf`
-> **Origem:** `teep.dbf` (Driver: DBFCDX)
+## Tabela DBF: `teep`
+> **Origem:** `teep` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |

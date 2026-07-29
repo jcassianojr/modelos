@@ -1,8 +1,8 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 27/07/2026
+> Varredura automatica realizada em: 29/07/2026
 
-## Tabela DBF: `bs1.dbf`
-> **Origem:** `bs1.dbf` (Driver: DBFCDX)
+## Tabela DBF: `bs1`
+> **Origem:** `bs1` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -28,8 +28,8 @@
 - Tag: `BS1-1` Expressao: `STR(ANO,4)+STR(MES,2)`
 
 ---
-## Tabela DBF: `bs2.dbf`
-> **Origem:** `bs2.dbf` (Driver: DBFCDX)
+## Tabela DBF: `bs2`
+> **Origem:** `bs2` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -56,8 +56,8 @@
 - Tag: `BS2-1` Expressao: `STR(ANO,4)+STR(MES,2)+GRUPO`
 
 ---
-## Tabela DBF: `bs3.dbf`
-> **Origem:** `bs3.dbf` (Driver: DBFCDX)
+## Tabela DBF: `bs3`
+> **Origem:** `bs3` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -81,8 +81,8 @@
 | EMPLOGIX | C | 2 | 0 |
 
 ---
-## Tabela DBF: `bs5.dbf`
-> **Origem:** `bs5.dbf` (Driver: DBFCDX)
+## Tabela DBF: `bs5`
+> **Origem:** `bs5` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -114,8 +114,8 @@
 - Tag: `BS5-2` Expressao: `CODIGO+STR(ANO,4)+STR(MES,2)`
 
 ---
-## Tabela DBF: `bs6.dbf`
-> **Origem:** `bs6.dbf` (Driver: DBFCDX)
+## Tabela DBF: `bs6`
+> **Origem:** `bs6` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -145,8 +145,8 @@
 - Tag: `BS6-1` Expressao: `STR(ANO,4)+STR(MES,2)+STR(CLIENTE,8)`
 
 ---
-## Tabela DBF: `iacseq.dbf`
-> **Origem:** `iacseq.dbf` (Driver: DBFCDX)
+## Tabela DBF: `iacseq`
+> **Origem:** `iacseq` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -164,8 +164,8 @@
 - Tag: `SEQ` Expressao: `SEQ`
 
 ---
-## Tabela DBF: `mm02iac.dbf`
-> **Origem:** `mm02iac.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mm02iac`
+> **Origem:** `mm02iac` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -190,8 +190,8 @@
 | EMPLOGIX | C | 2 | 0 |
 
 ---
-## Tabela DBF: `rd.dbf`
-> **Origem:** `rd.dbf` (Driver: DBFCDX)
+## Tabela DBF: `rd`
+> **Origem:** `rd` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -233,8 +233,8 @@
 - Tag: `RD-2` Expressao: `STR(ANO,4)+STR(MES,2)`
 
 ---
-## Tabela DBF: `rde.dbf`
-> **Origem:** `rde.dbf` (Driver: DBFCDX)
+## Tabela DBF: `rde`
+> **Origem:** `rde` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -262,8 +262,8 @@
 - Tag: `RDE` Expressao: `SEQ`
 
 ---
-## Tabela DBF: `rdf.dbf`
-> **Origem:** `rdf.dbf` (Driver: DBFCDX)
+## Tabela DBF: `rdf`
+> **Origem:** `rdf` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -283,8 +283,8 @@
 - Tag: `RDF` Expressao: `SEQ`
 
 ---
-## Tabela DBF: `rdp.dbf`
-> **Origem:** `rdp.dbf` (Driver: DBFCDX)
+## Tabela DBF: `rdp`
+> **Origem:** `rdp` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -300,8 +300,8 @@
 - Tag: `RDP-2` Expressao: `NUMERO`
 
 ---
-## Tabela DBF: `rdpd.dbf`
-> **Origem:** `rdpd.dbf` (Driver: DBFCDX)
+## Tabela DBF: `rdpd`
+> **Origem:** `rdpd` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -314,8 +314,8 @@
 - Tag: `RDPD` Expressao: `SEQ`
 
 ---
-## Tabela DBF: `rdpt.dbf`
-> **Origem:** `rdpt.dbf` (Driver: DBFCDX)
+## Tabela DBF: `rdpt`
+> **Origem:** `rdpt` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -378,8 +378,8 @@
 - Tag: `VAL12` Expressao: `DESCEND(VAL12)`
 
 ---
-## Tabela DBF: `rdt.dbf`
-> **Origem:** `rdt.dbf` (Driver: DBFCDX)
+## Tabela DBF: `rdt`
+> **Origem:** `rdt` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -402,8 +402,8 @@
 - Tag: `RDT` Expressao: `CODIGO+STR(SEQ,3)+STR(SSQ,3)+STR(ANO,4)+STR(MES,2)`
 
 ---
-## Tabela DBF: `rdtbx.dbf`
-> **Origem:** `rdtbx.dbf` (Driver: DBFCDX)
+## Tabela DBF: `rdtbx`
+> **Origem:** `rdtbx` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
