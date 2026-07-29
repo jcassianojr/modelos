@@ -1,8 +1,8 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 27/07/2026
+> Varredura automatica realizada em: 29/07/2026
 
-## Tabela DBF: `ac.dbf`
-> **Origem:** `ac.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ac`
+> **Origem:** `ac` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -25,8 +25,8 @@
 - Tag: `AC2` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `aci.dbf`
-> **Origem:** `aci.dbf` (Driver: DBFCDX)
+## Tabela DBF: `aci`
+> **Origem:** `aci` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -47,8 +47,8 @@
 - Tag: `ACI-3` Expressao: `AC`
 
 ---
-## Tabela DBF: `estqint.dbf`
-> **Origem:** `estqint.dbf` (Driver: DBFCDX)
+## Tabela DBF: `estqint`
+> **Origem:** `estqint` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -68,8 +68,8 @@
 - Tag: `ESTQINT` Expressao: `COD_ITEM`
 
 ---
-## Tabela DBF: `op01.dbf`
-> **Origem:** `op01.dbf` (Driver: DBFCDX)
+## Tabela DBF: `op01`
+> **Origem:** `op01` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -107,8 +107,8 @@
 - Tag: `OP01-4` Expressao: `CODIGOINT`
 
 ---
-## Tabela DBF: `op01x.dbf`
-> **Origem:** `op01x.dbf` (Driver: DBFCDX)
+## Tabela DBF: `op01x`
+> **Origem:** `op01x` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -145,8 +145,8 @@
 - Tag: `OP01X-3` Expressao: `STR(OP,8,2)`
 
 ---
-## Tabela DBF: `op02.dbf`
-> **Origem:** `op02.dbf` (Driver: DBFCDX)
+## Tabela DBF: `op02`
+> **Origem:** `op02` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -190,8 +190,8 @@
 | CODINT | C | 24 | 0 |
 
 ---
-## Tabela DBF: `op02set.dbf`
-> **Origem:** `op02set.dbf` (Driver: DBFCDX)
+## Tabela DBF: `op02set`
+> **Origem:** `op02set` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -233,8 +233,8 @@
 - Tag: `OP02SET5` Expressao: `SEMANA+CODIGO+STR(SEQ,3)+STR(SSQ,3)`
 
 ---
-## Tabela DBF: `op02sex.dbf`
-> **Origem:** `op02sex.dbf` (Driver: DBFCDX)
+## Tabela DBF: `op02sex`
+> **Origem:** `op02sex` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -288,8 +288,8 @@
 - Tag: `OP02SEX2` Expressao: `SETOROP+CODIGO`
 
 ---
-## Tabela DBF: `op02x.dbf`
-> **Origem:** `op02x.dbf` (Driver: DBFCDX)
+## Tabela DBF: `op02x`
+> **Origem:** `op02x` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -340,8 +340,8 @@
 - Tag: `OP02X-5` Expressao: `SETOROP+CODIGO`
 
 ---
-## Tabela DBF: `op03.dbf`
-> **Origem:** `op03.dbf` (Driver: DBFCDX)
+## Tabela DBF: `op03`
+> **Origem:** `op03` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -373,8 +373,8 @@
 - Tag: `OP03-1` Expressao: `STR(OP,8,2)+CODMP01`
 
 ---
-## Tabela DBF: `op03b.dbf`
-> **Origem:** `op03b.dbf` (Driver: DBFCDX)
+## Tabela DBF: `op03b`
+> **Origem:** `op03b` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -406,8 +406,8 @@
 - Tag: `OP03B-1` Expressao: `STR(OP,8,2)+CODMP01`
 
 ---
-## Tabela DBF: `oscrt.dbf`
-> **Origem:** `oscrt.dbf` (Driver: DBFCDX)
+## Tabela DBF: `oscrt`
+> **Origem:** `oscrt` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -446,8 +446,8 @@
 - Tag: `OSCRT-5` Expressao: `CODIGOINT`
 
 ---
-## Tabela DBF: `ospr2.dbf`
-> **Origem:** `ospr2.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ospr2`
+> **Origem:** `ospr2` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -468,8 +468,8 @@
 - Tag: `OSPR2-5` Expressao: `CODIGOINT`
 
 ---
-## Tabela DBF: `ospr3.dbf`
-> **Origem:** `ospr3.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ospr3`
+> **Origem:** `ospr3` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -483,8 +483,8 @@
 | SEQCLIPRG | N | 3 | 0 |
 
 ---
-## Tabela DBF: `ospra.dbf`
-> **Origem:** `ospra.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ospra`
+> **Origem:** `ospra` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -499,8 +499,8 @@
 - Tag: `OSPRA-1` Expressao: `PRODUTO+DTOS(DATAACM)+DTOS(DATAPRG)`
 
 ---
-## Tabela DBF: `osprb.dbf`
-> **Origem:** `osprb.dbf` (Driver: DBFCDX)
+## Tabela DBF: `osprb`
+> **Origem:** `osprb` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -514,8 +514,8 @@
 - Tag: `OSPRB-1` Expressao: `PRODUTO+DTOS(DATAACM)+DTOS(DATAPRG)`
 
 ---
-## Tabela DBF: `osprd.dbf`
-> **Origem:** `osprd.dbf` (Driver: DBFCDX)
+## Tabela DBF: `osprd`
+> **Origem:** `osprd` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -526,8 +526,8 @@
 | PLANTA | C | 5 | 0 |
 
 ---
-## Tabela DBF: `ospre.dbf`
-> **Origem:** `ospre.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ospre`
+> **Origem:** `ospre` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -541,8 +541,8 @@
 | SEQCLIPRG | N | 5 | 0 |
 
 ---
-## Tabela DBF: `osprf.dbf`
-> **Origem:** `osprf.dbf` (Driver: DBFCDX)
+## Tabela DBF: `osprf`
+> **Origem:** `osprf` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -553,8 +553,8 @@
 | PLANTA | C | 5 | 0 |
 
 ---
-## Tabela DBF: `osprg.dbf`
-> **Origem:** `osprg.dbf` (Driver: DBFCDX)
+## Tabela DBF: `osprg`
+> **Origem:** `osprg` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -575,8 +575,8 @@
 - Tag: `OSPRG-5` Expressao: `CODIGOINT`
 
 ---
-## Tabela DBF: `osprh.dbf`
-> **Origem:** `osprh.dbf` (Driver: DBFCDX)
+## Tabela DBF: `osprh`
+> **Origem:** `osprh` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -598,8 +598,8 @@
 - Tag: `OSPRH-5` Expressao: `CODIGOINT`
 
 ---
-## Tabela DBF: `ospri.dbf`
-> **Origem:** `ospri.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ospri`
+> **Origem:** `ospri` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -621,8 +621,8 @@
 - Tag: `OSPRI-5` Expressao: `CODIGOINT`
 
 ---
-## Tabela DBF: `ospro.dbf`
-> **Origem:** `ospro.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ospro`
+> **Origem:** `ospro` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -635,8 +635,8 @@
 - Tag: `OSPRO-1` Expressao: `PRODUTO+DTOS(DATAACM)+DTOS(DATAPRG)`
 
 ---
-## Tabela DBF: `osprr.dbf`
-> **Origem:** `osprr.dbf` (Driver: DBFCDX)
+## Tabela DBF: `osprr`
+> **Origem:** `osprr` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -658,8 +658,8 @@
 - Tag: `OSPRR-5` Expressao: `CODIGOINT`
 
 ---
-## Tabela DBF: `osprs.dbf`
-> **Origem:** `osprs.dbf` (Driver: DBFCDX)
+## Tabela DBF: `osprs`
+> **Origem:** `osprs` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -681,8 +681,8 @@
 - Tag: `OSPRS-5` Expressao: `CODIGOINT`
 
 ---
-## Tabela DBF: `pcorte.dbf`
-> **Origem:** `pcorte.dbf` (Driver: DBFCDX)
+## Tabela DBF: `pcorte`
+> **Origem:** `pcorte` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -722,8 +722,8 @@
 - Tag: `PCORTE-3` Expressao: `DATA`
 
 ---
-## Tabela DBF: `pcortei.dbf`
-> **Origem:** `pcortei.dbf` (Driver: DBFCDX)
+## Tabela DBF: `pcortei`
+> **Origem:** `pcortei` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -749,8 +749,8 @@
 - Tag: `PCORTEI-2` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `pe.dbf`
-> **Origem:** `pe.dbf` (Driver: DBFCDX)
+## Tabela DBF: `pe`
+> **Origem:** `pe` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -784,8 +784,8 @@
 - Tag: `PE-4` Expressao: `FORNECEDO`
 
 ---
-## Tabela DBF: `pe01.dbf`
-> **Origem:** `pe01.dbf` (Driver: DBFCDX)
+## Tabela DBF: `pe01`
+> **Origem:** `pe01` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -822,8 +822,8 @@
 - Tag: `PE01-2` Expressao: `PEDIDO`
 
 ---
-## Tabela DBF: `pe01ap.dbf`
-> **Origem:** `pe01ap.dbf` (Driver: DBFCDX)
+## Tabela DBF: `pe01ap`
+> **Origem:** `pe01ap` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -854,8 +854,8 @@
 - Tag: `PE01AP` Expressao: `STR(CLIENTE,8)+STR(PEDIDO,8)+STR(ITEM,3)+DTOS(DATASAI)`
 
 ---
-## Tabela DBF: `pe01bx.dbf`
-> **Origem:** `pe01bx.dbf` (Driver: DBFCDX)
+## Tabela DBF: `pe01bx`
+> **Origem:** `pe01bx` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -894,8 +894,8 @@
 - Tag: `PE01BX-4` Expressao: `CLIENTE`
 
 ---
-## Tabela DBF: `pe99.dbf`
-> **Origem:** `pe99.dbf` (Driver: DBFCDX)
+## Tabela DBF: `pe99`
+> **Origem:** `pe99` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -934,8 +934,8 @@
 - Tag: `PE99-4` Expressao: `CLIENTE`
 
 ---
-## Tabela DBF: `pecrt.dbf`
-> **Origem:** `pecrt.dbf` (Driver: DBFCDX)
+## Tabela DBF: `pecrt`
+> **Origem:** `pecrt` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -953,8 +953,8 @@
 - Tag: `PECRT-4` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `pemo.dbf`
-> **Origem:** `pemo.dbf` (Driver: DBFCDX)
+## Tabela DBF: `pemo`
+> **Origem:** `pemo` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -975,8 +975,8 @@
 - Tag: `PEMO-2` Expressao: `TIPPED+CODIGO+STR(FORNECEDO)`
 
 ---
-## Tabela DBF: `petr.dbf`
-> **Origem:** `petr.dbf` (Driver: DBFCDX)
+## Tabela DBF: `petr`
+> **Origem:** `petr` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -997,8 +997,8 @@
 - Tag: `PETR-2` Expressao: `TIPPED+CODIGO+STR(FORNECEDO)`
 
 ---
-## Tabela DBF: `prnec.dbf`
-> **Origem:** `prnec.dbf` (Driver: DBFCDX)
+## Tabela DBF: `prnec`
+> **Origem:** `prnec` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1093,8 +1093,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `prneca.dbf`
-> **Origem:** `prneca.dbf` (Driver: DBFCDX)
+## Tabela DBF: `prneca`
+> **Origem:** `prneca` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1125,8 +1125,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `prneci.dbf`
-> **Origem:** `prneci.dbf` (Driver: DBFCDX)
+## Tabela DBF: `prneci`
+> **Origem:** `prneci` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1162,8 +1162,8 @@
 - Tag: `TIPCOD` Expressao: `TIPOENT+CODCOMP`
 
 ---
-## Tabela DBF: `prnect.dbf`
-> **Origem:** `prnect.dbf` (Driver: DBFCDX)
+## Tabela DBF: `prnect`
+> **Origem:** `prnect` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |

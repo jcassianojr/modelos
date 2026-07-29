@@ -1,6 +1,6 @@
-// Origem: ac.dbf (DBF)
+// Origem: ac (DBFCDX)
 Table "ac" {
-  Note: "Origem: ac.dbf"
+  Note: "Origem: ac"
   "AC" INTEGER [default: 0]
   "TIPO" VARCHAR(1)
   "CODIGO" VARCHAR(10)
@@ -20,9 +20,9 @@ Table "ac" {
   }
 }
 
-// Origem: aci.dbf (DBF)
+// Origem: aci (DBFCDX)
 Table "aci" {
-  Note: "Origem: aci.dbf"
+  Note: "Origem: aci"
   "AC" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
   "DATA" DATETIME
@@ -40,9 +40,9 @@ Table "aci" {
   }
 }
 
-// Origem: estqint.dbf (DBF)
+// Origem: estqint (DBFCDX)
 Table "estqint" {
-  Note: "Origem: estqint.dbf"
+  Note: "Origem: estqint"
   "COD_EMPRES" VARCHAR(2)
   "COD_ITEM" VARCHAR(14)
   "QTD_LIBERA" DECIMAL(12,4) [default: 0]
@@ -59,9 +59,9 @@ Table "estqint" {
   }
 }
 
-// Origem: op01.dbf (DBF)
+// Origem: op01 (DBFCDX)
 Table "op01" {
-  Note: "Origem: op01.dbf"
+  Note: "Origem: op01"
   "OP" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "NOME" VARCHAR(40)
@@ -96,9 +96,9 @@ Table "op01" {
   }
 }
 
-// Origem: op01x.dbf (DBF)
+// Origem: op01x (DBFCDX)
 Table "op01x" {
-  Note: "Origem: op01x.dbf"
+  Note: "Origem: op01x"
   "OP" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "NOME" VARCHAR(40)
@@ -132,9 +132,9 @@ Table "op01x" {
   }
 }
 
-// Origem: op02.dbf (DBF)
+// Origem: op02 (DBFCDX)
 Table "op02" {
-  Note: "Origem: op02.dbf"
+  Note: "Origem: op02"
   "OP" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "SEQ" INTEGER [default: 0]
@@ -175,9 +175,9 @@ Table "op02" {
   "CODINT" VARCHAR(24)
 }
 
-// Origem: op02set.dbf (DBF)
+// Origem: op02set (DBFCDX)
 Table "op02set" {
-  Note: "Origem: op02set.dbf"
+  Note: "Origem: op02set"
   "OP" DECIMAL(8,2) [default: 0]
   "CODIGO" VARCHAR(24)
   "SEQ" INTEGER [default: 0]
@@ -216,9 +216,9 @@ Table "op02set" {
   }
 }
 
-// Origem: op02sex.dbf (DBF)
+// Origem: op02sex (DBFCDX)
 Table "op02sex" {
-  Note: "Origem: op02sex.dbf"
+  Note: "Origem: op02sex"
   "OP" DECIMAL(8,2) [default: 0]
   "CODIGO" VARCHAR(24)
   "SEQ" INTEGER [default: 0]
@@ -269,9 +269,9 @@ Table "op02sex" {
   }
 }
 
-// Origem: op02x.dbf (DBF)
+// Origem: op02x (DBFCDX)
 Table "op02x" {
-  Note: "Origem: op02x.dbf"
+  Note: "Origem: op02x"
   "OP" DECIMAL(8,2) [default: 0]
   "CODIGO" VARCHAR(24)
   "SEQ" INTEGER [default: 0]
@@ -319,9 +319,9 @@ Table "op02x" {
   }
 }
 
-// Origem: op03.dbf (DBF)
+// Origem: op03 (DBFCDX)
 Table "op03" {
-  Note: "Origem: op03.dbf"
+  Note: "Origem: op03"
   "OP" DECIMAL(8,2) [default: 0]
   "CODIGO" VARCHAR(24)
   "SEQ" INTEGER [default: 0]
@@ -350,9 +350,9 @@ Table "op03" {
   }
 }
 
-// Origem: op03b.dbf (DBF)
+// Origem: op03b (DBFCDX)
 Table "op03b" {
-  Note: "Origem: op03b.dbf"
+  Note: "Origem: op03b"
   "OP" DECIMAL(8,2) [default: 0]
   "CODIGO" VARCHAR(24)
   "SEQ" INTEGER [default: 0]
@@ -381,9 +381,9 @@ Table "op03b" {
   }
 }
 
-// Origem: oscrt.dbf (DBF)
+// Origem: oscrt (DBFCDX)
 Table "oscrt" {
-  Note: "Origem: oscrt.dbf"
+  Note: "Origem: oscrt"
   "OS" DECIMAL(8,2) [default: 0]
   "DATA" DATETIME
   "CLIENTE" INTEGER [default: 0]
@@ -419,9 +419,9 @@ Table "oscrt" {
   }
 }
 
-// Origem: ospr2.dbf (DBF)
+// Origem: ospr2 (DBFCDX)
 Table "ospr2" {
-  Note: "Origem: ospr2.dbf"
+  Note: "Origem: ospr2"
   "NUMERO" INTEGER [default: 0]
   "PRODUTO" VARCHAR(24)
   "PLANTA" VARCHAR(10)
@@ -439,9 +439,9 @@ Table "ospr2" {
   }
 }
 
-// Origem: ospr3.dbf (DBF)
+// Origem: ospr3 (DBFCDX)
 Table "ospr3" {
-  Note: "Origem: ospr3.dbf"
+  Note: "Origem: ospr3"
   "NUMERO" INTEGER [default: 0]
   "PRODUTO" VARCHAR(24)
   "PLANTA" VARCHAR(10)
@@ -452,9 +452,9 @@ Table "ospr3" {
   "SEQCLIPRG" INTEGER [default: 0]
 }
 
-// Origem: ospra.dbf (DBF)
+// Origem: ospra (DBFCDX)
 Table "ospra" {
-  Note: "Origem: ospra.dbf"
+  Note: "Origem: ospra"
   "PRODUTO" VARCHAR(24)
   "DATAACM" DATETIME
   "DATAPRG" DATETIME
@@ -466,9 +466,9 @@ Table "ospra" {
   }
 }
 
-// Origem: osprb.dbf (DBF)
+// Origem: osprb (DBFCDX)
 Table "osprb" {
-  Note: "Origem: osprb.dbf"
+  Note: "Origem: osprb"
   "PRODUTO" VARCHAR(24)
   "DATAACM" DATETIME
   "DATAPRG" DATETIME
@@ -479,9 +479,9 @@ Table "osprb" {
   }
 }
 
-// Origem: osprd.dbf (DBF)
+// Origem: osprd (DBFCDX)
 Table "osprd" {
-  Note: "Origem: osprd.dbf"
+  Note: "Origem: osprd"
   "PRODUTO" VARCHAR(24)
   "DATAACM" DATETIME
   "DATAPRG" DATETIME
@@ -489,9 +489,9 @@ Table "osprd" {
   "PLANTA" VARCHAR(5)
 }
 
-// Origem: ospre.dbf (DBF)
+// Origem: ospre (DBFCDX)
 Table "ospre" {
-  Note: "Origem: ospre.dbf"
+  Note: "Origem: ospre"
   "NUMERO" INTEGER [default: 0]
   "PRODUTO" VARCHAR(24)
   "PLANTA" VARCHAR(10)
@@ -502,9 +502,9 @@ Table "ospre" {
   "SEQCLIPRG" INTEGER [default: 0]
 }
 
-// Origem: osprf.dbf (DBF)
+// Origem: osprf (DBFCDX)
 Table "osprf" {
-  Note: "Origem: osprf.dbf"
+  Note: "Origem: osprf"
   "PRODUTO" VARCHAR(24)
   "DATAACM" DATETIME
   "DATAPRG" DATETIME
@@ -512,9 +512,9 @@ Table "osprf" {
   "PLANTA" VARCHAR(5)
 }
 
-// Origem: osprg.dbf (DBF)
+// Origem: osprg (DBFCDX)
 Table "osprg" {
-  Note: "Origem: osprg.dbf"
+  Note: "Origem: osprg"
   "NUMERO" INTEGER [default: 0]
   "PRODUTO" VARCHAR(24)
   "PLANTA" VARCHAR(10)
@@ -532,9 +532,9 @@ Table "osprg" {
   }
 }
 
-// Origem: osprh.dbf (DBF)
+// Origem: osprh (DBFCDX)
 Table "osprh" {
-  Note: "Origem: osprh.dbf"
+  Note: "Origem: osprh"
   "NUMERO" INTEGER [default: 0]
   "PRODUTO" VARCHAR(24)
   "PLANTA" VARCHAR(10)
@@ -553,9 +553,9 @@ Table "osprh" {
   }
 }
 
-// Origem: ospri.dbf (DBF)
+// Origem: ospri (DBFCDX)
 Table "ospri" {
-  Note: "Origem: ospri.dbf"
+  Note: "Origem: ospri"
   "NUMERO" INTEGER [default: 0]
   "PRODUTO" VARCHAR(24)
   "PLANTA" VARCHAR(10)
@@ -574,9 +574,9 @@ Table "ospri" {
   }
 }
 
-// Origem: ospro.dbf (DBF)
+// Origem: ospro (DBFCDX)
 Table "ospro" {
-  Note: "Origem: ospro.dbf"
+  Note: "Origem: ospro"
   "PRODUTO" VARCHAR(24)
   "DATAACM" DATETIME
   "DATAPRG" DATETIME
@@ -586,9 +586,9 @@ Table "ospro" {
   }
 }
 
-// Origem: osprr.dbf (DBF)
+// Origem: osprr (DBFCDX)
 Table "osprr" {
-  Note: "Origem: osprr.dbf"
+  Note: "Origem: osprr"
   "NUMERO" INTEGER [default: 0]
   "PRODUTO" VARCHAR(24)
   "PLANTA" VARCHAR(10)
@@ -607,9 +607,9 @@ Table "osprr" {
   }
 }
 
-// Origem: osprs.dbf (DBF)
+// Origem: osprs (DBFCDX)
 Table "osprs" {
-  Note: "Origem: osprs.dbf"
+  Note: "Origem: osprs"
   "NUMERO" INTEGER [default: 0]
   "PRODUTO" VARCHAR(24)
   "PLANTA" VARCHAR(10)
@@ -628,9 +628,9 @@ Table "osprs" {
   }
 }
 
-// Origem: pcorte.dbf (DBF)
+// Origem: pcorte (DBFCDX)
 Table "pcorte" {
-  Note: "Origem: pcorte.dbf"
+  Note: "Origem: pcorte"
   "NUMERO" INTEGER [default: 0]
   "NFNOSSA" INTEGER [default: 0]
   "NFUSINA" INTEGER [default: 0]
@@ -667,9 +667,9 @@ Table "pcorte" {
   }
 }
 
-// Origem: pcortei.dbf (DBF)
+// Origem: pcortei (DBFCDX)
 Table "pcortei" {
-  Note: "Origem: pcortei.dbf"
+  Note: "Origem: pcortei"
   "NUMERO" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "DESCRICAO" VARCHAR(100)
@@ -692,9 +692,9 @@ Table "pcortei" {
   }
 }
 
-// Origem: pe.dbf (DBF)
+// Origem: pe (DBFCDX)
 Table "pe" {
-  Note: "Origem: pe.dbf"
+  Note: "Origem: pe"
   "PEDIDO" INTEGER [default: 0]
   "TIPPED" VARCHAR(1)
   "CODIGO" VARCHAR(24)
@@ -725,9 +725,9 @@ Table "pe" {
   }
 }
 
-// Origem: pe01.dbf (DBF)
+// Origem: pe01 (DBFCDX)
 Table "pe01" {
-  Note: "Origem: pe01.dbf"
+  Note: "Origem: pe01"
   "TIPPED" VARCHAR(1)
   "CODIGO" VARCHAR(24)
   "UNIDADE" VARCHAR(2)
@@ -761,9 +761,9 @@ Table "pe01" {
   }
 }
 
-// Origem: pe01ap.dbf (DBF)
+// Origem: pe01ap (DBFCDX)
 Table "pe01ap" {
-  Note: "Origem: pe01ap.dbf"
+  Note: "Origem: pe01ap"
   "TIPPED" VARCHAR(1)
   "CODIGO" VARCHAR(24)
   "UNIDADE" VARCHAR(2)
@@ -791,9 +791,9 @@ Table "pe01ap" {
   }
 }
 
-// Origem: pe01bx.dbf (DBF)
+// Origem: pe01bx (DBFCDX)
 Table "pe01bx" {
-  Note: "Origem: pe01bx.dbf"
+  Note: "Origem: pe01bx"
   "TIPPED" VARCHAR(1)
   "CODIGO" VARCHAR(24)
   "UNIDADE" VARCHAR(2)
@@ -829,9 +829,9 @@ Table "pe01bx" {
   }
 }
 
-// Origem: pe99.dbf (DBF)
+// Origem: pe99 (DBFCDX)
 Table "pe99" {
-  Note: "Origem: pe99.dbf"
+  Note: "Origem: pe99"
   "TIPPED" VARCHAR(1)
   "CODIGO" VARCHAR(24)
   "UNIDADE" VARCHAR(2)
@@ -867,9 +867,9 @@ Table "pe99" {
   }
 }
 
-// Origem: pecrt.dbf (DBF)
+// Origem: pecrt (DBFCDX)
 Table "pecrt" {
-  Note: "Origem: pecrt.dbf"
+  Note: "Origem: pecrt"
   "TIPO" VARCHAR(1)
   "CODIGO" VARCHAR(24)
   "UNRNOTA" INTEGER [default: 0]
@@ -884,9 +884,9 @@ Table "pecrt" {
   }
 }
 
-// Origem: pemo.dbf (DBF)
+// Origem: pemo (DBFCDX)
 Table "pemo" {
-  Note: "Origem: pemo.dbf"
+  Note: "Origem: pemo"
   "PEDIDO" INTEGER [default: 0]
   "TIPPED" VARCHAR(1)
   "CODIGO" VARCHAR(24)
@@ -904,9 +904,9 @@ Table "pemo" {
   }
 }
 
-// Origem: petr.dbf (DBF)
+// Origem: petr (DBFCDX)
 Table "petr" {
-  Note: "Origem: petr.dbf"
+  Note: "Origem: petr"
   "PEDIDO" INTEGER [default: 0]
   "TIPPED" VARCHAR(1)
   "CODIGO" VARCHAR(24)
@@ -924,9 +924,9 @@ Table "petr" {
   }
 }
 
-// Origem: prnec.dbf (DBF)
+// Origem: prnec (DBFCDX)
 Table "prnec" {
-  Note: "Origem: prnec.dbf"
+  Note: "Origem: prnec"
   "CODIGO" VARCHAR(24)
   "NOME" VARCHAR(40)
   "QTDSAL" INTEGER [default: 0]
@@ -1018,9 +1018,9 @@ Table "prnec" {
   }
 }
 
-// Origem: prneca.dbf (DBF)
+// Origem: prneca (DBFCDX)
 Table "prneca" {
-  Note: "Origem: prneca.dbf"
+  Note: "Origem: prneca"
   "CODIGO" VARCHAR(24)
   "QTDE" INTEGER [default: 0]
   "QTDE01" INTEGER [default: 0]
@@ -1048,9 +1048,9 @@ Table "prneca" {
   }
 }
 
-// Origem: prneci.dbf (DBF)
+// Origem: prneci (DBFCDX)
 Table "prneci" {
-  Note: "Origem: prneci.dbf"
+  Note: "Origem: prneci"
   "CODIGO" VARCHAR(24)
   "TIPOENT" VARCHAR(1)
   "CODCOMP" VARCHAR(24)
@@ -1083,9 +1083,9 @@ Table "prneci" {
   }
 }
 
-// Origem: prnect.dbf (DBF)
+// Origem: prnect (DBFCDX)
 Table "prnect" {
-  Note: "Origem: prnect.dbf"
+  Note: "Origem: prnect"
   "TIPOENT" VARCHAR(1)
   "CODCOMP" VARCHAR(24)
   "DIASPR" INTEGER [default: 0]
