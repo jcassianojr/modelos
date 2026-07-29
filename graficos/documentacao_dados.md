@@ -1,8 +1,8 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 27/07/2026
+> Varredura automatica realizada em: 29/07/2026
 
-## Tabela DBF: `apu5cd2.dbf`
-> **Origem:** `apu5cd2.dbf` (Driver: DBFCDX)
+## Tabela DBF: `apu5cd2`
+> **Origem:** `apu5cd2` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -32,8 +32,8 @@
 - Tag: `APU5CD2` Expressao: `STR(ANO,4)+STR(MES,2)`
 
 ---
-## Tabela DBF: `apu5em2.dbf`
-> **Origem:** `apu5em2.dbf` (Driver: DBFCDX)
+## Tabela DBF: `apu5em2`
+> **Origem:** `apu5em2` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -52,8 +52,8 @@
 - Tag: `APU5EM21` Expressao: `STR(ANO,4)+STR(MES,2)`
 
 ---
-## Tabela DBF: `apu5emp.dbf`
-> **Origem:** `apu5emp.dbf` (Driver: DBFCDX)
+## Tabela DBF: `apu5emp`
+> **Origem:** `apu5emp` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -75,8 +75,8 @@
 - Tag: `APU5EMP2` Expressao: `STR(ANO,4)+STR(MES,2)+STR(PERCLI,7,2)`
 
 ---
-## Tabela DBF: `apu5g.dbf`
-> **Origem:** `apu5g.dbf` (Driver: DBFCDX)
+## Tabela DBF: `apu5g`
+> **Origem:** `apu5g` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -108,8 +108,8 @@
 - Tag: `APU5G` Expressao: `STR(ANO,4)+STR(MES,2)`
 
 ---
-## Tabela DBF: `apu5g2.dbf`
-> **Origem:** `apu5g2.dbf` (Driver: DBFCDX)
+## Tabela DBF: `apu5g2`
+> **Origem:** `apu5g2` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -134,8 +134,8 @@
 - Tag: `APU5G2` Expressao: `STR(ANO,4)+STR(MES,2)`
 
 ---
-## Tabela DBF: `apu5g3.dbf`
-> **Origem:** `apu5g3.dbf` (Driver: DBFCDX)
+## Tabela DBF: `apu5g3`
+> **Origem:** `apu5g3` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -162,8 +162,8 @@
 - Tag: `APU5G3` Expressao: `STR(ANO,4)+STR(MES,2)`
 
 ---
-## Tabela DBF: `apu5g4.dbf`
-> **Origem:** `apu5g4.dbf` (Driver: DBFCDX)
+## Tabela DBF: `apu5g4`
+> **Origem:** `apu5g4` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -177,8 +177,8 @@
 - Tag: `APU5G4` Expressao: `STR(ANO,4)+STR(MES,2)`
 
 ---
-## Tabela DBF: `apu5g5.dbf`
-> **Origem:** `apu5g5.dbf` (Driver: DBFCDX)
+## Tabela DBF: `apu5g5`
+> **Origem:** `apu5g5` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -194,8 +194,8 @@
 - Tag: `APU5G5` Expressao: `STR(ANO,4)+STR(MES,2)`
 
 ---
-## Tabela DBF: `apu5lin.dbf`
-> **Origem:** `apu5lin.dbf` (Driver: DBFCDX)
+## Tabela DBF: `apu5lin`
+> **Origem:** `apu5lin` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -208,8 +208,8 @@
 - Tag: `APU5LIN` Expressao: `STR(ANO,4)+SUBGER`
 
 ---
-## Tabela DBF: `apu5tot.dbf`
-> **Origem:** `apu5tot.dbf` (Driver: DBFCDX)
+## Tabela DBF: `apu5tot`
+> **Origem:** `apu5tot` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |

@@ -1,6 +1,6 @@
-// Origem: apu5cd2.dbf (DBF)
+// Origem: apu5cd2 (DBFCDX)
 Table "apu5cd2" {
-  Note: "Origem: apu5cd2.dbf"
+  Note: "Origem: apu5cd2"
   "CLIENTE" INTEGER [default: 0]
   "COGCLI" VARCHAR(12)
   "CODIGO" VARCHAR(24)
@@ -27,9 +27,9 @@ Table "apu5cd2" {
   }
 }
 
-// Origem: apu5em2.dbf (DBF)
+// Origem: apu5em2 (DBFCDX)
 Table "apu5em2" {
-  Note: "Origem: apu5em2.dbf"
+  Note: "Origem: apu5em2"
   "CLI1" INTEGER [default: 0]
   "CLI2" INTEGER [default: 0]
   "COGCLI1" VARCHAR(12)
@@ -45,9 +45,9 @@ Table "apu5em2" {
   }
 }
 
-// Origem: apu5emp.dbf (DBF)
+// Origem: apu5emp (DBFCDX)
 Table "apu5emp" {
-  Note: "Origem: apu5emp.dbf"
+  Note: "Origem: apu5emp"
   "CLIENTE" INTEGER [default: 0]
   "COGCLI" VARCHAR(12)
   "VALORTOT" DECIMAL(12,2) [default: 0]
@@ -66,9 +66,9 @@ Table "apu5emp" {
   }
 }
 
-// Origem: apu5g.dbf (DBF)
+// Origem: apu5g (DBFCDX)
 Table "apu5g" {
-  Note: "Origem: apu5g.dbf"
+  Note: "Origem: apu5g"
   "CLIENTE" INTEGER [default: 0]
   "COGCLI" VARCHAR(12)
   "GRUPO" VARCHAR(12)
@@ -97,9 +97,9 @@ Table "apu5g" {
   }
 }
 
-// Origem: apu5g2.dbf (DBF)
+// Origem: apu5g2 (DBFCDX)
 Table "apu5g2" {
-  Note: "Origem: apu5g2.dbf"
+  Note: "Origem: apu5g2"
   "CLIENTE" INTEGER [default: 0]
   "COGCLI" VARCHAR(12)
   "CODIGO" VARCHAR(24)
@@ -121,9 +121,9 @@ Table "apu5g2" {
   }
 }
 
-// Origem: apu5g3.dbf (DBF)
+// Origem: apu5g3 (DBFCDX)
 Table "apu5g3" {
-  Note: "Origem: apu5g3.dbf"
+  Note: "Origem: apu5g3"
   "CLIENTE" INTEGER [default: 0]
   "COGCLI" VARCHAR(12)
   "CODIGO" VARCHAR(24)
@@ -147,9 +147,9 @@ Table "apu5g3" {
   }
 }
 
-// Origem: apu5g4.dbf (DBF)
+// Origem: apu5g4 (DBFCDX)
 Table "apu5g4" {
-  Note: "Origem: apu5g4.dbf"
+  Note: "Origem: apu5g4"
   "JUNTO" VARCHAR(40)
   "PERLUC" DECIMAL(6,2) [default: 0]
   "INTPER" INTEGER [default: 0]
@@ -160,9 +160,9 @@ Table "apu5g4" {
   }
 }
 
-// Origem: apu5g5.dbf (DBF)
+// Origem: apu5g5 (DBFCDX)
 Table "apu5g5" {
-  Note: "Origem: apu5g5.dbf"
+  Note: "Origem: apu5g5"
   "JUNTO" VARCHAR(40)
   "CODIGO" VARCHAR(24)
   "PERDIF" DECIMAL(7,2) [default: 0]
@@ -175,9 +175,9 @@ Table "apu5g5" {
   }
 }
 
-// Origem: apu5lin.dbf (DBF)
+// Origem: apu5lin (DBFCDX)
 Table "apu5lin" {
-  Note: "Origem: apu5lin.dbf"
+  Note: "Origem: apu5lin"
   "ANO" INTEGER [default: 0]
   "SUBGER" VARCHAR(2)
   "PERFAT" DECIMAL(5,2) [default: 0]
@@ -187,9 +187,9 @@ Table "apu5lin" {
   }
 }
 
-// Origem: apu5tot.dbf (DBF)
+// Origem: apu5tot (DBFCDX)
 Table "apu5tot" {
-  Note: "Origem: apu5tot.dbf"
+  Note: "Origem: apu5tot"
   "MES" INTEGER [default: 0]
   "ANO" INTEGER [default: 0]
   "VALORTOT" DECIMAL(18,2) [default: 0]
