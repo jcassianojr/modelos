@@ -1,6 +1,6 @@
-// Origem: mail.dbf (DBF)
+// Origem: mail (DBFCDX)
 Table "mail" {
-  Note: "Origem: mail.dbf"
+  Note: "Origem: mail"
   "NUMERO" INTEGER [default: 0]
   "ERRO" VARCHAR(8)
   "DATA" DATETIME
@@ -13,9 +13,9 @@ Table "mail" {
   "HORAOK" VARCHAR(8)
 }
 
-// Origem: mailerro.dbf (DBF)
+// Origem: mailerro (DBFCDX)
 Table "mailerro" {
-  Note: "Origem: mailerro.dbf"
+  Note: "Origem: mailerro"
   "ERRO" VARCHAR(8)
   "ASSUNTO" VARCHAR(120)
   Indexes {
@@ -23,9 +23,9 @@ Table "mailerro" {
   }
 }
 
-// Origem: mailpara.dbf (DBF)
+// Origem: mailpara (DBFCDX)
 Table "mailpara" {
-  Note: "Origem: mailpara.dbf"
+  Note: "Origem: mailpara"
   "ERRO" VARCHAR(8)
   "DESTINO" VARCHAR(12)
   Indexes {
@@ -33,9 +33,9 @@ Table "mailpara" {
   }
 }
 
-// Origem: mailpg.dbf (DBF)
+// Origem: mailpg (DBFCDX)
 Table "mailpg" {
-  Note: "Origem: mailpg.dbf"
+  Note: "Origem: mailpg"
   "NUMERO" INTEGER [default: 0]
   "ERRO" VARCHAR(8)
   "DATA" DATETIME

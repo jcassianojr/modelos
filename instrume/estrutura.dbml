@@ -1,6 +1,6 @@
-// Origem: ME04.dbf (DBF)
+// Origem: ME04 (DBFCDX)
 Table "ME04" {
-  Note: "Origem: ME04.dbf"
+  Note: "Origem: ME04"
   "CODIGO" VARCHAR(8)
   "TIPO" VARCHAR(30)
   "MARCA" VARCHAR(20)
@@ -51,9 +51,9 @@ Table "ME04" {
   }
 }
 
-// Origem: ME04C.dbf (DBF)
+// Origem: ME04C (DBFCDX)
 Table "ME04C" {
-  Note: "Origem: ME04C.dbf"
+  Note: "Origem: ME04C"
   "OCC" INTEGER [default: 0]
   "CODIGO" VARCHAR(10)
   "DATA" DATETIME
@@ -69,9 +69,9 @@ Table "ME04C" {
   }
 }
 
-// Origem: ME04CI.dbf (DBF)
+// Origem: ME04CI (DBFCDX)
 Table "ME04CI" {
-  Note: "Origem: ME04CI.dbf"
+  Note: "Origem: ME04CI"
   "OCC" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
   "ESPECI" VARCHAR(30)
@@ -88,9 +88,9 @@ Table "ME04CI" {
   }
 }
 
-// Origem: ME04D.dbf (DBF)
+// Origem: ME04D (DBFCDX)
 Table "ME04D" {
-  Note: "Origem: ME04D.dbf"
+  Note: "Origem: ME04D"
   "OCD" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "MOTIVO" VARCHAR(1)
@@ -120,9 +120,9 @@ Table "ME04D" {
   }
 }
 
-// Origem: ME04R.dbf (DBF)
+// Origem: ME04R (DBFCDX)
 Table "ME04R" {
-  Note: "Origem: ME04R.dbf"
+  Note: "Origem: ME04R"
   "NUMERO" INTEGER [default: 0]
   "CODIGO" VARCHAR(8)
   "CODOPER" INTEGER [default: 0]
@@ -139,9 +139,9 @@ Table "ME04R" {
   }
 }
 
-// Origem: ME06.dbf (DBF)
+// Origem: ME06 (DBFCDX)
 Table "ME06" {
-  Note: "Origem: ME06.dbf"
+  Note: "Origem: ME06"
   "CODIGO" VARCHAR(8)
   "TIPO" VARCHAR(30)
   "MARCA" VARCHAR(20)
@@ -191,9 +191,9 @@ Table "ME06" {
   }
 }
 
-// Origem: ME06R.dbf (DBF)
+// Origem: ME06R (DBFCDX)
 Table "ME06R" {
-  Note: "Origem: ME06R.dbf"
+  Note: "Origem: ME06R"
   "NUMERO" INTEGER [default: 0]
   "CODIGO" VARCHAR(8)
   "CODOPER" INTEGER [default: 0]
@@ -210,9 +210,9 @@ Table "ME06R" {
   }
 }
 
-// Origem: ME06X.dbf (DBF)
+// Origem: ME06X (DBFCDX)
 Table "ME06X" {
-  Note: "Origem: ME06X.dbf"
+  Note: "Origem: ME06X"
   "CODIGO" VARCHAR(8)
   "TIPO" VARCHAR(30)
   "MARCA" VARCHAR(20)
@@ -252,9 +252,9 @@ Table "ME06X" {
   }
 }
 
-// Origem: ME4CC.dbf (DBF)
+// Origem: ME4CC (DBFCDX)
 Table "ME4CC" {
-  Note: "Origem: ME4CC.dbf"
+  Note: "Origem: ME4CC"
   "NUMERO" INTEGER [default: 0]
   "DATA" DATETIME
   "CODIGO" VARCHAR(24)
@@ -282,9 +282,9 @@ Table "ME4CC" {
   }
 }
 
-// Origem: ME4CCI.dbf (DBF)
+// Origem: ME4CCI (DBFCDX)
 Table "ME4CCI" {
-  Note: "Origem: ME4CCI.dbf"
+  Note: "Origem: ME4CCI"
   "NUMERO" INTEGER [default: 0]
   "DIMENSAO" VARCHAR(50)
   "ENCONTRA" VARCHAR(30)
@@ -296,9 +296,9 @@ Table "ME4CCI" {
   }
 }
 
-// Origem: RRM.dbf (DBF)
+// Origem: RRM (DBFCDX)
 Table "RRM" {
-  Note: "Origem: RRM.dbf"
+  Note: "Origem: RRM"
   "RRS" INTEGER [default: 0]
   "CLIENTE" INTEGER [default: 0]
   "CLINOME" VARCHAR(40)

@@ -1,52 +1,8 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 27/07/2026
+> Varredura automatica realizada em: 29/07/2026
 
-## Tabela DBF: `cnpjxml.dbf`
-> **Origem:** `cnpjxml.dbf` (Driver: DBFCDX)
-
-| Campo | Tipo | Tam | Dec |
-| :--- | :--- | :--- | :--- |
-| CNPJ | C | 14 | 0 |
-| IE | C | 14 | 0 |
-| NOME | C | 60 | 0 |
-| ENDERECO | C | 60 | 0 |
-| CIDADE | C | 35 | 0 |
-| CEP | C | 8 | 0 |
-| TELEFONE | C | 14 | 0 |
-| DDD | C | 2 | 0 |
-| UF | C | 2 | 0 |
-| IESUBST | C | 14 | 0 |
-| IMUNICIPAL | C | 15 | 0 |
-| COGNOME | C | 60 | 0 |
-| EMAIL | C | 60 | 0 |
-| NUMEND | C | 15 | 0 |
-| COMPLEM | C | 30 | 0 |
-| BAIRRO | C | 35 | 0 |
-| BACEN | C | 5 | 0 |
-| PAIS | C | 10 | 0 |
-| CNAE | C | 7 | 0 |
-| SUFRAMA | C | 9 | 0 |
-| CODIBGE | C | 7 | 0 |
-| ULTIMAIMP | D | 8 | 0 |
-| CODPART | C | 20 | 0 |
-| CSIT | C | 1 | 0 |
-| INDCREDNFE | C | 1 | 0 |
-| INDCREDCTE | C | 1 | 0 |
-| XREGAPUR | C | 7 | 0 |
-| DINIATIV | C | 10 | 0 |
-| DULTSIT | C | 10 | 0 |
-| DINIXML | D | 8 | 0 |
-| ENDTIP | C | 10 | 0 |
-
-**Indices vinculados:**
-- Tag: `CNPJXML1` Expressao: `CNPJ`
-- Tag: `CNPJXML2` Expressao: `IE`
-- Tag: `CNPJXML3` Expressao: `CODPART`
-- Tag: `CNPJXML4` Expressao: `UF+CIDADE`
-
----
-## Tabela DBF: `cnpjxmlfec.dbf`
-> **Origem:** `cnpjxmlfec.dbf` (Driver: DBFCDX)
+## Tabela DBF: `cnpjxml`
+> **Origem:** `cnpjxml` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -89,8 +45,52 @@
 - Tag: `CNPJXML4` Expressao: `UF+CIDADE`
 
 ---
-## Tabela DBF: `danfe.dbf`
-> **Origem:** `danfe.dbf` (Driver: DBFCDX)
+## Tabela DBF: `cnpjxmlfec`
+> **Origem:** `cnpjxmlfec` (Driver: DBFCDX)
+
+| Campo | Tipo | Tam | Dec |
+| :--- | :--- | :--- | :--- |
+| CNPJ | C | 14 | 0 |
+| IE | C | 14 | 0 |
+| NOME | C | 60 | 0 |
+| ENDERECO | C | 60 | 0 |
+| CIDADE | C | 35 | 0 |
+| CEP | C | 8 | 0 |
+| TELEFONE | C | 14 | 0 |
+| DDD | C | 2 | 0 |
+| UF | C | 2 | 0 |
+| IESUBST | C | 14 | 0 |
+| IMUNICIPAL | C | 15 | 0 |
+| COGNOME | C | 60 | 0 |
+| EMAIL | C | 60 | 0 |
+| NUMEND | C | 15 | 0 |
+| COMPLEM | C | 30 | 0 |
+| BAIRRO | C | 35 | 0 |
+| BACEN | C | 5 | 0 |
+| PAIS | C | 10 | 0 |
+| CNAE | C | 7 | 0 |
+| SUFRAMA | C | 9 | 0 |
+| CODIBGE | C | 7 | 0 |
+| ULTIMAIMP | D | 8 | 0 |
+| CODPART | C | 20 | 0 |
+| CSIT | C | 1 | 0 |
+| INDCREDNFE | C | 1 | 0 |
+| INDCREDCTE | C | 1 | 0 |
+| XREGAPUR | C | 7 | 0 |
+| DINIATIV | C | 10 | 0 |
+| DULTSIT | C | 10 | 0 |
+| DINIXML | D | 8 | 0 |
+| ENDTIP | C | 10 | 0 |
+
+**Indices vinculados:**
+- Tag: `CNPJXML1` Expressao: `CNPJ`
+- Tag: `CNPJXML2` Expressao: `IE`
+- Tag: `CNPJXML3` Expressao: `CODPART`
+- Tag: `CNPJXML4` Expressao: `UF+CIDADE`
+
+---
+## Tabela DBF: `danfe`
+> **Origem:** `danfe` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -123,8 +123,8 @@
 - Tag: `DANFE` Expressao: `Id+cProd`
 
 ---
-## Tabela DBF: `danfe2.dbf`
-> **Origem:** `danfe2.dbf` (Driver: DBFCDX)
+## Tabela DBF: `danfe2`
+> **Origem:** `danfe2` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -148,8 +148,8 @@
 - Tag: `DANFE2-3` Expressao: `NNF`
 
 ---
-## Tabela DBF: `danfe2fec.dbf`
-> **Origem:** `danfe2fec.dbf` (Driver: DBFCDX)
+## Tabela DBF: `danfe2fec`
+> **Origem:** `danfe2fec` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -173,8 +173,8 @@
 - Tag: `DANFE2-3` Expressao: `NNF`
 
 ---
-## Tabela DBF: `nfe.dbf`
-> **Origem:** `nfe.dbf` (Driver: DBFCDX)
+## Tabela DBF: `nfe`
+> **Origem:** `nfe` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -190,8 +190,8 @@
 - Tag: `NFE` Expressao: `EMPRESA`
 
 ---
-## Tabela DBF: `nfecorrecao.dbf`
-> **Origem:** `nfecorrecao.dbf` (Driver: DBFCDX)
+## Tabela DBF: `nfecorrecao`
+> **Origem:** `nfecorrecao` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -202,8 +202,8 @@
 - Tag: `NFECORRE` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `NFECRET.DBF`
-> **Origem:** `NFECRET.DBF` (Driver: DBFCDX)
+## Tabela DBF: `NFECRET`
+> **Origem:** `NFECRET` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -214,8 +214,8 @@
 - Tag: `NFECRET` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `sintcert.dbf`
-> **Origem:** `sintcert.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sintcert`
+> **Origem:** `sintcert` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -258,8 +258,8 @@
 - Tag: `SINTCE04` Expressao: `UF+CIDADE`
 
 ---
-## Tabela DBF: `sintcertfec.dbf`
-> **Origem:** `sintcertfec.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sintcertfec`
+> **Origem:** `sintcertfec` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -302,8 +302,8 @@
 - Tag: `SINTCE04` Expressao: `UF+CIDADE`
 
 ---
-## Tabela DBF: `sintpend.dbf`
-> **Origem:** `sintpend.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sintpend`
+> **Origem:** `sintpend` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -329,8 +329,8 @@
 - Tag: `SINTPE04` Expressao: `UF+CIDADE`
 
 ---
-## Tabela DBF: `xmlpend.dbf`
-> **Origem:** `xmlpend.dbf` (Driver: DBFCDX)
+## Tabela DBF: `xmlpend`
+> **Origem:** `xmlpend` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |

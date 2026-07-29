@@ -1,8 +1,8 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 27/07/2026
+> Varredura automatica realizada em: 29/07/2026
 
-## Tabela DBF: `ME04.dbf`
-> **Origem:** `ME04.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ME04`
+> **Origem:** `ME04` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -56,8 +56,8 @@
 - Tag: `ME04-3` Expressao: `CALPRO`
 
 ---
-## Tabela DBF: `ME04C.dbf`
-> **Origem:** `ME04C.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ME04C`
+> **Origem:** `ME04C` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -76,8 +76,8 @@
 - Tag: `ME04C-3` Expressao: `CERTIFI`
 
 ---
-## Tabela DBF: `ME04CI.dbf`
-> **Origem:** `ME04CI.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ME04CI`
+> **Origem:** `ME04CI` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -97,8 +97,8 @@
 - Tag: `ME04CI-2` Expressao: `OCC`
 
 ---
-## Tabela DBF: `ME04D.dbf`
-> **Origem:** `ME04D.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ME04D`
+> **Origem:** `ME04D` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -131,8 +131,8 @@
 - Tag: `ME04D-2` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `ME04R.dbf`
-> **Origem:** `ME04R.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ME04R`
+> **Origem:** `ME04R` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -152,8 +152,8 @@
 - Tag: `ME04R-3` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `ME06.dbf`
-> **Origem:** `ME06.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ME06`
+> **Origem:** `ME06` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -206,8 +206,8 @@
 - Tag: `ME06-3` Expressao: `CALPRO`
 
 ---
-## Tabela DBF: `ME06R.dbf`
-> **Origem:** `ME06R.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ME06R`
+> **Origem:** `ME06R` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -227,8 +227,8 @@
 - Tag: `ME06R-3` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `ME06X.dbf`
-> **Origem:** `ME06X.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ME06X`
+> **Origem:** `ME06X` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -271,8 +271,8 @@
 - Tag: `ME06X-3` Expressao: `CALPRO`
 
 ---
-## Tabela DBF: `ME4CC.dbf`
-> **Origem:** `ME4CC.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ME4CC`
+> **Origem:** `ME4CC` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -303,8 +303,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `ME4CCI.dbf`
-> **Origem:** `ME4CCI.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ME4CCI`
+> **Origem:** `ME4CCI` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -319,8 +319,8 @@
 - Tag: `NUMERO` Expressao: `NUMERO`
 
 ---
-## Tabela DBF: `RRM.dbf`
-> **Origem:** `RRM.dbf` (Driver: DBFCDX)
+## Tabela DBF: `RRM`
+> **Origem:** `RRM` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |

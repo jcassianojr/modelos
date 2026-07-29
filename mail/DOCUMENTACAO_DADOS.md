@@ -1,8 +1,8 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 27/07/2026
+> Varredura automatica realizada em: 29/07/2026
 
-## Tabela DBF: `mail.dbf`
-> **Origem:** `mail.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mail`
+> **Origem:** `mail` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -18,8 +18,8 @@
 | HORAOK | C | 8 | 0 |
 
 ---
-## Tabela DBF: `mailerro.dbf`
-> **Origem:** `mailerro.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mailerro`
+> **Origem:** `mailerro` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -30,8 +30,8 @@
 - Tag: `MAILERRO` Expressao: `ERRO`
 
 ---
-## Tabela DBF: `mailpara.dbf`
-> **Origem:** `mailpara.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mailpara`
+> **Origem:** `mailpara` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -42,8 +42,8 @@
 - Tag: `MAILPARA` Expressao: `ERRO`
 
 ---
-## Tabela DBF: `mailpg.dbf`
-> **Origem:** `mailpg.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mailpg`
+> **Origem:** `mailpg` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |

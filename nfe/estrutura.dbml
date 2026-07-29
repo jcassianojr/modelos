@@ -1,6 +1,6 @@
-// Origem: cnpjxml.dbf (DBF)
+// Origem: cnpjxml (DBFCDX)
 Table "cnpjxml" {
-  Note: "Origem: cnpjxml.dbf"
+  Note: "Origem: cnpjxml"
   "CNPJ" VARCHAR(14)
   "IE" VARCHAR(14)
   "NOME" VARCHAR(60)
@@ -40,9 +40,9 @@ Table "cnpjxml" {
   }
 }
 
-// Origem: cnpjxmlfec.dbf (DBF)
+// Origem: cnpjxmlfec (DBFCDX)
 Table "cnpjxmlfec" {
-  Note: "Origem: cnpjxmlfec.dbf"
+  Note: "Origem: cnpjxmlfec"
   "CNPJ" VARCHAR(14)
   "IE" VARCHAR(14)
   "NOME" VARCHAR(60)
@@ -82,9 +82,9 @@ Table "cnpjxmlfec" {
   }
 }
 
-// Origem: danfe.dbf (DBF)
+// Origem: danfe (DBFCDX)
 Table "danfe" {
-  Note: "Origem: danfe.dbf"
+  Note: "Origem: danfe"
   "ID" VARCHAR(44)
   "CPROD" VARCHAR(16)
   "XPROD" VARCHAR(60)
@@ -114,9 +114,9 @@ Table "danfe" {
   }
 }
 
-// Origem: danfe2.dbf (DBF)
+// Origem: danfe2 (DBFCDX)
 Table "danfe2" {
-  Note: "Origem: danfe2.dbf"
+  Note: "Origem: danfe2"
   "ID" VARCHAR(44)
   "CNPJ" VARCHAR(14)
   "CNPJDEST" VARCHAR(14)
@@ -137,9 +137,9 @@ Table "danfe2" {
   }
 }
 
-// Origem: danfe2fec.dbf (DBF)
+// Origem: danfe2fec (DBFCDX)
 Table "danfe2fec" {
-  Note: "Origem: danfe2fec.dbf"
+  Note: "Origem: danfe2fec"
   "ID" VARCHAR(44)
   "CNPJ" VARCHAR(14)
   "CNPJDEST" VARCHAR(14)
@@ -160,9 +160,9 @@ Table "danfe2fec" {
   }
 }
 
-// Origem: nfe.dbf (DBF)
+// Origem: nfe (DBFCDX)
 Table "nfe" {
-  Note: "Origem: nfe.dbf"
+  Note: "Origem: nfe"
   "EMPRESA" VARCHAR(2)
   "SINTEL" DATETIME
   "NFS" INTEGER [default: 0]
@@ -175,9 +175,9 @@ Table "nfe" {
   }
 }
 
-// Origem: nfecorrecao.dbf (DBF)
+// Origem: nfecorrecao (DBFCDX)
 Table "nfecorrecao" {
-  Note: "Origem: nfecorrecao.dbf"
+  Note: "Origem: nfecorrecao"
   "CODIGO" VARCHAR(2)
   "DESCRICAO" VARCHAR(30)
   Indexes {
@@ -185,9 +185,9 @@ Table "nfecorrecao" {
   }
 }
 
-// Origem: NFECRET.DBF (DBF)
+// Origem: NFECRET (DBFCDX)
 Table "NFECRET" {
-  Note: "Origem: NFECRET.DBF"
+  Note: "Origem: NFECRET"
   "CODIGO" VARCHAR(3)
   "DESCRICAO" VARCHAR(120)
   Indexes {
@@ -195,9 +195,9 @@ Table "NFECRET" {
   }
 }
 
-// Origem: sintcert.dbf (DBF)
+// Origem: sintcert (DBFCDX)
 Table "sintcert" {
-  Note: "Origem: sintcert.dbf"
+  Note: "Origem: sintcert"
   "CNPJ" VARCHAR(20)
   "IE" VARCHAR(20)
   "CCM" VARCHAR(20)
@@ -237,9 +237,9 @@ Table "sintcert" {
   }
 }
 
-// Origem: sintcertfec.dbf (DBF)
+// Origem: sintcertfec (DBFCDX)
 Table "sintcertfec" {
-  Note: "Origem: sintcertfec.dbf"
+  Note: "Origem: sintcertfec"
   "CNPJ" VARCHAR(20)
   "IE" VARCHAR(20)
   "CCM" VARCHAR(20)
@@ -279,9 +279,9 @@ Table "sintcertfec" {
   }
 }
 
-// Origem: sintpend.dbf (DBF)
+// Origem: sintpend (DBFCDX)
 Table "sintpend" {
-  Note: "Origem: sintpend.dbf"
+  Note: "Origem: sintpend"
   "CNPJ" VARCHAR(20)
   "IE" VARCHAR(20)
   "CCM" VARCHAR(20)
@@ -304,9 +304,9 @@ Table "sintpend" {
   }
 }
 
-// Origem: xmlpend.dbf (DBF)
+// Origem: xmlpend (DBFCDX)
 Table "xmlpend" {
-  Note: "Origem: xmlpend.dbf"
+  Note: "Origem: xmlpend"
   "ID" VARCHAR(44)
   Indexes {
     ID [name: "XMLPEND"]
