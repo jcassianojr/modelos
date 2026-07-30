@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "apura.md",
+                "file": "xsharpexe.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "apura"
+              "title": "xsharpexe"
             }
           }
         ]
@@ -185,9 +185,32 @@
   },
   "active": "9083b835792ed2d1",
   "lastOpenFiles": [
-    "alteracoes/banco_alteracoes.md",
-    "Banco.md",
-    "padrao/Conteudo.md",
+    "wrpt.md",
+    "viabili.md",
+    "tgq.md",
+    "sped.md",
+    "sintegra.md",
+    "rh.md",
+    "qualida.md",
+    "producao.md",
+    "plugin.md",
+    "pecas.md",
+    "pcp.md",
+    "mail.md",
+    "logo.md",
+    "log.md",
+    "instrume.md",
+    "Instrum_alteracoes.md",
+    "indice.md",
+    "icones.md",
+    "help.md",
+    "folhapto.md",
+    "folha.md",
+    "fiscal.md",
+    "final.md",
+    "ferramlocal.md",
+    "ferramen_alteracoes.md",
+    "ferramen.md",
     "pdf/filtro.pdf",
     "chm/wrptlib.chm",
     "chm/padrao.chm",
@@ -196,22 +219,7 @@
     "chm",
     "alteracoes",
     "altecacoes",
-    "indice.md",
-    "banco/banco..md",
-    "wrpt_alteracoes.md",
-    "banco/mensagens.md",
     "Sem título.base",
-    "banco/banco.md",
-    "Modulo Controle de Instrumentos.md",
-    "pcp.md",
-    "controle_alteracoes.md",
-    "senha.md",
-    "crm.md",
-    "foptowin.md",
-    "banco/fotos.md",
-    "banco/VisualizandoArquivosFotoImagens.md",
-    "banco/Mensagens1.md",
-    "banco/Indexar.md",
     "filtro.pdf"
   ]
 }

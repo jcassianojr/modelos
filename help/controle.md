@@ -1,6 +1,6 @@
 # controle
 
-&nbsp;modulo de qualidade controle
+modulo de qualidade controle
 
 ***
 

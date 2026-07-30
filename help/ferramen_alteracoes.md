@@ -3,7 +3,7 @@
 08/09/2003 - Sincronizar Fotos
 04/09/2003 - Codigo Numero Unico Cadastro Ferramenta
 	     Campo para Pratileira/Estoque
-17/06/2003 - Inclusão Modulo de Controle Horas Gastas Ferramentaria
-	     Opçao de Escolha de Ferramentas/Maquinas nos Cadastros
-29/05/2003 - 3º 4º Linha Solucao Registro de Ocorrencia
-14/04/2003 - Inicio Cadastro de Altera‡oes
+17/06/2003 - Inclusï¿½o Modulo de Controle Horas Gastas Ferramentaria
+	     Opï¿½ao de Escolha de Ferramentas/Maquinas nos Cadastros
+29/05/2003 - 3ï¿½ 4ï¿½ Linha Solucao Registro de Ocorrencia
+14/04/2003 - Inicio Cadastro de Alteraï¿½oes
