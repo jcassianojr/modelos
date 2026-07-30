@@ -1,4 +1,6 @@
 Modulo Sintegra
+[[sistema_alteracoes]]
+[[sintegra_documentacao_dados]]
 	
 ## Table of contents
 

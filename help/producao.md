@@ -1,4 +1,7 @@
 Modulo Controle Produção
+[[producao_alteracoes]]
+[[producao_documentacao_dados]]
+
 		
 ## Table of contents
 

@@ -1,4 +1,6 @@
 Modulo Recursos Humanos
+[[rh_alteracoes]]
+[[rh_documentacao_dados]]
 		
 ## Table of contents
 

@@ -1,4 +1,6 @@
 Modulo Controle de Qualidade
+[[qualida_alteracoes]]
+[[qualida_documentacao_dados]]
 		
 
 - [Contéudo](<Conteudo.md>)

@@ -1,5 +1,7 @@
 Modulo Garantia Qualidade
-		[[banco_alteracoes]]
+		[[tgq_alteracoes]]
+		[[tgq_documentacao_dados]]
+		
 ## Table of contents
 
 - [Contéudo](<Conteudo.md>)

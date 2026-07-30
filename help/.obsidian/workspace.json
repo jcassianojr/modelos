@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "folhapto.md",
+                "file": "alteracoes/banco_alteracoes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "folhapto"
+              "title": "banco_alteracoes"
             }
           }
         ]
@@ -80,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 374.3000183105469
   },
   "right": {
     "id": "b12188ee6be94b7c",
@@ -187,33 +187,33 @@
   },
   "active": "9083b835792ed2d1",
   "lastOpenFiles": [
-    "graficos.md",
-    "controle.md",
-    "graficos_documentacao_dados.md",
-    "documentacao_dados/controle_documentacao_dados.md",
-    "alteracoes/controle_alteracoes.md",
-    "fiscal.md",
-    "final.md",
-    "documentacao_dados/fiscal_documentacao_dados.md",
-    "ferramen.md",
-    "documentacao_dados/final_documentacao_dados.md",
-    "engenha.md",
-    "documentacao_dados/ferramen_documentacao_dados.md",
-    "dosprn.md",
-    "custo.md",
-    "documentacao_dados/engenha_documentacao_dados.md",
-    "datashare.md",
-    "documentacao_dados/dosprn_documentacao_dados.md",
-    "documentacao_dados/crm_documentacao_dados.md",
-    "documentacao_dados/datashare_documentacao_dados.md",
-    "crm.md",
-    "documentacao_dados",
-    "cep.md",
-    "Banco.md",
-    "documentacao_dados/cep_documentacao_dados.md",
-    "apura.md",
-    "documentacao_dados/banco_documentacao_dados.md",
+    "banco.md",
     "documentacao_dados/apura_documentacao_dados.md",
+    "apura.md",
+    "controle.md",
+    "dosprn.md",
+    "crmlocal.md",
+    "documentacao_dados/cep_documentacao_dados.md",
+    "cep.md",
+    "alteracoes/banco_alteracoes.md",
+    "documentacao_dados/banco_documentacao_dados.md",
+    "alteracoes/controle_alteracoes.md",
+    "documentacao_dados/controle_documentacao_dados.md",
+    "folhapto.md",
+    "padrao/MensagensNova.md",
+    "engenha.md",
+    "padrao/BotoeseIcones.md",
+    "custo.md",
+    "padrao/AcessandooSistema.md",
+    "wrpt.md",
+    "tgq.md",
+    "viabili.md",
+    "sped.md",
+    "alteracoes/sistema_alteracoes.md",
+    "sintegra.md",
+    "documentacao_dados/sintegra_documentacao_dados.md",
+    "senha_alteracoes.md",
+    "documentacao_dados",
     "pdf/filtro.pdf",
     "chm/wrptlib.chm",
     "chm/padrao.chm",

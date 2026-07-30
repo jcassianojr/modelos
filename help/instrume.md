@@ -1,4 +1,6 @@
 Modulo Controle de Instrumentos e Dispositivos
+[[instrum_alteracoes]]
+[[instrume_documentacao_dados]]
 		
 ## Table of contents
 

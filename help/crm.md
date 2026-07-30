@@ -1,6 +1,6 @@
 Modulo Recebimento Mercadorias
-[[crm_alteracoes]]
-[[crm_documentacao_dados]]
+[[crm_alteracoes]](alteracoes\crm_alteracoes.md)
+[[crm_documentacao_dados]](<documentacao_dados\crm_documentacao_dados.md>)
 ## Table of contents
 
 - [Contéudo](<Conteudo.md>)

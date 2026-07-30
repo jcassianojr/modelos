@@ -1,4 +1,6 @@
 Modulo Planejamento e controle Producao
+[[pcp_alteracoes]]
+[[pcp_documentacao_dados]]
 		
 ## Table of contents
 
