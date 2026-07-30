@@ -1,4 +1,5 @@
 Modulo Custo produtos
+[[custo_alteracoes]]
 		
 ## Table of contents
 

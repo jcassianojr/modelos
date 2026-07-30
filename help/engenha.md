@@ -1,5 +1,6 @@
 Modulo Controle de normas
-		
+		[[engenha_alteracoes]]
+		[[engenha_documentacao_dados]]
 ## Table of contents
 
 - [Contéudo](<Conteudo.md>)

@@ -1,5 +1,7 @@
 Modulo Controle de Ferramental
-		
+[[ferramen_alteracoes]]
+[[ferramen_documentacao_dados]]
+
 ## Table of contents
 
 - [Contéudo](<Conteudo.md>)
