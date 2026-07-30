@@ -1,5 +1,5 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 29/07/2026
+> Varredura automatica realizada em: 30/07/2026
 
 ## Tabela DBF: `esocial_cbo`
 > **Origem:** `esocial_cbo` (Driver: DBFCDX)
@@ -497,9 +497,10 @@
 | DTINICIO | D | 8 | 0 |
 | DTFIM | D | 8 | 0 |
 | ALIQ | N | 2 | 0 |
+| FAIXA | N | 1 | 0 |
 
 **Indices vinculados:**
-- Tag: `RECNO` Expressao: `recno()`
+- Tag: `FAIXA` Expressao: `FAIXA`
 
 ---
 ## Tabela DBF: `esocial_tab58`
@@ -513,9 +514,10 @@
 | DTFIM | D | 8 | 0 |
 | ALIQ | N | 4 | 1 |
 | PARCDED | N | 6 | 2 |
+| FAIXA | N | 1 | 0 |
 
 **Indices vinculados:**
-- Tag: `RECNO` Expressao: `recno()`
+- Tag: `FAIXA` Expressao: `FAIXA`
 
 ---
 ## Tabela DBF: `esocial_tab59`
@@ -627,9 +629,10 @@
 | DTINICIO | N | 7 | 0 |
 | DTFIM | N | 8 | 0 |
 | PARCDED | N | 5 | 2 |
+| FAIXA | N | 1 | 0 |
 
 **Indices vinculados:**
-- Tag: `RECNO` Expressao: `recno()`
+- Tag: `FAIXA` Expressao: `FAIXA`
 
 ---
 ## Tabela DBF: `esocial_tab66`
@@ -646,7 +649,7 @@
 | VALOR | N | 6 | 2 |
 
 **Indices vinculados:**
-- Tag: `RECNO` Expressao: `recno()`
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
 ## Tabela DBF: `esocial_tab67`
@@ -661,7 +664,7 @@
 | CODESOCIAL | N | 2 | 0 |
 
 **Indices vinculados:**
-- Tag: `RECNO` Expressao: `recno()`
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
 ## Tabela DBF: `esocial_tab68`
@@ -678,7 +681,7 @@
 | RESTRICAON | C | 35 | 0 |
 
 **Indices vinculados:**
-- Tag: `RECNO` Expressao: `recno()`
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
 ## Tabela DBF: `esocial_tab69`
@@ -692,7 +695,7 @@
 | DTFIM | C | 1 | 0 |
 
 **Indices vinculados:**
-- Tag: `RECNO` Expressao: `recno()`
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
 ## Tabela DBF: `esocial_tab70`
@@ -706,7 +709,7 @@
 | DTFIM | C | 1 | 0 |
 
 **Indices vinculados:**
-- Tag: `RECNO` Expressao: `recno()`
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
 ## Tabela DBF: `esocial_tab71`
@@ -720,7 +723,7 @@
 | DTFIM | C | 1 | 0 |
 
 **Indices vinculados:**
-- Tag: `RECNO` Expressao: `recno()`
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
 ## Tabela DBF: `esocial_tab72`
@@ -734,7 +737,7 @@
 | DTFIM | C | 1 | 0 |
 
 **Indices vinculados:**
-- Tag: `RECNO` Expressao: `recno()`
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
 ## Tabela DBF: `esocial_tab73`
@@ -748,7 +751,7 @@
 | DTFIM | C | 1 | 0 |
 
 **Indices vinculados:**
-- Tag: `RECNO` Expressao: `recno()`
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
 ## Tabela DBF: `esocial_tab74`
@@ -762,7 +765,7 @@
 | DTFIM | C | 1 | 0 |
 
 **Indices vinculados:**
-- Tag: `RECNO` Expressao: `recno()`
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
 ## Tabela DBF: `esocial_tab75`
@@ -776,6 +779,6 @@
 | DTFIM | C | 1 | 0 |
 
 **Indices vinculados:**
-- Tag: `RECNO` Expressao: `recno()`
+- Tag: `CODIGO` Expressao: `CODIGO`
 
 ---

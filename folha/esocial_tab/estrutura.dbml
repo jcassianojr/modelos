@@ -434,8 +434,9 @@ Table "esocial_tab57" {
   "DTINICIO" DATETIME
   "DTFIM" DATETIME
   "ALIQ" INTEGER [default: 0]
+  "FAIXA" INTEGER [default: 0]
   Indexes {
-    recno() [name: "RECNO"]
+    FAIXA [name: "FAIXA"]
   }
 }
 
@@ -448,8 +449,9 @@ Table "esocial_tab58" {
   "DTFIM" DATETIME
   "ALIQ" DECIMAL(4,1) [default: 0]
   "PARCDED" DECIMAL(6,2) [default: 0]
+  "FAIXA" INTEGER [default: 0]
   Indexes {
-    recno() [name: "RECNO"]
+    FAIXA [name: "FAIXA"]
   }
 }
 
@@ -548,8 +550,9 @@ Table "esocial_tab65" {
   "DTINICIO" INTEGER [default: 0]
   "DTFIM" INTEGER [default: 0]
   "PARCDED" DECIMAL(5,2) [default: 0]
+  "FAIXA" INTEGER [default: 0]
   Indexes {
-    recno() [name: "RECNO"]
+    FAIXA [name: "FAIXA"]
   }
 }
 
@@ -564,7 +567,7 @@ Table "esocial_tab66" {
   "NCATEGORIA" VARCHAR(1)
   "VALOR" DECIMAL(6,2) [default: 0]
   Indexes {
-    recno() [name: "RECNO"]
+    CODIGO [name: "CODIGO"]
   }
 }
 
@@ -577,7 +580,7 @@ Table "esocial_tab67" {
   "DTFIM" VARCHAR(1)
   "CODESOCIAL" INTEGER [default: 0]
   Indexes {
-    recno() [name: "RECNO"]
+    CODIGO [name: "CODIGO"]
   }
 }
 
@@ -592,7 +595,7 @@ Table "esocial_tab68" {
   "CAMPOFIXO" VARCHAR(1)
   "RESTRICAON" VARCHAR(35)
   Indexes {
-    recno() [name: "RECNO"]
+    CODIGO [name: "CODIGO"]
   }
 }
 
@@ -604,7 +607,7 @@ Table "esocial_tab69" {
   "DTINICIO" INTEGER [default: 0]
   "DTFIM" VARCHAR(1)
   Indexes {
-    recno() [name: "RECNO"]
+    CODIGO [name: "CODIGO"]
   }
 }
 
@@ -616,7 +619,7 @@ Table "esocial_tab70" {
   "DTINICIO" INTEGER [default: 0]
   "DTFIM" VARCHAR(1)
   Indexes {
-    recno() [name: "RECNO"]
+    CODIGO [name: "CODIGO"]
   }
 }
 
@@ -628,7 +631,7 @@ Table "esocial_tab71" {
   "DTINICIO" INTEGER [default: 0]
   "DTFIM" VARCHAR(1)
   Indexes {
-    recno() [name: "RECNO"]
+    CODIGO [name: "CODIGO"]
   }
 }
 
@@ -640,7 +643,7 @@ Table "esocial_tab72" {
   "DTINICIO" INTEGER [default: 0]
   "DTFIM" VARCHAR(1)
   Indexes {
-    recno() [name: "RECNO"]
+    CODIGO [name: "CODIGO"]
   }
 }
 
@@ -652,7 +655,7 @@ Table "esocial_tab73" {
   "DTINICIO" INTEGER [default: 0]
   "DTFIM" VARCHAR(1)
   Indexes {
-    recno() [name: "RECNO"]
+    CODIGO [name: "CODIGO"]
   }
 }
 
@@ -664,7 +667,7 @@ Table "esocial_tab74" {
   "DTINICIO" INTEGER [default: 0]
   "DTFIM" VARCHAR(1)
   Indexes {
-    recno() [name: "RECNO"]
+    CODIGO [name: "CODIGO"]
   }
 }
 
@@ -676,7 +679,7 @@ Table "esocial_tab75" {
   "DTINICIO" INTEGER [default: 0]
   "DTFIM" VARCHAR(1)
   Indexes {
-    recno() [name: "RECNO"]
+    CODIGO [name: "CODIGO"]
   }
 }
 
