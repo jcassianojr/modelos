@@ -1,5 +1,7 @@
+Modulo Controle Qualidade - Lista Alterações
+
 23/07/2026:
-    * Alteracoes em  controle e  md
+     * Alteracoes em  controle e  md
 
 13/01/2006:   
     * Integracao plano de controle  RI(Modulo qualidade)
