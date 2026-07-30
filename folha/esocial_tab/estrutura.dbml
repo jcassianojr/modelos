@@ -1,6 +1,6 @@
-// Origem: esocial_cbo.dbf (DBF)
+// Origem: esocial_cbo (DBFCDX)
 Table "esocial_cbo" {
-  Note: "Origem: esocial_cbo.dbf"
+  Note: "Origem: esocial_cbo"
   "CODIGO" VARCHAR(6)
   "NOME" VARCHAR(150)
   "DT_INI" DATETIME
@@ -10,9 +10,9 @@ Table "esocial_cbo" {
   }
 }
 
-// Origem: esocial_tab01.dbf (DBF)
+// Origem: esocial_tab01 (DBFCDX)
 Table "esocial_tab01" {
-  Note: "Origem: esocial_tab01.dbf"
+  Note: "Origem: esocial_tab01"
   "CODIGO" VARCHAR(3)
   "NOME" VARCHAR(255)
   "DTINICIO" DATETIME
@@ -26,9 +26,9 @@ Table "esocial_tab01" {
   }
 }
 
-// Origem: esocial_tab02.dbf (DBF)
+// Origem: esocial_tab02 (DBFCDX)
 Table "esocial_tab02" {
-  Note: "Origem: esocial_tab02.dbf"
+  Note: "Origem: esocial_tab02"
   "CODIGO" INTEGER [default: 0]
   "NOME" VARCHAR(74)
   "DTINICIO" DATETIME
@@ -38,9 +38,9 @@ Table "esocial_tab02" {
   }
 }
 
-// Origem: esocial_tab03.dbf (DBF)
+// Origem: esocial_tab03 (DBFCDX)
 Table "esocial_tab03" {
-  Note: "Origem: esocial_tab03.dbf"
+  Note: "Origem: esocial_tab03"
   "CODIGO" VARCHAR(4)
   "NOME" VARCHAR(65)
   "DTINICIO" DATETIME
@@ -51,9 +51,9 @@ Table "esocial_tab03" {
   }
 }
 
-// Origem: esocial_tab04.dbf (DBF)
+// Origem: esocial_tab04 (DBFCDX)
 Table "esocial_tab04" {
-  Note: "Origem: esocial_tab04.dbf"
+  Note: "Origem: esocial_tab04"
   "CODFPAS" INTEGER [default: 0]
   "INDCOOP" VARCHAR(6)
   "DTINICIO" DATETIME
@@ -66,9 +66,9 @@ Table "esocial_tab04" {
   }
 }
 
-// Origem: esocial_tab05.dbf (DBF)
+// Origem: esocial_tab05 (DBFCDX)
 Table "esocial_tab05" {
-  Note: "Origem: esocial_tab05.dbf"
+  Note: "Origem: esocial_tab05"
   "CODIGO" INTEGER [default: 0]
   "NOME" VARCHAR(56)
   "DTINICIO" DATETIME
@@ -78,9 +78,9 @@ Table "esocial_tab05" {
   }
 }
 
-// Origem: esocial_tab07.dbf (DBF)
+// Origem: esocial_tab07 (DBFCDX)
 Table "esocial_tab07" {
-  Note: "Origem: esocial_tab07.dbf"
+  Note: "Origem: esocial_tab07"
   "CODIGO" VARCHAR(4)
   "NOME" VARCHAR(55)
   "DTINICIO" DATETIME
@@ -92,9 +92,9 @@ Table "esocial_tab07" {
   }
 }
 
-// Origem: esocial_tab08.dbf (DBF)
+// Origem: esocial_tab08 (DBFCDX)
 Table "esocial_tab08" {
-  Note: "Origem: esocial_tab08.dbf"
+  Note: "Origem: esocial_tab08"
   "CODIGO" INTEGER [default: 0]
   "NOME" VARCHAR(149)
   "DTINICIO" DATETIME
@@ -105,9 +105,9 @@ Table "esocial_tab08" {
   }
 }
 
-// Origem: esocial_tab09.dbf (DBF)
+// Origem: esocial_tab09 (DBFCDX)
 Table "esocial_tab09" {
-  Note: "Origem: esocial_tab09.dbf"
+  Note: "Origem: esocial_tab09"
   "CODIGO" VARCHAR(6)
   "NOME" VARCHAR(84)
   "DTINICIO" DATETIME
@@ -124,9 +124,9 @@ Table "esocial_tab09" {
   }
 }
 
-// Origem: esocial_tab10.dbf (DBF)
+// Origem: esocial_tab10 (DBFCDX)
 Table "esocial_tab10" {
-  Note: "Origem: esocial_tab10.dbf"
+  Note: "Origem: esocial_tab10"
   "CODIGO" VARCHAR(2)
   "NOME" VARCHAR(255)
   "DTINICIO" DATETIME
@@ -140,9 +140,9 @@ Table "esocial_tab10" {
   }
 }
 
-// Origem: esocial_tab11.dbf (DBF)
+// Origem: esocial_tab11 (DBFCDX)
 Table "esocial_tab11" {
-  Note: "Origem: esocial_tab11.dbf"
+  Note: "Origem: esocial_tab11"
   "CODIGO" INTEGER [default: 0]
   "CLASSTRIB" VARCHAR(11)
   "DTINICIO" DATETIME
@@ -155,9 +155,9 @@ Table "esocial_tab11" {
   }
 }
 
-// Origem: esocial_tab13.dbf (DBF)
+// Origem: esocial_tab13 (DBFCDX)
 Table "esocial_tab13" {
-  Note: "Origem: esocial_tab13.dbf"
+  Note: "Origem: esocial_tab13"
   "CODIGO" VARCHAR(9)
   "NOME" VARCHAR(161)
   "DTINICIO" DATETIME
@@ -167,9 +167,9 @@ Table "esocial_tab13" {
   }
 }
 
-// Origem: esocial_tab14.dbf (DBF)
+// Origem: esocial_tab14 (DBFCDX)
 Table "esocial_tab14" {
-  Note: "Origem: esocial_tab14.dbf"
+  Note: "Origem: esocial_tab14"
   "CODIGO" INTEGER [default: 0]
   "NOME" VARCHAR(185)
   "DTINICIO" DATETIME
@@ -179,9 +179,9 @@ Table "esocial_tab14" {
   }
 }
 
-// Origem: esocial_tab15.dbf (DBF)
+// Origem: esocial_tab15 (DBFCDX)
 Table "esocial_tab15" {
-  Note: "Origem: esocial_tab15.dbf"
+  Note: "Origem: esocial_tab15"
   "CODIGO" VARCHAR(9)
   "NOME" VARCHAR(135)
   "DTINICIO" DATETIME
@@ -191,9 +191,9 @@ Table "esocial_tab15" {
   }
 }
 
-// Origem: esocial_tab16.dbf (DBF)
+// Origem: esocial_tab16 (DBFCDX)
 Table "esocial_tab16" {
-  Note: "Origem: esocial_tab16.dbf"
+  Note: "Origem: esocial_tab16"
   "CODIGO" VARCHAR(9)
   "NOME" VARCHAR(63)
   "DTINICIO" DATETIME
@@ -203,9 +203,9 @@ Table "esocial_tab16" {
   }
 }
 
-// Origem: esocial_tab17.dbf (DBF)
+// Origem: esocial_tab17 (DBFCDX)
 Table "esocial_tab17" {
-  Note: "Origem: esocial_tab17.dbf"
+  Note: "Origem: esocial_tab17"
   "CODIGO" VARCHAR(9)
   "NOME" VARCHAR(135)
   "DTINICIO" DATETIME
@@ -215,9 +215,9 @@ Table "esocial_tab17" {
   }
 }
 
-// Origem: esocial_tab18.dbf (DBF)
+// Origem: esocial_tab18 (DBFCDX)
 Table "esocial_tab18" {
-  Note: "Origem: esocial_tab18.dbf"
+  Note: "Origem: esocial_tab18"
   "CODIGO" VARCHAR(2)
   "NOME" VARCHAR(255)
   "DTINICIO" DATETIME
@@ -233,9 +233,9 @@ Table "esocial_tab18" {
   }
 }
 
-// Origem: esocial_tab19.dbf (DBF)
+// Origem: esocial_tab19 (DBFCDX)
 Table "esocial_tab19" {
-  Note: "Origem: esocial_tab19.dbf"
+  Note: "Origem: esocial_tab19"
   "CODIGO" INTEGER [default: 0]
   "NOME" VARCHAR(236)
   "DTINICIO" DATETIME
@@ -248,9 +248,9 @@ Table "esocial_tab19" {
   }
 }
 
-// Origem: esocial_tab20.dbf (DBF)
+// Origem: esocial_tab20 (DBFCDX)
 Table "esocial_tab20" {
-  Note: "Origem: esocial_tab20.dbf"
+  Note: "Origem: esocial_tab20"
   "CODIGO" VARCHAR(3)
   "NOME" VARCHAR(11)
   "DTINICIO" DATETIME
@@ -260,9 +260,9 @@ Table "esocial_tab20" {
   }
 }
 
-// Origem: esocial_tab21.dbf (DBF)
+// Origem: esocial_tab21 (DBFCDX)
 Table "esocial_tab21" {
-  Note: "Origem: esocial_tab21.dbf"
+  Note: "Origem: esocial_tab21"
   "CODIGO" VARCHAR(9)
   "NOME" VARCHAR(135)
   "DTINICIO" DATETIME
@@ -274,9 +274,9 @@ Table "esocial_tab21" {
   }
 }
 
-// Origem: esocial_tab22.dbf (DBF)
+// Origem: esocial_tab22 (DBFCDX)
 Table "esocial_tab22" {
-  Note: "Origem: esocial_tab22.dbf"
+  Note: "Origem: esocial_tab22"
   "CODIGO" VARCHAR(9)
   "NOME" VARCHAR(206)
   "DTINICIO" DATETIME
@@ -288,9 +288,9 @@ Table "esocial_tab22" {
   }
 }
 
-// Origem: esocial_tab23.dbf (DBF)
+// Origem: esocial_tab23 (DBFCDX)
 Table "esocial_tab23" {
-  Note: "Origem: esocial_tab23.dbf"
+  Note: "Origem: esocial_tab23"
   "CODIGO" VARCHAR(8)
   "NOME" VARCHAR(148)
   "DTINICIO" DATETIME
@@ -302,9 +302,9 @@ Table "esocial_tab23" {
   }
 }
 
-// Origem: esocial_tab24.dbf (DBF)
+// Origem: esocial_tab24 (DBFCDX)
 Table "esocial_tab24" {
-  Note: "Origem: esocial_tab24.dbf"
+  Note: "Origem: esocial_tab24"
   "CODIGO" INTEGER [default: 0]
   "LCLASSTRIB" VARCHAR(44)
   "DTINICIO" DATETIME
@@ -314,9 +314,9 @@ Table "esocial_tab24" {
   }
 }
 
-// Origem: esocial_tab26.dbf (DBF)
+// Origem: esocial_tab26 (DBFCDX)
 Table "esocial_tab26" {
-  Note: "Origem: esocial_tab26.dbf"
+  Note: "Origem: esocial_tab26"
   "CODIGO" VARCHAR(6)
   "NOME" VARCHAR(255)
   "DTINICIO" DATETIME
@@ -326,9 +326,9 @@ Table "esocial_tab26" {
   }
 }
 
-// Origem: esocial_tab51.dbf (DBF)
+// Origem: esocial_tab51 (DBFCDX)
 Table "esocial_tab51" {
-  Note: "Origem: esocial_tab51.dbf"
+  Note: "Origem: esocial_tab51"
   "CODIGO" INTEGER [default: 0]
   "NOME" VARCHAR(16)
   "DTINICIO" DATETIME
@@ -339,9 +339,9 @@ Table "esocial_tab51" {
   }
 }
 
-// Origem: esocial_tab52.dbf (DBF)
+// Origem: esocial_tab52 (DBFCDX)
 Table "esocial_tab52" {
-  Note: "Origem: esocial_tab52.dbf"
+  Note: "Origem: esocial_tab52"
   "CODIGO" VARCHAR(10)
   "NOME" VARCHAR(56)
   "DTINICIO" DATETIME
@@ -360,9 +360,9 @@ Table "esocial_tab52" {
   }
 }
 
-// Origem: esocial_tab53.dbf (DBF)
+// Origem: esocial_tab53 (DBFCDX)
 Table "esocial_tab53" {
-  Note: "Origem: esocial_tab53.dbf"
+  Note: "Origem: esocial_tab53"
   "CODIGO" INTEGER [default: 0]
   "NOME" VARCHAR(73)
   "DTINICIO" DATETIME
@@ -373,9 +373,9 @@ Table "esocial_tab53" {
   }
 }
 
-// Origem: esocial_tab54.dbf (DBF)
+// Origem: esocial_tab54 (DBFCDX)
 Table "esocial_tab54" {
-  Note: "Origem: esocial_tab54.dbf"
+  Note: "Origem: esocial_tab54"
   "CODIGO" VARCHAR(11)
   "NOME" VARCHAR(84)
   "DTINICIO" DATETIME
@@ -412,9 +412,9 @@ Table "esocial_tab54" {
   }
 }
 
-// Origem: esocial_tab55.dbf (DBF)
+// Origem: esocial_tab55 (DBFCDX)
 Table "esocial_tab55" {
-  Note: "Origem: esocial_tab55.dbf"
+  Note: "Origem: esocial_tab55"
   "CODIGO" INTEGER [default: 0]
   "NOME" VARCHAR(50)
   "DTINICIO" DATETIME
@@ -426,9 +426,9 @@ Table "esocial_tab55" {
   }
 }
 
-// Origem: esocial_tab57.dbf (DBF)
+// Origem: esocial_tab57 (DBFCDX)
 Table "esocial_tab57" {
-  Note: "Origem: esocial_tab57.dbf"
+  Note: "Origem: esocial_tab57"
   "INFSALCONT" DECIMAL(7,2) [default: 0]
   "SUPSALCONT" DECIMAL(7,2) [default: 0]
   "DTINICIO" DATETIME
@@ -439,9 +439,9 @@ Table "esocial_tab57" {
   }
 }
 
-// Origem: esocial_tab58.dbf (DBF)
+// Origem: esocial_tab58 (DBFCDX)
 Table "esocial_tab58" {
-  Note: "Origem: esocial_tab58.dbf"
+  Note: "Origem: esocial_tab58"
   "INFBC" DECIMAL(7,2) [default: 0]
   "SUPBC" DECIMAL(13,2) [default: 0]
   "DTINICIO" DATETIME
@@ -453,9 +453,9 @@ Table "esocial_tab58" {
   }
 }
 
-// Origem: esocial_tab59.dbf (DBF)
+// Origem: esocial_tab59 (DBFCDX)
 Table "esocial_tab59" {
-  Note: "Origem: esocial_tab59.dbf"
+  Note: "Origem: esocial_tab59"
   "CODIGO" INTEGER [default: 0]
   "NOME" VARCHAR(74)
   "DTINICIO" DATETIME
@@ -466,9 +466,9 @@ Table "esocial_tab59" {
   }
 }
 
-// Origem: esocial_tab60.dbf (DBF)
+// Origem: esocial_tab60 (DBFCDX)
 Table "esocial_tab60" {
-  Note: "Origem: esocial_tab60.dbf"
+  Note: "Origem: esocial_tab60"
   "CODIGO" VARCHAR(4)
   "DESCRICAO" VARCHAR(255)
   "DTINICIO" DATETIME
@@ -479,9 +479,9 @@ Table "esocial_tab60" {
   }
 }
 
-// Origem: esocial_tab61.dbf (DBF)
+// Origem: esocial_tab61 (DBFCDX)
 Table "esocial_tab61" {
-  Note: "Origem: esocial_tab61.dbf"
+  Note: "Origem: esocial_tab61"
   "CODIGO" VARCHAR(11)
   "NOME" VARCHAR(98)
   "DTINICIO" DATETIME
@@ -494,9 +494,9 @@ Table "esocial_tab61" {
   }
 }
 
-// Origem: esocial_tab62.dbf (DBF)
+// Origem: esocial_tab62 (DBFCDX)
 Table "esocial_tab62" {
-  Note: "Origem: esocial_tab62.dbf"
+  Note: "Origem: esocial_tab62"
   "CODIGO" INTEGER [default: 0]
   "NOME" VARCHAR(112)
   "DTINICIO" DATETIME
@@ -506,9 +506,9 @@ Table "esocial_tab62" {
   }
 }
 
-// Origem: esocial_tab63.dbf (DBF)
+// Origem: esocial_tab63 (DBFCDX)
 Table "esocial_tab63" {
-  Note: "Origem: esocial_tab63.dbf"
+  Note: "Origem: esocial_tab63"
   "CODIGO" INTEGER [default: 0]
   "NOME" VARCHAR(56)
   "DTINICIO" DATETIME
@@ -521,9 +521,9 @@ Table "esocial_tab63" {
   }
 }
 
-// Origem: esocial_tab64.dbf (DBF)
+// Origem: esocial_tab64 (DBFCDX)
 Table "esocial_tab64" {
-  Note: "Origem: esocial_tab64.dbf"
+  Note: "Origem: esocial_tab64"
   "CODIGO" VARCHAR(11)
   "NOME" VARCHAR(62)
   "DTINICIO" DATETIME
@@ -540,9 +540,9 @@ Table "esocial_tab64" {
   }
 }
 
-// Origem: esocial_tab65.dbf (DBF)
+// Origem: esocial_tab65 (DBFCDX)
 Table "esocial_tab65" {
-  Note: "Origem: esocial_tab65.dbf"
+  Note: "Origem: esocial_tab65"
   "INFBC" DECIMAL(6,2) [default: 0]
   "SUPBC" DECIMAL(7,2) [default: 0]
   "DTINICIO" INTEGER [default: 0]
@@ -553,9 +553,9 @@ Table "esocial_tab65" {
   }
 }
 
-// Origem: esocial_tab66.dbf (DBF)
+// Origem: esocial_tab66 (DBFCDX)
 Table "esocial_tab66" {
-  Note: "Origem: esocial_tab66.dbf"
+  Note: "Origem: esocial_tab66"
   "CODIGO" INTEGER [default: 0]
   "DESCRICAO" VARCHAR(27)
   "DTINICIO" INTEGER [default: 0]
@@ -568,9 +568,9 @@ Table "esocial_tab66" {
   }
 }
 
-// Origem: esocial_tab67.dbf (DBF)
+// Origem: esocial_tab67 (DBFCDX)
 Table "esocial_tab67" {
-  Note: "Origem: esocial_tab67.dbf"
+  Note: "Origem: esocial_tab67"
   "CODIGO" VARCHAR(3)
   "DESCRICAO" VARCHAR(113)
   "DTINICIO" INTEGER [default: 0]
@@ -581,9 +581,9 @@ Table "esocial_tab67" {
   }
 }
 
-// Origem: esocial_tab68.dbf (DBF)
+// Origem: esocial_tab68 (DBFCDX)
 Table "esocial_tab68" {
-  Note: "Origem: esocial_tab68.dbf"
+  Note: "Origem: esocial_tab68"
   "CODIGO" INTEGER [default: 0]
   "NOME" VARCHAR(82)
   "DTINICIO" INTEGER [default: 0]
@@ -596,9 +596,9 @@ Table "esocial_tab68" {
   }
 }
 
-// Origem: esocial_tab69.dbf (DBF)
+// Origem: esocial_tab69 (DBFCDX)
 Table "esocial_tab69" {
-  Note: "Origem: esocial_tab69.dbf"
+  Note: "Origem: esocial_tab69"
   "CODIGO" VARCHAR(11)
   "DESCRICAO" VARCHAR(39)
   "DTINICIO" INTEGER [default: 0]
@@ -608,9 +608,9 @@ Table "esocial_tab69" {
   }
 }
 
-// Origem: esocial_tab70.dbf (DBF)
+// Origem: esocial_tab70 (DBFCDX)
 Table "esocial_tab70" {
-  Note: "Origem: esocial_tab70.dbf"
+  Note: "Origem: esocial_tab70"
   "CODIGO" INTEGER [default: 0]
   "DESCRICAO" VARCHAR(66)
   "DTINICIO" INTEGER [default: 0]
@@ -620,9 +620,9 @@ Table "esocial_tab70" {
   }
 }
 
-// Origem: esocial_tab71.dbf (DBF)
+// Origem: esocial_tab71 (DBFCDX)
 Table "esocial_tab71" {
-  Note: "Origem: esocial_tab71.dbf"
+  Note: "Origem: esocial_tab71"
   "CODIGO" INTEGER [default: 0]
   "DESCRICAO" VARCHAR(20)
   "DTINICIO" INTEGER [default: 0]
@@ -632,9 +632,9 @@ Table "esocial_tab71" {
   }
 }
 
-// Origem: esocial_tab72.dbf (DBF)
+// Origem: esocial_tab72 (DBFCDX)
 Table "esocial_tab72" {
-  Note: "Origem: esocial_tab72.dbf"
+  Note: "Origem: esocial_tab72"
   "CODIGO" INTEGER [default: 0]
   "DESCRICAO" VARCHAR(59)
   "DTINICIO" INTEGER [default: 0]
@@ -644,9 +644,9 @@ Table "esocial_tab72" {
   }
 }
 
-// Origem: esocial_tab73.dbf (DBF)
+// Origem: esocial_tab73 (DBFCDX)
 Table "esocial_tab73" {
-  Note: "Origem: esocial_tab73.dbf"
+  Note: "Origem: esocial_tab73"
   "CODIGO" INTEGER [default: 0]
   "DESCRICAO" VARCHAR(202)
   "DTINICIO" INTEGER [default: 0]
@@ -656,9 +656,9 @@ Table "esocial_tab73" {
   }
 }
 
-// Origem: esocial_tab74.dbf (DBF)
+// Origem: esocial_tab74 (DBFCDX)
 Table "esocial_tab74" {
-  Note: "Origem: esocial_tab74.dbf"
+  Note: "Origem: esocial_tab74"
   "CODIGO" INTEGER [default: 0]
   "DESCRICAO" VARCHAR(44)
   "DTINICIO" INTEGER [default: 0]
@@ -668,9 +668,9 @@ Table "esocial_tab74" {
   }
 }
 
-// Origem: esocial_tab75.dbf (DBF)
+// Origem: esocial_tab75 (DBFCDX)
 Table "esocial_tab75" {
-  Note: "Origem: esocial_tab75.dbf"
+  Note: "Origem: esocial_tab75"
   "CODIGO" INTEGER [default: 0]
   "DESCRICAO" VARCHAR(33)
   "DTINICIO" INTEGER [default: 0]

@@ -1,8 +1,8 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 27/07/2026
+> Varredura automatica realizada em: 29/07/2026
 
-## Tabela DBF: `afdterr.dbf`
-> **Origem:** `afdterr.dbf` (Driver: DBFCDX)
+## Tabela DBF: `afdterr`
+> **Origem:** `afdterr` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -16,8 +16,8 @@
 - Tag: `AFDTERR` Expressao: `STR(NUMERO,8)+DTOS(DATA)+STR(HORA,5,2)`
 
 ---
-## Tabela DBF: `ajudira.dbf`
-> **Origem:** `ajudira.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ajudira`
+> **Origem:** `ajudira` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -43,8 +43,8 @@
 - Tag: `AJUDIRA` Expressao: `CPF+STR(MES,2)`
 
 ---
-## Tabela DBF: `ajudird.dbf`
-> **Origem:** `ajudird.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ajudird`
+> **Origem:** `ajudird` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -70,8 +70,8 @@
 - Tag: `AJUDIRD` Expressao: `CPF+STR(MES,2)`
 
 ---
-## Tabela DBF: `ajudirf.dbf`
-> **Origem:** `ajudirf.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ajudirf`
+> **Origem:** `ajudirf` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -97,8 +97,8 @@
 - Tag: `AJUDIRF` Expressao: `CPF+STR(MES,2)`
 
 ---
-## Tabela DBF: `bcobak.dbf`
-> **Origem:** `bcobak.dbf` (Driver: DBFCDX)
+## Tabela DBF: `bcobak`
+> **Origem:** `bcobak` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -118,8 +118,8 @@
 - Tag: `BCOBAK` Expressao: `STR(NUMERO,8)+STR(ANO,4)+STR(MES,2)`
 
 ---
-## Tabela DBF: `bcodek.dbf`
-> **Origem:** `bcodek.dbf` (Driver: DBFCDX)
+## Tabela DBF: `bcodek`
+> **Origem:** `bcodek` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -139,8 +139,8 @@
 - Tag: `BCODEK` Expressao: `STR(NUMERO,8)+STR(ANO,4)+STR(MES,2)`
 
 ---
-## Tabela DBF: `bcodem.dbf`
-> **Origem:** `bcodem.dbf` (Driver: DBFCDX)
+## Tabela DBF: `bcodem`
+> **Origem:** `bcodem` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -160,8 +160,8 @@
 - Tag: `BCODEM` Expressao: `STR(NUMERO,8)+STR(ANO,4)+STR(MES,2)`
 
 ---
-## Tabela DBF: `bcohrs.dbf`
-> **Origem:** `bcohrs.dbf` (Driver: DBFCDX)
+## Tabela DBF: `bcohrs`
+> **Origem:** `bcohrs` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -181,8 +181,8 @@
 - Tag: `BCOHRS` Expressao: `STR(NUMERO,8)+STR(ANO,4)+STR(MES,2)`
 
 ---
-## Tabela DBF: `bcoreq.dbf`
-> **Origem:** `bcoreq.dbf` (Driver: DBFCDX)
+## Tabela DBF: `bcoreq`
+> **Origem:** `bcoreq` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -196,8 +196,8 @@
 | IMP | C | 6 | 0 |
 
 ---
-## Tabela DBF: `bcrbak.dbf`
-> **Origem:** `bcrbak.dbf` (Driver: DBFCDX)
+## Tabela DBF: `bcrbak`
+> **Origem:** `bcrbak` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -214,8 +214,8 @@
 - Tag: `BCRBAK` Expressao: `REQUISI`
 
 ---
-## Tabela DBF: `cesta.dbf`
-> **Origem:** `cesta.dbf` (Driver: DBFCDX)
+## Tabela DBF: `cesta`
+> **Origem:** `cesta` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -229,8 +229,8 @@
 - Tag: `CESTA` Expressao: `NUMERO`
 
 ---
-## Tabela DBF: `ctrhor.dbf`
-> **Origem:** `ctrhor.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ctrhor`
+> **Origem:** `ctrhor` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -253,8 +253,8 @@
 - Tag: `CTRHOR` Expressao: `STR(ANO,4)+STR(MES,2)+STR(DEPTO,4)`
 
 ---
-## Tabela DBF: `ferias.dbf`
-> **Origem:** `ferias.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ferias`
+> **Origem:** `ferias` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -289,8 +289,8 @@
 - Tag: `FERIAS03` Expressao: `STR(NUMERO,8)+DTOS(INIPER)`
 
 ---
-## Tabela DBF: `foopes.dbf`
-> **Origem:** `foopes.dbf` (Driver: DBFCDX)
+## Tabela DBF: `foopes`
+> **Origem:** `foopes` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -428,8 +428,8 @@
 - Tag: `TEMP` Expressao: `PIS+DTOS(ADMITIDO)`
 
 ---
-## Tabela DBF: `foptoatr.dbf`
-> **Origem:** `foptoatr.dbf` (Driver: DBFCDX)
+## Tabela DBF: `foptoatr`
+> **Origem:** `foptoatr` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -451,8 +451,8 @@
 - Tag: `FOPTOATR` Expressao: `STR(NUMERO,8)+DTOS(DATA)+CODANL`
 
 ---
-## Tabela DBF: `foptoeve.dbf`
-> **Origem:** `foptoeve.dbf` (Driver: DBFCDX)
+## Tabela DBF: `foptoeve`
+> **Origem:** `foptoeve` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -468,8 +468,8 @@
 - Tag: `FOPTOEVE` Expressao: `STR(DIA,2)+STR(MES,2)`
 
 ---
-## Tabela DBF: `foptoprd.dbf`
-> **Origem:** `foptoprd.dbf` (Driver: DBFCDX)
+## Tabela DBF: `foptoprd`
+> **Origem:** `foptoprd` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -482,8 +482,8 @@
 - Tag: `FOPTOPRD` Expressao: `STR(ORIGEM,8)+DTOS(DATA)`
 
 ---
-## Tabela DBF: `foptorev.dbf`
-> **Origem:** `foptorev.dbf` (Driver: DBFCDX)
+## Tabela DBF: `foptorev`
+> **Origem:** `foptorev` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -502,8 +502,8 @@
 | HORARIO | N | 8 | 0 |
 
 ---
-## Tabela DBF: `forais.dbf`
-> **Origem:** `forais.dbf` (Driver: DBFCDX)
+## Tabela DBF: `forais`
+> **Origem:** `forais` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -579,8 +579,8 @@
 - Tag: `FORAIS-2` Expressao: `STR(ANO,4)+NOME`
 
 ---
-## Tabela DBF: `fosfam.dbf`
-> **Origem:** `fosfam.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fosfam`
+> **Origem:** `fosfam` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -623,8 +623,8 @@
 - Tag: `FOSFAM-3` Expressao: `CPFTIT+NOME`
 
 ---
-## Tabela DBF: `fo_comp.dbf`
-> **Origem:** `fo_comp.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_comp`
+> **Origem:** `fo_comp` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -648,8 +648,8 @@
 - Tag: `FO_COMP` Expressao: `CONTROLE`
 
 ---
-## Tabela DBF: `fo_dio.dbf`
-> **Origem:** `fo_dio.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_dio`
+> **Origem:** `fo_dio` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -661,8 +661,8 @@
 | TIPOR | C | 1 | 0 |
 
 ---
-## Tabela DBF: `fo_exp.dbf`
-> **Origem:** `fo_exp.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_exp`
+> **Origem:** `fo_exp` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -687,8 +687,8 @@
 - Tag: `FO_EXP` Expressao: `NUMERO`
 
 ---
-## Tabela DBF: `fo_fer.dbf`
-> **Origem:** `fo_fer.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_fer`
+> **Origem:** `fo_fer` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -742,8 +742,8 @@
 - Tag: `FO_FER` Expressao: `CONTROLE`
 
 ---
-## Tabela DBF: `fo_ffe.dbf`
-> **Origem:** `fo_ffe.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_ffe`
+> **Origem:** `fo_ffe` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -757,8 +757,8 @@
 - Tag: `FO_FFE` Expressao: `CONTROLE`
 
 ---
-## Tabela DBF: `fo_fp13a.dbf`
-> **Origem:** `fo_fp13a.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_fp13a`
+> **Origem:** `fo_fp13a` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -778,8 +778,8 @@
 - Tag: `FO_FP13A` Expressao: `CONTROLE`
 
 ---
-## Tabela DBF: `fo_fp13b.dbf`
-> **Origem:** `fo_fp13b.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_fp13b`
+> **Origem:** `fo_fp13b` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -799,8 +799,8 @@
 - Tag: `FO_FP13B` Expressao: `CONTROLE`
 
 ---
-## Tabela DBF: `fo_fp13c.dbf`
-> **Origem:** `fo_fp13c.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_fp13c`
+> **Origem:** `fo_fp13c` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -820,8 +820,8 @@
 - Tag: `FO_FP13C` Expressao: `CONTROLE`
 
 ---
-## Tabela DBF: `fo_hor.dbf`
-> **Origem:** `fo_hor.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_hor`
+> **Origem:** `fo_hor` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -839,8 +839,8 @@
 - Tag: `FO_HOR` Expressao: `NUMERO`
 
 ---
-## Tabela DBF: `fo_ira.dbf`
-> **Origem:** `fo_ira.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_ira`
+> **Origem:** `fo_ira` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -857,8 +857,8 @@
 - Tag: `FO_IRA` Expressao: `CONTROL2`
 
 ---
-## Tabela DBF: `fo_ird.dbf`
-> **Origem:** `fo_ird.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_ird`
+> **Origem:** `fo_ird` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -875,8 +875,8 @@
 - Tag: `FO_IRD` Expressao: `CONTROL2`
 
 ---
-## Tabela DBF: `fo_irr.dbf`
-> **Origem:** `fo_irr.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_irr`
+> **Origem:** `fo_irr` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -893,8 +893,8 @@
 - Tag: `FO_IRR` Expressao: `CONTROL2`
 
 ---
-## Tabela DBF: `fo_oco.dbf`
-> **Origem:** `fo_oco.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_oco`
+> **Origem:** `fo_oco` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -930,8 +930,8 @@
 - Tag: `FO_OCO` Expressao: `STR(NUMERO,8)+DTOS(DATASAIDA)`
 
 ---
-## Tabela DBF: `fo_pdes.dbf`
-> **Origem:** `fo_pdes.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_pdes`
+> **Origem:** `fo_pdes` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -943,8 +943,8 @@
 | HORA2 | N | 6 | 2 |
 
 ---
-## Tabela DBF: `fo_pes.dbf`
-> **Origem:** `fo_pes.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_pes`
+> **Origem:** `fo_pes` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1081,8 +1081,8 @@
 - Tag: `FO_PES5` Expressao: `ORDEM`
 
 ---
-## Tabela DBF: `fo_pfe.dbf`
-> **Origem:** `fo_pfe.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_pfe`
+> **Origem:** `fo_pfe` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1107,8 +1107,8 @@
 - Tag: `FO_PFE` Expressao: `CONTROLE`
 
 ---
-## Tabela DBF: `fo_phor.dbf`
-> **Origem:** `fo_phor.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_phor`
+> **Origem:** `fo_phor` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1120,8 +1120,8 @@
 | MOTIVO | N | 8 | 0 |
 
 ---
-## Tabela DBF: `fo_pman.dbf`
-> **Origem:** `fo_pman.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_pman`
+> **Origem:** `fo_pman` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1137,8 +1137,8 @@
 | ZERHOR | C | 1 | 0 |
 
 ---
-## Tabela DBF: `fo_poco.dbf`
-> **Origem:** `fo_poco.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_poco`
+> **Origem:** `fo_poco` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1162,8 +1162,8 @@
 | MOTIVO | N | 8 | 0 |
 
 ---
-## Tabela DBF: `fo_pon.dbf`
-> **Origem:** `fo_pon.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_pon`
+> **Origem:** `fo_pon` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1211,8 +1211,8 @@
 | HORARIO | N | 8 | 0 |
 
 ---
-## Tabela DBF: `fo_pos.dbf`
-> **Origem:** `fo_pos.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_pos`
+> **Origem:** `fo_pos` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1273,8 +1273,8 @@
 | ANO | N | 4 | 0 |
 
 ---
-## Tabela DBF: `fo_pot.dbf`
-> **Origem:** `fo_pot.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_pot`
+> **Origem:** `fo_pot` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1333,8 +1333,8 @@
 | BCOHRS | N | 7 | 2 |
 
 ---
-## Tabela DBF: `fo_psl.dbf`
-> **Origem:** `fo_psl.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_psl`
+> **Origem:** `fo_psl` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1352,8 +1352,8 @@
 - Tag: `FO_PSL` Expressao: `NUMERO`
 
 ---
-## Tabela DBF: `fo_ptt.dbf`
-> **Origem:** `fo_ptt.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_ptt`
+> **Origem:** `fo_ptt` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1399,8 +1399,8 @@
 - Tag: `FO_PTT` Expressao: `STR(NUMERO,8)+STR(ANO,4)+STR(MES,2)`
 
 ---
-## Tabela DBF: `fo_rdd.dbf`
-> **Origem:** `fo_rdd.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_rdd`
+> **Origem:** `fo_rdd` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1415,8 +1415,8 @@
 - Tag: `FO_RDD` Expressao: `CONTROLE`
 
 ---
-## Tabela DBF: `fo_relhr.dbf`
-> **Origem:** `fo_relhr.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_relhr`
+> **Origem:** `fo_relhr` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1435,8 +1435,8 @@
 - Tag: `FO_RELHR` Expressao: `NUMERO`
 
 ---
-## Tabela DBF: `fo_res.dbf`
-> **Origem:** `fo_res.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_res`
+> **Origem:** `fo_res` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1451,8 +1451,8 @@
 - Tag: `FO_RES` Expressao: `CONTROLE`
 
 ---
-## Tabela DBF: `fo_rss.dbf`
-> **Origem:** `fo_rss.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_rss`
+> **Origem:** `fo_rss` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1476,8 +1476,8 @@
 - Tag: `FO_RSS` Expressao: `CONTROLE`
 
 ---
-## Tabela DBF: `fo_sal.dbf`
-> **Origem:** `fo_sal.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_sal`
+> **Origem:** `fo_sal` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1512,8 +1512,8 @@
 - Tag: `FO_SAL` Expressao: `STR(NUMERO,8)+STR(ANO,4)`
 
 ---
-## Tabela DBF: `fo_var.dbf`
-> **Origem:** `fo_var.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_var`
+> **Origem:** `fo_var` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1534,8 +1534,8 @@
 - Tag: `FO_VAR` Expressao: `CONTROLE`
 
 ---
-## Tabela DBF: `fo_vbr.dbf`
-> **Origem:** `fo_vbr.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fo_vbr`
+> **Origem:** `fo_vbr` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1556,8 +1556,8 @@
 - Tag: `FO_VBR` Expressao: `CONTROLE`
 
 ---
-## Tabela DBF: `fp000100.dbf`
-> **Origem:** `fp000100.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fp000100`
+> **Origem:** `fp000100` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1574,8 +1574,8 @@
 | VALORBASE | N | 10 | 2 |
 
 ---
-## Tabela DBF: `fp000101.dbf`
-> **Origem:** `fp000101.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fp000101`
+> **Origem:** `fp000101` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1592,8 +1592,8 @@
 | VALORBASE | N | 10 | 2 |
 
 ---
-## Tabela DBF: `fp000102.dbf`
-> **Origem:** `fp000102.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fp000102`
+> **Origem:** `fp000102` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1610,8 +1610,8 @@
 | VALORBASE | N | 10 | 2 |
 
 ---
-## Tabela DBF: `fp000103.dbf`
-> **Origem:** `fp000103.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fp000103`
+> **Origem:** `fp000103` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1628,8 +1628,8 @@
 | VALORBASE | N | 10 | 2 |
 
 ---
-## Tabela DBF: `fp000104.dbf`
-> **Origem:** `fp000104.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fp000104`
+> **Origem:** `fp000104` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1646,8 +1646,8 @@
 | VALORBASE | N | 10 | 2 |
 
 ---
-## Tabela DBF: `fp000105.dbf`
-> **Origem:** `fp000105.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fp000105`
+> **Origem:** `fp000105` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1664,8 +1664,8 @@
 | VALORBASE | N | 10 | 2 |
 
 ---
-## Tabela DBF: `fp000106.dbf`
-> **Origem:** `fp000106.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fp000106`
+> **Origem:** `fp000106` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1682,8 +1682,8 @@
 | VALORBASE | N | 10 | 2 |
 
 ---
-## Tabela DBF: `fp000107.dbf`
-> **Origem:** `fp000107.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fp000107`
+> **Origem:** `fp000107` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1700,8 +1700,8 @@
 | VALORBASE | N | 10 | 2 |
 
 ---
-## Tabela DBF: `fp000108.dbf`
-> **Origem:** `fp000108.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fp000108`
+> **Origem:** `fp000108` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1718,8 +1718,8 @@
 | VALORBASE | N | 10 | 2 |
 
 ---
-## Tabela DBF: `fp000109.dbf`
-> **Origem:** `fp000109.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fp000109`
+> **Origem:** `fp000109` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1736,8 +1736,8 @@
 | VALORBASE | N | 10 | 2 |
 
 ---
-## Tabela DBF: `fp000110.dbf`
-> **Origem:** `fp000110.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fp000110`
+> **Origem:** `fp000110` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1754,8 +1754,8 @@
 | VALORBASE | N | 10 | 2 |
 
 ---
-## Tabela DBF: `fp000111.dbf`
-> **Origem:** `fp000111.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fp000111`
+> **Origem:** `fp000111` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1772,8 +1772,8 @@
 | VALORBASE | N | 10 | 2 |
 
 ---
-## Tabela DBF: `fp000112.dbf`
-> **Origem:** `fp000112.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fp000112`
+> **Origem:** `fp000112` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1790,8 +1790,8 @@
 | VALORBASE | N | 10 | 2 |
 
 ---
-## Tabela DBF: `htttroca.dbf`
-> **Origem:** `htttroca.dbf` (Driver: DBFCDX)
+## Tabela DBF: `htttroca`
+> **Origem:** `htttroca` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1805,8 +1805,8 @@
 - Tag: `HTTTROCA` Expressao: `NUMERO`
 
 ---
-## Tabela DBF: `irrf.dbf`
-> **Origem:** `irrf.dbf` (Driver: DBFCDX)
+## Tabela DBF: `irrf`
+> **Origem:** `irrf` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1848,8 +1848,8 @@
 - Tag: `IRRF` Expressao: `CPF`
 
 ---
-## Tabela DBF: `irrf01.dbf`
-> **Origem:** `irrf01.dbf` (Driver: DBFCDX)
+## Tabela DBF: `irrf01`
+> **Origem:** `irrf01` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1872,8 +1872,8 @@
 - Tag: `IRRF01` Expressao: `NUMERO`
 
 ---
-## Tabela DBF: `irrf02.dbf`
-> **Origem:** `irrf02.dbf` (Driver: DBFCDX)
+## Tabela DBF: `irrf02`
+> **Origem:** `irrf02` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1890,8 +1890,8 @@
 - Tag: `IRRF02` Expressao: `STR(NUMERO,8)+STR(ITEM,2)`
 
 ---
-## Tabela DBF: `prov13.dbf`
-> **Origem:** `prov13.dbf` (Driver: DBFCDX)
+## Tabela DBF: `prov13`
+> **Origem:** `prov13` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1914,8 +1914,8 @@
 - Tag: `PROV13` Expressao: `STRZERO(NUMERO,8)+STRZERO(ANO,4)+STRZERO(MES,2)`
 
 ---
-## Tabela DBF: `provfe.dbf`
-> **Origem:** `provfe.dbf` (Driver: DBFCDX)
+## Tabela DBF: `provfe`
+> **Origem:** `provfe` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1940,8 +1940,8 @@
 - Tag: `PROVFE` Expressao: `CONTROLE`
 
 ---
-## Tabela DBF: `resfor.dbf`
-> **Origem:** `resfor.dbf` (Driver: DBFCDX)
+## Tabela DBF: `resfor`
+> **Origem:** `resfor` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -2032,8 +2032,8 @@
 - Tag: `RESFOR` Expressao: `NUMERO`
 
 ---
-## Tabela DBF: `vtavul.dbf`
-> **Origem:** `vtavul.dbf` (Driver: DBFCDX)
+## Tabela DBF: `vtavul`
+> **Origem:** `vtavul` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -2047,8 +2047,8 @@
 - Tag: `VTAVUL` Expressao: `CONTROLE`
 
 ---
-## Tabela DBF: `vtfixo.dbf`
-> **Origem:** `vtfixo.dbf` (Driver: DBFCDX)
+## Tabela DBF: `vtfixo`
+> **Origem:** `vtfixo` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -2063,8 +2063,8 @@
 - Tag: `VTFIXO` Expressao: `STR(NUMERO,8)+STR(CONTA,4)+STR(CTACOM,4)`
 
 ---
-## Tabela DBF: `vtfolha.dbf`
-> **Origem:** `vtfolha.dbf` (Driver: DBFCDX)
+## Tabela DBF: `vtfolha`
+> **Origem:** `vtfolha` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |

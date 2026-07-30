@@ -1,0 +1,2643 @@
+// Origem: aci_cep (DBFCDX)
+Table "aci_cep" {
+  Note: "Origem: aci_cep"
+  "CEP" VARCHAR(8)
+  Indexes {
+    CEP [name: "CEP"]
+  }
+}
+
+// Origem: agenda (DBFCDX)
+Table "agenda" {
+  Note: "Origem: agenda"
+  "CDDATA" DATETIME
+  "OBS1" VARCHAR(60)
+  "OBS2" VARCHAR(60)
+  "OBS3" VARCHAR(60)
+  "OBS4" VARCHAR(60)
+  "OBS5" VARCHAR(60)
+  "OBS6" VARCHAR(60)
+  "OBS7" VARCHAR(60)
+  "OBS8" VARCHAR(60)
+  Indexes {
+    CDDATA [name: "AGENDA"]
+  }
+}
+
+// Origem: agupel (DBFCDX)
+Table "agupel" {
+  Note: "Origem: agupel"
+  "TIP" VARCHAR(1)
+  "DEPTO" INTEGER [default: 0]
+  "SETOR" INTEGER [default: 0]
+  "SECAO" INTEGER [default: 0]
+  "NOMEC" VARCHAR(15)
+  "TOT01" DECIMAL(12,2) [default: 0]
+  "PES01" DECIMAL(6,2) [default: 0]
+  "TOT02" DECIMAL(12,2) [default: 0]
+  "PES02" DECIMAL(6,2) [default: 0]
+  "TOT03" DECIMAL(12,2) [default: 0]
+  "PES03" DECIMAL(6,2) [default: 0]
+  "QUA01" DECIMAL(7,2) [default: 0]
+  "QUA02" DECIMAL(10,2) [default: 0]
+  "PES04" DECIMAL(6,2) [default: 0]
+  "QUA03" INTEGER [default: 0]
+  "PES05" DECIMAL(7,2) [default: 0]
+  "QUA04" INTEGER [default: 0]
+  "QUA05" INTEGER [default: 0]
+  "TOT04" DECIMAL(6,2) [default: 0]
+  "PES06" DECIMAL(6,2) [default: 0]
+  "TOT05" DECIMAL(12,2) [default: 0]
+  "TOT06" DECIMAL(12,2) [default: 0]
+  "TOT07" DECIMAL(12,2) [default: 0]
+  "TOT08" DECIMAL(12,2) [default: 0]
+  Indexes {
+    TIP+STR(DEPTO,3)+STR(SETOR,3)+STR(SECAO,3) [name: "AGUPEL"]
+  }
+}
+
+// Origem: ajuger (DBFCDX)
+Table "ajuger" {
+  Note: "Origem: ajuger"
+  "DEPTO" INTEGER [default: 0]
+  "SETOR" INTEGER [default: 0]
+  "SECAO" INTEGER [default: 0]
+  "NOME" VARCHAR(15)
+  "CONTROLE" INTEGER [default: 0]
+  "SALARIO" DECIMAL(18,2) [default: 0]
+  "QT1" DECIMAL(9,2) [default: 0]
+  "VL1" DECIMAL(18,2) [default: 0]
+  "QT2" DECIMAL(9,2) [default: 0]
+  "VL2" DECIMAL(18,2) [default: 0]
+  "QT3" DECIMAL(9,2) [default: 0]
+  "VL3" DECIMAL(18,2) [default: 0]
+  "QT4" DECIMAL(9,2) [default: 0]
+  "VL4" DECIMAL(18,2) [default: 0]
+  "QT5" DECIMAL(9,2) [default: 0]
+  "VL5" DECIMAL(18,2) [default: 0]
+  "ADM" INTEGER [default: 0]
+  "DEM" INTEGER [default: 0]
+  "TURN" DECIMAL(18,2) [default: 0]
+  "ATI" INTEGER [default: 0]
+  Indexes {
+    CONTROLE [name: "AJUGER"]
+  }
+}
+
+// Origem: apudepto (DBFCDX)
+Table "apudepto" {
+  Note: "Origem: apudepto"
+  "DEPTO" INTEGER [default: 0]
+  "SECAO" INTEGER [default: 0]
+  "SETOR" INTEGER [default: 0]
+  "CONTA" INTEGER [default: 0]
+  "HORAS" DECIMAL(9,2) [default: 0]
+  "VALOR" DECIMAL(18,2) [default: 0]
+  "CONTROLE" INTEGER [default: 0]
+  Indexes {
+    CONTROLE [name: "APUDEPTO"]
+  }
+}
+
+// Origem: assmed (DBFCDX)
+Table "assmed" {
+  Note: "Origem: assmed"
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "MESEXT" VARCHAR(10)
+  "DESCT" DECIMAL(10,2) [default: 0]
+  "DESCTB" DECIMAL(10,2) [default: 0]
+  "DESCTC" DECIMAL(10,2) [default: 0]
+  "DESCTD" DECIMAL(10,2) [default: 0]
+  "DESCTE" DECIMAL(10,2) [default: 0]
+  Indexes {
+    STR(ANO,4)+STR(MES,2) [name: "ASSMED"]
+  }
+}
+
+// Origem: assodo (DBFCDX)
+Table "assodo" {
+  Note: "Origem: assodo"
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "MESEXT" VARCHAR(10)
+  "DESCT" DECIMAL(10,2) [default: 0]
+  "DESCTB" DECIMAL(10,2) [default: 0]
+  "DESCTC" DECIMAL(10,2) [default: 0]
+  "DESCTD" DECIMAL(10,2) [default: 0]
+  "DESCTE" DECIMAL(10,2) [default: 0]
+  Indexes {
+    STR(ANO,4)+STR(MES,2) [name: "ASSODO"]
+  }
+}
+
+// Origem: bcofgts (DBFCDX)
+Table "bcofgts" {
+  Note: "Origem: bcofgts"
+  "EMP" INTEGER [default: 0]
+  "NUMERO" VARCHAR(3)
+  "NOME" VARCHAR(30)
+  "AGENCIA" VARCHAR(4)
+  "DIVAGENCI" VARCHAR(1)
+  "AGENCTA" VARCHAR(9)
+  "NOMEAGENC" VARCHAR(30)
+  "CIDADE" VARCHAR(40)
+  "UF" VARCHAR(2)
+  "CODEMP" VARCHAR(4)
+  "SEQUENCIA" VARCHAR(7)
+  "UNIDADE" VARCHAR(15)
+  "UNIGR" VARCHAR(5)
+  "CONTA" VARCHAR(15)
+  "CODEMPDV" VARCHAR(1)
+  "SEQUENDV" VARCHAR(1)
+  "TIPOEMP" VARCHAR(1)
+  "ENDERECO" VARCHAR(30)
+  "NUMEROEMP" VARCHAR(6)
+  "COMPLEMEN" VARCHAR(15)
+  "TRUNCAR" VARCHAR(1)
+  "TRUNCA2" VARCHAR(1)
+  Indexes {
+    EMP [name: "EMP"]
+  }
+}
+
+// Origem: caged (DBFCDX)
+Table "caged" {
+  Note: "Origem: caged"
+  "CODIGO" VARCHAR(2)
+  "DESCRICAO" VARCHAR(50)
+  "TIPO" VARCHAR(1)
+  Indexes {
+    CODIGO [name: "CAGED"]
+  }
+}
+
+// Origem: cartorio (DBFCDX)
+Table "cartorio" {
+  Note: "Origem: cartorio"
+  "CODIGO" VARCHAR(6)
+  "IBGE" VARCHAR(7)
+  "NOME" VARCHAR(240)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: cbocnv (DBFCDX)
+Table "cbocnv" {
+  Note: "Origem: cbocnv"
+  "CBOOLD" VARCHAR(5)
+  "CBONEW" VARCHAR(6)
+  Indexes {
+    CBOOLD [name: "CBOCNV"]
+    CBONEW [name: "CBOCNV2"]
+  }
+}
+
+// Origem: cccor (DBFCDX)
+Table "cccor" {
+  Note: "Origem: cccor"
+  "CODIGO" INTEGER [default: 0]
+  "DESCR" VARCHAR(35)
+  "CO_HIS" INTEGER [default: 0]
+  "CO_HISN" VARCHAR(70)
+  "CO_COD" VARCHAR(13)
+  "CO_CODD" VARCHAR(13)
+  "CO_CODR" INTEGER [default: 0]
+  "CO_CODRD" INTEGER [default: 0]
+  "CO_CODN" VARCHAR(40)
+  "NUMEMP" INTEGER [default: 0]
+  Indexes {
+    STR(CODIGO,4)+STR(NUMEMP,5) [name: "CCCOR"]
+  }
+}
+
+// Origem: ccesp (DBFCDX)
+Table "ccesp" {
+  Note: "Origem: ccesp"
+  "CODIGO" INTEGER [default: 0]
+  "DESCR" VARCHAR(35)
+  "CO_HIS" INTEGER [default: 0]
+  "CO_HISN" VARCHAR(70)
+  "CO_COD" VARCHAR(13)
+  "CO_CODD" VARCHAR(13)
+  "CO_CODR" INTEGER [default: 0]
+  "CO_CODRD" INTEGER [default: 0]
+  "CO_CODN" VARCHAR(40)
+  "NUMEMP" INTEGER [default: 0]
+  "TIPO" VARCHAR(1)
+  "ARQUIVO" VARCHAR(8)
+  "CAMPO" VARCHAR(10)
+  Indexes {
+    STR(CODIGO,4)+STR(NUMEMP,5) [name: "CCESP"]
+  }
+}
+
+// Origem: cid (DBFCDX)
+Table "cid" {
+  Note: "Origem: cid"
+  "CODIGO" VARCHAR(4)
+  "CAT" VARCHAR(1)
+  "NOME" VARCHAR(50)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+    NOME [name: "CID-2"]
+  }
+}
+
+// Origem: cidgrupo (DBFCDX)
+Table "cidgrupo" {
+  Note: "Origem: cidgrupo"
+  "CODIGO" VARCHAR(10)
+  "NOME" VARCHAR(100)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: cnaecnv (DBFCDX)
+Table "cnaecnv" {
+  Note: "Origem: cnaecnv"
+  "CNAE2" VARCHAR(7)
+  "DESCR2" VARCHAR(150)
+  "CNAE1" VARCHAR(7)
+  "DESCR1" VARCHAR(150)
+  "SEQ" VARCHAR(1)
+  Indexes {
+    CNAE2 [name: "CNAE2"]
+    CNAE1 [name: "CNAE1"]
+  }
+}
+
+// Origem: codfgts (DBFCDX)
+Table "codfgts" {
+  Note: "Origem: codfgts"
+  "CODIGO" VARCHAR(3)
+  "NOME" VARCHAR(254)
+  "ICTOMADOR" VARCHAR(1)
+  "ICRECFGTS" VARCHAR(1)
+  "ICRECINSS" VARCHAR(1)
+  "ICEXCLFGTS" VARCHAR(1)
+  "ICPARCFGTS" VARCHAR(1)
+  "ICCODPGTO" VARCHAR(1)
+  "ICCAFVI" VARCHAR(1)
+  "ICCAFOE" VARCHAR(1)
+  "ICCAPRVI" VARCHAR(1)
+  "ICCAPROE" VARCHAR(1)
+  "ICCAEDVI" VARCHAR(1)
+  "ICINSS13" VARCHAR(1)
+  "ICCOMPENSA" VARCHAR(1)
+  "ICSALFAMI" VARCHAR(1)
+  "ICOUTINFO" VARCHAR(1)
+  "ICOUTINFOP" VARCHAR(1)
+  "ICPRDRULPF" VARCHAR(1)
+  "ICPRDRULPJ" VARCHAR(1)
+  "ICRCVNDDES" VARCHAR(1)
+  "ICDD13SGES" VARCHAR(1)
+  "ICDDSGES" VARCHAR(1)
+  "ICCENTRAL" VARCHAR(1)
+  "ICSIMPLES" VARCHAR(1)
+  "ICVRRETEN" VARCHAR(1)
+  "ICFATTOM" VARCHAR(1)
+  "ICCOPTRAB" VARCHAR(1)
+  "REG00" VARCHAR(1)
+  "REG01" VARCHAR(1)
+  "REG10" VARCHAR(1)
+  "REG11" VARCHAR(1)
+  "REG12" VARCHAR(1)
+  "REG13" VARCHAR(1)
+  "REG14" VARCHAR(1)
+  "REG20" VARCHAR(1)
+  "REG30" VARCHAR(1)
+  "REG31" VARCHAR(1)
+  "REG32" VARCHAR(1)
+  "REG70" VARCHAR(1)
+  "REG80" VARCHAR(1)
+  "REG90" VARCHAR(1)
+  "ICMODOPER" VARCHAR(1)
+  "CORCLPEADM" VARCHAR(3)
+  Indexes {
+    CODIGO [name: "CODFGTS"]
+  }
+}
+
+// Origem: codirrf (DBFCDX)
+Table "codirrf" {
+  Note: "Origem: codirrf"
+  "CODIGO" VARCHAR(4)
+  "NOME" VARCHAR(100)
+  "VALPESSOA" VARCHAR(1)
+  Indexes {
+    CODIGO [name: "CODIRRF"]
+  }
+}
+
+// Origem: configu (DBFCDX)
+Table "configu" {
+  Note: "Origem: configu"
+  "TEMP" INTEGER [default: 0]
+  "IMPRE" VARCHAR(1)
+  "DRIVE" VARCHAR(1)
+  "MONITOR" VARCHAR(1)
+  "CURSOR" INTEGER [default: 0]
+  "VER" VARCHAR(100)
+  "VOL" VARCHAR(100)
+  "DULT" VARCHAR(8)
+  "DRV" VARCHAR(1)
+  "DIR" VARCHAR(40)
+  "NDIR" VARCHAR(5)
+  "NDOS" VARCHAR(5)
+  "NTOT" VARCHAR(5)
+  "NDRV" VARCHAR(5)
+  "NEMP" VARCHAR(5)
+  "NSET" VARCHAR(10)
+  "DFIM" VARCHAR(8)
+  "RAIZ01" DECIMAL(12,6) [default: 0]
+  "RAIZ02" DECIMAL(12,6) [default: 0]
+  "RAIZ03" DECIMAL(12,6) [default: 0]
+  "RAIZ04" DECIMAL(12,6) [default: 0]
+  "RAIZ05" DECIMAL(12,6) [default: 0]
+  "RAIZ06" DECIMAL(12,6) [default: 0]
+  "RAIZ07" DECIMAL(12,6) [default: 0]
+  "RAIZ08" DECIMAL(12,6) [default: 0]
+  "RAIZ09" DECIMAL(12,6) [default: 0]
+  "RAIZ10" DECIMAL(12,6) [default: 0]
+  "RAIZ11" DECIMAL(12,6) [default: 0]
+  "RAIZ12" DECIMAL(12,6) [default: 0]
+  "URVABR" DECIMAL(12,2) [default: 0]
+  "URVMAI" DECIMAL(12,2) [default: 0]
+  "URVJUN" DECIMAL(12,2) [default: 0]
+  "URVMAR" DECIMAL(12,2) [default: 0]
+  "FFFE01" DECIMAL(12,6) [default: 0]
+  "FFFE02" DECIMAL(12,6) [default: 0]
+  "FFFE03" DECIMAL(12,6) [default: 0]
+  "FFFE04" DECIMAL(12,6) [default: 0]
+  "FFFE05" DECIMAL(12,6) [default: 0]
+  "FFFE06" DECIMAL(12,6) [default: 0]
+  "FFFE07" DECIMAL(12,6) [default: 0]
+  "FFFE08" DECIMAL(12,6) [default: 0]
+  "FFFE09" DECIMAL(12,6) [default: 0]
+  "FFFE10" DECIMAL(12,6) [default: 0]
+  "FFFE11" DECIMAL(12,6) [default: 0]
+  "FFFE12" DECIMAL(12,6) [default: 0]
+  "MOEDA01" VARCHAR(20)
+  "MOEDA02" VARCHAR(20)
+  "MOEDA03" VARCHAR(20)
+  "MOEDA04" VARCHAR(20)
+  "MOEDA05" VARCHAR(20)
+  "MOEDA06" VARCHAR(20)
+  "DIRF01" DECIMAL(12,6) [default: 0]
+  "DIRF02" DECIMAL(12,6) [default: 0]
+  "DIRF03" DECIMAL(12,6) [default: 0]
+  "DIRF04" DECIMAL(12,6) [default: 0]
+  "DIRF05" DECIMAL(12,6) [default: 0]
+  "DIRF06" DECIMAL(12,6) [default: 0]
+  "DIRF07" DECIMAL(12,6) [default: 0]
+  "DIRF08" DECIMAL(12,6) [default: 0]
+  "DIRF09" DECIMAL(12,6) [default: 0]
+  "DIRF10" DECIMAL(12,6) [default: 0]
+  "DIRF11" DECIMAL(12,6) [default: 0]
+  "DIRF12" DECIMAL(12,6) [default: 0]
+  "DIRE" VARCHAR(60)
+  "DIRC" VARCHAR(60)
+  "DIRP" VARCHAR(60)
+  "DIRI" VARCHAR(60)
+  "DIRA" VARCHAR(60)
+  "DIRB" VARCHAR(60)
+}
+
+// Origem: confinss (DBFCDX)
+Table "confinss" {
+  Note: "Origem: confinss"
+  "FPAS" INTEGER [default: 0]
+  "DESCRICAO" VARCHAR(50)
+  "EMPREGADO" VARCHAR(3)
+  "EMPRESA" DECIMAL(5,2) [default: 0]
+  "ACIDENTE" DECIMAL(5,2) [default: 0]
+  "E0001" DECIMAL(5,2) [default: 0]
+  "E0002" DECIMAL(5,2) [default: 0]
+  "E0004" DECIMAL(5,2) [default: 0]
+  "E0008" DECIMAL(5,2) [default: 0]
+  "E0016" DECIMAL(5,2) [default: 0]
+  "E0032" DECIMAL(5,2) [default: 0]
+  "E0064" DECIMAL(5,2) [default: 0]
+  "E0128" DECIMAL(5,2) [default: 0]
+  "E0256" DECIMAL(5,2) [default: 0]
+  "E0512" DECIMAL(5,2) [default: 0]
+  "E1024" DECIMAL(5,2) [default: 0]
+  "E2048" DECIMAL(5,2) [default: 0]
+  "E4096" DECIMAL(5,2) [default: 0]
+  "TOTAL" DECIMAL(5,2) [default: 0]
+  "TERCEIRO" INTEGER [default: 0]
+  "DESCRICAO" VARCHAR(50)
+  "PEMP" DECIMAL(5,2) [default: 0]
+  "PAUT" DECIMAL(5,2) [default: 0]
+  "CODGUIA" VARCHAR(4)
+  "CODPAG" VARCHAR(4)
+  "PASSAT" VARCHAR(1)
+  "INDCOOP" VARCHAR(6)
+  "CLASSTRIB" VARCHAR(2)
+  "CODTERC" INTEGER [default: 0]
+  "ALIQTERC" DECIMAL(4,2) [default: 0]
+  Indexes {
+    FPAS [name: "CONFINSS"]
+  }
+}
+
+// Origem: contas (DBFCDX)
+Table "contas" {
+  Note: "Origem: contas"
+  "CODIGO" INTEGER [default: 0]
+  "FATOR" DECIMAL(8,5) [default: 0]
+  "TRIBUTIRR" INTEGER [default: 0]
+  "TRIBUTINPS" INTEGER [default: 0]
+  "GUIA_IAPAS" INTEGER [default: 0]
+  "TRIB_FGTS" INTEGER [default: 0]
+  "SAL_13" INTEGER [default: 0]
+  "RAIZ" INTEGER [default: 0]
+  "DEMISSAO" INTEGER [default: 0]
+  "DESCR" VARCHAR(35)
+  "TIPO" INTEGER [default: 0]
+  "VALOR" DECIMAL(10,2) [default: 0]
+  "NIVEL_13" INTEGER [default: 0]
+  "NIVEL_DEM" INTEGER [default: 0]
+  "IRENDIMEN" INTEGER [default: 0]
+  "NRENDIMEN" INTEGER [default: 0]
+  "FERIAS" INTEGER [default: 0]
+  "NIVEL_FERI" INTEGER [default: 0]
+  "RES" INTEGER [default: 0]
+  "POSREC" INTEGER [default: 0]
+  "PRFER" INTEGER [default: 0]
+  "PRFCO" INTEGER [default: 0]
+  "PRRES" INTEGER [default: 0]
+  "TRFER" INTEGER [default: 0]
+  "TRRES" INTEGER [default: 0]
+  "RESG" INTEGER [default: 0]
+  "SELFFE" VARCHAR(1)
+  "SELECAO" INTEGER [default: 0]
+  "GRAT" INTEGER [default: 0]
+  "TR13S1" INTEGER [default: 0]
+  "TR13S2" INTEGER [default: 0]
+  "TR13SC" INTEGER [default: 0]
+  "TRFCO" INTEGER [default: 0]
+  "IRRF13" INTEGER [default: 0]
+  "INSS13" INTEGER [default: 0]
+  "FGTS13" INTEGER [default: 0]
+  "CO_COD" VARCHAR(13)
+  "CO_CODN" VARCHAR(40)
+  "CO_CODR" INTEGER [default: 0]
+  "CO_HIS" INTEGER [default: 0]
+  "CO_HISN" VARCHAR(70)
+  "CO_CODD" VARCHAR(13)
+  "CO_CODRD" INTEGER [default: 0]
+  "FAT01" DECIMAL(18,6) [default: 0]
+  "FAT02" DECIMAL(18,6) [default: 0]
+  "FAT03" DECIMAL(18,6) [default: 0]
+  "FAT04" DECIMAL(18,6) [default: 0]
+  "FAT05" DECIMAL(18,6) [default: 0]
+  "FAT06" DECIMAL(18,6) [default: 0]
+  "FAT07" DECIMAL(18,6) [default: 0]
+  "FAT08" DECIMAL(18,6) [default: 0]
+  "FAT09" DECIMAL(18,6) [default: 0]
+  "FAT10" DECIMAL(18,6) [default: 0]
+  "FAT11" DECIMAL(18,6) [default: 0]
+  "FAT12" DECIMAL(18,6) [default: 0]
+  "ACEITE" VARCHAR(1)
+  "LISCON" VARCHAR(1)
+  "BASERED" DECIMAL(7,2) [default: 0]
+  "BASEREDI" DECIMAL(7,2) [default: 0]
+  "BASERIR" DECIMAL(7,2) [default: 0]
+  "IPER" DECIMAL(7,2) [default: 0]
+  "NATRUBR" INTEGER [default: 0]
+  "TPRUBR" INTEGER [default: 0]
+  "CODINCCP" INTEGER [default: 0]
+  "CODINCIRRF" INTEGER [default: 0]
+  "CODINCFGTS" INTEGER [default: 0]
+  "CODINCSIND" INTEGER [default: 0]
+  "REPDSR" VARCHAR(1)
+  "REP13" VARCHAR(1)
+  "REPFERIAS" VARCHAR(1)
+  "REPAVISO" VARCHAR(1)
+  "FATORRUBR" INTEGER [default: 0]
+  Indexes {
+    CODIGO [name: "CONTAS"]
+  }
+}
+
+// Origem: ctarpa (DBFCDX)
+Table "ctarpa" {
+  Note: "Origem: ctarpa"
+  "CODIGO" INTEGER [default: 0]
+  "FATOR" DECIMAL(8,5) [default: 0]
+  "TRIBUTIRR" INTEGER [default: 0]
+  "TRIBUTINPS" INTEGER [default: 0]
+  "GUIA_IAPAS" INTEGER [default: 0]
+  "TRIB_FGTS" INTEGER [default: 0]
+  "SAL_13" INTEGER [default: 0]
+  "RAIZ" INTEGER [default: 0]
+  "DEMISSAO" INTEGER [default: 0]
+  "DESCR" VARCHAR(35)
+  "TIPO" INTEGER [default: 0]
+  "VALOR" DECIMAL(10,2) [default: 0]
+  "NIVEL_13" INTEGER [default: 0]
+  "NIVEL_DEM" INTEGER [default: 0]
+  "IRENDIMEN" INTEGER [default: 0]
+  "NRENDIMEN" INTEGER [default: 0]
+  "FERIAS" INTEGER [default: 0]
+  "NIVEL_FERI" INTEGER [default: 0]
+  "RES" INTEGER [default: 0]
+  "PRFER" INTEGER [default: 0]
+  "PRFCO" INTEGER [default: 0]
+  "PRRES" INTEGER [default: 0]
+  "TRFER" INTEGER [default: 0]
+  "TRRES" INTEGER [default: 0]
+  "RESG" INTEGER [default: 0]
+  "SELFFE" VARCHAR(1)
+  "SELECAO" INTEGER [default: 0]
+  "GRAT" INTEGER [default: 0]
+  "TR13S1" INTEGER [default: 0]
+  "TR13S2" INTEGER [default: 0]
+  "TR13SC" INTEGER [default: 0]
+  "TRFCO" INTEGER [default: 0]
+  "IRRF13" INTEGER [default: 0]
+  "INSS13" INTEGER [default: 0]
+  "FGTS13" INTEGER [default: 0]
+  "CO_COD" VARCHAR(13)
+  "CO_CODN" VARCHAR(40)
+  "CO_CODR" INTEGER [default: 0]
+  "CO_HIS" INTEGER [default: 0]
+  "CO_HISN" VARCHAR(70)
+  "CO_CODD" VARCHAR(13)
+  "CO_CODRD" INTEGER [default: 0]
+  "FAT01" DECIMAL(18,6) [default: 0]
+  "FAT02" DECIMAL(18,6) [default: 0]
+  "FAT03" DECIMAL(18,6) [default: 0]
+  "FAT04" DECIMAL(18,6) [default: 0]
+  "FAT05" DECIMAL(18,6) [default: 0]
+  "FAT06" DECIMAL(18,6) [default: 0]
+  "FAT07" DECIMAL(18,6) [default: 0]
+  "FAT08" DECIMAL(18,6) [default: 0]
+  "FAT09" DECIMAL(18,6) [default: 0]
+  "FAT10" DECIMAL(18,6) [default: 0]
+  "FAT11" DECIMAL(18,6) [default: 0]
+  "FAT12" DECIMAL(18,6) [default: 0]
+  "ACEITE" VARCHAR(1)
+  "BASERED" DECIMAL(7,2) [default: 0]
+  "BASEREDI" DECIMAL(7,2) [default: 0]
+  "BASERIR" DECIMAL(7,2) [default: 0]
+  "IPER" DECIMAL(7,2) [default: 0]
+  "NATRUBR" INTEGER [default: 0]
+  "TPRUBR" INTEGER [default: 0]
+  "CODINCCP" INTEGER [default: 0]
+  "CODINCIRRF" INTEGER [default: 0]
+  "CODINCFGTS" INTEGER [default: 0]
+  "CODINCSIND" INTEGER [default: 0]
+  "REPDSR" VARCHAR(1)
+  "REP13" VARCHAR(1)
+  "REPFERIAS" VARCHAR(1)
+  "REPAVISO" VARCHAR(1)
+  "FATORRUBR" INTEGER [default: 0]
+  Indexes {
+    CODIGO [name: "CTARPA"]
+  }
+}
+
+// Origem: depto (DBFCDX)
+Table "depto" {
+  Note: "Origem: depto"
+  "DEPTO" INTEGER [default: 0]
+  "SECAO" INTEGER [default: 0]
+  "SETOR" INTEGER [default: 0]
+  "NOME" VARCHAR(40)
+  "CONTROLE" INTEGER [default: 0]
+  "CONTROL2" INTEGER [default: 0]
+  "CONTROL3" INTEGER [default: 0]
+  "NOMER" VARCHAR(25)
+  "NOMEC" VARCHAR(15)
+  "FPAS" VARCHAR(3)
+  "CODSAT" VARCHAR(7)
+  "TOTLAB" DECIMAL(12,2) [default: 0]
+  "TOTAUT" DECIMAL(12,2) [default: 0]
+  "TXSEG" DECIMAL(5,2) [default: 0]
+  "TXEMP" DECIMAL(5,2) [default: 0]
+  "TXTER" DECIMAL(5,2) [default: 0]
+  "TOTBAS" DECIMAL(12,2) [default: 0]
+  "TOTREC" DECIMAL(12,2) [default: 0]
+  "TOTDED" DECIMAL(12,2) [default: 0]
+  "TOTFUN" INTEGER [default: 0]
+  "TOTADI" DECIMAL(12,2) [default: 0]
+  "CCUSTO" INTEGER [default: 0]
+  "UNIFUN" VARCHAR(10)
+  "MODIRETA" VARCHAR(1)
+  Indexes {
+    CONTROLE [name: "DEPTO"]
+    DEPTO [name: "DEPTO-2"]
+    CCUSTO [name: "DEPTO-3"]
+  }
+}
+
+// Origem: diskrel1 (DBFCDX)
+Table "diskrel1" {
+  Note: "Origem: diskrel1"
+  "NOME" VARCHAR(6)
+  "SEQ" INTEGER [default: 0]
+  "LIN" INTEGER [default: 0]
+  "COL" INTEGER [default: 0]
+  "DIZ" VARCHAR(90)
+  Indexes {
+    NOME+STR(SEQ) [name: "DISKREL1"]
+  }
+}
+
+// Origem: diskrela (DBFCDX)
+Table "diskrela" {
+  Note: "Origem: diskrela"
+  "CODIGO" VARCHAR(12)
+  "DESCRICAO" VARCHAR(32)
+  "TIPO" VARCHAR(2)
+  "REP" INTEGER [default: 0]
+  "ARQUIVO" VARCHAR(50)
+  "ARQUIVOQ" VARCHAR(50)
+  "FILTRO" VARCHAR(70)
+  "FILTROQ" VARCHAR(70)
+  "SETUP" VARCHAR(70)
+  "MEMORIA1" VARCHAR(6)
+  "MEMORIA2" VARCHAR(6)
+  "MEMORIA3" VARCHAR(6)
+  "LISTA" VARCHAR(6)
+  "LISTAC" VARCHAR(6)
+  "LISTAR" VARCHAR(6)
+  "LISTAQ" VARCHAR(6)
+  "LCAB" INTEGER [default: 0]
+  "LCOT" INTEGER [default: 0]
+  "LROD" INTEGER [default: 0]
+  "LQUE" INTEGER [default: 0]
+  "ASSOCIA1" VARCHAR(6)
+  "ASSOCIA2" VARCHAR(6)
+  "ASSOCIA3" VARCHAR(6)
+  "VARIAVEL1" VARCHAR(6)
+  "VARIAVEL2" VARCHAR(6)
+  "VARIAVEL3" VARCHAR(6)
+  "TOTAIS1" VARCHAR(6)
+  "TOTAIS2" VARCHAR(6)
+  "TOTAIS3" VARCHAR(6)
+  "GRUPO" VARCHAR(6)
+  "GRAVAREM" VARCHAR(12)
+  Indexes {
+    CODIGO [name: "DISKRELA"]
+  }
+}
+
+// Origem: diskrelm (DBFCDX)
+Table "diskrelm" {
+  Note: "Origem: diskrelm"
+  "NOME" VARCHAR(6)
+  "M01" VARCHAR(70)
+  "M02" VARCHAR(70)
+  "M03" VARCHAR(70)
+  "M04" VARCHAR(70)
+  "M05" VARCHAR(70)
+  "M06" VARCHAR(70)
+  "M07" VARCHAR(70)
+  "M08" VARCHAR(70)
+  "M09" VARCHAR(70)
+  "M10" VARCHAR(70)
+  Indexes {
+    NOME [name: "DISKRELM"]
+  }
+}
+
+// Origem: diskrels (DBFCDX)
+Table "diskrels" {
+  Note: "Origem: diskrels"
+  "NOME" VARCHAR(6)
+  "M01" VARCHAR(65)
+  "M02" VARCHAR(65)
+  "M03" VARCHAR(65)
+  "M04" VARCHAR(65)
+  "M05" VARCHAR(65)
+  "M06" VARCHAR(65)
+  "M07" VARCHAR(65)
+  "M08" VARCHAR(65)
+  "M09" VARCHAR(65)
+  "M10" VARCHAR(65)
+  "V01" INTEGER [default: 0]
+  "V02" INTEGER [default: 0]
+  "V03" INTEGER [default: 0]
+  "V04" INTEGER [default: 0]
+  "V05" INTEGER [default: 0]
+  "V06" INTEGER [default: 0]
+  "V07" INTEGER [default: 0]
+  "V08" INTEGER [default: 0]
+  "V09" INTEGER [default: 0]
+  "V10" INTEGER [default: 0]
+  Indexes {
+    NOME [name: "DISKRELS"]
+  }
+}
+
+// Origem: escalpad (DBFCDX)
+Table "escalpad" {
+  Note: "Origem: escalpad"
+  "SEQ" INTEGER [default: 0]
+  "GRUPO" VARCHAR(2)
+  "DATA" DATETIME
+  "CODREV" VARCHAR(2)
+  "ENTREV" DECIMAL(6,2) [default: 0]
+  "ALIREV" DECIMAL(6,2) [default: 0]
+  "ALSREV" DECIMAL(6,2) [default: 0]
+  "SAIREV" DECIMAL(6,2) [default: 0]
+  "VIRADA" VARCHAR(1)
+  "FOLGASN" VARCHAR(1)
+  "CODADC" VARCHAR(2)
+  "BCOSN" VARCHAR(1)
+  "HORARIO" INTEGER [default: 0]
+  Indexes {
+    GRUPO+STR(SEQ,2) [name: "ESCALPAD"]
+  }
+}
+
+// Origem: etiq1 (DBFCDX)
+Table "etiq1" {
+  Note: "Origem: etiq1"
+  "CODIGO" VARCHAR(8)
+  "DESCRICAO" VARCHAR(30)
+  "SELECAO" VARCHAR(1)
+  "TEXTO" LONGTEXT
+  Indexes {
+    CODIGO [name: "ETIQ1"]
+  }
+}
+
+// Origem: etiq2 (DBFCDX)
+Table "etiq2" {
+  Note: "Origem: etiq2"
+  "ALTURA" INTEGER [default: 0]
+  "LARGURA" INTEGER [default: 0]
+  "COLUNAS" INTEGER [default: 0]
+}
+
+// Origem: etiq3 (DBFCDX)
+Table "etiq3" {
+  Note: "Origem: etiq3"
+  "CODIGO" VARCHAR(12)
+  "DESCRICAO" VARCHAR(32)
+  "ARQUIVO" VARCHAR(25)
+  "CHAVE" VARCHAR(8)
+  "CAMPO" VARCHAR(8)
+  "ARQUIVO2" VARCHAR(25)
+  "CHAVE2" VARCHAR(8)
+  "LINHA1" VARCHAR(80)
+  "LINHA2" VARCHAR(80)
+  "LINHA3" VARCHAR(80)
+  "LINHA4" VARCHAR(80)
+  "LINHA5" VARCHAR(80)
+  "LINHA6" VARCHAR(80)
+  "LINHA7" VARCHAR(80)
+  "LINHA8" VARCHAR(80)
+  "S1" INTEGER [default: 0]
+  "S2" INTEGER [default: 0]
+  "S3" INTEGER [default: 0]
+  "S4" INTEGER [default: 0]
+  "S5" INTEGER [default: 0]
+  "S6" INTEGER [default: 0]
+  "S7" INTEGER [default: 0]
+  "S8" INTEGER [default: 0]
+  "FILTRO" VARCHAR(70)
+  "SETUP" VARCHAR(70)
+  Indexes {
+    CODIGO [name: "ETIQ3"]
+  }
+}
+
+// Origem: firma (DBFCDX)
+Table "firma" {
+  Note: "Origem: firma"
+  "NRCLIEN" INTEGER [default: 0]
+  "COGNOME" VARCHAR(14)
+  "RAZAO" VARCHAR(40)
+  "ENDERECO" VARCHAR(32)
+  "BAIRRO" VARCHAR(15)
+  "CIDADE" VARCHAR(15)
+  "CEP" VARCHAR(9)
+  "ESTADO" VARCHAR(2)
+  "TELEFONE" VARCHAR(9)
+  "FAX" VARCHAR(9)
+  "CGC" VARCHAR(18)
+  "CGCANT" VARCHAR(18)
+  "INSC" VARCHAR(15)
+  "ATIVIDADE" VARCHAR(7)
+  "NAT_ESTAB" VARCHAR(4)
+  "NR_SOCIOS" INTEGER [default: 0]
+  "NR_FAMILIA" INTEGER [default: 0]
+  "SENHA" VARCHAR(5)
+  "HORASMES" DECIMAL(6,2) [default: 0]
+  "SALJAN" DECIMAL(10,2) [default: 0]
+  "SALFEV" DECIMAL(10,2) [default: 0]
+  "SALMAR" DECIMAL(10,2) [default: 0]
+  "SALABR" DECIMAL(10,2) [default: 0]
+  "SALMAI" DECIMAL(10,2) [default: 0]
+  "SALJUN" DECIMAL(10,2) [default: 0]
+  "SALJUL" DECIMAL(10,2) [default: 0]
+  "SALAGO" DECIMAL(10,2) [default: 0]
+  "SALSET" DECIMAL(10,2) [default: 0]
+  "SALOUT" DECIMAL(10,2) [default: 0]
+  "SALNOV" DECIMAL(10,2) [default: 0]
+  "SALDEZ" DECIMAL(10,2) [default: 0]
+  "ARREDONDA" DECIMAL(12,2) [default: 0]
+  "FPAS" VARCHAR(3)
+  "ACID" VARCHAR(7)
+  "CEI" VARCHAR(12)
+  "PAGAR" VARCHAR(1)
+  "PESSOA" VARCHAR(1)
+  "PRODU" VARCHAR(1)
+  "ALTINS" VARCHAR(1)
+  "TIPINS" VARCHAR(1)
+  "ALTEND" VARCHAR(1)
+  "RAISNEG" VARCHAR(1)
+  "PAG01" VARCHAR(2)
+  "PAG02" VARCHAR(2)
+  "PAG03" VARCHAR(2)
+  "PAG04" VARCHAR(1)
+  "PAG05" VARCHAR(1)
+  "SALNOR" DECIMAL(8,3) [default: 0]
+  "ATIDES" VARCHAR(15)
+  "CNAEIBGE" INTEGER [default: 0]
+  "CATFGTS" VARCHAR(2)
+  "CODIBGE" VARCHAR(7)
+  "DBASE" INTEGER [default: 0]
+  "RESPONSAV" VARCHAR(40)
+  "DDD" VARCHAR(4)
+  "RAMAL" VARCHAR(5)
+  "CPFRESP" VARCHAR(14)
+  "CONCAGED" VARCHAR(7)
+  "EMAIL" VARCHAR(60)
+  "SIMPLES" VARCHAR(1)
+  "INIANO" VARCHAR(1)
+  "PAT" VARCHAR(1)
+  "MICRO" VARCHAR(1)
+  "PORTE" VARCHAR(1)
+  "IMGCON" VARCHAR(8)
+  "CODEMPMIG" VARCHAR(2)
+  "CODMANA5" INTEGER [default: 0]
+  "CRTPONTO" VARCHAR(1)
+  "DNRESP" DATETIME
+  "CTRALMOCO" VARCHAR(1)
+  Indexes {
+    NRCLIEN [name: "FIRMA"]
+  }
+}
+
+// Origem: folget (DBFCDX)
+Table "folget" {
+  Note: "Origem: folget"
+  "CODIGO" VARCHAR(6)
+  "SEQ" INTEGER [default: 0]
+  "TIP" VARCHAR(1)
+  "LININI" INTEGER [default: 0]
+  "COLINI" INTEGER [default: 0]
+  "LINFIM" INTEGER [default: 0]
+  "COLFIM" INTEGER [default: 0]
+  "CAMPO" VARCHAR(11)
+  "ESTILO" VARCHAR(25)
+  "CONDICAO" VARCHAR(200)
+  "PRECOND" VARCHAR(78)
+  "MENSAGEM" VARCHAR(40)
+  Indexes {
+    CODIGO+STR(SEQ) [name: "FOLGET"]
+  }
+}
+
+// Origem: folhaman (DBFCDX)
+Table "folhaman" {
+  Note: "Origem: folhaman"
+  "DESCRICAO" VARCHAR(76)
+  "ARQUIVO" VARCHAR(12)
+  Indexes {
+    ARQUIVO [name: "FOLHAMAN"]
+  }
+}
+
+// Origem: folhantx (DBFCDX)
+Table "folhantx" {
+  Note: "Origem: folhantx"
+  "DESCRICAO" VARCHAR(78)
+  "DBF" VARCHAR(20)
+  "NTX" VARCHAR(20)
+  "SEQ" INTEGER [default: 0]
+  "TAG" VARCHAR(20)
+  "CAMPO" VARCHAR(56)
+  "PAD" VARCHAR(1)
+  Indexes {
+    DBF+NTX+STR(SEQ,3) [name: "FOLHANTX"]
+  }
+}
+
+// Origem: folisntx (DBFCDX)
+Table "folisntx" {
+  Note: "Origem: folisntx"
+  "DESCRICAO" VARCHAR(78)
+  "DBF" VARCHAR(8)
+  "NTX" VARCHAR(8)
+  "SEQ" INTEGER [default: 0]
+  "TAG" VARCHAR(20)
+  "CAMPO" VARCHAR(56)
+  "PAD" VARCHAR(1)
+  Indexes {
+    DBF+NTX+STR(SEQ,3) [name: "FOLISNTX"]
+  }
+}
+
+// Origem: folopt (DBFCDX)
+Table "folopt" {
+  Note: "Origem: folopt"
+  "ITEMENU" VARCHAR(1)
+  "POSICAO" INTEGER [default: 0]
+  "LINHA" INTEGER [default: 0]
+  "COLUNA" INTEGER [default: 0]
+  "DESCP" VARCHAR(30)
+  "TECLA" INTEGER [default: 0]
+  "DESCM" VARCHAR(75)
+  "EXECUTAR" VARCHAR(200)
+  Indexes {
+    ITEMENU+STR(POSICAO,2) [name: "FOLOPT"]
+  }
+}
+
+// Origem: folrel (DBFCDX)
+Table "folrel" {
+  Note: "Origem: folrel"
+  "DBF" VARCHAR(8)
+  "CAMPO" VARCHAR(10)
+  "DADO" VARCHAR(40)
+  "DESCRICAO" LONGTEXT
+  "ARQUIVO" VARCHAR(12)
+  Indexes {
+    DBF+CAMPO [name: "FOLREL"]
+  }
+}
+
+// Origem: foltel (DBFCDX)
+Table "foltel" {
+  Note: "Origem: foltel"
+  "CODIGO" VARCHAR(6)
+  "SEQ" INTEGER [default: 0]
+  "TIP" VARCHAR(1)
+  "LININI" INTEGER [default: 0]
+  "COLINI" INTEGER [default: 0]
+  "LINFIM" INTEGER [default: 0]
+  "COLFIM" INTEGER [default: 0]
+  "DIZER" VARCHAR(80)
+  "ESTILO" VARCHAR(20)
+  Indexes {
+    CODIGO+STR(SEQ) [name: "FOLTEL"]
+  }
+}
+
+// Origem: foptoalm (DBFCDX)
+Table "foptoalm" {
+  Note: "Origem: foptoalm"
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "MESEXT" VARCHAR(10)
+  "DESCT" DECIMAL(10,2) [default: 0]
+  "DESCTB" DECIMAL(10,2) [default: 0]
+  "DESCTC" DECIMAL(10,2) [default: 0]
+  "DESCTD" DECIMAL(10,2) [default: 0]
+  "DESCTE" DECIMAL(10,2) [default: 0]
+  Indexes {
+    STR(ANO,4)+STR(MES,2) [name: "FOPTOALM"]
+  }
+}
+
+// Origem: foptobco (DBFCDX)
+Table "foptobco" {
+  Note: "Origem: foptobco"
+  "BCO01" VARCHAR(100)
+  "BCO02" VARCHAR(100)
+  "BCO03" VARCHAR(100)
+  "BCO04" VARCHAR(100)
+  "BCO05" VARCHAR(100)
+  "BCO06" VARCHAR(100)
+  "BCO07" VARCHAR(100)
+  "BCO08" VARCHAR(100)
+  "BCO09" VARCHAR(100)
+  "BCO10" VARCHAR(100)
+  "BCO11" VARCHAR(100)
+  "BCO12" VARCHAR(100)
+  "BCO13" VARCHAR(100)
+  "BCO14" VARCHAR(100)
+  "BCO15" VARCHAR(100)
+  "BCO16" VARCHAR(100)
+  "BCO17" VARCHAR(100)
+  "BCO18" VARCHAR(100)
+  "BCO19" VARCHAR(100)
+  "BCO20" VARCHAR(100)
+  "BCO21" VARCHAR(100)
+  "BCO22" VARCHAR(100)
+  "BCO23" VARCHAR(100)
+  "BCO24" VARCHAR(100)
+  "BCOHR" VARCHAR(100)
+  "BCOTT" VARCHAR(100)
+  "EMPRESA" INTEGER [default: 0]
+  Indexes {
+    EMPRESA [name: "FOPTOBCO"]
+  }
+}
+
+// Origem: foptocom (DBFCDX)
+Table "foptocom" {
+  Note: "Origem: foptocom"
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "MESEXT" VARCHAR(10)
+  "DATAINI" DATETIME
+  "DATAFIM" DATETIME
+  "EMPRESA" INTEGER [default: 0]
+  "FECHADO" VARCHAR(1)
+  Indexes {
+    STR(ANO,4)+STR(MES,2)+STR(EMPRESA,8) [name: "FOPTOCOM"]
+  }
+}
+
+// Origem: foptocon (DBFCDX)
+Table "foptocon" {
+  Note: "Origem: foptocon"
+  "EMPRESA" INTEGER [default: 0]
+  "TR01" VARCHAR(1)
+  "CX01" VARCHAR(70)
+  "OP01" VARCHAR(100)
+  "TR02" VARCHAR(1)
+  "OP02" VARCHAR(100)
+  "CX02" VARCHAR(70)
+  "TR03" VARCHAR(1)
+  "OP03" VARCHAR(100)
+  "CX03" VARCHAR(70)
+  "TR04" VARCHAR(1)
+  "CX04" VARCHAR(70)
+  "OP04" VARCHAR(100)
+  "TR05" VARCHAR(1)
+  "OP05" VARCHAR(100)
+  "CX05" VARCHAR(70)
+  "TR06" VARCHAR(1)
+  "CX06" VARCHAR(70)
+  "OP06" VARCHAR(100)
+  "TR07" VARCHAR(1)
+  "CX07" VARCHAR(70)
+  "OP07" VARCHAR(100)
+  "TR08" VARCHAR(1)
+  "CX08" VARCHAR(70)
+  "OP08" VARCHAR(100)
+  "TR09" VARCHAR(1)
+  "CX09" VARCHAR(70)
+  "OP09" VARCHAR(100)
+  "TR10" VARCHAR(1)
+  "CX10" VARCHAR(70)
+  "OP10" VARCHAR(100)
+  "TR11" VARCHAR(1)
+  "CX11" VARCHAR(70)
+  "OP11" VARCHAR(100)
+  "TR12" VARCHAR(1)
+  "CX12" VARCHAR(70)
+  "OP12" VARCHAR(100)
+  "TR13" VARCHAR(1)
+  "CX13" VARCHAR(70)
+  "OP13" VARCHAR(100)
+  "TR14" VARCHAR(1)
+  "CX14" VARCHAR(70)
+  "OP14" VARCHAR(100)
+  "TR15" VARCHAR(1)
+  "CX15" VARCHAR(70)
+  "OP15" VARCHAR(100)
+  "TR16" VARCHAR(1)
+  "CX16" VARCHAR(70)
+  "OP16" VARCHAR(100)
+  "TR17" VARCHAR(1)
+  "CX17" VARCHAR(70)
+  "OP17" VARCHAR(100)
+  "TR18" VARCHAR(1)
+  "CX18" VARCHAR(70)
+  "OP18" VARCHAR(100)
+  "TR19" VARCHAR(1)
+  "CX19" VARCHAR(70)
+  "OP19" VARCHAR(100)
+  "TR20" VARCHAR(1)
+  "CX20" VARCHAR(70)
+  "OP20" VARCHAR(100)
+  "TR21" VARCHAR(1)
+  "CX21" VARCHAR(70)
+  "OP21" VARCHAR(100)
+  "TR22" VARCHAR(1)
+  "CX22" VARCHAR(70)
+  "OP22" VARCHAR(100)
+  "TR23" VARCHAR(1)
+  "CX23" VARCHAR(70)
+  "OP23" VARCHAR(100)
+  "TR24" VARCHAR(1)
+  "CX24" VARCHAR(70)
+  "OP24" VARCHAR(100)
+  "VI01" VARCHAR(70)
+  "VI02" VARCHAR(70)
+  "VI03" VARCHAR(70)
+  "VI04" VARCHAR(70)
+  "VI05" VARCHAR(70)
+  "VI06" VARCHAR(70)
+  "VI07" VARCHAR(70)
+  "VI08" VARCHAR(70)
+  "VI09" VARCHAR(70)
+  "VI10" VARCHAR(70)
+  "VI11" VARCHAR(70)
+  "VI12" VARCHAR(70)
+  "VI13" VARCHAR(70)
+  "VI14" VARCHAR(70)
+  "VI15" VARCHAR(70)
+  "VI16" VARCHAR(70)
+  "VI17" VARCHAR(70)
+  "VI18" VARCHAR(70)
+  "VI19" VARCHAR(70)
+  "VI20" VARCHAR(70)
+  "VI21" VARCHAR(70)
+  "VI22" VARCHAR(70)
+  "VI23" VARCHAR(70)
+  "VI24" VARCHAR(70)
+  "FS01" VARCHAR(140)
+  "FS02" VARCHAR(140)
+  "FS03" VARCHAR(140)
+  "FS04" VARCHAR(140)
+  "FS05" VARCHAR(140)
+  "FS06" VARCHAR(140)
+  "FS07" VARCHAR(140)
+  "FS08" VARCHAR(140)
+  "FS09" VARCHAR(140)
+  "FS10" VARCHAR(140)
+  "FS11" VARCHAR(140)
+  "FS12" VARCHAR(140)
+  "FS13" VARCHAR(140)
+  "FS14" VARCHAR(140)
+  "FS15" VARCHAR(140)
+  "FS16" VARCHAR(140)
+  "FS17" VARCHAR(140)
+  "FS18" VARCHAR(140)
+  "FS19" VARCHAR(140)
+  "FS20" VARCHAR(140)
+  "FS21" VARCHAR(140)
+  "FS22" VARCHAR(140)
+  "FS23" VARCHAR(140)
+  "FS24" VARCHAR(140)
+  "TOL01" DECIMAL(5,2) [default: 0]
+  "TOL02" DECIMAL(5,2) [default: 0]
+  "TOL03" DECIMAL(5,2) [default: 0]
+  "TOL04" DECIMAL(5,2) [default: 0]
+  "TOL05" DECIMAL(5,2) [default: 0]
+  "TOL06" DECIMAL(5,2) [default: 0]
+  "TOL07" DECIMAL(5,2) [default: 0]
+  "TOL08" DECIMAL(5,2) [default: 0]
+  "TOL09" DECIMAL(5,2) [default: 0]
+  "TOL10" DECIMAL(5,2) [default: 0]
+  "EXPORTA" VARCHAR(100)
+  "CAMINEX" VARCHAR(40)
+  "CAMINER" VARCHAR(40)
+  "CONTAREF" INTEGER [default: 0]
+  Indexes {
+    EMPRESA [name: "FOPTOCON"]
+  }
+}
+
+// Origem: foptoeqp (DBFCDX)
+Table "foptoeqp" {
+  Note: "Origem: foptoeqp"
+  "NUMERO" INTEGER [default: 0]
+  "NOME" VARCHAR(30)
+  "TIPO" VARCHAR(1)
+  "REP" VARCHAR(17)
+  "LOCALINST" VARCHAR(50)
+  "ATIVO" VARCHAR(1)
+  "GRUPOREL" INTEGER [default: 0]
+  "GERAAFD" VARCHAR(1)
+  Indexes {
+    NUMERO [name: "FOPTOEQP"]
+    REP [name: "FOPTOEQP2"]
+  }
+}
+
+// Origem: foptohor (DBFCDX)
+Table "foptohor" {
+  Note: "Origem: foptohor"
+  "NUMERO" INTEGER [default: 0]
+  "CODIGO" VARCHAR(2)
+  "NOME" VARCHAR(30)
+  "ENT" DECIMAL(6,2) [default: 0]
+  "ALMI" DECIMAL(6,2) [default: 0]
+  "ALMF" DECIMAL(6,2) [default: 0]
+  "SAI" DECIMAL(6,2) [default: 0]
+  "VIRADA" VARCHAR(1)
+  "FOLGASN" VARCHAR(1)
+  Indexes {
+    NUMERO [name: "FOPTOHOR"]
+    CODIGO [name: "FOPTOHOR2"]
+  }
+}
+
+// Origem: foptohre (DBFCDX)
+Table "foptohre" {
+  Note: "Origem: foptohre"
+  "CODIGO" VARCHAR(2)
+  "NOME" VARCHAR(40)
+  "HENT" DECIMAL(5,2) [default: 0]
+  "HSAI" DECIMAL(5,2) [default: 0]
+  "HALS" DECIMAL(5,2) [default: 0]
+  "HALE" DECIMAL(5,2) [default: 0]
+  "HENT01" DECIMAL(5,2) [default: 0]
+  "HALS01" DECIMAL(5,2) [default: 0]
+  "HALE01" DECIMAL(5,2) [default: 0]
+  "HSAI01" DECIMAL(5,2) [default: 0]
+  "HENT02" DECIMAL(5,2) [default: 0]
+  "HALS02" DECIMAL(5,2) [default: 0]
+  "HALE02" DECIMAL(5,2) [default: 0]
+  "HSAI02" DECIMAL(5,2) [default: 0]
+  "HENT03" DECIMAL(5,2) [default: 0]
+  "HALS03" DECIMAL(5,2) [default: 0]
+  "HALE03" DECIMAL(5,2) [default: 0]
+  "HSAI03" DECIMAL(5,2) [default: 0]
+  "HENT04" DECIMAL(5,2) [default: 0]
+  "HALS04" DECIMAL(5,2) [default: 0]
+  "HALE04" DECIMAL(5,2) [default: 0]
+  "HSAI04" DECIMAL(5,2) [default: 0]
+  "HENT05" DECIMAL(5,2) [default: 0]
+  "HALS05" DECIMAL(5,2) [default: 0]
+  "HALE05" DECIMAL(5,2) [default: 0]
+  "HSAI05" DECIMAL(5,2) [default: 0]
+  "HENT06" DECIMAL(5,2) [default: 0]
+  "HALS06" DECIMAL(5,2) [default: 0]
+  "HALE06" DECIMAL(5,2) [default: 0]
+  "HSAI06" DECIMAL(5,2) [default: 0]
+  "HENT07" DECIMAL(5,2) [default: 0]
+  "HALS07" DECIMAL(5,2) [default: 0]
+  "HALE07" DECIMAL(5,2) [default: 0]
+  "HSAI07" DECIMAL(5,2) [default: 0]
+  "HFOL00" VARCHAR(1)
+  "HFOL01" VARCHAR(1)
+  "HFOL02" VARCHAR(1)
+  "HFOL03" VARCHAR(1)
+  "HFOL04" VARCHAR(1)
+  "HFOL05" VARCHAR(1)
+  "HFOL06" VARCHAR(1)
+  "HFOL07" VARCHAR(1)
+  "CHOR" VARCHAR(2)
+  "CHOR01" VARCHAR(2)
+  "CHOR02" VARCHAR(2)
+  "CHOR03" VARCHAR(2)
+  "CHOR04" VARCHAR(2)
+  "CHOR05" VARCHAR(2)
+  "CHOR06" VARCHAR(2)
+  "CHOR07" VARCHAR(2)
+  "HOR" INTEGER [default: 0]
+  "HOR01" INTEGER [default: 0]
+  "HOR02" INTEGER [default: 0]
+  "HOR03" INTEGER [default: 0]
+  "HOR04" INTEGER [default: 0]
+  "HOR05" INTEGER [default: 0]
+  "HOR06" INTEGER [default: 0]
+  "HOR07" INTEGER [default: 0]
+  Indexes {
+    CODIGO [name: "FOPTOHRE"]
+  }
+}
+
+// Origem: foptomot (DBFCDX)
+Table "foptomot" {
+  Note: "Origem: foptomot"
+  "NUMERO" INTEGER [default: 0]
+  "NOME" VARCHAR(60)
+  Indexes {
+    NUMERO [name: "FOPTOMOT"]
+  }
+}
+
+// Origem: foptontx (DBFCDX)
+Table "foptontx" {
+  Note: "Origem: foptontx"
+  "DESCRICAO" VARCHAR(78)
+  "DBF" VARCHAR(8)
+  "NTX" VARCHAR(8)
+  "SEQ" INTEGER [default: 0]
+  "TAG" VARCHAR(20)
+  "CAMPO" VARCHAR(56)
+  "PAD" VARCHAR(1)
+  Indexes {
+    DBF+NTX+STR(SEQ,3) [name: "FOPTONTX"]
+  }
+}
+
+// Origem: foptopis (DBFCDX)
+Table "foptopis" {
+  Note: "Origem: foptopis"
+  "NUMERO" INTEGER [default: 0]
+  "PIS" VARCHAR(12)
+  Indexes {
+    NUMERO [name: "FOPTOPIS"]
+  }
+}
+
+// Origem: foptopro (DBFCDX)
+Table "foptopro" {
+  Note: "Origem: foptopro"
+  "ORIGEM" INTEGER [default: 0]
+  "DESTINO" INTEGER [default: 0]
+  "DATA" DATETIME
+  "NOME" VARCHAR(60)
+  "MOTIVO" INTEGER [default: 0]
+  Indexes {
+    STR(ORIGEM,8)+DTOS(DATA) [name: "FOPTOPRO"]
+  }
+}
+
+// Origem: foptorel (DBFCDX)
+Table "foptorel" {
+  Note: "Origem: foptorel"
+  "NUMERO" INTEGER [default: 0]
+  "NOME" VARCHAR(30)
+  "DESTINO" VARCHAR(1)
+  "CAMINHO" VARCHAR(200)
+  "ARQUIVO" VARCHAR(30)
+  "ARQDEST" VARCHAR(8)
+  "PROCESSO" VARCHAR(1)
+  "ANOREL" VARCHAR(1)
+  "HORADEC" VARCHAR(1)
+  "MODELO" INTEGER [default: 0]
+  Indexes {
+    NUMERO [name: "FOPTOREL"]
+  }
+}
+
+// Origem: foptoval (DBFCDX)
+Table "foptoval" {
+  Note: "Origem: foptoval"
+  "EMPRESA" INTEGER [default: 0]
+  "FVAL01" VARCHAR(70)
+  "FVAL02" VARCHAR(70)
+  "FVAL03" VARCHAR(70)
+  "FVAL04" VARCHAR(70)
+  "FVAL05" VARCHAR(70)
+  "FVAL06" VARCHAR(70)
+  "FVAL07" VARCHAR(70)
+  "FVAL08" VARCHAR(70)
+  "FVAL09" VARCHAR(70)
+  "FVAL10" VARCHAR(70)
+  "FVAL11" VARCHAR(70)
+  "FVAL12" VARCHAR(70)
+  "FVAL13" VARCHAR(70)
+  "FVAL14" VARCHAR(70)
+  "FVAL15" VARCHAR(70)
+  "FVAL16" VARCHAR(70)
+  "FVAL17" VARCHAR(70)
+  "FVAL18" VARCHAR(70)
+  "FVAL19" VARCHAR(70)
+  "FVAL20" VARCHAR(70)
+  "FVAL21" VARCHAR(70)
+  "FVAL22" VARCHAR(70)
+  "FVAL23" VARCHAR(70)
+  "FVAL24" VARCHAR(70)
+  "FFIN01" VARCHAR(70)
+  "FFIN02" VARCHAR(70)
+  "FFIN03" VARCHAR(70)
+  "FFIN04" VARCHAR(70)
+  "FFIN05" VARCHAR(70)
+  "FFIN06" VARCHAR(70)
+  "FFIN07" VARCHAR(70)
+  "FFIN08" VARCHAR(70)
+  "FFIN09" VARCHAR(70)
+  "FFIN10" VARCHAR(70)
+  "FFIN11" VARCHAR(70)
+  "FFIN12" VARCHAR(70)
+  "FFIN13" VARCHAR(70)
+  "FFIN14" VARCHAR(70)
+  "FFIN15" VARCHAR(70)
+  "FFIN16" VARCHAR(70)
+  "FFIN17" VARCHAR(70)
+  "FFIN18" VARCHAR(70)
+  "FFIN19" VARCHAR(70)
+  "FFIN20" VARCHAR(70)
+  "FFIN21" VARCHAR(70)
+  "FFIN22" VARCHAR(70)
+  "FFIN23" VARCHAR(70)
+  "FFIN24" VARCHAR(70)
+  Indexes {
+    EMPRESA [name: "FOPTOVAL"]
+  }
+}
+
+// Origem: forfentx (DBFCDX)
+Table "forfentx" {
+  Note: "Origem: forfentx"
+  "DESCRICAO" VARCHAR(78)
+  "DBF" VARCHAR(8)
+  "NTX" VARCHAR(8)
+  "SEQ" INTEGER [default: 0]
+  "TAG" VARCHAR(20)
+  "CAMPO" VARCHAR(56)
+  "PAD" VARCHAR(1)
+  Indexes {
+    DBF+NTX+STR(SEQ,3) [name: "FORFENTX"]
+  }
+}
+
+// Origem: fosalmin (DBFCDX)
+Table "fosalmin" {
+  Note: "Origem: fosalmin"
+  "ANO" INTEGER [default: 0]
+  "MOEDA" VARCHAR(2)
+  "VALOR" DECIMAL(8,2) [default: 0]
+  "ATOLEGAL" VARCHAR(20)
+  "PERCENTUAL" DECIMAL(6,2) [default: 0]
+  "MES" INTEGER [default: 0]
+  "VIGENCIA" DATETIME
+  Indexes {
+    STR(ANO,4)+STR(MES,2) [name: "FOSALMIN"]
+  }
+}
+
+// Origem: fo_apu (DBFCDX)
+Table "fo_apu" {
+  Note: "Origem: fo_apu"
+  "CONTA" INTEGER [default: 0]
+  "NOME" VARCHAR(35)
+  "HORAS" DECIMAL(9,2) [default: 0]
+  "COL" INTEGER [default: 0]
+  "VALOR" DECIMAL(18,2) [default: 0]
+  Indexes {
+    CONTA [name: "FO_APU"]
+  }
+}
+
+// Origem: fo_cbo (DBFCDX)
+Table "fo_cbo" {
+  Note: "Origem: fo_cbo"
+  "CODIGO" VARCHAR(5)
+  "NOME" VARCHAR(200)
+  "CODGPBASEC" VARCHAR(3)
+  "TPSITUACAO" VARCHAR(2)
+  Indexes {
+    CODIGO [name: "FO_CBO"]
+  }
+}
+
+// Origem: fo_cbod (DBFCDX)
+Table "fo_cbod" {
+  Note: "Origem: fo_cbod"
+  "CODIGO" VARCHAR(6)
+  "NOME" VARCHAR(70)
+  Indexes {
+    CODIGO [name: "FO_CBOD"]
+  }
+}
+
+// Origem: fo_cbog (DBFCDX)
+Table "fo_cbog" {
+  Note: "Origem: fo_cbog"
+  "CODIGO" VARCHAR(6)
+  "NOME" VARCHAR(150)
+  Indexes {
+    CODIGO [name: "FO_CBON"]
+  }
+}
+
+// Origem: fo_cbon (DBFCDX)
+Table "fo_cbon" {
+  Note: "Origem: fo_cbon"
+  "CODIGO" VARCHAR(6)
+  "NOME" VARCHAR(150)
+  "CRITICAA" TINYINT(1)
+  "CRITICAC" TINYINT(1)
+  "CODINTOCUP" INTEGER [default: 0]
+  "SGLOCUP" VARCHAR(3)
+  "CODGH" VARCHAR(2)
+  "CODGPBASEC" VARCHAR(4)
+  "CIS" VARCHAR(5)
+  "DESATIVADO" TINYINT(1)
+  "VERSAOCBO" VARCHAR(7)
+  "CAGEDESCO" INTEGER [default: 0]
+  Indexes {
+    CODIGO [name: "FO_CBON"]
+  }
+}
+
+// Origem: fo_cnae (DBFCDX)
+Table "fo_cnae" {
+  Note: "Origem: fo_cnae"
+  "T_CNAE" VARCHAR(7)
+  "DESCRICAO" VARCHAR(100)
+  "A_IBGE" VARCHAR(4)
+  "TAXA" INTEGER [default: 0]
+  "SEQ" VARCHAR(1)
+  Indexes {
+    T_CNAE [name: "FO_CNAE"]
+  }
+}
+
+// Origem: fo_cnae2 (DBFCDX)
+Table "fo_cnae2" {
+  Note: "Origem: fo_cnae2"
+  "CODIGO" VARCHAR(7)
+  "DESCRICAO" VARCHAR(100)
+  "CODIGOPAI" VARCHAR(7)
+  "ALIQ_ATV" DECIMAL(6,2) [default: 0]
+  "NCM_ATV" VARCHAR(8)
+  Indexes {
+    CODIGO [name: "FO_CNAE2"]
+  }
+}
+
+// Origem: fo_csat (DBFCDX)
+Table "fo_csat" {
+  Note: "Origem: fo_csat"
+  "CODIGO" INTEGER [default: 0]
+  "DESCRICAO" VARCHAR(70)
+  "GRAU" INTEGER [default: 0]
+  "TAXA" DECIMAL(5,2) [default: 0]
+  Indexes {
+    CODIGO [name: "FO_CSAT"]
+  }
+}
+
+// Origem: fo_fai (DBFCDX)
+Table "fo_fai" {
+  Note: "Origem: fo_fai"
+  "FAIXA" VARCHAR(2)
+  "DESCRICAO" VARCHAR(50)
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "INDICE" DECIMAL(8,3) [default: 0]
+  Indexes {
+    FAIXA [name: "FO_FAI"]
+  }
+}
+
+// Origem: fo_plent (DBFCDX)
+Table "fo_plent" {
+  Note: "Origem: fo_plent"
+  "NOME" VARCHAR(6)
+  "C01" INTEGER [default: 0]
+  "C02" INTEGER [default: 0]
+  "C03" INTEGER [default: 0]
+  "C04" INTEGER [default: 0]
+  "C05" INTEGER [default: 0]
+  "C06" INTEGER [default: 0]
+  "C07" INTEGER [default: 0]
+  "C08" INTEGER [default: 0]
+  "C09" INTEGER [default: 0]
+  "C10" INTEGER [default: 0]
+  "C11" INTEGER [default: 0]
+  "C12" INTEGER [default: 0]
+  "C13" INTEGER [default: 0]
+  "C14" INTEGER [default: 0]
+  "C15" INTEGER [default: 0]
+  "C16" INTEGER [default: 0]
+  "C17" INTEGER [default: 0]
+  "C18" INTEGER [default: 0]
+  Indexes {
+    NOME [name: "FO_PLENT"]
+  }
+}
+
+// Origem: fo_rcau (DBFCDX)
+Table "fo_rcau" {
+  Note: "Origem: fo_rcau"
+  "ID" INTEGER [default: 0]
+  "CODIGO" VARCHAR(10)
+  "RAIS" VARCHAR(2)
+  "CAGED" VARCHAR(2)
+  "CODGRE" VARCHAR(2)
+  "NOME" VARCHAR(100)
+  "DESCRIMP" VARCHAR(40)
+  "SALSAL" TINYINT(1)
+  "ADIINS" TINYINT(1)
+  "ADIPER" TINYINT(1)
+  "DSRVAR" TINYINT(1)
+  "FERPRO" TINYINT(1)
+  "FERPROM" TINYINT(1)
+  "FERVEN" TINYINT(1)
+  "FERVENM" TINYINT(1)
+  "AVPIND" TINYINT(1)
+  "AVPINDM" TINYINT(1)
+  "DECTER" TINYINT(1)
+  "DECTERM" TINYINT(1)
+  "SALFAM" TINYINT(1)
+  "SALFAS" TINYINT(1)
+  "FGTA22" TINYINT(1)
+  "FGTA09" TINYINT(1)
+  "INDENI" TINYINT(1)
+  "MEDADI" TINYINT(1)
+  "DECIND" TINYINT(1)
+  "DECINDM" TINYINT(1)
+  "FERIND" TINYINT(1)
+  "FERINDM" TINYINT(1)
+  "ADCSAL" VARCHAR(1)
+  Indexes {
+    CODIGO [name: "FO_RCAU"]
+    RAIS [name: "FO_RCAU2"]
+  }
+}
+
+// Origem: fo_tab (DBFCDX)
+Table "fo_tab" {
+  Note: "Origem: fo_tab"
+  "TABELA" VARCHAR(4)
+  "CODIGO" VARCHAR(5)
+  "CODIG2" VARCHAR(5)
+  "VALOR" DECIMAL(12,5) [default: 0]
+  "DESCRI" VARCHAR(70)
+  "DESCR2" VARCHAR(70)
+  Indexes {
+    TABELA+CODIGO [name: "FO_TAB"]
+  }
+}
+
+// Origem: funcac (DBFCDX)
+Table "funcac" {
+  Note: "Origem: funcac"
+  "CODIGO" INTEGER [default: 0]
+  "CURSO" VARCHAR(10)
+  "DESCUR" VARCHAR(60)
+  Indexes {
+    STR(CODIGO,4)+CURSO [name: "FUNCAC"]
+  }
+}
+
+// Origem: funcao (DBFCDX)
+Table "funcao" {
+  Note: "Origem: funcao"
+  "CODIGO" INTEGER [default: 0]
+  "NOME" VARCHAR(40)
+  "VALOR" DECIMAL(11,2) [default: 0]
+  "CBO" VARCHAR(5)
+  "FNOME" VARCHAR(17)
+  "FAIXA" VARCHAR(2)
+  "AREA" VARCHAR(2)
+  "CODMP02" VARCHAR(10)
+  "DES01" VARCHAR(70)
+  "DES02" VARCHAR(70)
+  "DES03" VARCHAR(70)
+  "DES04" VARCHAR(70)
+  "DES05" VARCHAR(70)
+  "DES06" VARCHAR(70)
+  "DES07" VARCHAR(70)
+  "DES08" VARCHAR(70)
+  "DES09" VARCHAR(70)
+  "DES10" VARCHAR(70)
+  "REQ01" VARCHAR(70)
+  "REQ02" VARCHAR(70)
+  "REQ03" VARCHAR(70)
+  "REQ04" VARCHAR(70)
+  "REQ05" VARCHAR(70)
+  "REQ06" VARCHAR(70)
+  "REQ07" VARCHAR(70)
+  "REQ08" VARCHAR(70)
+  "REQ09" VARCHAR(70)
+  "REQ10" VARCHAR(70)
+  "RED01" VARCHAR(70)
+  "RED02" VARCHAR(70)
+  "RED03" VARCHAR(70)
+  "RED04" VARCHAR(70)
+  "RED05" VARCHAR(70)
+  "RED06" VARCHAR(70)
+  "RED07" VARCHAR(70)
+  "RED08" VARCHAR(70)
+  "RED09" VARCHAR(70)
+  "RED10" VARCHAR(70)
+  "CBONEW" VARCHAR(6)
+  "REQCNH" VARCHAR(1)
+  "REQOC" VARCHAR(1)
+  "OCEMIS" VARCHAR(6)
+  "TEMLX" VARCHAR(1)
+  Indexes {
+    CODIGO [name: "FUNCAO-1"]
+    NOME [name: "FUNCAO-2"]
+  }
+}
+
+// Origem: ginssd (DBFCDX)
+Table "ginssd" {
+  Note: "Origem: ginssd"
+  "NUMEMP" INTEGER [default: 0]
+  "VALREC" DECIMAL(12,2) [default: 0]
+  "VALEMP" DECIMAL(12,2) [default: 0]
+  "VALTER" DECIMAL(12,2) [default: 0]
+  "VALDED" DECIMAL(12,2) [default: 0]
+  "VALLIQ" DECIMAL(12,2) [default: 0]
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "DEPTO" INTEGER [default: 0]
+  "SETOR" INTEGER [default: 0]
+  "SECAO" INTEGER [default: 0]
+  "CONTROLE" VARCHAR(18)
+  Indexes {
+    CONTROLE [name: "GINSSD"]
+  }
+}
+
+// Origem: ginsse (DBFCDX)
+Table "ginsse" {
+  Note: "Origem: ginsse"
+  "NUMEMP" INTEGER [default: 0]
+  "VALREC" DECIMAL(12,2) [default: 0]
+  "VALEMP" DECIMAL(12,2) [default: 0]
+  "VALEMA" DECIMAL(12,2) [default: 0]
+  "VALTER" DECIMAL(12,2) [default: 0]
+  "VALDED" DECIMAL(12,2) [default: 0]
+  "VALLIQ" DECIMAL(12,2) [default: 0]
+  "VALACI" DECIMAL(12,2) [default: 0]
+  "VALCRE" DECIMAL(12,2) [default: 0]
+  "VALCOM" DECIMAL(12,2) [default: 0]
+  "VALUSO" DECIMAL(12,2) [default: 0]
+  "SUB01" DECIMAL(12,2) [default: 0]
+  "SUB02" DECIMAL(12,2) [default: 0]
+  "SUB03" DECIMAL(12,2) [default: 0]
+  "SUB04" DECIMAL(12,2) [default: 0]
+  "PGEMPSEG" DECIMAL(12,2) [default: 0]
+  "PGACD" DECIMAL(12,2) [default: 0]
+  "PGTER" DECIMAL(12,2) [default: 0]
+  "PGTOT" DECIMAL(12,2) [default: 0]
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "PAGA" VARCHAR(1)
+  Indexes {
+    STRZERO(NUMEMP,5)+STRZERO(ANO,4)+STRZERO(MES,2) [name: "GINSSE"]
+  }
+}
+
+// Origem: horpad (DBFCDX)
+Table "horpad" {
+  Note: "Origem: horpad"
+  "NUMERO" INTEGER [default: 0]
+  "NOME" VARCHAR(60)
+  "D1" VARCHAR(60)
+  "D2" VARCHAR(60)
+  "D3" VARCHAR(60)
+  "D4" VARCHAR(60)
+  "D5" VARCHAR(60)
+  "D6" VARCHAR(60)
+  "D7" VARCHAR(60)
+  Indexes {
+    NOME [name: "HORPAD"]
+  }
+}
+
+// Origem: medagdp (DBFCDX)
+Table "medagdp" {
+  Note: "Origem: medagdp"
+  "CODIGO" VARCHAR(9)
+  "NOME" VARCHAR(135)
+}
+
+// Origem: medicgrp (DBFCDX)
+Table "medicgrp" {
+  Note: "Origem: medicgrp"
+  "CODIGO" VARCHAR(2)
+  "NOME" VARCHAR(40)
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: medmaq (DBFCDX)
+Table "medmaq" {
+  Note: "Origem: medmaq"
+  "CODIGO" VARCHAR(2)
+  "NOME" VARCHAR(37)
+  Indexes {
+    CODIGO [name: "MEDMAQ"]
+  }
+}
+
+// Origem: medmmb (DBFCDX)
+Table "medmmb" {
+  Note: "Origem: medmmb"
+  "CODIGO" VARCHAR(1)
+  "NOME" VARCHAR(6)
+  Indexes {
+    CODIGO [name: "MEDMMB"]
+  }
+}
+
+// Origem: medrisoc (DBFCDX)
+Table "medrisoc" {
+  Note: "Origem: medrisoc"
+  "CODIGO" VARCHAR(6)
+  "NOME" VARCHAR(43)
+  Indexes {
+    codigo [name: "MEDRISOC"]
+  }
+}
+
+// Origem: meshol (DBFCDX)
+Table "meshol" {
+  Note: "Origem: meshol"
+  "NOME" VARCHAR(6)
+  "MES1" VARCHAR(40)
+  "MES2" VARCHAR(40)
+  "MES3" VARCHAR(40)
+  Indexes {
+    NOME [name: "MESHOL"]
+  }
+}
+
+// Origem: muser (DBFCDX)
+Table "muser" {
+  Note: "Origem: muser"
+  "USUARIO" VARCHAR(10)
+  "SENHA" VARCHAR(8)
+  "VALIDADE" VARCHAR(8)
+  "VALDATA" DATETIME
+  "EQUIVALE" VARCHAR(10)
+  "ESTADO" VARCHAR(1)
+  "ARQFON" VARCHAR(8)
+  "SETOR" VARCHAR(10)
+  "WRPTNO" INTEGER [default: 0]
+  "FOLHANO" INTEGER [default: 0]
+  "DATATRO" DATETIME
+  "USUARIOW" VARCHAR(20)
+  "SENHAW" VARCHAR(20)
+  "POSTEL01" INTEGER [default: 0]
+  "POSTEL02" INTEGER [default: 0]
+  "POSTEL03" INTEGER [default: 0]
+  "POSTEL04" INTEGER [default: 0]
+  "POSTEL05" INTEGER [default: 0]
+  "POSTEL06" INTEGER [default: 0]
+  "POSTEL07" INTEGER [default: 0]
+  "POSTEL08" INTEGER [default: 0]
+  "POSTEL09" INTEGER [default: 0]
+  "POSTEL10" INTEGER [default: 0]
+  "POSTEL11" INTEGER [default: 0]
+  "POSTEL12" INTEGER [default: 0]
+  "POSTEL13" INTEGER [default: 0]
+  "POSTEL14" INTEGER [default: 0]
+  "POSTEL15" INTEGER [default: 0]
+  "POSTEL16" INTEGER [default: 0]
+  "POSTEL17" INTEGER [default: 0]
+  "POSTEL18" INTEGER [default: 0]
+  "CHAVEH" VARCHAR(64)
+  "CHAVEWC" VARCHAR(64)
+  "CHAVEWW" VARCHAR(64)
+  "CHAVEWS" VARCHAR(64)
+  Indexes {
+    USUARIO [name: "MUSER"]
+  }
+}
+
+// Origem: muserm (DBFCDX)
+Table "muserm" {
+  Note: "Origem: muserm"
+  "CONTROLE" VARCHAR(13)
+  Indexes {
+    CONTROLE [name: "MUSERM"]
+  }
+}
+
+// Origem: nomesexo (DBFCDX)
+Table "nomesexo" {
+  Note: "Origem: nomesexo"
+  "NAME" VARCHAR(14)
+  "CLASSIFICA" VARCHAR(1)
+  Indexes {
+    NAME [name: "NOME"]
+  }
+}
+
+// Origem: nota (DBFCDX)
+Table "nota" {
+  Note: "Origem: nota"
+  "NOME" VARCHAR(10)
+  "OBS1" VARCHAR(60)
+  "OBS2" VARCHAR(60)
+  "OBS3" VARCHAR(60)
+  "OBS4" VARCHAR(60)
+  "OBS5" VARCHAR(60)
+  "OBS6" VARCHAR(60)
+  "OBS7" VARCHAR(60)
+  "OBS8" VARCHAR(60)
+  Indexes {
+    NOME [name: "NOTA"]
+  }
+}
+
+// Origem: orgemiss (DBFCDX)
+Table "orgemiss" {
+  Note: "Origem: orgemiss"
+  "CODIGO" VARCHAR(10)
+  "NOME" VARCHAR(85)
+  "CAIXA" INTEGER [default: 0]
+  Indexes {
+    CODIGO [name: "CODIGO"]
+  }
+}
+
+// Origem: pisindev (DBFCDX)
+Table "pisindev" {
+  Note: "Origem: pisindev"
+  "CODIGO" VARCHAR(11)
+  "NOME" VARCHAR(15)
+  Indexes {
+    CODIGO [name: "PISINDEV"]
+  }
+}
+
+// Origem: ptohoref (DBFCDX)
+Table "ptohoref" {
+  Note: "Origem: ptohoref"
+  "RELOGIO" VARCHAR(5)
+  "HORINI" DECIMAL(5,2) [default: 0]
+  "HORFIM" DECIMAL(5,2) [default: 0]
+  "TIPO" INTEGER [default: 0]
+  Indexes {
+    RELOGIO+str(horini,5,2) [name: "PTOHOREF"]
+  }
+}
+
+// Origem: raisnatj (DBFCDX)
+Table "raisnatj" {
+  Note: "Origem: raisnatj"
+  "CODIGO" VARCHAR(4)
+  "NOME" VARCHAR(80)
+  "NATGRU" VARCHAR(50)
+  Indexes {
+    CODIGO [name: "RAISNATJ"]
+  }
+}
+
+// Origem: raistadm (DBFCDX)
+Table "raistadm" {
+  Note: "Origem: raistadm"
+  "CODIGO" VARCHAR(2)
+  "NOME" VARCHAR(150)
+  Indexes {
+    CODIGO [name: "RAISTADM"]
+  }
+}
+
+// Origem: rbtemp (DBFCDX)
+Table "rbtemp" {
+  Note: "Origem: rbtemp"
+  "NUMERO" INTEGER [default: 0]
+  "DATA" DATETIME
+  "HORA" DECIMAL(5,2) [default: 0]
+  "DIA" INTEGER [default: 0]
+  Indexes {
+    STR(NUMERO,8)+DTOS(DATA)+STR(HORA,5,2) [name: "RBTEMP"]
+  }
+}
+
+// Origem: recucopy (DBFCDX)
+Table "recucopy" {
+  Note: "Origem: recucopy"
+  "NOME" VARCHAR(6)
+  "DIRETORIO" VARCHAR(35)
+  "ARQ01" VARCHAR(12)
+  "ARQ02" VARCHAR(12)
+  "ARQ03" VARCHAR(12)
+  "ARQ04" VARCHAR(12)
+  "ARQ05" VARCHAR(12)
+  "ARQ06" VARCHAR(12)
+  "ARQ07" VARCHAR(12)
+  "ARQ08" VARCHAR(12)
+  "ARQ09" VARCHAR(12)
+  "ARQ10" VARCHAR(12)
+  "ARQ11" VARCHAR(12)
+  "ARQ12" VARCHAR(12)
+  "ARQ13" VARCHAR(12)
+  "ARQ14" VARCHAR(12)
+  "ARQ15" VARCHAR(12)
+  "ARQ16" VARCHAR(12)
+  "ARQ17" VARCHAR(12)
+  "ARQ18" VARCHAR(12)
+  "ARQ19" VARCHAR(12)
+  "ARQ20" VARCHAR(12)
+  "ARQ21" VARCHAR(12)
+  "ARQ22" VARCHAR(12)
+  "ARQ23" VARCHAR(12)
+  "ARQ24" VARCHAR(12)
+  "ARQ25" VARCHAR(12)
+  "ARQ26" VARCHAR(12)
+  "ARQ27" VARCHAR(12)
+  "ARQ28" VARCHAR(12)
+  "ARQ29" VARCHAR(12)
+  "ARQ30" VARCHAR(12)
+  "ARQ31" VARCHAR(12)
+  "ARQ32" VARCHAR(12)
+  "ARQ33" VARCHAR(12)
+  "ARQ34" VARCHAR(12)
+  "ARQ35" VARCHAR(12)
+  "ARQ36" VARCHAR(12)
+  "ARQ37" VARCHAR(12)
+  "ARQ38" VARCHAR(12)
+  "ARQ39" VARCHAR(12)
+  "ARQ40" VARCHAR(12)
+  Indexes {
+    NOME [name: "RECUCOPY"]
+  }
+}
+
+// Origem: recuedit (DBFCDX)
+Table "recuedit" {
+  Note: "Origem: recuedit"
+  "DESCRICAO" VARCHAR(76)
+  "ARQUIVO" VARCHAR(12)
+  "SETUP" VARCHAR(76)
+  "MARSUP" INTEGER [default: 0]
+  "MARINF" INTEGER [default: 0]
+  "MARDIR" INTEGER [default: 0]
+  "MARESQ" INTEGER [default: 0]
+  "MARCOL" INTEGER [default: 0]
+  "MARLIN" INTEGER [default: 0]
+  Indexes {
+    ARQUIVO [name: "RECUEDIT"]
+  }
+}
+
+// Origem: recurntx (DBFCDX)
+Table "recurntx" {
+  Note: "Origem: recurntx"
+  "DESCRICAO" VARCHAR(78)
+  "DBF" VARCHAR(8)
+  "NTX" VARCHAR(8)
+  "SEQ" INTEGER [default: 0]
+  "TAG" VARCHAR(20)
+  "CAMPO" VARCHAR(56)
+  "PAD" VARCHAR(1)
+  Indexes {
+    DBF+NTX+STR(SEQ,3) [name: "RECURNTX"]
+  }
+}
+
+// Origem: rel2 (DBFCDX)
+Table "rel2" {
+  Note: "Origem: rel2"
+  "CODIGO" VARCHAR(8)
+  "A" INTEGER [default: 0]
+  "B" INTEGER [default: 0]
+  "C" INTEGER [default: 0]
+  "D" INTEGER [default: 0]
+  "E" INTEGER [default: 0]
+  "F" INTEGER [default: 0]
+  "G" INTEGER [default: 0]
+  "H" INTEGER [default: 0]
+  "I" INTEGER [default: 0]
+  "J" INTEGER [default: 0]
+  "K" INTEGER [default: 0]
+  "L" INTEGER [default: 0]
+  "M" INTEGER [default: 0]
+  "N" INTEGER [default: 0]
+  "O" INTEGER [default: 0]
+  "P" INTEGER [default: 0]
+  "Q" INTEGER [default: 0]
+  "R" INTEGER [default: 0]
+  "S" INTEGER [default: 0]
+  "T" INTEGER [default: 0]
+  "U" INTEGER [default: 0]
+  "V" INTEGER [default: 0]
+  "W" INTEGER [default: 0]
+  "X" INTEGER [default: 0]
+  "Y" INTEGER [default: 0]
+  "Z" INTEGER [default: 0]
+  "AA" INTEGER [default: 0]
+  "AB" INTEGER [default: 0]
+  "AC" INTEGER [default: 0]
+  "AD" INTEGER [default: 0]
+  "AE" INTEGER [default: 0]
+  "AF" INTEGER [default: 0]
+  Indexes {
+    CODIGO [name: "REL2"]
+  }
+}
+
+// Origem: relconta (DBFCDX)
+Table "relconta" {
+  Note: "Origem: relconta"
+  "CODIGO" VARCHAR(8)
+  "C1" INTEGER [default: 0]
+  "C2" INTEGER [default: 0]
+  "C3" INTEGER [default: 0]
+  "C4" INTEGER [default: 0]
+  "C5" INTEGER [default: 0]
+  "C6" INTEGER [default: 0]
+  "C7" INTEGER [default: 0]
+  "C8" INTEGER [default: 0]
+  "C9" INTEGER [default: 0]
+  "C10" INTEGER [default: 0]
+  "C11" INTEGER [default: 0]
+  "C12" INTEGER [default: 0]
+  "C13" INTEGER [default: 0]
+  "C14" INTEGER [default: 0]
+  "C15" INTEGER [default: 0]
+  "NOME" VARCHAR(30)
+  Indexes {
+    CODIGO [name: "RELCONTA"]
+  }
+}
+
+// Origem: relogios (DBFCDX)
+Table "relogios" {
+  Note: "Origem: relogios"
+  "NUMERO" INTEGER [default: 0]
+  "NOME" VARCHAR(30)
+  "NUMINI" INTEGER [default: 0]
+  "NUMFIM" INTEGER [default: 0]
+  "DIAINI" INTEGER [default: 0]
+  "DIAFIM" INTEGER [default: 0]
+  "MESINI" INTEGER [default: 0]
+  "MESFIM" INTEGER [default: 0]
+  "ANOINI" INTEGER [default: 0]
+  "ANOFIM" INTEGER [default: 0]
+  "HORINI" INTEGER [default: 0]
+  "HORFIM" INTEGER [default: 0]
+  "MININI" INTEGER [default: 0]
+  "MINFIM" INTEGER [default: 0]
+  "SEGINI" INTEGER [default: 0]
+  "SEGFIM" INTEGER [default: 0]
+  "NUMRELINI" INTEGER [default: 0]
+  "NUMRELFIM" INTEGER [default: 0]
+  "NUMEMPINI" INTEGER [default: 0]
+  "NUMEMPFIM" INTEGER [default: 0]
+  "EXEMPLO" VARCHAR(50)
+  Indexes {
+    NUMERO [name: "RELOGIOS"]
+  }
+}
+
+// Origem: sindcnpj (DBFCDX)
+Table "sindcnpj" {
+  Note: "Origem: sindcnpj"
+  "CNPJ" VARCHAR(14)
+  Indexes {
+    CNPJ [name: "SINDCNPJ"]
+  }
+}
+
+// Origem: sindicat (DBFCDX)
+Table "sindicat" {
+  Note: "Origem: sindicat"
+  "CODIGO" INTEGER [default: 0]
+  "COGNOME" VARCHAR(20)
+  "NOME" VARCHAR(40)
+  "ENDERECO" VARCHAR(30)
+  "BAIRRO" VARCHAR(15)
+  "CIDADE" VARCHAR(20)
+  "ESTADO" VARCHAR(2)
+  "CEP" VARCHAR(9)
+  "TELEFONE" VARCHAR(14)
+  "SALJAN" DECIMAL(10,2) [default: 0]
+  "SALFEV" DECIMAL(10,2) [default: 0]
+  "SALMAR" DECIMAL(10,2) [default: 0]
+  "SALABR" DECIMAL(10,2) [default: 0]
+  "SALMAI" DECIMAL(10,2) [default: 0]
+  "SALJUN" DECIMAL(10,2) [default: 0]
+  "SALJUL" DECIMAL(10,2) [default: 0]
+  "SALAGO" DECIMAL(10,2) [default: 0]
+  "SALSET" DECIMAL(10,2) [default: 0]
+  "SALOUT" DECIMAL(10,2) [default: 0]
+  "SALNOV" DECIMAL(10,2) [default: 0]
+  "SALDEZ" DECIMAL(10,2) [default: 0]
+  "TAXAASS" DECIMAL(6,2) [default: 0]
+  "TETOASS" DECIMAL(10,2) [default: 0]
+  "DATDISSI" DATETIME
+  "DATASS1" DATETIME
+  "DATASS2" DATETIME
+  "DATSIND" DATETIME
+  "ENTIDADE" VARCHAR(20)
+  "CGC" VARCHAR(18)
+  "IE" VARCHAR(18)
+  "DESCONF" VARCHAR(1)
+  "PERCONF" DECIMAL(5,2) [default: 0]
+  "TETCONF" DECIMAL(12,2) [default: 0]
+  "DESSIND" VARCHAR(1)
+  "TETSIND" DECIMAL(12,2) [default: 0]
+  "PERSIND" DECIMAL(5,2) [default: 0]
+  "CTASIND" INTEGER [default: 0]
+  "CTACONF" INTEGER [default: 0]
+  "CTAASSI" INTEGER [default: 0]
+  "DDD" VARCHAR(3)
+  "EMAIL" VARCHAR(60)
+  "NUMEND" VARCHAR(10)
+  "CATEGORIA" VARCHAR(10)
+  "RESPO" VARCHAR(60)
+  "ENDCOMPL" VARCHAR(10)
+  "CODLX" INTEGER [default: 0]
+  "CODSI" INTEGER [default: 0]
+  Indexes {
+    CODIGO [name: "SINDICAT"]
+    CGC [name: "SINDICAT2"]
+    CODSI [name: "SINDICAT3"]
+  }
+}
+
+// Origem: tabarre (DBFCDX)
+Table "tabarre" {
+  Note: "Origem: tabarre"
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "MESEXT" VARCHAR(10)
+  "DESCT" DECIMAL(10,2) [default: 0]
+  "DESCTB" DECIMAL(10,2) [default: 0]
+  "DESCTC" DECIMAL(10,2) [default: 0]
+  "DESCTD" DECIMAL(10,2) [default: 0]
+  "DESCTE" DECIMAL(10,2) [default: 0]
+  Indexes {
+    STR(ANO,4)+STR(MES,2) [name: "TABARRE"]
+  }
+}
+
+// Origem: tabfalta (DBFCDX)
+Table "tabfalta" {
+  Note: "Origem: tabfalta"
+  "CODIGO" VARCHAR(2)
+  "NOME" VARCHAR(40)
+  "APURA" VARCHAR(1)
+  "FORMULA" VARCHAR(40)
+  "OBS" VARCHAR(50)
+  "MACPAD" VARCHAR(1)
+  "CODIMP01" INTEGER [default: 0]
+  "CODIMP02" INTEGER [default: 0]
+  "CODFGS" VARCHAR(2)
+  "CODFGR" VARCHAR(2)
+  Indexes {
+    CODIGO [name: "TABFALTA"]
+  }
+}
+
+// Origem: tabinss (DBFCDX)
+Table "tabinss" {
+  Note: "Origem: tabinss"
+  "NMES" INTEGER [default: 0]
+  "EMES" VARCHAR(10)
+  "CMES" VARCHAR(3)
+  "DESAL1" DECIMAL(12,2) [default: 0]
+  "ATESAL1" DECIMAL(12,2) [default: 0]
+  "TAXA1" DECIMAL(6,2) [default: 0]
+  "TAXAI1" DECIMAL(6,2) [default: 0]
+  "DESAL2" DECIMAL(12,2) [default: 0]
+  "ATESAL2" DECIMAL(12,2) [default: 0]
+  "TAXA2" DECIMAL(6,2) [default: 0]
+  "TAXAI2" DECIMAL(6,2) [default: 0]
+  "DESAL3" DECIMAL(12,2) [default: 0]
+  "ATESAL3" DECIMAL(12,2) [default: 0]
+  "TAXAI3" DECIMAL(6,2) [default: 0]
+  "TAXA3" DECIMAL(6,2) [default: 0]
+  "DESAL4" DECIMAL(12,2) [default: 0]
+  "ATESAL4" DECIMAL(12,2) [default: 0]
+  "TAXA4" DECIMAL(6,2) [default: 0]
+  "TAXAI4" DECIMAL(6,2) [default: 0]
+  "DESAL5" DECIMAL(12,2) [default: 0]
+  "ATESAL5" DECIMAL(12,2) [default: 0]
+  "TAXA5" DECIMAL(6,2) [default: 0]
+  "TAXAI5" DECIMAL(6,2) [default: 0]
+  "DESAL6" DECIMAL(12,2) [default: 0]
+  "ATESAL6" DECIMAL(12,2) [default: 0]
+  "TAXA6" DECIMAL(6,2) [default: 0]
+  "TAXAI6" DECIMAL(6,2) [default: 0]
+  "DESAL7" DECIMAL(12,2) [default: 0]
+  "ATESAL7" DECIMAL(12,2) [default: 0]
+  "TAXA7" DECIMAL(6,2) [default: 0]
+  "TAXAI7" DECIMAL(6,2) [default: 0]
+  "TETOIRRF" DECIMAL(12,2) [default: 0]
+  "TETOMAXIMO" DECIMAL(12,2) [default: 0]
+  "MINIMO" DECIMAL(12,2) [default: 0]
+  "FAMILIA" DECIMAL(12,2) [default: 0]
+  "TETOSALFA" DECIMAL(12,2) [default: 0]
+  "FAMILIA1" DECIMAL(12,2) [default: 0]
+  "TETOSALF1" DECIMAL(12,2) [default: 0]
+  "DESCONTO" DECIMAL(12,2) [default: 0]
+  Indexes {
+    NMES [name: "TABINSS"]
+  }
+}
+
+// Origem: tabirrf (DBFCDX)
+Table "tabirrf" {
+  Note: "Origem: tabirrf"
+  "NMES" INTEGER [default: 0]
+  "EMES" VARCHAR(10)
+  "CMES" VARCHAR(3)
+  "DESAL1" DECIMAL(18,2) [default: 0]
+  "ATESAL1" DECIMAL(18,2) [default: 0]
+  "TAXA1" DECIMAL(5,2) [default: 0]
+  "PARCELA1" DECIMAL(18,2) [default: 0]
+  "DESAL2" DECIMAL(18,2) [default: 0]
+  "ATESAL2" DECIMAL(18,2) [default: 0]
+  "TAXA2" DECIMAL(5,2) [default: 0]
+  "PARCELA2" DECIMAL(18,2) [default: 0]
+  "DESAL3" DECIMAL(18,2) [default: 0]
+  "ATESAL3" DECIMAL(18,2) [default: 0]
+  "TAXA3" DECIMAL(5,2) [default: 0]
+  "PARCELA3" DECIMAL(18,2) [default: 0]
+  "DESAL4" DECIMAL(18,2) [default: 0]
+  "ATESAL4" DECIMAL(18,2) [default: 0]
+  "TAXA4" DECIMAL(5,2) [default: 0]
+  "PARCELA4" DECIMAL(18,2) [default: 0]
+  "DESAL5" DECIMAL(18,2) [default: 0]
+  "ATESAL5" DECIMAL(18,2) [default: 0]
+  "TAXA5" DECIMAL(5,2) [default: 0]
+  "PARCELA5" DECIMAL(18,2) [default: 0]
+  "DESAL6" DECIMAL(18,2) [default: 0]
+  "ATESAL6" DECIMAL(18,2) [default: 0]
+  "TAXA6" DECIMAL(5,2) [default: 0]
+  "PARCELA6" DECIMAL(18,2) [default: 0]
+  "DESAL7" DECIMAL(18,2) [default: 0]
+  "ATESAL7" DECIMAL(18,2) [default: 0]
+  "TAXA7" DECIMAL(5,2) [default: 0]
+  "PARCELA7" DECIMAL(18,2) [default: 0]
+  "QTDEDEP" INTEGER [default: 0]
+  "VALDEPENDE" DECIMAL(18,2) [default: 0]
+  "MINIMO" DECIMAL(18,2) [default: 0]
+  "ARREDONDA" VARCHAR(1)
+  "DESPRESA" VARCHAR(1)
+  "FATORIRRF" DECIMAL(18,6) [default: 0]
+  "FATORIRR2" DECIMAL(18,6) [default: 0]
+  Indexes {
+    NMES [name: "TABIRRF"]
+  }
+}
+
+// Origem: tabocorr (DBFCDX)
+Table "tabocorr" {
+  Note: "Origem: tabocorr"
+  "CODIGO" VARCHAR(2)
+  "NOME" VARCHAR(40)
+}
+
+// Origem: tabreaju (DBFCDX)
+Table "tabreaju" {
+  Note: "Origem: tabreaju"
+  "CODIGO" VARCHAR(2)
+  "NOME" VARCHAR(40)
+  Indexes {
+    CODIGO [name: "TABREAJU"]
+  }
+}
+
+// Origem: tabtroco (DBFCDX)
+Table "tabtroco" {
+  Note: "Origem: tabtroco"
+  "MES" INTEGER [default: 0]
+  "ANO" INTEGER [default: 0]
+  "MESEXT" VARCHAR(10)
+  "DESCT" DECIMAL(10,2) [default: 0]
+  "DESCTB" DECIMAL(10,2) [default: 0]
+  "DESCTC" DECIMAL(10,2) [default: 0]
+  "DESCTD" DECIMAL(10,2) [default: 0]
+  "DESCTE" DECIMAL(10,2) [default: 0]
+  Indexes {
+    STR(ANO,4)+STR(MES,2) [name: "TABTROCO"]
+  }
+}
+
+// Origem: tabturno (DBFCDX)
+Table "tabturno" {
+  Note: "Origem: tabturno"
+  "CODIGO" VARCHAR(2)
+  "NOME" VARCHAR(40)
+  "NOM2" VARCHAR(40)
+  "DESCRICAO" VARCHAR(40)
+  "APURA" VARCHAR(1)
+  "FORMULA" VARCHAR(40)
+  Indexes {
+    CODIGO [name: "TABTURNO"]
+  }
+}
+
+// Origem: tbcodpg (DBFCDX)
+Table "tbcodpg" {
+  Note: "Origem: tbcodpg"
+  "CODIGO" VARCHAR(4)
+  "NOME" VARCHAR(50)
+  Indexes {
+    CODIGO [name: "TBCODPG"]
+  }
+}
+
+// Origem: tb_grpar (DBFCDX)
+Table "tb_grpar" {
+  Note: "Origem: tb_grpar"
+  "CODIGO" VARCHAR(2)
+  "NOME" VARCHAR(20)
+  Indexes {
+    CODIGO [name: "TB_GRPAR"]
+  }
+}
+
+// Origem: telememo (DBFCDX)
+Table "telememo" {
+  Note: "Origem: telememo"
+  "NOME" VARCHAR(15)
+  "ESPECIF" VARCHAR(35)
+  "TELEF" VARCHAR(14)
+  "FAX" VARCHAR(14)
+  Indexes {
+    NOME [name: "TELEMEMO"]
+  }
+}
+
+// Origem: tilresg (DBFCDX)
+Table "tilresg" {
+  Note: "Origem: tilresg"
+  "NOME" VARCHAR(12)
+  "TITULO" VARCHAR(12)
+}
+
+// Origem: tomador (DBFCDX)
+Table "tomador" {
+  Note: "Origem: tomador"
+  "NUMERO" INTEGER [default: 0]
+  "COGNOME" VARCHAR(12)
+  "NOME" VARCHAR(40)
+  "ENDERECO" VARCHAR(40)
+  "BAIRRO" VARCHAR(30)
+  "CIDADE" VARCHAR(35)
+  "ESTADO" VARCHAR(2)
+  "CEP" VARCHAR(9)
+  "CXPOSTAL" VARCHAR(5)
+  "DDDTLX" VARCHAR(4)
+  "TELEX" VARCHAR(6)
+  "DDD" VARCHAR(4)
+  "TELEFONE" VARCHAR(9)
+  "RAMAL" VARCHAR(4)
+  "CONTATO" VARCHAR(22)
+  "DDD1" VARCHAR(4)
+  "TELEFONE1" VARCHAR(9)
+  "RAMAL1" VARCHAR(4)
+  "CONTATO1" VARCHAR(22)
+  "DDDFAX" VARCHAR(4)
+  "TELEFAX" VARCHAR(9)
+  "CGC" VARCHAR(18)
+  "INSCR" VARCHAR(15)
+  "JUCESP" VARCHAR(15)
+  "OBSERVA" VARCHAR(30)
+  "PESSOA" VARCHAR(1)
+  "IMUNI" VARCHAR(15)
+  "SITE" VARCHAR(30)
+  "EMAIL" VARCHAR(30)
+  Indexes {
+    NUMERO [name: "TOMADOR"]
+  }
+}
+
+// Origem: toolhelp (DBFCDX)
+Table "toolhelp" {
+  Note: "Origem: toolhelp"
+  "DBF" VARCHAR(8)
+  "CAMPO" VARCHAR(10)
+  "DADO" VARCHAR(40)
+  "ARQUIVO" VARCHAR(12)
+  "DESCRICAO" LONGTEXT
+  Indexes {
+    DBF+CAMPO [name: "TOOLHELP"]
+  }
+}
+
+// Origem: unid (DBFCDX)
+Table "unid" {
+  Note: "Origem: unid"
+  "CODIGO" VARCHAR(10)
+  "NUMERO" INTEGER [default: 0]
+  "NOME" VARCHAR(30)
+  "MODIRETA" VARCHAR(1)
+  "CODSINER" INTEGER [default: 0]
+  Indexes {
+    CODIGO [name: "UNID-1"]
+    NUMERO [name: "UNID-2"]
+    CODSINER [name: "UNID-3"]
+  }
+}
+
+// Origem: vinculo (DBFCDX)
+Table "vinculo" {
+  Note: "Origem: vinculo"
+  "ID" INTEGER [default: 0]
+  "CODIGO" VARCHAR(2)
+  "NOME" VARCHAR(150)
+  "COGNOME" VARCHAR(40)
+  "RELACAO_EM" VARCHAR(1)
+  "GERA_CAGED" VARCHAR(1)
+  "CODRAIS" VARCHAR(2)
+  "COD_RETENC" VARCHAR(3)
+  "PCT_FGTS" DECIMAL(5,2) [default: 0]
+  "INTEGRA_PL" VARCHAR(1)
+  "CATEGORIA_" VARCHAR(1)
+  "GERA_RAIS" VARCHAR(1)
+  "PCT_FGTS_A" VARCHAR(1)
+  "FMA_ARRED_" VARCHAR(1)
+  "TIP_CONTRA" VARCHAR(1)
+  "PAGA_FERIA" VARCHAR(1)
+  "PAGA_FOLHA" VARCHAR(1)
+  "PAGA_13_SA" VARCHAR(1)
+  "PAGA_PPR" VARCHAR(1)
+  "CODSEFIP" VARCHAR(10)
+  Indexes {
+    CODIGO [name: "VINCULO"]
+  }
+}
+
+// Origem: vtcomp (DBFCDX)
+Table "vtcomp" {
+  Note: "Origem: vtcomp"
+  "CODIGO" INTEGER [default: 0]
+  "VALOR" DECIMAL(12,2) [default: 0]
+  "DESCR" VARCHAR(50)
+  "COD01" INTEGER [default: 0]
+  "COD02" INTEGER [default: 0]
+  "COD03" INTEGER [default: 0]
+  "COD04" INTEGER [default: 0]
+  "COD05" INTEGER [default: 0]
+  "COD06" INTEGER [default: 0]
+  "COD07" INTEGER [default: 0]
+  "COD08" INTEGER [default: 0]
+  "COD09" INTEGER [default: 0]
+  "COD10" INTEGER [default: 0]
+  "VAL01" DECIMAL(12,2) [default: 0]
+  "VAL02" DECIMAL(12,2) [default: 0]
+  "VAL03" DECIMAL(12,2) [default: 0]
+  "VAL04" DECIMAL(12,2) [default: 0]
+  "VAL05" DECIMAL(12,2) [default: 0]
+  "VAL06" DECIMAL(12,2) [default: 0]
+  "VAL07" DECIMAL(12,2) [default: 0]
+  "VAL08" DECIMAL(12,2) [default: 0]
+  "VAL09" DECIMAL(12,2) [default: 0]
+  "VAL10" DECIMAL(12,2) [default: 0]
+  "QTD01" INTEGER [default: 0]
+  "QTD02" INTEGER [default: 0]
+  "QTD03" INTEGER [default: 0]
+  "QTD04" INTEGER [default: 0]
+  "QTD05" INTEGER [default: 0]
+  "QTD06" INTEGER [default: 0]
+  "QTD07" INTEGER [default: 0]
+  "QTD08" INTEGER [default: 0]
+  "QTD09" INTEGER [default: 0]
+  "QTD10" INTEGER [default: 0]
+  Indexes {
+    CODIGO [name: "VTCOMP"]
+  }
+}
+
+// Origem: vtconta (DBFCDX)
+Table "vtconta" {
+  Note: "Origem: vtconta"
+  "CODIGO" INTEGER [default: 0]
+  "VALOR" DECIMAL(10,2) [default: 0]
+  "DATAATU" DATETIME
+  "DESCR" VARCHAR(30)
+  "TKCODOPE" VARCHAR(6)
+  "TKCODBIL" VARCHAR(12)
+  "COMPL" VARCHAR(10)
+  "FACIAL" VARCHAR(1)
+  "ESTADO" VARCHAR(2)
+  "VBCODBIL" VARCHAR(5)
+  "VBREGIAO" VARCHAR(2)
+  "VBTIPO" VARCHAR(1)
+  "QTDEMIN" INTEGER [default: 0]
+  "QTDEMAX" INTEGER [default: 0]
+  "VALMAX" DECIMAL(10,2) [default: 0]
+  "VALMIN" DECIMAL(10,2) [default: 0]
+  Indexes {
+    CODIGO [name: "VTCONTA"]
+    TKCODBIL [name: "VTCONTA-2"]
+    VBCODBIL [name: "VTCONTA-3"]
+  }
+}
+
+// Origem: vtoper (DBFCDX)
+Table "vtoper" {
+  Note: "Origem: vtoper"
+  "NUMERO" INTEGER [default: 0]
+  "COGNOME" VARCHAR(12)
+  "NOME" VARCHAR(40)
+  "ENDERECO" VARCHAR(40)
+  "BAIRRO" VARCHAR(30)
+  "CIDADE" VARCHAR(35)
+  "ESTADO" VARCHAR(2)
+  "CEP" VARCHAR(9)
+  "CXPOSTAL" VARCHAR(5)
+  "DDDTLX" VARCHAR(4)
+  "TELEX" VARCHAR(6)
+  "DDD" VARCHAR(4)
+  "TELEFONE" VARCHAR(9)
+  "RAMAL" VARCHAR(4)
+  "CONTATO" VARCHAR(22)
+  "DDD1" VARCHAR(4)
+  "TELEFONE1" VARCHAR(9)
+  "RAMAL1" VARCHAR(4)
+  "CONTATO1" VARCHAR(22)
+  "DDDFAX" VARCHAR(4)
+  "TELEFAX" VARCHAR(9)
+  "CGC" VARCHAR(18)
+  "INSCR" VARCHAR(15)
+  "JUCESP" VARCHAR(15)
+  "OBSERVA" VARCHAR(30)
+  "PESSOA" VARCHAR(1)
+  "IMUNI" VARCHAR(15)
+  "SITE" VARCHAR(30)
+  "EMAIL" VARCHAR(30)
+  "TKCODOPE" VARCHAR(6)
+  Indexes {
+    NUMERO [name: "VTOPER"]
+    TKCODOPE [name: "VTOPER-2"]
+  }
+}
+

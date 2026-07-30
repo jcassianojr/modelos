@@ -1,8 +1,8 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 27/07/2026
+> Varredura automatica realizada em: 29/07/2026
 
-## Tabela DBF: `esocial_cbo.dbf`
-> **Origem:** `esocial_cbo.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_cbo`
+> **Origem:** `esocial_cbo` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -15,8 +15,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab01.dbf`
-> **Origem:** `esocial_tab01.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab01`
+> **Origem:** `esocial_tab01` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -33,8 +33,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab02.dbf`
-> **Origem:** `esocial_tab02.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab02`
+> **Origem:** `esocial_tab02` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -47,8 +47,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab03.dbf`
-> **Origem:** `esocial_tab03.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab03`
+> **Origem:** `esocial_tab03` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -62,8 +62,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab04.dbf`
-> **Origem:** `esocial_tab04.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab04`
+> **Origem:** `esocial_tab04` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -79,8 +79,8 @@
 - Tag: `CODFPAS` Expressao: `CODFPAS`
 
 ---
-## Tabela DBF: `esocial_tab05.dbf`
-> **Origem:** `esocial_tab05.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab05`
+> **Origem:** `esocial_tab05` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -93,8 +93,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab07.dbf`
-> **Origem:** `esocial_tab07.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab07`
+> **Origem:** `esocial_tab07` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -109,8 +109,8 @@
 - Tag: `CODIGO` Expressao: `codigo`
 
 ---
-## Tabela DBF: `esocial_tab08.dbf`
-> **Origem:** `esocial_tab08.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab08`
+> **Origem:** `esocial_tab08` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -124,8 +124,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab09.dbf`
-> **Origem:** `esocial_tab09.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab09`
+> **Origem:** `esocial_tab09` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -145,8 +145,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab10.dbf`
-> **Origem:** `esocial_tab10.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab10`
+> **Origem:** `esocial_tab10` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -163,8 +163,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab11.dbf`
-> **Origem:** `esocial_tab11.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab11`
+> **Origem:** `esocial_tab11` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -180,8 +180,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab13.dbf`
-> **Origem:** `esocial_tab13.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab13`
+> **Origem:** `esocial_tab13` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -194,8 +194,8 @@
 - Tag: `CODIGO` Expressao: `codigo`
 
 ---
-## Tabela DBF: `esocial_tab14.dbf`
-> **Origem:** `esocial_tab14.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab14`
+> **Origem:** `esocial_tab14` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -208,8 +208,8 @@
 - Tag: `CODIGO` Expressao: `codigo`
 
 ---
-## Tabela DBF: `esocial_tab15.dbf`
-> **Origem:** `esocial_tab15.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab15`
+> **Origem:** `esocial_tab15` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -222,8 +222,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab16.dbf`
-> **Origem:** `esocial_tab16.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab16`
+> **Origem:** `esocial_tab16` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -236,8 +236,8 @@
 - Tag: `CODIGO` Expressao: `codigo`
 
 ---
-## Tabela DBF: `esocial_tab17.dbf`
-> **Origem:** `esocial_tab17.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab17`
+> **Origem:** `esocial_tab17` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -250,8 +250,8 @@
 - Tag: `CODIGO` Expressao: `codigo`
 
 ---
-## Tabela DBF: `esocial_tab18.dbf`
-> **Origem:** `esocial_tab18.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab18`
+> **Origem:** `esocial_tab18` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -270,8 +270,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab19.dbf`
-> **Origem:** `esocial_tab19.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab19`
+> **Origem:** `esocial_tab19` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -287,8 +287,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab20.dbf`
-> **Origem:** `esocial_tab20.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab20`
+> **Origem:** `esocial_tab20` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -301,8 +301,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab21.dbf`
-> **Origem:** `esocial_tab21.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab21`
+> **Origem:** `esocial_tab21` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -317,8 +317,8 @@
 - Tag: `CODIGO` Expressao: `codigo`
 
 ---
-## Tabela DBF: `esocial_tab22.dbf`
-> **Origem:** `esocial_tab22.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab22`
+> **Origem:** `esocial_tab22` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -333,8 +333,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab23.dbf`
-> **Origem:** `esocial_tab23.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab23`
+> **Origem:** `esocial_tab23` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -349,8 +349,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab24.dbf`
-> **Origem:** `esocial_tab24.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab24`
+> **Origem:** `esocial_tab24` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -363,8 +363,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab26.dbf`
-> **Origem:** `esocial_tab26.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab26`
+> **Origem:** `esocial_tab26` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -377,8 +377,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab51.dbf`
-> **Origem:** `esocial_tab51.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab51`
+> **Origem:** `esocial_tab51` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -392,8 +392,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab52.dbf`
-> **Origem:** `esocial_tab52.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab52`
+> **Origem:** `esocial_tab52` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -415,8 +415,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab53.dbf`
-> **Origem:** `esocial_tab53.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab53`
+> **Origem:** `esocial_tab53` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -430,8 +430,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab54.dbf`
-> **Origem:** `esocial_tab54.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab54`
+> **Origem:** `esocial_tab54` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -471,8 +471,8 @@
 - Tag: `CODIGO` Expressao: `codigo`
 
 ---
-## Tabela DBF: `esocial_tab55.dbf`
-> **Origem:** `esocial_tab55.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab55`
+> **Origem:** `esocial_tab55` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -487,8 +487,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab57.dbf`
-> **Origem:** `esocial_tab57.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab57`
+> **Origem:** `esocial_tab57` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -502,8 +502,8 @@
 - Tag: `RECNO` Expressao: `recno()`
 
 ---
-## Tabela DBF: `esocial_tab58.dbf`
-> **Origem:** `esocial_tab58.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab58`
+> **Origem:** `esocial_tab58` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -518,8 +518,8 @@
 - Tag: `RECNO` Expressao: `recno()`
 
 ---
-## Tabela DBF: `esocial_tab59.dbf`
-> **Origem:** `esocial_tab59.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab59`
+> **Origem:** `esocial_tab59` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -533,8 +533,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab60.dbf`
-> **Origem:** `esocial_tab60.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab60`
+> **Origem:** `esocial_tab60` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -548,8 +548,8 @@
 - Tag: `CODIGO` Expressao: `codigo`
 
 ---
-## Tabela DBF: `esocial_tab61.dbf`
-> **Origem:** `esocial_tab61.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab61`
+> **Origem:** `esocial_tab61` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -565,8 +565,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab62.dbf`
-> **Origem:** `esocial_tab62.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab62`
+> **Origem:** `esocial_tab62` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -579,8 +579,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab63.dbf`
-> **Origem:** `esocial_tab63.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab63`
+> **Origem:** `esocial_tab63` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -596,8 +596,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab64.dbf`
-> **Origem:** `esocial_tab64.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab64`
+> **Origem:** `esocial_tab64` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -617,8 +617,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `esocial_tab65.dbf`
-> **Origem:** `esocial_tab65.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab65`
+> **Origem:** `esocial_tab65` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -632,8 +632,8 @@
 - Tag: `RECNO` Expressao: `recno()`
 
 ---
-## Tabela DBF: `esocial_tab66.dbf`
-> **Origem:** `esocial_tab66.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab66`
+> **Origem:** `esocial_tab66` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -649,8 +649,8 @@
 - Tag: `RECNO` Expressao: `recno()`
 
 ---
-## Tabela DBF: `esocial_tab67.dbf`
-> **Origem:** `esocial_tab67.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab67`
+> **Origem:** `esocial_tab67` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -664,8 +664,8 @@
 - Tag: `RECNO` Expressao: `recno()`
 
 ---
-## Tabela DBF: `esocial_tab68.dbf`
-> **Origem:** `esocial_tab68.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab68`
+> **Origem:** `esocial_tab68` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -681,8 +681,8 @@
 - Tag: `RECNO` Expressao: `recno()`
 
 ---
-## Tabela DBF: `esocial_tab69.dbf`
-> **Origem:** `esocial_tab69.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab69`
+> **Origem:** `esocial_tab69` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -695,8 +695,8 @@
 - Tag: `RECNO` Expressao: `recno()`
 
 ---
-## Tabela DBF: `esocial_tab70.dbf`
-> **Origem:** `esocial_tab70.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab70`
+> **Origem:** `esocial_tab70` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -709,8 +709,8 @@
 - Tag: `RECNO` Expressao: `recno()`
 
 ---
-## Tabela DBF: `esocial_tab71.dbf`
-> **Origem:** `esocial_tab71.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab71`
+> **Origem:** `esocial_tab71` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -723,8 +723,8 @@
 - Tag: `RECNO` Expressao: `recno()`
 
 ---
-## Tabela DBF: `esocial_tab72.dbf`
-> **Origem:** `esocial_tab72.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab72`
+> **Origem:** `esocial_tab72` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -737,8 +737,8 @@
 - Tag: `RECNO` Expressao: `recno()`
 
 ---
-## Tabela DBF: `esocial_tab73.dbf`
-> **Origem:** `esocial_tab73.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab73`
+> **Origem:** `esocial_tab73` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -751,8 +751,8 @@
 - Tag: `RECNO` Expressao: `recno()`
 
 ---
-## Tabela DBF: `esocial_tab74.dbf`
-> **Origem:** `esocial_tab74.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab74`
+> **Origem:** `esocial_tab74` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -765,8 +765,8 @@
 - Tag: `RECNO` Expressao: `recno()`
 
 ---
-## Tabela DBF: `esocial_tab75.dbf`
-> **Origem:** `esocial_tab75.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esocial_tab75`
+> **Origem:** `esocial_tab75` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |

@@ -1,6 +1,6 @@
-// Origem: afdterr.dbf (DBF)
+// Origem: afdterr (DBFCDX)
 Table "afdterr" {
-  Note: "Origem: afdterr.dbf"
+  Note: "Origem: afdterr"
   "NUMERO" INTEGER [default: 0]
   "DATA" DATETIME
   "HORA" DECIMAL(5,2) [default: 0]
@@ -11,9 +11,9 @@ Table "afdterr" {
   }
 }
 
-// Origem: ajudira.dbf (DBF)
+// Origem: ajudira (DBFCDX)
 Table "ajudira" {
-  Note: "Origem: ajudira.dbf"
+  Note: "Origem: ajudira"
   "CPF" VARCHAR(14)
   "MES" INTEGER [default: 0]
   "NUMERO" INTEGER [default: 0]
@@ -36,9 +36,9 @@ Table "ajudira" {
   }
 }
 
-// Origem: ajudird.dbf (DBF)
+// Origem: ajudird (DBFCDX)
 Table "ajudird" {
-  Note: "Origem: ajudird.dbf"
+  Note: "Origem: ajudird"
   "CPF" VARCHAR(14)
   "MES" INTEGER [default: 0]
   "NUMERO" INTEGER [default: 0]
@@ -61,9 +61,9 @@ Table "ajudird" {
   }
 }
 
-// Origem: ajudirf.dbf (DBF)
+// Origem: ajudirf (DBFCDX)
 Table "ajudirf" {
-  Note: "Origem: ajudirf.dbf"
+  Note: "Origem: ajudirf"
   "CPF" VARCHAR(14)
   "MES" INTEGER [default: 0]
   "NUMERO" INTEGER [default: 0]
@@ -86,9 +86,9 @@ Table "ajudirf" {
   }
 }
 
-// Origem: bcobak.dbf (DBF)
+// Origem: bcobak (DBFCDX)
 Table "bcobak" {
-  Note: "Origem: bcobak.dbf"
+  Note: "Origem: bcobak"
   "NUMERO" INTEGER [default: 0]
   "ANO" INTEGER [default: 0]
   "MES" INTEGER [default: 0]
@@ -105,9 +105,9 @@ Table "bcobak" {
   }
 }
 
-// Origem: bcodek.dbf (DBF)
+// Origem: bcodek (DBFCDX)
 Table "bcodek" {
-  Note: "Origem: bcodek.dbf"
+  Note: "Origem: bcodek"
   "NUMERO" INTEGER [default: 0]
   "ANO" INTEGER [default: 0]
   "MES" INTEGER [default: 0]
@@ -124,9 +124,9 @@ Table "bcodek" {
   }
 }
 
-// Origem: bcodem.dbf (DBF)
+// Origem: bcodem (DBFCDX)
 Table "bcodem" {
-  Note: "Origem: bcodem.dbf"
+  Note: "Origem: bcodem"
   "NUMERO" INTEGER [default: 0]
   "ANO" INTEGER [default: 0]
   "MES" INTEGER [default: 0]
@@ -143,9 +143,9 @@ Table "bcodem" {
   }
 }
 
-// Origem: bcohrs.dbf (DBF)
+// Origem: bcohrs (DBFCDX)
 Table "bcohrs" {
-  Note: "Origem: bcohrs.dbf"
+  Note: "Origem: bcohrs"
   "NUMERO" INTEGER [default: 0]
   "ANO" INTEGER [default: 0]
   "MES" INTEGER [default: 0]
@@ -162,9 +162,9 @@ Table "bcohrs" {
   }
 }
 
-// Origem: bcoreq.dbf (DBF)
+// Origem: bcoreq (DBFCDX)
 Table "bcoreq" {
-  Note: "Origem: bcoreq.dbf"
+  Note: "Origem: bcoreq"
   "REQUISI" INTEGER [default: 0]
   "NUMERO" INTEGER [default: 0]
   "DATA" DATETIME
@@ -175,9 +175,9 @@ Table "bcoreq" {
   "IMP" VARCHAR(6)
 }
 
-// Origem: bcrbak.dbf (DBF)
+// Origem: bcrbak (DBFCDX)
 Table "bcrbak" {
-  Note: "Origem: bcrbak.dbf"
+  Note: "Origem: bcrbak"
   "REQUISI" INTEGER [default: 0]
   "NUMERO" INTEGER [default: 0]
   "DATA" DATETIME
@@ -191,9 +191,9 @@ Table "bcrbak" {
   }
 }
 
-// Origem: cesta.dbf (DBF)
+// Origem: cesta (DBFCDX)
 Table "cesta" {
-  Note: "Origem: cesta.dbf"
+  Note: "Origem: cesta"
   "NUMERO" INTEGER [default: 0]
   "NOME" VARCHAR(40)
   "CESTA" VARCHAR(1)
@@ -204,9 +204,9 @@ Table "cesta" {
   }
 }
 
-// Origem: ctrhor.dbf (DBF)
+// Origem: ctrhor (DBFCDX)
 Table "ctrhor" {
-  Note: "Origem: ctrhor.dbf"
+  Note: "Origem: ctrhor"
   "DEPTO" INTEGER [default: 0]
   "SETOR" INTEGER [default: 0]
   "SECAO" INTEGER [default: 0]
@@ -226,9 +226,9 @@ Table "ctrhor" {
   }
 }
 
-// Origem: ferias.dbf (DBF)
+// Origem: ferias (DBFCDX)
 Table "ferias" {
-  Note: "Origem: ferias.dbf"
+  Note: "Origem: ferias"
   "NUMERO" INTEGER [default: 0]
   "DEPTO" INTEGER [default: 0]
   "SECAO" INTEGER [default: 0]
@@ -260,9 +260,9 @@ Table "ferias" {
   }
 }
 
-// Origem: foopes.dbf (DBF)
+// Origem: foopes (DBFCDX)
 Table "foopes" {
-  Note: "Origem: foopes.dbf"
+  Note: "Origem: foopes"
   "NUMERO" INTEGER [default: 0]
   "CNUMERO" VARCHAR(8)
   "DEPTO" INTEGER [default: 0]
@@ -397,9 +397,9 @@ Table "foopes" {
   }
 }
 
-// Origem: foptoatr.dbf (DBF)
+// Origem: foptoatr (DBFCDX)
 Table "foptoatr" {
-  Note: "Origem: foptoatr.dbf"
+  Note: "Origem: foptoatr"
   "NUMERO" INTEGER [default: 0]
   "NOME" VARCHAR(40)
   "DATA" DATETIME
@@ -418,9 +418,9 @@ Table "foptoatr" {
   }
 }
 
-// Origem: foptoeve.dbf (DBF)
+// Origem: foptoeve (DBFCDX)
 Table "foptoeve" {
-  Note: "Origem: foptoeve.dbf"
+  Note: "Origem: foptoeve"
   "DIA" INTEGER [default: 0]
   "MES" INTEGER [default: 0]
   "CODIGO" VARCHAR(2)
@@ -433,9 +433,9 @@ Table "foptoeve" {
   }
 }
 
-// Origem: foptoprd.dbf (DBF)
+// Origem: foptoprd (DBFCDX)
 Table "foptoprd" {
-  Note: "Origem: foptoprd.dbf"
+  Note: "Origem: foptoprd"
   "ORIGEM" INTEGER [default: 0]
   "DESTINO" INTEGER [default: 0]
   "DATA" DATETIME
@@ -445,9 +445,9 @@ Table "foptoprd" {
   }
 }
 
-// Origem: foptorev.dbf (DBF)
+// Origem: foptorev (DBFCDX)
 Table "foptorev" {
-  Note: "Origem: foptorev.dbf"
+  Note: "Origem: foptorev"
   "GRUPO" VARCHAR(2)
   "DATA" DATETIME
   "CODREV" VARCHAR(2)
@@ -463,9 +463,9 @@ Table "foptorev" {
   "HORARIO" INTEGER [default: 0]
 }
 
-// Origem: forais.dbf (DBF)
+// Origem: forais (DBFCDX)
 Table "forais" {
-  Note: "Origem: forais.dbf"
+  Note: "Origem: forais"
   "ANO" INTEGER [default: 0]
   "NUMERO" INTEGER [default: 0]
   "NOME" VARCHAR(30)
@@ -538,9 +538,9 @@ Table "forais" {
   }
 }
 
-// Origem: fosfam.dbf (DBF)
+// Origem: fosfam (DBFCDX)
 Table "fosfam" {
-  Note: "Origem: fosfam.dbf"
+  Note: "Origem: fosfam"
   "REQUISI" INTEGER [default: 0]
   "NUMERO" INTEGER [default: 0]
   "NOME" VARCHAR(40)
@@ -580,9 +580,9 @@ Table "fosfam" {
   }
 }
 
-// Origem: fo_comp.dbf (DBF)
+// Origem: fo_comp (DBFCDX)
 Table "fo_comp" {
-  Note: "Origem: fo_comp.dbf"
+  Note: "Origem: fo_comp"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "HORAS" DECIMAL(6,2) [default: 0]
@@ -603,9 +603,9 @@ Table "fo_comp" {
   }
 }
 
-// Origem: fo_dio.dbf (DBF)
+// Origem: fo_dio (DBFCDX)
 Table "fo_dio" {
-  Note: "Origem: fo_dio.dbf"
+  Note: "Origem: fo_dio"
   "NUMERO" INTEGER [default: 0]
   "DATA" DATETIME
   "HORA" DECIMAL(5,2) [default: 0]
@@ -614,9 +614,9 @@ Table "fo_dio" {
   "TIPOR" VARCHAR(1)
 }
 
-// Origem: fo_exp.dbf (DBF)
+// Origem: fo_exp (DBFCDX)
 Table "fo_exp" {
-  Note: "Origem: fo_exp.dbf"
+  Note: "Origem: fo_exp"
   "DEPTO" INTEGER [default: 0]
   "SETOR" INTEGER [default: 0]
   "SECAO" INTEGER [default: 0]
@@ -638,9 +638,9 @@ Table "fo_exp" {
   }
 }
 
-// Origem: fo_fer.dbf (DBF)
+// Origem: fo_fer (DBFCDX)
 Table "fo_fer" {
-  Note: "Origem: fo_fer.dbf"
+  Note: "Origem: fo_fer"
   "DEPTO" INTEGER [default: 0]
   "SECAO" INTEGER [default: 0]
   "SETOR" INTEGER [default: 0]
@@ -691,9 +691,9 @@ Table "fo_fer" {
   }
 }
 
-// Origem: fo_ffe.dbf (DBF)
+// Origem: fo_ffe (DBFCDX)
 Table "fo_ffe" {
-  Note: "Origem: fo_ffe.dbf"
+  Note: "Origem: fo_ffe"
   "CONTA" INTEGER [default: 0]
   "MES" INTEGER [default: 0]
   "HORAS" DECIMAL(10,2) [default: 0]
@@ -704,9 +704,9 @@ Table "fo_ffe" {
   }
 }
 
-// Origem: fo_fp13a.dbf (DBF)
+// Origem: fo_fp13a (DBFCDX)
 Table "fo_fp13a" {
-  Note: "Origem: fo_fp13a.dbf"
+  Note: "Origem: fo_fp13a"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "HORAS" DECIMAL(7,2) [default: 0]
@@ -723,9 +723,9 @@ Table "fo_fp13a" {
   }
 }
 
-// Origem: fo_fp13b.dbf (DBF)
+// Origem: fo_fp13b (DBFCDX)
 Table "fo_fp13b" {
-  Note: "Origem: fo_fp13b.dbf"
+  Note: "Origem: fo_fp13b"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "HORAS" DECIMAL(7,2) [default: 0]
@@ -742,9 +742,9 @@ Table "fo_fp13b" {
   }
 }
 
-// Origem: fo_fp13c.dbf (DBF)
+// Origem: fo_fp13c (DBFCDX)
 Table "fo_fp13c" {
-  Note: "Origem: fo_fp13c.dbf"
+  Note: "Origem: fo_fp13c"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "HORAS" DECIMAL(7,2) [default: 0]
@@ -761,9 +761,9 @@ Table "fo_fp13c" {
   }
 }
 
-// Origem: fo_hor.dbf (DBF)
+// Origem: fo_hor (DBFCDX)
 Table "fo_hor" {
-  Note: "Origem: fo_hor.dbf"
+  Note: "Origem: fo_hor"
   "NUMERO" INTEGER [default: 0]
   "NOME" VARCHAR(30)
   "D1" VARCHAR(60)
@@ -778,9 +778,9 @@ Table "fo_hor" {
   }
 }
 
-// Origem: fo_ira.dbf (DBF)
+// Origem: fo_ira (DBFCDX)
 Table "fo_ira" {
-  Note: "Origem: fo_ira.dbf"
+  Note: "Origem: fo_ira"
   "NUMERO" INTEGER [default: 0]
   "CODREN" INTEGER [default: 0]
   "MES" INTEGER [default: 0]
@@ -794,9 +794,9 @@ Table "fo_ira" {
   }
 }
 
-// Origem: fo_ird.dbf (DBF)
+// Origem: fo_ird (DBFCDX)
 Table "fo_ird" {
-  Note: "Origem: fo_ird.dbf"
+  Note: "Origem: fo_ird"
   "NUMERO" INTEGER [default: 0]
   "CODREN" INTEGER [default: 0]
   "MES" INTEGER [default: 0]
@@ -810,9 +810,9 @@ Table "fo_ird" {
   }
 }
 
-// Origem: fo_irr.dbf (DBF)
+// Origem: fo_irr (DBFCDX)
 Table "fo_irr" {
-  Note: "Origem: fo_irr.dbf"
+  Note: "Origem: fo_irr"
   "NUMERO" INTEGER [default: 0]
   "CODREN" INTEGER [default: 0]
   "MES" INTEGER [default: 0]
@@ -826,9 +826,9 @@ Table "fo_irr" {
   }
 }
 
-// Origem: fo_oco.dbf (DBF)
+// Origem: fo_oco (DBFCDX)
 Table "fo_oco" {
-  Note: "Origem: fo_oco.dbf"
+  Note: "Origem: fo_oco"
   "NUMERO" INTEGER [default: 0]
   "DATASAIDA" DATETIME
   "PERIODOPAG" INTEGER [default: 0]
@@ -861,9 +861,9 @@ Table "fo_oco" {
   }
 }
 
-// Origem: fo_pdes.dbf (DBF)
+// Origem: fo_pdes (DBFCDX)
 Table "fo_pdes" {
-  Note: "Origem: fo_pdes.dbf"
+  Note: "Origem: fo_pdes"
   "NUMERO" INTEGER [default: 0]
   "DATA" DATETIME
   "CONTA" INTEGER [default: 0]
@@ -872,9 +872,9 @@ Table "fo_pdes" {
   "HORA2" DECIMAL(6,2) [default: 0]
 }
 
-// Origem: fo_pes.dbf (DBF)
+// Origem: fo_pes (DBFCDX)
 Table "fo_pes" {
-  Note: "Origem: fo_pes.dbf"
+  Note: "Origem: fo_pes"
   "NUMERO" INTEGER [default: 0]
   "CNUMERO" VARCHAR(8)
   "DEPTO" INTEGER [default: 0]
@@ -1008,9 +1008,9 @@ Table "fo_pes" {
   }
 }
 
-// Origem: fo_pfe.dbf (DBF)
+// Origem: fo_pfe (DBFCDX)
 Table "fo_pfe" {
-  Note: "Origem: fo_pfe.dbf"
+  Note: "Origem: fo_pfe"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "HORAS" DECIMAL(6,2) [default: 0]
@@ -1032,9 +1032,9 @@ Table "fo_pfe" {
   }
 }
 
-// Origem: fo_phor.dbf (DBF)
+// Origem: fo_phor (DBFCDX)
 Table "fo_phor" {
-  Note: "Origem: fo_phor.dbf"
+  Note: "Origem: fo_phor"
   "NUMERO" INTEGER [default: 0]
   "OCOINI" DATETIME
   "OCOFIM" DATETIME
@@ -1043,9 +1043,9 @@ Table "fo_phor" {
   "MOTIVO" INTEGER [default: 0]
 }
 
-// Origem: fo_pman.dbf (DBF)
+// Origem: fo_pman (DBFCDX)
 Table "fo_pman" {
-  Note: "Origem: fo_pman.dbf"
+  Note: "Origem: fo_pman"
   "NUMERO" INTEGER [default: 0]
   "DATOCO" DATETIME
   "HOROCO" DECIMAL(5,2) [default: 0]
@@ -1058,9 +1058,9 @@ Table "fo_pman" {
   "ZERHOR" VARCHAR(1)
 }
 
-// Origem: fo_poco.dbf (DBF)
+// Origem: fo_poco (DBFCDX)
 Table "fo_poco" {
-  Note: "Origem: fo_poco.dbf"
+  Note: "Origem: fo_poco"
   "NUMERO" INTEGER [default: 0]
   "OCOINI" DATETIME
   "OCOFIM" DATETIME
@@ -1081,9 +1081,9 @@ Table "fo_poco" {
   "MOTIVO" INTEGER [default: 0]
 }
 
-// Origem: fo_pon.dbf (DBF)
+// Origem: fo_pon (DBFCDX)
 Table "fo_pon" {
-  Note: "Origem: fo_pon.dbf"
+  Note: "Origem: fo_pon"
   "NUMERO" INTEGER [default: 0]
   "DATA" DATETIME
   "ENT" DECIMAL(5,2) [default: 0]
@@ -1128,9 +1128,9 @@ Table "fo_pon" {
   "HORARIO" INTEGER [default: 0]
 }
 
-// Origem: fo_pos.dbf (DBF)
+// Origem: fo_pos (DBFCDX)
 Table "fo_pos" {
-  Note: "Origem: fo_pos.dbf"
+  Note: "Origem: fo_pos"
   "NUMERO" INTEGER [default: 0]
   "NOME" VARCHAR(30)
   "SEMINI" DATETIME
@@ -1188,9 +1188,9 @@ Table "fo_pos" {
   "ANO" INTEGER [default: 0]
 }
 
-// Origem: fo_pot.dbf (DBF)
+// Origem: fo_pot (DBFCDX)
 Table "fo_pot" {
-  Note: "Origem: fo_pot.dbf"
+  Note: "Origem: fo_pot"
   "NUMERO" INTEGER [default: 0]
   "NOME" VARCHAR(30)
   "MES" INTEGER [default: 0]
@@ -1246,9 +1246,9 @@ Table "fo_pot" {
   "BCOHRS" DECIMAL(7,2) [default: 0]
 }
 
-// Origem: fo_psl.dbf (DBF)
+// Origem: fo_psl (DBFCDX)
 Table "fo_psl" {
-  Note: "Origem: fo_psl.dbf"
+  Note: "Origem: fo_psl"
   "NUMERO" INTEGER [default: 0]
   "NOME" VARCHAR(30)
   "ADMITIDO" DATETIME
@@ -1263,9 +1263,9 @@ Table "fo_psl" {
   }
 }
 
-// Origem: fo_ptt.dbf (DBF)
+// Origem: fo_ptt (DBFCDX)
 Table "fo_ptt" {
-  Note: "Origem: fo_ptt.dbf"
+  Note: "Origem: fo_ptt"
   "NUMERO" INTEGER [default: 0]
   "NOME" VARCHAR(30)
   "MES" INTEGER [default: 0]
@@ -1308,9 +1308,9 @@ Table "fo_ptt" {
   }
 }
 
-// Origem: fo_rdd.dbf (DBF)
+// Origem: fo_rdd (DBFCDX)
 Table "fo_rdd" {
-  Note: "Origem: fo_rdd.dbf"
+  Note: "Origem: fo_rdd"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "MES" INTEGER [default: 0]
@@ -1322,9 +1322,9 @@ Table "fo_rdd" {
   }
 }
 
-// Origem: fo_relhr.dbf (DBF)
+// Origem: fo_relhr (DBFCDX)
 Table "fo_relhr" {
-  Note: "Origem: fo_relhr.dbf"
+  Note: "Origem: fo_relhr"
   "NUMERO" INTEGER [default: 0]
   "NOME" VARCHAR(30)
   "HFOL00" VARCHAR(1)
@@ -1340,9 +1340,9 @@ Table "fo_relhr" {
   }
 }
 
-// Origem: fo_res.dbf (DBF)
+// Origem: fo_res (DBFCDX)
 Table "fo_res" {
-  Note: "Origem: fo_res.dbf"
+  Note: "Origem: fo_res"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "MES" INTEGER [default: 0]
@@ -1354,9 +1354,9 @@ Table "fo_res" {
   }
 }
 
-// Origem: fo_rss.dbf (DBF)
+// Origem: fo_rss (DBFCDX)
 Table "fo_rss" {
-  Note: "Origem: fo_rss.dbf"
+  Note: "Origem: fo_rss"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "HORAS" DECIMAL(6,2) [default: 0]
@@ -1377,9 +1377,9 @@ Table "fo_rss" {
   }
 }
 
-// Origem: fo_sal.dbf (DBF)
+// Origem: fo_sal (DBFCDX)
 Table "fo_sal" {
-  Note: "Origem: fo_sal.dbf"
+  Note: "Origem: fo_sal"
   "NUMERO" INTEGER [default: 0]
   "ANO" INTEGER [default: 0]
   "SALJAN" DECIMAL(12,2) [default: 0]
@@ -1411,9 +1411,9 @@ Table "fo_sal" {
   }
 }
 
-// Origem: fo_var.dbf (DBF)
+// Origem: fo_var (DBFCDX)
 Table "fo_var" {
-  Note: "Origem: fo_var.dbf"
+  Note: "Origem: fo_var"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "HORAS" DECIMAL(18,2) [default: 0]
@@ -1431,9 +1431,9 @@ Table "fo_var" {
   }
 }
 
-// Origem: fo_vbr.dbf (DBF)
+// Origem: fo_vbr (DBFCDX)
 Table "fo_vbr" {
-  Note: "Origem: fo_vbr.dbf"
+  Note: "Origem: fo_vbr"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "HORAS" DECIMAL(18,2) [default: 0]
@@ -1451,9 +1451,9 @@ Table "fo_vbr" {
   }
 }
 
-// Origem: fp000100.dbf (DBF)
+// Origem: fp000100 (DBFCDX)
 Table "fp000100" {
-  Note: "Origem: fp000100.dbf"
+  Note: "Origem: fp000100"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "HORAS" DECIMAL(6,2) [default: 0]
@@ -1467,9 +1467,9 @@ Table "fp000100" {
   "VALORBASE" DECIMAL(10,2) [default: 0]
 }
 
-// Origem: fp000101.dbf (DBF)
+// Origem: fp000101 (DBFCDX)
 Table "fp000101" {
-  Note: "Origem: fp000101.dbf"
+  Note: "Origem: fp000101"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "HORAS" DECIMAL(6,2) [default: 0]
@@ -1483,9 +1483,9 @@ Table "fp000101" {
   "VALORBASE" DECIMAL(10,2) [default: 0]
 }
 
-// Origem: fp000102.dbf (DBF)
+// Origem: fp000102 (DBFCDX)
 Table "fp000102" {
-  Note: "Origem: fp000102.dbf"
+  Note: "Origem: fp000102"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "HORAS" DECIMAL(6,2) [default: 0]
@@ -1499,9 +1499,9 @@ Table "fp000102" {
   "VALORBASE" DECIMAL(10,2) [default: 0]
 }
 
-// Origem: fp000103.dbf (DBF)
+// Origem: fp000103 (DBFCDX)
 Table "fp000103" {
-  Note: "Origem: fp000103.dbf"
+  Note: "Origem: fp000103"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "HORAS" DECIMAL(6,2) [default: 0]
@@ -1515,9 +1515,9 @@ Table "fp000103" {
   "VALORBASE" DECIMAL(10,2) [default: 0]
 }
 
-// Origem: fp000104.dbf (DBF)
+// Origem: fp000104 (DBFCDX)
 Table "fp000104" {
-  Note: "Origem: fp000104.dbf"
+  Note: "Origem: fp000104"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "HORAS" DECIMAL(6,2) [default: 0]
@@ -1531,9 +1531,9 @@ Table "fp000104" {
   "VALORBASE" DECIMAL(10,2) [default: 0]
 }
 
-// Origem: fp000105.dbf (DBF)
+// Origem: fp000105 (DBFCDX)
 Table "fp000105" {
-  Note: "Origem: fp000105.dbf"
+  Note: "Origem: fp000105"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "HORAS" DECIMAL(6,2) [default: 0]
@@ -1547,9 +1547,9 @@ Table "fp000105" {
   "VALORBASE" DECIMAL(10,2) [default: 0]
 }
 
-// Origem: fp000106.dbf (DBF)
+// Origem: fp000106 (DBFCDX)
 Table "fp000106" {
-  Note: "Origem: fp000106.dbf"
+  Note: "Origem: fp000106"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "HORAS" DECIMAL(6,2) [default: 0]
@@ -1563,9 +1563,9 @@ Table "fp000106" {
   "VALORBASE" DECIMAL(10,2) [default: 0]
 }
 
-// Origem: fp000107.dbf (DBF)
+// Origem: fp000107 (DBFCDX)
 Table "fp000107" {
-  Note: "Origem: fp000107.dbf"
+  Note: "Origem: fp000107"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "HORAS" DECIMAL(6,2) [default: 0]
@@ -1579,9 +1579,9 @@ Table "fp000107" {
   "VALORBASE" DECIMAL(10,2) [default: 0]
 }
 
-// Origem: fp000108.dbf (DBF)
+// Origem: fp000108 (DBFCDX)
 Table "fp000108" {
-  Note: "Origem: fp000108.dbf"
+  Note: "Origem: fp000108"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "HORAS" DECIMAL(6,2) [default: 0]
@@ -1595,9 +1595,9 @@ Table "fp000108" {
   "VALORBASE" DECIMAL(10,2) [default: 0]
 }
 
-// Origem: fp000109.dbf (DBF)
+// Origem: fp000109 (DBFCDX)
 Table "fp000109" {
-  Note: "Origem: fp000109.dbf"
+  Note: "Origem: fp000109"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "HORAS" DECIMAL(6,2) [default: 0]
@@ -1611,9 +1611,9 @@ Table "fp000109" {
   "VALORBASE" DECIMAL(10,2) [default: 0]
 }
 
-// Origem: fp000110.dbf (DBF)
+// Origem: fp000110 (DBFCDX)
 Table "fp000110" {
-  Note: "Origem: fp000110.dbf"
+  Note: "Origem: fp000110"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "HORAS" DECIMAL(6,2) [default: 0]
@@ -1627,9 +1627,9 @@ Table "fp000110" {
   "VALORBASE" DECIMAL(10,2) [default: 0]
 }
 
-// Origem: fp000111.dbf (DBF)
+// Origem: fp000111 (DBFCDX)
 Table "fp000111" {
-  Note: "Origem: fp000111.dbf"
+  Note: "Origem: fp000111"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "HORAS" DECIMAL(6,2) [default: 0]
@@ -1643,9 +1643,9 @@ Table "fp000111" {
   "VALORBASE" DECIMAL(10,2) [default: 0]
 }
 
-// Origem: fp000112.dbf (DBF)
+// Origem: fp000112 (DBFCDX)
 Table "fp000112" {
-  Note: "Origem: fp000112.dbf"
+  Note: "Origem: fp000112"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "HORAS" DECIMAL(6,2) [default: 0]
@@ -1659,9 +1659,9 @@ Table "fp000112" {
   "VALORBASE" DECIMAL(10,2) [default: 0]
 }
 
-// Origem: htttroca.dbf (DBF)
+// Origem: htttroca (DBFCDX)
 Table "htttroca" {
-  Note: "Origem: htttroca.dbf"
+  Note: "Origem: htttroca"
   "NUMERO" INTEGER [default: 0]
   "DATA" VARCHAR(10)
   "HORA" VARCHAR(10)
@@ -1672,9 +1672,9 @@ Table "htttroca" {
   }
 }
 
-// Origem: irrf.dbf (DBF)
+// Origem: irrf (DBFCDX)
 Table "irrf" {
-  Note: "Origem: irrf.dbf"
+  Note: "Origem: irrf"
   "CGC" VARCHAR(18)
   "CPF" VARCHAR(18)
   "NOME" VARCHAR(40)
@@ -1713,9 +1713,9 @@ Table "irrf" {
   }
 }
 
-// Origem: irrf01.dbf (DBF)
+// Origem: irrf01 (DBFCDX)
 Table "irrf01" {
-  Note: "Origem: irrf01.dbf"
+  Note: "Origem: irrf01"
   "NUMERO" INTEGER [default: 0]
   "DOCUMENTO" VARCHAR(20)
   "ANO" INTEGER [default: 0]
@@ -1735,9 +1735,9 @@ Table "irrf01" {
   }
 }
 
-// Origem: irrf02.dbf (DBF)
+// Origem: irrf02 (DBFCDX)
 Table "irrf02" {
-  Note: "Origem: irrf02.dbf"
+  Note: "Origem: irrf02"
   "NUMERO" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
   "MES" INTEGER [default: 0]
@@ -1751,9 +1751,9 @@ Table "irrf02" {
   }
 }
 
-// Origem: prov13.dbf (DBF)
+// Origem: prov13 (DBFCDX)
 Table "prov13" {
-  Note: "Origem: prov13.dbf"
+  Note: "Origem: prov13"
   "NUMERO" INTEGER [default: 0]
   "SALARIO" DECIMAL(12,2) [default: 0]
   "SALVAR" DECIMAL(12,2) [default: 0]
@@ -1773,9 +1773,9 @@ Table "prov13" {
   }
 }
 
-// Origem: provfe.dbf (DBF)
+// Origem: provfe (DBFCDX)
 Table "provfe" {
-  Note: "Origem: provfe.dbf"
+  Note: "Origem: provfe"
   "NUMERO" INTEGER [default: 0]
   "COMP" DATETIME
   "SALARIO" DECIMAL(12,2) [default: 0]
@@ -1797,9 +1797,9 @@ Table "provfe" {
   }
 }
 
-// Origem: resfor.dbf (DBF)
+// Origem: resfor (DBFCDX)
 Table "resfor" {
-  Note: "Origem: resfor.dbf"
+  Note: "Origem: resfor"
   "NUMERO" INTEGER [default: 0]
   "VAL29" DECIMAL(12,2) [default: 0]
   "HOR29" DECIMAL(6,2) [default: 0]
@@ -1887,9 +1887,9 @@ Table "resfor" {
   }
 }
 
-// Origem: vtavul.dbf (DBF)
+// Origem: vtavul (DBFCDX)
 Table "vtavul" {
-  Note: "Origem: vtavul.dbf"
+  Note: "Origem: vtavul"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "HORAS" DECIMAL(6,2) [default: 0]
@@ -1900,9 +1900,9 @@ Table "vtavul" {
   }
 }
 
-// Origem: vtfixo.dbf (DBF)
+// Origem: vtfixo (DBFCDX)
 Table "vtfixo" {
-  Note: "Origem: vtfixo.dbf"
+  Note: "Origem: vtfixo"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "HORAS" DECIMAL(6,2) [default: 0]
@@ -1914,9 +1914,9 @@ Table "vtfixo" {
   }
 }
 
-// Origem: vtfolha.dbf (DBF)
+// Origem: vtfolha (DBFCDX)
 Table "vtfolha" {
-  Note: "Origem: vtfolha.dbf"
+  Note: "Origem: vtfolha"
   "NUMERO" INTEGER [default: 0]
   "CONTA" INTEGER [default: 0]
   "HORAS" DECIMAL(6,2) [default: 0]
