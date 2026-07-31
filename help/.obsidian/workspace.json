@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "alteracoes/banco_alteracoes.md",
+                "file": "banco.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "banco_alteracoes"
+              "title": "banco"
             }
           }
         ]
@@ -182,37 +182,39 @@
       "daily-notes:Abrir a nota de hoje": false,
       "templates:Inserir modelo": false,
       "command-palette:Abrir paleta de comandos": false,
-      "bases:Criar nova base": false
+      "bases:Criar nova base": false,
+      "consolidate-to-pdf:Consolidate vault to PDF": false
     }
   },
   "active": "9083b835792ed2d1",
   "lastOpenFiles": [
+    "Sem título.base",
     "banco.md",
-    "documentacao_dados/apura_documentacao_dados.md",
     "apura.md",
+    "cnpjuf.md",
+    "pdf/banco.pdf",
+    "padrao/AcessandooSistema.md",
+    "documentacao_dados/banco_documentacao_dados.md",
+    "alteracoes/banco_alteracoes.md",
+    "alteracoes/wrpt_alteracoes.md",
+    "wrpt.md",
+    "xsharpexe.md",
+    "documentacao_dados/controle_documentacao_dados.md",
     "controle.md",
-    "dosprn.md",
-    "crmlocal.md",
     "documentacao_dados/cep_documentacao_dados.md",
     "cep.md",
-    "alteracoes/banco_alteracoes.md",
-    "documentacao_dados/banco_documentacao_dados.md",
+    "documentacao_dados/apura_documentacao_dados.md",
+    "dosprn.md",
+    "documentacao_dados/crmlocal.md",
     "alteracoes/controle_alteracoes.md",
-    "documentacao_dados/controle_documentacao_dados.md",
     "folhapto.md",
     "padrao/MensagensNova.md",
     "engenha.md",
     "padrao/BotoeseIcones.md",
     "custo.md",
-    "padrao/AcessandooSistema.md",
-    "wrpt.md",
     "tgq.md",
     "viabili.md",
     "sped.md",
-    "alteracoes/sistema_alteracoes.md",
-    "sintegra.md",
-    "documentacao_dados/sintegra_documentacao_dados.md",
-    "senha_alteracoes.md",
     "documentacao_dados",
     "pdf/filtro.pdf",
     "chm/wrptlib.chm",
@@ -220,8 +222,6 @@
     "chm/img .chm",
     "pdf",
     "chm",
-    "alteracoes",
-    "altecacoes",
-    "Sem título.base"
+    "alteracoes"
   ]
 }

@@ -1,3 +1,6 @@
+
+[Voltar para o Banco](../banco.md)
+
 # Dicionario de Estruturas de Dados do Projeto
 > Varredura automatica realizada em: 28/07/2026
 

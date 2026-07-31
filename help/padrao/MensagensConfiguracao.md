@@ -1,13 +1,13 @@
 # Mensagens Configuraçao
 
 
-[mensagens](<mensagens.md>) ››
+[mensagens](mensagens.md) ››
 
-[![Parent](<lib/imgarrowup.png>)](<mensagens.md>) [![Previous](<lib/imgarrowleft.png>)](<MensagensNova.md>)
+[![Parent](lib/imgarrowup.png)](mensagens.md) [![Previous](lib/imgarrowleft.png)](MensagensNova.md)
 
 Configura os Usuário que Receberão as Mensagens
 
-![Image](<lib/libbm20.png>)
+![Image](lib/libbm20.png)
 
 **Campos**
 
@@ -26,8 +26,8 @@ Excluir: Exclui um usuário de receber a mensagem
 
 Veja Também
 
-[Botões e Ícones](<BotoeseIcones.md>)
+[Botões e Ícones](BotoeseIcones.md)
 
 
-Copyright © \<Dates\> by \<Authors\>. All Rights Reserved.
+Copyright © /<Dates/> by /<Authors/>. All Rights Reserved.
 

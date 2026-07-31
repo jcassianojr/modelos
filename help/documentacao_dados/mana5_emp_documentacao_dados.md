@@ -662,7 +662,7 @@
 
 **Indices vinculados:**
 - Tag: `MANIVER1` Expressao: `NOME`
-- Tag: `MANIVER2` Expressao: `STR(DAY(DATA))+STR(MONTH(DATA))`
+- Tag: `MANIVER2` Expressao: `STR(DAY(DATA)+STR(MONTH(DATA)`
 
 ---
 ## Tabela DBF: `mb01.dbf`

@@ -1,3 +1,8 @@
+
+
+[Voltar para o Banco](../banco.md)
+
+
 22/07/2026: 
   * Inclusao Ajudas em Markdown
 

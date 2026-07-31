@@ -2,9 +2,9 @@
 
 # Mensagens
 
-[mensagens](<mensagens.md>) ››
+[mensagens](mensagens.md) ››
 
-[![Parent](<lib/imgarrowup.png>)](<mensagens.md>) [![Previous](<lib/imgarrowleft.png>)](<mensagens.md>) [![Next](<lib/imgarrowright.png>)](<MensagensNova.md>)
+[![Parent](lib/imgarrowup.png)](mensagens.md) [![Previous](lib/imgarrowleft.png)](mensagens.md) [![Next](lib/imgarrowright.png)](MensagensNova.md)
 
 
 
@@ -12,7 +12,7 @@ Algumas Atividades do sistema Geram mensagens, tais como inclusão exclusao arqu
 
 
 
-![Image](<lib/libbm16.png>)
+![Image](lib/libbm16.png)
 
 
 
@@ -54,9 +54,9 @@ Setas {bmc bm9.BMP}Retorna um Mensagem {bmc bm10.BMP}Avança um Mensagem,
 
 
 
-*Created with the Personal Edition of HelpNDoc: [Full-featured Kindle eBooks generator*](<https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle>)
+*Created with the Personal Edition of HelpNDoc: [Full-featured Kindle eBooks generator*](https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle)
 
-Copyright © \<Dates\> by \<Authors\>. All Rights Reserved.
+Copyright © /<Dates/> by /<Authors/>. All Rights Reserved.
 
 ***
-_Created with the Personal Edition of HelpNDoc: [What is a Help Authoring tool?](<https://www.helpauthoringsoftware.com/articles/what-is-a-help-authoring-tool/>)_
+_Created with the Personal Edition of HelpNDoc: [What is a Help Authoring tool?](https://www.helpauthoringsoftware.com/articles/what-is-a-help-authoring-tool/)_

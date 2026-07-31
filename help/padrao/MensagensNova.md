@@ -1,10 +1,10 @@
 # Mensagens Nova
 
-[mensagens](<mensagens.md>) ››
+[mensagens](mensagens.md) ››
 
-[![Parent](<lib/imgarrowup.png>)](<mensagens.md>) [![Previous](<lib/imgarrowleft.png>)](<Mensagens1.md>) [![Next](<lib/imgarrowright.png>)](<MensagensConfiguracao.md>)
+[![Parent](lib/imgarrowup.png)](mensagens.md) [![Previous](lib/imgarrowleft.png)](Mensagens1.md) [![Next](lib/imgarrowright.png)](MensagensConfiguracao.md)
 
-![Image](<lib/libbm19.png>)
+![Image](lib/libbm19.png)
 
 Cria uma Mensagem para outro Usuário do Sistema
 
@@ -37,5 +37,5 @@ Texto: Conteúdo da Mensagem
 
 
 
-Copyright © \<Dates\> by \<Authors\>. All Rights Reserved.
+Copyright © /<Dates/> by /<Authors/>. All Rights Reserved.
 
