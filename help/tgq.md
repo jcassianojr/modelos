@@ -1,8 +1,8 @@
 Modulo Garantia Qualidade
 
-		[tgq_alteracoes](alteracoes/tgq_alteracoes.md)
-        
-		[tgq_documentacao_dados](documentacao_dados/tgq_documentacao_dados.md)
+[tgq_alteracoes](alteracoes/tgq_alteracoes.md)
+
+[tgq_documentacao_dados](documentacao_dados/tgq_documentacao_dados.md)
         
 		
 ## Table of contents

@@ -1,9 +1,10 @@
 Modulo Controle de normas
-	
-    	[engenha_alteracoes](alteracoes/engenha_alteracoes.md)
-	
-    	[engenha_documentacao_dados](documentacao_dados/engenha_documentacao_dados.md)
-        
+
+[engenha_alteracoes](alteracoes/engenha_alteracoes.md)
+
+[engenha_documentacao_dados](documentacao_dados/engenha_documentacao_dados.md)
+
+
 ## Table of contents
 
 - [Contéudo](padrao/Conteudo.md)

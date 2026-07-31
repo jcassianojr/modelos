@@ -1,7 +1,8 @@
-Modulo Mensagens do sistema(email)
-	
-    [mail_documentacao_dados](documentacao_dados/mail_documentacao_dados.md)
-    
+Modulo Mensagens do sistema
+
+[mail_documentacao_dados](documentacao_dados/mail_documentacao_dados.md)
+
+
 ## Table of contents
 
 - [Contéudo](padrao/Conteudo.md)
