@@ -1,8 +1,8 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 27/07/2026
+> Varredura automatica realizada em: 31/07/2026
 
-## Tabela DBF: `bti.dbf`
-> **Origem:** `bti.dbf` (Driver: DBFCDX)
+## Tabela DBF: `bti`
+> **Origem:** `bti` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -19,8 +19,8 @@
 - Tag: `BTI` Expressao: `BTI`
 
 ---
-## Tabela DBF: `btii.dbf`
-> **Origem:** `btii.dbf` (Driver: DBFCDX)
+## Tabela DBF: `btii`
+> **Origem:** `btii` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -36,8 +36,8 @@
 - Tag: `BTI` Expressao: `BTI`
 
 ---
-## Tabela DBF: `cd.dbf`
-> **Origem:** `cd.dbf` (Driver: DBFCDX)
+## Tabela DBF: `cd`
+> **Origem:** `cd` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -120,8 +120,8 @@
 - Tag: `CD-5` Expressao: `VIABILI`
 
 ---
-## Tabela DBF: `cdapuprd.dbf`
-> **Origem:** `cdapuprd.dbf` (Driver: DBFCDX)
+## Tabela DBF: `cdapuprd`
+> **Origem:** `cdapuprd` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -170,8 +170,8 @@
 - Tag: `CD04` Expressao: `CODIGOINT+STR(ANO,4)`
 
 ---
-## Tabela DBF: `cdi.dbf`
-> **Origem:** `cdi.dbf` (Driver: DBFCDX)
+## Tabela DBF: `cdi`
+> **Origem:** `cdi` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -187,8 +187,8 @@
 - Tag: `CHAVE` Expressao: `CHAVE`
 
 ---
-## Tabela DBF: `declmot.dbf`
-> **Origem:** `declmot.dbf` (Driver: DBFCDX)
+## Tabela DBF: `declmot`
+> **Origem:** `declmot` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -199,8 +199,8 @@
 - Tag: `DECLMOT` Expressao: `NUMERO`
 
 ---
-## Tabela DBF: `esc.dbf`
-> **Origem:** `esc.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esc`
+> **Origem:** `esc` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -295,8 +295,8 @@
 - Tag: `VIABILI` Expressao: `VIABILI`
 
 ---
-## Tabela DBF: `escms03.dbf`
-> **Origem:** `escms03.dbf` (Driver: DBFCDX)
+## Tabela DBF: `escms03`
+> **Origem:** `escms03` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -320,8 +320,8 @@
 - Tag: `OV` Expressao: `OV`
 
 ---
-## Tabela DBF: `escms06.dbf`
-> **Origem:** `escms06.dbf` (Driver: DBFCDX)
+## Tabela DBF: `escms06`
+> **Origem:** `escms06` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -358,8 +358,8 @@
 - Tag: `OV` Expressao: `OV`
 
 ---
-## Tabela DBF: `esf.dbf`
-> **Origem:** `esf.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esf`
+> **Origem:** `esf` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -454,8 +454,8 @@
 - Tag: `VIABILI` Expressao: `VIABILI`
 
 ---
-## Tabela DBF: `esfms03.dbf`
-> **Origem:** `esfms03.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esfms03`
+> **Origem:** `esfms03` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -479,8 +479,8 @@
 - Tag: `OV` Expressao: `OV`
 
 ---
-## Tabela DBF: `esfms06.dbf`
-> **Origem:** `esfms06.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esfms06`
+> **Origem:** `esfms06` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -517,8 +517,8 @@
 - Tag: `OV` Expressao: `OV`
 
 ---
-## Tabela DBF: `eso.dbf`
-> **Origem:** `eso.dbf` (Driver: DBFCDX)
+## Tabela DBF: `eso`
+> **Origem:** `eso` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -613,8 +613,8 @@
 - Tag: `VIABILI` Expressao: `VIABILI`
 
 ---
-## Tabela DBF: `esoms03.dbf`
-> **Origem:** `esoms03.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esoms03`
+> **Origem:** `esoms03` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -638,8 +638,8 @@
 - Tag: `OV` Expressao: `OV`
 
 ---
-## Tabela DBF: `esoms06.dbf`
-> **Origem:** `esoms06.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esoms06`
+> **Origem:** `esoms06` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -673,8 +673,8 @@
 | FATOR | N | 5 | 2 |
 
 ---
-## Tabela DBF: `esp.dbf`
-> **Origem:** `esp.dbf` (Driver: DBFCDX)
+## Tabela DBF: `esp`
+> **Origem:** `esp` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -769,8 +769,8 @@
 - Tag: `VIABILI` Expressao: `VIABILI`
 
 ---
-## Tabela DBF: `espms03.dbf`
-> **Origem:** `espms03.dbf` (Driver: DBFCDX)
+## Tabela DBF: `espms03`
+> **Origem:** `espms03` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -794,8 +794,8 @@
 - Tag: `OV` Expressao: `OV`
 
 ---
-## Tabela DBF: `espms06.dbf`
-> **Origem:** `espms06.dbf` (Driver: DBFCDX)
+## Tabela DBF: `espms06`
+> **Origem:** `espms06` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -832,8 +832,8 @@
 - Tag: `OV` Expressao: `OV`
 
 ---
-## Tabela DBF: `fluxo.dbf`
-> **Origem:** `fluxo.dbf` (Driver: DBFCDX)
+## Tabela DBF: `fluxo`
+> **Origem:** `fluxo` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -845,8 +845,8 @@
 - Tag: `FLUXO-1` Expressao: `NUMERO`
 
 ---
-## Tabela DBF: `np.dbf`
-> **Origem:** `np.dbf` (Driver: DBFCDX)
+## Tabela DBF: `np`
+> **Origem:** `np` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -874,8 +874,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `orca.dbf`
-> **Origem:** `orca.dbf` (Driver: DBFCDX)
+## Tabela DBF: `orca`
+> **Origem:** `orca` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -914,8 +914,8 @@
 - Tag: `ORCA` Expressao: `ORCA`
 
 ---
-## Tabela DBF: `orcai.dbf`
-> **Origem:** `orcai.dbf` (Driver: DBFCDX)
+## Tabela DBF: `orcai`
+> **Origem:** `orcai` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -942,8 +942,8 @@
 - Tag: `ORCA` Expressao: `ORCA`
 
 ---
-## Tabela DBF: `vfms03.dbf`
-> **Origem:** `vfms03.dbf` (Driver: DBFCDX)
+## Tabela DBF: `vfms03`
+> **Origem:** `vfms03` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -967,8 +967,8 @@
 - Tag: `OV` Expressao: `OV`
 
 ---
-## Tabela DBF: `vfms06.dbf`
-> **Origem:** `vfms06.dbf` (Driver: DBFCDX)
+## Tabela DBF: `vfms06`
+> **Origem:** `vfms06` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1005,8 +1005,8 @@
 - Tag: `OV` Expressao: `OV`
 
 ---
-## Tabela DBF: `vforc.dbf`
-> **Origem:** `vforc.dbf` (Driver: DBFCDX)
+## Tabela DBF: `vforc`
+> **Origem:** `vforc` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1101,8 +1101,8 @@
 - Tag: `VIABILI` Expressao: `VIABILI`
 
 ---
-## Tabela DBF: `viabiii.dbf`
-> **Origem:** `viabiii.dbf` (Driver: DBFCDX)
+## Tabela DBF: `viabiii`
+> **Origem:** `viabiii` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1137,8 +1137,8 @@
 - Tag: `OV` Expressao: `OV`
 
 ---
-## Tabela DBF: `viabili.dbf`
-> **Origem:** `viabili.dbf` (Driver: DBFCDX)
+## Tabela DBF: `viabili`
+> **Origem:** `viabili` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1248,8 +1248,8 @@
 - Tag: `CODIGOINT` Expressao: `CODIGOINT`
 
 ---
-## Tabela DBF: `viarev.dbf`
-> **Origem:** `viarev.dbf` (Driver: DBFCDX)
+## Tabela DBF: `viarev`
+> **Origem:** `viarev` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1265,8 +1265,8 @@
 - Tag: `VIAREV` Expressao: `OV`
 
 ---
-## Tabela DBF: `vmark.dbf`
-> **Origem:** `vmark.dbf` (Driver: DBFCDX)
+## Tabela DBF: `vmark`
+> **Origem:** `vmark` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1278,8 +1278,8 @@
 - Tag: `SEQ` Expressao: `SEQ`
 
 ---
-## Tabela DBF: `vms03.dbf`
-> **Origem:** `vms03.dbf` (Driver: DBFCDX)
+## Tabela DBF: `vms03`
+> **Origem:** `vms03` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1303,8 +1303,8 @@
 - Tag: `OV` Expressao: `OV`
 
 ---
-## Tabela DBF: `vms06.dbf`
-> **Origem:** `vms06.dbf` (Driver: DBFCDX)
+## Tabela DBF: `vms06`
+> **Origem:** `vms06` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1341,8 +1341,8 @@
 - Tag: `OV` Expressao: `OV`
 
 ---
-## Tabela DBF: `vporc.dbf`
-> **Origem:** `vporc.dbf` (Driver: DBFCDX)
+## Tabela DBF: `vporc`
+> **Origem:** `vporc` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |

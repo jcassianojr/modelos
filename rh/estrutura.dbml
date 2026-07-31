@@ -1,17 +1,17 @@
-// Origem: curemi.dbf (DBF)
+// Origem: curemi (DBFCDX)
 Table "curemi" {
-  Note: "Origem: curemi.dbf"
+  Note: "Origem: curemi"
   "NUMERO" INTEGER [default: 0]
   "CURSO" VARCHAR(20)
   "DESCUR" VARCHAR(120)
   Indexes {
-    STR(NUMERO,5)+CURSO [name: "CUREMI"]
+    (NUMERO,CURSO) [name: "CUREMI"]
   }
 }
 
-// Origem: curemp.dbf (DBF)
+// Origem: curemp (DBFCDX)
 Table "curemp" {
-  Note: "Origem: curemp.dbf"
+  Note: "Origem: curemp"
   "NUMERO" INTEGER [default: 0]
   "COGNOME" VARCHAR(15)
   "NOME" VARCHAR(40)
@@ -36,24 +36,24 @@ Table "curemp" {
   "SITE" VARCHAR(30)
   "EMAIL" VARCHAR(30)
   Indexes {
-    NUMERO [name: "CUREMP"]
-    COGNOME [name: "CUREMP-2"]
+    (NUMERO) [name: "CUREMP"]
+    (COGNOME) [name: "CUREMP-2"]
   }
 }
 
-// Origem: curgrp.dbf (DBF)
+// Origem: curgrp (DBFCDX)
 Table "curgrp" {
-  Note: "Origem: curgrp.dbf"
+  Note: "Origem: curgrp"
   "GRUPO" VARCHAR(5)
   "NOME" VARCHAR(40)
   Indexes {
-    GRUPO [name: "CURGRP"]
+    (GRUPO) [name: "CURGRP"]
   }
 }
 
-// Origem: curso.dbf (DBF)
+// Origem: curso (DBFCDX)
 Table "curso" {
-  Note: "Origem: curso.dbf"
+  Note: "Origem: curso"
   "CURSO" VARCHAR(20)
   "GRUPO" VARCHAR(5)
   "DESCUR" VARCHAR(120)
@@ -61,94 +61,94 @@ Table "curso" {
   "CERT" VARCHAR(1)
   "TIPCUR" VARCHAR(1)
   Indexes {
-    CURSO [name: "CURSO"]
-    DESCUR [name: "CURSO-2"]
-    GRUPO+CURSO [name: "CURSO-3"]
+    (CURSO) [name: "CURSO"]
+    (DESCUR) [name: "CURSO-2"]
+    (GRUPO,CURSO) [name: "CURSO-3"]
   }
 }
 
-// Origem: mp02c.dbf (DBF)
+// Origem: mp02c (DBFCDX)
 Table "mp02c" {
-  Note: "Origem: mp02c.dbf"
+  Note: "Origem: mp02c"
   "CODIGO" VARCHAR(12)
   "CURSO" VARCHAR(20)
   "TIPO" VARCHAR(1)
   Indexes {
-    CODIGO [name: "MP02C"]
+    (CODIGO) [name: "MP02C"]
   }
 }
 
-// Origem: mp02p.dbf (DBF)
+// Origem: mp02p (DBFCDX)
 Table "mp02p" {
-  Note: "Origem: mp02p.dbf"
+  Note: "Origem: mp02p"
   "CODIGO" VARCHAR(12)
   "CURSO" VARCHAR(20)
   "TIPO" VARCHAR(1)
   Indexes {
-    CODIGO [name: "MPO2P"]
+    (CODIGO) [name: "MPO2P"]
   }
 }
 
-// Origem: mp06.dbf (DBF)
+// Origem: mp06 (DBFCDX)
 Table "mp06" {
-  Note: "Origem: mp06.dbf"
+  Note: "Origem: mp06"
   "CODIGO" VARCHAR(12)
   "NOME" VARCHAR(30)
   Indexes {
-    CODIGO [name: "MP06-1"]
-    NOME [name: "MP06-2"]
+    (CODIGO) [name: "MP06-1"]
+    (NOME) [name: "MP06-2"]
   }
 }
 
-// Origem: mp06c.dbf (DBF)
+// Origem: mp06c (DBFCDX)
 Table "mp06c" {
-  Note: "Origem: mp06c.dbf"
+  Note: "Origem: mp06c"
   "CODIGO" VARCHAR(12)
   "CURSO" VARCHAR(20)
   Indexes {
-    CODIGO [name: "MP06C"]
+    (CODIGO) [name: "MP06C"]
   }
 }
 
-// Origem: procedim.dbf (DBF)
+// Origem: procedim (DBFCDX)
 Table "procedim" {
-  Note: "Origem: procedim.dbf"
+  Note: "Origem: procedim"
   "CURSO" VARCHAR(20)
   "DESCUR" VARCHAR(120)
   "TIPO" VARCHAR(1)
   "GRUPO" VARCHAR(5)
   Indexes {
-    CURSO [name: "PROCEDIM"]
-    DESCUR [name: "PROCEDI2"]
-    GRUPO+CURSO [name: "PROCEDI3"]
+    (CURSO) [name: "PROCEDIM"]
+    (DESCUR) [name: "PROCEDI2"]
+    (GRUPO,CURSO) [name: "PROCEDI3"]
   }
 }
 
-// Origem: rhabcod.dbf (DBF)
+// Origem: rhabcod (DBFCDX)
 Table "rhabcod" {
-  Note: "Origem: rhabcod.dbf"
+  Note: "Origem: rhabcod"
   "CODIGO" VARCHAR(2)
   "NOME" VARCHAR(40)
   Indexes {
-    CODIGO [name: "RHABCOD"]
+    (CODIGO) [name: "RHABCOD"]
   }
 }
 
-// Origem: rhesc.dbf (DBF)
+// Origem: rhesc (DBFCDX)
 Table "rhesc" {
-  Note: "Origem: rhesc.dbf"
+  Note: "Origem: rhesc"
   "CODIGO" VARCHAR(2)
   "ESCOLA" VARCHAR(1)
   "CODIGOOLD" VARCHAR(2)
   "DESCRI" VARCHAR(70)
   Indexes {
-    CODIGO [name: "RHESC"]
+    (CODIGO) [name: "RHESC"]
   }
 }
 
-// Origem: rhsel.dbf (DBF)
+// Origem: rhsel (DBFCDX)
 Table "rhsel" {
-  Note: "Origem: rhsel.dbf"
+  Note: "Origem: rhsel"
   "EMPRESA" INTEGER [default: 0]
   "NUMERO" INTEGER [default: 0]
   "NOME" VARCHAR(60)
@@ -273,15 +273,15 @@ Table "rhsel" {
   "RIC" VARCHAR(32)
   "RICEMI" VARCHAR(3)
   Indexes {
-    STR(EMPRESA,3)+STR(NUMERO,8) [name: "RHSEL-1"]
-    NOME [name: "RHSEL-2"]
-    STR(FUNCAO,8)+STR(EMPRESA,3) [name: "RHSEL-3"]
+    (EMPRESA,NUMERO) [name: "RHSEL-1"]
+    (NOME) [name: "RHSEL-2"]
+    (FUNCAO,EMPRESA) [name: "RHSEL-3"]
   }
 }
 
-// Origem: rhselhist.dbf (DBF)
+// Origem: rhselhist (DBFCDX)
 Table "rhselhist" {
-  Note: "Origem: rhselhist.dbf"
+  Note: "Origem: rhselhist"
   "EMPRESA" INTEGER [default: 0]
   "NUMERO" INTEGER [default: 0]
   "NOME" VARCHAR(40)
@@ -358,9 +358,9 @@ Table "rhselhist" {
   "DATTRANSF" DATETIME
   "ESCRAIS" VARCHAR(2)
   Indexes {
-    STR(EMPRESA,3)+STR(NUMERO,8) [name: "RHSEL-1"]
-    NOME [name: "RHSEL-2"]
-    STR(FUNCAO,8)+STR(EMPRESA,3) [name: "RHSEL-3"]
+    (EMPRESA,NUMERO) [name: "RHSEL-1"]
+    (NOME) [name: "RHSEL-2"]
+    (FUNCAO,EMPRESA) [name: "RHSEL-3"]
   }
 }
 

@@ -1,8 +1,8 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 27/07/2026
+> Varredura automatica realizada em: 31/07/2026
 
-## Tabela DBF: `curemi.dbf`
-> **Origem:** `curemi.dbf` (Driver: DBFCDX)
+## Tabela DBF: `curemi`
+> **Origem:** `curemi` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -14,8 +14,8 @@
 - Tag: `CUREMI` Expressao: `STR(NUMERO,5)+CURSO`
 
 ---
-## Tabela DBF: `curemp.dbf`
-> **Origem:** `curemp.dbf` (Driver: DBFCDX)
+## Tabela DBF: `curemp`
+> **Origem:** `curemp` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -48,8 +48,8 @@
 - Tag: `CUREMP-2` Expressao: `COGNOME`
 
 ---
-## Tabela DBF: `curgrp.dbf`
-> **Origem:** `curgrp.dbf` (Driver: DBFCDX)
+## Tabela DBF: `curgrp`
+> **Origem:** `curgrp` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -60,8 +60,8 @@
 - Tag: `CURGRP` Expressao: `GRUPO`
 
 ---
-## Tabela DBF: `curso.dbf`
-> **Origem:** `curso.dbf` (Driver: DBFCDX)
+## Tabela DBF: `curso`
+> **Origem:** `curso` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -78,8 +78,8 @@
 - Tag: `CURSO-3` Expressao: `GRUPO+CURSO`
 
 ---
-## Tabela DBF: `mp02c.dbf`
-> **Origem:** `mp02c.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mp02c`
+> **Origem:** `mp02c` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -91,8 +91,8 @@
 - Tag: `MP02C` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `mp02p.dbf`
-> **Origem:** `mp02p.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mp02p`
+> **Origem:** `mp02p` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -104,8 +104,8 @@
 - Tag: `MPO2P` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `mp06.dbf`
-> **Origem:** `mp06.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mp06`
+> **Origem:** `mp06` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -117,8 +117,8 @@
 - Tag: `MP06-2` Expressao: `NOME`
 
 ---
-## Tabela DBF: `mp06c.dbf`
-> **Origem:** `mp06c.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mp06c`
+> **Origem:** `mp06c` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -129,8 +129,8 @@
 - Tag: `MP06C` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `procedim.dbf`
-> **Origem:** `procedim.dbf` (Driver: DBFCDX)
+## Tabela DBF: `procedim`
+> **Origem:** `procedim` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -145,8 +145,8 @@
 - Tag: `PROCEDI3` Expressao: `GRUPO+CURSO`
 
 ---
-## Tabela DBF: `rhabcod.dbf`
-> **Origem:** `rhabcod.dbf` (Driver: DBFCDX)
+## Tabela DBF: `rhabcod`
+> **Origem:** `rhabcod` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -157,8 +157,8 @@
 - Tag: `RHABCOD` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `rhesc.dbf`
-> **Origem:** `rhesc.dbf` (Driver: DBFCDX)
+## Tabela DBF: `rhesc`
+> **Origem:** `rhesc` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -171,8 +171,8 @@
 - Tag: `RHESC` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `rhsel.dbf`
-> **Origem:** `rhsel.dbf` (Driver: DBFCDX)
+## Tabela DBF: `rhsel`
+> **Origem:** `rhsel` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -306,8 +306,8 @@
 - Tag: `RHSEL-3` Expressao: `STR(FUNCAO,8)+STR(EMPRESA,3)`
 
 ---
-## Tabela DBF: `rhselhist.dbf`
-> **Origem:** `rhselhist.dbf` (Driver: DBFCDX)
+## Tabela DBF: `rhselhist`
+> **Origem:** `rhselhist` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |

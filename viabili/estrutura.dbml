@@ -1,6 +1,6 @@
-// Origem: bti.dbf (DBF)
+// Origem: bti (DBFCDX)
 Table "bti" {
-  Note: "Origem: bti.dbf"
+  Note: "Origem: bti"
   "BTI" INTEGER [default: 0]
   "CLIENTE" INTEGER [default: 0]
   "CLINOME" VARCHAR(50)
@@ -10,13 +10,13 @@ Table "bti" {
   "RFQ" VARCHAR(20)
   "DATA" DATETIME
   Indexes {
-    BTI [name: "BTI"]
+    (BTI) [name: "BTI"]
   }
 }
 
-// Origem: btii.dbf (DBF)
+// Origem: btii (DBFCDX)
 Table "btii" {
-  Note: "Origem: btii.dbf"
+  Note: "Origem: btii"
   "BTI" INTEGER [default: 0]
   "QTDE" INTEGER [default: 0]
   "DESCRICAO" VARCHAR(80)
@@ -25,13 +25,13 @@ Table "btii" {
   "CICLO" VARCHAR(20)
   "CAPACIDA" VARCHAR(20)
   Indexes {
-    BTI [name: "BTI"]
+    (BTI) [name: "BTI"]
   }
 }
 
-// Origem: cd.dbf (DBF)
+// Origem: cd (DBFCDX)
 Table "cd" {
-  Note: "Origem: cd.dbf"
+  Note: "Origem: cd"
   "CD" INTEGER [default: 0]
   "DIGCTR" VARCHAR(1)
   "CHAVE" VARCHAR(9)
@@ -103,17 +103,17 @@ Table "cd" {
   "VIABILI" INTEGER [default: 0]
   "CODCLI" VARCHAR(15)
   Indexes {
-    CHAVE [name: "CD-1"]
-    PECA [name: "CD-2"]
-    CODIGOINT [name: "CD-3"]
-    STR(CLIENTE,8)+PECA [name: "CD-4"]
-    VIABILI [name: "CD-5"]
+    (CHAVE) [name: "CD-1"]
+    (PECA) [name: "CD-2"]
+    (CODIGOINT) [name: "CD-3"]
+    (CLIENTE,PECA) [name: "CD-4"]
+    (VIABILI) [name: "CD-5"]
   }
 }
 
-// Origem: cdapuprd.dbf (DBF)
+// Origem: cdapuprd (DBFCDX)
 Table "cdapuprd" {
-  Note: "Origem: cdapuprd.dbf"
+  Note: "Origem: cdapuprd"
   "CD" INTEGER [default: 0]
   "ANO" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
@@ -152,16 +152,16 @@ Table "cdapuprd" {
   "CLIENTE" INTEGER [default: 0]
   "COGCLI" VARCHAR(15)
   Indexes {
-    CD [name: "CD01"]
-    STR(ANO,4)+CODIGO [name: "CD02"]
-    CODIGO+STR(ANO,4) [name: "CD03"]
-    CODIGOINT+STR(ANO,4) [name: "CD04"]
+    (CD) [name: "CD01"]
+    (ANO,CODIGO) [name: "CD02"]
+    (CODIGO,ANO) [name: "CD03"]
+    (CODIGOINT,ANO) [name: "CD04"]
   }
 }
 
-// Origem: cdi.dbf (DBF)
+// Origem: cdi (DBFCDX)
 Table "cdi" {
-  Note: "Origem: cdi.dbf"
+  Note: "Origem: cdi"
   "CD" INTEGER [default: 0]
   "DIGCTR" VARCHAR(1)
   "CHAVE" VARCHAR(9)
@@ -170,23 +170,23 @@ Table "cdi" {
   "REV" VARCHAR(20)
   "DATAREV" DATETIME
   Indexes {
-    CHAVE [name: "CHAVE"]
+    (CHAVE) [name: "CHAVE"]
   }
 }
 
-// Origem: declmot.dbf (DBF)
+// Origem: declmot (DBFCDX)
 Table "declmot" {
-  Note: "Origem: declmot.dbf"
+  Note: "Origem: declmot"
   "NUMERO" INTEGER [default: 0]
   "NOME" VARCHAR(40)
   Indexes {
-    NUMERO [name: "DECLMOT"]
+    (NUMERO) [name: "DECLMOT"]
   }
 }
 
-// Origem: esc.dbf (DBF)
+// Origem: esc (DBFCDX)
 Table "esc" {
-  Note: "Origem: esc.dbf"
+  Note: "Origem: esc"
   "CLIENTE" INTEGER [default: 0]
   "COGCLI" VARCHAR(12)
   "CODIGO" VARCHAR(24)
@@ -272,15 +272,15 @@ Table "esc" {
   "OVREV" VARCHAR(1)
   "VSIMP" DECIMAL(7,4) [default: 0]
   Indexes {
-    OV [name: "OV"]
-    CODIGO [name: "CODIGO"]
-    VIABILI [name: "VIABILI"]
+    (OV) [name: "OV"]
+    (CODIGO) [name: "CODIGO"]
+    (VIABILI) [name: "VIABILI"]
   }
 }
 
-// Origem: escms03.dbf (DBF)
+// Origem: escms03 (DBFCDX)
 Table "escms03" {
-  Note: "Origem: escms03.dbf"
+  Note: "Origem: escms03"
   "OV" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "TIPOENT" VARCHAR(1)
@@ -297,13 +297,13 @@ Table "escms03" {
   "ULTDATA" DATETIME
   "ULTUND" VARCHAR(2)
   Indexes {
-    OV [name: "OV"]
+    (OV) [name: "OV"]
   }
 }
 
-// Origem: escms06.dbf (DBF)
+// Origem: escms06 (DBFCDX)
 Table "escms06" {
-  Note: "Origem: escms06.dbf"
+  Note: "Origem: escms06"
   "OV" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "SEQ" INTEGER [default: 0]
@@ -333,13 +333,13 @@ Table "escms06" {
   "FLUXO" INTEGER [default: 0]
   "FATOR" DECIMAL(5,2) [default: 0]
   Indexes {
-    OV [name: "OV"]
+    (OV) [name: "OV"]
   }
 }
 
-// Origem: esf.dbf (DBF)
+// Origem: esf (DBFCDX)
 Table "esf" {
-  Note: "Origem: esf.dbf"
+  Note: "Origem: esf"
   "CLIENTE" INTEGER [default: 0]
   "COGCLI" VARCHAR(12)
   "CODIGO" VARCHAR(24)
@@ -425,15 +425,15 @@ Table "esf" {
   "OVREV" VARCHAR(1)
   "VSIMP" DECIMAL(7,4) [default: 0]
   Indexes {
-    OV [name: "OV"]
-    CODIGO [name: "CODIGO"]
-    VIABILI [name: "VIABILI"]
+    (OV) [name: "OV"]
+    (CODIGO) [name: "CODIGO"]
+    (VIABILI) [name: "VIABILI"]
   }
 }
 
-// Origem: esfms03.dbf (DBF)
+// Origem: esfms03 (DBFCDX)
 Table "esfms03" {
-  Note: "Origem: esfms03.dbf"
+  Note: "Origem: esfms03"
   "OV" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "TIPOENT" VARCHAR(1)
@@ -450,13 +450,13 @@ Table "esfms03" {
   "ULTDATA" DATETIME
   "ULTUND" VARCHAR(2)
   Indexes {
-    OV [name: "OV"]
+    (OV) [name: "OV"]
   }
 }
 
-// Origem: esfms06.dbf (DBF)
+// Origem: esfms06 (DBFCDX)
 Table "esfms06" {
-  Note: "Origem: esfms06.dbf"
+  Note: "Origem: esfms06"
   "OV" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "SEQ" INTEGER [default: 0]
@@ -486,13 +486,13 @@ Table "esfms06" {
   "FLUXO" INTEGER [default: 0]
   "FATOR" DECIMAL(5,2) [default: 0]
   Indexes {
-    OV [name: "OV"]
+    (OV) [name: "OV"]
   }
 }
 
-// Origem: eso.dbf (DBF)
+// Origem: eso (DBFCDX)
 Table "eso" {
-  Note: "Origem: eso.dbf"
+  Note: "Origem: eso"
   "CLIENTE" INTEGER [default: 0]
   "COGCLI" VARCHAR(12)
   "CODIGO" VARCHAR(24)
@@ -578,15 +578,15 @@ Table "eso" {
   "OVREV" VARCHAR(1)
   "VSIMP" DECIMAL(7,4) [default: 0]
   Indexes {
-    OV [name: "OV"]
-    CODIGO [name: "CODIGO"]
-    VIABILI [name: "VIABILI"]
+    (OV) [name: "OV"]
+    (CODIGO) [name: "CODIGO"]
+    (VIABILI) [name: "VIABILI"]
   }
 }
 
-// Origem: esoms03.dbf (DBF)
+// Origem: esoms03 (DBFCDX)
 Table "esoms03" {
-  Note: "Origem: esoms03.dbf"
+  Note: "Origem: esoms03"
   "OV" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "TIPOENT" VARCHAR(1)
@@ -603,13 +603,13 @@ Table "esoms03" {
   "ULTDATA" DATETIME
   "ULTUND" VARCHAR(2)
   Indexes {
-    OV [name: "OV"]
+    (OV) [name: "OV"]
   }
 }
 
-// Origem: esoms06.dbf (DBF)
+// Origem: esoms06 (DBFCDX)
 Table "esoms06" {
-  Note: "Origem: esoms06.dbf"
+  Note: "Origem: esoms06"
   "OV" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "SEQ" INTEGER [default: 0]
@@ -640,9 +640,9 @@ Table "esoms06" {
   "FATOR" DECIMAL(5,2) [default: 0]
 }
 
-// Origem: esp.dbf (DBF)
+// Origem: esp (DBFCDX)
 Table "esp" {
-  Note: "Origem: esp.dbf"
+  Note: "Origem: esp"
   "CLIENTE" INTEGER [default: 0]
   "COGCLI" VARCHAR(12)
   "CODIGO" VARCHAR(24)
@@ -728,15 +728,15 @@ Table "esp" {
   "OVREV" VARCHAR(1)
   "VSIMP" DECIMAL(7,4) [default: 0]
   Indexes {
-    OV [name: "OV"]
-    CODIGO [name: "CODIGO"]
-    VIABILI [name: "VIABILI"]
+    (OV) [name: "OV"]
+    (CODIGO) [name: "CODIGO"]
+    (VIABILI) [name: "VIABILI"]
   }
 }
 
-// Origem: espms03.dbf (DBF)
+// Origem: espms03 (DBFCDX)
 Table "espms03" {
-  Note: "Origem: espms03.dbf"
+  Note: "Origem: espms03"
   "OV" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "TIPOENT" VARCHAR(1)
@@ -753,13 +753,13 @@ Table "espms03" {
   "ULTDATA" DATETIME
   "ULTUND" VARCHAR(2)
   Indexes {
-    OV [name: "OV"]
+    (OV) [name: "OV"]
   }
 }
 
-// Origem: espms06.dbf (DBF)
+// Origem: espms06 (DBFCDX)
 Table "espms06" {
-  Note: "Origem: espms06.dbf"
+  Note: "Origem: espms06"
   "OV" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "SEQ" INTEGER [default: 0]
@@ -789,24 +789,24 @@ Table "espms06" {
   "FLUXO" INTEGER [default: 0]
   "FATOR" DECIMAL(5,2) [default: 0]
   Indexes {
-    OV [name: "OV"]
+    (OV) [name: "OV"]
   }
 }
 
-// Origem: fluxo.dbf (DBF)
+// Origem: fluxo (DBFCDX)
 Table "fluxo" {
-  Note: "Origem: fluxo.dbf"
+  Note: "Origem: fluxo"
   "CODIGO" VARCHAR(1)
   "NOME" VARCHAR(50)
   "NUMERO" INTEGER [default: 0]
   Indexes {
-    NUMERO [name: "FLUXO-1"]
+    (NUMERO) [name: "FLUXO-1"]
   }
 }
 
-// Origem: np.dbf (DBF)
+// Origem: np (DBFCDX)
 Table "np" {
-  Note: "Origem: np.dbf"
+  Note: "Origem: np"
   "NP" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "NOME" VARCHAR(40)
@@ -825,15 +825,15 @@ Table "np" {
   "ANO" INTEGER [default: 0]
   "PENDENTE" TINYINT(1)
   Indexes {
-    NP [name: "NP"]
-    CLIENTE [name: "CLIENTE"]
-    CODIGO [name: "CODIGO"]
+    (NP) [name: "NP"]
+    (CLIENTE) [name: "CLIENTE"]
+    (CODIGO) [name: "CODIGO"]
   }
 }
 
-// Origem: orca.dbf (DBF)
+// Origem: orca (DBFCDX)
 Table "orca" {
-  Note: "Origem: orca.dbf"
+  Note: "Origem: orca"
   "ORCA" INTEGER [default: 0]
   "CLIENTE" INTEGER [default: 0]
   "CLINOME" VARCHAR(50)
@@ -865,13 +865,13 @@ Table "orca" {
   "CAMBIO" VARCHAR(15)
   "REVI" VARCHAR(1)
   Indexes {
-    ORCA [name: "ORCA"]
+    (ORCA) [name: "ORCA"]
   }
 }
 
-// Origem: orcai.dbf (DBF)
+// Origem: orcai (DBFCDX)
 Table "orcai" {
-  Note: "Origem: orcai.dbf"
+  Note: "Origem: orcai"
   "ORCA" INTEGER [default: 0]
   "ORD" INTEGER [default: 0]
   "QTDDE" INTEGER [default: 0]
@@ -891,13 +891,13 @@ Table "orcai" {
   "REV" VARCHAR(20)
   "DATAREV" VARCHAR(10)
   Indexes {
-    ORCA [name: "ORCA"]
+    (ORCA) [name: "ORCA"]
   }
 }
 
-// Origem: vfms03.dbf (DBF)
+// Origem: vfms03 (DBFCDX)
 Table "vfms03" {
-  Note: "Origem: vfms03.dbf"
+  Note: "Origem: vfms03"
   "OV" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "TIPOENT" VARCHAR(1)
@@ -914,13 +914,13 @@ Table "vfms03" {
   "ULTDATA" DATETIME
   "ULTUND" VARCHAR(2)
   Indexes {
-    OV [name: "OV"]
+    (OV) [name: "OV"]
   }
 }
 
-// Origem: vfms06.dbf (DBF)
+// Origem: vfms06 (DBFCDX)
 Table "vfms06" {
-  Note: "Origem: vfms06.dbf"
+  Note: "Origem: vfms06"
   "OV" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "SEQ" INTEGER [default: 0]
@@ -950,13 +950,13 @@ Table "vfms06" {
   "FLUXO" INTEGER [default: 0]
   "FATOR" DECIMAL(5,2) [default: 0]
   Indexes {
-    OV [name: "OV"]
+    (OV) [name: "OV"]
   }
 }
 
-// Origem: vforc.dbf (DBF)
+// Origem: vforc (DBFCDX)
 Table "vforc" {
-  Note: "Origem: vforc.dbf"
+  Note: "Origem: vforc"
   "CLIENTE" INTEGER [default: 0]
   "COGCLI" VARCHAR(12)
   "CODIGO" VARCHAR(24)
@@ -1042,15 +1042,15 @@ Table "vforc" {
   "OVREV" VARCHAR(1)
   "VSIMP" DECIMAL(7,4) [default: 0]
   Indexes {
-    OV [name: "OV"]
-    CODIGO [name: "CODIGO"]
-    VIABILI [name: "VIABILI"]
+    (OV) [name: "OV"]
+    (CODIGO) [name: "CODIGO"]
+    (VIABILI) [name: "VIABILI"]
   }
 }
 
-// Origem: viabiii.dbf (DBF)
+// Origem: viabiii (DBFCDX)
 Table "viabiii" {
-  Note: "Origem: viabiii.dbf"
+  Note: "Origem: viabiii"
   "OV" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
   "TIPO" VARCHAR(1)
@@ -1077,14 +1077,14 @@ Table "viabiii" {
   "SITOBS" LONGTEXT
   "APROBS" LONGTEXT
   Indexes {
-    STR(OV,8)+STR(ITEM,3) [name: "OVITEM"]
-    OV [name: "OV"]
+    (OV,ITEM) [name: "OVITEM"]
+    (OV) [name: "OV"]
   }
 }
 
-// Origem: viabili.dbf (DBF)
+// Origem: viabili (DBFCDX)
 Table "viabili" {
-  Note: "Origem: viabili.dbf"
+  Note: "Origem: viabili"
   "OV" INTEGER [default: 0]
   "OVORI" INTEGER [default: 0]
   "CLIENTE" INTEGER [default: 0]
@@ -1183,17 +1183,17 @@ Table "viabili" {
   "VENDEDOR" VARCHAR(5)
   "COMVEND" VARCHAR(40)
   Indexes {
-    CODIGOINT [name: "CODIGOIN"]
-    OV [name: "OV"]
-    DESENHO [name: "DESENHO"]
-    PEDCLI [name: "PEDCLI"]
-    CODIGOINT [name: "CODIGOINT"]
+    (CODIGOINT) [name: "CODIGOIN"]
+    (OV) [name: "OV"]
+    (DESENHO) [name: "DESENHO"]
+    (PEDCLI) [name: "PEDCLI"]
+    (CODIGOINT) [name: "CODIGOINT"]
   }
 }
 
-// Origem: viarev.dbf (DBF)
+// Origem: viarev (DBFCDX)
 Table "viarev" {
-  Note: "Origem: viarev.dbf"
+  Note: "Origem: viarev"
   "OV" INTEGER [default: 0]
   "OPR" VARCHAR(1)
   "REV" VARCHAR(1)
@@ -1202,24 +1202,24 @@ Table "viarev" {
   "USUARIO" VARCHAR(10)
   "MOTIVO" VARCHAR(255)
   Indexes {
-    OV [name: "VIAREV"]
+    (OV) [name: "VIAREV"]
   }
 }
 
-// Origem: vmark.dbf (DBF)
+// Origem: vmark (DBFCDX)
 Table "vmark" {
-  Note: "Origem: vmark.dbf"
+  Note: "Origem: vmark"
   "SEQ" INTEGER [default: 0]
   "DESCRI" VARCHAR(12)
   "PERCE" DECIMAL(6,2) [default: 0]
   Indexes {
-    SEQ [name: "SEQ"]
+    (SEQ) [name: "SEQ"]
   }
 }
 
-// Origem: vms03.dbf (DBF)
+// Origem: vms03 (DBFCDX)
 Table "vms03" {
-  Note: "Origem: vms03.dbf"
+  Note: "Origem: vms03"
   "OV" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "TIPOENT" VARCHAR(1)
@@ -1236,13 +1236,13 @@ Table "vms03" {
   "ULTDATA" DATETIME
   "ULTUND" VARCHAR(2)
   Indexes {
-    OV [name: "OV"]
+    (OV) [name: "OV"]
   }
 }
 
-// Origem: vms06.dbf (DBF)
+// Origem: vms06 (DBFCDX)
 Table "vms06" {
-  Note: "Origem: vms06.dbf"
+  Note: "Origem: vms06"
   "OV" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "SEQ" INTEGER [default: 0]
@@ -1272,13 +1272,13 @@ Table "vms06" {
   "FLUXO" INTEGER [default: 0]
   "FATOR" DECIMAL(5,2) [default: 0]
   Indexes {
-    OV [name: "OV"]
+    (OV) [name: "OV"]
   }
 }
 
-// Origem: vporc.dbf (DBF)
+// Origem: vporc (DBFCDX)
 Table "vporc" {
-  Note: "Origem: vporc.dbf"
+  Note: "Origem: vporc"
   "CLIENTE" INTEGER [default: 0]
   "COGCLI" VARCHAR(12)
   "CODIGO" VARCHAR(24)
@@ -1364,9 +1364,9 @@ Table "vporc" {
   "OVREV" VARCHAR(1)
   "VSIMP" DECIMAL(7,4) [default: 0]
   Indexes {
-    OV [name: "OV"]
-    CODIGO [name: "CODIGO"]
-    VIABILI [name: "VIABILI"]
+    (OV) [name: "OV"]
+    (CODIGO) [name: "CODIGO"]
+    (VIABILI) [name: "VIABILI"]
   }
 }
 

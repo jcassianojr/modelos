@@ -1,19 +1,19 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 27/07/2026
+> Varredura automatica realizada em: 31/07/2026
 
-## Tabela DBF: `sint.dbf`
-> **Origem:** `sint.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint`
+> **Origem:** `sint` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | REG | C | 2 | 0 |
 
 **Indices vinculados:**
-- Tag: `REGISTRO` Expressao: `RECNO()`
+- Tag: `REGISTRO` Expressao: `REG`
 
 ---
-## Tabela DBF: `sint10.dbf`
-> **Origem:** `sint10.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint10`
+> **Origem:** `sint10` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -31,11 +31,11 @@
 | FINALIDADE | C | 1 | 0 |
 
 **Indices vinculados:**
-- Tag: `REGISTRO` Expressao: `RECNO()`
+- Tag: `CGC` Expressao: `CGC`
 
 ---
-## Tabela DBF: `sint11.dbf`
-> **Origem:** `sint11.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint11`
+> **Origem:** `sint11` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -49,11 +49,11 @@
 | TELEFONE | C | 12 | 0 |
 
 **Indices vinculados:**
-- Tag: `REGISTRO` Expressao: `RECNO()`
+- Tag: `CEP` Expressao: `CEP`
 
 ---
-## Tabela DBF: `sint50.dbf`
-> **Origem:** `sint50.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint50`
+> **Origem:** `sint50` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -85,8 +85,8 @@
 - Tag: `SINT50-2` Expressao: `STR(NUMERO,8)+TIPONF`
 
 ---
-## Tabela DBF: `sint51.dbf`
-> **Origem:** `sint51.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint51`
+> **Origem:** `sint51` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -118,8 +118,8 @@
 - Tag: `SINT51-2` Expressao: `STR(NUMERO,8)+TIPONF`
 
 ---
-## Tabela DBF: `sint53.dbf`
-> **Origem:** `sint53.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint53`
+> **Origem:** `sint53` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -153,8 +153,8 @@
 - Tag: `SINT53-2` Expressao: `STR(NUMERO,8)+TIPONF`
 
 ---
-## Tabela DBF: `sint54.dbf`
-> **Origem:** `sint54.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint54`
+> **Origem:** `sint54` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -192,8 +192,8 @@
 - Tag: `SINT54-6` Expressao: `STR(NUMERO,8)+CGC`
 
 ---
-## Tabela DBF: `sint55.dbf`
-> **Origem:** `sint55.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint55`
+> **Origem:** `sint55` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -212,11 +212,11 @@
 | CONVENIO | C | 30 | 0 |
 
 **Indices vinculados:**
-- Tag: `REGISTRO` Expressao: `RECNO()`
+- Tag: `NUMGNRE` Expressao: `NUMGNRE`
 
 ---
-## Tabela DBF: `sint56.dbf`
-> **Origem:** `sint56.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint56`
+> **Origem:** `sint56` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -236,11 +236,11 @@
 | BRANCOS | C | 39 | 0 |
 
 **Indices vinculados:**
-- Tag: `REGISTRO` Expressao: `RECNO()`
+- Tag: `CNPJNUMERO` Expressao: `CNPJCPF+NUMERO`
 
 ---
-## Tabela DBF: `sint60a.dbf`
-> **Origem:** `sint60a.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint60a`
+> **Origem:** `sint60a` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -253,11 +253,11 @@
 | BRANCO60A | C | 79 | 0 |
 
 **Indices vinculados:**
-- Tag: `REGISTRO` Expressao: `RECNO()`
+- Tag: `NUMFABA` Expressao: `NUMFABA`
 
 ---
-## Tabela DBF: `sint60d.dbf`
-> **Origem:** `sint60d.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint60d`
+> **Origem:** `sint60d` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -274,11 +274,11 @@
 | BRANCO60D | C | 19 | 0 |
 
 **Indices vinculados:**
-- Tag: `REGISTRO` Expressao: `RECNO()`
+- Tag: `FUMFABD` Expressao: `NUMFABD`
 
 ---
-## Tabela DBF: `sint60i.dbf`
-> **Origem:** `sint60i.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint60i`
+> **Origem:** `sint60i` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -298,11 +298,11 @@
 | BRANCO60I | C | 16 | 0 |
 
 **Indices vinculados:**
-- Tag: `REGISTRO` Expressao: `RECNO()`
+- Tag: `NUMFABI` Expressao: `NUMFABI`
 
 ---
-## Tabela DBF: `sint60m.dbf`
-> **Origem:** `sint60m.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint60m`
+> **Origem:** `sint60m` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -321,11 +321,11 @@
 | BRANCO60M | C | 37 | 0 |
 
 **Indices vinculados:**
-- Tag: `REGISTRO` Expressao: `RECNO()`
+- Tag: `NUNFABM` Expressao: `NUMFABM`
 
 ---
-## Tabela DBF: `sint60r.dbf`
-> **Origem:** `sint60r.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint60r`
+> **Origem:** `sint60r` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -340,11 +340,11 @@
 | BRANCO60R | C | 54 | 0 |
 
 **Indices vinculados:**
-- Tag: `REGISTRO` Expressao: `RECNO()`
+- Tag: `SUB60R` Expressao: `SUB60R`
 
 ---
-## Tabela DBF: `sint61.dbf`
-> **Origem:** `sint61.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint61`
+> **Origem:** `sint61` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -366,11 +366,11 @@
 | BRANCO61 | C | 1 | 0 |
 
 **Indices vinculados:**
-- Tag: `REGISTRO` Expressao: `RECNO()`
+- Tag: `NUINI61M` Expressao: `NUINI61M`
 
 ---
-## Tabela DBF: `sint70.dbf`
-> **Origem:** `sint70.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint70`
+> **Origem:** `sint70` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -403,8 +403,8 @@
 - Tag: `SINT70-2` Expressao: `STR(NUMERO,8)+TIPONF`
 
 ---
-## Tabela DBF: `sint71.dbf`
-> **Origem:** `sint71.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint71`
+> **Origem:** `sint71` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -428,11 +428,11 @@
 | BRANCO71 | C | 12 | 0 |
 
 **Indices vinculados:**
-- Tag: `REGISTRO` Expressao: `RECNO()`
+- Tag: `CGC` Expressao: `CGC`
 
 ---
-## Tabela DBF: `sint74.dbf`
-> **Origem:** `sint74.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint74`
+> **Origem:** `sint74` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -448,11 +448,11 @@
 | BRANCO74 | C | 45 | 0 |
 
 **Indices vinculados:**
-- Tag: `REGISTRO` Expressao: `RECNO()`
+- Tag: `DATA_INVEN` Expressao: `DATA_INVEN`
 
 ---
-## Tabela DBF: `sint75.dbf`
-> **Origem:** `sint75.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint75`
+> **Origem:** `sint75` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -477,8 +477,8 @@
 - Tag: `SINT75-2` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `sint76.dbf`
-> **Origem:** `sint76.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint76`
+> **Origem:** `sint76` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -501,9 +501,12 @@
 | ALIQICM76 | N | 2 | 0 |
 | SITUAC76 | C | 1 | 0 |
 
+**Indices vinculados:**
+- Tag: `CGC` Expressao: `CGC`
+
 ---
-## Tabela DBF: `sint77.dbf`
-> **Origem:** `sint77.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint77`
+> **Origem:** `sint77` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -526,11 +529,11 @@
 | CODTERM | C | 10 | 0 |
 
 **Indices vinculados:**
-- Tag: `REGISTRO` Expressao: `RECNO()`
+- Tag: `CGC` Expressao: `CGC`
 
 ---
-## Tabela DBF: `sint85.dbf`
-> **Origem:** `sint85.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint85`
+> **Origem:** `sint85` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -553,11 +556,11 @@
 | BRANCOS | C | 19 | 0 |
 
 **Indices vinculados:**
-- Tag: `REGISTRO` Expressao: `RECNO()`
+- Tag: `CONHEC` Expressao: `CONHEC`
 
 ---
-## Tabela DBF: `sint86.dbf`
-> **Origem:** `sint86.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint86`
+> **Origem:** `sint86` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -579,11 +582,11 @@
 | BRANCOS | C | 5 | 0 |
 
 **Indices vinculados:**
-- Tag: `REGISTRO` Expressao: `RECNO()`
+- Tag: `REGEXP` Expressao: `REGEXP`
 
 ---
-## Tabela DBF: `sint88c.dbf`
-> **Origem:** `sint88c.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint88c`
+> **Origem:** `sint88c` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -605,11 +608,11 @@
 | BRANCOS | C | 6 | 0 |
 
 **Indices vinculados:**
-- Tag: `REGISTRO` Expressao: `RECNO()`
+- Tag: `CNPJNUM` Expressao: `CNPJ+NUMERONF`
 
 ---
-## Tabela DBF: `sint88d.dbf`
-> **Origem:** `sint88d.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint88d`
+> **Origem:** `sint88d` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -633,11 +636,11 @@
 | BRANCOS | C | 5 | 0 |
 
 **Indices vinculados:**
-- Tag: `REGISTRO` Expressao: `RECNO()`
+- Tag: `CNPJNUM` Expressao: `CNPJ+NUMERONF`
 
 ---
-## Tabela DBF: `sint88e.dbf`
-> **Origem:** `sint88e.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint88e`
+> **Origem:** `sint88e` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -650,11 +653,11 @@
 | BRANCOS | C | 67 | 0 |
 
 **Indices vinculados:**
-- Tag: `REGISTRO` Expressao: `RECNO()`
+- Tag: `CNPJSUB` Expressao: `CNPJ+SUB`
 
 ---
-## Tabela DBF: `sint88m.dbf`
-> **Origem:** `sint88m.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint88m`
+> **Origem:** `sint88m` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -665,11 +668,11 @@
 | BRANCOS | C | 75 | 0 |
 
 **Indices vinculados:**
-- Tag: `REGISTRO` Expressao: `RECNO()`
+- Tag: `CNPJ+SUB` Expressao: `CNPJ+SUB`
 
 ---
-## Tabela DBF: `sint88t.dbf`
-> **Origem:** `sint88t.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint88t`
+> **Origem:** `sint88t` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -696,17 +699,17 @@
 | BRANCOS | C | 28 | 0 |
 
 **Indices vinculados:**
-- Tag: `REGISTRO` Expressao: `RECNO()`
+- Tag: `CNPJSUB` Expressao: `CNPJ+SUB`
 
 ---
-## Tabela DBF: `sint90.dbf`
-> **Origem:** `sint90.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sint90`
+> **Origem:** `sint90` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | REG90 | C | 126 | 0 |
 
 **Indices vinculados:**
-- Tag: `REGISTRO` Expressao: `RECNO()`
+- Tag: `REG90` Expressao: `REG90`
 
 ---

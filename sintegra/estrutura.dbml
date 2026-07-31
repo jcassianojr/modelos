@@ -1,15 +1,15 @@
-// Origem: sint.dbf (DBF)
+// Origem: sint (DBFCDX)
 Table "sint" {
-  Note: "Origem: sint.dbf"
+  Note: "Origem: sint"
   "REG" VARCHAR(2)
   Indexes {
-    RECNO() [name: "REGISTRO"]
+    (REG) [name: "REGISTRO"]
   }
 }
 
-// Origem: sint10.dbf (DBF)
+// Origem: sint10 (DBFCDX)
 Table "sint10" {
-  Note: "Origem: sint10.dbf"
+  Note: "Origem: sint10"
   "TIPO" VARCHAR(2)
   "CGC" VARCHAR(14)
   "IE" VARCHAR(14)
@@ -23,13 +23,13 @@ Table "sint10" {
   "NATUREZA" INTEGER [default: 0]
   "FINALIDADE" VARCHAR(1)
   Indexes {
-    RECNO() [name: "REGISTRO"]
+    (CGC) [name: "CGC"]
   }
 }
 
-// Origem: sint11.dbf (DBF)
+// Origem: sint11 (DBFCDX)
 Table "sint11" {
-  Note: "Origem: sint11.dbf"
+  Note: "Origem: sint11"
   "TIPO" VARCHAR(2)
   "LOGRADOURO" VARCHAR(34)
   "NUMERO" INTEGER [default: 0]
@@ -39,13 +39,13 @@ Table "sint11" {
   "CONTATO" VARCHAR(28)
   "TELEFONE" VARCHAR(12)
   Indexes {
-    RECNO() [name: "REGISTRO"]
+    (CEP) [name: "CEP"]
   }
 }
 
-// Origem: sint50.dbf (DBF)
+// Origem: sint50 (DBFCDX)
 Table "sint50" {
-  Note: "Origem: sint50.dbf"
+  Note: "Origem: sint50"
   "TIPO" VARCHAR(2)
   "CGC" VARCHAR(18)
   "IE" VARCHAR(20)
@@ -69,14 +69,14 @@ Table "sint50" {
   "FORNECEDO" INTEGER [default: 0]
   "TIPOCLI" VARCHAR(1)
   Indexes {
-    DTOS(DATA)+STR(NUMERO,8) [name: "SINT50-1"]
-    STR(NUMERO,8)+TIPONF [name: "SINT50-2"]
+    (DATA,NUMERO) [name: "SINT50-1"]
+    (NUMERO,TIPONF) [name: "SINT50-2"]
   }
 }
 
-// Origem: sint51.dbf (DBF)
+// Origem: sint51 (DBFCDX)
 Table "sint51" {
-  Note: "Origem: sint51.dbf"
+  Note: "Origem: sint51"
   "TIPO" VARCHAR(2)
   "CGC" VARCHAR(18)
   "IE" VARCHAR(20)
@@ -100,14 +100,14 @@ Table "sint51" {
   "TIPOCLI" VARCHAR(1)
   "BRANCOS" VARCHAR(1)
   Indexes {
-    DTOS(DATA)+STR(NUMERO,8) [name: "SINT51-1"]
-    STR(NUMERO,8)+TIPONF [name: "SINT51-2"]
+    (DATA,NUMERO) [name: "SINT51-1"]
+    (NUMERO,TIPONF) [name: "SINT51-2"]
   }
 }
 
-// Origem: sint53.dbf (DBF)
+// Origem: sint53 (DBFCDX)
 Table "sint53" {
-  Note: "Origem: sint53.dbf"
+  Note: "Origem: sint53"
   "TIPO" VARCHAR(2)
   "CGC" VARCHAR(18)
   "IE" VARCHAR(20)
@@ -133,14 +133,14 @@ Table "sint53" {
   "EMITENTE" VARCHAR(1)
   "TIPOCLI" VARCHAR(1)
   Indexes {
-    DTOS(DATA)+STR(NUMERO,8) [name: "SINT53-1"]
-    STR(NUMERO,8)+TIPONF [name: "SINT53-2"]
+    (DATA,NUMERO) [name: "SINT53-1"]
+    (NUMERO,TIPONF) [name: "SINT53-2"]
   }
 }
 
-// Origem: sint54.dbf (DBF)
+// Origem: sint54 (DBFCDX)
 Table "sint54" {
-  Note: "Origem: sint54.dbf"
+  Note: "Origem: sint54"
   "TIPO" VARCHAR(2)
   "CGC" VARCHAR(18)
   "MODELO" INTEGER [default: 0]
@@ -166,18 +166,18 @@ Table "sint54" {
   "SUB" VARCHAR(2)
   "DATA" DATETIME
   Indexes {
-    CGC+SERIE+SUB+STR(NUMERO,8)+STR(ITEM,3) [name: "SINT54-1"]
-    STR(NUMERO,8)+TIPONF [name: "SINT54-2"]
-    CODIGORED [name: "SINT54-3"]
-    CODIGO [name: "SINT54-4"]
-    FORNECEDO [name: "SINT54-5"]
-    STR(NUMERO,8)+CGC [name: "SINT54-6"]
+    (CGC,SERIE,SUB,NUMERO,ITEM) [name: "SINT54-1"]
+    (NUMERO,TIPONF) [name: "SINT54-2"]
+    (CODIGORED) [name: "SINT54-3"]
+    (CODIGO) [name: "SINT54-4"]
+    (FORNECEDO) [name: "SINT54-5"]
+    (NUMERO,CGC) [name: "SINT54-6"]
   }
 }
 
-// Origem: sint55.dbf (DBF)
+// Origem: sint55 (DBFCDX)
 Table "sint55" {
-  Note: "Origem: sint55.dbf"
+  Note: "Origem: sint55"
   "TIPO" VARCHAR(2)
   "CGC" VARCHAR(14)
   "IE" VARCHAR(14)
@@ -192,13 +192,13 @@ Table "sint55" {
   "MESANOREF" VARCHAR(6)
   "CONVENIO" VARCHAR(30)
   Indexes {
-    RECNO() [name: "REGISTRO"]
+    (NUMGNRE) [name: "NUMGNRE"]
   }
 }
 
-// Origem: sint56.dbf (DBF)
+// Origem: sint56 (DBFCDX)
 Table "sint56" {
-  Note: "Origem: sint56.dbf"
+  Note: "Origem: sint56"
   "REG" VARCHAR(2)
   "CNPJCPF" VARCHAR(14)
   "MODELO" INTEGER [default: 0]
@@ -214,13 +214,13 @@ Table "sint56" {
   "CHASSI" VARCHAR(17)
   "BRANCOS" VARCHAR(39)
   Indexes {
-    RECNO() [name: "REGISTRO"]
+    (CNPJCPF,NUMERO) [name: "CNPJNUMERO"]
   }
 }
 
-// Origem: sint60a.dbf (DBF)
+// Origem: sint60a (DBFCDX)
 Table "sint60a" {
-  Note: "Origem: sint60a.dbf"
+  Note: "Origem: sint60a"
   "TIPO" VARCHAR(2)
   "SUB60A" VARCHAR(1)
   "EMIS60A" DATETIME
@@ -229,13 +229,13 @@ Table "sint60a" {
   "VALOR60" DECIMAL(12,2) [default: 0]
   "BRANCO60A" VARCHAR(79)
   Indexes {
-    RECNO() [name: "REGISTRO"]
+    (NUMFABA) [name: "NUMFABA"]
   }
 }
 
-// Origem: sint60d.dbf (DBF)
+// Origem: sint60d (DBFCDX)
 Table "sint60d" {
-  Note: "Origem: sint60d.dbf"
+  Note: "Origem: sint60d"
   "TIPO" VARCHAR(2)
   "SUB60D" VARCHAR(1)
   "EMIS60D" DATETIME
@@ -248,13 +248,13 @@ Table "sint60d" {
   "VALICM60D" DECIMAL(13,2) [default: 0]
   "BRANCO60D" VARCHAR(19)
   Indexes {
-    RECNO() [name: "REGISTRO"]
+    (NUMFABD) [name: "FUMFABD"]
   }
 }
 
-// Origem: sint60i.dbf (DBF)
+// Origem: sint60i (DBFCDX)
 Table "sint60i" {
-  Note: "Origem: sint60i.dbf"
+  Note: "Origem: sint60i"
   "TIPO" VARCHAR(2)
   "SUB60I" VARCHAR(1)
   "EMIS60I" DATETIME
@@ -270,13 +270,13 @@ Table "sint60i" {
   "VALICM60I" INTEGER [default: 0]
   "BRANCO60I" VARCHAR(16)
   Indexes {
-    RECNO() [name: "REGISTRO"]
+    (NUMFABI) [name: "NUMFABI"]
   }
 }
 
-// Origem: sint60m.dbf (DBF)
+// Origem: sint60m (DBFCDX)
 Table "sint60m" {
-  Note: "Origem: sint60m.dbf"
+  Note: "Origem: sint60m"
   "TIPO" VARCHAR(2)
   "SUB60M" VARCHAR(1)
   "EMIS60M" DATETIME
@@ -291,13 +291,13 @@ Table "sint60m" {
   "TOTGER60M" DECIMAL(16,2) [default: 0]
   "BRANCO60M" VARCHAR(37)
   Indexes {
-    RECNO() [name: "REGISTRO"]
+    (NUMFABM) [name: "NUNFABM"]
   }
 }
 
-// Origem: sint60r.dbf (DBF)
+// Origem: sint60r (DBFCDX)
 Table "sint60r" {
-  Note: "Origem: sint60r.dbf"
+  Note: "Origem: sint60r"
   "TIPO" VARCHAR(2)
   "SUB60R" VARCHAR(1)
   "MESANOEMR" VARCHAR(6)
@@ -308,13 +308,13 @@ Table "sint60r" {
   "SITTRI60R" VARCHAR(4)
   "BRANCO60R" VARCHAR(54)
   Indexes {
-    RECNO() [name: "REGISTRO"]
+    (SUB60R) [name: "SUB60R"]
   }
 }
 
-// Origem: sint61.dbf (DBF)
+// Origem: sint61 (DBFCDX)
 Table "sint61" {
-  Note: "Origem: sint61.dbf"
+  Note: "Origem: sint61"
   "TIPO" VARCHAR(2)
   "BRANCO611" VARCHAR(14)
   "BRANCO612" VARCHAR(14)
@@ -332,13 +332,13 @@ Table "sint61" {
   "ALIQIC61" DECIMAL(4,2) [default: 0]
   "BRANCO61" VARCHAR(1)
   Indexes {
-    RECNO() [name: "REGISTRO"]
+    (NUINI61M) [name: "NUINI61M"]
   }
 }
 
-// Origem: sint70.dbf (DBF)
+// Origem: sint70 (DBFCDX)
 Table "sint70" {
-  Note: "Origem: sint70.dbf"
+  Note: "Origem: sint70"
   "TIPO" VARCHAR(2)
   "CGC" VARCHAR(18)
   "IE" VARCHAR(20)
@@ -363,14 +363,14 @@ Table "sint70" {
   "FORNECEDO" INTEGER [default: 0]
   "TIPOCLI" VARCHAR(1)
   Indexes {
-    DTOS(DATA)+STR(NUMERO,8) [name: "SINT70-1"]
-    STR(NUMERO,8)+TIPONF [name: "SINT70-2"]
+    (DATA,NUMERO) [name: "SINT70-1"]
+    (NUMERO,TIPONF) [name: "SINT70-2"]
   }
 }
 
-// Origem: sint71.dbf (DBF)
+// Origem: sint71 (DBFCDX)
 Table "sint71" {
-  Note: "Origem: sint71.dbf"
+  Note: "Origem: sint71"
   "TIPO" VARCHAR(2)
   "CGC" VARCHAR(14)
   "IE" VARCHAR(14)
@@ -390,13 +390,13 @@ Table "sint71" {
   "VALTOT71" DECIMAL(14,2) [default: 0]
   "BRANCO71" VARCHAR(12)
   Indexes {
-    RECNO() [name: "REGISTRO"]
+    (CGC) [name: "CGC"]
   }
 }
 
-// Origem: sint74.dbf (DBF)
+// Origem: sint74 (DBFCDX)
 Table "sint74" {
-  Note: "Origem: sint74.dbf"
+  Note: "Origem: sint74"
   "TIPO" VARCHAR(2)
   "DATA_INVEN" VARCHAR(8)
   "COD_MERCAD" VARCHAR(14)
@@ -408,13 +408,13 @@ Table "sint74" {
   "UF" VARCHAR(2)
   "BRANCO74" VARCHAR(45)
   Indexes {
-    RECNO() [name: "REGISTRO"]
+    (DATA_INVEN) [name: "DATA_INVEN"]
   }
 }
 
-// Origem: sint75.dbf (DBF)
+// Origem: sint75 (DBFCDX)
 Table "sint75" {
-  Note: "Origem: sint75.dbf"
+  Note: "Origem: sint75"
   "TIPO" VARCHAR(2)
   "DATAINI" DATETIME
   "DATAFIM" DATETIME
@@ -431,14 +431,14 @@ Table "sint75" {
   "GERADO" TINYINT(1)
   "CODIGO" VARCHAR(24)
   Indexes {
-    CODIGORED [name: "SINT75-1"]
-    CODIGO [name: "SINT75-2"]
+    (CODIGORED) [name: "SINT75-1"]
+    (CODIGO) [name: "SINT75-2"]
   }
 }
 
-// Origem: sint76.dbf (DBF)
+// Origem: sint76 (DBFCDX)
 Table "sint76" {
-  Note: "Origem: sint76.dbf"
+  Note: "Origem: sint76"
   "TIPO" VARCHAR(2)
   "CGC" VARCHAR(14)
   "IE" VARCHAR(14)
@@ -457,11 +457,14 @@ Table "sint76" {
   "OUTRAS76" DECIMAL(12,2) [default: 0]
   "ALIQICM76" INTEGER [default: 0]
   "SITUAC76" VARCHAR(1)
+  Indexes {
+    (CGC) [name: "CGC"]
+  }
 }
 
-// Origem: sint77.dbf (DBF)
+// Origem: sint77 (DBFCDX)
 Table "sint77" {
-  Note: "Origem: sint77.dbf"
+  Note: "Origem: sint77"
   "TIPO" VARCHAR(2)
   "CGC" VARCHAR(14)
   "MODEL77" VARCHAR(2)
@@ -480,13 +483,13 @@ Table "sint77" {
   "CNPJMF" VARCHAR(14)
   "CODTERM" VARCHAR(10)
   Indexes {
-    RECNO() [name: "REGISTRO"]
+    (CGC) [name: "CGC"]
   }
 }
 
-// Origem: sint85.dbf (DBF)
+// Origem: sint85 (DBFCDX)
 Table "sint85" {
-  Note: "Origem: sint85.dbf"
+  Note: "Origem: sint85"
   "REG" VARCHAR(2)
   "DECLARACAO" INTEGER [default: 0]
   "DATADEC" DATETIME
@@ -505,13 +508,13 @@ Table "sint85" {
   "SERIE" VARCHAR(3)
   "BRANCOS" VARCHAR(19)
   Indexes {
-    RECNO() [name: "REGISTRO"]
+    (CONHEC) [name: "CONHEC"]
   }
 }
 
-// Origem: sint86.dbf (DBF)
+// Origem: sint86 (DBFCDX)
 Table "sint86" {
-  Note: "Origem: sint86.dbf"
+  Note: "Origem: sint86"
   "REG" VARCHAR(2)
   "REGEXP" INTEGER [default: 0]
   "DTREGEXP" DATETIME
@@ -529,13 +532,13 @@ Table "sint86" {
   "RELAC" INTEGER [default: 0]
   "BRANCOS" VARCHAR(5)
   Indexes {
-    RECNO() [name: "REGISTRO"]
+    (REGEXP) [name: "REGEXP"]
   }
 }
 
-// Origem: sint88c.dbf (DBF)
+// Origem: sint88c (DBFCDX)
 Table "sint88c" {
-  Note: "Origem: sint88c.dbf"
+  Note: "Origem: sint88c"
   "REG" VARCHAR(2)
   "SUB" VARCHAR(1)
   "CNPJ" VARCHAR(14)
@@ -553,13 +556,13 @@ Table "sint88c" {
   "PARCIMPRET" DECIMAL(12,2) [default: 0]
   "BRANCOS" VARCHAR(6)
   Indexes {
-    RECNO() [name: "REGISTRO"]
+    (CNPJ,NUMERONF) [name: "CNPJNUM"]
   }
 }
 
-// Origem: sint88d.dbf (DBF)
+// Origem: sint88d (DBFCDX)
 Table "sint88d" {
-  Note: "Origem: sint88d.dbf"
+  Note: "Origem: sint88d"
   "REG" VARCHAR(2)
   "SUB" VARCHAR(1)
   "CNPJ" VARCHAR(14)
@@ -579,13 +582,13 @@ Table "sint88d" {
   "IEENTREGA" VARCHAR(14)
   "BRANCOS" VARCHAR(5)
   Indexes {
-    RECNO() [name: "REGISTRO"]
+    (CNPJ,NUMERONF) [name: "CNPJNUM"]
   }
 }
 
-// Origem: sint88e.dbf (DBF)
+// Origem: sint88e (DBFCDX)
 Table "sint88e" {
-  Note: "Origem: sint88e.dbf"
+  Note: "Origem: sint88e"
   "REG" VARCHAR(2)
   "SUB" VARCHAR(1)
   "CNPJ" VARCHAR(14)
@@ -594,26 +597,26 @@ Table "sint88e" {
   "CODPROSEF" VARCHAR(14)
   "BRANCOS" VARCHAR(67)
   Indexes {
-    RECNO() [name: "REGISTRO"]
+    (CNPJ,SUB) [name: "CNPJSUB"]
   }
 }
 
-// Origem: sint88m.dbf (DBF)
+// Origem: sint88m (DBFCDX)
 Table "sint88m" {
-  Note: "Origem: sint88m.dbf"
+  Note: "Origem: sint88m"
   "REG" VARCHAR(2)
   "SUB" VARCHAR(1)
   "CNPJ" VARCHAR(14)
   "MENSAGEM" VARCHAR(34)
   "BRANCOS" VARCHAR(75)
   Indexes {
-    RECNO() [name: "REGISTRO"]
+    (CNPJ,SUB) [name: "CNPJ+SUB"]
   }
 }
 
-// Origem: sint88t.dbf (DBF)
+// Origem: sint88t (DBFCDX)
 Table "sint88t" {
-  Note: "Origem: sint88t.dbf"
+  Note: "Origem: sint88t"
   "REG" VARCHAR(2)
   "SUB" VARCHAR(1)
   "CNPJ" VARCHAR(14)
@@ -636,16 +639,16 @@ Table "sint88t" {
   "UF3" VARCHAR(2)
   "BRANCOS" VARCHAR(28)
   Indexes {
-    RECNO() [name: "REGISTRO"]
+    (CNPJ,SUB) [name: "CNPJSUB"]
   }
 }
 
-// Origem: sint90.dbf (DBF)
+// Origem: sint90 (DBFCDX)
 Table "sint90" {
-  Note: "Origem: sint90.dbf"
+  Note: "Origem: sint90"
   "REG90" VARCHAR(126)
   Indexes {
-    RECNO() [name: "REGISTRO"]
+    (REG90) [name: "REG90"]
   }
 }
 
