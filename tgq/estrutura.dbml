@@ -1,6 +1,6 @@
-// Origem: acpnc.dbf (DBF)
+// Origem: acpnc (DBFCDX)
 Table "acpnc" {
-  Note: "Origem: acpnc.dbf"
+  Note: "Origem: acpnc"
   "ACPNC" INTEGER [default: 0]
   "DATA" DATETIME
   "DATAFEC" DATETIME
@@ -53,18 +53,18 @@ Table "acpnc" {
   "SAC" INTEGER [default: 0]
   "COMPETE" VARCHAR(6)
   Indexes {
-    ACPNC [name: "ACPNC"]
-    DATA [name: "DATA"]
-    RNC [name: "RNC"]
-    STR(RAT,8)+PRODUTO [name: "RATPRODUTO"]
-    SAC [name: "SAC"]
-    COMPETE [name: "COMPETE"]
+    (ACPNC) [name: "ACPNC"]
+    (DATA) [name: "DATA"]
+    (RNC) [name: "RNC"]
+    (RAT,PRODUTO) [name: "RATPRODUTO"]
+    (SAC) [name: "SAC"]
+    (COMPETE) [name: "COMPETE"]
   }
 }
 
-// Origem: adp.dbf (DBF)
+// Origem: adp (DBFCDX)
 Table "adp" {
-  Note: "Origem: adp.dbf"
+  Note: "Origem: adp"
   "ADP" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "NOME" VARCHAR(40)
@@ -84,26 +84,26 @@ Table "adp" {
   "RESPO" VARCHAR(40)
   "RNC" INTEGER [default: 0]
   Indexes {
-    ADP [name: "ADP"]
-    RNC [name: "RNC"]
+    (ADP) [name: "ADP"]
+    (RNC) [name: "RNC"]
   }
 }
 
-// Origem: adpi.dbf (DBF)
+// Origem: adpi (DBFCDX)
 Table "adpi" {
-  Note: "Origem: adpi.dbf"
+  Note: "Origem: adpi"
   "ADP" INTEGER [default: 0]
   "ESPC" VARCHAR(80)
   "ENCO" VARCHAR(80)
   "LAUDO" VARCHAR(1)
   Indexes {
-    ADP [name: "ADP"]
+    (ADP) [name: "ADP"]
   }
 }
 
-// Origem: caf.dbf (DBF)
+// Origem: caf (DBFCDX)
 Table "caf" {
-  Note: "Origem: caf.dbf"
+  Note: "Origem: caf"
   "NUMERO" INTEGER [default: 0]
   "PREVISTO" DATETIME
   "EFETUADO" DATETIME
@@ -111,13 +111,13 @@ Table "caf" {
   "EFICAZ" VARCHAR(1)
   "OBS" VARCHAR(80)
   Indexes {
-    NUMERO [name: "NUMERO"]
+    (NUMERO) [name: "NUMERO"]
   }
 }
 
-// Origem: cfe.dbf (DBF)
+// Origem: cfe (DBFCDX)
 Table "cfe" {
-  Note: "Origem: cfe.dbf"
+  Note: "Origem: cfe"
   "NUMERO" INTEGER [default: 0]
   "DATA" DATETIME
   "TIPOCLI" VARCHAR(1)
@@ -130,26 +130,26 @@ Table "cfe" {
   "TIPOENT" VARCHAR(1)
   "PRODUTO" VARCHAR(24)
   Indexes {
-    NUMERO [name: "NUMERO"]
+    (NUMERO) [name: "NUMERO"]
   }
 }
 
-// Origem: crdias.dbf (DBF)
+// Origem: crdias (DBFCDX)
 Table "crdias" {
-  Note: "Origem: crdias.dbf"
+  Note: "Origem: crdias"
   "SEQ" INTEGER [default: 0]
   "NFOR" INTEGER [default: 0]
   "DIAS" DECIMAL(7,2) [default: 0]
   "QTENT" INTEGER [default: 0]
   "QTPRZ" INTEGER [default: 0]
   Indexes {
-    SEQ [name: "SEQ"]
+    (SEQ) [name: "SEQ"]
   }
 }
 
-// Origem: crfa.dbf (DBF)
+// Origem: crfa (DBFCDX)
 Table "crfa" {
-  Note: "Origem: crfa.dbf"
+  Note: "Origem: crfa"
   "SEQ" INTEGER [default: 0]
   "NFOR" INTEGER [default: 0]
   "NOME" VARCHAR(40)
@@ -172,14 +172,14 @@ Table "crfa" {
   "IAF" DECIMAL(7,2) [default: 0]
   "SUBRAMO" VARCHAR(3)
   Indexes {
-    STR(SEQ,3)+STR(NFOR,8) [name: "SEQNFOR"]
-    NFOR [name: "NFOR"]
+    (SEQ,NFOR) [name: "SEQNFOR"]
+    (NFOR) [name: "NFOR"]
   }
 }
 
-// Origem: crfor.dbf (DBF)
+// Origem: crfor (DBFCDX)
 Table "crfor" {
-  Note: "Origem: crfor.dbf"
+  Note: "Origem: crfor"
   "SEQ" INTEGER [default: 0]
   "NFOR" INTEGER [default: 0]
   "QTDREC" INTEGER [default: 0]
@@ -197,15 +197,15 @@ Table "crfor" {
   "IAFA" DECIMAL(7,2) [default: 0]
   "NOME" VARCHAR(50)
   Indexes {
-    SEQ [name: "SEQ"]
-    NFOR [name: "NFOR"]
-    STR(SEQ,3)+STR(NFOR,8) [name: "SEQNFOR"]
+    (SEQ) [name: "SEQ"]
+    (NFOR) [name: "NFOR"]
+    (SEQ,NFOR) [name: "SEQNFOR"]
   }
 }
 
-// Origem: crft.dbf (DBF)
+// Origem: crft (DBFCDX)
 Table "crft" {
-  Note: "Origem: crft.dbf"
+  Note: "Origem: crft"
   "NFOR" INTEGER [default: 0]
   "SEQ" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
@@ -226,24 +226,24 @@ Table "crft" {
   "IAFS" DECIMAL(7,2) [default: 0]
   "PPMS" INTEGER [default: 0]
   Indexes {
-    STR(SEQ,3)+STR(NFOR,8) [name: "SEQNFOR"]
+    (SEQ,NFOR) [name: "SEQNFOR"]
   }
 }
 
-// Origem: crrsapc.dbf (DBF)
+// Origem: crrsapc (DBFCDX)
 Table "crrsapc" {
-  Note: "Origem: crrsapc.dbf"
+  Note: "Origem: crrsapc"
   "SEQ" INTEGER [default: 0]
   "CLIENTE" INTEGER [default: 0]
   "QTDE" INTEGER [default: 0]
   Indexes {
-    STR(SEQ,3)+STR(CLIENTE,8) [name: "SEQCLIENTE"]
+    (SEQ,CLIENTE) [name: "SEQCLIENTE"]
   }
 }
 
-// Origem: crrsapp.dbf (DBF)
+// Origem: crrsapp (DBFCDX)
 Table "crrsapp" {
-  Note: "Origem: crrsapp.dbf"
+  Note: "Origem: crrsapp"
   "SEQ" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "NOME" VARCHAR(40)
@@ -260,13 +260,13 @@ Table "crrsapp" {
   "SET09" INTEGER [default: 0]
   "SET00" INTEGER [default: 0]
   Indexes {
-    STR(SEQ,3)+CODIGO [name: "SEQCODIGO"]
+    (SEQ,CODIGO) [name: "SEQCODIGO"]
   }
 }
 
-// Origem: crrsaps.dbf (DBF)
+// Origem: crrsaps (DBFCDX)
 Table "crrsaps" {
-  Note: "Origem: crrsaps.dbf"
+  Note: "Origem: crrsaps"
   "SEQ" INTEGER [default: 0]
   "SETCOD" VARCHAR(1)
   "SETOR" VARCHAR(10)
@@ -299,25 +299,25 @@ Table "crrsaps" {
   "ANUTOT" INTEGER [default: 0]
   "ANUPRO" INTEGER [default: 0]
   Indexes {
-    STR(SEQ,3)+SETCOD [name: "SEQSETOR"]
+    (SEQ,SETCOD) [name: "SEQSETOR"]
   }
 }
 
-// Origem: crrserr.dbf (DBF)
+// Origem: crrserr (DBFCDX)
 Table "crrserr" {
-  Note: "Origem: crrserr.dbf"
+  Note: "Origem: crrserr"
   "CODIGO" VARCHAR(3)
   "NOME" VARCHAR(40)
   "GRAFICO" TINYINT(1)
   "COGNOME" VARCHAR(5)
   Indexes {
-    CODIGO [name: "CODIGO"]
+    (CODIGO) [name: "CODIGO"]
   }
 }
 
-// Origem: crrsseq.dbf (DBF)
+// Origem: crrsseq (DBFCDX)
 Table "crrsseq" {
-  Note: "Origem: crrsseq.dbf"
+  Note: "Origem: crrsseq"
   "SEQ" INTEGER [default: 0]
   "DIAFIM" DATETIME
   "DIAINI" DATETIME
@@ -379,25 +379,25 @@ Table "crrsseq" {
   "NUMTEM" INTEGER [default: 0]
   "ZERO" INTEGER [default: 0]
   Indexes {
-    SEQ [name: "SEQ"]
+    (SEQ) [name: "SEQ"]
   }
 }
 
-// Origem: crrsset.dbf (DBF)
+// Origem: crrsset (DBFCDX)
 Table "crrsset" {
-  Note: "Origem: crrsset.dbf"
+  Note: "Origem: crrsset"
   "CODIGO" VARCHAR(1)
   "NOME" VARCHAR(10)
   "GRAFICO" TINYINT(1)
   "COGNOME" VARCHAR(5)
   Indexes {
-    CODIGO [name: "SEQ"]
+    (CODIGO) [name: "SEQ"]
   }
 }
 
-// Origem: crseq.dbf (DBF)
+// Origem: crseq (DBFCDX)
 Table "crseq" {
-  Note: "Origem: crseq.dbf"
+  Note: "Origem: crseq"
   "SEQ" INTEGER [default: 0]
   "DIAFIM" DATETIME
   "DIAINI" DATETIME
@@ -407,13 +407,13 @@ Table "crseq" {
   "ANUAL" VARCHAR(1)
   "SEMES" VARCHAR(1)
   Indexes {
-    SEQ [name: "SEQ"]
+    (SEQ) [name: "SEQ"]
   }
 }
 
-// Origem: crts.dbf (DBF)
+// Origem: crts (DBFCDX)
 Table "crts" {
-  Note: "Origem: crts.dbf"
+  Note: "Origem: crts"
   "SEQ" INTEGER [default: 0]
   "PRODMES" INTEGER [default: 0]
   "RET" INTEGER [default: 0]
@@ -423,13 +423,13 @@ Table "crts" {
   "PPMSUC" INTEGER [default: 0]
   "PPMDEV" INTEGER [default: 0]
   Indexes {
-    SEQ [name: "SEQ"]
+    (SEQ) [name: "SEQ"]
   }
 }
 
-// Origem: msrd.dbf (DBF)
+// Origem: msrd (DBFCDX)
 Table "msrd" {
-  Note: "Origem: msrd.dbf"
+  Note: "Origem: msrd"
   "MSRD" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "PF" INTEGER [default: 0]
@@ -441,14 +441,14 @@ Table "msrd" {
   "ACA01" VARCHAR(80)
   "CLIENTE" INTEGER [default: 0]
   Indexes {
-    MSRD [name: "MSRD"]
-    CODIGO [name: "CODIGO"]
+    (MSRD) [name: "MSRD"]
+    (CODIGO) [name: "CODIGO"]
   }
 }
 
-// Origem: pe01tmp.dbf (DBF)
+// Origem: pe01tmp (DBFCDX)
 Table "pe01tmp" {
-  Note: "Origem: pe01tmp.dbf"
+  Note: "Origem: pe01tmp"
   "TIPPED" VARCHAR(1)
   "CODIGO" VARCHAR(24)
   "UNIDADE" VARCHAR(2)
@@ -478,19 +478,19 @@ Table "pe01tmp" {
   "ARITEM" INTEGER [default: 0]
   "RIRM" INTEGER [default: 0]
   Indexes {
-    STR(PEDIDO,5)+STR(ITEM,2)+DIGCTR [name: "PE01TMP1"]
-    STR(NRNOTASAI,8)+STR(CLIENTE,8) [name: "PE01TMP2"]
-    PEDIDO [name: "PE01TMP3"]
-    CLIENTE [name: "PE01TMP4"]
-    STR(AR,8)+STR(ARITEM,3) [name: "PE01TMP5"]
-    CODIGO [name: "PE01TMP6"]
-    STR(CLIENTE,8)+STR(NRNOTASAI,8)+CODIGO [name: "PE01TMP7"]
+    (PEDIDO,ITEM,DIGCTR) [name: "PE01TMP1"]
+    (NRNOTASAI,CLIENTE) [name: "PE01TMP2"]
+    (PEDIDO) [name: "PE01TMP3"]
+    (CLIENTE) [name: "PE01TMP4"]
+    (AR,ARITEM) [name: "PE01TMP5"]
+    (CODIGO) [name: "PE01TMP6"]
+    (CLIENTE,NRNOTASAI,CODIGO) [name: "PE01TMP7"]
   }
 }
 
-// Origem: racf.dbf (DBF)
+// Origem: racf (DBFCDX)
 Table "racf" {
-  Note: "Origem: racf.dbf"
+  Note: "Origem: racf"
   "RACF" INTEGER [default: 0]
   "RNC" INTEGER [default: 0]
   "RAT" INTEGER [default: 0]
@@ -551,25 +551,25 @@ Table "racf" {
   "DEMERITO" VARCHAR(1)
   "DESCRI01" VARCHAR(50)
   Indexes {
-    RACF [name: "RACF"]
-    DATA [name: "RACF-2"]
+    (RACF) [name: "RACF"]
+    (DATA) [name: "RACF-2"]
   }
 }
 
-// Origem: racfsal.dbf (DBF)
+// Origem: racfsal (DBFCDX)
 Table "racfsal" {
-  Note: "Origem: racfsal.dbf"
+  Note: "Origem: racfsal"
   "SEQ" INTEGER [default: 0]
   "CLIFOR" INTEGER [default: 0]
   "QTDE" INTEGER [default: 0]
   Indexes {
-    STR(SEQ,3)+STR(CLIFOR,8) [name: "SEQCLIFOR"]
+    (SEQ,CLIFOR) [name: "SEQCLIFOR"]
   }
 }
 
-// Origem: rat.dbf (DBF)
+// Origem: rat (DBFCDX)
 Table "rat" {
-  Note: "Origem: rat.dbf"
+  Note: "Origem: rat"
   "RAT" INTEGER [default: 0]
   "CLIENTE" INTEGER [default: 0]
   "CLINOME" VARCHAR(50)
@@ -578,14 +578,14 @@ Table "rat" {
   "RECCLI" TINYINT(1)
   "RELCLI" TINYINT(1)
   Indexes {
-    RAT [name: "RAT"]
-    DATA [name: "DATA"]
+    (RAT) [name: "RAT"]
+    (DATA) [name: "DATA"]
   }
 }
 
-// Origem: rati.dbf (DBF)
+// Origem: rati (DBFCDX)
 Table "rati" {
-  Note: "Origem: rati.dbf"
+  Note: "Origem: rati"
   "RAT" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "QTDE" INTEGER [default: 0]
@@ -610,13 +610,13 @@ Table "rati" {
   "PARADA" TINYINT(1)
   "RELACAO" VARCHAR(1)
   Indexes {
-    RAT [name: "RAT"]
+    (RAT) [name: "RAT"]
   }
 }
 
-// Origem: rnc.dbf (DBF)
+// Origem: rnc (DBFCDX)
 Table "rnc" {
-  Note: "Origem: rnc.dbf"
+  Note: "Origem: rnc"
   "RNC" INTEGER [default: 0]
   "CODRNC" VARCHAR(1)
   "DESCRI" VARCHAR(30)
@@ -716,26 +716,26 @@ Table "rnc" {
   "QTDSUC" INTEGER [default: 0]
   "PECSUC" DECIMAL(18,4) [default: 0]
   Indexes {
-    RNC [name: "RNC"]
-    DATA [name: "RNC-2"]
+    (RNC) [name: "RNC"]
+    (DATA) [name: "RNC-2"]
   }
 }
 
-// Origem: rnci.dbf (DBF)
+// Origem: rnci (DBFCDX)
 Table "rnci" {
-  Note: "Origem: rnci.dbf"
+  Note: "Origem: rnci"
   "RNC" INTEGER [default: 0]
   "QTNC" INTEGER [default: 0]
   "SETCOD" VARCHAR(1)
   "CODERR" VARCHAR(3)
   Indexes {
-    RNC [name: "RNCI"]
+    (RNC) [name: "RNCI"]
   }
 }
 
-// Origem: sac.dbf (DBF)
+// Origem: sac (DBFCDX)
 Table "sac" {
-  Note: "Origem: sac.dbf"
+  Note: "Origem: sac"
   "RNC" INTEGER [default: 0]
   "RAT" INTEGER [default: 0]
   "DOCUMENTO" VARCHAR(25)
@@ -814,15 +814,15 @@ Table "sac" {
   "REVPFOBS" VARCHAR(30)
   "REVPCOBS" VARCHAR(30)
   Indexes {
-    SAC [name: "SAC"]
-    STR(OS,8,2)+STR(NF,8)+STR(ITEM,3) [name: "SAC-2"]
-    CODIGO [name: "SAC-3"]
+    (SAC) [name: "SAC"]
+    (OS,NF,ITEM) [name: "SAC-2"]
+    (CODIGO) [name: "SAC-3"]
   }
 }
 
-// Origem: saci.dbf (DBF)
+// Origem: saci (DBFCDX)
 Table "saci" {
-  Note: "Origem: saci.dbf"
+  Note: "Origem: saci"
   "SAC" INTEGER [default: 0]
   "CAUSA" INTEGER [default: 0]
   "ACAO" INTEGER [default: 0]
@@ -861,7 +861,7 @@ Table "saci" {
   "ACM06" VARCHAR(100)
   "LPAE" TINYINT(1)
   Indexes {
-    SAC [name: "SACI"]
+    (SAC) [name: "SACI"]
   }
 }
 

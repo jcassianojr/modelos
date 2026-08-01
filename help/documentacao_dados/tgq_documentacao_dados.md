@@ -1,8 +1,8 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 27/07/2026
+> Varredura automatica realizada em: 31/07/2026
 
-## Tabela DBF: `acpnc.dbf`
-> **Origem:** `acpnc.dbf` (Driver: DBFCDX)
+## Tabela DBF: `acpnc`
+> **Origem:** `acpnc` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -67,8 +67,8 @@
 - Tag: `COMPETE` Expressao: `COMPETE`
 
 ---
-## Tabela DBF: `adp.dbf`
-> **Origem:** `adp.dbf` (Driver: DBFCDX)
+## Tabela DBF: `adp`
+> **Origem:** `adp` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -96,8 +96,8 @@
 - Tag: `RNC` Expressao: `RNC`
 
 ---
-## Tabela DBF: `adpi.dbf`
-> **Origem:** `adpi.dbf` (Driver: DBFCDX)
+## Tabela DBF: `adpi`
+> **Origem:** `adpi` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -110,8 +110,8 @@
 - Tag: `ADP` Expressao: `ADP`
 
 ---
-## Tabela DBF: `caf.dbf`
-> **Origem:** `caf.dbf` (Driver: DBFCDX)
+## Tabela DBF: `caf`
+> **Origem:** `caf` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -126,8 +126,8 @@
 - Tag: `NUMERO` Expressao: `NUMERO`
 
 ---
-## Tabela DBF: `cfe.dbf`
-> **Origem:** `cfe.dbf` (Driver: DBFCDX)
+## Tabela DBF: `cfe`
+> **Origem:** `cfe` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -147,8 +147,8 @@
 - Tag: `NUMERO` Expressao: `NUMERO`
 
 ---
-## Tabela DBF: `crdias.dbf`
-> **Origem:** `crdias.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crdias`
+> **Origem:** `crdias` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -162,8 +162,8 @@
 - Tag: `SEQ` Expressao: `SEQ`
 
 ---
-## Tabela DBF: `crfa.dbf`
-> **Origem:** `crfa.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crfa`
+> **Origem:** `crfa` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -194,8 +194,8 @@
 - Tag: `NFOR` Expressao: `NFOR`
 
 ---
-## Tabela DBF: `crfor.dbf`
-> **Origem:** `crfor.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crfor`
+> **Origem:** `crfor` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -222,8 +222,8 @@
 - Tag: `SEQNFOR` Expressao: `STR(SEQ,3)+STR(NFOR,8)`
 
 ---
-## Tabela DBF: `crft.dbf`
-> **Origem:** `crft.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crft`
+> **Origem:** `crft` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -251,8 +251,8 @@
 - Tag: `SEQNFOR` Expressao: `STR(SEQ,3)+STR(NFOR,8)`
 
 ---
-## Tabela DBF: `crrsapc.dbf`
-> **Origem:** `crrsapc.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crrsapc`
+> **Origem:** `crrsapc` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -264,8 +264,8 @@
 - Tag: `SEQCLIENTE` Expressao: `STR(SEQ,3)+STR(CLIENTE,8)`
 
 ---
-## Tabela DBF: `crrsapp.dbf`
-> **Origem:** `crrsapp.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crrsapp`
+> **Origem:** `crrsapp` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -289,8 +289,8 @@
 - Tag: `SEQCODIGO` Expressao: `STR(SEQ,3)+CODIGO`
 
 ---
-## Tabela DBF: `crrsaps.dbf`
-> **Origem:** `crrsaps.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crrsaps`
+> **Origem:** `crrsaps` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -330,8 +330,8 @@
 - Tag: `SEQSETOR` Expressao: `STR(SEQ,3)+SETCOD`
 
 ---
-## Tabela DBF: `crrserr.dbf`
-> **Origem:** `crrserr.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crrserr`
+> **Origem:** `crrserr` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -344,8 +344,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `crrsseq.dbf`
-> **Origem:** `crrsseq.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crrsseq`
+> **Origem:** `crrsseq` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -414,8 +414,8 @@
 - Tag: `SEQ` Expressao: `SEQ`
 
 ---
-## Tabela DBF: `crrsset.dbf`
-> **Origem:** `crrsset.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crrsset`
+> **Origem:** `crrsset` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -428,8 +428,8 @@
 - Tag: `SEQ` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `crseq.dbf`
-> **Origem:** `crseq.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crseq`
+> **Origem:** `crseq` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -446,8 +446,8 @@
 - Tag: `SEQ` Expressao: `SEQ`
 
 ---
-## Tabela DBF: `crts.dbf`
-> **Origem:** `crts.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crts`
+> **Origem:** `crts` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -464,8 +464,8 @@
 - Tag: `SEQ` Expressao: `SEQ`
 
 ---
-## Tabela DBF: `msrd.dbf`
-> **Origem:** `msrd.dbf` (Driver: DBFCDX)
+## Tabela DBF: `msrd`
+> **Origem:** `msrd` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -485,8 +485,8 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `pe01tmp.dbf`
-> **Origem:** `pe01tmp.dbf` (Driver: DBFCDX)
+## Tabela DBF: `pe01tmp`
+> **Origem:** `pe01tmp` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -529,8 +529,8 @@
 - Tag: `PE01TMP7` Expressao: `STR(CLIENTE,8)+STR(NRNOTASAI,8)+CODIGO`
 
 ---
-## Tabela DBF: `racf.dbf`
-> **Origem:** `racf.dbf` (Driver: DBFCDX)
+## Tabela DBF: `racf`
+> **Origem:** `racf` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -599,8 +599,8 @@
 - Tag: `RACF-2` Expressao: `DATA`
 
 ---
-## Tabela DBF: `racfsal.dbf`
-> **Origem:** `racfsal.dbf` (Driver: DBFCDX)
+## Tabela DBF: `racfsal`
+> **Origem:** `racfsal` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -612,8 +612,8 @@
 - Tag: `SEQCLIFOR` Expressao: `STR(SEQ,3)+STR(CLIFOR,8)`
 
 ---
-## Tabela DBF: `rat.dbf`
-> **Origem:** `rat.dbf` (Driver: DBFCDX)
+## Tabela DBF: `rat`
+> **Origem:** `rat` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -630,8 +630,8 @@
 - Tag: `DATA` Expressao: `DATA`
 
 ---
-## Tabela DBF: `rati.dbf`
-> **Origem:** `rati.dbf` (Driver: DBFCDX)
+## Tabela DBF: `rati`
+> **Origem:** `rati` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -663,8 +663,8 @@
 - Tag: `RAT` Expressao: `RAT`
 
 ---
-## Tabela DBF: `rnc.dbf`
-> **Origem:** `rnc.dbf` (Driver: DBFCDX)
+## Tabela DBF: `rnc`
+> **Origem:** `rnc` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -772,8 +772,8 @@
 - Tag: `RNC-2` Expressao: `DATA`
 
 ---
-## Tabela DBF: `rnci.dbf`
-> **Origem:** `rnci.dbf` (Driver: DBFCDX)
+## Tabela DBF: `rnci`
+> **Origem:** `rnci` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -786,8 +786,8 @@
 - Tag: `RNCI` Expressao: `RNC`
 
 ---
-## Tabela DBF: `sac.dbf`
-> **Origem:** `sac.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sac`
+> **Origem:** `sac` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -875,8 +875,8 @@
 - Tag: `SAC-3` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `saci.dbf`
-> **Origem:** `saci.dbf` (Driver: DBFCDX)
+## Tabela DBF: `saci`
+> **Origem:** `saci` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
