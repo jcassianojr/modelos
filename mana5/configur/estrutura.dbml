@@ -1,6 +1,6 @@
-// Origem: agenda.dbf (DBF)
+// Origem: agenda (DBFCDX)
 Table "agenda" {
-  Note: "Origem: agenda.dbf"
+  Note: "Origem: agenda"
   "CDDATA" DATETIME
   "OBS1" VARCHAR(60)
   "OBS2" VARCHAR(60)
@@ -11,25 +11,25 @@ Table "agenda" {
   "OBS7" VARCHAR(60)
   "OBS8" VARCHAR(60)
   Indexes {
-    CDDATA [name: "AGENDA"]
+    (CDDATA) [name: "AGENDA"]
   }
 }
 
-// Origem: codimp.dbf (DBF)
+// Origem: codimp (DBFCDX)
 Table "codimp" {
-  Note: "Origem: codimp.dbf"
+  Note: "Origem: codimp"
   "CODIGO" VARCHAR(6)
   "NOMEIMP" VARCHAR(12)
   "DESCRICAO" VARCHAR(50)
   "CONTEUDO" VARCHAR(70)
   Indexes {
-    CODIGO [name: "CODIMP"]
+    (CODIGO) [name: "CODIMP"]
   }
 }
 
-// Origem: cores.dbf (DBF)
+// Origem: cores (DBFCDX)
 Table "cores" {
-  Note: "Origem: cores.dbf"
+  Note: "Origem: cores"
   "CODIGO" VARCHAR(7)
   "DESCRICAO" VARCHAR(60)
   "COR1" VARCHAR(6)
@@ -39,34 +39,34 @@ Table "cores" {
   "COR5" VARCHAR(6)
   "COR6" VARCHAR(6)
   Indexes {
-    CODIGO [name: "CORES"]
+    (CODIGO) [name: "CORES"]
   }
 }
 
-// Origem: macess.dbf (DBF)
+// Origem: macess (DBFCDX)
 Table "macess" {
-  Note: "Origem: macess.dbf"
+  Note: "Origem: macess"
   "CODIGO" VARCHAR(6)
   "DESCRICAO" VARCHAR(60)
   "SENHA" VARCHAR(5)
   Indexes {
-    CODIGO [name: "MACESS"]
+    (CODIGO) [name: "MACESS"]
   }
 }
 
-// Origem: manaman.dbf (DBF)
+// Origem: manaman (DBFCDX)
 Table "manaman" {
-  Note: "Origem: manaman.dbf"
+  Note: "Origem: manaman"
   "DESCRICAO" VARCHAR(76)
   "ARQUIVO" VARCHAR(12)
   Indexes {
-    ARQUIVO [name: "MANAMAN"]
+    (ARQUIVO) [name: "MANAMAN"]
   }
 }
 
-// Origem: manarq.dbf (DBF)
+// Origem: manarq (DBFCDX)
 Table "manarq" {
-  Note: "Origem: manarq.dbf"
+  Note: "Origem: manarq"
   "ARQUIVO" VARCHAR(8)
   "DESCRICAO" VARCHAR(60)
   "CAMINHO" VARCHAR(40)
@@ -87,13 +87,13 @@ Table "manarq" {
   "PULAFIX" VARCHAR(1)
   "DRIVER" VARCHAR(10)
   Indexes {
-    ARQUIVO [name: "MANARQ"]
+    (ARQUIVO) [name: "MANARQ"]
   }
 }
 
-// Origem: manarq1.dbf (DBF)
+// Origem: manarq1 (DBFCDX)
 Table "manarq1" {
-  Note: "Origem: manarq1.dbf"
+  Note: "Origem: manarq1"
   "ARQUIVO" VARCHAR(8)
   "ITEM" INTEGER [default: 0]
   "INDICE" VARCHAR(8)
@@ -113,24 +113,24 @@ Table "manarq1" {
   "DES3" VARCHAR(30)
   "FORMULA" VARCHAR(60)
   Indexes {
-    ARQUIVO+STR(ITEM,2) [name: "MANARQ1"]
+    (ARQUIVO,ITEM) [name: "MANARQ1"]
   }
 }
 
-// Origem: manatu.dbf (DBF)
+// Origem: manatu (DBFCDX)
 Table "manatu" {
-  Note: "Origem: manatu.dbf"
+  Note: "Origem: manatu"
   "ARQUIVO1" VARCHAR(8)
   "ARQUIVO2" VARCHAR(8)
   "INDICE" INTEGER [default: 0]
   Indexes {
-    ARQUIVO1 [name: "MANATU"]
+    (ARQUIVO1) [name: "MANATU"]
   }
 }
 
-// Origem: manerr.dbf (DBF)
+// Origem: manerr (DBFCDX)
 Table "manerr" {
-  Note: "Origem: manerr.dbf"
+  Note: "Origem: manerr"
   "USUARIO" VARCHAR(10)
   "DATA" DATETIME
   "HORA" VARCHAR(8)
@@ -138,13 +138,13 @@ Table "manerr" {
   "OPR" VARCHAR(3)
   "ARQUIVO" VARCHAR(8)
   Indexes {
-    USUARIO+DTOS(DATA) [name: "MANERR"]
+    (USUARIO,DATA) [name: "MANERR"]
   }
 }
 
-// Origem: manfec.dbf (DBF)
+// Origem: manfec (DBFCDX)
 Table "manfec" {
-  Note: "Origem: manfec.dbf"
+  Note: "Origem: manfec"
   "ARQORI" VARCHAR(8)
   "STRANO" VARCHAR(8)
   "STRDES" VARCHAR(2)
@@ -162,26 +162,26 @@ Table "manfec" {
   "OPER07" VARCHAR(200)
   "FECHAAUTO" VARCHAR(1)
   Indexes {
-    ARQORI [name: "MANFEC"]
-    STRANO [name: "MANFEC-2"]
-    STRDES [name: "MANFEC-3"]
+    (ARQORI) [name: "MANFEC"]
+    (STRANO) [name: "MANFEC-2"]
+    (STRDES) [name: "MANFEC-3"]
   }
 }
 
-// Origem: manfer.dbf (DBF)
+// Origem: manfer (DBFCDX)
 Table "manfer" {
-  Note: "Origem: manfer.dbf"
+  Note: "Origem: manfer"
   "DIA" INTEGER [default: 0]
   "MES" INTEGER [default: 0]
   "DESCRICAO" VARCHAR(40)
   Indexes {
-    STR(DIA)+STR(MES) [name: "MANFER"]
+    (DIA,MES) [name: "MANFER"]
   }
 }
 
-// Origem: manget.dbf (DBF)
+// Origem: manget (DBFCDX)
 Table "manget" {
-  Note: "Origem: manget.dbf"
+  Note: "Origem: manget"
   "CODIGO" VARCHAR(6)
   "SEQ" INTEGER [default: 0]
   "TIP" VARCHAR(1)
@@ -195,13 +195,13 @@ Table "manget" {
   "CONDICAO" VARCHAR(200)
   "PRECOND" VARCHAR(200)
   Indexes {
-    CODIGO+STR(SEQ,3) [name: "MANGET"]
+    (CODIGO,SEQ) [name: "MANGET"]
   }
 }
 
-// Origem: manopt.dbf (DBF)
+// Origem: manopt (DBFCDX)
 Table "manopt" {
-  Note: "Origem: manopt.dbf"
+  Note: "Origem: manopt"
   "ITEMENU" VARCHAR(1)
   "POSICAO" INTEGER [default: 0]
   "DESCP" VARCHAR(30)
@@ -211,13 +211,13 @@ Table "manopt" {
   "TECLA" INTEGER [default: 0]
   "EXECUTAR" VARCHAR(254)
   Indexes {
-    ITEMENU+STR(POSICAO,2) [name: "MANOPT"]
+    (ITEMENU,POSICAO) [name: "MANOPT"]
   }
 }
 
-// Origem: manre1.dbf (DBF)
+// Origem: manre1 (DBFCDX)
 Table "manre1" {
-  Note: "Origem: manre1.dbf"
+  Note: "Origem: manre1"
   "ARQUIVO" INTEGER [default: 0]
   "MENU" VARCHAR(2)
   "CODIGO" VARCHAR(8)
@@ -232,25 +232,25 @@ Table "manre1" {
   "FORMULA" VARCHAR(35)
   "QUEBRAR" INTEGER [default: 0]
   Indexes {
-    MENU+CODIGO+STR(ARQUIVO)+STR(SEQUENCIA)+STR(COLUNA) [name: "MANRE1-1"]
+    (MENU,CODIGO,ARQUIVO,SEQUENCIA,COLUNA) [name: "MANRE1-1"]
   }
 }
 
-// Origem: manreg.dbf (DBF)
+// Origem: manreg (DBFCDX)
 Table "manreg" {
-  Note: "Origem: manreg.dbf"
+  Note: "Origem: manreg"
   "POSICAO" INTEGER [default: 0]
   "GRUPO" VARCHAR(2)
   "DESCRICAO" VARCHAR(70)
   Indexes {
-    POSICAO [name: "MANREG-1"]
-    GRUPO [name: "MANREG-2"]
+    (POSICAO) [name: "MANREG-1"]
+    (GRUPO) [name: "MANREG-2"]
   }
 }
 
-// Origem: manrel.dbf (DBF)
+// Origem: manrel (DBFCDX)
 Table "manrel" {
-  Note: "Origem: manrel.dbf"
+  Note: "Origem: manrel"
   "MENU" VARCHAR(2)
   "MENU1" VARCHAR(2)
   "CODIGO" VARCHAR(8)
@@ -346,13 +346,13 @@ Table "manrel" {
   "ACESSOS" INTEGER [default: 0]
   "DATAULT" DATETIME
   Indexes {
-    MENU+CODIGO [name: "MANREL"]
+    (MENU,CODIGO) [name: "MANREL"]
   }
 }
 
-// Origem: mansub.dbf (DBF)
+// Origem: mansub (DBFCDX)
 Table "mansub" {
-  Note: "Origem: mansub.dbf"
+  Note: "Origem: mansub"
   "ITEMENU" VARCHAR(4)
   "POSICAO" INTEGER [default: 0]
   "DESCP" VARCHAR(30)
@@ -362,13 +362,13 @@ Table "mansub" {
   "TECLA" INTEGER [default: 0]
   "EXECUTAR" VARCHAR(200)
   Indexes {
-    ITEMENU+STR(POSICAO,2) [name: "MANSUB"]
+    (ITEMENU,POSICAO) [name: "MANSUB"]
   }
 }
 
-// Origem: mantel.dbf (DBF)
+// Origem: mantel (DBFCDX)
 Table "mantel" {
-  Note: "Origem: mantel.dbf"
+  Note: "Origem: mantel"
   "CODIGO" VARCHAR(6)
   "SEQ" INTEGER [default: 0]
   "TIP" VARCHAR(1)
@@ -379,13 +379,13 @@ Table "mantel" {
   "DIZER" VARCHAR(80)
   "ESTILO" VARCHAR(20)
   Indexes {
-    CODIGO+STR(SEQ,3) [name: "MANTEL"]
+    (CODIGO,SEQ) [name: "MANTEL"]
   }
 }
 
-// Origem: mcarta.dbf (DBF)
+// Origem: mcarta (DBFCDX)
 Table "mcarta" {
-  Note: "Origem: mcarta.dbf"
+  Note: "Origem: mcarta"
   "ARQUIVO" VARCHAR(8)
   "NOME" VARCHAR(50)
   "SETUP" VARCHAR(20)
@@ -396,13 +396,13 @@ Table "mcarta" {
   "MARCOL" INTEGER [default: 0]
   "MARLIN" INTEGER [default: 0]
   Indexes {
-    ARQUIVO [name: "MCARTA"]
+    (ARQUIVO) [name: "MCARTA"]
   }
 }
 
-// Origem: mcopia.dbf (DBF)
+// Origem: mcopia (DBFCDX)
 Table "mcopia" {
-  Note: "Origem: mcopia.dbf"
+  Note: "Origem: mcopia"
   "NOME" VARCHAR(6)
   "DIRETORIO" VARCHAR(35)
   "ARQ01" VARCHAR(12)
@@ -446,13 +446,13 @@ Table "mcopia" {
   "ARQ39" VARCHAR(12)
   "ARQ40" VARCHAR(12)
   Indexes {
-    NOME [name: "MCOPIA"]
+    (NOME) [name: "MCOPIA"]
   }
 }
 
-// Origem: metiq.dbf (DBF)
+// Origem: metiq (DBFCDX)
 Table "metiq" {
-  Note: "Origem: metiq.dbf"
+  Note: "Origem: metiq"
   "CODIGO" VARCHAR(6)
   "NOME" VARCHAR(50)
   "LINHA1" VARCHAR(75)
@@ -478,13 +478,13 @@ Table "metiq" {
   "PFIL" VARCHAR(1)
   "SETUPFIM" VARCHAR(20)
   Indexes {
-    CODIGO [name: "METIQ"]
+    (CODIGO) [name: "METIQ"]
   }
 }
 
-// Origem: mexpor.dbf (DBF)
+// Origem: mexpor (DBFCDX)
 Table "mexpor" {
-  Note: "Origem: mexpor.dbf"
+  Note: "Origem: mexpor"
   "ARQORI" VARCHAR(8)
   "ARQDES" VARCHAR(8)
   "CODIGO" VARCHAR(6)
@@ -498,47 +498,47 @@ Table "mexpor" {
   "ARQORIEXT" VARCHAR(3)
   "ARQDESEXT" VARCHAR(3)
   Indexes {
-    CODIGO [name: "MEXPOR"]
+    (CODIGO) [name: "MEXPOR"]
   }
 }
 
-// Origem: mexpor1.dbf (DBF)
+// Origem: mexpor1 (DBFCDX)
 Table "mexpor1" {
-  Note: "Origem: mexpor1.dbf"
+  Note: "Origem: mexpor1"
   "CODIGO" VARCHAR(6)
   "VARDES" VARCHAR(20)
   "VARDRI" VARCHAR(100)
   Indexes {
-    CODIGO+VARDES [name: "MEXPOR1"]
+    (CODIGO,VARDES) [name: "MEXPOR1"]
   }
 }
 
-// Origem: mf11.dbf (DBF)
+// Origem: mf11 (DBFCDX)
 Table "mf11" {
-  Note: "Origem: mf11.dbf"
+  Note: "Origem: mf11"
   "VARIAVEL" VARCHAR(10)
   "EXECUTE" VARCHAR(120)
   "ARQUIVO" VARCHAR(8)
   Indexes {
-    VARIAVEL+ARQUIVO [name: "MF11-1"]
+    (VARIAVEL,ARQUIVO) [name: "MF11-1"]
   }
 }
 
-// Origem: mmes.dbf (DBF)
+// Origem: mmes (DBFCDX)
 Table "mmes" {
-  Note: "Origem: mmes.dbf"
+  Note: "Origem: mmes"
   "CODIGO" VARCHAR(6)
   "USO" VARCHAR(50)
   "MENSAGEM" VARCHAR(50)
   "DESCRICAO" LONGTEXT
   Indexes {
-    CODIGO [name: "MMES"]
+    (CODIGO) [name: "MMES"]
   }
 }
 
-// Origem: muser.dbf (DBF)
+// Origem: muser (DBFCDX)
 Table "muser" {
-  Note: "Origem: muser.dbf"
+  Note: "Origem: muser"
   "USUARIO" VARCHAR(10)
   "SENHA" VARCHAR(8)
   "VALIDADE" VARCHAR(8)
@@ -575,94 +575,94 @@ Table "muser" {
   "CHAVEWW" VARCHAR(64)
   "CHAVEWS" VARCHAR(64)
   Indexes {
-    USUARIO [name: "MUSER"]
+    (USUARIO) [name: "MUSER"]
   }
 }
 
-// Origem: musera.dbf (DBF)
+// Origem: musera (DBFCDX)
 Table "musera" {
-  Note: "Origem: musera.dbf"
+  Note: "Origem: musera"
   "CONTROLE" VARCHAR(20)
   Indexes {
-    CONTROLE [name: "MUSERA"]
+    (CONTROLE) [name: "MUSERA"]
   }
 }
 
-// Origem: muserb.dbf (DBF)
+// Origem: muserb (DBFCDX)
 Table "muserb" {
-  Note: "Origem: muserb.dbf"
+  Note: "Origem: muserb"
   "CONTROLE" VARCHAR(20)
   "ITEMENU" VARCHAR(3)
   "POSICAO" INTEGER [default: 0]
   "POSTELA" VARCHAR(30)
   Indexes {
-    CONTROLE [name: "MUSERB"]
-    ITEMENU+STRZERO(POSICAO,3)+POSTELA [name: "MUSERB-2"]
+    (CONTROLE) [name: "MUSERB"]
+    (ITEMENU,POSICAO,POSTELA) [name: "MUSERB-2"]
   }
 }
 
-// Origem: muserf.dbf (DBF)
+// Origem: muserf (DBFCDX)
 Table "muserf" {
-  Note: "Origem: muserf.dbf"
+  Note: "Origem: muserf"
   "CONTROLE" VARCHAR(20)
   Indexes {
-    CONTROLE [name: "MUSERF"]
+    (CONTROLE) [name: "MUSERF"]
   }
 }
 
-// Origem: muserm.dbf (DBF)
+// Origem: muserm (DBFCDX)
 Table "muserm" {
-  Note: "Origem: muserm.dbf"
+  Note: "Origem: muserm"
   "CONTROLE" VARCHAR(13)
   Indexes {
-    CONTROLE [name: "MUSERM"]
+    (CONTROLE) [name: "MUSERM"]
   }
 }
 
-// Origem: musern.dbf (DBF)
+// Origem: musern (DBFCDX)
 Table "musern" {
-  Note: "Origem: musern.dbf"
+  Note: "Origem: musern"
   "USUARIO" VARCHAR(10)
   "ID" VARCHAR(40)
   Indexes {
-    USUARIO [name: "MUSERN"]
+    (USUARIO) [name: "MUSERN"]
   }
 }
 
-// Origem: musero.dbf (DBF)
+// Origem: musero (DBFCDX)
 Table "musero" {
-  Note: "Origem: musero.dbf"
+  Note: "Origem: musero"
   "CONTROLE" VARCHAR(20)
   Indexes {
-    CONTROLE [name: "MUSERO"]
+    (CONTROLE) [name: "MUSERO"]
   }
 }
 
-// Origem: muserr.dbf (DBF)
+// Origem: muserr (DBFCDX)
 Table "muserr" {
-  Note: "Origem: muserr.dbf"
+  Note: "Origem: muserr"
   "CONTROLE" VARCHAR(20)
   Indexes {
-    CONTROLE [name: "MUSERR"]
+    (CONTROLE) [name: "MUSERR"]
   }
 }
 
-// Origem: muserw.dbf (DBF)
+// Origem: muserw (DBFCDX)
 Table "muserw" {
-  Note: "Origem: muserw.dbf"
+  Note: "Origem: muserw"
   "CONTROLE" VARCHAR(20)
   "ITEMENU" VARCHAR(3)
   "POSICAO" INTEGER [default: 0]
   "POSTELA" VARCHAR(30)
   Indexes {
-    CONTROLE [name: "MUSERW"]
-    ITEMENU+STRZERO(POSICAO,3)+POSTELA [name: "MUSERW-2"]
+    (CONTROLE) [name: "MUSERW"]
+    (ITEMENU,POSICAO,POSTELA) [name: "MUSERW-2"]
   }
 }
 
-// Origem: nota.dbf (DBF)
+// Origem: nota (DBFCDX)
 Table "nota" {
-  Note: "Origem: nota.dbf"
+  Note: "Origem: nota"
   "NOME" VARCHAR(10)
   "OBS1" VARCHAR(60)
   "OBS2" VARCHAR(60)
@@ -672,13 +672,13 @@ Table "nota" {
   "OBS6" VARCHAR(60)
   "OBS7" VARCHAR(60)
   Indexes {
-    NOME [name: "NOTA"]
+    (NOME) [name: "NOTA"]
   }
 }
 
-// Origem: padre1.dbf (DBF)
+// Origem: padre1 (DBFCDX)
 Table "padre1" {
-  Note: "Origem: padre1.dbf"
+  Note: "Origem: padre1"
   "ARQUIVO" INTEGER [default: 0]
   "MENU" VARCHAR(2)
   "CODIGO" VARCHAR(8)
@@ -693,13 +693,13 @@ Table "padre1" {
   "FORMULA" VARCHAR(35)
   "QUEBRAR" INTEGER [default: 0]
   Indexes {
-    MENU+CODIGO+STR(ARQUIVO)+STR(SEQUENCIA)+STR(COLUNA) [name: "PADRE1-1"]
+    (MENU,CODIGO,ARQUIVO,SEQUENCIA,COLUNA) [name: "PADRE1-1"]
   }
 }
 
-// Origem: padrel.dbf (DBF)
+// Origem: padrel (DBFCDX)
 Table "padrel" {
-  Note: "Origem: padrel.dbf"
+  Note: "Origem: padrel"
   "MENU" VARCHAR(2)
   "MENU1" VARCHAR(2)
   "CODIGO" VARCHAR(8)
@@ -795,13 +795,13 @@ Table "padrel" {
   "ACESSOS" INTEGER [default: 0]
   "DATAULT" DATETIME
   Indexes {
-    MENU+CODIGO [name: "PADREL-1"]
+    (MENU,CODIGO) [name: "PADREL-1"]
   }
 }
 
-// Origem: sysopt.dbf (DBF)
+// Origem: sysopt (DBFCDX)
 Table "sysopt" {
-  Note: "Origem: sysopt.dbf"
+  Note: "Origem: sysopt"
   "ITEMENU" VARCHAR(3)
   "POSICAO" INTEGER [default: 0]
   "DESCP" VARCHAR(30)
@@ -811,25 +811,25 @@ Table "sysopt" {
   "TECLA" INTEGER [default: 0]
   "EXECUTAR" VARCHAR(200)
   Indexes {
-    ITEMENU+STR(POSICAO,2) [name: "SYSOPT"]
+    (ITEMENU,POSICAO) [name: "SYSOPT"]
   }
 }
 
-// Origem: telememo.dbf (DBF)
+// Origem: telememo (DBFCDX)
 Table "telememo" {
-  Note: "Origem: telememo.dbf"
+  Note: "Origem: telememo"
   "NOME" VARCHAR(15)
   "ESPECIF" VARCHAR(35)
   "TELEF" VARCHAR(15)
   "FAX" VARCHAR(15)
   Indexes {
-    NOME [name: "TELEMEMO"]
+    (NOME) [name: "TELEMEMO"]
   }
 }
 
-// Origem: winopt.dbf (DBF)
+// Origem: winopt (DBFCDX)
 Table "winopt" {
-  Note: "Origem: winopt.dbf"
+  Note: "Origem: winopt"
   "ITEMENU" VARCHAR(3)
   "POSICAO" INTEGER [default: 0]
   "DESCP" VARCHAR(30)
@@ -839,7 +839,7 @@ Table "winopt" {
   "TECLA" INTEGER [default: 0]
   "EXECUTAR" VARCHAR(200)
   Indexes {
-    ITEMENU+STR(POSICAO,3) [name: "WINOPT"]
+    (ITEMENU,POSICAO) [name: "WINOPT"]
   }
 }
 

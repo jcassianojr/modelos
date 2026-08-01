@@ -1,8 +1,8 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 27/07/2026
+> Varredura automatica realizada em: 01/08/2026
 
-## Tabela DBF: `agenda.dbf`
-> **Origem:** `agenda.dbf` (Driver: DBFCDX)
+## Tabela DBF: `agenda`
+> **Origem:** `agenda` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -20,8 +20,8 @@
 - Tag: `AGENDA` Expressao: `CDDATA`
 
 ---
-## Tabela DBF: `codimp.dbf`
-> **Origem:** `codimp.dbf` (Driver: DBFCDX)
+## Tabela DBF: `codimp`
+> **Origem:** `codimp` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -34,8 +34,8 @@
 - Tag: `CODIMP` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `cores.dbf`
-> **Origem:** `cores.dbf` (Driver: DBFCDX)
+## Tabela DBF: `cores`
+> **Origem:** `cores` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -52,8 +52,8 @@
 - Tag: `CORES` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `macess.dbf`
-> **Origem:** `macess.dbf` (Driver: DBFCDX)
+## Tabela DBF: `macess`
+> **Origem:** `macess` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -65,8 +65,8 @@
 - Tag: `MACESS` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `manaman.dbf`
-> **Origem:** `manaman.dbf` (Driver: DBFCDX)
+## Tabela DBF: `manaman`
+> **Origem:** `manaman` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -77,8 +77,8 @@
 - Tag: `MANAMAN` Expressao: `ARQUIVO`
 
 ---
-## Tabela DBF: `manarq.dbf`
-> **Origem:** `manarq.dbf` (Driver: DBFCDX)
+## Tabela DBF: `manarq`
+> **Origem:** `manarq` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -106,8 +106,8 @@
 - Tag: `MANARQ` Expressao: `ARQUIVO`
 
 ---
-## Tabela DBF: `manarq1.dbf`
-> **Origem:** `manarq1.dbf` (Driver: DBFCDX)
+## Tabela DBF: `manarq1`
+> **Origem:** `manarq1` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -134,8 +134,8 @@
 - Tag: `MANARQ1` Expressao: `ARQUIVO+STR(ITEM,2)`
 
 ---
-## Tabela DBF: `manatu.dbf`
-> **Origem:** `manatu.dbf` (Driver: DBFCDX)
+## Tabela DBF: `manatu`
+> **Origem:** `manatu` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -147,8 +147,8 @@
 - Tag: `MANATU` Expressao: `ARQUIVO1`
 
 ---
-## Tabela DBF: `manerr.dbf`
-> **Origem:** `manerr.dbf` (Driver: DBFCDX)
+## Tabela DBF: `manerr`
+> **Origem:** `manerr` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -163,8 +163,8 @@
 - Tag: `MANERR` Expressao: `USUARIO+DTOS(DATA)`
 
 ---
-## Tabela DBF: `manfec.dbf`
-> **Origem:** `manfec.dbf` (Driver: DBFCDX)
+## Tabela DBF: `manfec`
+> **Origem:** `manfec` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -191,8 +191,8 @@
 - Tag: `MANFEC-3` Expressao: `STRDES`
 
 ---
-## Tabela DBF: `manfer.dbf`
-> **Origem:** `manfer.dbf` (Driver: DBFCDX)
+## Tabela DBF: `manfer`
+> **Origem:** `manfer` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -204,8 +204,8 @@
 - Tag: `MANFER` Expressao: `STR(DIA)+STR(MES)`
 
 ---
-## Tabela DBF: `manget.dbf`
-> **Origem:** `manget.dbf` (Driver: DBFCDX)
+## Tabela DBF: `manget`
+> **Origem:** `manget` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -226,8 +226,8 @@
 - Tag: `MANGET` Expressao: `CODIGO+STR(SEQ,3)`
 
 ---
-## Tabela DBF: `manopt.dbf`
-> **Origem:** `manopt.dbf` (Driver: DBFCDX)
+## Tabela DBF: `manopt`
+> **Origem:** `manopt` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -244,8 +244,8 @@
 - Tag: `MANOPT` Expressao: `ITEMENU+STR(POSICAO,2)`
 
 ---
-## Tabela DBF: `manre1.dbf`
-> **Origem:** `manre1.dbf` (Driver: DBFCDX)
+## Tabela DBF: `manre1`
+> **Origem:** `manre1` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -267,8 +267,8 @@
 - Tag: `MANRE1-1` Expressao: `MENU+CODIGO+STR(ARQUIVO)+STR(SEQUENCIA)+STR(COLUNA)`
 
 ---
-## Tabela DBF: `manreg.dbf`
-> **Origem:** `manreg.dbf` (Driver: DBFCDX)
+## Tabela DBF: `manreg`
+> **Origem:** `manreg` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -281,8 +281,8 @@
 - Tag: `MANREG-2` Expressao: `GRUPO`
 
 ---
-## Tabela DBF: `manrel.dbf`
-> **Origem:** `manrel.dbf` (Driver: DBFCDX)
+## Tabela DBF: `manrel`
+> **Origem:** `manrel` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -385,8 +385,8 @@
 - Tag: `MANREL` Expressao: `MENU+CODIGO`
 
 ---
-## Tabela DBF: `mansub.dbf`
-> **Origem:** `mansub.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mansub`
+> **Origem:** `mansub` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -403,8 +403,8 @@
 - Tag: `MANSUB` Expressao: `ITEMENU+STR(POSICAO,2)`
 
 ---
-## Tabela DBF: `mantel.dbf`
-> **Origem:** `mantel.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mantel`
+> **Origem:** `mantel` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -422,8 +422,8 @@
 - Tag: `MANTEL` Expressao: `CODIGO+STR(SEQ,3)`
 
 ---
-## Tabela DBF: `mcarta.dbf`
-> **Origem:** `mcarta.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mcarta`
+> **Origem:** `mcarta` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -441,8 +441,8 @@
 - Tag: `MCARTA` Expressao: `ARQUIVO`
 
 ---
-## Tabela DBF: `mcopia.dbf`
-> **Origem:** `mcopia.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mcopia`
+> **Origem:** `mcopia` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -493,8 +493,8 @@
 - Tag: `MCOPIA` Expressao: `NOME`
 
 ---
-## Tabela DBF: `metiq.dbf`
-> **Origem:** `metiq.dbf` (Driver: DBFCDX)
+## Tabela DBF: `metiq`
+> **Origem:** `metiq` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -527,8 +527,8 @@
 - Tag: `METIQ` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `mexpor.dbf`
-> **Origem:** `mexpor.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mexpor`
+> **Origem:** `mexpor` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -549,8 +549,8 @@
 - Tag: `MEXPOR` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `mexpor1.dbf`
-> **Origem:** `mexpor1.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mexpor1`
+> **Origem:** `mexpor1` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -562,8 +562,8 @@
 - Tag: `MEXPOR1` Expressao: `CODIGO+VARDES`
 
 ---
-## Tabela DBF: `mf11.dbf`
-> **Origem:** `mf11.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mf11`
+> **Origem:** `mf11` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -575,8 +575,8 @@
 - Tag: `MF11-1` Expressao: `VARIAVEL+ARQUIVO`
 
 ---
-## Tabela DBF: `mmes.dbf`
-> **Origem:** `mmes.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mmes`
+> **Origem:** `mmes` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -589,8 +589,8 @@
 - Tag: `MMES` Expressao: `CODIGO`
 
 ---
-## Tabela DBF: `muser.dbf`
-> **Origem:** `muser.dbf` (Driver: DBFCDX)
+## Tabela DBF: `muser`
+> **Origem:** `muser` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -634,8 +634,8 @@
 - Tag: `MUSER` Expressao: `USUARIO`
 
 ---
-## Tabela DBF: `musera.dbf`
-> **Origem:** `musera.dbf` (Driver: DBFCDX)
+## Tabela DBF: `musera`
+> **Origem:** `musera` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -645,8 +645,8 @@
 - Tag: `MUSERA` Expressao: `CONTROLE`
 
 ---
-## Tabela DBF: `muserb.dbf`
-> **Origem:** `muserb.dbf` (Driver: DBFCDX)
+## Tabela DBF: `muserb`
+> **Origem:** `muserb` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -660,8 +660,8 @@
 - Tag: `MUSERB-2` Expressao: `ITEMENU+STRZERO(POSICAO,3)+POSTELA`
 
 ---
-## Tabela DBF: `muserf.dbf`
-> **Origem:** `muserf.dbf` (Driver: DBFCDX)
+## Tabela DBF: `muserf`
+> **Origem:** `muserf` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -671,8 +671,8 @@
 - Tag: `MUSERF` Expressao: `CONTROLE`
 
 ---
-## Tabela DBF: `muserm.dbf`
-> **Origem:** `muserm.dbf` (Driver: DBFCDX)
+## Tabela DBF: `muserm`
+> **Origem:** `muserm` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -682,8 +682,8 @@
 - Tag: `MUSERM` Expressao: `CONTROLE`
 
 ---
-## Tabela DBF: `musern.dbf`
-> **Origem:** `musern.dbf` (Driver: DBFCDX)
+## Tabela DBF: `musern`
+> **Origem:** `musern` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -694,8 +694,8 @@
 - Tag: `MUSERN` Expressao: `USUARIO`
 
 ---
-## Tabela DBF: `musero.dbf`
-> **Origem:** `musero.dbf` (Driver: DBFCDX)
+## Tabela DBF: `musero`
+> **Origem:** `musero` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -705,8 +705,8 @@
 - Tag: `MUSERO` Expressao: `CONTROLE`
 
 ---
-## Tabela DBF: `muserr.dbf`
-> **Origem:** `muserr.dbf` (Driver: DBFCDX)
+## Tabela DBF: `muserr`
+> **Origem:** `muserr` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -716,8 +716,8 @@
 - Tag: `MUSERR` Expressao: `CONTROLE`
 
 ---
-## Tabela DBF: `muserw.dbf`
-> **Origem:** `muserw.dbf` (Driver: DBFCDX)
+## Tabela DBF: `muserw`
+> **Origem:** `muserw` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -731,8 +731,8 @@
 - Tag: `MUSERW-2` Expressao: `ITEMENU+STRZERO(POSICAO,3)+POSTELA`
 
 ---
-## Tabela DBF: `nota.dbf`
-> **Origem:** `nota.dbf` (Driver: DBFCDX)
+## Tabela DBF: `nota`
+> **Origem:** `nota` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -749,8 +749,8 @@
 - Tag: `NOTA` Expressao: `NOME`
 
 ---
-## Tabela DBF: `padre1.dbf`
-> **Origem:** `padre1.dbf` (Driver: DBFCDX)
+## Tabela DBF: `padre1`
+> **Origem:** `padre1` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -772,8 +772,8 @@
 - Tag: `PADRE1-1` Expressao: `MENU+CODIGO+STR(ARQUIVO)+STR(SEQUENCIA)+STR(COLUNA)`
 
 ---
-## Tabela DBF: `padrel.dbf`
-> **Origem:** `padrel.dbf` (Driver: DBFCDX)
+## Tabela DBF: `padrel`
+> **Origem:** `padrel` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -876,8 +876,8 @@
 - Tag: `PADREL-1` Expressao: `MENU+CODIGO`
 
 ---
-## Tabela DBF: `sysopt.dbf`
-> **Origem:** `sysopt.dbf` (Driver: DBFCDX)
+## Tabela DBF: `sysopt`
+> **Origem:** `sysopt` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -894,8 +894,8 @@
 - Tag: `SYSOPT` Expressao: `ITEMENU+STR(POSICAO,2)`
 
 ---
-## Tabela DBF: `telememo.dbf`
-> **Origem:** `telememo.dbf` (Driver: DBFCDX)
+## Tabela DBF: `telememo`
+> **Origem:** `telememo` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -908,8 +908,8 @@
 - Tag: `TELEMEMO` Expressao: `NOME`
 
 ---
-## Tabela DBF: `winopt.dbf`
-> **Origem:** `winopt.dbf` (Driver: DBFCDX)
+## Tabela DBF: `winopt`
+> **Origem:** `winopt` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
