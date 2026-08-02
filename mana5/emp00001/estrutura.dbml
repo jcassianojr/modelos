@@ -1,6 +1,6 @@
-// Origem: agenda.dbf (DBF)
+// Origem: agenda (DBFCDX)
 Table "agenda" {
-  Note: "Origem: agenda.dbf"
+  Note: "Origem: agenda"
   "CDDATA" DATETIME
   "OBS1" VARCHAR(60)
   "OBS2" VARCHAR(60)
@@ -12,9 +12,9 @@ Table "agenda" {
   "OBS8" VARCHAR(60)
 }
 
-// Origem: apucfo.dbf (DBF)
+// Origem: apucfo (DBFCDX)
 Table "apucfo" {
-  Note: "Origem: apucfo.dbf"
+  Note: "Origem: apucfo"
   "CFO" VARCHAR(3)
   "CFONEW" VARCHAR(4)
   "SUBCFO" VARCHAR(1)
@@ -26,14 +26,14 @@ Table "apucfo" {
   "OUTRA" DECIMAL(12,2) [default: 0]
   "OBS" DECIMAL(12,2) [default: 0]
   Indexes {
-    CFO+SUBCFO [name: "APUCFO"]
-    CFONEW [name: "APUCFO-2"]
+    (CFO,SUBCFO) [name: "APUCFO"]
+    (CFONEW) [name: "APUCFO-2"]
   }
 }
 
-// Origem: apucfouf.dbf (DBF)
+// Origem: apucfouf (DBFCDX)
 Table "apucfouf" {
-  Note: "Origem: apucfouf.dbf"
+  Note: "Origem: apucfouf"
   "CFO" VARCHAR(3)
   "CFONEW" VARCHAR(4)
   "SUBCFO" VARCHAR(1)
@@ -47,39 +47,39 @@ Table "apucfouf" {
   "OBS" DECIMAL(12,2) [default: 0]
   "UFGIA" VARCHAR(2)
   Indexes {
-    CFO+SUBCFO+UF [name: "APUCFOU1"]
-    CFONEW+UF [name: "APUCFOU2"]
-    CFONEW+UFGIA [name: "APUCFOU3"]
+    (CFO,SUBCFO,UF) [name: "APUCFOU1"]
+    (CFONEW,UF) [name: "APUCFOU2"]
+    (CFONEW,UFGIA) [name: "APUCFOU3"]
   }
 }
 
-// Origem: apucfozf.dbf (DBF)
+// Origem: apucfozf (DBFCDX)
 Table "apucfozf" {
-  Note: "Origem: apucfozf.dbf"
+  Note: "Origem: apucfozf"
   "NF" INTEGER [default: 0]
   "DATA" DATETIME
   "VALOR" DECIMAL(12,2) [default: 0]
   "CNPJ" VARCHAR(18)
   "CODMUN" VARCHAR(5)
   Indexes {
-    NF [name: "APUCFOZF"]
+    (NF) [name: "APUCFOZF"]
   }
 }
 
-// Origem: apuita.dbf (DBF)
+// Origem: apuita (DBFCDX)
 Table "apuita" {
-  Note: "Origem: apuita.dbf"
+  Note: "Origem: apuita"
   "MES" INTEGER [default: 0]
   "ANO" INTEGER [default: 0]
   "SALDO" DECIMAL(18,2) [default: 0]
   Indexes {
-    STR(ANO,4)+STR(MES,2) [name: "APUITA"]
+    (ANO,MES) [name: "APUITA"]
   }
 }
 
-// Origem: apura.dbf (DBF)
+// Origem: apura (DBFCDX)
 Table "apura" {
-  Note: "Origem: apura.dbf"
+  Note: "Origem: apura"
   "FORNECEDO" INTEGER [default: 0]
   "COGNOME" VARCHAR(12)
   "GRUPOEMP" VARCHAR(12)
@@ -100,13 +100,13 @@ Table "apura" {
   "TOTDEV" DECIMAL(18,2) [default: 0]
   "TOTDEVNF" DECIMAL(18,2) [default: 0]
   Indexes {
-    COGNOME [name: "APURA-1"]
+    (COGNOME) [name: "APURA-1"]
   }
 }
 
-// Origem: apura2.dbf (DBF)
+// Origem: apura2 (DBFCDX)
 Table "apura2" {
-  Note: "Origem: apura2.dbf"
+  Note: "Origem: apura2"
   "FORNECEDO" INTEGER [default: 0]
   "COGNOME" VARCHAR(12)
   "GRUPOEMP" VARCHAR(12)
@@ -130,14 +130,14 @@ Table "apura2" {
   "ABA" DECIMAL(18,2) [default: 0]
   "DEV" DECIMAL(18,2) [default: 0]
   Indexes {
-    TOTAL [name: "APURA2-1"]
-    GRUPOEMP [name: "APURA2-2"]
+    (TOTAL) [name: "APURA2-1"]
+    (GRUPOEMP) [name: "APURA2-2"]
   }
 }
 
-// Origem: apura2c.dbf (DBF)
+// Origem: apura2c (DBFCDX)
 Table "apura2c" {
-  Note: "Origem: apura2c.dbf"
+  Note: "Origem: apura2c"
   "FORNECEDO" INTEGER [default: 0]
   "COGNOME" VARCHAR(12)
   "GRUPOEMP" VARCHAR(12)
@@ -161,13 +161,13 @@ Table "apura2c" {
   "ABA" DECIMAL(18,2) [default: 0]
   "DEV" DECIMAL(18,2) [default: 0]
   Indexes {
-    TOTAL [name: "APURA2C1"]
+    (TOTAL) [name: "APURA2C1"]
   }
 }
 
-// Origem: apura5.dbf (DBF)
+// Origem: apura5 (DBFCDX)
 Table "apura5" {
-  Note: "Origem: apura5.dbf"
+  Note: "Origem: apura5"
   "CLIENTE" INTEGER [default: 0]
   "COGCLI" VARCHAR(12)
   "GRUPO" VARCHAR(12)
@@ -190,17 +190,17 @@ Table "apura5" {
   "CLITOTPER" DECIMAL(8,2) [default: 0]
   "CLITOTVAL" DECIMAL(12,2) [default: 0]
   Indexes {
-    STR(CLIENTE,8)+CODIGO [name: "APURA5-1"]
-    STR(PERCLI,6,2)+CODIGO [name: "APURA5-2"]
-    CODIGO [name: "APURA5-3"]
-    PERLUC [name: "APURA5-4"]
-    DIFLUC [name: "APURA5-5"]
+    (CLIENTE,CODIGO) [name: "APURA5-1"]
+    (PERCLI,CODIGO) [name: "APURA5-2"]
+    (CODIGO) [name: "APURA5-3"]
+    (PERLUC) [name: "APURA5-4"]
+    (DIFLUC) [name: "APURA5-5"]
   }
 }
 
-// Origem: apura5a.dbf (DBF)
+// Origem: apura5a (DBFCDX)
 Table "apura5a" {
-  Note: "Origem: apura5a.dbf"
+  Note: "Origem: apura5a"
   "CLIENTE" INTEGER [default: 0]
   "COGCLI" VARCHAR(12)
   "VALORTOT" DECIMAL(12,2) [default: 0]
@@ -212,13 +212,13 @@ Table "apura5a" {
   "VALOREXP" DECIMAL(12,2) [default: 0]
   "SUBGER" VARCHAR(2)
   Indexes {
-    CLIENTE [name: "APURA5A1"]
+    (CLIENTE) [name: "APURA5A1"]
   }
 }
 
-// Origem: apura5b.dbf (DBF)
+// Origem: apura5b (DBFCDX)
 Table "apura5b" {
-  Note: "Origem: apura5b.dbf"
+  Note: "Origem: apura5b"
   "CLIENTE" INTEGER [default: 0]
   "COGCLI" VARCHAR(12)
   "CODIGO" VARCHAR(24)
@@ -235,31 +235,31 @@ Table "apura5b" {
   "JUNTO" VARCHAR(40)
 }
 
-// Origem: apura5d.dbf (DBF)
+// Origem: apura5d (DBFCDX)
 Table "apura5d" {
-  Note: "Origem: apura5d.dbf"
+  Note: "Origem: apura5d"
   "JUNTO" VARCHAR(40)
   "PERLUC" DECIMAL(6,2) [default: 0]
   "INTPER" INTEGER [default: 0]
 }
 
-// Origem: apuser.dbf (DBF)
+// Origem: apuser (DBFCDX)
 Table "apuser" {
-  Note: "Origem: apuser.dbf"
+  Note: "Origem: apuser"
   "CLIENTE" INTEGER [default: 0]
   "ANO" INTEGER [default: 0]
   "MES" INTEGER [default: 0]
   "VALOR" DECIMAL(12,2) [default: 0]
   "SEMNOTA" VARCHAR(1)
   Indexes {
-    STR(CLIENTE,8)+STR(ANO,4)+STR(MES,2) [name: "APUSER"]
-    STR(ANO,4)+STR(MES,2)+STR(CLIENTE,8) [name: "APUSER-2"]
+    (CLIENTE,ANO,MES) [name: "APUSER"]
+    (ANO,MES,CLIENTE) [name: "APUSER-2"]
   }
 }
 
-// Origem: cnab400r.dbf (DBF)
+// Origem: cnab400r (DBFCDX)
 Table "cnab400r" {
-  Note: "Origem: cnab400r.dbf"
+  Note: "Origem: cnab400r"
   "TITEMP" VARCHAR(25)
   "TITBAN" VARCHAR(20)
   "CODREG" VARCHAR(3)
@@ -293,49 +293,49 @@ Table "cnab400r" {
   "MOTREG05" VARCHAR(2)
   "LIQDATA" DATETIME
   Indexes {
-    SEQARQ [name: "CNAB400R"]
+    (SEQARQ) [name: "CNAB400R"]
   }
 }
 
-// Origem: dipam.dbf (DBF)
+// Origem: dipam (DBFCDX)
 Table "dipam" {
-  Note: "Origem: dipam.dbf"
+  Note: "Origem: dipam"
   "FORNECEDO" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "CLASSIPI" VARCHAR(14)
   "VALORMER" DECIMAL(12,2) [default: 0]
   "NOME" VARCHAR(40)
   Indexes {
-    STR(FORNECEDO,8)+CLASSIPI+CODIGO [name: "DIPAM"]
-    STR(VALORMER,12,2) [name: "DIPAM-2"]
-    CLASSIPI+NOME [name: "DIPAM-3"]
+    (FORNECEDO,CLASSIPI,CODIGO) [name: "DIPAM"]
+    (VALORMER) [name: "DIPAM-2"]
+    (CLASSIPI,NOME) [name: "DIPAM-3"]
   }
 }
 
-// Origem: dipam2.dbf (DBF)
+// Origem: dipam2 (DBFCDX)
 Table "dipam2" {
-  Note: "Origem: dipam2.dbf"
+  Note: "Origem: dipam2"
   "FORNECEDO" INTEGER [default: 0]
   "VALORMER" DECIMAL(12,2) [default: 0]
   Indexes {
-    VALORMER [name: "DIPAM2-1"]
+    (VALORMER) [name: "DIPAM2-1"]
   }
 }
 
-// Origem: dipam3.dbf (DBF)
+// Origem: dipam3 (DBFCDX)
 Table "dipam3" {
-  Note: "Origem: dipam3.dbf"
+  Note: "Origem: dipam3"
   "CLASSIPI" VARCHAR(14)
   "VALORMER" DECIMAL(12,2) [default: 0]
   "NOME" VARCHAR(40)
   Indexes {
-    VALORMER [name: "DIPAM3"]
+    (VALORMER) [name: "DIPAM3"]
   }
 }
 
-// Origem: eti.dbf (DBF)
+// Origem: eti (DBFCDX)
 Table "eti" {
-  Note: "Origem: eti.dbf"
+  Note: "Origem: eti"
   "CODIGO" VARCHAR(12)
   "NOME" VARCHAR(100)
   "NOM2" VARCHAR(10)
@@ -358,14 +358,14 @@ Table "eti" {
   "PISCON" VARCHAR(1)
   "NINTERNO" INTEGER [default: 0]
   Indexes {
-    CODIGO [name: "ETI"]
-    NOME [name: "ETI-2"]
+    (CODIGO) [name: "ETI"]
+    (NOME) [name: "ETI-2"]
   }
 }
 
-// Origem: fo_chis.dbf (DBF)
+// Origem: fo_chis (DBFCDX)
 Table "fo_chis" {
-  Note: "Origem: fo_chis.dbf"
+  Note: "Origem: fo_chis"
   "NUMERO" INTEGER [default: 0]
   "NOME" VARCHAR(40)
   "ADMISSAO" DATETIME
@@ -373,14 +373,14 @@ Table "fo_chis" {
   "ARQUIVO" VARCHAR(20)
   "OBS" VARCHAR(40)
   Indexes {
-    NUMERO [name: "FO_CHIS"]
-    NOME [name: "FO_CHI2"]
+    (NUMERO) [name: "FO_CHIS"]
+    (NOME) [name: "FO_CHI2"]
   }
 }
 
-// Origem: irrf.dbf (DBF)
+// Origem: irrf (DBFCDX)
 Table "irrf" {
-  Note: "Origem: irrf.dbf"
+  Note: "Origem: irrf"
   "CPF" VARCHAR(18)
   "NOME" VARCHAR(40)
   "V401" DECIMAL(12,2) [default: 0]
@@ -398,9 +398,9 @@ Table "irrf" {
   "V602" DECIMAL(12,2) [default: 0]
 }
 
-// Origem: irrf01.dbf (DBF)
+// Origem: irrf01 (DBFCDX)
 Table "irrf01" {
-  Note: "Origem: irrf01.dbf"
+  Note: "Origem: irrf01"
   "NUMERO" INTEGER [default: 0]
   "DARF" VARCHAR(4)
   "DOCUMENTO" VARCHAR(20)
@@ -418,9 +418,9 @@ Table "irrf01" {
   "CONTATO" VARCHAR(12)
 }
 
-// Origem: irrf02.dbf (DBF)
+// Origem: irrf02 (DBFCDX)
 Table "irrf02" {
-  Note: "Origem: irrf02.dbf"
+  Note: "Origem: irrf02"
   "NUMERO" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
   "MES" INTEGER [default: 0]
@@ -431,9 +431,9 @@ Table "irrf02" {
   "IRRF" DECIMAL(8,2) [default: 0]
 }
 
-// Origem: ma01.dbf (DBF)
+// Origem: ma01 (DBFCDX)
 Table "ma01" {
-  Note: "Origem: ma01.dbf"
+  Note: "Origem: ma01"
   "NUMERO" INTEGER [default: 0]
   "CNUMERO" VARCHAR(8)
   "COGNOME" VARCHAR(12)
@@ -543,20 +543,20 @@ Table "ma01" {
   "CNAE" VARCHAR(7)
   "SUFRAMA" VARCHAR(9)
   Indexes {
-    NUMERO [name: "MA01-1"]
-    COGNOME [name: "MA01-2"]
-    NOME [name: "MA01-3"]
-    CGC [name: "MA01-4"]
-    VENDEDOR+COGNOME [name: "MA01-5"]
-    SISCO [name: "MA01-6"]
-    CNUMERO [name: "MA01-7"]
-    CODIGOINT [name: "MA01-8"]
+    (NUMERO) [name: "MA01-1"]
+    (COGNOME) [name: "MA01-2"]
+    (NOME) [name: "MA01-3"]
+    (CGC) [name: "MA01-4"]
+    (VENDEDOR,COGNOME) [name: "MA01-5"]
+    (SISCO) [name: "MA01-6"]
+    (CNUMERO) [name: "MA01-7"]
+    (CODIGOINT) [name: "MA01-8"]
   }
 }
 
-// Origem: mala.dbf (DBF)
+// Origem: mala (DBFCDX)
 Table "mala" {
-  Note: "Origem: mala.dbf"
+  Note: "Origem: mala"
   "NUMERO" INTEGER [default: 0]
   "NOME" VARCHAR(50)
   "ENDLOG" VARCHAR(12)
@@ -576,17 +576,17 @@ Table "mala" {
   "OBS" LONGTEXT
 }
 
-// Origem: malaconf.dbf (DBF)
+// Origem: malaconf (DBFCDX)
 Table "malaconf" {
-  Note: "Origem: malaconf.dbf"
+  Note: "Origem: malaconf"
   "CODIGO" INTEGER [default: 0]
   "DESCRICAO" VARCHAR(60)
   "DBF" VARCHAR(8)
 }
 
-// Origem: manerr.dbf (DBF)
+// Origem: manerr (DBFCDX)
 Table "manerr" {
-  Note: "Origem: manerr.dbf"
+  Note: "Origem: manerr"
   "USUARIO" VARCHAR(10)
   "DATA" DATETIME
   "HORA" VARCHAR(8)
@@ -595,22 +595,22 @@ Table "manerr" {
   "ARQUIVO" VARCHAR(8)
 }
 
-// Origem: manivers.dbf (DBF)
+// Origem: manivers (DBFCDX)
 Table "manivers" {
-  Note: "Origem: manivers.dbf"
+  Note: "Origem: manivers"
   "NOME" VARCHAR(30)
   "APELIDO" VARCHAR(20)
   "DATA" DATETIME
   "FIRMA" VARCHAR(40)
   Indexes {
-    NOME [name: "MANIVER1"]
-    STR(DAY(DATA))+STR(MONTH(DATA)) [name: "MANIVER2"]
+    (NOME) [name: "MANIVER1"]
+    (DATA,DATA) [name: "MANIVER2"]
   }
 }
 
-// Origem: mb01.dbf (DBF)
+// Origem: mb01 (DBFCDX)
 Table "mb01" {
-  Note: "Origem: mb01.dbf"
+  Note: "Origem: mb01"
   "COGNOME" VARCHAR(15)
   "NOME" VARCHAR(40)
   "ENDERECO" VARCHAR(40)
@@ -671,16 +671,16 @@ Table "mb01" {
   "CNAE" VARCHAR(7)
   "SUFRAMA" VARCHAR(9)
   Indexes {
-    NUMERO [name: "MB01-1"]
-    COGNOME [name: "MB01-2"]
-    CGC [name: "MB01-3"]
-    NOME [name: "MB01-4"]
+    (NUMERO) [name: "MB01-1"]
+    (COGNOME) [name: "MB01-2"]
+    (CGC) [name: "MB01-3"]
+    (NOME) [name: "MB01-4"]
   }
 }
 
-// Origem: mc01.dbf (DBF)
+// Origem: mc01 (DBFCDX)
 Table "mc01" {
-  Note: "Origem: mc01.dbf"
+  Note: "Origem: mc01"
   "NUMERO" VARCHAR(5)
   "COGNOME" VARCHAR(12)
   "NOME" VARCHAR(40)
@@ -717,13 +717,13 @@ Table "mc01" {
   "VENGRU" VARCHAR(4)
   "VENHIE" VARCHAR(2)
   Indexes {
-    NUMERO [name: "MC01-1"]
+    (NUMERO) [name: "MC01-1"]
   }
 }
 
-// Origem: mc01r.dbf (DBF)
+// Origem: mc01r (DBFCDX)
 Table "mc01r" {
-  Note: "Origem: mc01r.dbf"
+  Note: "Origem: mc01r"
   "NUMERO" INTEGER [default: 0]
   "NOME" VARCHAR(40)
   "COGNOME" VARCHAR(12)
@@ -763,9 +763,9 @@ Table "mc01r" {
   "CARGOR" VARCHAR(30)
 }
 
-// Origem: mc02.dbf (DBF)
+// Origem: mc02 (DBFCDX)
 Table "mc02" {
-  Note: "Origem: mc02.dbf"
+  Note: "Origem: mc02"
   "NUMERO" VARCHAR(5)
   "COGNOME" VARCHAR(12)
   "NOME" VARCHAR(40)
@@ -802,13 +802,13 @@ Table "mc02" {
   "VENGRU" VARCHAR(4)
   "VENHIE" VARCHAR(2)
   Indexes {
-    NUMERO [name: "MC02-1"]
+    (NUMERO) [name: "MC02-1"]
   }
 }
 
-// Origem: mc03.dbf (DBF)
+// Origem: mc03 (DBFCDX)
 Table "mc03" {
-  Note: "Origem: mc03.dbf"
+  Note: "Origem: mc03"
   "NUMERO" VARCHAR(5)
   "COGNOME" VARCHAR(12)
   "NOME" VARCHAR(40)
@@ -845,13 +845,13 @@ Table "mc03" {
   "VENGRU" VARCHAR(4)
   "VENHIE" VARCHAR(2)
   Indexes {
-    NUMERO [name: "MC03-1"]
+    (NUMERO) [name: "MC03-1"]
   }
 }
 
-// Origem: mc04.dbf (DBF)
+// Origem: mc04 (DBFCDX)
 Table "mc04" {
-  Note: "Origem: mc04.dbf"
+  Note: "Origem: mc04"
   "NUMERO" VARCHAR(5)
   "COGNOME" VARCHAR(12)
   "NOME" VARCHAR(40)
@@ -888,13 +888,13 @@ Table "mc04" {
   "VENGRU" VARCHAR(4)
   "VENHIE" VARCHAR(2)
   Indexes {
-    NUMERO [name: "MC04-1"]
+    (NUMERO) [name: "MC04-1"]
   }
 }
 
-// Origem: mc05.dbf (DBF)
+// Origem: mc05 (DBFCDX)
 Table "mc05" {
-  Note: "Origem: mc05.dbf"
+  Note: "Origem: mc05"
   "NUMERO" VARCHAR(5)
   "COGNOME" VARCHAR(12)
   "NOME" VARCHAR(40)
@@ -932,13 +932,13 @@ Table "mc05" {
   "VENHIE" VARCHAR(2)
   "EMAIL" VARCHAR(50)
   Indexes {
-    NUMERO [name: "MC05-1"]
+    (NUMERO) [name: "MC05-1"]
   }
 }
 
-// Origem: mcarta.dbf (DBF)
+// Origem: mcarta (DBFCDX)
 Table "mcarta" {
-  Note: "Origem: mcarta.dbf"
+  Note: "Origem: mcarta"
   "ARQUIVO" VARCHAR(8)
   "NOME" VARCHAR(50)
   "SETUP" VARCHAR(20)
@@ -950,9 +950,9 @@ Table "mcarta" {
   "MARLIN" INTEGER [default: 0]
 }
 
-// Origem: mcopia.dbf (DBF)
+// Origem: mcopia (DBFCDX)
 Table "mcopia" {
-  Note: "Origem: mcopia.dbf"
+  Note: "Origem: mcopia"
   "NOME" VARCHAR(6)
   "DIRETORIO" VARCHAR(50)
   "DESCRICAO" VARCHAR(50)
@@ -998,21 +998,21 @@ Table "mcopia" {
   "ARQ40" VARCHAR(12)
 }
 
-// Origem: md01.dbf (DBF)
+// Origem: md01 (DBFCDX)
 Table "md01" {
-  Note: "Origem: md01.dbf"
+  Note: "Origem: md01"
   "CODIGO" VARCHAR(12)
   "NOME" VARCHAR(40)
   "TIPO" VARCHAR(1)
   "GRUPO" VARCHAR(2)
   Indexes {
-    CODIGO [name: "MD01-1"]
+    (CODIGO) [name: "MD01-1"]
   }
 }
 
-// Origem: md02.dbf (DBF)
+// Origem: md02 (DBFCDX)
 Table "md02" {
-  Note: "Origem: md02.dbf"
+  Note: "Origem: md02"
   "CODIGO" VARCHAR(12)
   "CODIGO1" VARCHAR(12)
   "DESCRICAO" VARCHAR(100)
@@ -1025,16 +1025,16 @@ Table "md02" {
   "CODIGO2" VARCHAR(12)
   "CODIGO3" VARCHAR(12)
   Indexes {
-    CODIGO+CODIGO1+DTOS(DATA) [name: "MD02-1"]
-    DATA [name: "MD02-2"]
-    CODIGO [name: "MD02-3"]
-    CODIGO+DTOS(DATA) [name: "MD02-4"]
+    (CODIGO,CODIGO1,DATA) [name: "MD02-1"]
+    (DATA) [name: "MD02-2"]
+    (CODIGO) [name: "MD02-3"]
+    (CODIGO,DATA) [name: "MD02-4"]
   }
 }
 
-// Origem: md03.dbf (DBF)
+// Origem: md03 (DBFCDX)
 Table "md03" {
-  Note: "Origem: md03.dbf"
+  Note: "Origem: md03"
   "CODIGO" VARCHAR(2)
   "CLASSIFIC" VARCHAR(14)
   "DESCRICAO" VARCHAR(50)
@@ -1045,15 +1045,15 @@ Table "md03" {
   "DIPIPI" VARCHAR(1)
   "DIPICM" VARCHAR(1)
   Indexes {
-    CODIGO [name: "MD03-1"]
-    CLASSIFIC [name: "MD03-2"]
-    CLASSIFIC+CODIGO [name: "MD03-3"]
+    (CODIGO) [name: "MD03-1"]
+    (CLASSIFIC) [name: "MD03-2"]
+    (CLASSIFIC,CODIGO) [name: "MD03-3"]
   }
 }
 
-// Origem: md06.dbf (DBF)
+// Origem: md06 (DBFCDX)
 Table "md06" {
-  Note: "Origem: md06.dbf"
+  Note: "Origem: md06"
   "MES" INTEGER [default: 0]
   "ANO" INTEGER [default: 0]
   "FIN01" DECIMAL(6,3) [default: 0]
@@ -1117,24 +1117,24 @@ Table "md06" {
   "FIN59" DECIMAL(6,3) [default: 0]
   "FIN60" DECIMAL(6,3) [default: 0]
   Indexes {
-    STR(MES)+STR(ANO) [name: "MD06-1"]
+    (MES,ANO) [name: "MD06-1"]
   }
 }
 
-// Origem: md07.dbf (DBF)
+// Origem: md07 (DBFCDX)
 Table "md07" {
-  Note: "Origem: md07.dbf"
+  Note: "Origem: md07"
   "UNIDADE" VARCHAR(3)
   "UNIDDES" VARCHAR(60)
   "UNIDDEC" VARCHAR(1)
   Indexes {
-    UNIDADE [name: "MD07-1"]
+    (UNIDADE) [name: "MD07-1"]
   }
 }
 
-// Origem: md08.dbf (DBF)
+// Origem: md08 (DBFCDX)
 Table "md08" {
-  Note: "Origem: md08.dbf"
+  Note: "Origem: md08"
   "SEDEXT" VARCHAR(1)
   "KILO" INTEGER [default: 0]
   "RJ" DECIMAL(6,2) [default: 0]
@@ -1167,30 +1167,30 @@ Table "md08" {
   "XX" DECIMAL(6,2) [default: 0]
   "FN" DECIMAL(6,2) [default: 0]
   Indexes {
-    SEDEXT+STR(KILO,2) [name: "MD08-1"]
+    (SEDEXT,KILO) [name: "MD08-1"]
   }
 }
 
-// Origem: md09.dbf (DBF)
+// Origem: md09 (DBFCDX)
 Table "md09" {
-  Note: "Origem: md09.dbf"
+  Note: "Origem: md09"
   "CODIGO" VARCHAR(4)
   "DESCRICAO" VARCHAR(50)
   Indexes {
-    CODIGO [name: "MD09-1"]
+    (CODIGO) [name: "MD09-1"]
   }
 }
 
-// Origem: mdchedev.dbf (DBF)
+// Origem: mdchedev (DBFCDX)
 Table "mdchedev" {
-  Note: "Origem: mdchedev.dbf"
+  Note: "Origem: mdchedev"
   "CODIGO" VARCHAR(2)
   "NOME" VARCHAR(255)
 }
 
-// Origem: mdmoeda.dbf (DBF)
+// Origem: mdmoeda (DBFCDX)
 Table "mdmoeda" {
-  Note: "Origem: mdmoeda.dbf"
+  Note: "Origem: mdmoeda"
   "CODIGO" VARCHAR(3)
   "DESCRICAO" VARCHAR(30)
   "PAIS" VARCHAR(3)
@@ -1198,9 +1198,9 @@ Table "mdmoeda" {
   "SIMBOLO" VARCHAR(5)
 }
 
-// Origem: me01.dbf (DBF)
+// Origem: me01 (DBFCDX)
 Table "me01" {
-  Note: "Origem: me01.dbf"
+  Note: "Origem: me01"
   "NUMERO" VARCHAR(4)
   "CONTABIL" VARCHAR(8)
   "NOME" VARCHAR(40)
@@ -1297,53 +1297,53 @@ Table "me01" {
   "PESO" DECIMAL(12,3) [default: 0]
   "FEMEA" INTEGER [default: 0]
   Indexes {
-    NUMERO [name: "ME01-1"]
-    NOME+MODELO [name: "ME01-2"]
-    CODMP01+NUMERO [name: "ME01-3"]
+    (NUMERO) [name: "ME01-1"]
+    (NOME,MODELO) [name: "ME01-2"]
+    (CODMP01,NUMERO) [name: "ME01-3"]
   }
 }
 
-// Origem: me01inv.dbf (DBF)
+// Origem: me01inv (DBFCDX)
 Table "me01inv" {
-  Note: "Origem: me01inv.dbf"
+  Note: "Origem: me01inv"
   "CONTABIL" VARCHAR(8)
   "NOME" VARCHAR(40)
   "NRFORNE" INTEGER [default: 0]
   "COGNOME" VARCHAR(12)
   Indexes {
-    CONTABIL [name: "ME01INV"]
+    (CONTABIL) [name: "ME01INV"]
   }
 }
 
-// Origem: me02.dbf (DBF)
+// Origem: me02 (DBFCDX)
 Table "me02" {
-  Note: "Origem: me02.dbf"
+  Note: "Origem: me02"
   "NUMERO" VARCHAR(4)
   "SEQ" INTEGER [default: 0]
   "CODMP01" VARCHAR(12)
   "NOMMP01" VARCHAR(30)
   Indexes {
-    NUMERO+STR(SEQ,3) [name: "ME02-1"]
-    CODMP01+STR(SEQ,3) [name: "ME02-2"]
+    (NUMERO,SEQ) [name: "ME02-1"]
+    (CODMP01,SEQ) [name: "ME02-2"]
   }
 }
 
-// Origem: me03.dbf (DBF)
+// Origem: me03 (DBFCDX)
 Table "me03" {
-  Note: "Origem: me03.dbf"
+  Note: "Origem: me03"
   "NUMERO" VARCHAR(4)
   "DATA" DATETIME
   "ESTQINI" DECIMAL(5,2) [default: 0]
   "ESTQSAI" DECIMAL(5,2) [default: 0]
   "ESTQSAL" DECIMAL(5,2) [default: 0]
   Indexes {
-    NUMERO+DTOS(DATA) [name: "ME03-1"]
+    (NUMERO,DATA) [name: "ME03-1"]
   }
 }
 
-// Origem: me03a.dbf (DBF)
+// Origem: me03a (DBFCDX)
 Table "me03a" {
-  Note: "Origem: me03a.dbf"
+  Note: "Origem: me03a"
   "NUMERO" VARCHAR(4)
   "OF" DECIMAL(8,2) [default: 0]
   "DATA" DATETIME
@@ -1354,13 +1354,13 @@ Table "me03a" {
   "SSQ" INTEGER [default: 0]
   "QTDPEC" DECIMAL(12,3) [default: 0]
   Indexes {
-    NUMERO+DTOS(DATA)+STR(OF,8,2) [name: "ME03A-1"]
+    (NUMERO,DATA,OF) [name: "ME03A-1"]
   }
 }
 
-// Origem: me04.dbf (DBF)
+// Origem: me04 (DBFCDX)
 Table "me04" {
-  Note: "Origem: me04.dbf"
+  Note: "Origem: me04"
   "CODIGO" VARCHAR(8)
   "CADTIP" VARCHAR(1)
   "TIPO" VARCHAR(30)
@@ -1393,9 +1393,9 @@ Table "me04" {
   "CARA" VARCHAR(50)
 }
 
-// Origem: me04c.dbf (DBF)
+// Origem: me04c (DBFCDX)
 Table "me04c" {
-  Note: "Origem: me04c.dbf"
+  Note: "Origem: me04c"
   "OCC" INTEGER [default: 0]
   "CODIGO" VARCHAR(10)
   "DATA" DATETIME
@@ -1404,9 +1404,9 @@ Table "me04c" {
   "CERTIFI" VARCHAR(10)
 }
 
-// Origem: me04ci.dbf (DBF)
+// Origem: me04ci (DBFCDX)
 Table "me04ci" {
-  Note: "Origem: me04ci.dbf"
+  Note: "Origem: me04ci"
   "OCC" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
   "ESPECI" VARCHAR(30)
@@ -1416,9 +1416,9 @@ Table "me04ci" {
   "LAUDO" VARCHAR(2)
 }
 
-// Origem: me04d.dbf (DBF)
+// Origem: me04d (DBFCDX)
 Table "me04d" {
-  Note: "Origem: me04d.dbf"
+  Note: "Origem: me04d"
   "OCD" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "MOTIVO" VARCHAR(1)
@@ -1444,9 +1444,9 @@ Table "me04d" {
   "DATAOCD" DATETIME
 }
 
-// Origem: me04r.dbf (DBF)
+// Origem: me04r (DBFCDX)
 Table "me04r" {
-  Note: "Origem: me04r.dbf"
+  Note: "Origem: me04r"
   "NUMERO" INTEGER [default: 0]
   "CODIGO" VARCHAR(8)
   "CODOPER" INTEGER [default: 0]
@@ -1458,22 +1458,22 @@ Table "me04r" {
   "AREA" VARCHAR(2)
 }
 
-// Origem: me05.dbf (DBF)
+// Origem: me05 (DBFCDX)
 Table "me05" {
-  Note: "Origem: me05.dbf"
+  Note: "Origem: me05"
   "DDD" VARCHAR(4)
   "NUMERO" VARCHAR(9)
   "TIPOT" VARCHAR(12)
   "HEXA" VARCHAR(12)
   "MODELO" VARCHAR(30)
   Indexes {
-    DDD+NUMERO [name: "ME05-1"]
+    (DDD,NUMERO) [name: "ME05-1"]
   }
 }
 
-// Origem: metiq.dbf (DBF)
+// Origem: metiq (DBFCDX)
 Table "metiq" {
-  Note: "Origem: metiq.dbf"
+  Note: "Origem: metiq"
   "CODIGO" VARCHAR(6)
   "NOME" VARCHAR(50)
   "LINHA1" VARCHAR(75)
@@ -1500,9 +1500,9 @@ Table "metiq" {
   "PFIL" VARCHAR(1)
 }
 
-// Origem: mf01.dbf (DBF)
+// Origem: mf01 (DBFCDX)
 Table "mf01" {
-  Note: "Origem: mf01.dbf"
+  Note: "Origem: mf01"
   "NUMERO" VARCHAR(3)
   "DIGITO" VARCHAR(1)
   "COGNOME" VARCHAR(12)
@@ -1515,16 +1515,16 @@ Table "mf01" {
   "CNPJ" VARCHAR(18)
   "NOMECOMP" VARCHAR(80)
   Indexes {
-    NUMERO+DIGITO [name: "MF01-1"]
-    COGNOME [name: "MF01-2"]
-    NOME [name: "MF01-3"]
-    ISPB [name: "MF01-4"]
+    (NUMERO,DIGITO) [name: "MF01-1"]
+    (COGNOME) [name: "MF01-2"]
+    (NOME) [name: "MF01-3"]
+    (ISPB) [name: "MF01-4"]
   }
 }
 
-// Origem: mf02.dbf (DBF)
+// Origem: mf02 (DBFCDX)
 Table "mf02" {
-  Note: "Origem: mf02.dbf"
+  Note: "Origem: mf02"
   "NUMERO" INTEGER [default: 0]
   "AGENCIA" VARCHAR(12)
   "CONTA" VARCHAR(12)
@@ -1582,14 +1582,14 @@ Table "mf02" {
   "XPF2" VARCHAR(14)
   "DVAG" VARCHAR(1)
   Indexes {
-    STR(NUMERO,5)+AGENCIA+CONTA [name: "MF02-1"]
-    NRCONTA [name: "MF02-2"]
+    (NUMERO,AGENCIA,CONTA) [name: "MF02-1"]
+    (NRCONTA) [name: "MF02-2"]
   }
 }
 
-// Origem: mf03.dbf (DBF)
+// Origem: mf03 (DBFCDX)
 Table "mf03" {
-  Note: "Origem: mf03.dbf"
+  Note: "Origem: mf03"
   "NUMERO" INTEGER [default: 0]
   "AGENCIA" VARCHAR(12)
   "CONTA" VARCHAR(12)
@@ -1623,13 +1623,13 @@ Table "mf03" {
   "FAX2" VARCHAR(9)
   "CPF2" VARCHAR(14)
   Indexes {
-    STR(NUMERO,5)+AGENCIA+CONTA [name: "MF03-1"]
+    (NUMERO,AGENCIA,CONTA) [name: "MF03-1"]
   }
 }
 
-// Origem: mf04.dbf (DBF)
+// Origem: mf04 (DBFCDX)
 Table "mf04" {
-  Note: "Origem: mf04.dbf"
+  Note: "Origem: mf04"
   "NUMERO" INTEGER [default: 0]
   "PRACA" VARCHAR(12)
   "NOMEPR" VARCHAR(40)
@@ -1643,13 +1643,13 @@ Table "mf04" {
   "FERIADO" DATETIME
   "CEPPRA" VARCHAR(9)
   Indexes {
-    STR(NUMERO,5)+PRACA [name: "MF04-1"]
+    (NUMERO,PRACA) [name: "MF04-1"]
   }
 }
 
-// Origem: mf05.dbf (DBF)
+// Origem: mf05 (DBFCDX)
 Table "mf05" {
-  Note: "Origem: mf05.dbf"
+  Note: "Origem: mf05"
   "CARTAO" VARCHAR(20)
   "NOME" VARCHAR(20)
   "VENC" INTEGER [default: 0]
@@ -1685,23 +1685,23 @@ Table "mf05" {
   "FAX2" VARCHAR(9)
   "CPF2" VARCHAR(14)
   Indexes {
-    CARTAO [name: "MF05-1"]
+    (CARTAO) [name: "MF05-1"]
   }
 }
 
-// Origem: mf06.dbf (DBF)
+// Origem: mf06 (DBFCDX)
 Table "mf06" {
-  Note: "Origem: mf06.dbf"
+  Note: "Origem: mf06"
   "CONTA" VARCHAR(12)
   "NOME" VARCHAR(40)
   Indexes {
-    CONTA [name: "MF06-1"]
+    (CONTA) [name: "MF06-1"]
   }
 }
 
-// Origem: mg01.dbf (DBF)
+// Origem: mg01 (DBFCDX)
 Table "mg01" {
-  Note: "Origem: mg01.dbf"
+  Note: "Origem: mg01"
   "NUMERO" VARCHAR(5)
   "COGNOME" VARCHAR(12)
   "NOME" VARCHAR(40)
@@ -1762,15 +1762,15 @@ Table "mg01" {
   "GRUPO" VARCHAR(50)
   "SITUACAO" VARCHAR(1)
   Indexes {
-    NUMERO [name: "MG01-1"]
-    COGNOME [name: "MG01-2"]
-    CGC [name: "MG01-3"]
+    (NUMERO) [name: "MG01-1"]
+    (COGNOME) [name: "MG01-2"]
+    (CGC) [name: "MG01-3"]
   }
 }
 
-// Origem: mg02.dbf (DBF)
+// Origem: mg02 (DBFCDX)
 Table "mg02" {
-  Note: "Origem: mg02.dbf"
+  Note: "Origem: mg02"
   "NUMERO" VARCHAR(5)
   "CHAPAF" VARCHAR(8)
   "MOTORF" VARCHAR(30)
@@ -1782,13 +1782,13 @@ Table "mg02" {
   "EXPCNH" DATETIME
   "KMINI" DECIMAL(8,3) [default: 0]
   Indexes {
-    NUMERO+CODEMP [name: "MG02-1"]
+    (NUMERO,CODEMP) [name: "MG02-1"]
   }
 }
 
-// Origem: mg03.dbf (DBF)
+// Origem: mg03 (DBFCDX)
 Table "mg03" {
-  Note: "Origem: mg03.dbf"
+  Note: "Origem: mg03"
   "NUMERO" VARCHAR(5)
   "CODEMP" VARCHAR(12)
   "CODFRO" VARCHAR(12)
@@ -1819,13 +1819,13 @@ Table "mg03" {
   "CGC" VARCHAR(18)
   "CEPPRO" VARCHAR(9)
   Indexes {
-    NUMERO+CODFRO [name: "MG03-1"]
+    (NUMERO,CODFRO) [name: "MG03-1"]
   }
 }
 
-// Origem: mg04.dbf (DBF)
+// Origem: mg04 (DBFCDX)
 Table "mg04" {
-  Note: "Origem: mg04.dbf"
+  Note: "Origem: mg04"
   "COD_IPVA" INTEGER [default: 0]
   "TIPO" INTEGER [default: 0]
   "FAIXA_IPVA" INTEGER [default: 0]
@@ -1839,24 +1839,24 @@ Table "mg04" {
   "CAPACID" INTEGER [default: 0]
   "CODFIPE" VARCHAR(7)
   Indexes {
-    str(nummarca,8)+modelo [name: "MG04-1"]
+    (nummarca,modelo) [name: "MG04-1"]
   }
 }
 
-// Origem: mg05.dbf (DBF)
+// Origem: mg05 (DBFCDX)
 Table "mg05" {
-  Note: "Origem: mg05.dbf"
+  Note: "Origem: mg05"
   "NUMERO" INTEGER [default: 0]
   "NOME" VARCHAR(20)
   Indexes {
-    NUMERO [name: "MG05-1"]
-    NOME [name: "MG05-2"]
+    (NUMERO) [name: "MG05-1"]
+    (NOME) [name: "MG05-2"]
   }
 }
 
-// Origem: mh01.dbf (DBF)
+// Origem: mh01 (DBFCDX)
 Table "mh01" {
-  Note: "Origem: mh01.dbf"
+  Note: "Origem: mh01"
   "NUMERO" VARCHAR(6)
   "COGNOME" VARCHAR(12)
   "LOCAL1" VARCHAR(74)
@@ -1866,14 +1866,14 @@ Table "mh01" {
   "LOCAL5" VARCHAR(74)
   "LOCAL6" VARCHAR(74)
   Indexes {
-    NUMERO [name: "MH01-1"]
-    COGNOME [name: "MH01-2"]
+    (NUMERO) [name: "MH01-1"]
+    (COGNOME) [name: "MH01-2"]
   }
 }
 
-// Origem: mh02.dbf (DBF)
+// Origem: mh02 (DBFCDX)
 Table "mh02" {
-  Note: "Origem: mh02.dbf"
+  Note: "Origem: mh02"
   "NUMERO" VARCHAR(6)
   "COGNOME" VARCHAR(12)
   "LOCAL1" VARCHAR(74)
@@ -1883,14 +1883,14 @@ Table "mh02" {
   "LOCAL5" VARCHAR(74)
   "LOCAL6" VARCHAR(74)
   Indexes {
-    NUMERO [name: "MH02-1"]
-    COGNOME [name: "MH02-2"]
+    (NUMERO) [name: "MH02-1"]
+    (COGNOME) [name: "MH02-2"]
   }
 }
 
-// Origem: mh03.dbf (DBF)
+// Origem: mh03 (DBFCDX)
 Table "mh03" {
-  Note: "Origem: mh03.dbf"
+  Note: "Origem: mh03"
   "NUMERO" VARCHAR(6)
   "COGNOME" VARCHAR(12)
   "LOCAL1" VARCHAR(74)
@@ -1900,14 +1900,14 @@ Table "mh03" {
   "LOCAL5" VARCHAR(74)
   "LOCAL6" VARCHAR(74)
   Indexes {
-    NUMERO [name: "MH03-1"]
-    COGNOME [name: "MH03-2"]
+    (NUMERO) [name: "MH03-1"]
+    (COGNOME) [name: "MH03-2"]
   }
 }
 
-// Origem: mi01.dbf (DBF)
+// Origem: mi01 (DBFCDX)
 Table "mi01" {
-  Note: "Origem: mi01.dbf"
+  Note: "Origem: mi01"
   "CONTA" VARCHAR(11)
   "NIVEL" INTEGER [default: 0]
   "TIPO" VARCHAR(1)
@@ -1953,51 +1953,51 @@ Table "mi01" {
   "SAO12" DECIMAL(18,2) [default: 0]
   "CONTAREF" VARCHAR(15)
   Indexes {
-    CONTA [name: "MI01-1"]
-    NUMERO [name: "MI01-2"]
+    (CONTA) [name: "MI01-1"]
+    (NUMERO) [name: "MI01-2"]
   }
 }
 
-// Origem: mi02.dbf (DBF)
+// Origem: mi02 (DBFCDX)
 Table "mi02" {
-  Note: "Origem: mi02.dbf"
+  Note: "Origem: mi02"
   "CODIGO" VARCHAR(3)
   "DESCRICAO" VARCHAR(35)
   "VALOR" DECIMAL(15,2) [default: 0]
   "VALOR1" DECIMAL(15,2) [default: 0]
   "TIPO" VARCHAR(1)
   Indexes {
-    CODIGO [name: "MI02-1"]
+    (CODIGO) [name: "MI02-1"]
   }
 }
 
-// Origem: mi03.dbf (DBF)
+// Origem: mi03 (DBFCDX)
 Table "mi03" {
-  Note: "Origem: mi03.dbf"
+  Note: "Origem: mi03"
   "UE" VARCHAR(7)
   "ATIVIDADE" VARCHAR(50)
   "GASTO" VARCHAR(1)
   "CENTRO" VARCHAR(4)
   "CFOLHA" INTEGER [default: 0]
   Indexes {
-    CENTRO [name: "MI03-1"]
+    (CENTRO) [name: "MI03-1"]
   }
 }
 
-// Origem: mi04.dbf (DBF)
+// Origem: mi04 (DBFCDX)
 Table "mi04" {
-  Note: "Origem: mi04.dbf"
+  Note: "Origem: mi04"
   "CONTA" VARCHAR(11)
   "NOME" VARCHAR(50)
   "SAIREL" VARCHAR(1)
   Indexes {
-    CONTA [name: "MI04-1"]
+    (CONTA) [name: "MI04-1"]
   }
 }
 
-// Origem: mj01.dbf (DBF)
+// Origem: mj01 (DBFCDX)
 Table "mj01" {
-  Note: "Origem: mj01.dbf"
+  Note: "Origem: mj01"
   "NUMERO" VARCHAR(2)
   "NOME" VARCHAR(40)
   "PGIPI" VARCHAR(1)
@@ -2040,14 +2040,14 @@ Table "mj01" {
   "TPC09" VARCHAR(2)
   "TPC10" VARCHAR(2)
   Indexes {
-    NUMERO [name: "MJ01-1"]
-    NOME [name: "MJ01-2"]
+    (NUMERO) [name: "MJ01-1"]
+    (NOME) [name: "MJ01-2"]
   }
 }
 
-// Origem: mk01.dbf (DBF)
+// Origem: mk01 (DBFCDX)
 Table "mk01" {
-  Note: "Origem: mk01.dbf"
+  Note: "Origem: mk01"
   "NRNOTA" INTEGER [default: 0]
   "DATA" DATETIME
   "DATAREF" DATETIME
@@ -2147,18 +2147,18 @@ Table "mk01" {
   "VALFIN" DECIMAL(12,2) [default: 0]
   "TOTFRETE" DECIMAL(12,2) [default: 0]
   Indexes {
-    STR(NRNOTA,8)+STR(FORNECEDO,5) [name: "MK01-1"]
-    FORNECEDO [name: "MK01-2"]
-    TOTNF [name: "MK01-3"]
-    COGNOME [name: "MK01-4"]
-    ORDEM [name: "MK01-5"]
-    OPERACAO [name: "MK01-6"]
+    (NRNOTA,FORNECEDO) [name: "MK01-1"]
+    (FORNECEDO) [name: "MK01-2"]
+    (TOTNF) [name: "MK01-3"]
+    (COGNOME) [name: "MK01-4"]
+    (ORDEM) [name: "MK01-5"]
+    (OPERACAO) [name: "MK01-6"]
   }
 }
 
-// Origem: mk02.dbf (DBF)
+// Origem: mk02 (DBFCDX)
 Table "mk02" {
-  Note: "Origem: mk02.dbf"
+  Note: "Origem: mk02"
   "NRNOTA" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
   "DATA" DATETIME
@@ -2226,17 +2226,17 @@ Table "mk02" {
   "VAIPIS" DECIMAL(12,2) [default: 0]
   "VAIFIN" DECIMAL(12,2) [default: 0]
   Indexes {
-    STR(NRNOTA,8)+STR(FORNECEDO,5)+CODIGO+STR(ITEM,2) [name: "MK02-1"]
-    FORNECEDO [name: "MK02-2"]
-    LEFT(OPERACAO,3)+CLASSIPI [name: "MK02-3"]
-    NRNOTA [name: "MK02-4"]
-    TIPOENT+CODIGO [name: "MK02-5"]
+    (NRNOTA,FORNECEDO,CODIGO,ITEM) [name: "MK02-1"]
+    (FORNECEDO) [name: "MK02-2"]
+    (OPERACAO,CLASSIPI) [name: "MK02-3"]
+    (NRNOTA) [name: "MK02-4"]
+    (TIPOENT,CODIGO) [name: "MK02-5"]
   }
 }
 
-// Origem: mk03.dbf (DBF)
+// Origem: mk03 (DBFCDX)
 Table "mk03" {
-  Note: "Origem: mk03.dbf"
+  Note: "Origem: mk03"
   "NRNOTA" INTEGER [default: 0]
   "DATA" DATETIME
   "FORNECEDO" INTEGER [default: 0]
@@ -2247,9 +2247,9 @@ Table "mk03" {
   "CONTA" VARCHAR(11)
 }
 
-// Origem: mk04.dbf (DBF)
+// Origem: mk04 (DBFCDX)
 Table "mk04" {
-  Note: "Origem: mk04.dbf"
+  Note: "Origem: mk04"
   "NRNOTA" INTEGER [default: 0]
   "DATA" DATETIME
   "TIPOCLI" VARCHAR(1)
@@ -2264,9 +2264,9 @@ Table "mk04" {
   "CONTA" VARCHAR(11)
 }
 
-// Origem: mk05.dbf (DBF)
+// Origem: mk05 (DBFCDX)
 Table "mk05" {
-  Note: "Origem: mk05.dbf"
+  Note: "Origem: mk05"
   "REQUISI" INTEGER [default: 0]
   "NRNOTA" INTEGER [default: 0]
   "DATA" DATETIME
@@ -2279,9 +2279,9 @@ Table "mk05" {
   "VALORMES" DECIMAL(12,2) [default: 0]
 }
 
-// Origem: mk06.dbf (DBF)
+// Origem: mk06 (DBFCDX)
 Table "mk06" {
-  Note: "Origem: mk06.dbf"
+  Note: "Origem: mk06"
   "ORDEM" INTEGER [default: 0]
   "NUMERO" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
@@ -2327,17 +2327,17 @@ Table "mk06" {
   "PULASIN" VARCHAR(1)
   "DESCSIN" DECIMAL(12,2) [default: 0]
   Indexes {
-    STR(ORDEM,8)+STR(NUMERO,6)+STR(ITEM,2) [name: "MK06-1"]
-    DCFONEW [name: "MK06-2"]
-    NUMERO [name: "MK06-3"]
-    LOTE [name: "MK06-4"]
-    DVALORNF [name: "MK06-5"]
+    (ORDEM,NUMERO,ITEM) [name: "MK06-1"]
+    (DCFONEW) [name: "MK06-2"]
+    (NUMERO) [name: "MK06-3"]
+    (LOTE) [name: "MK06-4"]
+    (DVALORNF) [name: "MK06-5"]
   }
 }
 
-// Origem: mk09.dbf (DBF)
+// Origem: mk09 (DBFCDX)
 Table "mk09" {
-  Note: "Origem: mk09.dbf"
+  Note: "Origem: mk09"
   "ORDEM" INTEGER [default: 0]
   "NUMERO" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
@@ -2390,16 +2390,16 @@ Table "mk09" {
   "DAT01" DATETIME
   "VAL01" DECIMAL(12,2) [default: 0]
   Indexes {
-    STR(NUMERO,8)+STR(FORNECEDO,8) [name: "MK09-1"]
-    NUMERO [name: "MK09-2"]
-    DVALORNF [name: "MK09-3"]
-    LOTE [name: "MK09-4"]
+    (NUMERO,FORNECEDO) [name: "MK09-1"]
+    (NUMERO) [name: "MK09-2"]
+    (DVALORNF) [name: "MK09-3"]
+    (LOTE) [name: "MK09-4"]
   }
 }
 
-// Origem: mk90.dbf (DBF)
+// Origem: mk90 (DBFCDX)
 Table "mk90" {
-  Note: "Origem: mk90.dbf"
+  Note: "Origem: mk90"
   "ORDEM" INTEGER [default: 0]
   "NUMERO" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
@@ -2448,16 +2448,16 @@ Table "mk90" {
   "MES" INTEGER [default: 0]
   "ANO" INTEGER [default: 0]
   Indexes {
-    STR(NUMERO,8)+STR(FORNECEDO,8) [name: "MK90-1"]
-    NUMERO [name: "MK90-2"]
-    DVALORNF [name: "MK90-3"]
-    LOTE [name: "MK90-4"]
+    (NUMERO,FORNECEDO) [name: "MK90-1"]
+    (NUMERO) [name: "MK90-2"]
+    (DVALORNF) [name: "MK90-3"]
+    (LOTE) [name: "MK90-4"]
   }
 }
 
-// Origem: mk91.dbf (DBF)
+// Origem: mk91 (DBFCDX)
 Table "mk91" {
-  Note: "Origem: mk91.dbf"
+  Note: "Origem: mk91"
   "NRNOTA" INTEGER [default: 0]
   "DATA" DATETIME
   "DATAREF" DATETIME
@@ -2559,17 +2559,17 @@ Table "mk91" {
   "MES" INTEGER [default: 0]
   "ANO" INTEGER [default: 0]
   Indexes {
-    STR(NRNOTA,8)+STR(FORNECEDO,5) [name: "MK91-1"]
-    FORNECEDO [name: "MK91-2"]
-    TOTNF [name: "MK91-3"]
-    COGNOME [name: "MK91-4"]
-    ORDEM [name: "MK91-5"]
+    (NRNOTA,FORNECEDO) [name: "MK91-1"]
+    (FORNECEDO) [name: "MK91-2"]
+    (TOTNF) [name: "MK91-3"]
+    (COGNOME) [name: "MK91-4"]
+    (ORDEM) [name: "MK91-5"]
   }
 }
 
-// Origem: mk92.dbf (DBF)
+// Origem: mk92 (DBFCDX)
 Table "mk92" {
-  Note: "Origem: mk92.dbf"
+  Note: "Origem: mk92"
   "NRNOTA" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
   "DATA" DATETIME
@@ -2639,16 +2639,16 @@ Table "mk92" {
   "MES" INTEGER [default: 0]
   "ANO" INTEGER [default: 0]
   Indexes {
-    STR(NRNOTA,8)+STR(FORNECEDO,5)+CODIGO+STR(ITEM,2) [name: "MK92-1"]
-    FORNECEDO [name: "MK92-2"]
-    LEFT(OPERACAO,3)+CLASSIPI [name: "MK92-3"]
-    NRNOTA [name: "MK92-4"]
+    (NRNOTA,FORNECEDO,CODIGO,ITEM) [name: "MK92-1"]
+    (FORNECEDO) [name: "MK92-2"]
+    (OPERACAO,CLASSIPI) [name: "MK92-3"]
+    (NRNOTA) [name: "MK92-4"]
   }
 }
 
-// Origem: mk96.dbf (DBF)
+// Origem: mk96 (DBFCDX)
 Table "mk96" {
-  Note: "Origem: mk96.dbf"
+  Note: "Origem: mk96"
   "ORDEM" INTEGER [default: 0]
   "NUMERO" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
@@ -2696,17 +2696,17 @@ Table "mk96" {
   "MES" INTEGER [default: 0]
   "ANO" INTEGER [default: 0]
   Indexes {
-    STR(ORDEM,8)+STR(NUMERO,6)+STR(ITEM,2) [name: "MK96-1"]
-    DCFONEW [name: "MK96-2"]
-    NUMERO [name: "MK96-3"]
-    LOTE [name: "MK96-4"]
-    DVALORNF [name: "MK96-5"]
+    (ORDEM,NUMERO,ITEM) [name: "MK96-1"]
+    (DCFONEW) [name: "MK96-2"]
+    (NUMERO) [name: "MK96-3"]
+    (LOTE) [name: "MK96-4"]
+    (DVALORNF) [name: "MK96-5"]
   }
 }
 
-// Origem: mk99.dbf (DBF)
+// Origem: mk99 (DBFCDX)
 Table "mk99" {
-  Note: "Origem: mk99.dbf"
+  Note: "Origem: mk99"
   "ORDEM" INTEGER [default: 0]
   "NUMERO" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
@@ -2753,9 +2753,9 @@ Table "mk99" {
   "ANO" INTEGER [default: 0]
 }
 
-// Origem: ml01.dbf (DBF)
+// Origem: ml01 (DBFCDX)
 Table "ml01" {
-  Note: "Origem: ml01.dbf"
+  Note: "Origem: ml01"
   "NRNOTA" INTEGER [default: 0]
   "TIPFAT" VARCHAR(1)
   "DATA" DATETIME
@@ -2800,19 +2800,19 @@ Table "ml01" {
   "GERACOB" VARCHAR(1)
   "CLIENTE" INTEGER [default: 0]
   Indexes {
-    DTOS(VENCIMENT)+STR(NRNOTA,8)+TIPFAT [name: "ML01-1"]
-    DOCDUP [name: "ML01-2"]
-    DOCBOL [name: "ML01-3"]
-    STR(NRNOTA,8) [name: "ML01-4"]
-    VALOR [name: "ML01-5"]
-    DATA [name: "ML01-6"]
-    FORNECEDO [name: "ML01-7"]
+    (VENCIMENT,NRNOTA,TIPFAT) [name: "ML01-1"]
+    (DOCDUP) [name: "ML01-2"]
+    (DOCBOL) [name: "ML01-3"]
+    (NRNOTA) [name: "ML01-4"]
+    (VALOR) [name: "ML01-5"]
+    (DATA) [name: "ML01-6"]
+    (FORNECEDO) [name: "ML01-7"]
   }
 }
 
-// Origem: ml01pg.dbf (DBF)
+// Origem: ml01pg (DBFCDX)
 Table "ml01pg" {
-  Note: "Origem: ml01pg.dbf"
+  Note: "Origem: ml01pg"
   "NRNOTA" INTEGER [default: 0]
   "TIPFAT" VARCHAR(1)
   "DATA" DATETIME
@@ -2857,17 +2857,17 @@ Table "ml01pg" {
   "GERACOB" VARCHAR(1)
   "CLIENTE" INTEGER [default: 0]
   Indexes {
-    DTOS(VENCIMENT)+STR(NRNOTA,8)+TIPFAT [name: "ML01PG-1"]
-    STR(NRNOTA,8)+TIPFAT [name: "ML01PG-2"]
-    FORNECEDO [name: "ML01PG-3"]
-    BANCO+DTOS(DATAPG) [name: "ML01PG-4"]
-    VALOR [name: "ML01PG-5"]
+    (VENCIMENT,NRNOTA,TIPFAT) [name: "ML01PG-1"]
+    (NRNOTA,TIPFAT) [name: "ML01PG-2"]
+    (FORNECEDO) [name: "ML01PG-3"]
+    (BANCO,DATAPG) [name: "ML01PG-4"]
+    (VALOR) [name: "ML01PG-5"]
   }
 }
 
-// Origem: ml02.dbf (DBF)
+// Origem: ml02 (DBFCDX)
 Table "ml02" {
-  Note: "Origem: ml02.dbf"
+  Note: "Origem: ml02"
   "NRNOTA" INTEGER [default: 0]
   "TIPFAT" VARCHAR(1)
   "DATA" DATETIME
@@ -2895,13 +2895,13 @@ Table "ml02" {
   "FATPER" DECIMAL(6,2) [default: 0]
   "HISTORICO" VARCHAR(3)
   Indexes {
-    STR(CLIENTE)+VENTIP+STR(DATENT,2) [name: "ML02-1"]
+    (CLIENTE,VENTIP,DATENT) [name: "ML02-1"]
   }
 }
 
-// Origem: ml03.dbf (DBF)
+// Origem: ml03 (DBFCDX)
 Table "ml03" {
-  Note: "Origem: ml03.dbf"
+  Note: "Origem: ml03"
   "NRNOTA" INTEGER [default: 0]
   "TIPFAT" VARCHAR(1)
   "BANCO" VARCHAR(3)
@@ -2933,13 +2933,13 @@ Table "ml03" {
   "FINALIZADO" VARCHAR(1)
   "CLIENTE" INTEGER [default: 0]
   Indexes {
-    STR(NRNOTA)+TIPFAT [name: "ML03-1"]
+    (NRNOTA,TIPFAT) [name: "ML03-1"]
   }
 }
 
-// Origem: ml03pg.dbf (DBF)
+// Origem: ml03pg (DBFCDX)
 Table "ml03pg" {
-  Note: "Origem: ml03pg.dbf"
+  Note: "Origem: ml03pg"
   "NRNOTA" INTEGER [default: 0]
   "TIPFAT" VARCHAR(1)
   "BANCO" VARCHAR(3)
@@ -2971,13 +2971,13 @@ Table "ml03pg" {
   "FINALIZADO" VARCHAR(1)
   "CLIENTE" INTEGER [default: 0]
   Indexes {
-    STR(NRNOTA)+TIPFAT [name: "ML03PG-1"]
+    (NRNOTA,TIPFAT) [name: "ML03PG-1"]
   }
 }
 
-// Origem: ml91pg.dbf (DBF)
+// Origem: ml91pg (DBFCDX)
 Table "ml91pg" {
-  Note: "Origem: ml91pg.dbf"
+  Note: "Origem: ml91pg"
   "NRNOTA" INTEGER [default: 0]
   "TIPFAT" VARCHAR(1)
   "DATA" DATETIME
@@ -3030,16 +3030,16 @@ Table "ml91pg" {
   "MES" INTEGER [default: 0]
   "ANO" INTEGER [default: 0]
   Indexes {
-    DTOS(VENCIMENT)+STR(NRNOTA,8)+TIPFAT [name: "ML91PG-1"]
-    STR(NRNOTA,8)+TIPFAT [name: "ML91PG-2"]
-    FORNECEDO [name: "ML91PG-3"]
-    BANCO+DTOS(DATAPG) [name: "ML91PG-4"]
+    (VENCIMENT,NRNOTA,TIPFAT) [name: "ML91PG-1"]
+    (NRNOTA,TIPFAT) [name: "ML91PG-2"]
+    (FORNECEDO) [name: "ML91PG-3"]
+    (BANCO,DATAPG) [name: "ML91PG-4"]
   }
 }
 
-// Origem: ml98.dbf (DBF)
+// Origem: ml98 (DBFCDX)
 Table "ml98" {
-  Note: "Origem: ml98.dbf"
+  Note: "Origem: ml98"
   "NRNOTA" INTEGER [default: 0]
   "TIPOCLI" VARCHAR(1)
   "TIPFAT" VARCHAR(1)
@@ -3078,9 +3078,9 @@ Table "ml98" {
   "ANO" INTEGER [default: 0]
 }
 
-// Origem: ml99.dbf (DBF)
+// Origem: ml99 (DBFCDX)
 Table "ml99" {
-  Note: "Origem: ml99.dbf"
+  Note: "Origem: ml99"
   "NRNOTA" INTEGER [default: 0]
   "TIPFAT" VARCHAR(1)
   "DATA" DATETIME
@@ -3126,15 +3126,15 @@ Table "ml99" {
   "MES" INTEGER [default: 0]
   "ANO" INTEGER [default: 0]
   Indexes {
-    DTOS(VENCIMENT)+STR(NRNOTA,8)+TIPFAT [name: "ML99-1"]
-    STR(NRNOTA,8)+TIPFAT [name: "ML99-2"]
-    FORNECEDO [name: "ML99-3"]
+    (VENCIMENT,NRNOTA,TIPFAT) [name: "ML99-1"]
+    (NRNOTA,TIPFAT) [name: "ML99-2"]
+    (FORNECEDO) [name: "ML99-3"]
   }
 }
 
-// Origem: mm01.dbf (DBF)
+// Origem: mm01 (DBFCDX)
 Table "mm01" {
-  Note: "Origem: mm01.dbf"
+  Note: "Origem: mm01"
   "NUMERO" INTEGER [default: 0]
   "DATA" DATETIME
   "TIPOSERV" VARCHAR(1)
@@ -3235,15 +3235,15 @@ Table "mm01" {
   "HORAAE" VARCHAR(8)
   "VALREM" DECIMAL(10,2) [default: 0]
   Indexes {
-    NUMERO [name: "MM01-1"]
-    FORNECEDO [name: "MM01-2"]
-    TOTNF [name: "MM01-3"]
+    (NUMERO) [name: "MM01-1"]
+    (FORNECEDO) [name: "MM01-2"]
+    (TOTNF) [name: "MM01-3"]
   }
 }
 
-// Origem: mm02.dbf (DBF)
+// Origem: mm02 (DBFCDX)
 Table "mm02" {
-  Note: "Origem: mm02.dbf"
+  Note: "Origem: mm02"
   "NUMERO" INTEGER [default: 0]
   "DATA" DATETIME
   "FORNECEDO" INTEGER [default: 0]
@@ -3327,17 +3327,17 @@ Table "mm02" {
   "IMPMY" TINYINT(1)
   "PEDCLIITE" INTEGER [default: 0]
   Indexes {
-    STR(NUMERO,8)+STR(SEQ,2) [name: "MM02-1"]
-    FORNECEDO [name: "MM02-2"]
-    LEFT(OPERACAO,3)+CLASSIPI [name: "MM02-3"]
-    NUMERO [name: "MM02-4"]
-    CODIGO [name: "MM02-5"]
+    (NUMERO,SEQ) [name: "MM02-1"]
+    (FORNECEDO) [name: "MM02-2"]
+    (OPERACAO,CLASSIPI) [name: "MM02-3"]
+    (NUMERO) [name: "MM02-4"]
+    (CODIGO) [name: "MM02-5"]
   }
 }
 
-// Origem: mm02l.dbf (DBF)
+// Origem: mm02l (DBFCDX)
 Table "mm02l" {
-  Note: "Origem: mm02l.dbf"
+  Note: "Origem: mm02l"
   "NUMMENS" INTEGER [default: 0]
   "DESMENS" VARCHAR(60)
   "LIN01" VARCHAR(45)
@@ -3349,13 +3349,13 @@ Table "mm02l" {
   "LIN07" VARCHAR(45)
   "LIN08" VARCHAR(45)
   Indexes {
-    NUMMENS [name: "MM02L-1"]
+    (NUMMENS) [name: "MM02L-1"]
   }
 }
 
-// Origem: mm03.dbf (DBF)
+// Origem: mm03 (DBFCDX)
 Table "mm03" {
-  Note: "Origem: mm03.dbf"
+  Note: "Origem: mm03"
   "NUMMENS" INTEGER [default: 0]
   "DESMENS" VARCHAR(60)
   "LIN01" VARCHAR(70)
@@ -3367,13 +3367,13 @@ Table "mm03" {
   "LIN07" VARCHAR(70)
   "LIN08" VARCHAR(70)
   Indexes {
-    NUMMENS [name: "MM03-1"]
+    (NUMMENS) [name: "MM03-1"]
   }
 }
 
-// Origem: mm04.dbf (DBF)
+// Origem: mm04 (DBFCDX)
 Table "mm04" {
-  Note: "Origem: mm04.dbf"
+  Note: "Origem: mm04"
   "NUMMENS" INTEGER [default: 0]
   "DESMENS" VARCHAR(60)
   "LIN01" VARCHAR(80)
@@ -3385,26 +3385,26 @@ Table "mm04" {
   "LIN07" VARCHAR(80)
   "LIN08" VARCHAR(80)
   Indexes {
-    NUMMENS [name: "MM04-1"]
+    (NUMMENS) [name: "MM04-1"]
   }
 }
 
-// Origem: mm05.dbf (DBF)
+// Origem: mm05 (DBFCDX)
 Table "mm05" {
-  Note: "Origem: mm05.dbf"
+  Note: "Origem: mm05"
   "OPERACAO" VARCHAR(7)
   "CLASSIPI" VARCHAR(14)
   "TOTALMER" DECIMAL(18,2) [default: 0]
   "TOTALIPI" DECIMAL(18,2) [default: 0]
   "TOTPESO" DECIMAL(13,3) [default: 0]
   Indexes {
-    OPERACAO+CLASSIPI [name: "MM05-1"]
+    (OPERACAO,CLASSIPI) [name: "MM05-1"]
   }
 }
 
-// Origem: mm06.dbf (DBF)
+// Origem: mm06 (DBFCDX)
 Table "mm06" {
-  Note: "Origem: mm06.dbf"
+  Note: "Origem: mm06"
   "ORDEM" INTEGER [default: 0]
   "NUMERO" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
@@ -3450,17 +3450,17 @@ Table "mm06" {
   "PULASIN" VARCHAR(1)
   "DESCSIN" DECIMAL(12,2) [default: 0]
   Indexes {
-    STR(ORDEM,8)+STR(NUMERO,6)+STR(ITEM,2) [name: "MM06-1"]
-    DCFONEW [name: "MM06-2"]
-    NUMERO [name: "MM06-3"]
-    LOTE [name: "MM06-4"]
-    DVALORNF [name: "MM06-5"]
+    (ORDEM,NUMERO,ITEM) [name: "MM06-1"]
+    (DCFONEW) [name: "MM06-2"]
+    (NUMERO) [name: "MM06-3"]
+    (LOTE) [name: "MM06-4"]
+    (DVALORNF) [name: "MM06-5"]
   }
 }
 
-// Origem: mm07.dbf (DBF)
+// Origem: mm07 (DBFCDX)
 Table "mm07" {
-  Note: "Origem: mm07.dbf"
+  Note: "Origem: mm07"
   "REQDEV" INTEGER [default: 0]
   "CLIENTE" INTEGER [default: 0]
   "COGCLI" VARCHAR(12)
@@ -3471,25 +3471,25 @@ Table "mm07" {
   "DATADEV" DATETIME
   "VALOR" DECIMAL(12,2) [default: 0]
   Indexes {
-    REQDEV [name: "MM07-1"]
+    (REQDEV) [name: "MM07-1"]
   }
 }
 
-// Origem: mm08.dbf (DBF)
+// Origem: mm08 (DBFCDX)
 Table "mm08" {
-  Note: "Origem: mm08.dbf"
+  Note: "Origem: mm08"
   "TIPOENT" VARCHAR(1)
   "CODIGO" VARCHAR(24)
   "FORNECEDO" INTEGER [default: 0]
   "REDICM" DECIMAL(6,2) [default: 0]
   Indexes {
-    TIPOENT+CODIGO+STR(FORNECEDO,8) [name: "MM08-1"]
+    (TIPOENT,CODIGO,FORNECEDO) [name: "MM08-1"]
   }
 }
 
-// Origem: mm09.dbf (DBF)
+// Origem: mm09 (DBFCDX)
 Table "mm09" {
-  Note: "Origem: mm09.dbf"
+  Note: "Origem: mm09"
   "ORDEM" INTEGER [default: 0]
   "NUMERO" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
@@ -3536,16 +3536,16 @@ Table "mm09" {
   "SITUACAO" VARCHAR(1)
   "CODREC" VARCHAR(5)
   Indexes {
-    STR(NUMERO,8)+STR(FORNECEDO,8) [name: "MM09-1"]
-    NUMERO [name: "MM09-2"]
-    DVALORNF [name: "MM09-3"]
-    LOTE [name: "MM09-4"]
+    (NUMERO,FORNECEDO) [name: "MM09-1"]
+    (NUMERO) [name: "MM09-2"]
+    (DVALORNF) [name: "MM09-3"]
+    (LOTE) [name: "MM09-4"]
   }
 }
 
-// Origem: mm90.dbf (DBF)
+// Origem: mm90 (DBFCDX)
 Table "mm90" {
-  Note: "Origem: mm90.dbf"
+  Note: "Origem: mm90"
   "ORDEM" INTEGER [default: 0]
   "NUMERO" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
@@ -3594,16 +3594,16 @@ Table "mm90" {
   "MES" INTEGER [default: 0]
   "ANO" INTEGER [default: 0]
   Indexes {
-    STR(NUMERO,8)+STR(FORNECEDO,8) [name: "MM90-1"]
-    NUMERO [name: "MM90-2"]
-    DVALORNF [name: "MM90-3"]
-    LOTE [name: "MM90-4"]
+    (NUMERO,FORNECEDO) [name: "MM90-1"]
+    (NUMERO) [name: "MM90-2"]
+    (DVALORNF) [name: "MM90-3"]
+    (LOTE) [name: "MM90-4"]
   }
 }
 
-// Origem: mm91.dbf (DBF)
+// Origem: mm91 (DBFCDX)
 Table "mm91" {
-  Note: "Origem: mm91.dbf"
+  Note: "Origem: mm91"
   "NUMERO" INTEGER [default: 0]
   "DATA" DATETIME
   "TIPOSERV" VARCHAR(1)
@@ -3706,13 +3706,13 @@ Table "mm91" {
   "MES" INTEGER [default: 0]
   "ANO" INTEGER [default: 0]
   Indexes {
-    NUMERO [name: "MM91-1"]
+    (NUMERO) [name: "MM91-1"]
   }
 }
 
-// Origem: mm92.dbf (DBF)
+// Origem: mm92 (DBFCDX)
 Table "mm92" {
-  Note: "Origem: mm92.dbf"
+  Note: "Origem: mm92"
   "NUMERO" INTEGER [default: 0]
   "DATA" DATETIME
   "FORNECEDO" INTEGER [default: 0]
@@ -3795,17 +3795,17 @@ Table "mm92" {
   "ANO" INTEGER [default: 0]
   "PEDCLIITE" INTEGER [default: 0]
   Indexes {
-    STR(NUMERO,8)+STR(SEQ,2) [name: "MM92-1"]
-    FORNECEDO [name: "MM92-2"]
-    LEFT(OPERACAO,3)+CLASSIPI [name: "MM92-3"]
-    NUMERO [name: "MM92-4"]
-    CODIGO [name: "MM92-5"]
+    (NUMERO,SEQ) [name: "MM92-1"]
+    (FORNECEDO) [name: "MM92-2"]
+    (OPERACAO,CLASSIPI) [name: "MM92-3"]
+    (NUMERO) [name: "MM92-4"]
+    (CODIGO) [name: "MM92-5"]
   }
 }
 
-// Origem: mm96.dbf (DBF)
+// Origem: mm96 (DBFCDX)
 Table "mm96" {
-  Note: "Origem: mm96.dbf"
+  Note: "Origem: mm96"
   "ORDEM" INTEGER [default: 0]
   "NUMERO" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
@@ -3853,17 +3853,17 @@ Table "mm96" {
   "MES" INTEGER [default: 0]
   "ANO" INTEGER [default: 0]
   Indexes {
-    STR(ORDEM,8)+STR(NUMERO,6)+STR(ITEM,2) [name: "MM96-1"]
-    DCFONEW [name: "MM96-2"]
-    NUMERO [name: "MM96-3"]
-    LOTE [name: "MM96-4"]
-    DVALORNF [name: "MM96-5"]
+    (ORDEM,NUMERO,ITEM) [name: "MM96-1"]
+    (DCFONEW) [name: "MM96-2"]
+    (NUMERO) [name: "MM96-3"]
+    (LOTE) [name: "MM96-4"]
+    (DVALORNF) [name: "MM96-5"]
   }
 }
 
-// Origem: mm99.dbf (DBF)
+// Origem: mm99 (DBFCDX)
 Table "mm99" {
-  Note: "Origem: mm99.dbf"
+  Note: "Origem: mm99"
   "ORDEM" INTEGER [default: 0]
   "NUMERO" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
@@ -3910,9 +3910,9 @@ Table "mm99" {
   "ANO" INTEGER [default: 0]
 }
 
-// Origem: mn01.dbf (DBF)
+// Origem: mn01 (DBFCDX)
 Table "mn01" {
-  Note: "Origem: mn01.dbf"
+  Note: "Origem: mn01"
   "NUMERO" INTEGER [default: 0]
   "NRNOTA" INTEGER [default: 0]
   "TIPFAT" VARCHAR(1)
@@ -3961,18 +3961,18 @@ Table "mn01" {
   "GERACOB" VARCHAR(1)
   "CLIENTE" INTEGER [default: 0]
   Indexes {
-    DTOS(VENCIMENT)+STR(NUMERO,8)+TIPFAT [name: "MN01-1"]
-    DOCDUP [name: "MN01-2"]
-    DOCBOL [name: "MN01-3"]
-    STR(NUMERO,8) [name: "MN01-4"]
-    FORNECEDO [name: "MN01-5"]
-    VALOR [name: "MN01-6"]
+    (VENCIMENT,NUMERO,TIPFAT) [name: "MN01-1"]
+    (DOCDUP) [name: "MN01-2"]
+    (DOCBOL) [name: "MN01-3"]
+    (NUMERO) [name: "MN01-4"]
+    (FORNECEDO) [name: "MN01-5"]
+    (VALOR) [name: "MN01-6"]
   }
 }
 
-// Origem: mn01pg.dbf (DBF)
+// Origem: mn01pg (DBFCDX)
 Table "mn01pg" {
-  Note: "Origem: mn01pg.dbf"
+  Note: "Origem: mn01pg"
   "NUMERO" INTEGER [default: 0]
   "NRNOTA" INTEGER [default: 0]
   "TIPFAT" VARCHAR(1)
@@ -4021,17 +4021,17 @@ Table "mn01pg" {
   "GERACOB" VARCHAR(1)
   "CLIENTE" INTEGER [default: 0]
   Indexes {
-    DTOS(VENCIMENT)+STR(NUMERO,8)+TIPFAT [name: "MN01PG-1"]
-    DTOS(DATAPG)+STR(NUMERO,8)+TIPFAT [name: "MN01PG-2"]
-    STR(FORNECEDO,5)+STR(NUMERO,8) [name: "MN01PG-3"]
-    BANCO+DTOS(DATAPG) [name: "MN01PG-4"]
-    NUMERO [name: "MN01PG-5"]
+    (VENCIMENT,NUMERO,TIPFAT) [name: "MN01PG-1"]
+    (DATAPG,NUMERO,TIPFAT) [name: "MN01PG-2"]
+    (FORNECEDO,NUMERO) [name: "MN01PG-3"]
+    (BANCO,DATAPG) [name: "MN01PG-4"]
+    (NUMERO) [name: "MN01PG-5"]
   }
 }
 
-// Origem: mn02.dbf (DBF)
+// Origem: mn02 (DBFCDX)
 Table "mn02" {
-  Note: "Origem: mn02.dbf"
+  Note: "Origem: mn02"
   "NRNOTA" INTEGER [default: 0]
   "DATA" DATETIME
   "CLIENTE" INTEGER [default: 0]
@@ -4065,9 +4065,9 @@ Table "mn02" {
   "VALD_DEV2" DECIMAL(18,2) [default: 0]
 }
 
-// Origem: mn03.dbf (DBF)
+// Origem: mn03 (DBFCDX)
 Table "mn03" {
-  Note: "Origem: mn03.dbf"
+  Note: "Origem: mn03"
   "NRNOTA" INTEGER [default: 0]
   "TIPFAT" VARCHAR(1)
   "BANCO" VARCHAR(3)
@@ -4099,13 +4099,13 @@ Table "mn03" {
   "FINALIZADO" VARCHAR(1)
   "CLIENTE" INTEGER [default: 0]
   Indexes {
-    STR(NRNOTA)+TIPFAT [name: "MN03-1"]
+    (NRNOTA,TIPFAT) [name: "MN03-1"]
   }
 }
 
-// Origem: mn03pg.dbf (DBF)
+// Origem: mn03pg (DBFCDX)
 Table "mn03pg" {
-  Note: "Origem: mn03pg.dbf"
+  Note: "Origem: mn03pg"
   "NRNOTA" INTEGER [default: 0]
   "TIPFAT" VARCHAR(1)
   "BANCO" VARCHAR(3)
@@ -4137,13 +4137,13 @@ Table "mn03pg" {
   "FINALIZADO" VARCHAR(1)
   "CLIENTE" INTEGER [default: 0]
   Indexes {
-    STR(NRNOTA)+TIPFAT [name: "MN03PG-1"]
+    (NRNOTA,TIPFAT) [name: "MN03PG-1"]
   }
 }
 
-// Origem: mn98.dbf (DBF)
+// Origem: mn98 (DBFCDX)
 Table "mn98" {
-  Note: "Origem: mn98.dbf"
+  Note: "Origem: mn98"
   "NRNOTA" INTEGER [default: 0]
   "TIPFAT" VARCHAR(1)
   "DATA" DATETIME
@@ -4183,9 +4183,9 @@ Table "mn98" {
   "ANO" INTEGER [default: 0]
 }
 
-// Origem: mn99.dbf (DBF)
+// Origem: mn99 (DBFCDX)
 Table "mn99" {
-  Note: "Origem: mn99.dbf"
+  Note: "Origem: mn99"
   "NUMERO" INTEGER [default: 0]
   "NRNOTA" INTEGER [default: 0]
   "TIPFAT" VARCHAR(1)
@@ -4235,16 +4235,16 @@ Table "mn99" {
   "MES" INTEGER [default: 0]
   "ANO" INTEGER [default: 0]
   Indexes {
-    DTOS(VENCIMENT)+STR(NUMERO,8)+TIPFAT [name: "MN99-1"]
-    DTOS(DATAPG)+STR(NUMERO,8)+TIPFAT [name: "MN99-2"]
-    STR(FORNECEDO,5)+STR(NUMERO,8) [name: "MN99-3"]
-    BANCO+DTOS(DATAPG) [name: "MN99-4"]
+    (VENCIMENT,NUMERO,TIPFAT) [name: "MN99-1"]
+    (DATAPG,NUMERO,TIPFAT) [name: "MN99-2"]
+    (FORNECEDO,NUMERO) [name: "MN99-3"]
+    (BANCO,DATAPG) [name: "MN99-4"]
   }
 }
 
-// Origem: mo01.dbf (DBF)
+// Origem: mo01 (DBFCDX)
 Table "mo01" {
-  Note: "Origem: mo01.dbf"
+  Note: "Origem: mo01"
   "PEDIDO" DECIMAL(8,2) [default: 0]
   "OS" DECIMAL(8,2) [default: 0]
   "TIPOSERV" VARCHAR(1)
@@ -4271,14 +4271,14 @@ Table "mo01" {
   "TIPOPRG" VARCHAR(1)
   "PEDCLIITE" INTEGER [default: 0]
   Indexes {
-    PEDIDO [name: "MO01-1"]
-    STR(FORNECEDO,8)+DTOS(ENTREGA)+PEDIDOCLI [name: "MO01-2"]
+    (PEDIDO) [name: "MO01-1"]
+    (FORNECEDO,ENTREGA,PEDIDOCLI) [name: "MO01-2"]
   }
 }
 
-// Origem: mo01bx.dbf (DBF)
+// Origem: mo01bx (DBFCDX)
 Table "mo01bx" {
-  Note: "Origem: mo01bx.dbf"
+  Note: "Origem: mo01bx"
   "PEDIDO" DECIMAL(8,2) [default: 0]
   "OS" DECIMAL(8,2) [default: 0]
   "TIPOSERV" VARCHAR(1)
@@ -4305,13 +4305,13 @@ Table "mo01bx" {
   "TIPOPRG" VARCHAR(1)
   "PEDCLIITE" INTEGER [default: 0]
   Indexes {
-    PEDIDO [name: "MO01BX-1"]
+    (PEDIDO) [name: "MO01BX-1"]
   }
 }
 
-// Origem: mo02.dbf (DBF)
+// Origem: mo02 (DBFCDX)
 Table "mo02" {
-  Note: "Origem: mo02.dbf"
+  Note: "Origem: mo02"
   "PEDIDO" DECIMAL(8,2) [default: 0]
   "OS" DECIMAL(8,2) [default: 0]
   "TIPOSERV" VARCHAR(1)
@@ -4401,18 +4401,18 @@ Table "mo02" {
   "QTDEANT" DECIMAL(10,3) [default: 0]
   "HORAPRG" DECIMAL(5,2) [default: 0]
   Indexes {
-    STR(PEDIDO,8,2)+STR(ITEM,2) [name: "MO02-1"]
-    COGNOME+CODIGO+DTOS(ENTREGA)+STR(HORAPRG,5,2) [name: "MO02-2"]
-    CODIGO [name: "MO02-3"]
-    PEDIDO [name: "MO02-4"]
-    STR(FORNECEDO,5)+CODIGO+DTOS(ENTREGA)+STR(HORAPRG,5,2) [name: "MO02-5"]
-    CODIGO+STR(LISTA,5)+COMPRA [name: "MO02-6"]
+    (PEDIDO,ITEM) [name: "MO02-1"]
+    (COGNOME,CODIGO,ENTREGA,HORAPRG) [name: "MO02-2"]
+    (CODIGO) [name: "MO02-3"]
+    (PEDIDO) [name: "MO02-4"]
+    (FORNECEDO,CODIGO,ENTREGA,HORAPRG) [name: "MO02-5"]
+    (CODIGO,LISTA,COMPRA) [name: "MO02-6"]
   }
 }
 
-// Origem: mo02bx.dbf (DBF)
+// Origem: mo02bx (DBFCDX)
 Table "mo02bx" {
-  Note: "Origem: mo02bx.dbf"
+  Note: "Origem: mo02bx"
   "PEDIDO" DECIMAL(8,2) [default: 0]
   "OS" DECIMAL(8,2) [default: 0]
   "TIPOSERV" VARCHAR(1)
@@ -4502,13 +4502,13 @@ Table "mo02bx" {
   "QTDEANT" DECIMAL(10,3) [default: 0]
   "HORAPRG" DECIMAL(5,2) [default: 0]
   Indexes {
-    STR(PEDIDO,8,2)+STR(ITEM,2) [name: "MO02BX-1"]
+    (PEDIDO,ITEM) [name: "MO02BX-1"]
   }
 }
 
-// Origem: mo02x.dbf (DBF)
+// Origem: mo02x (DBFCDX)
 Table "mo02x" {
-  Note: "Origem: mo02x.dbf"
+  Note: "Origem: mo02x"
   "PEDIDO" DECIMAL(8,2) [default: 0]
   "OS" DECIMAL(8,2) [default: 0]
   "TIPOSERV" VARCHAR(1)
@@ -4598,13 +4598,13 @@ Table "mo02x" {
   "QTDEANT" DECIMAL(10,3) [default: 0]
   "HORAPRG" DECIMAL(5,2) [default: 0]
   Indexes {
-    STR(PEDIDO,8,2)+STR(ITEM,2) [name: "MO02X-1"]
+    (PEDIDO,ITEM) [name: "MO02X-1"]
   }
 }
 
-// Origem: mofp.dbf (DBF)
+// Origem: mofp (DBFCDX)
 Table "mofp" {
-  Note: "Origem: mofp.dbf"
+  Note: "Origem: mofp"
   "FP" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "SEQ" INTEGER [default: 0]
@@ -4614,15 +4614,15 @@ Table "mofp" {
   "QTDEPF" INTEGER [default: 0]
   "QTDEBX" INTEGER [default: 0]
   Indexes {
-    FP [name: "MOFP-1"]
-    CODIGO+STR(SEQ,3)+STR(SSQ,3) [name: "MOFP-2"]
-    ME01COD [name: "MOFP-3"]
+    (FP) [name: "MOFP-1"]
+    (CODIGO,SEQ,SSQ) [name: "MOFP-2"]
+    (ME01COD) [name: "MOFP-3"]
   }
 }
 
-// Origem: mosb01.dbf (DBF)
+// Origem: mosb01 (DBFCDX)
 Table "mosb01" {
-  Note: "Origem: mosb01.dbf"
+  Note: "Origem: mosb01"
   "NUMERO" INTEGER [default: 0]
   "DATA" DATETIME
   "FORNECEDO" INTEGER [default: 0]
@@ -4630,13 +4630,13 @@ Table "mosb01" {
   "CFONEW" VARCHAR(4)
   "TIPOFRE" VARCHAR(1)
   Indexes {
-    NUMERO [name: "MOSB01-1"]
+    (NUMERO) [name: "MOSB01-1"]
   }
 }
 
-// Origem: mosb02.dbf (DBF)
+// Origem: mosb02 (DBFCDX)
 Table "mosb02" {
-  Note: "Origem: mosb02.dbf"
+  Note: "Origem: mosb02"
   "NUMERO" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "SEQ" INTEGER [default: 0]
@@ -4659,14 +4659,14 @@ Table "mosb02" {
   "OBS" VARCHAR(60)
   "INDICE" VARCHAR(12)
   Indexes {
-    STR(NUMERO,8)+STR(SEQ,2) [name: "MOSB02-1"]
-    STR(NUMERO,8)+TIPOENT [name: "MOSB02-2"]
+    (NUMERO,SEQ) [name: "MOSB02-1"]
+    (NUMERO,TIPOENT) [name: "MOSB02-2"]
   }
 }
 
-// Origem: mp01.dbf (DBF)
+// Origem: mp01 (DBFCDX)
 Table "mp01" {
-  Note: "Origem: mp01.dbf"
+  Note: "Origem: mp01"
   "CODIGO" VARCHAR(12)
   "NOME" VARCHAR(30)
   "COGNOME" VARCHAR(10)
@@ -4719,28 +4719,28 @@ Table "mp01" {
   "CRMSEL" INTEGER [default: 0]
   "CODIGOINT" VARCHAR(4)
   Indexes {
-    CODIGO [name: "MP01-1"]
-    NOME [name: "MP01-2"]
-    CODFOLHA [name: "MP01-3"]
+    (CODIGO) [name: "MP01-1"]
+    (NOME) [name: "MP01-2"]
+    (CODFOLHA) [name: "MP01-3"]
   }
 }
 
-// Origem: mp01a.dbf (DBF)
+// Origem: mp01a (DBFCDX)
 Table "mp01a" {
-  Note: "Origem: mp01a.dbf"
+  Note: "Origem: mp01a"
   "CODIGO" VARCHAR(12)
   "SEQ" INTEGER [default: 0]
   "CODMPSB" VARCHAR(12)
   "NOMMPSB" VARCHAR(30)
   Indexes {
-    CODIGO+STR(SEQ,3) [name: "MP01A-1"]
-    CODMPSB+STR(SEQ,3) [name: "MP01A-2"]
+    (CODIGO,SEQ) [name: "MP01A-1"]
+    (CODMPSB,SEQ) [name: "MP01A-2"]
   }
 }
 
-// Origem: mp02.dbf (DBF)
+// Origem: mp02 (DBFCDX)
 Table "mp02" {
-  Note: "Origem: mp02.dbf"
+  Note: "Origem: mp02"
   "CODIGO" VARCHAR(12)
   "COGNOME" VARCHAR(10)
   "NOME" VARCHAR(30)
@@ -4847,40 +4847,40 @@ Table "mp02" {
   "APRNOM" VARCHAR(40)
   "APRDAT" DATETIME
   Indexes {
-    CODIGO [name: "MP02-1"]
-    NOME [name: "MP02-2"]
-    CODFOLHA [name: "MP02-3"]
+    (CODIGO) [name: "MP02-1"]
+    (NOME) [name: "MP02-2"]
+    (CODFOLHA) [name: "MP02-3"]
   }
 }
 
-// Origem: mp02a.dbf (DBF)
+// Origem: mp02a (DBFCDX)
 Table "mp02a" {
-  Note: "Origem: mp02a.dbf"
+  Note: "Origem: mp02a"
   "CODIGO" VARCHAR(12)
   "SEQ" INTEGER [default: 0]
   "CODMPSB" VARCHAR(12)
   "NOMMPSB" VARCHAR(30)
   Indexes {
-    CODIGO+STR(SEQ,3) [name: "MP02A-1"]
-    CODMPSB+STR(SEQ,3) [name: "MP02A-2"]
+    (CODIGO,SEQ) [name: "MP02A-1"]
+    (CODMPSB,SEQ) [name: "MP02A-2"]
   }
 }
 
-// Origem: mp02tal.dbf (DBF)
+// Origem: mp02tal (DBFCDX)
 Table "mp02tal" {
-  Note: "Origem: mp02tal.dbf"
+  Note: "Origem: mp02tal"
   "CODIGO" VARCHAR(12)
   "CURSO" VARCHAR(20)
   "NUMFUN" INTEGER [default: 0]
   "TREIN" INTEGER [default: 0]
   Indexes {
-    CODIGO+CURSO+STR(NUMFUN,8) [name: "CHAVE"]
+    (CODIGO,CURSO,NUMFUN) [name: "CHAVE"]
   }
 }
 
-// Origem: mp03.dbf (DBF)
+// Origem: mp03 (DBFCDX)
 Table "mp03" {
-  Note: "Origem: mp03.dbf"
+  Note: "Origem: mp03"
   "CODIGO" VARCHAR(24)
   "NOME" VARCHAR(30)
   "COGNOME" VARCHAR(10)
@@ -4937,28 +4937,28 @@ Table "mp03" {
   "CTACONTB" VARCHAR(11)
   "CODIGOINT" VARCHAR(24)
   Indexes {
-    CODIGO [name: "MP03-1"]
-    NOME [name: "MP03-2"]
-    CODIGOINT [name: "MP03-3"]
+    (CODIGO) [name: "MP03-1"]
+    (NOME) [name: "MP03-2"]
+    (CODIGOINT) [name: "MP03-3"]
   }
 }
 
-// Origem: mp03a.dbf (DBF)
+// Origem: mp03a (DBFCDX)
 Table "mp03a" {
-  Note: "Origem: mp03a.dbf"
+  Note: "Origem: mp03a"
   "CODIGO" VARCHAR(12)
   "SEQ" INTEGER [default: 0]
   "CODMPSB" VARCHAR(12)
   "NOMMPSB" VARCHAR(30)
   Indexes {
-    CODIGO+STR(SEQ,3) [name: "MP03A-1"]
-    CODMPSB+STR(SEQ,3) [name: "MP03A-2"]
+    (CODIGO,SEQ) [name: "MP03A-1"]
+    (CODMPSB,SEQ) [name: "MP03A-2"]
   }
 }
 
-// Origem: mp03x.dbf (DBF)
+// Origem: mp03x (DBFCDX)
 Table "mp03x" {
-  Note: "Origem: mp03x.dbf"
+  Note: "Origem: mp03x"
   "CODIGO" VARCHAR(24)
   "NOME" VARCHAR(30)
   "COGNOME" VARCHAR(10)
@@ -5016,15 +5016,15 @@ Table "mp03x" {
   "CODIGOINT" VARCHAR(24)
   "CLICODINT" VARCHAR(20)
   Indexes {
-    CODIGO [name: "MP03X-1"]
-    NOME [name: "MP03X-2"]
-    CODIGOINT [name: "MP03X-3"]
+    (CODIGO) [name: "MP03X-1"]
+    (NOME) [name: "MP03X-2"]
+    (CODIGOINT) [name: "MP03X-3"]
   }
 }
 
-// Origem: mp04.dbf (DBF)
+// Origem: mp04 (DBFCDX)
 Table "mp04" {
-  Note: "Origem: mp04.dbf"
+  Note: "Origem: mp04"
   "TECNICO" INTEGER [default: 0]
   "CNUMERO" VARCHAR(8)
   "COGTEC" VARCHAR(12)
@@ -5057,16 +5057,16 @@ Table "mp04" {
   "DATTRANSF" DATETIME
   "CPF" VARCHAR(14)
   Indexes {
-    TECNICO [name: "MP04-1"]
-    NOMTEC [name: "MP04-2"]
-    CNUMERO [name: "MP04-3"]
-    TABTEC [name: "MP04-4"]
+    (TECNICO) [name: "MP04-1"]
+    (NOMTEC) [name: "MP04-2"]
+    (CNUMERO) [name: "MP04-3"]
+    (TABTEC) [name: "MP04-4"]
   }
 }
 
-// Origem: mp04a.dbf (DBF)
+// Origem: mp04a (DBFCDX)
 Table "mp04a" {
-  Note: "Origem: mp04a.dbf"
+  Note: "Origem: mp04a"
   "TECNICO" INTEGER [default: 0]
   "CURSO" VARCHAR(20)
   "DESCUR" VARCHAR(120)
@@ -5074,14 +5074,14 @@ Table "mp04a" {
   "NUMANT" INTEGER [default: 0]
   "CARHOR" INTEGER [default: 0]
   Indexes {
-    TECNICO [name: "TECNICO"]
-    CURSO [name: "CURSO"]
+    (TECNICO) [name: "TECNICO"]
+    (CURSO) [name: "CURSO"]
   }
 }
 
-// Origem: mp04c.dbf (DBF)
+// Origem: mp04c (DBFCDX)
 Table "mp04c" {
-  Note: "Origem: mp04c.dbf"
+  Note: "Origem: mp04c"
   "TECNICO" INTEGER [default: 0]
   "CURSO" VARCHAR(20)
   "DESCUR" VARCHAR(120)
@@ -5089,14 +5089,14 @@ Table "mp04c" {
   "NUMANT" INTEGER [default: 0]
   "CARHOR" INTEGER [default: 0]
   Indexes {
-    TECNICO [name: "TECNICO"]
-    CURSO [name: "CURSO"]
+    (TECNICO) [name: "TECNICO"]
+    (CURSO) [name: "CURSO"]
   }
 }
 
-// Origem: mp05.dbf (DBF)
+// Origem: mp05 (DBFCDX)
 Table "mp05" {
-  Note: "Origem: mp05.dbf"
+  Note: "Origem: mp05"
   "CODIGO" VARCHAR(2)
   "DESCRI" VARCHAR(30)
   "RESPON" VARCHAR(40)
@@ -5105,25 +5105,25 @@ Table "mp05" {
   "CARGO" VARCHAR(40)
   "PPAP" TINYINT(1)
   Indexes {
-    CODIGO [name: "MP05-1"]
+    (CODIGO) [name: "MP05-1"]
   }
 }
 
-// Origem: mp07.dbf (DBF)
+// Origem: mp07 (DBFCDX)
 Table "mp07" {
-  Note: "Origem: mp07.dbf"
+  Note: "Origem: mp07"
   "ARMARIO" INTEGER [default: 0]
   "NUMERO" INTEGER [default: 0]
   "NOME" VARCHAR(40)
   Indexes {
-    ARMARIO [name: "MP07-1"]
-    NUMERO [name: "MP07-2"]
+    (ARMARIO) [name: "MP07-1"]
+    (NUMERO) [name: "MP07-2"]
   }
 }
 
-// Origem: mp08.dbf (DBF)
+// Origem: mp08 (DBFCDX)
 Table "mp08" {
-  Note: "Origem: mp08.dbf"
+  Note: "Origem: mp08"
   "NUMERO" INTEGER [default: 0]
   "NUMMP04" INTEGER [default: 0]
   "DATA" DATETIME
@@ -5135,15 +5135,15 @@ Table "mp08" {
   "RETORNO" DATETIME
   "PRORROGA" INTEGER [default: 0]
   Indexes {
-    NUMERO [name: "MP08-1"]
-    NUMMP04 [name: "MP08-2"]
-    PRAZO [name: "MP08-3"]
+    (NUMERO) [name: "MP08-1"]
+    (NUMMP04) [name: "MP08-2"]
+    (PRAZO) [name: "MP08-3"]
   }
 }
 
-// Origem: mp91.dbf (DBF)
+// Origem: mp91 (DBFCDX)
 Table "mp91" {
-  Note: "Origem: mp91.dbf"
+  Note: "Origem: mp91"
   "ARQUIVO" VARCHAR(8)
   "DOCUMENTO" VARCHAR(40)
   "OPERACAO" VARCHAR(1)
@@ -5157,14 +5157,14 @@ Table "mp91" {
   "ESTQXXX" DECIMAL(12,3) [default: 0]
   "ESTQYYY" DECIMAL(12,3) [default: 0]
   Indexes {
-    ARQUIVO+DOCUMENTO [name: "MP91-1"]
-    CODIGO+DTOS(DATA) [name: "MP91-2"]
+    (ARQUIVO,DOCUMENTO) [name: "MP91-1"]
+    (CODIGO,DATA) [name: "MP91-2"]
   }
 }
 
-// Origem: mp92.dbf (DBF)
+// Origem: mp92 (DBFCDX)
 Table "mp92" {
-  Note: "Origem: mp92.dbf"
+  Note: "Origem: mp92"
   "ARQUIVO" VARCHAR(8)
   "DOCUMENTO" VARCHAR(40)
   "OPERACAO" VARCHAR(1)
@@ -5178,14 +5178,14 @@ Table "mp92" {
   "ESTQXXX" DECIMAL(12,3) [default: 0]
   "ESTQYYY" DECIMAL(12,3) [default: 0]
   Indexes {
-    ARQUIVO+DOCUMENTO [name: "MP92-1"]
-    CODIGO+DTOS(DATA) [name: "MP92-2"]
+    (ARQUIVO,DOCUMENTO) [name: "MP92-1"]
+    (CODIGO,DATA) [name: "MP92-2"]
   }
 }
 
-// Origem: mp93.dbf (DBF)
+// Origem: mp93 (DBFCDX)
 Table "mp93" {
-  Note: "Origem: mp93.dbf"
+  Note: "Origem: mp93"
   "ARQUIVO" VARCHAR(8)
   "DOCUMENTO" VARCHAR(40)
   "OPERACAO" VARCHAR(1)
@@ -5199,14 +5199,14 @@ Table "mp93" {
   "ESTQXXX" DECIMAL(12,3) [default: 0]
   "ESTQYYY" DECIMAL(12,3) [default: 0]
   Indexes {
-    ARQUIVO+DOCUMENTO [name: "MP93-1"]
-    CODIGO+DTOS(DATA) [name: "MP93-2"]
+    (ARQUIVO,DOCUMENTO) [name: "MP93-1"]
+    (CODIGO,DATA) [name: "MP93-2"]
   }
 }
 
-// Origem: mq01.dbf (DBF)
+// Origem: mq01 (DBFCDX)
 Table "mq01" {
-  Note: "Origem: mq01.dbf"
+  Note: "Origem: mq01"
   "CODIGO" VARCHAR(24)
   "UNIDADE" VARCHAR(2)
   "NOME" VARCHAR(50)
@@ -5263,14 +5263,14 @@ Table "mq01" {
   "CODMW" VARCHAR(3)
   "PISCON" VARCHAR(1)
   Indexes {
-    CODIGO [name: "MQ01-1"]
-    NOME [name: "MQ01-2"]
+    (CODIGO) [name: "MQ01-1"]
+    (NOME) [name: "MQ01-2"]
   }
 }
 
-// Origem: mq01i.dbf (DBF)
+// Origem: mq01i (DBFCDX)
 Table "mq01i" {
-  Note: "Origem: mq01i.dbf"
+  Note: "Origem: mq01i"
   "CODIGO" VARCHAR(10)
   "ITEM" INTEGER [default: 0]
   "ESPE" VARCHAR(60)
@@ -5286,9 +5286,9 @@ Table "mq01i" {
   "QTDEREF" DECIMAL(8,2) [default: 0]
 }
 
-// Origem: mq01x.dbf (DBF)
+// Origem: mq01x (DBFCDX)
 Table "mq01x" {
-  Note: "Origem: mq01x.dbf"
+  Note: "Origem: mq01x"
   "CODIGO" VARCHAR(24)
   "UNIDADE" VARCHAR(2)
   "NOME" VARCHAR(50)
@@ -5350,15 +5350,15 @@ Table "mq01x" {
   "CODIGOINT" VARCHAR(24)
   "CLICODINT" VARCHAR(20)
   Indexes {
-    CODIGO [name: "MQ01X-1"]
-    NOME [name: "MQ01X-2"]
-    CODIGOINT [name: "MQ01X-3"]
+    (CODIGO) [name: "MQ01X-1"]
+    (NOME) [name: "MQ01X-2"]
+    (CODIGOINT) [name: "MQ01X-3"]
   }
 }
 
-// Origem: mq02.dbf (DBF)
+// Origem: mq02 (DBFCDX)
 Table "mq02" {
-  Note: "Origem: mq02.dbf"
+  Note: "Origem: mq02"
   "CODIGO" VARCHAR(24)
   "UNIDADE" VARCHAR(2)
   "NOME" VARCHAR(30)
@@ -5424,13 +5424,13 @@ Table "mq02" {
   "CONM11" DECIMAL(12,6) [default: 0]
   "CONM12" DECIMAL(12,6) [default: 0]
   Indexes {
-    CODIGO+STR(COTFORN) [name: "MQ02-1"]
+    (CODIGO,COTFORN) [name: "MQ02-1"]
   }
 }
 
-// Origem: mq03.dbf (DBF)
+// Origem: mq03 (DBFCDX)
 Table "mq03" {
-  Note: "Origem: mq03.dbf"
+  Note: "Origem: mq03"
   "CODIGO" VARCHAR(24)
   "UNIDADE" VARCHAR(2)
   "NOME" VARCHAR(30)
@@ -5456,16 +5456,16 @@ Table "mq03" {
   "TIPOENT" VARCHAR(1)
   "OBS" VARCHAR(30)
   Indexes {
-    CODIGO+STR(NRNOTAINI)+DIGCTR [name: "MQ03-1"]
-    STR(NRNOTAINI,8)+CODIGO [name: "MQ03-2"]
-    STR(CLIENTE,8)+CODIGO [name: "MQ03-3"]
-    CLIENTE [name: "MQ03-4"]
+    (CODIGO,NRNOTAINI,DIGCTR) [name: "MQ03-1"]
+    (NRNOTAINI,CODIGO) [name: "MQ03-2"]
+    (CLIENTE,CODIGO) [name: "MQ03-3"]
+    (CLIENTE) [name: "MQ03-4"]
   }
 }
 
-// Origem: mq03bx.dbf (DBF)
+// Origem: mq03bx (DBFCDX)
 Table "mq03bx" {
-  Note: "Origem: mq03bx.dbf"
+  Note: "Origem: mq03bx"
   "CODIGO" VARCHAR(24)
   "UNIDADE" VARCHAR(2)
   "NOME" VARCHAR(30)
@@ -5491,16 +5491,16 @@ Table "mq03bx" {
   "TIPOENT" VARCHAR(1)
   "OBS" VARCHAR(30)
   Indexes {
-    CODIGO+STR(NRNOTAINI)+DIGCTR [name: "MQ03BX-1"]
-    STR(NRNOTAINI)+CODIGO [name: "MQ03BX-2"]
-    NRNOTAINI [name: "MQ03BX-3"]
-    CLIENTE [name: "MQ03BX-4"]
+    (CODIGO,NRNOTAINI,DIGCTR) [name: "MQ03BX-1"]
+    (NRNOTAINI,CODIGO) [name: "MQ03BX-2"]
+    (NRNOTAINI) [name: "MQ03BX-3"]
+    (CLIENTE) [name: "MQ03BX-4"]
   }
 }
 
-// Origem: mq04.dbf (DBF)
+// Origem: mq04 (DBFCDX)
 Table "mq04" {
-  Note: "Origem: mq04.dbf"
+  Note: "Origem: mq04"
   "CODIGO" VARCHAR(24)
   "SEQ" INTEGER [default: 0]
   "DATA" DATETIME
@@ -5513,13 +5513,13 @@ Table "mq04" {
   "TOTITEM" DECIMAL(12,2) [default: 0]
   "MEDIO" DECIMAL(12,3) [default: 0]
   Indexes {
-    CODIGO+STR(SEQ,5) [name: "MQ04-1"]
+    (CODIGO,SEQ) [name: "MQ04-1"]
   }
 }
 
-// Origem: mq99.dbf (DBF)
+// Origem: mq99 (DBFCDX)
 Table "mq99" {
-  Note: "Origem: mq99.dbf"
+  Note: "Origem: mq99"
   "ARQUIVO" VARCHAR(8)
   "DOCUMENTO" VARCHAR(40)
   "OPERACAO" VARCHAR(1)
@@ -5533,14 +5533,14 @@ Table "mq99" {
   "ESTQXXX" DECIMAL(12,3) [default: 0]
   "ESTQYYY" DECIMAL(12,3) [default: 0]
   Indexes {
-    ARQUIVO+DOCUMENTO [name: "MQ99-1"]
-    CODIGO+DTOS(DATA) [name: "MQ99-2"]
+    (ARQUIVO,DOCUMENTO) [name: "MQ99-1"]
+    (CODIGO,DATA) [name: "MQ99-2"]
   }
 }
 
-// Origem: mr01.dbf (DBF)
+// Origem: mr01 (DBFCDX)
 Table "mr01" {
-  Note: "Origem: mr01.dbf"
+  Note: "Origem: mr01"
   "CODIGO" VARCHAR(10)
   "UNIDADE" VARCHAR(2)
   "NOME" VARCHAR(50)
@@ -5600,14 +5600,14 @@ Table "mr01" {
   "QTDEAPU" INTEGER [default: 0]
   "CRMSEL" INTEGER [default: 0]
   Indexes {
-    CODIGO [name: "MR01-1"]
-    NOME [name: "MR01-2"]
+    (CODIGO) [name: "MR01-1"]
+    (NOME) [name: "MR01-2"]
   }
 }
 
-// Origem: mr02.dbf (DBF)
+// Origem: mr02 (DBFCDX)
 Table "mr02" {
-  Note: "Origem: mr02.dbf"
+  Note: "Origem: mr02"
   "CODIGO" VARCHAR(10)
   "UNIDADE" VARCHAR(2)
   "NOME" VARCHAR(30)
@@ -5673,13 +5673,13 @@ Table "mr02" {
   "CONM11" DECIMAL(12,6) [default: 0]
   "CONM12" DECIMAL(12,6) [default: 0]
   Indexes {
-    CODIGO+STR(COTFORN) [name: "MR02-1"]
+    (CODIGO,COTFORN) [name: "MR02-1"]
   }
 }
 
-// Origem: mr03.dbf (DBF)
+// Origem: mr03 (DBFCDX)
 Table "mr03" {
-  Note: "Origem: mr03.dbf"
+  Note: "Origem: mr03"
   "CODIGO" VARCHAR(24)
   "UNIDADE" VARCHAR(2)
   "NOME" VARCHAR(30)
@@ -5709,16 +5709,16 @@ Table "mr03" {
   "LOCAL" VARCHAR(5)
   "QTDEEMB" INTEGER [default: 0]
   Indexes {
-    CODIGO+STR(NRNOTAINI)+DIGCTR [name: "MR03-1"]
-    STR(NRNOTAINI,8)+CODIGO [name: "MR03-2"]
-    STR(CLIENTE,8)+CODIGO [name: "MR03-3"]
-    CLIENTE [name: "MR03-4"]
+    (CODIGO,NRNOTAINI,DIGCTR) [name: "MR03-1"]
+    (NRNOTAINI,CODIGO) [name: "MR03-2"]
+    (CLIENTE,CODIGO) [name: "MR03-3"]
+    (CLIENTE) [name: "MR03-4"]
   }
 }
 
-// Origem: mr03bx.dbf (DBF)
+// Origem: mr03bx (DBFCDX)
 Table "mr03bx" {
-  Note: "Origem: mr03bx.dbf"
+  Note: "Origem: mr03bx"
   "CODIGO" VARCHAR(24)
   "UNIDADE" VARCHAR(2)
   "NOME" VARCHAR(30)
@@ -5748,16 +5748,16 @@ Table "mr03bx" {
   "LOCAL" VARCHAR(5)
   "QTDEEMB" INTEGER [default: 0]
   Indexes {
-    CODIGO+STR(NRNOTAINI)+DIGCTR [name: "MR03BX-1"]
-    STR(NRNOTAINI)+CODIGO [name: "MR03BX-2"]
-    NRNOTAINI [name: "MR03BX-3"]
-    CLIENTE [name: "MR03BX-4"]
+    (CODIGO,NRNOTAINI,DIGCTR) [name: "MR03BX-1"]
+    (NRNOTAINI,CODIGO) [name: "MR03BX-2"]
+    (NRNOTAINI) [name: "MR03BX-3"]
+    (CLIENTE) [name: "MR03BX-4"]
   }
 }
 
-// Origem: mr04.dbf (DBF)
+// Origem: mr04 (DBFCDX)
 Table "mr04" {
-  Note: "Origem: mr04.dbf"
+  Note: "Origem: mr04"
   "CODIGO" VARCHAR(10)
   "SEQ" INTEGER [default: 0]
   "DATA" DATETIME
@@ -5770,13 +5770,13 @@ Table "mr04" {
   "TOTITEM" DECIMAL(12,2) [default: 0]
   "MEDIO" DECIMAL(12,3) [default: 0]
   Indexes {
-    CODIGO+STR(SEQ,5) [name: "MR04-1"]
+    (CODIGO,SEQ) [name: "MR04-1"]
   }
 }
 
-// Origem: mr99.dbf (DBF)
+// Origem: mr99 (DBFCDX)
 Table "mr99" {
-  Note: "Origem: mr99.dbf"
+  Note: "Origem: mr99"
   "ARQUIVO" VARCHAR(8)
   "DOCUMENTO" VARCHAR(40)
   "OPERACAO" VARCHAR(1)
@@ -5790,26 +5790,26 @@ Table "mr99" {
   "ESTQXXX" DECIMAL(12,3) [default: 0]
   "ESTQYYY" DECIMAL(12,3) [default: 0]
   Indexes {
-    ARQUIVO+DOCUMENTO [name: "MR99-1"]
-    CODIGO+DTOS(DATA) [name: "MR99-2"]
+    (ARQUIVO,DOCUMENTO) [name: "MR99-1"]
+    (CODIGO,DATA) [name: "MR99-2"]
   }
 }
 
-// Origem: mrms.dbf (DBF)
+// Origem: mrms (DBFCDX)
 Table "mrms" {
-  Note: "Origem: mrms.dbf"
+  Note: "Origem: mrms"
   "CODMS01" VARCHAR(24)
   "CODMR01" VARCHAR(10)
   "CODMA01" INTEGER [default: 0]
   "PCEMB" INTEGER [default: 0]
   Indexes {
-    CODMS01+STR(CODMA01,8) [name: "MRMS-1"]
+    (CODMS01,CODMA01) [name: "MRMS-1"]
   }
 }
 
-// Origem: ms01.dbf (DBF)
+// Origem: ms01 (DBFCDX)
 Table "ms01" {
-  Note: "Origem: ms01.dbf"
+  Note: "Origem: ms01"
   "CODIGO" VARCHAR(24)
   "FORNECEDO" INTEGER [default: 0]
   "CLIPCP" INTEGER [default: 0]
@@ -5897,28 +5897,28 @@ Table "ms01" {
   "PRIFATDAT" DATETIME
   "PRIFATNF" INTEGER [default: 0]
   Indexes {
-    CODIGO+STR(FORNECEDO,5)+COMPRA [name: "MS01-1"]
-    CODIGO [name: "MS01-2"]
-    CODIGOINT [name: "MS01-3"]
-    STR(FORNECEDO)+CODIGO [name: "MS01-4"]
-    FORNECEDO [name: "MS01-5"]
+    (CODIGO,FORNECEDO,COMPRA) [name: "MS01-1"]
+    (CODIGO) [name: "MS01-2"]
+    (CODIGOINT) [name: "MS01-3"]
+    (FORNECEDO,CODIGO) [name: "MS01-4"]
+    (FORNECEDO) [name: "MS01-5"]
   }
 }
 
-// Origem: ms01p.dbf (DBF)
+// Origem: ms01p (DBFCDX)
 Table "ms01p" {
-  Note: "Origem: ms01p.dbf"
+  Note: "Origem: ms01p"
   "CODIGO" VARCHAR(24)
   "FORNECEDO" INTEGER [default: 0]
   "PPLAN" DECIMAL(9,4) [default: 0]
   Indexes {
-    CODIGO+STR(FORNECEDO,5) [name: "MS01P-1"]
+    (CODIGO,FORNECEDO) [name: "MS01P-1"]
   }
 }
 
-// Origem: MS01x.dbf (DBF)
+// Origem: MS01x (DBFCDX)
 Table "MS01x" {
-  Note: "Origem: MS01x.dbf"
+  Note: "Origem: MS01x"
   "CODIGO" VARCHAR(24)
   "FORNECEDO" INTEGER [default: 0]
   "CLIPCP" INTEGER [default: 0]
@@ -6006,15 +6006,15 @@ Table "MS01x" {
   "PRIFATDAT" DATETIME
   "PRIFATNF" INTEGER [default: 0]
   Indexes {
-    CODIGO [name: "MS01X-1"]
-    NOME [name: "MS01X-2"]
-    CODIGOINT [name: "MS01X-3"]
+    (CODIGO) [name: "MS01X-1"]
+    (NOME) [name: "MS01X-2"]
+    (CODIGOINT) [name: "MS01X-3"]
   }
 }
 
-// Origem: ms02.dbf (DBF)
+// Origem: ms02 (DBFCDX)
 Table "ms02" {
-  Note: "Origem: ms02.dbf"
+  Note: "Origem: ms02"
   "CODIGO" VARCHAR(24)
   "FORNECEDO" INTEGER [default: 0]
   "COMPRA" VARCHAR(9)
@@ -6028,17 +6028,17 @@ Table "ms02" {
   "ATUAL" VARCHAR(1)
   "CLIFOR" INTEGER [default: 0]
   Indexes {
-    CODIGO+STR(FORNECEDO,5)+COMPRA+DTOS(DATA) [name: "MS02-1"]
-    CODIGO+STR(FORNECEDO,5) [name: "MS02-2"]
-    CODIGO [name: "MS02-3"]
-    CODIGO+STR(YEAR(DATA),4)+STR(MONTH(DATA),2)+STR(DAY(DATA),2) [name: "MS02-4"]
-    CODIGO+STR(FORNECEDO,5)+DTOS(DATA) [name: "MS02-5"]
+    (CODIGO,FORNECEDO,COMPRA,DATA) [name: "MS02-1"]
+    (CODIGO,FORNECEDO) [name: "MS02-2"]
+    (CODIGO) [name: "MS02-3"]
+    (CODIGO,DATA,DATA,DATA) [name: "MS02-4"]
+    (CODIGO,FORNECEDO,DATA) [name: "MS02-5"]
   }
 }
 
-// Origem: ms03.dbf (DBF)
+// Origem: ms03 (DBFCDX)
 Table "ms03" {
-  Note: "Origem: ms03.dbf"
+  Note: "Origem: ms03"
   "CODIGO" VARCHAR(24)
   "TIPOENT" VARCHAR(1)
   "CODCOMP" VARCHAR(24)
@@ -6062,16 +6062,16 @@ Table "ms03" {
   "QTDEPC" INTEGER [default: 0]
   "QTDEEST" INTEGER [default: 0]
   Indexes {
-    CODIGO+TIPOENT+CODCOMP+STR(BSEQ,3)+STR(BSSQ,3) [name: "MS03-1"]
-    CODIGO+STR(BSEQ,3)+STR(BSSQ,3) [name: "MS03-2"]
-    CODCOMP [name: "MS03-3"]
-    CODIGO [name: "MS03-4"]
+    (CODIGO,TIPOENT,CODCOMP,BSEQ,BSSQ) [name: "MS03-1"]
+    (CODIGO,BSEQ,BSSQ) [name: "MS03-2"]
+    (CODCOMP) [name: "MS03-3"]
+    (CODIGO) [name: "MS03-4"]
   }
 }
 
-// Origem: ms04.dbf (DBF)
+// Origem: ms04 (DBFCDX)
 Table "ms04" {
-  Note: "Origem: ms04.dbf"
+  Note: "Origem: ms04"
   "CODIGO" VARCHAR(24)
   "UNIDADE" VARCHAR(2)
   "NOME" VARCHAR(30)
@@ -6098,16 +6098,16 @@ Table "ms04" {
   "OBS" VARCHAR(30)
   "RASTRO" VARCHAR(10)
   Indexes {
-    CODIGO+STR(NRNOTAINI,8)+DIGCTR [name: "MS04-1"]
-    STR(NRNOTAINI,8)+CODIGO [name: "MS04-2"]
-    NRNOTAINI [name: "MS04-3"]
-    CLIENTE [name: "MS04-4"]
+    (CODIGO,NRNOTAINI,DIGCTR) [name: "MS04-1"]
+    (NRNOTAINI,CODIGO) [name: "MS04-2"]
+    (NRNOTAINI) [name: "MS04-3"]
+    (CLIENTE) [name: "MS04-4"]
   }
 }
 
-// Origem: ms04bx.dbf (DBF)
+// Origem: ms04bx (DBFCDX)
 Table "ms04bx" {
-  Note: "Origem: ms04bx.dbf"
+  Note: "Origem: ms04bx"
   "CODIGO" VARCHAR(24)
   "UNIDADE" VARCHAR(2)
   "NOME" VARCHAR(30)
@@ -6134,24 +6134,24 @@ Table "ms04bx" {
   "OBS" VARCHAR(30)
   "RASTRO" VARCHAR(10)
   Indexes {
-    CODIGO+STR(NRNOTAINI,8)+DIGCTR [name: "MS04BX-1"]
-    STR(NRNOTAINI,8)+CODIGO [name: "MS04BX-2"]
-    NRNOTAINI [name: "MS04BX-3"]
-    CLIENTE [name: "MS04BX-4"]
+    (CODIGO,NRNOTAINI,DIGCTR) [name: "MS04BX-1"]
+    (NRNOTAINI,CODIGO) [name: "MS04BX-2"]
+    (NRNOTAINI) [name: "MS04BX-3"]
+    (CLIENTE) [name: "MS04BX-4"]
   }
 }
 
-// Origem: ms05.dbf (DBF)
+// Origem: ms05 (DBFCDX)
 Table "ms05" {
-  Note: "Origem: ms05.dbf"
+  Note: "Origem: ms05"
   "DOCODIGO" VARCHAR(13)
   "CODIGO" VARCHAR(13)
   "CENTRAL" VARCHAR(1)
 }
 
-// Origem: ms06.dbf (DBF)
+// Origem: ms06 (DBFCDX)
 Table "ms06" {
-  Note: "Origem: ms06.dbf"
+  Note: "Origem: ms06"
   "CODIGO" VARCHAR(24)
   "SEQ" INTEGER [default: 0]
   "SSQ" INTEGER [default: 0]
@@ -6211,18 +6211,18 @@ Table "ms06" {
   "PLTINV" INTEGER [default: 0]
   "CODINT" VARCHAR(24)
   Indexes {
-    CODIGO+STR(SEQ,3)+STR(SSQ,3) [name: "MS06-1"]
-    CODIGO [name: "MS06-2"]
-    FERRAMEN [name: "MS06-3"]
-    CODIGO+TIPFEC [name: "MS06-4"]
-    STR(PF,8)+STR(SEQ,3)+STR(SSQ,3) [name: "MS06-5"]
-    CODINT [name: "MS06-6"]
+    (CODIGO,SEQ,SSQ) [name: "MS06-1"]
+    (CODIGO) [name: "MS06-2"]
+    (FERRAMEN) [name: "MS06-3"]
+    (CODIGO,TIPFEC) [name: "MS06-4"]
+    (PF,SEQ,SSQ) [name: "MS06-5"]
+    (CODINT) [name: "MS06-6"]
   }
 }
 
-// Origem: ms06bx.dbf (DBF)
+// Origem: ms06bx (DBFCDX)
 Table "ms06bx" {
-  Note: "Origem: ms06bx.dbf"
+  Note: "Origem: ms06bx"
   "CODIGO" VARCHAR(24)
   "SEQ" INTEGER [default: 0]
   "SSQ" INTEGER [default: 0]
@@ -6282,17 +6282,17 @@ Table "ms06bx" {
   "PLTINV" INTEGER [default: 0]
   "VALIII" DECIMAL(12,2) [default: 0]
   Indexes {
-    CODIGO+STR(SEQ,3)+STR(SSQ,3) [name: "MS06BX-1"]
-    CODIGO [name: "MS06BX-2"]
-    FERRAMEN [name: "MS06BX-3"]
-    CODIGO+TIPFEC [name: "MS06BX-4"]
-    STR(PF,8)+STR(SEQ,3)+STR(SSQ,3) [name: "MS06BX-5"]
+    (CODIGO,SEQ,SSQ) [name: "MS06BX-1"]
+    (CODIGO) [name: "MS06BX-2"]
+    (FERRAMEN) [name: "MS06BX-3"]
+    (CODIGO,TIPFEC) [name: "MS06BX-4"]
+    (PF,SEQ,SSQ) [name: "MS06BX-5"]
   }
 }
 
-// Origem: ms06req.dbf (DBF)
+// Origem: ms06req (DBFCDX)
 Table "ms06req" {
-  Note: "Origem: ms06req.dbf"
+  Note: "Origem: ms06req"
   "NUMERO" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
   "SEQ" INTEGER [default: 0]
@@ -6302,14 +6302,14 @@ Table "ms06req" {
   "BXSSQ" INTEGER [default: 0]
   "BXFAT" DECIMAL(6,2) [default: 0]
   Indexes {
-    NUMERO [name: "MS06REQ1"]
-    CODIGO+STR(SEQ,3)+STR(SSQ,3) [name: "MS06REQ2"]
+    (NUMERO) [name: "MS06REQ1"]
+    (CODIGO,SEQ,SSQ) [name: "MS06REQ2"]
   }
 }
 
-// Origem: ms07.dbf (DBF)
+// Origem: ms07 (DBFCDX)
 Table "ms07" {
-  Note: "Origem: ms07.dbf"
+  Note: "Origem: ms07"
   "CODIGO" VARCHAR(24)
   "UNIDADE" VARCHAR(2)
   "NOME" VARCHAR(30)
@@ -6335,16 +6335,16 @@ Table "ms07" {
   "TIPOENT" VARCHAR(1)
   "OBS" VARCHAR(30)
   Indexes {
-    CODIGO+STR(NRNOTAINI,8)+DIGCTR [name: "MS07-1"]
-    STR(NRNOTAINI,8)+CODIGO [name: "MS07-2"]
-    NRNOTAINI [name: "MS07-3"]
-    CLIENTE [name: "MS07-4"]
+    (CODIGO,NRNOTAINI,DIGCTR) [name: "MS07-1"]
+    (NRNOTAINI,CODIGO) [name: "MS07-2"]
+    (NRNOTAINI) [name: "MS07-3"]
+    (CLIENTE) [name: "MS07-4"]
   }
 }
 
-// Origem: ms07bx.dbf (DBF)
+// Origem: ms07bx (DBFCDX)
 Table "ms07bx" {
-  Note: "Origem: ms07bx.dbf"
+  Note: "Origem: ms07bx"
   "CODIGO" VARCHAR(24)
   "UNIDADE" VARCHAR(2)
   "NOME" VARCHAR(30)
@@ -6370,16 +6370,16 @@ Table "ms07bx" {
   "TIPOENT" VARCHAR(1)
   "OBS" VARCHAR(30)
   Indexes {
-    CODIGO+STR(NRNOTAINI,8)+DIGCTR [name: "MS07BX-1"]
-    STR(NRNOTAINI,8)+CODIGO [name: "MS07BX-2"]
-    NRNOTAINI [name: "MS07BX-3"]
-    CLIENTE [name: "MS07BX-4"]
+    (CODIGO,NRNOTAINI,DIGCTR) [name: "MS07BX-1"]
+    (NRNOTAINI,CODIGO) [name: "MS07BX-2"]
+    (NRNOTAINI) [name: "MS07BX-3"]
+    (CLIENTE) [name: "MS07BX-4"]
   }
 }
 
-// Origem: ms96.dbf (DBF)
+// Origem: ms96 (DBFCDX)
 Table "ms96" {
-  Note: "Origem: ms96.dbf"
+  Note: "Origem: ms96"
   "ARQUIVO" VARCHAR(8)
   "DOCUMENTO" VARCHAR(1)
   "OPERACAO" VARCHAR(1)
@@ -6395,14 +6395,14 @@ Table "ms96" {
   "SEQ" INTEGER [default: 0]
   "SSQ" INTEGER [default: 0]
   Indexes {
-    ARQUIVO+DOCUMENTO [name: "MS96-1"]
-    CODIGO+STR(SEQ,3)+STR(SSQ,3)+DTOS(DATA) [name: "MS96-2"]
+    (ARQUIVO,DOCUMENTO) [name: "MS96-1"]
+    (CODIGO,SEQ,SSQ,DATA) [name: "MS96-2"]
   }
 }
 
-// Origem: ms99.dbf (DBF)
+// Origem: ms99 (DBFCDX)
 Table "ms99" {
-  Note: "Origem: ms99.dbf"
+  Note: "Origem: ms99"
   "ARQUIVO" VARCHAR(8)
   "DOCUMENTO" VARCHAR(40)
   "OPERACAO" VARCHAR(1)
@@ -6416,25 +6416,25 @@ Table "ms99" {
   "ESTQXXX" DECIMAL(12,3) [default: 0]
   "ESTQYYY" DECIMAL(12,3) [default: 0]
   Indexes {
-    ARQUIVO+DOCUMENTO [name: "MS99-1"]
-    CODIGO+DTOS(DATA) [name: "MS99-2"]
+    (ARQUIVO,DOCUMENTO) [name: "MS99-1"]
+    (CODIGO,DATA) [name: "MS99-2"]
   }
 }
 
-// Origem: msbai.dbf (DBF)
+// Origem: msbai (DBFCDX)
 Table "msbai" {
-  Note: "Origem: msbai.dbf"
+  Note: "Origem: msbai"
   "ORIGEM" VARCHAR(24)
   "DESTINO" VARCHAR(24)
   "PLANTA" INTEGER [default: 0]
   Indexes {
-    ORIGEM+STR(PLANTA,8) [name: "MSBAI"]
+    (ORIGEM,PLANTA) [name: "MSBAI"]
   }
 }
 
-// Origem: msinv.dbf (DBF)
+// Origem: msinv (DBFCDX)
 Table "msinv" {
-  Note: "Origem: msinv.dbf"
+  Note: "Origem: msinv"
   "CLIENTE" INTEGER [default: 0]
   "ANO" INTEGER [default: 0]
   "MES" INTEGER [default: 0]
@@ -6455,25 +6455,25 @@ Table "msinv" {
   "TOT" DECIMAL(12,2) [default: 0]
   "TOTP" DECIMAL(7,2) [default: 0]
   Indexes {
-    STR(CLIENTE,8)+STR(ANO,4)+STR(MES,2) [name: "MSINV-1"]
+    (CLIENTE,ANO,MES) [name: "MSINV-1"]
   }
 }
 
-// Origem: msop.dbf (DBF)
+// Origem: msop (DBFCDX)
 Table "msop" {
-  Note: "Origem: msop.dbf"
+  Note: "Origem: msop"
   "CODIGO" VARCHAR(24)
   "QTDE" INTEGER [default: 0]
   "LOCAL" VARCHAR(10)
   "OP" INTEGER [default: 0]
   Indexes {
-    CODIGO+LOCAL+STR(OP,8) [name: "MSOP-1"]
+    (CODIGO,LOCAL,OP) [name: "MSOP-1"]
   }
 }
 
-// Origem: mt01.dbf (DBF)
+// Origem: mt01 (DBFCDX)
 Table "mt01" {
-  Note: "Origem: mt01.dbf"
+  Note: "Origem: mt01"
   "CODIGO" VARCHAR(10)
   "UNIDADE" VARCHAR(2)
   "NOME" VARCHAR(50)
@@ -6531,15 +6531,15 @@ Table "mt01" {
   "PISCON" VARCHAR(1)
   "PLTINV" INTEGER [default: 0]
   Indexes {
-    CODIGO [name: "MT01-1"]
-    NOME [name: "MT01-2"]
-    STR(DIMX,9,2)+STR(DIMY,9,2)+STR(DIMZ,9,2) [name: "MT01-3"]
+    (CODIGO) [name: "MT01-1"]
+    (NOME) [name: "MT01-2"]
+    (DIMX,DIMY,DIMZ) [name: "MT01-3"]
   }
 }
 
-// Origem: mt02.dbf (DBF)
+// Origem: mt02 (DBFCDX)
 Table "mt02" {
-  Note: "Origem: mt02.dbf"
+  Note: "Origem: mt02"
   "CODIGO" VARCHAR(10)
   "UNIDADE" VARCHAR(2)
   "NOME" VARCHAR(30)
@@ -6605,13 +6605,13 @@ Table "mt02" {
   "CONM11" DECIMAL(12,6) [default: 0]
   "CONM12" DECIMAL(12,6) [default: 0]
   Indexes {
-    CODIGO+STR(COTFORN) [name: "MT02-1"]
+    (CODIGO,COTFORN) [name: "MT02-1"]
   }
 }
 
-// Origem: mt03.dbf (DBF)
+// Origem: mt03 (DBFCDX)
 Table "mt03" {
-  Note: "Origem: mt03.dbf"
+  Note: "Origem: mt03"
   "CODIGO" VARCHAR(24)
   "UNIDADE" VARCHAR(2)
   "NOME" VARCHAR(30)
@@ -6637,16 +6637,16 @@ Table "mt03" {
   "TIPOENT" VARCHAR(1)
   "OBS" VARCHAR(30)
   Indexes {
-    CODIGO+STR(NRNOTAINI)+DIGCTR [name: "MT03-1"]
-    STR(NRNOTAINI)+CODIGO [name: "MT03-2"]
-    NRNOTAINI [name: "MT03-3"]
-    CLIENTE [name: "MT03-4"]
+    (CODIGO,NRNOTAINI,DIGCTR) [name: "MT03-1"]
+    (NRNOTAINI,CODIGO) [name: "MT03-2"]
+    (NRNOTAINI) [name: "MT03-3"]
+    (CLIENTE) [name: "MT03-4"]
   }
 }
 
-// Origem: mt03bx.dbf (DBF)
+// Origem: mt03bx (DBFCDX)
 Table "mt03bx" {
-  Note: "Origem: mt03bx.dbf"
+  Note: "Origem: mt03bx"
   "CODIGO" VARCHAR(24)
   "UNIDADE" VARCHAR(2)
   "NOME" VARCHAR(30)
@@ -6672,16 +6672,16 @@ Table "mt03bx" {
   "TIPOENT" VARCHAR(1)
   "OBS" VARCHAR(30)
   Indexes {
-    CODIGO+STR(NRNOTAINI)+DIGCTR [name: "MT03BX-1"]
-    STR(NRNOTAINI)+CODIGO [name: "MT03BX-2"]
-    NRNOTAINI [name: "MT03BX-3"]
-    STR(CLIENTE,8)+str(NRNOTAINI,8) [name: "MT03BX-4"]
+    (CODIGO,NRNOTAINI,DIGCTR) [name: "MT03BX-1"]
+    (NRNOTAINI,CODIGO) [name: "MT03BX-2"]
+    (NRNOTAINI) [name: "MT03BX-3"]
+    (CLIENTE,NRNOTAINI) [name: "MT03BX-4"]
   }
 }
 
-// Origem: mt04.dbf (DBF)
+// Origem: mt04 (DBFCDX)
 Table "mt04" {
-  Note: "Origem: mt04.dbf"
+  Note: "Origem: mt04"
   "CODIGO" VARCHAR(10)
   "SEQ" INTEGER [default: 0]
   "DATA" DATETIME
@@ -6694,13 +6694,13 @@ Table "mt04" {
   "TOTITEM" DECIMAL(12,2) [default: 0]
   "MEDIO" DECIMAL(12,3) [default: 0]
   Indexes {
-    CODIGO+STR(SEQ,5) [name: "MT04-1"]
+    (CODIGO,SEQ) [name: "MT04-1"]
   }
 }
 
-// Origem: mt99.dbf (DBF)
+// Origem: mt99 (DBFCDX)
 Table "mt99" {
-  Note: "Origem: mt99.dbf"
+  Note: "Origem: mt99"
   "ARQUIVO" VARCHAR(8)
   "DOCUMENTO" VARCHAR(40)
   "OPERACAO" VARCHAR(1)
@@ -6714,14 +6714,14 @@ Table "mt99" {
   "ESTQXXX" DECIMAL(15,6) [default: 0]
   "ESTQYYY" DECIMAL(15,6) [default: 0]
   Indexes {
-    ARQUIVO+DOCUMENTO [name: "MT99-1"]
-    CODIGO+DTOS(DATA) [name: "MT99-2"]
+    (ARQUIVO,DOCUMENTO) [name: "MT99-1"]
+    (CODIGO,DATA) [name: "MT99-2"]
   }
 }
 
-// Origem: mu01.dbf (DBF)
+// Origem: mu01 (DBFCDX)
 Table "mu01" {
-  Note: "Origem: mu01.dbf"
+  Note: "Origem: mu01"
   "CODIGO" VARCHAR(10)
   "UNIDADE" VARCHAR(2)
   "NOME" VARCHAR(50)
@@ -6779,15 +6779,15 @@ Table "mu01" {
   "PISCON" VARCHAR(1)
   "PLTINV" INTEGER [default: 0]
   Indexes {
-    CODIGO [name: "MU01-1"]
-    NOME [name: "MU01-2"]
-    STR(DIMX,9,2)+STR(DIMY,9,2)+STR(DIMZ,9,2) [name: "MU01-3"]
+    (CODIGO) [name: "MU01-1"]
+    (NOME) [name: "MU01-2"]
+    (DIMX,DIMY,DIMZ) [name: "MU01-3"]
   }
 }
 
-// Origem: mu02.dbf (DBF)
+// Origem: mu02 (DBFCDX)
 Table "mu02" {
-  Note: "Origem: mu02.dbf"
+  Note: "Origem: mu02"
   "CODIGO" VARCHAR(10)
   "UNIDADE" VARCHAR(2)
   "NOME" VARCHAR(30)
@@ -6853,13 +6853,13 @@ Table "mu02" {
   "CONM11" DECIMAL(12,6) [default: 0]
   "CONM12" DECIMAL(12,6) [default: 0]
   Indexes {
-    CODIGO+STR(COTFORN) [name: "MU02-1"]
+    (CODIGO,COTFORN) [name: "MU02-1"]
   }
 }
 
-// Origem: mu03.dbf (DBF)
+// Origem: mu03 (DBFCDX)
 Table "mu03" {
-  Note: "Origem: mu03.dbf"
+  Note: "Origem: mu03"
   "CODIGO" VARCHAR(24)
   "UNIDADE" VARCHAR(2)
   "NOME" VARCHAR(30)
@@ -6885,16 +6885,16 @@ Table "mu03" {
   "TIPOENT" VARCHAR(1)
   "OBS" VARCHAR(30)
   Indexes {
-    CODIGO+STR(NRNOTAINI)+DIGCTR [name: "MU03-1"]
-    STR(NRNOTAINI)+CODIGO [name: "MU03-2"]
-    NRNOTAINI [name: "MU03-3"]
-    CLIENTE [name: "MU03-4"]
+    (CODIGO,NRNOTAINI,DIGCTR) [name: "MU03-1"]
+    (NRNOTAINI,CODIGO) [name: "MU03-2"]
+    (NRNOTAINI) [name: "MU03-3"]
+    (CLIENTE) [name: "MU03-4"]
   }
 }
 
-// Origem: mu03bx.dbf (DBF)
+// Origem: mu03bx (DBFCDX)
 Table "mu03bx" {
-  Note: "Origem: mu03bx.dbf"
+  Note: "Origem: mu03bx"
   "CODIGO" VARCHAR(24)
   "UNIDADE" VARCHAR(2)
   "NOME" VARCHAR(30)
@@ -6920,16 +6920,16 @@ Table "mu03bx" {
   "TIPOENT" VARCHAR(1)
   "OBS" VARCHAR(30)
   Indexes {
-    CODIGO+STR(NRNOTAINI)+DIGCTR [name: "MU03BX-1"]
-    STR(NRNOTAINI)+CODIGO [name: "MU03BX-2"]
-    NRNOTAINI [name: "MU03BX-3"]
-    CLIENTE [name: "MU03BX-4"]
+    (CODIGO,NRNOTAINI,DIGCTR) [name: "MU03BX-1"]
+    (NRNOTAINI,CODIGO) [name: "MU03BX-2"]
+    (NRNOTAINI) [name: "MU03BX-3"]
+    (CLIENTE) [name: "MU03BX-4"]
   }
 }
 
-// Origem: mu04.dbf (DBF)
+// Origem: mu04 (DBFCDX)
 Table "mu04" {
-  Note: "Origem: mu04.dbf"
+  Note: "Origem: mu04"
   "CODIGO" VARCHAR(10)
   "SEQ" INTEGER [default: 0]
   "DATA" DATETIME
@@ -6942,13 +6942,13 @@ Table "mu04" {
   "TOTITEM" DECIMAL(12,2) [default: 0]
   "MEDIO" DECIMAL(12,3) [default: 0]
   Indexes {
-    CODIGO+STR(SEQ,5) [name: "MU04-1"]
+    (CODIGO,SEQ) [name: "MU04-1"]
   }
 }
 
-// Origem: mu99.dbf (DBF)
+// Origem: mu99 (DBFCDX)
 Table "mu99" {
-  Note: "Origem: mu99.dbf"
+  Note: "Origem: mu99"
   "ARQUIVO" VARCHAR(8)
   "DOCUMENTO" VARCHAR(40)
   "OPERACAO" VARCHAR(1)
@@ -6962,14 +6962,14 @@ Table "mu99" {
   "ESTQXXX" DECIMAL(12,3) [default: 0]
   "ESTQYYY" DECIMAL(12,3) [default: 0]
   Indexes {
-    ARQUIVO+DOCUMENTO [name: "MU99-1"]
-    CODIGO+DTOS(DATA) [name: "MU99-2"]
+    (ARQUIVO,DOCUMENTO) [name: "MU99-1"]
+    (CODIGO,DATA) [name: "MU99-2"]
   }
 }
 
-// Origem: mw01.dbf (DBF)
+// Origem: mw01 (DBFCDX)
 Table "mw01" {
-  Note: "Origem: mw01.dbf"
+  Note: "Origem: mw01"
   "COMPED" INTEGER [default: 0]
   "COMFOR" INTEGER [default: 0]
   "COMCOG" VARCHAR(15)
@@ -7002,14 +7002,14 @@ Table "mw01" {
   "TRAVAPED" VARCHAR(1)
   "PAUSA" VARCHAR(1)
   Indexes {
-    COMPED [name: "MW01-1"]
-    COMCTA [name: "MW01-2"]
+    (COMPED) [name: "MW01-1"]
+    (COMCTA) [name: "MW01-2"]
   }
 }
 
-// Origem: mw01bx.dbf (DBF)
+// Origem: mw01bx (DBFCDX)
 Table "mw01bx" {
-  Note: "Origem: mw01bx.dbf"
+  Note: "Origem: mw01bx"
   "COMPED" INTEGER [default: 0]
   "COMFOR" INTEGER [default: 0]
   "COMCOG" VARCHAR(15)
@@ -7042,14 +7042,14 @@ Table "mw01bx" {
   "TRAVAPED" VARCHAR(1)
   "PAUSA" VARCHAR(1)
   Indexes {
-    COMPED [name: "MW01BX-1"]
-    COMCTA [name: "MW01BX-2"]
+    (COMPED) [name: "MW01BX-1"]
+    (COMCTA) [name: "MW01BX-2"]
   }
 }
 
-// Origem: mw02.dbf (DBF)
+// Origem: mw02 (DBFCDX)
 Table "mw02" {
-  Note: "Origem: mw02.dbf"
+  Note: "Origem: mw02"
   "COMPED" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
   "ITETIP" VARCHAR(1)
@@ -7094,16 +7094,16 @@ Table "mw02" {
   "PEDATIVO" VARCHAR(1)
   "CODMW" VARCHAR(3)
   Indexes {
-    STR(COMPED,8)+STR(ITEM,3) [name: "MW02-1"]
-    COMPED [name: "MW02-2"]
-    ITECOD [name: "MW02-3"]
-    PRGENT [name: "MW02-4"]
+    (COMPED,ITEM) [name: "MW02-1"]
+    (COMPED) [name: "MW02-2"]
+    (ITECOD) [name: "MW02-3"]
+    (PRGENT) [name: "MW02-4"]
   }
 }
 
-// Origem: mw02bx.dbf (DBF)
+// Origem: mw02bx (DBFCDX)
 Table "mw02bx" {
-  Note: "Origem: mw02bx.dbf"
+  Note: "Origem: mw02bx"
   "COMPED" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
   "ITETIP" VARCHAR(1)
@@ -7148,14 +7148,14 @@ Table "mw02bx" {
   "PEDATIVO" VARCHAR(1)
   "CODMW" VARCHAR(3)
   Indexes {
-    STR(COMPED,8)+STR(ITEM,3) [name: "MW02BX-1"]
-    COMPED [name: "MW02BX-2"]
+    (COMPED,ITEM) [name: "MW02BX-1"]
+    (COMPED) [name: "MW02BX-2"]
   }
 }
 
-// Origem: mw03.dbf (DBF)
+// Origem: mw03 (DBFCDX)
 Table "mw03" {
-  Note: "Origem: mw03.dbf"
+  Note: "Origem: mw03"
   "COMPED" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
   "ITEENT" INTEGER [default: 0]
@@ -7171,13 +7171,13 @@ Table "mw03" {
   "COMCOG" VARCHAR(12)
   "ITECOD" VARCHAR(12)
   Indexes {
-    STR(COMPED,8)+STR(ITEM,3)+STR(ITEENT,3) [name: "MW03-1"]
+    (COMPED,ITEM,ITEENT) [name: "MW03-1"]
   }
 }
 
-// Origem: mw03bx.dbf (DBF)
+// Origem: mw03bx (DBFCDX)
 Table "mw03bx" {
-  Note: "Origem: mw03bx.dbf"
+  Note: "Origem: mw03bx"
   "COMPED" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
   "ITEENT" INTEGER [default: 0]
@@ -7193,13 +7193,13 @@ Table "mw03bx" {
   "COMCOG" VARCHAR(12)
   "ITECOD" VARCHAR(12)
   Indexes {
-    STR(COMPED,8)+STR(ITEM,3)+STR(ITEENT,3) [name: "MW03BX-1"]
+    (COMPED,ITEM,ITEENT) [name: "MW03BX-1"]
   }
 }
 
-// Origem: mw04.dbf (DBF)
+// Origem: mw04 (DBFCDX)
 Table "mw04" {
-  Note: "Origem: mw04.dbf"
+  Note: "Origem: mw04"
   "RECCOM" INTEGER [default: 0]
   "RECDAT" DATETIME
   "RECUE" VARCHAR(7)
@@ -7252,14 +7252,14 @@ Table "mw04" {
   "OBSFO" VARCHAR(50)
   "OBSPR" DECIMAL(15,6) [default: 0]
   Indexes {
-    RECCOM [name: "MW04-1"]
-    RECUE+STR(RECCOM,8) [name: "MW04-2"]
+    (RECCOM) [name: "MW04-1"]
+    (RECUE,RECCOM) [name: "MW04-2"]
   }
 }
 
-// Origem: mw04pg.dbf (DBF)
+// Origem: mw04pg (DBFCDX)
 Table "mw04pg" {
-  Note: "Origem: mw04pg.dbf"
+  Note: "Origem: mw04pg"
   "RECCOM" INTEGER [default: 0]
   "RECDAT" DATETIME
   "RECUE" VARCHAR(7)
@@ -7312,15 +7312,15 @@ Table "mw04pg" {
   "OBSFO" VARCHAR(50)
   "OBSPR" DECIMAL(15,6) [default: 0]
   Indexes {
-    STR(RECCOM,8)+STR(RECPED,8)+STR(RECPI,3) [name: "MW04PG-1"]
-    RECCOM [name: "MW04PG-2"]
-    RECUE+STR(RECCOM,8) [name: "MW04PG-3"]
+    (RECCOM,RECPED,RECPI) [name: "MW04PG-1"]
+    (RECCOM) [name: "MW04PG-2"]
+    (RECUE,RECCOM) [name: "MW04PG-3"]
   }
 }
 
-// Origem: mw05.dbf (DBF)
+// Origem: mw05 (DBFCDX)
 Table "mw05" {
-  Note: "Origem: mw05.dbf"
+  Note: "Origem: mw05"
   "CODIGO" VARCHAR(15)
   "NOME" VARCHAR(200)
   "NOM2" VARCHAR(1)
@@ -7361,27 +7361,27 @@ Table "mw05" {
   "PRECUST" DECIMAL(12,2) [default: 0]
   "PLTINV" INTEGER [default: 0]
   Indexes {
-    CODIGO [name: "MW05-1"]
-    NOME [name: "MW05-2"]
+    (CODIGO) [name: "MW05-1"]
+    (NOME) [name: "MW05-2"]
   }
 }
 
-// Origem: mw06.dbf (DBF)
+// Origem: mw06 (DBFCDX)
 Table "mw06" {
-  Note: "Origem: mw06.dbf"
+  Note: "Origem: mw06"
   "TIPO" VARCHAR(1)
   "CODIGO" VARCHAR(15)
   "ANO" INTEGER [default: 0]
   "MES" INTEGER [default: 0]
   "USO" DECIMAL(16,5) [default: 0]
   Indexes {
-    TIPO+CODIGO+STR(ANO,4)+STR(MES,2) [name: "MW06-1"]
+    (TIPO,CODIGO,ANO,MES) [name: "MW06-1"]
   }
 }
 
-// Origem: mw07.dbf (DBF)
+// Origem: mw07 (DBFCDX)
 Table "mw07" {
-  Note: "Origem: mw07.dbf"
+  Note: "Origem: mw07"
   "CODIGO" VARCHAR(15)
   "NOME" VARCHAR(200)
   "NOM2" VARCHAR(1)
@@ -7425,14 +7425,14 @@ Table "mw07" {
   "QTDEAPU" INTEGER [default: 0]
   "CRMSEL" INTEGER [default: 0]
   Indexes {
-    CODIGO [name: "MW07-1"]
-    NOME [name: "MW07-2"]
+    (CODIGO) [name: "MW07-1"]
+    (NOME) [name: "MW07-2"]
   }
 }
 
-// Origem: mw08.dbf (DBF)
+// Origem: mw08 (DBFCDX)
 Table "mw08" {
-  Note: "Origem: mw08.dbf"
+  Note: "Origem: mw08"
   "ITETIP" VARCHAR(1)
   "ITECOD" VARCHAR(24)
   "COMFOR" INTEGER [default: 0]
@@ -7445,16 +7445,16 @@ Table "mw08" {
   "CODMW" VARCHAR(3)
   "DATAINI" DATETIME
   Indexes {
-    ITETIP+ITECOD+STR(COMFOR,8)+DTOS(DATA) [name: "MW08-1"]
-    ITETIP+ITECOD+DTOS(DATA) [name: "MW08-2"]
-    COMFOR [name: "MW08-3"]
-    COMPED [name: "MW08-4"]
+    (ITETIP,ITECOD,COMFOR,DATA) [name: "MW08-1"]
+    (ITETIP,ITECOD,DATA) [name: "MW08-2"]
+    (COMFOR) [name: "MW08-3"]
+    (COMPED) [name: "MW08-4"]
   }
 }
 
-// Origem: mw91.dbf (DBF)
+// Origem: mw91 (DBFCDX)
 Table "mw91" {
-  Note: "Origem: mw91.dbf"
+  Note: "Origem: mw91"
   "COMPED" INTEGER [default: 0]
   "COMFOR" INTEGER [default: 0]
   "COMCOG" VARCHAR(15)
@@ -7489,13 +7489,13 @@ Table "mw91" {
   "MES" INTEGER [default: 0]
   "ANO" INTEGER [default: 0]
   Indexes {
-    COMPED [name: "MW91-1"]
+    (COMPED) [name: "MW91-1"]
   }
 }
 
-// Origem: mw92.dbf (DBF)
+// Origem: mw92 (DBFCDX)
 Table "mw92" {
-  Note: "Origem: mw92.dbf"
+  Note: "Origem: mw92"
   "COMPED" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
   "ITETIP" VARCHAR(1)
@@ -7542,13 +7542,13 @@ Table "mw92" {
   "MES" INTEGER [default: 0]
   "ANO" INTEGER [default: 0]
   Indexes {
-    STR(COMPED,8)+STR(ITEM,3) [name: "MW92-1"]
+    (COMPED,ITEM) [name: "MW92-1"]
   }
 }
 
-// Origem: mw95.dbf (DBF)
+// Origem: mw95 (DBFCDX)
 Table "mw95" {
-  Note: "Origem: mw95.dbf"
+  Note: "Origem: mw95"
   "ARQUIVO" VARCHAR(8)
   "DOCUMENTO" VARCHAR(40)
   "OPERACAO" VARCHAR(1)
@@ -7562,14 +7562,14 @@ Table "mw95" {
   "ESTQXXX" DECIMAL(12,3) [default: 0]
   "ESTQYYY" DECIMAL(12,3) [default: 0]
   Indexes {
-    ARQUIVO+DOCUMENTO [name: "MW95-1"]
-    CODIGO+DTOS(DATA) [name: "MW95-2"]
+    (ARQUIVO,DOCUMENTO) [name: "MW95-1"]
+    (CODIGO,DATA) [name: "MW95-2"]
   }
 }
 
-// Origem: mw97.dbf (DBF)
+// Origem: mw97 (DBFCDX)
 Table "mw97" {
-  Note: "Origem: mw97.dbf"
+  Note: "Origem: mw97"
   "ARQUIVO" VARCHAR(8)
   "DOCUMENTO" VARCHAR(40)
   "OPERACAO" VARCHAR(1)
@@ -7583,14 +7583,14 @@ Table "mw97" {
   "ESTQXXX" DECIMAL(12,3) [default: 0]
   "ESTQYYY" DECIMAL(12,3) [default: 0]
   Indexes {
-    ARQUIVO+DOCUMENTO [name: "MW97-1"]
-    CODIGO+DTOS(DATA) [name: "MW97-2"]
+    (ARQUIVO,DOCUMENTO) [name: "MW97-1"]
+    (CODIGO,DATA) [name: "MW97-2"]
   }
 }
 
-// Origem: mx01.dbf (DBF)
+// Origem: mx01 (DBFCDX)
 Table "mx01" {
-  Note: "Origem: mx01.dbf"
+  Note: "Origem: mx01"
   "OS" DECIMAL(8,2) [default: 0]
   "DATA" DATETIME
   "CLIENTE" INTEGER [default: 0]
@@ -7618,14 +7618,14 @@ Table "mx01" {
   "VALORIMP" DECIMAL(12,2) [default: 0]
   "VALORMER" DECIMAL(12,2) [default: 0]
   Indexes {
-    OS [name: "MX01-1"]
-    CLIENTE [name: "MX01-2"]
+    (OS) [name: "MX01-1"]
+    (CLIENTE) [name: "MX01-2"]
   }
 }
 
-// Origem: mx02.dbf (DBF)
+// Origem: mx02 (DBFCDX)
 Table "mx02" {
-  Note: "Origem: mx02.dbf"
+  Note: "Origem: mx02"
   "OS" DECIMAL(8,2) [default: 0]
   "DATA" DATETIME
   "CLIENTE" INTEGER [default: 0]
@@ -7633,37 +7633,37 @@ Table "mx02" {
   "DESCRICAO" VARCHAR(40)
   "OBS" VARCHAR(70)
   Indexes {
-    OS [name: "MX02-1"]
-    CLIENTE [name: "MX02-2"]
+    (OS) [name: "MX02-1"]
+    (CLIENTE) [name: "MX02-2"]
   }
 }
 
-// Origem: mx03.dbf (DBF)
+// Origem: mx03 (DBFCDX)
 Table "mx03" {
-  Note: "Origem: mx03.dbf"
+  Note: "Origem: mx03"
   "CODIGO" VARCHAR(8)
   "DESCRICAO" VARCHAR(50)
   "TOTAL" DECIMAL(18,2) [default: 0]
   Indexes {
-    CODIGO [name: "MX03-1"]
+    (CODIGO) [name: "MX03-1"]
   }
 }
 
-// Origem: mx03a.dbf (DBF)
+// Origem: mx03a (DBFCDX)
 Table "mx03a" {
-  Note: "Origem: mx03a.dbf"
+  Note: "Origem: mx03a"
   "CODIGO" VARCHAR(8)
   "SEQ" INTEGER [default: 0]
   "DESCRI" VARCHAR(30)
   "PRECO" DECIMAL(12,2) [default: 0]
   Indexes {
-    CODIGO+STR(SEQ,3) [name: "MX03A-1"]
+    (CODIGO,SEQ) [name: "MX03A-1"]
   }
 }
 
-// Origem: mx04.dbf (DBF)
+// Origem: mx04 (DBFCDX)
 Table "mx04" {
-  Note: "Origem: mx04.dbf"
+  Note: "Origem: mx04"
   "SEQ" INTEGER [default: 0]
   "CLIENTE" INTEGER [default: 0]
   "COGNOME" VARCHAR(12)
@@ -7671,13 +7671,13 @@ Table "mx04" {
   "HORA" DECIMAL(6,2) [default: 0]
   "VALOR" DECIMAL(9,2) [default: 0]
   Indexes {
-    SEQ [name: "MX04"]
+    (SEQ) [name: "MX04"]
   }
 }
 
-// Origem: mx05.dbf (DBF)
+// Origem: mx05 (DBFCDX)
 Table "mx05" {
-  Note: "Origem: mx05.dbf"
+  Note: "Origem: mx05"
   "SEQ" INTEGER [default: 0]
   "CLIENTE" INTEGER [default: 0]
   "COGCLI" VARCHAR(12)
@@ -7693,13 +7693,13 @@ Table "mx05" {
   "DIZER1" VARCHAR(78)
   "DIZER2" VARCHAR(78)
   Indexes {
-    SEQ [name: "MX05-1"]
+    (SEQ) [name: "MX05-1"]
   }
 }
 
-// Origem: my01.dbf (DBF)
+// Origem: my01 (DBFCDX)
 Table "my01" {
-  Note: "Origem: my01.dbf"
+  Note: "Origem: my01"
   "NUMERO" INTEGER [default: 0]
   "DATA" DATETIME
   "TIPO1" VARCHAR(1)
@@ -7726,16 +7726,16 @@ Table "my01" {
   "FIRMA" INTEGER [default: 0]
   "TIPO3" VARCHAR(3)
   Indexes {
-    NUMERO [name: "MY01-1"]
-    CODIGO+TIPO2+TIPO1 [name: "MY01-2"]
-    STR(NRNOTA,8)+STR(NUMMB01,8) [name: "MY01-3"]
-    OS [name: "MY01-4"]
+    (NUMERO) [name: "MY01-1"]
+    (CODIGO,TIPO2,TIPO1) [name: "MY01-2"]
+    (NRNOTA,NUMMB01) [name: "MY01-3"]
+    (OS) [name: "MY01-4"]
   }
 }
 
-// Origem: my01e.dbf (DBF)
+// Origem: my01e (DBFCDX)
 Table "my01e" {
-  Note: "Origem: my01e.dbf"
+  Note: "Origem: my01e"
   "ARQUIVO" VARCHAR(8)
   "DOCUMENTO" VARCHAR(40)
   "OPERACAO" VARCHAR(1)
@@ -7750,9 +7750,9 @@ Table "my01e" {
   "ESTQYYY" INTEGER [default: 0]
 }
 
-// Origem: my02.dbf (DBF)
+// Origem: my02 (DBFCDX)
 Table "my02" {
-  Note: "Origem: my02.dbf"
+  Note: "Origem: my02"
   "NUMERO" INTEGER [default: 0]
   "DATA" DATETIME
   "TIPO1" VARCHAR(1)
@@ -7763,9 +7763,9 @@ Table "my02" {
   "OS" DECIMAL(8,2) [default: 0]
 }
 
-// Origem: my03.dbf (DBF)
+// Origem: my03 (DBFCDX)
 Table "my03" {
-  Note: "Origem: my03.dbf"
+  Note: "Origem: my03"
   "NUMERO" INTEGER [default: 0]
   "DATA" DATETIME
   "CODIGO" VARCHAR(24)
@@ -7802,17 +7802,17 @@ Table "my03" {
   "TEMPOREF" INTEGER [default: 0]
   "CODIGOINT" VARCHAR(24)
   Indexes {
-    NUMERO [name: "MY03-1"]
-    CODIGO+STR(SEQ,3)+STR(SSQ,3)+CODMAQ+STR(NUMERO,8) [name: "MY03-2"]
-    CODIGO+STR(SEQ,3)+STR(SSQ,3) [name: "MY03-3"]
-    CODMAQ+STR(SEQ,3)+STR(SSQ,3)+CODIGO+DTOS(DATOPR) [name: "MY03-4"]
-    CODIGOINT [name: "MY03-5"]
+    (NUMERO) [name: "MY03-1"]
+    (CODIGO,SEQ,SSQ,CODMAQ,NUMERO) [name: "MY03-2"]
+    (CODIGO,SEQ,SSQ) [name: "MY03-3"]
+    (CODMAQ,SEQ,SSQ,CODIGO,DATOPR) [name: "MY03-4"]
+    (CODIGOINT) [name: "MY03-5"]
   }
 }
 
-// Origem: my03a.dbf (DBF)
+// Origem: my03a (DBFCDX)
 Table "my03a" {
-  Note: "Origem: my03a.dbf"
+  Note: "Origem: my03a"
   "NUMERO" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
   "CODPAR" VARCHAR(3)
@@ -7824,13 +7824,13 @@ Table "my03a" {
   "TEMPO" DECIMAL(6,2) [default: 0]
   "OBS" VARCHAR(78)
   Indexes {
-    STR(NUMERO,8)+STR(ITEM,3) [name: "MY03A-1"]
+    (NUMERO,ITEM) [name: "MY03A-1"]
   }
 }
 
-// Origem: my03i.dbf (DBF)
+// Origem: my03i (DBFCDX)
 Table "my03i" {
-  Note: "Origem: my03i.dbf"
+  Note: "Origem: my03i"
   "ARQUIVO" VARCHAR(8)
   "DOCUMENTO" VARCHAR(40)
   "OPERACAO" VARCHAR(1)
@@ -7845,9 +7845,9 @@ Table "my03i" {
   "ESTQYYY" DECIMAL(12,3) [default: 0]
 }
 
-// Origem: my03mid.dbf (DBF)
+// Origem: my03mid (DBFCDX)
 Table "my03mid" {
-  Note: "Origem: my03mid.dbf"
+  Note: "Origem: my03mid"
   "CODIGO" VARCHAR(24)
   "SEQ" INTEGER [default: 0]
   "SSQ" INTEGER [default: 0]
@@ -7860,14 +7860,14 @@ Table "my03mid" {
   "FIMOPR" DECIMAL(5,2) [default: 0]
   "PARADA" DECIMAL(5,2) [default: 0]
   Indexes {
-    CODIGO+STR(SEQ,3)+STR(SSQ,3)+DTOS(DATOPR) [name: "MY03MID"]
-    CODIGO+STR(SEQ,3)+STR(SSQ,3)+STR(PCHORA) [name: "MY03MID2"]
+    (CODIGO,SEQ,SSQ,DATOPR) [name: "MY03MID"]
+    (CODIGO,SEQ,SSQ,PCHORA) [name: "MY03MID2"]
   }
 }
 
-// Origem: my03tmp.dbf (DBF)
+// Origem: my03tmp (DBFCDX)
 Table "my03tmp" {
-  Note: "Origem: my03tmp.dbf"
+  Note: "Origem: my03tmp"
   "CODIGO" VARCHAR(24)
   "SEQ" INTEGER [default: 0]
   "SSQ" INTEGER [default: 0]
@@ -7876,13 +7876,13 @@ Table "my03tmp" {
   "DATOPR" DATETIME
   "CODIGOINT" VARCHAR(24)
   Indexes {
-    CODIGO+STR(SEQ,3)+STR(SSQ,3)+DTOS(DATOPR) [name: "MY03TMP"]
+    (CODIGO,SEQ,SSQ,DATOPR) [name: "MY03TMP"]
   }
 }
 
-// Origem: my04.dbf (DBF)
+// Origem: my04 (DBFCDX)
 Table "my04" {
-  Note: "Origem: my04.dbf"
+  Note: "Origem: my04"
   "NUMERO" INTEGER [default: 0]
   "DATA" DATETIME
   "TIPO1" VARCHAR(1)
@@ -7912,17 +7912,17 @@ Table "my04" {
   "TIPO3" VARCHAR(3)
   "CODDEP" VARCHAR(3)
   Indexes {
-    NUMERO [name: "MY04-1"]
-    CODIGO+TIPO2+TIPO1 [name: "MY04-2"]
-    STR(NRNOTA,8)+STR(NUMMB01,8) [name: "MY04-3"]
-    STR(OS,8)+STR(ITEM,3) [name: "MY04-4"]
-    TECNICO [name: "MY04-5"]
+    (NUMERO) [name: "MY04-1"]
+    (CODIGO,TIPO2,TIPO1) [name: "MY04-2"]
+    (NRNOTA,NUMMB01) [name: "MY04-3"]
+    (OS,ITEM) [name: "MY04-4"]
+    (TECNICO) [name: "MY04-5"]
   }
 }
 
-// Origem: my04e.dbf (DBF)
+// Origem: my04e (DBFCDX)
 Table "my04e" {
-  Note: "Origem: my04e.dbf"
+  Note: "Origem: my04e"
   "ARQUIVO" VARCHAR(8)
   "DOCUMENTO" VARCHAR(40)
   "OPERACAO" VARCHAR(1)
@@ -7937,9 +7937,9 @@ Table "my04e" {
   "ESTQYYY" DECIMAL(12,3) [default: 0]
 }
 
-// Origem: mz01.dbf (DBF)
+// Origem: mz01 (DBFCDX)
 Table "mz01" {
-  Note: "Origem: mz01.dbf"
+  Note: "Origem: mz01"
   "NRNOTA" INTEGER [default: 0]
   "DATA" DATETIME
   "CLIENTE" INTEGER [default: 0]
@@ -7971,22 +7971,22 @@ Table "mz01" {
   "OBS4" VARCHAR(70)
   "DEBCRE" VARCHAR(1)
   Indexes {
-    DTOS(VENCIMENT)+STR(NRNOTA,8)+TIPFAT [name: "MZ01-1"]
+    (VENCIMENT,NRNOTA,TIPFAT) [name: "MZ01-1"]
   }
 }
 
-// Origem: nfscod.dbf (DBF)
+// Origem: nfscod (DBFCDX)
 Table "nfscod" {
-  Note: "Origem: nfscod.dbf"
+  Note: "Origem: nfscod"
   "CODIGO1" VARCHAR(5)
   "DESCRICAO" VARCHAR(255)
   "CODIGO2" VARCHAR(1)
   "CODIGO3" VARCHAR(5)
 }
 
-// Origem: nota.dbf (DBF)
+// Origem: nota (DBFCDX)
 Table "nota" {
-  Note: "Origem: nota.dbf"
+  Note: "Origem: nota"
   "NOME" VARCHAR(10)
   "OBS1" VARCHAR(60)
   "OBS2" VARCHAR(60)
@@ -7997,21 +7997,21 @@ Table "nota" {
   "OBS7" VARCHAR(60)
 }
 
-// Origem: oc01.dbf (DBF)
+// Origem: oc01 (DBFCDX)
 Table "oc01" {
-  Note: "Origem: oc01.dbf"
+  Note: "Origem: oc01"
   "OC" INTEGER [default: 0]
   "DATA" DATETIME
   "OBS" VARCHAR(60)
   "TOTAL" DECIMAL(15,3) [default: 0]
   Indexes {
-    OC [name: "OC01-1"]
+    (OC) [name: "OC01-1"]
   }
 }
 
-// Origem: oc01a.dbf (DBF)
+// Origem: oc01a (DBFCDX)
 Table "oc01a" {
-  Note: "Origem: oc01a.dbf"
+  Note: "Origem: oc01a"
   "OC" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
@@ -8021,13 +8021,13 @@ Table "oc01a" {
   "PESEMB" DECIMAL(12,3) [default: 0]
   "SOMA" DECIMAL(15,3) [default: 0]
   Indexes {
-    STR(OC,8)+STR(ITEM,3) [name: "OC01A-1"]
+    (OC,ITEM) [name: "OC01A-1"]
   }
 }
 
-// Origem: of01.dbf (DBF)
+// Origem: of01 (DBFCDX)
 Table "of01" {
-  Note: "Origem: of01.dbf"
+  Note: "Origem: of01"
   "OF" DECIMAL(8,2) [default: 0]
   "ITEM" INTEGER [default: 0]
   "CLIENTE" INTEGER [default: 0]
@@ -8047,15 +8047,15 @@ Table "of01" {
   "DPEDI" DATETIME
   "DLIMP" DATETIME
   Indexes {
-    STR(OF,8,2)+STR(ITEM,3) [name: "OF01-1"]
-    STR(CLIENTE)+DTOS(DLIMITE) [name: "OF01-2"]
-    CODIGO+DTOS(DLIMITE) [name: "OF01-3"]
+    (OF,ITEM) [name: "OF01-1"]
+    (CLIENTE,DLIMITE) [name: "OF01-2"]
+    (CODIGO,DLIMITE) [name: "OF01-3"]
   }
 }
 
-// Origem: of02.dbf (DBF)
+// Origem: of02 (DBFCDX)
 Table "of02" {
-  Note: "Origem: of02.dbf"
+  Note: "Origem: of02"
   "OF" DECIMAL(8,2) [default: 0]
   "ITEM" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
@@ -8071,15 +8071,15 @@ Table "of02" {
   "DLIMP" DATETIME
   "BAIXAC" VARCHAR(1)
   Indexes {
-    STR(OF,8,2)+STR(ITEM,3)+TIPCOMP+CODCOMP [name: "OF02-1"]
-    TIPCOMP+CODCOMP [name: "OF02-2"]
-    TIPCOMP+DTOS(DLIMP)+CODCOMP [name: "OF02-3"]
+    (OF,ITEM,TIPCOMP,CODCOMP) [name: "OF02-1"]
+    (TIPCOMP,CODCOMP) [name: "OF02-2"]
+    (TIPCOMP,DLIMP,CODCOMP) [name: "OF02-3"]
   }
 }
 
-// Origem: of03.dbf (DBF)
+// Origem: of03 (DBFCDX)
 Table "of03" {
-  Note: "Origem: of03.dbf"
+  Note: "Origem: of03"
   "OF" DECIMAL(8,2) [default: 0]
   "ITEM" INTEGER [default: 0]
   "CODIGO" VARCHAR(24)
@@ -8099,15 +8099,15 @@ Table "of03" {
   "QTRES" DECIMAL(12,3) [default: 0]
   "QTFAL" DECIMAL(12,3) [default: 0]
   Indexes {
-    STR(OF,8,2)+STR(ITEM,3)+CODIGO+STR(SEQ,3)+STR(SSQ,3) [name: "OF03-1"]
-    CODIGO+STR(SEQ,3)+STR(SSQ,3)+DTOS(DLIMP) [name: "OF03-2"]
-    DTOS(DLIMP)+STR(SEQ,3)+STR(SSQ,3) [name: "OF03-3"]
+    (OF,ITEM,CODIGO,SEQ,SSQ) [name: "OF03-1"]
+    (CODIGO,SEQ,SSQ,DLIMP) [name: "OF03-2"]
+    (DLIMP,SEQ,SSQ) [name: "OF03-3"]
   }
 }
 
-// Origem: of99.dbf (DBF)
+// Origem: of99 (DBFCDX)
 Table "of99" {
-  Note: "Origem: of99.dbf"
+  Note: "Origem: of99"
   "ARQUIVO" VARCHAR(8)
   "DOCUMENTO" VARCHAR(30)
   "OPERACAO" VARCHAR(1)
@@ -8119,9 +8119,9 @@ Table "of99" {
   "CODIGO" VARCHAR(8)
 }
 
-// Origem: or01.dbf (DBF)
+// Origem: or01 (DBFCDX)
 Table "or01" {
-  Note: "Origem: or01.dbf"
+  Note: "Origem: or01"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8137,16 +8137,16 @@ Table "or01" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(REQUISI,8) [name: "OR01-1"]
-    STR(REQUISI,8)+STR(OS,8,2) [name: "OR01-2"]
-    CODIGO+DTOS(DLIMITE) [name: "OR01-3"]
-    CODIGO+DTOS(DLIMP) [name: "OR01-4"]
+    (CODIGO,OS,REQUISI) [name: "OR01-1"]
+    (REQUISI,OS) [name: "OR01-2"]
+    (CODIGO,DLIMITE) [name: "OR01-3"]
+    (CODIGO,DLIMP) [name: "OR01-4"]
   }
 }
 
-// Origem: or01bx.dbf (DBF)
+// Origem: or01bx (DBFCDX)
 Table "or01bx" {
-  Note: "Origem: or01bx.dbf"
+  Note: "Origem: or01bx"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8162,13 +8162,13 @@ Table "or01bx" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3) [name: "OR01BX-1"]
+    (CODIGO,OS,NRNOTA,SEQ) [name: "OR01BX-1"]
   }
 }
 
-// Origem: or02.dbf (DBF)
+// Origem: or02 (DBFCDX)
 Table "or02" {
-  Note: "Origem: or02.dbf"
+  Note: "Origem: or02"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8184,16 +8184,16 @@ Table "or02" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(REQUISI,8) [name: "OR02-1"]
-    STR(REQUISI,8)+STR(OS,8,2) [name: "OR02-2"]
-    CODIGO+DTOS(DLIMITE) [name: "OR02-3"]
-    CODIGO+DTOS(DLIMP) [name: "OR02-4"]
+    (CODIGO,OS,REQUISI) [name: "OR02-1"]
+    (REQUISI,OS) [name: "OR02-2"]
+    (CODIGO,DLIMITE) [name: "OR02-3"]
+    (CODIGO,DLIMP) [name: "OR02-4"]
   }
 }
 
-// Origem: or02bx.dbf (DBF)
+// Origem: or02bx (DBFCDX)
 Table "or02bx" {
-  Note: "Origem: or02bx.dbf"
+  Note: "Origem: or02bx"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8209,13 +8209,13 @@ Table "or02bx" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3) [name: "OR02BX-1"]
+    (CODIGO,OS,NRNOTA,SEQ) [name: "OR02BX-1"]
   }
 }
 
-// Origem: or03.dbf (DBF)
+// Origem: or03 (DBFCDX)
 Table "or03" {
-  Note: "Origem: or03.dbf"
+  Note: "Origem: or03"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8231,16 +8231,16 @@ Table "or03" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(REQUISI,8) [name: "OR03-1"]
-    STR(REQUISI,8)+STR(OS,8,2) [name: "OR03-2"]
-    CODIGO+DTOS(DLIMITE) [name: "OR03-3"]
-    CODIGO+DTOS(DLIMP) [name: "OR03-4"]
+    (CODIGO,OS,REQUISI) [name: "OR03-1"]
+    (REQUISI,OS) [name: "OR03-2"]
+    (CODIGO,DLIMITE) [name: "OR03-3"]
+    (CODIGO,DLIMP) [name: "OR03-4"]
   }
 }
 
-// Origem: or03bx.dbf (DBF)
+// Origem: or03bx (DBFCDX)
 Table "or03bx" {
-  Note: "Origem: or03bx.dbf"
+  Note: "Origem: or03bx"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8256,13 +8256,13 @@ Table "or03bx" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3) [name: "OR03BX-1"]
+    (CODIGO,OS,NRNOTA,SEQ) [name: "OR03BX-1"]
   }
 }
 
-// Origem: or04.dbf (DBF)
+// Origem: or04 (DBFCDX)
 Table "or04" {
-  Note: "Origem: or04.dbf"
+  Note: "Origem: or04"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8278,16 +8278,16 @@ Table "or04" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(REQUISI,8) [name: "OR04-1"]
-    STR(REQUISI,8)+STR(OS,8,2) [name: "OR04-2"]
-    CODIGO+DTOS(DLIMITE) [name: "OR04-3"]
-    CODIGO+DTOS(DLIMP) [name: "OR04-4"]
+    (CODIGO,OS,REQUISI) [name: "OR04-1"]
+    (REQUISI,OS) [name: "OR04-2"]
+    (CODIGO,DLIMITE) [name: "OR04-3"]
+    (CODIGO,DLIMP) [name: "OR04-4"]
   }
 }
 
-// Origem: or04bx.dbf (DBF)
+// Origem: or04bx (DBFCDX)
 Table "or04bx" {
-  Note: "Origem: or04bx.dbf"
+  Note: "Origem: or04bx"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8303,13 +8303,13 @@ Table "or04bx" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3) [name: "OR04BX-1"]
+    (CODIGO,OS,NRNOTA,SEQ) [name: "OR04BX-1"]
   }
 }
 
-// Origem: or05.dbf (DBF)
+// Origem: or05 (DBFCDX)
 Table "or05" {
-  Note: "Origem: or05.dbf"
+  Note: "Origem: or05"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8325,16 +8325,16 @@ Table "or05" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(REQUISI,8) [name: "OR05-1"]
-    STR(REQUISI,8)+STR(OS,8,2) [name: "OR05-2"]
-    CODIGO+DTOS(DLIMITE) [name: "OR05-3"]
-    CODIGO+DTOS(DLIMP) [name: "OR05-4"]
+    (CODIGO,OS,REQUISI) [name: "OR05-1"]
+    (REQUISI,OS) [name: "OR05-2"]
+    (CODIGO,DLIMITE) [name: "OR05-3"]
+    (CODIGO,DLIMP) [name: "OR05-4"]
   }
 }
 
-// Origem: or05bx.dbf (DBF)
+// Origem: or05bx (DBFCDX)
 Table "or05bx" {
-  Note: "Origem: or05bx.dbf"
+  Note: "Origem: or05bx"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8350,13 +8350,13 @@ Table "or05bx" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3) [name: "OR05BX-1"]
+    (CODIGO,OS,NRNOTA,SEQ) [name: "OR05BX-1"]
   }
 }
 
-// Origem: or06.dbf (DBF)
+// Origem: or06 (DBFCDX)
 Table "or06" {
-  Note: "Origem: or06.dbf"
+  Note: "Origem: or06"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8372,16 +8372,16 @@ Table "or06" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(REQUISI,8) [name: "OR06-1"]
-    STR(REQUISI,8)+STR(OS,8,2) [name: "OR06-2"]
-    CODIGO+DTOS(DLIMITE) [name: "OR06-3"]
-    CODIGO+DTOS(DLIMP) [name: "OR06-4"]
+    (CODIGO,OS,REQUISI) [name: "OR06-1"]
+    (REQUISI,OS) [name: "OR06-2"]
+    (CODIGO,DLIMITE) [name: "OR06-3"]
+    (CODIGO,DLIMP) [name: "OR06-4"]
   }
 }
 
-// Origem: or06bx.dbf (DBF)
+// Origem: or06bx (DBFCDX)
 Table "or06bx" {
-  Note: "Origem: or06bx.dbf"
+  Note: "Origem: or06bx"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8397,13 +8397,13 @@ Table "or06bx" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3) [name: "OR06BX-1"]
+    (CODIGO,OS,NRNOTA,SEQ) [name: "OR06BX-1"]
   }
 }
 
-// Origem: or07.dbf (DBF)
+// Origem: or07 (DBFCDX)
 Table "or07" {
-  Note: "Origem: or07.dbf"
+  Note: "Origem: or07"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8419,16 +8419,16 @@ Table "or07" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(REQUISI,8) [name: "OR07-1"]
-    STR(REQUISI,8)+STR(OS,8,2) [name: "OR07-2"]
-    CODIGO+DTOS(DLIMITE) [name: "OR07-3"]
-    CODIGO+DTOS(DLIMP) [name: "OR07-4"]
+    (CODIGO,OS,REQUISI) [name: "OR07-1"]
+    (REQUISI,OS) [name: "OR07-2"]
+    (CODIGO,DLIMITE) [name: "OR07-3"]
+    (CODIGO,DLIMP) [name: "OR07-4"]
   }
 }
 
-// Origem: or07bx.dbf (DBF)
+// Origem: or07bx (DBFCDX)
 Table "or07bx" {
-  Note: "Origem: or07bx.dbf"
+  Note: "Origem: or07bx"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8444,13 +8444,13 @@ Table "or07bx" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3) [name: "OR07BX-1"]
+    (CODIGO,OS,NRNOTA,SEQ) [name: "OR07BX-1"]
   }
 }
 
-// Origem: or08.dbf (DBF)
+// Origem: or08 (DBFCDX)
 Table "or08" {
-  Note: "Origem: or08.dbf"
+  Note: "Origem: or08"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8466,16 +8466,16 @@ Table "or08" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(REQUISI,8) [name: "OR08-1"]
-    STR(REQUISI,8)+STR(OS,8,2) [name: "OR08-2"]
-    CODIGO+DTOS(DLIMITE) [name: "OR08-3"]
-    CODIGO+DTOS(DLIMP) [name: "OR08-4"]
+    (CODIGO,OS,REQUISI) [name: "OR08-1"]
+    (REQUISI,OS) [name: "OR08-2"]
+    (CODIGO,DLIMITE) [name: "OR08-3"]
+    (CODIGO,DLIMP) [name: "OR08-4"]
   }
 }
 
-// Origem: or08bx.dbf (DBF)
+// Origem: or08bx (DBFCDX)
 Table "or08bx" {
-  Note: "Origem: or08bx.dbf"
+  Note: "Origem: or08bx"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8491,13 +8491,13 @@ Table "or08bx" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3) [name: "OR08BX-1"]
+    (CODIGO,OS,NRNOTA,SEQ) [name: "OR08BX-1"]
   }
 }
 
-// Origem: or09.dbf (DBF)
+// Origem: or09 (DBFCDX)
 Table "or09" {
-  Note: "Origem: or09.dbf"
+  Note: "Origem: or09"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8513,16 +8513,16 @@ Table "or09" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(REQUISI,8) [name: "OR09-1"]
-    STR(REQUISI,8)+STR(OS,8,2) [name: "OR09-2"]
-    CODIGO+DTOS(DLIMITE) [name: "OR09-3"]
-    CODIGO+DTOS(DLIMP) [name: "OR09-4"]
+    (CODIGO,OS,REQUISI) [name: "OR09-1"]
+    (REQUISI,OS) [name: "OR09-2"]
+    (CODIGO,DLIMITE) [name: "OR09-3"]
+    (CODIGO,DLIMP) [name: "OR09-4"]
   }
 }
 
-// Origem: or09bx.dbf (DBF)
+// Origem: or09bx (DBFCDX)
 Table "or09bx" {
-  Note: "Origem: or09bx.dbf"
+  Note: "Origem: or09bx"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8538,13 +8538,13 @@ Table "or09bx" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3) [name: "OR09BX-1"]
+    (CODIGO,OS,NRNOTA,SEQ) [name: "OR09BX-1"]
   }
 }
 
-// Origem: or10.dbf (DBF)
+// Origem: or10 (DBFCDX)
 Table "or10" {
-  Note: "Origem: or10.dbf"
+  Note: "Origem: or10"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8560,16 +8560,16 @@ Table "or10" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(REQUISI,8) [name: "OR10-1"]
-    STR(REQUISI,8)+STR(OS,8,2) [name: "OR10-2"]
-    CODIGO+DTOS(DLIMITE) [name: "OR10-3"]
-    CODIGO+DTOS(DLIMP) [name: "OR10-4"]
+    (CODIGO,OS,REQUISI) [name: "OR10-1"]
+    (REQUISI,OS) [name: "OR10-2"]
+    (CODIGO,DLIMITE) [name: "OR10-3"]
+    (CODIGO,DLIMP) [name: "OR10-4"]
   }
 }
 
-// Origem: or10bx.dbf (DBF)
+// Origem: or10bx (DBFCDX)
 Table "or10bx" {
-  Note: "Origem: or10bx.dbf"
+  Note: "Origem: or10bx"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8585,13 +8585,13 @@ Table "or10bx" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3) [name: "OR10BX-1"]
+    (CODIGO,OS,NRNOTA,SEQ) [name: "OR10BX-1"]
   }
 }
 
-// Origem: or11.dbf (DBF)
+// Origem: or11 (DBFCDX)
 Table "or11" {
-  Note: "Origem: or11.dbf"
+  Note: "Origem: or11"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8607,16 +8607,16 @@ Table "or11" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(REQUISI,8) [name: "OR11-1"]
-    STR(REQUISI,8)+STR(OS,8,2) [name: "OR11-2"]
-    CODIGO+DTOS(DLIMITE) [name: "OR11-3"]
-    CODIGO+DTOS(DLIMP) [name: "OR11-4"]
+    (CODIGO,OS,REQUISI) [name: "OR11-1"]
+    (REQUISI,OS) [name: "OR11-2"]
+    (CODIGO,DLIMITE) [name: "OR11-3"]
+    (CODIGO,DLIMP) [name: "OR11-4"]
   }
 }
 
-// Origem: or11bx.dbf (DBF)
+// Origem: or11bx (DBFCDX)
 Table "or11bx" {
-  Note: "Origem: or11bx.dbf"
+  Note: "Origem: or11bx"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8632,13 +8632,13 @@ Table "or11bx" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3) [name: "OR11BX-1"]
+    (CODIGO,OS,NRNOTA,SEQ) [name: "OR11BX-1"]
   }
 }
 
-// Origem: or12.dbf (DBF)
+// Origem: or12 (DBFCDX)
 Table "or12" {
-  Note: "Origem: or12.dbf"
+  Note: "Origem: or12"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8654,16 +8654,16 @@ Table "or12" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(REQUISI,8) [name: "OR12-1"]
-    STR(REQUISI,8)+STR(OS,8,2) [name: "OR12-2"]
-    CODIGO+DTOS(DLIMITE) [name: "OR12-3"]
-    CODIGO+DTOS(DLIMP) [name: "OR12-4"]
+    (CODIGO,OS,REQUISI) [name: "OR12-1"]
+    (REQUISI,OS) [name: "OR12-2"]
+    (CODIGO,DLIMITE) [name: "OR12-3"]
+    (CODIGO,DLIMP) [name: "OR12-4"]
   }
 }
 
-// Origem: or12bx.dbf (DBF)
+// Origem: or12bx (DBFCDX)
 Table "or12bx" {
-  Note: "Origem: or12bx.dbf"
+  Note: "Origem: or12bx"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8679,13 +8679,13 @@ Table "or12bx" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3) [name: "OR12BX-1"]
+    (CODIGO,OS,NRNOTA,SEQ) [name: "OR12BX-1"]
   }
 }
 
-// Origem: or15.dbf (DBF)
+// Origem: or15 (DBFCDX)
 Table "or15" {
-  Note: "Origem: or15.dbf"
+  Note: "Origem: or15"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8701,16 +8701,16 @@ Table "or15" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(REQUISI,8) [name: "OR15-1"]
-    STR(REQUISI,8)+STR(OS,8,2) [name: "OR15-2"]
-    CODIGO+DTOS(DLIMITE) [name: "OR15-3"]
-    CODIGO+DTOS(DLIMP) [name: "OR15-4"]
+    (CODIGO,OS,REQUISI) [name: "OR15-1"]
+    (REQUISI,OS) [name: "OR15-2"]
+    (CODIGO,DLIMITE) [name: "OR15-3"]
+    (CODIGO,DLIMP) [name: "OR15-4"]
   }
 }
 
-// Origem: or15bx.dbf (DBF)
+// Origem: or15bx (DBFCDX)
 Table "or15bx" {
-  Note: "Origem: or15bx.dbf"
+  Note: "Origem: or15bx"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8726,13 +8726,13 @@ Table "or15bx" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3) [name: "OR15BX-1"]
+    (CODIGO,OS,NRNOTA,SEQ) [name: "OR15BX-1"]
   }
 }
 
-// Origem: or16.dbf (DBF)
+// Origem: or16 (DBFCDX)
 Table "or16" {
-  Note: "Origem: or16.dbf"
+  Note: "Origem: or16"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8748,16 +8748,16 @@ Table "or16" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(REQUISI,8) [name: "OR16-1"]
-    STR(REQUISI,8)+STR(OS,8,2) [name: "OR16-2"]
-    CODIGO+DTOS(DLIMITE) [name: "OR16-3"]
-    CODIGO+DTOS(DLIMP) [name: "OR16-4"]
+    (CODIGO,OS,REQUISI) [name: "OR16-1"]
+    (REQUISI,OS) [name: "OR16-2"]
+    (CODIGO,DLIMITE) [name: "OR16-3"]
+    (CODIGO,DLIMP) [name: "OR16-4"]
   }
 }
 
-// Origem: or16bx.dbf (DBF)
+// Origem: or16bx (DBFCDX)
 Table "or16bx" {
-  Note: "Origem: or16bx.dbf"
+  Note: "Origem: or16bx"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8773,13 +8773,13 @@ Table "or16bx" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3) [name: "OR16BX-1"]
+    (CODIGO,OS,NRNOTA,SEQ) [name: "OR16BX-1"]
   }
 }
 
-// Origem: or17.dbf (DBF)
+// Origem: or17 (DBFCDX)
 Table "or17" {
-  Note: "Origem: or17.dbf"
+  Note: "Origem: or17"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8795,16 +8795,16 @@ Table "or17" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(REQUISI,8) [name: "OR17-1"]
-    STR(REQUISI,8)+STR(OS,8,2) [name: "OR17-2"]
-    CODIGO+DTOS(DLIMITE) [name: "OR17-3"]
-    CODIGO+DTOS(DLIMP) [name: "OR17-4"]
+    (CODIGO,OS,REQUISI) [name: "OR17-1"]
+    (REQUISI,OS) [name: "OR17-2"]
+    (CODIGO,DLIMITE) [name: "OR17-3"]
+    (CODIGO,DLIMP) [name: "OR17-4"]
   }
 }
 
-// Origem: or17bx.dbf (DBF)
+// Origem: or17bx (DBFCDX)
 Table "or17bx" {
-  Note: "Origem: or17bx.dbf"
+  Note: "Origem: or17bx"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8820,13 +8820,13 @@ Table "or17bx" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3) [name: "OR17BX-1"]
+    (CODIGO,OS,NRNOTA,SEQ) [name: "OR17BX-1"]
   }
 }
 
-// Origem: or18.dbf (DBF)
+// Origem: or18 (DBFCDX)
 Table "or18" {
-  Note: "Origem: or18.dbf"
+  Note: "Origem: or18"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8842,16 +8842,16 @@ Table "or18" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(REQUISI,8) [name: "OR18-1"]
-    STR(REQUISI,8)+STR(OS,8,2) [name: "OR18-2"]
-    CODIGO+DTOS(DLIMITE) [name: "OR18-3"]
-    CODIGO+DTOS(DLIMP) [name: "OR18-4"]
+    (CODIGO,OS,REQUISI) [name: "OR18-1"]
+    (REQUISI,OS) [name: "OR18-2"]
+    (CODIGO,DLIMITE) [name: "OR18-3"]
+    (CODIGO,DLIMP) [name: "OR18-4"]
   }
 }
 
-// Origem: or18bx.dbf (DBF)
+// Origem: or18bx (DBFCDX)
 Table "or18bx" {
-  Note: "Origem: or18bx.dbf"
+  Note: "Origem: or18bx"
   "CODIGO" VARCHAR(24)
   "OS" DECIMAL(8,2) [default: 0]
   "OF" DECIMAL(12,2) [default: 0]
@@ -8867,13 +8867,13 @@ Table "or18bx" {
   "DLIMP" DATETIME
   "RASTRO" VARCHAR(6)
   Indexes {
-    CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3) [name: "OR18BX-1"]
+    (CODIGO,OS,NRNOTA,SEQ) [name: "OR18BX-1"]
   }
 }
 
-// Origem: pt.dbf (DBF)
+// Origem: pt (DBFCDX)
 Table "pt" {
-  Note: "Origem: pt.dbf"
+  Note: "Origem: pt"
   "TREIN" INTEGER [default: 0]
   "TIPCUR" VARCHAR(1)
   "TIPDIS" VARCHAR(1)
@@ -8903,26 +8903,26 @@ Table "pt" {
   "NUMSOL" INTEGER [default: 0]
   "NOMSOL" VARCHAR(40)
   Indexes {
-    TREIN [name: "PT"]
-    CURSO [name: "PT-2"]
+    (TREIN) [name: "PT"]
+    (CURSO) [name: "PT-2"]
   }
 }
 
-// Origem: pti.dbf (DBF)
+// Origem: pti (DBFCDX)
 Table "pti" {
-  Note: "Origem: pti.dbf"
+  Note: "Origem: pti"
   "TREIN" INTEGER [default: 0]
   "NUMFUN" INTEGER [default: 0]
   "NOMFUN" VARCHAR(40)
   Indexes {
-    TREIN [name: "PTI"]
-    NUMFUN [name: "PTI-2"]
+    (TREIN) [name: "PTI"]
+    (NUMFUN) [name: "PTI-2"]
   }
 }
 
-// Origem: rhab.dbf (DBF)
+// Origem: rhab (DBFCDX)
 Table "rhab" {
-  Note: "Origem: rhab.dbf"
+  Note: "Origem: rhab"
   "NUMERO" INTEGER [default: 0]
   "CODIGO" VARCHAR(2)
   "DATA" DATETIME
@@ -8933,14 +8933,14 @@ Table "rhab" {
   "ANO" INTEGER [default: 0]
   "CODIGO2" VARCHAR(2)
   Indexes {
-    STR(NUMERO,8)+DTOS(DATA) [name: "RHAB"]
-    STR(ANO,4)+STR(MES,2)+STR(NUMERO,8)+DTOS(DATA) [name: "RHAB-2"]
+    (NUMERO,DATA) [name: "RHAB"]
+    (ANO,MES,NUMERO,DATA) [name: "RHAB-2"]
   }
 }
 
-// Origem: rhabseq.dbf (DBF)
+// Origem: rhabseq (DBFCDX)
 Table "rhabseq" {
-  Note: "Origem: rhabseq.dbf"
+  Note: "Origem: rhabseq"
   "SEQ" INTEGER [default: 0]
   "DIAFIM" DATETIME
   "DIAINI" DATETIME
@@ -8981,13 +8981,13 @@ Table "rhabseq" {
   "DIA30" DATETIME
   "DIA31" DATETIME
   Indexes {
-    SEQ [name: "SEQ"]
+    (SEQ) [name: "SEQ"]
   }
 }
 
-// Origem: rhabtb.dbf (DBF)
+// Origem: rhabtb (DBFCDX)
 Table "rhabtb" {
-  Note: "Origem: rhabtb.dbf"
+  Note: "Origem: rhabtb"
   "ANO" INTEGER [default: 0]
   "MES" INTEGER [default: 0]
   "NUMERO" INTEGER [default: 0]
@@ -9029,22 +9029,22 @@ Table "rhabtb" {
   "TOTNJ" DECIMAL(10,2) [default: 0]
   "TOT" DECIMAL(10,2) [default: 0]
   Indexes {
-    STR(ANO,4)+STR(MES,2)+STR(NUMERO,8) [name: "SEQNUM"]
+    (ANO,MES,NUMERO) [name: "SEQNUM"]
   }
 }
 
-// Origem: telememo.dbf (DBF)
+// Origem: telememo (DBFCDX)
 Table "telememo" {
-  Note: "Origem: telememo.dbf"
+  Note: "Origem: telememo"
   "NOME" VARCHAR(15)
   "ESPECIF" VARCHAR(35)
   "TELEF" VARCHAR(14)
   "FAX" VARCHAR(14)
 }
 
-// Origem: treii.dbf (DBF)
+// Origem: treii (DBFCDX)
 Table "treii" {
-  Note: "Origem: treii.dbf"
+  Note: "Origem: treii"
   "TREIN" INTEGER [default: 0]
   "NUMFUN" INTEGER [default: 0]
   "NOMFUN" VARCHAR(40)
@@ -9052,14 +9052,14 @@ Table "treii" {
   "AVALIA" VARCHAR(1)
   "TRXCER" VARCHAR(1)
   Indexes {
-    TREIN [name: "TREII"]
-    NUMFUN [name: "TREII2"]
+    (TREIN) [name: "TREII"]
+    (NUMFUN) [name: "TREII2"]
   }
 }
 
-// Origem: trein.dbf (DBF)
+// Origem: trein (DBFCDX)
 Table "trein" {
-  Note: "Origem: trein.dbf"
+  Note: "Origem: trein"
   "TREIN" INTEGER [default: 0]
   "TIPCUR" VARCHAR(1)
   "TIPDIS" VARCHAR(1)
@@ -9086,16 +9086,16 @@ Table "trein" {
   "NOMSOL" VARCHAR(40)
   "OBJETIVO" VARCHAR(100)
   Indexes {
-    TREIN [name: "TREIN"]
-    CURSO [name: "TREIN-2"]
-    REFER [name: "TREIN-3"]
-    DATACUR [name: "TREIN-4"]
+    (TREIN) [name: "TREIN"]
+    (CURSO) [name: "TREIN-2"]
+    (REFER) [name: "TREIN-3"]
+    (DATACUR) [name: "TREIN-4"]
   }
 }
 
-// Origem: trjob.dbf (DBF)
+// Origem: trjob (DBFCDX)
 Table "trjob" {
-  Note: "Origem: trjob.dbf"
+  Note: "Origem: trjob"
   "NUMERO" INTEGER [default: 0]
   "DATA" DATETIME
   "NUMINS" INTEGER [default: 0]
@@ -9103,28 +9103,28 @@ Table "trjob" {
   "CODMAQ" VARCHAR(4)
   "DATF" DATETIME
   Indexes {
-    NUMERO [name: "NUMERO"]
+    (NUMERO) [name: "NUMERO"]
   }
 }
 
-// Origem: trjobi.dbf (DBF)
+// Origem: trjobi (DBFCDX)
 Table "trjobi" {
-  Note: "Origem: trjobi.dbf"
+  Note: "Origem: trjobi"
   "NUMERO" INTEGER [default: 0]
   "PECA" VARCHAR(24)
   "NUMTEC" INTEGER [default: 0]
   "NOMTEC" VARCHAR(40)
   "CARGA" DECIMAL(5,2) [default: 0]
   Indexes {
-    NUMERO [name: "NUMERO"]
-    PECA [name: "PECA"]
-    NUMTEC [name: "NUMTEC"]
+    (NUMERO) [name: "NUMERO"]
+    (PECA) [name: "PECA"]
+    (NUMTEC) [name: "NUMTEC"]
   }
 }
 
-// Origem: y399.dbf (DBF)
+// Origem: y399 (DBFCDX)
 Table "y399" {
-  Note: "Origem: y399.dbf"
+  Note: "Origem: y399"
   "NUMERO" INTEGER [default: 0]
   "DATA" DATETIME
   "CODIGO" VARCHAR(24)
@@ -9160,14 +9160,14 @@ Table "y399" {
   "MES" INTEGER [default: 0]
   "ANO" INTEGER [default: 0]
   Indexes {
-    NUMERO [name: "Y399-1"]
-    CODIGO+STR(SEQ,3)+STR(SSQ,3)+CODMAQ+STR(NUMERO,8) [name: "Y399-2"]
+    (NUMERO) [name: "Y399-1"]
+    (CODIGO,SEQ,SSQ,CODMAQ,NUMERO) [name: "Y399-2"]
   }
 }
 
-// Origem: ya99.dbf (DBF)
+// Origem: ya99 (DBFCDX)
 Table "ya99" {
-  Note: "Origem: ya99.dbf"
+  Note: "Origem: ya99"
   "NUMERO" INTEGER [default: 0]
   "ITEM" INTEGER [default: 0]
   "CODPAR" VARCHAR(3)
@@ -9181,7 +9181,7 @@ Table "ya99" {
   "MES" INTEGER [default: 0]
   "ANO" INTEGER [default: 0]
   Indexes {
-    STR(NUMERO,8)+STR(ITEM,3) [name: "YA99-1"]
+    (NUMERO,ITEM) [name: "YA99-1"]
   }
 }
 
