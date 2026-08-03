@@ -1,6 +1,6 @@
-// Origem: configu.dbf (DBF)
+// Origem: configu (DBFCDX)
 Table "configu" {
-  Note: "Origem: configu.dbf"
+  Note: "Origem: configu"
   "HELP" VARCHAR(8)
   "ARQ" VARCHAR(8)
   "ARQ1" VARCHAR(8)
@@ -28,9 +28,9 @@ Table "configu" {
   "DRIVER" VARCHAR(8)
 }
 
-// Origem: manemp.dbf (DBF)
+// Origem: manemp (DBFCDX)
 Table "manemp" {
-  Note: "Origem: manemp.dbf"
+  Note: "Origem: manemp"
   "NUMERO" INTEGER [default: 0]
   "COGNOME" VARCHAR(12)
   "NOME" VARCHAR(40)
@@ -107,13 +107,13 @@ Table "manemp" {
   "CODEMPMIG" VARCHAR(2)
   "IMGCON" VARCHAR(8)
   Indexes {
-    NUMERO [name: "MANEMP"]
+    (NUMERO) [name: "MANEMP"]
   }
 }
 
-// Origem: manhel.dbf (DBF)
+// Origem: manhel (DBFCDX)
 Table "manhel" {
-  Note: "Origem: manhel.dbf"
+  Note: "Origem: manhel"
   "DBF" VARCHAR(8)
   "CAMPO" VARCHAR(10)
   "DADO" VARCHAR(40)
@@ -123,7 +123,7 @@ Table "manhel" {
   "PRELAN" VARCHAR(20)
   "CONDICAO" VARCHAR(20)
   Indexes {
-    DBF+CAMPO [name: "MANHEL"]
+    (DBF,CAMPO) [name: "MANHEL"]
   }
 }
 

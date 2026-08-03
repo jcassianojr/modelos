@@ -1,8 +1,8 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 27/07/2026
+> Varredura automatica realizada em: 03/08/2026
 
-## Tabela DBF: `configu.dbf`
-> **Origem:** `configu.dbf` (Driver: DBFCDX)
+## Tabela DBF: `configu`
+> **Origem:** `configu` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -33,8 +33,8 @@
 | DRIVER | C | 8 | 0 |
 
 ---
-## Tabela DBF: `manemp.dbf`
-> **Origem:** `manemp.dbf` (Driver: DBFCDX)
+## Tabela DBF: `manemp`
+> **Origem:** `manemp` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -118,8 +118,8 @@
 - Tag: `MANEMP` Expressao: `NUMERO`
 
 ---
-## Tabela DBF: `manhel.dbf`
-> **Origem:** `manhel.dbf` (Driver: DBFCDX)
+## Tabela DBF: `manhel`
+> **Origem:** `manhel` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
