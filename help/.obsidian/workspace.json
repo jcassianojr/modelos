@@ -181,42 +181,7 @@
       "bases:Criar nova base": false
     }
   },
-  "floating": {
-    "id": "945f6e480bbbcbe9",
-    "type": "floating",
-    "children": [
-      {
-        "id": "79544c1b675884de",
-        "type": "window",
-        "children": [
-          {
-            "id": "507ef17a3ffa8526",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "ccb7e15c1cee4d64",
-                "type": "leaf",
-                "state": {
-                  "type": "empty",
-                  "state": {},
-                  "icon": "lucide-file",
-                  "title": "Nova aba"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 317,
-        "y": 16,
-        "width": 967,
-        "height": 807,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "ccb7e15c1cee4d64",
+  "active": "9083b835792ed2d1",
   "lastOpenFiles": [
     "estrutura.banco.dbml",
     "estrutura.banco.dbml.md",
