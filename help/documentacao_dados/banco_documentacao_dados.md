@@ -1,8 +1,5 @@
-
-[Voltar para o Banco](../banco.md)
-
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 28/07/2026
+> Varredura automatica realizada em: 09/09/2026
 
 ## Tabela DBF: `ba01`
 > **Origem:** `ba01` (Driver: DBFCDX)
@@ -28,6 +25,23 @@
 - Tag: `BA01-4` Expressao: `DATA`
 - Tag: `BA01-5` Expressao: `ITEM`
 
+```mermaid
+erDiagram
+    ba01 {
+        N NUMERO
+        C SUB
+        D DATA
+        N NRCONTA
+        C CODIGO
+        C HISTORICO
+        C ITEM
+        N VALOR
+        C TIPO
+        D DATADEP
+        C CHAVE
+    }
+```
+
 ---
 ## Tabela DBF: `bc01`
 > **Origem:** `bc01` (Driver: DBFCDX)
@@ -44,6 +58,18 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
 - Tag: `DESCRICAO` Expressao: `DESCRICAO`
+
+```mermaid
+erDiagram
+    bc01 {
+        C CODIGO
+        C DESCRICAO
+        N VALOR
+        N VALOR1
+        C TIPO
+        C ITEM
+    }
+```
 
 ---
 ## Tabela DBF: `bd01`
@@ -79,6 +105,35 @@
 - Tag: `NUMERO` Expressao: `NUMERO`
 - Tag: `COGNOME` Expressao: `COGNOME`
 
+```mermaid
+erDiagram
+    bd01 {
+        N NUMERO
+        C COGNOME
+        C NOME
+        C ENDERECO
+        C BAIRRO
+        C CIDADE
+        C ESTADO
+        C CEP
+        C DDD
+        C TELEFONE
+        C RAMAL
+        C CONTATO
+        C DDDFAX
+        C TELEFAX
+        C CGC
+        C IESTADUAL
+        C DDD1
+        C TELEFONE1
+        C RAMAL1
+        C CONTATO1
+        C PESSOA
+        C SITE
+        C EMAIL
+    }
+```
+
 ---
 ## Tabela DBF: `be01`
 > **Origem:** `be01` (Driver: DBFCDX)
@@ -91,6 +146,14 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
 - Tag: `NOME` Expressao: `NOME`
+
+```mermaid
+erDiagram
+    be01 {
+        C CODIGO
+        C NOME
+    }
+```
 
 ---
 ## Tabela DBF: `bf01`
@@ -108,5 +171,16 @@
 - Tag: `VENDA` Expressao: `VENDA`
 - Tag: `NUMERO` Expressao: `NUMERO`
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    bf01 {
+        N VENDA
+        N NUMERO
+        C CODIGO
+        D DATA
+        N VALOR
+    }
+```
 
 ---

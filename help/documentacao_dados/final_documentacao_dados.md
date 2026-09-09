@@ -1,5 +1,5 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 29/07/2026
+> Varredura automatica realizada em: 09/09/2026
 
 ## Tabela DBF: `RIF`
 > **Origem:** `RIF` (Driver: DBFCDX)
@@ -31,6 +31,30 @@
 - Tag: `RIF-4` Expressao: `CODIGO+STR(99999999-RIF,8)`
 - Tag: `RIF` Expressao: `RASTRO`
 
+```mermaid
+erDiagram
+    RIF {
+        N RIF
+        N PF
+        N CLIENTE
+        C CLINOME
+        C CODIGO
+        C NOME
+        D REVDATA
+        N QTDE
+        N OS
+        D DATA
+        N ISIII
+        C LAUDO
+        C RASTRO
+        N INSNUM
+        C INSNOM
+        L IMPORTADO
+        C PCFTIPO
+        C CODIGOINT
+    }
+```
+
 ---
 ## Tabela DBF: `RIFI`
 > **Origem:** `RIFI` (Driver: DBFCDX)
@@ -46,6 +70,18 @@
 
 **Indices vinculados:**
 - Tag: `RIFI` Expressao: `RIF`
+
+```mermaid
+erDiagram
+    RIFI {
+        N RIF
+        C TOL
+        N MIN
+        N MAX
+        C OK
+        C INSTRUME
+    }
+```
 
 ---
 ## Tabela DBF: `rifpr`
@@ -63,5 +99,18 @@
 
 **Indices vinculados:**
 - Tag: `RIFPR` Expressao: `PRODUTO`
+
+```mermaid
+erDiagram
+    rifpr {
+        C PRODUTO
+        N QTDE
+        N RIF1200
+        N RIFULT
+        N RIFTOT
+        D SEL100
+        N RIFSEL
+    }
+```
 
 ---

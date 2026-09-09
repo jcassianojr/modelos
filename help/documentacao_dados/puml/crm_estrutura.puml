@@ -1,0 +1,911 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "aut" as aut {
+  AUT : integer
+  USADA : boolean
+  USER : integer
+  MOTIVO : varchar(150)
+  MOTIV2 : varchar(150)
+  CARTA : varchar(1)
+  DATA : datetime
+  DATABX : datetime
+  CRM : integer
+  DATACR : datetime
+  FISOBS01 : varchar(80)
+  FISOBS02 : varchar(80)
+  FISOBS03 : varchar(80)
+  LIBPOR : varchar(15)
+  LIBFISCAL : varchar(1)
+  --
+  .. Índices ..
+  + AUT : AUT
+}
+
+entity "crgec" as crgec {
+  CRGEX : integer
+  DATA : datetime
+  FORNECEDO : integer
+  COGNOME : varchar(20)
+  NOTA : varchar(50)
+  PESONF : integer
+  PESOEC : integer
+  PESOLQ : integer
+  PERCEX : decimal(8,3)
+  --
+  .. Índices ..
+  + CRGEX : CRGEX
+}
+
+entity "crgex" as crgex {
+  CRGEX : integer
+  DATA : datetime
+  FORNECEDO : integer
+  COGNOME : varchar(20)
+  NOTA : varchar(50)
+  PESONF : integer
+  PESOEC : integer
+  PESOLQ : integer
+  PERCEX : decimal(8,3)
+  --
+  .. Índices ..
+  + CRGEX : CRGEX
+}
+
+entity "crm" as crm {
+  CRM : integer
+  TIPCAD : varchar(1)
+  CLIFOR : integer
+  COGNOME : varchar(15)
+  DATA : datetime
+  TIPOE : varchar(1)
+  DESCRI : varchar(40)
+  PEDIDO : varchar(20)
+  NRNOTA : integer
+  NRNOTB : integer
+  QTDE : decimal(12,3)
+  QTDEA : decimal(12,3)
+  QTDEB : decimal(12,3)
+  NIVEL : varchar(10)
+  INSP : varchar(1)
+  LAUDO : varchar(1)
+  TECNICO : integer
+  OBS : varchar(100)
+  CBUSCA : varchar(24)
+  NOMEF : varchar(40)
+  UNID : varchar(4)
+  RIST : integer
+  RIRM : integer
+  APLICACAO : varchar(30)
+  PRODUTO : varchar(24)
+  VALOR : decimal(12,2)
+  GRAVOU : varchar(1)
+  GRAVOUY : varchar(1)
+  PROGRAMA : decimal(8,2)
+  GRAVAUP : varchar(1)
+  PRPED : integer
+  PRITE : integer
+  PRCLI : integer
+  PEPED : integer
+  PEITE : integer
+  CERT : varchar(40)
+  PEREQ : integer
+  AUT : integer
+  USERNM : varchar(10)
+  USERDT : datetime
+  USERHT : varchar(8)
+  NRDATA : datetime
+  RASTRO : varchar(12)
+  PRECO : decimal(15,6)
+  PRECOPR : decimal(15,6)
+  PRECONF : decimal(15,6)
+  CLOTECRT : varchar(1)
+  PRECOOK : varchar(1)
+  QTDEPED : decimal(12,3)
+  PESONFA : decimal(9,3)
+  PESONFB : decimal(9,3)
+  PEDCLI : varchar(1)
+  ENTREGA : datetime
+  ENTREG2 : datetime
+  TRIANGULAR : varchar(1)
+  --
+  .. Índices ..
+  + CRM : CRM
+  + CRM-2 : DATA
+  + CRM-3 : RASTRO
+  + CRM-4 : STR(NRNOTA,8)+STR(CLIFOR,8)
+  + CRM-5 : STR(NRNOTB,8)+STR(CLIFOR,8)
+}
+
+entity "crm3l" as crm3l {
+  CODIGO : varchar(24)
+  NVEZES : integer
+  RACF : integer
+  DESC01 : varchar(90)
+  DESC02 : varchar(90)
+  DESC03 : varchar(90)
+  DESC04 : varchar(90)
+  DESC05 : varchar(90)
+  --
+  .. Índices ..
+  + CRM3L : CODIGO
+}
+
+entity "crma" as crma {
+  NUMERO : integer
+  DATA : datetime
+  TIPOENT : varchar(1)
+  CODIGO : varchar(24)
+  FORNECEDO : integer
+  COGFOR : varchar(15)
+  NF : integer
+  PRODUTO : varchar(24)
+  CLIENTE : integer
+  COGCLI : varchar(12)
+  RASTROA : varchar(12)
+  RASTROOK : varchar(12)
+  DATAOK : datetime
+  MOTIVO : varchar(3)
+  CRM : integer
+  --
+  .. Índices ..
+  + CRMA-1 : NUMERO
+  + CRMA-2 : RASTROA
+}
+
+entity "crmar" as crmar {
+  TIPOENT : varchar(1)
+  CODIGO : varchar(24)
+  UNIDADE : varchar(2)
+  NOME : varchar(100)
+  NRNOTA : integer
+  DATA : datetime
+  QTDE : integer
+  TIPOCLI : varchar(1)
+  FORNECEDO : integer
+  COGNOME : varchar(12)
+  CRM : integer
+  AR : integer
+  ITEM : integer
+  RIRM : integer
+  RIST : integer
+  CODFORN : varchar(18)
+  EMPRESA : varchar(2)
+  CODIGOINT : varchar(24)
+  MC : integer
+  --
+  .. Índices ..
+  + CRMAR-1 : EMPRESA+STR(AR,8)+STR(ITEM,2)
+  + CRMAR-2 : STR(NRNOTA,8)+STR(FORNECEDO,8)+CODIGO
+  + CRMAR-3 : CODIGOINT
+}
+
+entity "crmcesp" as crmcesp {
+  NUMERO : integer
+  NOME : varchar(100)
+  TIPOENT : varchar(1)
+  CODIGO : varchar(24)
+  --
+  .. Índices ..
+  + CRMCESP : NUMERO
+  + CRMCESP2 : NOME
+  + CRMCESP3 : CODIGO
+}
+
+entity "crmdev" as crmdev {
+  CRM : integer
+  TIPCAD : varchar(1)
+  CLIFOR : integer
+  COGNOME : varchar(15)
+  DATA : datetime
+  TIPOE : varchar(1)
+  DESCRI : varchar(40)
+  PEDIDO : varchar(20)
+  NRNOTA : integer
+  NRNOTB : integer
+  QTDE : decimal(12,3)
+  QTDEA : decimal(12,3)
+  QTDEB : decimal(12,3)
+  NIVEL : varchar(10)
+  INSP : varchar(1)
+  LAUDO : varchar(1)
+  TECNICO : integer
+  OBS : varchar(100)
+  CBUSCA : varchar(24)
+  NOMEF : varchar(40)
+  UNID : varchar(4)
+  RIST : integer
+  RIRM : integer
+  APLICACAO : varchar(30)
+  PRODUTO : varchar(24)
+  VALOR : decimal(12,2)
+  GRAVOU : varchar(1)
+  GRAVOUY : varchar(1)
+  PROGRAMA : decimal(8,2)
+  GRAVAUP : varchar(1)
+  PRPED : integer
+  PRITE : integer
+  PRCLI : integer
+  PEPED : integer
+  PEITE : integer
+  CERT : varchar(40)
+  PEREQ : integer
+  AUT : integer
+  USERNM : varchar(10)
+  USERDT : datetime
+  USERHT : varchar(8)
+  NRDATA : datetime
+  RASTRO : varchar(12)
+  PRECO : decimal(15,6)
+  PRECOPR : decimal(15,6)
+  PRECONF : decimal(15,6)
+  CLOTECRT : varchar(1)
+  PRECOOK : varchar(1)
+  QTDEPED : decimal(12,3)
+  PESONFA : decimal(9,3)
+  PESONFB : decimal(9,3)
+  PEDCLI : varchar(1)
+  ENTREGA : datetime
+  ENTREG2 : datetime
+  TRIANGULAR : varchar(1)
+  --
+  .. Índices ..
+  + CRM : CRM
+  + CRM-2 : DATA
+  + CRM-3 : RASTRO
+  + CRM-4 : STR(NRNOTA,8)+STR(CLIFOR,8)
+  + CRM-5 : STR(NRNOTB,8)+STR(CLIFOR,8)
+}
+
+entity "crme01" as crme01 {
+  RASTRO : varchar(10)
+  DATA : datetime
+}
+
+entity "crme02" as crme02 {
+  RASTRO : varchar(12)
+  DATA : datetime
+  NOME : varchar(30)
+  NOM2 : varchar(35)
+  NOM3 : varchar(35)
+  APLICACAO : varchar(50)
+  FORNECEDOR : integer
+  RESPO : varchar(40)
+  NRNOTA : integer
+  NRNOTB : integer
+  PESONFA : decimal(9,3)
+  PESONFB : decimal(9,3)
+  QTDEA : decimal(12,3)
+  QTDEB : decimal(12,3)
+  POS : varchar(11)
+  CODIGO : varchar(24)
+  CERT : varchar(50)
+}
+
+entity "crme03" as crme03 {
+  ESPE : varchar(80)
+  USUARIO : varchar(10)
+  SETOR : varchar(30)
+  DATA : datetime
+  CODIGO : varchar(24)
+  NOME : varchar(40)
+  NCLI : integer
+  CLIENTE : varchar(30)
+  RASTRO : varchar(12)
+  QTAMO : integer
+  REFNUM : integer
+  CERT : varchar(50)
+}
+
+entity "crmebx" as crmebx {
+  CODIGO : varchar(24)
+  UNIDADE : varchar(2)
+  NOME : varchar(30)
+  NRNOTAINI : integer
+  DIGCTR : varchar(1)
+  SERIE : varchar(3)
+  DATAFAT : datetime
+  OSINI : decimal(8,2)
+  VALORINI : decimal(10,2)
+  TOTKGINI : decimal(9,2)
+  NRNOTASAI : integer
+  TOTKGANT : decimal(9,2)
+  TOTKGSAI : decimal(9,2)
+  TOTKGEST : decimal(9,2)
+  TIPOCLI : varchar(1)
+  CLIENTE : integer
+  COGNOME : varchar(12)
+  DATASAI : datetime
+  CRM : integer
+  PESOREF : decimal(12,5)
+  CLASSIPI : varchar(14)
+  PRECO : decimal(10,2)
+  TIPOENT : varchar(1)
+  OBS : varchar(30)
+  RASTRO : varchar(12)
+  DIFSALDO : decimal(9,2)
+  LOCAL : varchar(7)
+  QTDEEMB : integer
+  --
+  .. Índices ..
+  + CRMEBX-1 : CODIGO+STR(NRNOTAINI,8)+DIGCTR
+  + CRMEBX-2 : STR(NRNOTAINI,8)+CODIGO
+  + CRMEBX-3 : NRNOTAINI
+  + CRREBX-4 : CLIENTE
+  + CRMEBX-5 : OSINI
+}
+
+entity "crmens" as crmens {
+  CODIGO : varchar(10)
+  NOME : varchar(40)
+  VALOR : decimal(12,8)
+  --
+  .. Índices ..
+  + CRMENS : CODIGO
+}
+
+entity "crmest" as crmest {
+  CODIGO : varchar(24)
+  UNIDADE : varchar(2)
+  NOME : varchar(30)
+  NRNOTAINI : integer
+  DIGCTR : varchar(1)
+  SERIE : varchar(3)
+  DATAFAT : datetime
+  OSINI : decimal(8,2)
+  VALORINI : decimal(10,2)
+  TOTKGINI : decimal(9,2)
+  NRNOTASAI : integer
+  TOTKGANT : decimal(9,2)
+  TOTKGSAI : decimal(9,2)
+  TOTKGEST : decimal(9,2)
+  TIPOCLI : varchar(1)
+  CLIENTE : integer
+  COGNOME : varchar(12)
+  DATASAI : datetime
+  CRM : integer
+  PESOREF : decimal(12,5)
+  CLASSIPI : varchar(14)
+  PRECO : decimal(10,2)
+  TIPOENT : varchar(1)
+  OBS : varchar(30)
+  RASTRO : varchar(12)
+  DIFSALDO : decimal(9,2)
+  LOCAL : varchar(7)
+  QTDEEMB : integer
+  --
+  .. Índices ..
+  + CRMEST-1 : CODIGO+STR(NRNOTAINI,8)+DIGCTR
+  + CRMEST-2 : STR(NRNOTAINI,8)+CODIGO
+  + CRMEST-3 : NRNOTAINI
+  + CRMEST-4 : CLIENTE
+  + CRMEST-5 : OSINI
+}
+
+entity "crmfn" as crmfn {
+  NUMERO : integer
+  DATA : datetime
+  RASTRO : varchar(12)
+  FORNECEDO : integer
+  COGNOME : varchar(12)
+  CODIGO : varchar(24)
+  CLIENTE : integer
+  PESOUNI : decimal(7,3)
+  CODMR01 : varchar(10)
+  NOMMR01 : varchar(30)
+  PCEMB : integer
+  PCEMBQ : integer
+  QTDEKG : decimal(9,3)
+  QTDEPC : integer
+  --
+  .. Índices ..
+  + CRMFN : NUMERO
+  + CRMFN-2 : DATA
+  + CRMFN-3 : RASTRO
+}
+
+entity "crmgp12" as crmgp12 {
+  CODIGO : varchar(24)
+  --
+  .. Índices ..
+  + CRMGP12 : CODIGO
+}
+
+entity "crml" as crml {
+  CLIFOR : integer
+  CODIGO : varchar(24)
+  LOTE : integer
+  --
+  .. Índices ..
+  + CRML : STR(CLIFOR,8)+CODIGO
+}
+
+entity "crmmot" as crmmot {
+  CODIGO : varchar(2)
+  DIZER : varchar(50)
+  --
+  .. Índices ..
+  + CRMMOT : CODIGO
+}
+
+entity "crmnf" as crmnf {
+  FORNECEDO : integer
+  NRNOTA : integer
+  DATA : datetime
+  --
+  .. Índices ..
+  + CRMNF : FORNECEDO
+}
+
+entity "crmr" as crmr {
+  RASTRO : varchar(10)
+  RASTRON : integer
+  RASTROA : integer
+  CRM : integer
+  RIRM : integer
+  RIST : integer
+  DATAF : datetime
+  OBS : varchar(100)
+  DATA : datetime
+  PRODUTO : varchar(50)
+  --
+  .. Índices ..
+  + CRMR : RASTRON
+}
+
+entity "crmss" as crmss {
+  NUMERO : integer
+  CODIGO : varchar(24)
+  CODIGOINT : varchar(24)
+  NORMA : varchar(14)
+  APLICACAO : varchar(30)
+  FORNECEDO : integer
+  FORNOME : varchar(40)
+  ESPE : varchar(60)
+  RASTRO : varchar(12)
+  DATA : datetime
+  RIST : integer
+  AR : integer
+  ITEM : integer
+  DATAENV : datetime
+  HORAENV : varchar(5)
+  --
+  .. Índices ..
+  + CRMSS-1 : NUMERO
+  + CRMSS-2 : RASTRO
+  + CRMSS-3 : CODIGO
+}
+
+entity "mp01i" as mp01i {
+  CODIGO : varchar(12)
+  ITEM : integer
+  ESPE : varchar(60)
+  ENCO : varchar(60)
+  VALPAD : decimal(8,2)
+  VALMAX : decimal(8,2)
+  VALMIN : decimal(8,2)
+  TOLMAX : decimal(8,2)
+  TOLMIN : decimal(8,2)
+  UNIDADE : varchar(3)
+  TIPA : varchar(3)
+  UNIDREF : varchar(4)
+  QTDEREF : decimal(8,2)
+  --
+  .. Índices ..
+  + MP01I-1 : CODIGO+STR(ITEM,3)
+}
+
+entity "mp01r" as mp01r {
+  CODIGO : varchar(12)
+  ITEM : integer
+  ESPE : varchar(60)
+  ENCO : varchar(60)
+  VALPAD : decimal(8,2)
+  VALMAX : decimal(8,2)
+  VALMIN : decimal(8,2)
+  TOLMAX : decimal(8,2)
+  TOLMIN : decimal(8,2)
+  UNIDADE : varchar(3)
+  TIPA : varchar(3)
+  UNIDREF : varchar(4)
+  QTDEREF : decimal(8,2)
+  CHECADO : varchar(1)
+  --
+  .. Índices ..
+  + MP01R-1 : CODIGO+STR(ITEM,3)
+}
+
+entity "mp02i" as mp02i {
+  CODIGO : varchar(12)
+  ITEM : integer
+  ESPE : varchar(60)
+  ENCO : varchar(60)
+  VALPAD : decimal(8,2)
+  VALMAX : decimal(8,2)
+  VALMIN : decimal(8,2)
+  TOLMAX : decimal(8,2)
+  TOLMIN : decimal(8,2)
+  UNIDADE : varchar(3)
+  TIPA : varchar(3)
+  UNIDREF : varchar(4)
+  QTDEREF : decimal(8,2)
+  --
+  .. Índices ..
+  + MP02I-1 : CODIGO+STR(ITEM,3)
+}
+
+entity "mp02r" as mp02r {
+  CODIGO : varchar(12)
+  ITEM : integer
+  ESPE : varchar(60)
+  ENCO : varchar(60)
+  VALPAD : decimal(8,2)
+  VALMAX : decimal(8,2)
+  VALMIN : decimal(8,2)
+  TOLMAX : decimal(8,2)
+  TOLMIN : decimal(8,2)
+  UNIDADE : varchar(3)
+  TIPA : varchar(3)
+  UNIDREF : varchar(4)
+  QTDEREF : decimal(8,2)
+  CHECADO : varchar(1)
+  --
+  .. Índices ..
+  + MP02R-1 : CODIGO+STR(ITEM,3)
+}
+
+entity "mp03i" as mp03i {
+  CODIGO : varchar(24)
+  ITEM : integer
+  ESPE : varchar(60)
+  ENCO : varchar(60)
+  VALPAD : decimal(8,2)
+  VALMAX : decimal(8,2)
+  VALMIN : decimal(8,2)
+  TOLMAX : decimal(8,2)
+  TOLMIN : decimal(8,2)
+  UNIDADE : varchar(3)
+  TIPA : varchar(3)
+  UNIDREF : varchar(4)
+  QTDEREF : decimal(8,2)
+  --
+  .. Índices ..
+  + MP03I-1 : CODIGO+STR(ITEM,3)
+}
+
+entity "mp03r" as mp03r {
+  CODIGO : varchar(24)
+  ITEM : integer
+  ESPE : varchar(60)
+  ENCO : varchar(60)
+  VALPAD : decimal(8,2)
+  VALMAX : decimal(8,2)
+  VALMIN : decimal(8,2)
+  TOLMAX : decimal(8,2)
+  TOLMIN : decimal(8,2)
+  UNIDADE : varchar(3)
+  TIPA : varchar(3)
+  UNIDREF : varchar(4)
+  QTDEREF : decimal(8,2)
+  CHECADO : varchar(1)
+  --
+  .. Índices ..
+  + MP03R-1 : CODIGO+STR(ITEM,3)
+}
+
+entity "mq01i" as mq01i {
+  CODIGO : varchar(10)
+  ITEM : integer
+  ESPE : varchar(60)
+  ENCO : varchar(60)
+  VALPAD : decimal(8,2)
+  VALMAX : decimal(8,2)
+  VALMIN : decimal(8,2)
+  TOLMAX : decimal(8,2)
+  TOLMIN : decimal(8,2)
+  UNIDADE : varchar(3)
+  TIPA : varchar(3)
+  UNIDREF : varchar(4)
+  QTDEREF : decimal(8,2)
+  --
+  .. Índices ..
+  + MQ01I-1 : CODIGO+STR(ITEM,3)
+}
+
+entity "mq01r" as mq01r {
+  CODIGO : varchar(10)
+  ITEM : integer
+  ESPE : varchar(60)
+  ENCO : varchar(60)
+  VALPAD : decimal(8,2)
+  VALMAX : decimal(8,2)
+  VALMIN : decimal(8,2)
+  TOLMAX : decimal(8,2)
+  TOLMIN : decimal(8,2)
+  UNIDADE : varchar(3)
+  TIPA : varchar(3)
+  UNIDREF : varchar(4)
+  QTDEREF : decimal(8,2)
+  CHECADO : varchar(1)
+  --
+  .. Índices ..
+  + MQ01R-1 : CODIGO+STR(ITEM,3)
+}
+
+entity "mr01i" as mr01i {
+  CODIGO : varchar(10)
+  ITEM : integer
+  ESPE : varchar(60)
+  ENCO : varchar(60)
+  VALPAD : decimal(8,2)
+  VALMAX : decimal(8,2)
+  VALMIN : decimal(8,2)
+  TOLMAX : decimal(8,2)
+  TOLMIN : decimal(8,2)
+  UNIDADE : varchar(3)
+  TIPA : varchar(3)
+  UNIDREF : varchar(4)
+  QTDEREF : decimal(8,2)
+  --
+  .. Índices ..
+  + MR01I-1 : CODIGO+STR(ITEM,3)
+}
+
+entity "mr01r" as mr01r {
+  CODIGO : varchar(10)
+  ITEM : integer
+  ESPE : varchar(60)
+  ENCO : varchar(60)
+  VALPAD : decimal(8,2)
+  VALMAX : decimal(8,2)
+  VALMIN : decimal(8,2)
+  TOLMAX : decimal(8,2)
+  TOLMIN : decimal(8,2)
+  UNIDADE : varchar(3)
+  TIPA : varchar(3)
+  UNIDREF : varchar(4)
+  QTDEREF : decimal(8,2)
+  CHECADO : varchar(1)
+  --
+  .. Índices ..
+  + MR01R-1 : CODIGO+STR(ITEM,3)
+}
+
+entity "ms01i" as ms01i {
+  CODIGO : varchar(24)
+  ITEM : integer
+  ESPE : varchar(60)
+  ENCO : varchar(60)
+  VALPAD : decimal(8,2)
+  VALMAX : decimal(8,2)
+  VALMIN : decimal(8,2)
+  TOLMAX : decimal(8,2)
+  TOLMIN : decimal(8,2)
+  UNIDADE : varchar(3)
+  TIPA : varchar(3)
+  UNIDREF : varchar(4)
+  QTDEREF : decimal(8,2)
+  --
+  .. Índices ..
+  + MS01I-1 : CODIGO+STR(ITEM,3)
+}
+
+entity "ms01r" as ms01r {
+  CODIGO : varchar(24)
+  ITEM : integer
+  ESPE : varchar(60)
+  ENCO : varchar(60)
+  VALPAD : decimal(8,2)
+  VALMAX : decimal(8,2)
+  VALMIN : decimal(8,2)
+  TOLMAX : decimal(8,2)
+  TOLMIN : decimal(8,2)
+  UNIDADE : varchar(3)
+  TIPA : varchar(3)
+  UNIDREF : varchar(4)
+  QTDEREF : decimal(8,2)
+  CHECADO : varchar(1)
+  --
+  .. Índices ..
+  + MS01R-1 : CODIGO+STR(ITEM,3)
+}
+
+entity "mt01i" as mt01i {
+  CODIGO : varchar(10)
+  ITEM : integer
+  ESPE : varchar(60)
+  ENCO : varchar(60)
+  VALPAD : decimal(8,2)
+  VALMAX : decimal(8,2)
+  VALMIN : decimal(8,2)
+  TOLMAX : decimal(8,2)
+  TOLMIN : decimal(8,2)
+  UNIDADE : varchar(3)
+  TIPA : varchar(3)
+  UNIDREF : varchar(4)
+  QTDEREF : decimal(8,2)
+  --
+  .. Índices ..
+  + MT01I-1 : CODIGO+STR(ITEM,3)
+}
+
+entity "mt01r" as mt01r {
+  CODIGO : varchar(10)
+  ITEM : integer
+  ESPE : varchar(60)
+  ENCO : varchar(60)
+  VALPAD : decimal(8,2)
+  VALMAX : decimal(8,2)
+  VALMIN : decimal(8,2)
+  TOLMAX : decimal(8,2)
+  TOLMIN : decimal(8,2)
+  UNIDADE : varchar(3)
+  TIPA : varchar(3)
+  UNIDREF : varchar(4)
+  QTDEREF : decimal(8,2)
+  CHECADO : varchar(1)
+  --
+  .. Índices ..
+  + MT01R-1 : CODIGO+STR(ITEM,3)
+}
+
+entity "mu01i" as mu01i {
+  CODIGO : varchar(10)
+  ITEM : integer
+  ESPE : varchar(60)
+  ENCO : varchar(60)
+  VALPAD : decimal(8,2)
+  VALMAX : decimal(8,2)
+  VALMIN : decimal(8,2)
+  TOLMAX : decimal(8,2)
+  TOLMIN : decimal(8,2)
+  UNIDADE : varchar(3)
+  TIPA : varchar(3)
+  UNIDREF : varchar(4)
+  QTDEREF : decimal(8,2)
+  --
+  .. Índices ..
+  + MU01I-1 : CODIGO+STR(ITEM,3)
+}
+
+entity "mu01r" as mu01r {
+  CODIGO : varchar(10)
+  ITEM : integer
+  ESPE : varchar(60)
+  ENCO : varchar(60)
+  VALPAD : decimal(8,2)
+  VALMAX : decimal(8,2)
+  VALMIN : decimal(8,2)
+  TOLMAX : decimal(8,2)
+  TOLMIN : decimal(8,2)
+  UNIDADE : varchar(3)
+  TIPA : varchar(3)
+  UNIDREF : varchar(4)
+  QTDEREF : decimal(8,2)
+  CHECADO : varchar(1)
+  --
+  .. Índices ..
+  + MU01R-1 : CODIGO+STR(ITEM,3)
+}
+
+entity "rirm" as rirm {
+  RIRM : integer
+  CLASSI : varchar(1)
+  RASTRO : varchar(12)
+  DESENHO : varchar(24)
+  DESCR : varchar(40)
+  INSTRU : varchar(40)
+  NFORN : integer
+  FORNE : varchar(40)
+  PEDIDO : varchar(8)
+  NRNOTA : integer
+  NRNOTB : integer
+  DATANF : datetime
+  QTDE : decimal(12,3)
+  CERT : varchar(40)
+  LAUDOF : varchar(1)
+  DATAL : datetime
+  OBS01 : varchar(80)
+  OBS02 : varchar(80)
+  OBS03 : varchar(80)
+  OBS04 : varchar(80)
+  UNID : varchar(4)
+  TIPOENT : varchar(1)
+  APLICACAO : varchar(30)
+  AREA : varchar(2)
+  CARGO : varchar(40)
+  RESPO : varchar(40)
+  CLOTECRT : varchar(1)
+  CRM : integer
+  DATA : datetime
+  LLAUDO : boolean
+  CONTIG : boolean
+  QTAMO : integer
+  INSP : varchar(1)
+  --
+  .. Índices ..
+  + RIRM : RIRM
+  + RIRM-2 : RASTRO
+  + RIRM-3 : DESENHO
+  + RIRM-4 : NRNOTA
+  + RIRM-5 : DATA
+}
+
+entity "rirmi" as rirmi {
+  RIRM : integer
+  ITEM : integer
+  TIPA : varchar(3)
+  QTITEM : integer
+  ESPE : varchar(60)
+  ENCO : varchar(40)
+  LAUDO : varchar(1)
+  UNIITEM : varchar(4)
+  PULAAPU : varchar(1)
+  --
+  .. Índices ..
+  + RIRMI : RIRM
+}
+
+entity "rist" as rist {
+  RIST : integer
+  RASTRO : varchar(12)
+  TIPO : varchar(1)
+  NFORN : integer
+  FORNE : varchar(30)
+  CLASSI : varchar(1)
+  NF : integer
+  NFB : integer
+  DATANF : datetime
+  CERT : varchar(40)
+  CODIGO : varchar(24)
+  DENO : varchar(40)
+  NCLI : integer
+  CLIENTE : varchar(30)
+  OS : varchar(8)
+  INSP : varchar(1)
+  NIVEL : varchar(5)
+  QTAMO : integer
+  CORPO : varchar(1)
+  LAUDOF : varchar(1)
+  DATAL : datetime
+  OBS01 : varchar(60)
+  OBS02 : varchar(60)
+  DATA : datetime
+  UNID : varchar(4)
+  APLICACAO : varchar(25)
+  AREA : varchar(2)
+  CARGO : varchar(25)
+  RESPO : varchar(40)
+  CLOTECRT : varchar(1)
+  CRM : integer
+  LLAUDO : boolean
+  QTDE : decimal(10,3)
+  CONTIG : boolean
+  --
+  .. Índices ..
+  + RIST : RIST
+  + RIST-2 : RASTRO
+  + RIST-3 : CODIGO
+  + RIST-4 : NF
+  + RIST-5 : DATA
+}
+
+entity "risti" as risti {
+  RIST : integer
+  ITEM : integer
+  ESPE : varchar(60)
+  ENCO : varchar(45)
+  LAUDO : varchar(1)
+  TIPA : varchar(3)
+  DATAENV : datetime
+  HORAENV : varchar(5)
+  DATALAU : datetime
+  PULAAPU : varchar(1)
+  --
+  .. Índices ..
+  + RIST : RIST
+}
+
+
+@enduml

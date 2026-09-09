@@ -1,0 +1,1314 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "bti" as bti {
+  BTI : integer
+  CLIENTE : integer
+  CLINOME : varchar(50)
+  CODIGO : varchar(24)
+  NOME : varchar(50)
+  DUNS : varchar(20)
+  RFQ : varchar(20)
+  DATA : datetime
+  --
+  .. Índices ..
+  + BTI : BTI
+}
+
+entity "btii" as btii {
+  BTI : integer
+  QTDE : integer
+  DESCRICAO : varchar(80)
+  CAVIDADE : integer
+  PRECO : decimal(12,2)
+  CICLO : varchar(20)
+  CAPACIDA : varchar(20)
+  --
+  .. Índices ..
+  + BTI : BTI
+}
+
+entity "cd" as cd {
+  CD : integer
+  DIGCTR : varchar(1)
+  CHAVE : varchar(9)
+  DATA : datetime
+  CLIENTE : integer
+  CLINOME : varchar(50)
+  CLICOGN : varchar(15)
+  COMPRADOR : varchar(5)
+  COMPNOME : varchar(40)
+  PECA : varchar(24)
+  PROJETO : varchar(50)
+  NOME : varchar(100)
+  ENGENHA : varchar(50)
+  PLANTA : varchar(50)
+  DATAAUT : datetime
+  PT : boolean
+  PTQT : integer
+  FD : boolean
+  DC : boolean
+  PCMP : boolean
+  PCMO : boolean
+  MP : boolean
+  OUT : boolean
+  OUTOBS : varchar(80)
+  OBS01 : varchar(80)
+  OBS02 : varchar(80)
+  OBS03 : varchar(80)
+  OBS04 : varchar(80)
+  OBS05 : varchar(80)
+  DATADIM : varchar(80)
+  DATAPRO : varchar(80)
+  EP : boolean
+  MM : boolean
+  NT : boolean
+  FE : boolean
+  DE : boolean
+  AMO : boolean
+  OUTANX : boolean
+  OUTANXOBS : varchar(80)
+  FUNNUM : integer
+  FUNNOM : varchar(40)
+  DATAEMI : datetime
+  DATAOBS : datetime
+  OBSG01 : varchar(80)
+  OBSG02 : varchar(80)
+  OBSG03 : varchar(80)
+  ATUAL : boolean
+  LOTEANUAL : integer
+  SETOR : varchar(2)
+  CARGO : varchar(40)
+  RESPO : varchar(40)
+  CODIGOINT : varchar(24)
+  LOTEENTR : integer
+  RET : boolean
+  VALPEC : decimal(10,5)
+  IMPOSTO : varchar(1)
+  CPAGP : varchar(50)
+  CEMB : varchar(50)
+  FRETE : varchar(1)
+  FERRA : decimal(10,2)
+  IMPFER : varchar(1)
+  CPAGF : varchar(50)
+  OBSC01 : varchar(80)
+  OBSC02 : varchar(80)
+  OBSC03 : varchar(80)
+  NUMPRE : integer
+  NOMPRE : varchar(50)
+  DATAPRE : datetime
+  VIABILI : integer
+  CODCLI : varchar(15)
+  --
+  .. Índices ..
+  + CD-1 : CHAVE
+  + CD-2 : PECA
+  + CD-3 : CODIGOINT
+  + CD-4 : STR(CLIENTE,8)+PECA
+  + CD-5 : VIABILI
+}
+
+entity "cdapuprd" as cdapuprd {
+  CD : integer
+  ANO : integer
+  CODIGO : varchar(24)
+  CODIGOINT : varchar(24)
+  DATAINI : datetime
+  DATAPRO : datetime
+  EAC : integer
+  ATIVA : varchar(1)
+  MES01 : integer
+  MES02 : integer
+  MES03 : integer
+  MES04 : integer
+  MES05 : integer
+  MES06 : integer
+  MES07 : integer
+  MES08 : integer
+  MES09 : integer
+  MES10 : integer
+  MES11 : integer
+  MES12 : integer
+  PRC01 : decimal(8,4)
+  PRC02 : decimal(8,4)
+  PRC03 : decimal(8,4)
+  PRC04 : decimal(8,4)
+  PRC05 : decimal(8,4)
+  PRC06 : decimal(8,4)
+  PRC07 : decimal(8,4)
+  PRC08 : decimal(8,4)
+  PRC09 : decimal(8,4)
+  PRC10 : decimal(8,4)
+  PRC11 : decimal(8,4)
+  PRC12 : decimal(8,4)
+  MESESF : integer
+  MESESP : integer
+  PRECO : decimal(8,4)
+  CLIENTE : integer
+  COGCLI : varchar(15)
+  --
+  .. Índices ..
+  + CD01 : CD
+  + CD02 : STR(ANO,4)+CODIGO
+  + CD03 : CODIGO+STR(ANO,4)
+  + CD04 : CODIGOINT+STR(ANO,4)
+}
+
+entity "cdi" as cdi {
+  CD : integer
+  DIGCTR : varchar(1)
+  CHAVE : varchar(9)
+  DESENHO : varchar(24)
+  DESTEM : boolean
+  REV : varchar(20)
+  DATAREV : datetime
+  --
+  .. Índices ..
+  + CHAVE : CHAVE
+}
+
+entity "declmot" as declmot {
+  NUMERO : integer
+  NOME : varchar(40)
+  --
+  .. Índices ..
+  + DECLMOT : NUMERO
+}
+
+entity "esc" as esc {
+  CLIENTE : integer
+  COGCLI : varchar(12)
+  CODIGO : varchar(24)
+  NOME : varchar(75)
+  VCOM : decimal(7,4)
+  VCOMI : decimal(7,4)
+  VCOML : decimal(7,4)
+  VMAT : decimal(9,4)
+  VMATI : decimal(9,4)
+  VMATL : decimal(9,4)
+  VTER : decimal(7,4)
+  VMAOM : decimal(7,4)
+  VMAOO : decimal(7,4)
+  VREJ : decimal(7,4)
+  VMAR : decimal(9,4)
+  FMAR : decimal(7,4)
+  PUF : varchar(2)
+  PMAK : decimal(5,2)
+  PICM : decimal(5,2)
+  PMAR : decimal(5,2)
+  LANU : integer
+  LMES : integer
+  LMIN : integer
+  VFER : decimal(10,2)
+  VFERHR : integer
+  VFERID : decimal(6,2)
+  PRAZO : datetime
+  PVEN : decimal(9,4)
+  PVEN2 : decimal(9,4)
+  PREF : decimal(9,4)
+  DLUC : decimal(7,2)
+  DPRE : decimal(7,2)
+  OBS01 : varchar(80)
+  OBS02 : varchar(80)
+  OBS03 : varchar(80)
+  OBS04 : varchar(80)
+  OBS05 : varchar(80)
+  OBS06 : varchar(80)
+  OBS07 : varchar(80)
+  OBS08 : varchar(80)
+  OBC01 : varchar(80)
+  OBC02 : varchar(80)
+  OBC03 : varchar(80)
+  OBC04 : varchar(80)
+  OBC05 : varchar(80)
+  OBE01 : varchar(60)
+  OBE02 : varchar(60)
+  OBE03 : varchar(60)
+  SUBTOT01 : decimal(9,4)
+  SUBTOT02 : decimal(9,4)
+  REV : varchar(1)
+  VIABILI : integer
+  DUNS : varchar(5)
+  PROJETO : varchar(5)
+  NIVELDAT : datetime
+  VIGENDAT : datetime
+  DATA : datetime
+  USUMEDIO : decimal(7,2)
+  ELANUM : integer
+  ELANOM : varchar(40)
+  ELADAT : datetime
+  ELAHOR : varchar(8)
+  PCPRGMED : integer
+  TIPOIMP : varchar(1)
+  PPIS : decimal(5,2)
+  PCON : decimal(5,2)
+  TIPMEDIA : varchar(1)
+  PLUC : decimal(5,2)
+  PADM : decimal(5,2)
+  PCOM : decimal(5,2)
+  PCPM : decimal(5,2)
+  LICM : boolean
+  PRRJ : decimal(5,2)
+  CAPPRO : varchar(5)
+  OV : integer
+  DATACALC : datetime
+  OVORI : integer
+  PISCON : varchar(1)
+  VTERI : decimal(7,4)
+  VTERL : decimal(7,4)
+  OBSP01 : varchar(60)
+  OBSP02 : varchar(60)
+  OVREV : varchar(1)
+  VSIMP : decimal(7,4)
+  --
+  .. Índices ..
+  + OV : OV
+  + CODIGO : CODIGO
+  + VIABILI : VIABILI
+}
+
+entity "escms03" as escms03 {
+  OV : integer
+  CODIGO : varchar(24)
+  TIPOENT : varchar(1)
+  CODCOMP : varchar(24)
+  NOMECOMP : varchar(120)
+  ORIGEM : varchar(20)
+  QTDDE : decimal(10,5)
+  PRECO : decimal(12,4)
+  TOTAL : decimal(12,4)
+  IICM : boolean
+  REDICM : decimal(6,2)
+  CODFOLHA : integer
+  OBS01 : varchar(80)
+  ULTDATA : datetime
+  ULTUND : varchar(2)
+  --
+  .. Índices ..
+  + OV : OV
+}
+
+entity "escms06" as escms06 {
+  OV : integer
+  CODIGO : varchar(24)
+  SEQ : integer
+  SSQ : integer
+  DESCRI : varchar(70)
+  CODMP01 : varchar(12)
+  NOMMP01 : varchar(30)
+  CODMP02 : varchar(12)
+  NOMMP02 : varchar(30)
+  CODMP02B : varchar(12)
+  NOMMP02B : varchar(30)
+  CODMP02C : varchar(12)
+  NOMMP02C : varchar(30)
+  CODMP02D : varchar(12)
+  NOMMP02D : varchar(30)
+  CODMP03 : varchar(24)
+  NOMMP03 : varchar(30)
+  PCHORA : integer
+  AREA : varchar(2)
+  HRFER : integer
+  CODFOLHA : integer
+  PRECO : decimal(12,4)
+  QTDDE : decimal(10,5)
+  TOTAL : decimal(12,4)
+  COGMP01 : varchar(10)
+  PCMEDIA : integer
+  FLUXO : integer
+  FATOR : decimal(5,2)
+  --
+  .. Índices ..
+  + OV : OV
+}
+
+entity "esf" as esf {
+  CLIENTE : integer
+  COGCLI : varchar(12)
+  CODIGO : varchar(24)
+  NOME : varchar(75)
+  VCOM : decimal(7,4)
+  VCOMI : decimal(7,4)
+  VCOML : decimal(7,4)
+  VMAT : decimal(9,4)
+  VMATI : decimal(9,4)
+  VMATL : decimal(9,4)
+  VTER : decimal(7,4)
+  VMAOM : decimal(7,4)
+  VMAOO : decimal(7,4)
+  VREJ : decimal(7,4)
+  VMAR : decimal(9,4)
+  FMAR : decimal(7,4)
+  PUF : varchar(2)
+  PMAK : decimal(5,2)
+  PICM : decimal(5,2)
+  PMAR : decimal(5,2)
+  LANU : integer
+  LMES : integer
+  LMIN : integer
+  VFER : decimal(10,2)
+  VFERHR : integer
+  VFERID : decimal(6,2)
+  PRAZO : datetime
+  PVEN : decimal(9,4)
+  PVEN2 : decimal(9,4)
+  PREF : decimal(9,4)
+  DLUC : decimal(7,2)
+  DPRE : decimal(7,2)
+  OBS01 : varchar(80)
+  OBS02 : varchar(80)
+  OBS03 : varchar(80)
+  OBS04 : varchar(80)
+  OBS05 : varchar(80)
+  OBS06 : varchar(80)
+  OBS07 : varchar(80)
+  OBS08 : varchar(80)
+  OBC01 : varchar(80)
+  OBC02 : varchar(80)
+  OBC03 : varchar(80)
+  OBC04 : varchar(80)
+  OBC05 : varchar(80)
+  OBE01 : varchar(60)
+  OBE02 : varchar(60)
+  OBE03 : varchar(60)
+  SUBTOT01 : decimal(9,4)
+  SUBTOT02 : decimal(9,4)
+  REV : varchar(1)
+  VIABILI : integer
+  DUNS : varchar(5)
+  PROJETO : varchar(5)
+  NIVELDAT : datetime
+  VIGENDAT : datetime
+  DATA : datetime
+  USUMEDIO : decimal(7,2)
+  ELANUM : integer
+  ELANOM : varchar(40)
+  ELADAT : datetime
+  ELAHOR : varchar(8)
+  PCPRGMED : integer
+  TIPOIMP : varchar(1)
+  PPIS : decimal(5,2)
+  PCON : decimal(5,2)
+  TIPMEDIA : varchar(1)
+  PLUC : decimal(5,2)
+  PADM : decimal(5,2)
+  PCOM : decimal(5,2)
+  PCPM : decimal(5,2)
+  LICM : boolean
+  PRRJ : decimal(5,2)
+  CAPPRO : varchar(5)
+  OV : integer
+  DATACALC : datetime
+  OVORI : integer
+  PISCON : varchar(1)
+  VTERI : decimal(7,4)
+  VTERL : decimal(7,4)
+  OBSP01 : varchar(60)
+  OBSP02 : varchar(60)
+  OVREV : varchar(1)
+  VSIMP : decimal(7,4)
+  --
+  .. Índices ..
+  + OV : OV
+  + CODIGO : CODIGO
+  + VIABILI : VIABILI
+}
+
+entity "esfms03" as esfms03 {
+  OV : integer
+  CODIGO : varchar(24)
+  TIPOENT : varchar(1)
+  CODCOMP : varchar(24)
+  NOMECOMP : varchar(120)
+  ORIGEM : varchar(20)
+  QTDDE : decimal(10,5)
+  PRECO : decimal(12,4)
+  TOTAL : decimal(12,4)
+  IICM : boolean
+  REDICM : decimal(6,2)
+  CODFOLHA : integer
+  OBS01 : varchar(80)
+  ULTDATA : datetime
+  ULTUND : varchar(2)
+  --
+  .. Índices ..
+  + OV : OV
+}
+
+entity "esfms06" as esfms06 {
+  OV : integer
+  CODIGO : varchar(24)
+  SEQ : integer
+  SSQ : integer
+  DESCRI : varchar(70)
+  CODMP01 : varchar(12)
+  NOMMP01 : varchar(30)
+  CODMP02 : varchar(12)
+  NOMMP02 : varchar(30)
+  CODMP02B : varchar(12)
+  NOMMP02B : varchar(30)
+  CODMP02C : varchar(12)
+  NOMMP02C : varchar(30)
+  CODMP02D : varchar(12)
+  NOMMP02D : varchar(30)
+  CODMP03 : varchar(24)
+  NOMMP03 : varchar(30)
+  PCHORA : integer
+  AREA : varchar(2)
+  HRFER : integer
+  CODFOLHA : integer
+  PRECO : decimal(12,4)
+  QTDDE : decimal(10,5)
+  TOTAL : decimal(12,4)
+  COGMP01 : varchar(10)
+  PCMEDIA : integer
+  FLUXO : integer
+  FATOR : decimal(5,2)
+  --
+  .. Índices ..
+  + OV : OV
+}
+
+entity "eso" as eso {
+  CLIENTE : integer
+  COGCLI : varchar(12)
+  CODIGO : varchar(24)
+  NOME : varchar(75)
+  VCOM : decimal(7,4)
+  VCOMI : decimal(7,4)
+  VCOML : decimal(7,4)
+  VMAT : decimal(9,4)
+  VMATI : decimal(9,4)
+  VMATL : decimal(9,4)
+  VTER : decimal(7,4)
+  VMAOM : decimal(7,4)
+  VMAOO : decimal(7,4)
+  VREJ : decimal(7,4)
+  VMAR : decimal(9,4)
+  FMAR : decimal(7,4)
+  PUF : varchar(2)
+  PMAK : decimal(5,2)
+  PICM : decimal(5,2)
+  PMAR : decimal(5,2)
+  LANU : integer
+  LMES : integer
+  LMIN : integer
+  VFER : decimal(10,2)
+  VFERHR : integer
+  VFERID : decimal(6,2)
+  PRAZO : datetime
+  PVEN : decimal(9,4)
+  PVEN2 : decimal(9,4)
+  PREF : decimal(9,4)
+  DLUC : decimal(7,2)
+  DPRE : decimal(7,2)
+  OBS01 : varchar(80)
+  OBS02 : varchar(80)
+  OBS03 : varchar(80)
+  OBS04 : varchar(80)
+  OBS05 : varchar(80)
+  OBS06 : varchar(80)
+  OBS07 : varchar(80)
+  OBS08 : varchar(80)
+  OBC01 : varchar(80)
+  OBC02 : varchar(80)
+  OBC03 : varchar(80)
+  OBC04 : varchar(80)
+  OBC05 : varchar(80)
+  OBE01 : varchar(60)
+  OBE02 : varchar(60)
+  OBE03 : varchar(60)
+  SUBTOT01 : decimal(9,4)
+  SUBTOT02 : decimal(9,4)
+  REV : varchar(1)
+  VIABILI : integer
+  DUNS : varchar(5)
+  PROJETO : varchar(5)
+  NIVELDAT : datetime
+  VIGENDAT : datetime
+  DATA : datetime
+  USUMEDIO : decimal(7,2)
+  ELANUM : integer
+  ELANOM : varchar(40)
+  ELADAT : datetime
+  ELAHOR : varchar(8)
+  PCPRGMED : integer
+  TIPOIMP : varchar(1)
+  PPIS : decimal(5,2)
+  PCON : decimal(5,2)
+  TIPMEDIA : varchar(1)
+  PLUC : decimal(5,2)
+  PADM : decimal(5,2)
+  PCOM : decimal(5,2)
+  PCPM : decimal(5,2)
+  LICM : boolean
+  PRRJ : decimal(5,2)
+  CAPPRO : varchar(5)
+  OV : integer
+  DATACALC : datetime
+  OVORI : integer
+  PISCON : varchar(1)
+  VTERI : decimal(7,4)
+  VTERL : decimal(7,4)
+  OBSP01 : varchar(60)
+  OBSP02 : varchar(60)
+  OVREV : varchar(1)
+  VSIMP : decimal(7,4)
+  --
+  .. Índices ..
+  + OV : OV
+  + CODIGO : CODIGO
+  + VIABILI : VIABILI
+}
+
+entity "esoms03" as esoms03 {
+  OV : integer
+  CODIGO : varchar(24)
+  TIPOENT : varchar(1)
+  CODCOMP : varchar(24)
+  NOMECOMP : varchar(120)
+  ORIGEM : varchar(20)
+  QTDDE : decimal(10,5)
+  PRECO : decimal(12,4)
+  TOTAL : decimal(12,4)
+  IICM : boolean
+  REDICM : decimal(6,2)
+  CODFOLHA : integer
+  OBS01 : varchar(80)
+  ULTDATA : datetime
+  ULTUND : varchar(2)
+  --
+  .. Índices ..
+  + OV : OV
+}
+
+entity "esoms06" as esoms06 {
+  OV : integer
+  CODIGO : varchar(24)
+  SEQ : integer
+  SSQ : integer
+  DESCRI : varchar(70)
+  CODMP01 : varchar(12)
+  NOMMP01 : varchar(30)
+  CODMP02 : varchar(12)
+  NOMMP02 : varchar(30)
+  CODMP02B : varchar(12)
+  NOMMP02B : varchar(30)
+  CODMP02C : varchar(12)
+  NOMMP02C : varchar(30)
+  CODMP02D : varchar(12)
+  NOMMP02D : varchar(30)
+  CODMP03 : varchar(24)
+  NOMMP03 : varchar(30)
+  PCHORA : integer
+  AREA : varchar(2)
+  HRFER : integer
+  CODFOLHA : integer
+  PRECO : decimal(12,4)
+  QTDDE : decimal(10,5)
+  TOTAL : decimal(12,4)
+  COGMP01 : varchar(10)
+  PCMEDIA : integer
+  FLUXO : integer
+  FATOR : decimal(5,2)
+}
+
+entity "esp" as esp {
+  CLIENTE : integer
+  COGCLI : varchar(12)
+  CODIGO : varchar(24)
+  NOME : varchar(75)
+  VCOM : decimal(7,4)
+  VCOMI : decimal(7,4)
+  VCOML : decimal(7,4)
+  VMAT : decimal(9,4)
+  VMATI : decimal(9,4)
+  VMATL : decimal(9,4)
+  VTER : decimal(7,4)
+  VMAOM : decimal(7,4)
+  VMAOO : decimal(7,4)
+  VREJ : decimal(7,4)
+  VMAR : decimal(9,4)
+  FMAR : decimal(7,4)
+  PUF : varchar(2)
+  PMAK : decimal(5,2)
+  PICM : decimal(5,2)
+  PMAR : decimal(5,2)
+  LANU : integer
+  LMES : integer
+  LMIN : integer
+  VFER : decimal(10,2)
+  VFERHR : integer
+  VFERID : decimal(6,2)
+  PRAZO : datetime
+  PVEN : decimal(9,4)
+  PVEN2 : decimal(9,4)
+  PREF : decimal(9,4)
+  DLUC : decimal(7,2)
+  DPRE : decimal(7,2)
+  OBS01 : varchar(80)
+  OBS02 : varchar(80)
+  OBS03 : varchar(80)
+  OBS04 : varchar(80)
+  OBS05 : varchar(80)
+  OBS06 : varchar(80)
+  OBS07 : varchar(80)
+  OBS08 : varchar(80)
+  OBC01 : varchar(80)
+  OBC02 : varchar(80)
+  OBC03 : varchar(80)
+  OBC04 : varchar(80)
+  OBC05 : varchar(80)
+  OBE01 : varchar(60)
+  OBE02 : varchar(60)
+  OBE03 : varchar(60)
+  SUBTOT01 : decimal(9,4)
+  SUBTOT02 : decimal(9,4)
+  REV : varchar(1)
+  VIABILI : integer
+  DUNS : varchar(5)
+  PROJETO : varchar(5)
+  NIVELDAT : datetime
+  VIGENDAT : datetime
+  DATA : datetime
+  USUMEDIO : decimal(7,2)
+  ELANUM : integer
+  ELANOM : varchar(40)
+  ELADAT : datetime
+  ELAHOR : varchar(8)
+  PCPRGMED : integer
+  TIPOIMP : varchar(1)
+  PPIS : decimal(5,2)
+  PCON : decimal(5,2)
+  TIPMEDIA : varchar(1)
+  PLUC : decimal(5,2)
+  PADM : decimal(5,2)
+  PCOM : decimal(5,2)
+  PCPM : decimal(5,2)
+  LICM : boolean
+  PRRJ : decimal(5,2)
+  CAPPRO : varchar(5)
+  OV : integer
+  DATACALC : datetime
+  OVORI : integer
+  PISCON : varchar(1)
+  VTERI : decimal(7,4)
+  VTERL : decimal(7,4)
+  OBSP01 : varchar(60)
+  OBSP02 : varchar(60)
+  OVREV : varchar(1)
+  VSIMP : decimal(7,4)
+  --
+  .. Índices ..
+  + OV : OV
+  + CODIGO : CODIGO
+  + VIABILI : VIABILI
+}
+
+entity "espms03" as espms03 {
+  OV : integer
+  CODIGO : varchar(24)
+  TIPOENT : varchar(1)
+  CODCOMP : varchar(24)
+  NOMECOMP : varchar(120)
+  ORIGEM : varchar(20)
+  QTDDE : decimal(10,5)
+  PRECO : decimal(12,4)
+  TOTAL : decimal(12,4)
+  IICM : boolean
+  REDICM : decimal(6,2)
+  CODFOLHA : integer
+  OBS01 : varchar(80)
+  ULTDATA : datetime
+  ULTUND : varchar(2)
+  --
+  .. Índices ..
+  + OV : OV
+}
+
+entity "espms06" as espms06 {
+  OV : integer
+  CODIGO : varchar(24)
+  SEQ : integer
+  SSQ : integer
+  DESCRI : varchar(70)
+  CODMP01 : varchar(12)
+  NOMMP01 : varchar(30)
+  CODMP02 : varchar(12)
+  NOMMP02 : varchar(30)
+  CODMP02B : varchar(12)
+  NOMMP02B : varchar(30)
+  CODMP02C : varchar(12)
+  NOMMP02C : varchar(30)
+  CODMP02D : varchar(12)
+  NOMMP02D : varchar(30)
+  CODMP03 : varchar(24)
+  NOMMP03 : varchar(30)
+  PCHORA : integer
+  AREA : varchar(2)
+  HRFER : integer
+  CODFOLHA : integer
+  PRECO : decimal(12,4)
+  QTDDE : decimal(10,5)
+  TOTAL : decimal(12,4)
+  COGMP01 : varchar(10)
+  PCMEDIA : integer
+  FLUXO : integer
+  FATOR : decimal(5,2)
+  --
+  .. Índices ..
+  + OV : OV
+}
+
+entity "fluxo" as fluxo {
+  CODIGO : varchar(1)
+  NOME : varchar(50)
+  NUMERO : integer
+  --
+  .. Índices ..
+  + FLUXO-1 : NUMERO
+}
+
+entity "np" as np {
+  NP : integer
+  CODIGO : varchar(24)
+  NOME : varchar(40)
+  CLIENTE : integer
+  CLINOME : varchar(40)
+  VEICULO : varchar(20)
+  PRSICM : decimal(10,4)
+  PRCICM : decimal(10,4)
+  VLFER : decimal(12,2)
+  PRAZO : datetime
+  QTDMES : integer
+  COMPRADOR : varchar(5)
+  COMPNOME : varchar(40)
+  DESANUAL : integer
+  OS : varchar(20)
+  ANO : integer
+  PENDENTE : boolean
+  --
+  .. Índices ..
+  + NP : NP
+  + CLIENTE : CLIENTE
+  + CODIGO : CODIGO
+}
+
+entity "orca" as orca {
+  ORCA : integer
+  CLIENTE : integer
+  CLINOME : varchar(50)
+  AC : varchar(40)
+  REFER : varchar(20)
+  DATA : datetime
+  ORC : varchar(40)
+  ORC01 : varchar(100)
+  ORC02 : varchar(100)
+  PRAZO : varchar(150)
+  PRAZ2 : varchar(150)
+  PRAZ3 : varchar(150)
+  PRAZ4 : varchar(150)
+  CPAG : varchar(50)
+  CFER : varchar(100)
+  CVAL : varchar(20)
+  OBS01 : varchar(200)
+  OBS02 : varchar(200)
+  OBS03 : varchar(200)
+  OBS04 : varchar(200)
+  OBS05 : varchar(200)
+  OBS06 : varchar(200)
+  OBS07 : varchar(200)
+  OBS08 : varchar(200)
+  SETOR : varchar(2)
+  CARGO : varchar(40)
+  RESPO : varchar(40)
+  NIVEL : datetime
+  CAMBIO : varchar(15)
+  REVI : varchar(1)
+  --
+  .. Índices ..
+  + ORCA : ORCA
+}
+
+entity "orcai" as orcai {
+  ORCA : integer
+  ORD : integer
+  QTDDE : integer
+  UNID : varchar(2)
+  DESCR : varchar(100)
+  UNIPEC : varchar(2)
+  VALPEC : decimal(10,5)
+  FERRA : decimal(10,2)
+  LOTEMIN : integer
+  VIABILI : integer
+  OBSITEM : varchar(80)
+  OBSITE2 : varchar(80)
+  OBSITE3 : varchar(80)
+  OBSITE4 : varchar(80)
+  OBSITE5 : varchar(80)
+  DESENHO : varchar(20)
+  REV : varchar(20)
+  DATAREV : varchar(10)
+  --
+  .. Índices ..
+  + ORCA : ORCA
+}
+
+entity "vfms03" as vfms03 {
+  OV : integer
+  CODIGO : varchar(24)
+  TIPOENT : varchar(1)
+  CODCOMP : varchar(24)
+  NOMECOMP : varchar(120)
+  ORIGEM : varchar(20)
+  QTDDE : decimal(10,5)
+  PRECO : decimal(12,4)
+  TOTAL : decimal(12,4)
+  IICM : boolean
+  REDICM : decimal(6,2)
+  CODFOLHA : integer
+  OBS01 : varchar(80)
+  ULTDATA : datetime
+  ULTUND : varchar(2)
+  --
+  .. Índices ..
+  + OV : OV
+}
+
+entity "vfms06" as vfms06 {
+  OV : integer
+  CODIGO : varchar(24)
+  SEQ : integer
+  SSQ : integer
+  DESCRI : varchar(70)
+  CODMP01 : varchar(12)
+  NOMMP01 : varchar(30)
+  CODMP02 : varchar(12)
+  NOMMP02 : varchar(30)
+  CODMP02B : varchar(12)
+  NOMMP02B : varchar(30)
+  CODMP02C : varchar(12)
+  NOMMP02C : varchar(30)
+  CODMP02D : varchar(12)
+  NOMMP02D : varchar(30)
+  CODMP03 : varchar(24)
+  NOMMP03 : varchar(30)
+  PCHORA : integer
+  AREA : varchar(2)
+  HRFER : integer
+  CODFOLHA : integer
+  PRECO : decimal(12,4)
+  QTDDE : decimal(10,5)
+  TOTAL : decimal(12,4)
+  COGMP01 : varchar(10)
+  PCMEDIA : integer
+  FLUXO : integer
+  FATOR : decimal(5,2)
+  --
+  .. Índices ..
+  + OV : OV
+}
+
+entity "vforc" as vforc {
+  CLIENTE : integer
+  COGCLI : varchar(12)
+  CODIGO : varchar(24)
+  NOME : varchar(75)
+  VCOM : decimal(7,4)
+  VCOMI : decimal(7,4)
+  VCOML : decimal(7,4)
+  VMAT : decimal(9,4)
+  VMATI : decimal(9,4)
+  VMATL : decimal(9,4)
+  VTER : decimal(7,4)
+  VMAOM : decimal(7,4)
+  VMAOO : decimal(7,4)
+  VREJ : decimal(7,4)
+  VMAR : decimal(9,4)
+  FMAR : decimal(7,4)
+  PUF : varchar(2)
+  PMAK : decimal(5,2)
+  PICM : decimal(5,2)
+  PMAR : decimal(5,2)
+  LANU : integer
+  LMES : integer
+  LMIN : integer
+  VFER : decimal(10,2)
+  VFERHR : integer
+  VFERID : decimal(6,2)
+  PRAZO : datetime
+  PVEN : decimal(9,4)
+  PVEN2 : decimal(9,4)
+  PREF : decimal(9,4)
+  DLUC : decimal(7,2)
+  DPRE : decimal(7,2)
+  OBS01 : varchar(80)
+  OBS02 : varchar(80)
+  OBS03 : varchar(80)
+  OBS04 : varchar(80)
+  OBS05 : varchar(80)
+  OBS06 : varchar(80)
+  OBS07 : varchar(80)
+  OBS08 : varchar(80)
+  OBC01 : varchar(80)
+  OBC02 : varchar(80)
+  OBC03 : varchar(80)
+  OBC04 : varchar(80)
+  OBC05 : varchar(80)
+  OBE01 : varchar(60)
+  OBE02 : varchar(60)
+  OBE03 : varchar(60)
+  SUBTOT01 : decimal(9,4)
+  SUBTOT02 : decimal(9,4)
+  REV : varchar(1)
+  VIABILI : integer
+  DUNS : varchar(5)
+  PROJETO : varchar(5)
+  NIVELDAT : datetime
+  VIGENDAT : datetime
+  DATA : datetime
+  USUMEDIO : decimal(7,2)
+  ELANUM : integer
+  ELANOM : varchar(40)
+  ELADAT : datetime
+  ELAHOR : varchar(8)
+  PCPRGMED : integer
+  TIPOIMP : varchar(1)
+  PPIS : decimal(5,2)
+  PCON : decimal(5,2)
+  TIPMEDIA : varchar(1)
+  PLUC : decimal(5,2)
+  PADM : decimal(5,2)
+  PCOM : decimal(5,2)
+  PCPM : decimal(5,2)
+  LICM : boolean
+  PRRJ : decimal(5,2)
+  CAPPRO : varchar(5)
+  OV : integer
+  DATACALC : datetime
+  OVORI : integer
+  PISCON : varchar(1)
+  VTERI : decimal(7,4)
+  VTERL : decimal(7,4)
+  OBSP01 : varchar(60)
+  OBSP02 : varchar(60)
+  OVREV : varchar(1)
+  VSIMP : decimal(7,4)
+  --
+  .. Índices ..
+  + OV : OV
+  + CODIGO : CODIGO
+  + VIABILI : VIABILI
+}
+
+entity "viabiii" as viabiii {
+  OV : integer
+  ITEM : integer
+  TIPO : varchar(1)
+  REV : varchar(10)
+  SITUACAO : varchar(1)
+  SITUSER : varchar(10)
+  SITDATA : datetime
+  SITHORA : varchar(10)
+  PRECO : decimal(12,2)
+  PRECODT : datetime
+  PRECOUN : varchar(2)
+  CLIFOR : integer
+  CLICOG : varchar(12)
+  APROVACAO : varchar(1)
+  APRUSER : varchar(10)
+  APRDATA : datetime
+  APRTIME : varchar(10)
+  COTUSR : varchar(10)
+  COTDATA : datetime
+  COTTIME : varchar(10)
+  DATALC : datetime
+  PRAZOI : datetime
+  DADO : longtext
+  SITOBS : longtext
+  APROBS : longtext
+  --
+  .. Índices ..
+  + OVITEM : STR(OV,8)+STR(ITEM,3)
+  + OV : OV
+}
+
+entity "viabili" as viabili {
+  OV : integer
+  OVORI : integer
+  CLIENTE : integer
+  CLINOME : varchar(50)
+  CLICOGN : varchar(12)
+  COMCOMP : varchar(40)
+  COMPRADOR : varchar(5)
+  DESENHO : varchar(20)
+  PECA : varchar(20)
+  GPS : varchar(20)
+  DENOMINA : varchar(100)
+  NORMAT : varchar(10)
+  AM : varchar(1)
+  QTDEANO : integer
+  LOTEMIN : integer
+  PR : varchar(1)
+  DATAS : datetime
+  COTAR : varchar(1)
+  DATAV : datetime
+  DATAEC : datetime
+  SITUACAO : varchar(1)
+  EAC : varchar(35)
+  VIAVEL : varchar(1)
+  VIA01 : varchar(50)
+  VIA02 : varchar(50)
+  FESP : varchar(1)
+  OBSF01 : varchar(50)
+  OBSF02 : varchar(50)
+  MATM : varchar(1)
+  MATS : varchar(1)
+  OBSM01 : varchar(50)
+  TRATM : varchar(1)
+  TRATS : varchar(1)
+  OBST01 : varchar(50)
+  OBST02 : varchar(50)
+  DISPE : varchar(1)
+  OBSE01 : varchar(50)
+  OBSE02 : varchar(50)
+  DISPO : varchar(1)
+  OBSO01 : varchar(50)
+  OBSG01 : varchar(80)
+  OBSG02 : varchar(80)
+  OBSG03 : varchar(80)
+  OBSG04 : varchar(80)
+  OBSG05 : varchar(80)
+  OBSG06 : varchar(80)
+  OBSG07 : varchar(80)
+  OBSG08 : varchar(80)
+  COT01 : boolean
+  COT02 : boolean
+  COT03 : boolean
+  COT04 : boolean
+  COT05 : boolean
+  COT06 : boolean
+  COT07 : boolean
+  REQC : varchar(1)
+  REQ01 : varchar(50)
+  PEDCLI : varchar(20)
+  PRZCLI : datetime
+  DATAPRE : datetime
+  OBSVEN : varchar(100)
+  VALORFER : decimal(12,2)
+  VALORUNI : decimal(12,4)
+  QTDENEG : integer
+  ORCAMENTO : integer
+  ITEM : integer
+  FVALORFER : decimal(12,2)
+  FVALORUNI : decimal(12,4)
+  FDATA : datetime
+  INCUSER : varchar(10)
+  INCDATA : datetime
+  INCHORA : varchar(10)
+  ESP : integer
+  OBSCUS01 : varchar(100)
+  OBSCUS02 : varchar(100)
+  OBSCUS03 : varchar(100)
+  RFQN : varchar(15)
+  DUNS : varchar(30)
+  PROJETO : varchar(20)
+  RISCO : varchar(1)
+  OBSR01 : varchar(50)
+  TIPOVIA : varchar(1)
+  CODIGOINT : varchar(24)
+  REV : varchar(1)
+  OBSCLI : varchar(50)
+  DESORC : varchar(24)
+  DESORCREV : varchar(20)
+  DESORCDAT : datetime
+  CANCELADO : boolean
+  ENVELOPE : varchar(5)
+  DECLINADO : boolean
+  FOLLOWUP : boolean
+  GI : varchar(1)
+  SEGMENTO : varchar(2)
+  DECLMOT : integer
+  VENDEDOR : varchar(5)
+  COMVEND : varchar(40)
+  --
+  .. Índices ..
+  + CODIGOIN : CODIGOINT
+  + OV : OV
+  + DESENHO : DESENHO
+  + PEDCLI : PEDCLI
+  + CODIGOINT : CODIGOINT
+}
+
+entity "viarev" as viarev {
+  OV : integer
+  OPR : varchar(1)
+  REV : varchar(1)
+  DATA : datetime
+  HORA : varchar(8)
+  USUARIO : varchar(10)
+  MOTIVO : varchar(255)
+  --
+  .. Índices ..
+  + VIAREV : OV
+}
+
+entity "vmark" as vmark {
+  SEQ : integer
+  DESCRI : varchar(12)
+  PERCE : decimal(6,2)
+  --
+  .. Índices ..
+  + SEQ : SEQ
+}
+
+entity "vms03" as vms03 {
+  OV : integer
+  CODIGO : varchar(24)
+  TIPOENT : varchar(1)
+  CODCOMP : varchar(24)
+  NOMECOMP : varchar(120)
+  ORIGEM : varchar(20)
+  QTDDE : decimal(10,5)
+  PRECO : decimal(12,4)
+  TOTAL : decimal(12,4)
+  IICM : boolean
+  REDICM : decimal(6,2)
+  CODFOLHA : integer
+  OBS01 : varchar(80)
+  ULTDATA : datetime
+  ULTUND : varchar(2)
+  --
+  .. Índices ..
+  + OV : OV
+}
+
+entity "vms06" as vms06 {
+  OV : integer
+  CODIGO : varchar(24)
+  SEQ : integer
+  SSQ : integer
+  DESCRI : varchar(70)
+  CODMP01 : varchar(12)
+  NOMMP01 : varchar(30)
+  CODMP02 : varchar(12)
+  NOMMP02 : varchar(30)
+  CODMP02B : varchar(12)
+  NOMMP02B : varchar(30)
+  CODMP02C : varchar(12)
+  NOMMP02C : varchar(30)
+  CODMP02D : varchar(12)
+  NOMMP02D : varchar(30)
+  CODMP03 : varchar(24)
+  NOMMP03 : varchar(30)
+  PCHORA : integer
+  AREA : varchar(2)
+  HRFER : integer
+  CODFOLHA : integer
+  PRECO : decimal(12,4)
+  QTDDE : decimal(10,5)
+  TOTAL : decimal(12,4)
+  COGMP01 : varchar(10)
+  PCMEDIA : integer
+  FLUXO : integer
+  FATOR : decimal(5,2)
+  --
+  .. Índices ..
+  + OV : OV
+}
+
+entity "vporc" as vporc {
+  CLIENTE : integer
+  COGCLI : varchar(12)
+  CODIGO : varchar(24)
+  NOME : varchar(75)
+  VCOM : decimal(7,4)
+  VCOMI : decimal(7,4)
+  VCOML : decimal(7,4)
+  VMAT : decimal(9,4)
+  VMATI : decimal(9,4)
+  VMATL : decimal(9,4)
+  VTER : decimal(7,4)
+  VMAOM : decimal(7,4)
+  VMAOO : decimal(7,4)
+  VREJ : decimal(7,4)
+  VMAR : decimal(9,4)
+  FMAR : decimal(7,4)
+  PUF : varchar(2)
+  PMAK : decimal(5,2)
+  PICM : decimal(5,2)
+  PMAR : decimal(5,2)
+  LANU : integer
+  LMES : integer
+  LMIN : integer
+  VFER : decimal(10,2)
+  VFERHR : integer
+  VFERID : decimal(6,2)
+  PRAZO : datetime
+  PVEN : decimal(9,4)
+  PVEN2 : decimal(9,4)
+  PREF : decimal(9,4)
+  DLUC : decimal(7,2)
+  DPRE : decimal(7,2)
+  OBS01 : varchar(80)
+  OBS02 : varchar(80)
+  OBS03 : varchar(80)
+  OBS04 : varchar(80)
+  OBS05 : varchar(80)
+  OBS06 : varchar(80)
+  OBS07 : varchar(80)
+  OBS08 : varchar(80)
+  OBC01 : varchar(80)
+  OBC02 : varchar(80)
+  OBC03 : varchar(80)
+  OBC04 : varchar(80)
+  OBC05 : varchar(80)
+  OBE01 : varchar(60)
+  OBE02 : varchar(60)
+  OBE03 : varchar(60)
+  SUBTOT01 : decimal(9,4)
+  SUBTOT02 : decimal(9,4)
+  REV : varchar(1)
+  VIABILI : integer
+  DUNS : varchar(5)
+  PROJETO : varchar(5)
+  NIVELDAT : datetime
+  VIGENDAT : datetime
+  DATA : datetime
+  USUMEDIO : decimal(7,2)
+  ELANUM : integer
+  ELANOM : varchar(40)
+  ELADAT : datetime
+  ELAHOR : varchar(8)
+  PCPRGMED : integer
+  TIPOIMP : varchar(1)
+  PPIS : decimal(5,2)
+  PCON : decimal(5,2)
+  TIPMEDIA : varchar(1)
+  PLUC : decimal(5,2)
+  PADM : decimal(5,2)
+  PCOM : decimal(5,2)
+  PCPM : decimal(5,2)
+  LICM : boolean
+  PRRJ : decimal(5,2)
+  CAPPRO : varchar(5)
+  OV : integer
+  DATACALC : datetime
+  OVORI : integer
+  PISCON : varchar(1)
+  VTERI : decimal(7,4)
+  VTERL : decimal(7,4)
+  OBSP01 : varchar(60)
+  OBSP02 : varchar(60)
+  OVREV : varchar(1)
+  VSIMP : decimal(7,4)
+  --
+  .. Índices ..
+  + OV : OV
+  + CODIGO : CODIGO
+  + VIABILI : VIABILI
+}
+
+
+@enduml

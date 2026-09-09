@@ -1,0 +1,29 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "lc" as lc {
+  DOCUMENTO : varchar(20)
+  DATA : varchar(10)
+  NOVODOC : varchar(40)
+  NOVODATA : varchar(10)
+  TIPO : varchar(20)
+  NUMCOMP : varchar(10)
+  PASTA : varchar(10)
+  NUMERO : integer
+  --
+  .. Índices ..
+  + DOCUMENTO : DOCUMENTO
+  + NOVODOC : NOVODOC
+  + TIPONUMERO : TIPO+STR(NUMERO,20)
+}
+
+entity "lct" as lct {
+  TIPO : varchar(20)
+  --
+  .. Índices ..
+  + TIPO : TIPO
+}
+
+
+@enduml

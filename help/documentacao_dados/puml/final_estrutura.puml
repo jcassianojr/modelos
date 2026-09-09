@@ -1,0 +1,58 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "RIF" as RIF {
+  RIF : integer
+  PF : integer
+  CLIENTE : integer
+  CLINOME : varchar(50)
+  CODIGO : varchar(24)
+  NOME : varchar(40)
+  REVDATA : datetime
+  QTDE : integer
+  OS : decimal(8,2)
+  DATA : datetime
+  ISIII : integer
+  LAUDO : varchar(1)
+  RASTRO : varchar(14)
+  INSNUM : integer
+  INSNOM : varchar(40)
+  IMPORTADO : boolean
+  PCFTIPO : varchar(1)
+  CODIGOINT : varchar(24)
+  --
+  .. Índices ..
+  + RIF-2 : PF
+  + RIF-3 : DATA
+  + RIF-4 : CODIGO+STR(99999999-RIF,8)
+  + RIF : RASTRO
+}
+
+entity "RIFI" as RIFI {
+  RIF : integer
+  TOL : varchar(150)
+  MIN : decimal(12,4)
+  MAX : decimal(12,4)
+  OK : varchar(1)
+  INSTRUME : varchar(60)
+  --
+  .. Índices ..
+  + RIFI : RIF
+}
+
+entity "rifpr" as rifpr {
+  PRODUTO : varchar(24)
+  QTDE : integer
+  RIF1200 : integer
+  RIFULT : integer
+  RIFTOT : integer
+  SEL100 : datetime
+  RIFSEL : integer
+  --
+  .. Índices ..
+  + RIFPR : PRODUTO
+}
+
+
+@enduml

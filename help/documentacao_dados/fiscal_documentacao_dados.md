@@ -1,5 +1,5 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 29/07/2026
+> Varredura automatica realizada em: 09/09/2026
 
 ## Tabela DBF: `anp`
 > **Origem:** `anp` (Driver: DBFCDX)
@@ -13,6 +13,16 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    anp {
+        C CODIGO
+        C DESCRICAO
+        D DT_INI
+        D DT_FIN
+    }
+```
 
 ---
 ## Tabela DBF: `cartaobandeira`
@@ -28,6 +38,16 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    cartaobandeira {
+        C CODIGO
+        C NOME
+        D DT_INI
+        D DT_FIN
+    }
+```
+
 ---
 ## Tabela DBF: `cest`
 > **Origem:** `cest` (Driver: DBFCDX)
@@ -41,6 +61,16 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    cest {
+        C CODIGO
+        C NCM
+        C DESCRICAO
+        C SEGMENTO
+    }
+```
 
 ---
 ## Tabela DBF: `cest_ncm`
@@ -61,6 +91,18 @@
 - Tag: `CEST_NCM03` Expressao: `CEST_SEGME`
 - Tag: `CEST_NCM04` Expressao: `CEST_SEGME+NCM_ID`
 
+```mermaid
+erDiagram
+    cest_ncm {
+        C CEST_ID
+        C NCM_ID
+        C TAMANHO
+        C FAIXA_I
+        C FAIXA_F
+        C CEST_SEGME
+    }
+```
+
 ---
 ## Tabela DBF: `cest_segmento`
 > **Origem:** `cest_segmento` (Driver: DBFCDX)
@@ -75,6 +117,15 @@
 - Tag: `SEGMENTO01` Expressao: `ID`
 - Tag: `SEGMENTO02` Expressao: `DESCRICAO`
 
+```mermaid
+erDiagram
+    cest_segmento {
+        C ID
+        C ANEXO
+        C DESCRICAO
+    }
+```
+
 ---
 ## Tabela DBF: `cl_enq_ipi`
 > **Origem:** `cl_enq_ipi` (Driver: DBFCDX)
@@ -88,6 +139,16 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    cl_enq_ipi {
+        C CODIGO
+        C DESCRICAO
+        D DT_INI
+        D DT_FIN
+    }
+```
 
 ---
 ## Tabela DBF: `cst_cofins`
@@ -104,6 +165,16 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 - Tag: `NOME` Expressao: `NOME`
 
+```mermaid
+erDiagram
+    cst_cofins {
+        C CODIGO
+        C NOME
+        D DT_INI
+        D DT_FIN
+    }
+```
+
 ---
 ## Tabela DBF: `cst_icm`
 > **Origem:** `cst_icm` (Driver: DBFCDX)
@@ -119,6 +190,16 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 - Tag: `NOME` Expressao: `NOME`
 
+```mermaid
+erDiagram
+    cst_icm {
+        C CODIGO
+        C NOME
+        D DT_INI
+        D DT_FIN
+    }
+```
+
 ---
 ## Tabela DBF: `cst_icms`
 > **Origem:** `cst_icms` (Driver: DBFCDX)
@@ -132,6 +213,16 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    cst_icms {
+        C CODIGO
+        C NOME
+        D DT_INI
+        D DT_FIN
+    }
+```
 
 ---
 ## Tabela DBF: `cst_ipi`
@@ -148,6 +239,16 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 - Tag: `NOME` Expressao: `NOME`
 
+```mermaid
+erDiagram
+    cst_ipi {
+        C CODIGO
+        C NOME
+        D DT_INI
+        D DT_FIN
+    }
+```
+
 ---
 ## Tabela DBF: `cst_pis`
 > **Origem:** `cst_pis` (Driver: DBFCDX)
@@ -163,6 +264,16 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 - Tag: `NOME` Expressao: `NOME`
 
+```mermaid
+erDiagram
+    cst_pis {
+        C CODIGO
+        C NOME
+        D DT_INI
+        D DT_FIN
+    }
+```
+
 ---
 ## Tabela DBF: `ctecret`
 > **Origem:** `ctecret` (Driver: DBFCDX)
@@ -175,6 +286,14 @@
 **Indices vinculados:**
 - Tag: `NFECRET` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    ctecret {
+        C CODIGO
+        C DESCRICAO
+    }
+```
+
 ---
 ## Tabela DBF: `efdtprod`
 > **Origem:** `efdtprod` (Driver: DBFCDX)
@@ -186,6 +305,14 @@
 
 **Indices vinculados:**
 - Tag: `EFDPROD` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    efdtprod {
+        C CODIGO
+        C NOME
+    }
+```
 
 ---
 ## Tabela DBF: `fi_cai`
@@ -204,6 +331,19 @@
 **Indices vinculados:**
 - Tag: `FI_CAI` Expressao: `SEQ`
 
+```mermaid
+erDiagram
+    fi_cai {
+        N SEQ
+        D DATA
+        C DESCR
+        N CREDITO
+        N DEBITO
+        N SALDO
+        C CONTA
+    }
+```
+
 ---
 ## Tabela DBF: `fi_cdipam`
 > **Origem:** `fi_cdipam` (Driver: DBFCDX)
@@ -219,6 +359,17 @@
 **Indices vinculados:**
 - Tag: `FI_CDIPAM` Expressao: `CODIGO`
 - Tag: `FI_CDIPAM2` Expressao: `UF+NOME`
+
+```mermaid
+erDiagram
+    fi_cdipam {
+        C CODIGO
+        C NOME
+        C UF
+        C UFIBGE
+        C DIPAM
+    }
+```
 
 ---
 ## Tabela DBF: `fi_ciap`
@@ -246,6 +397,28 @@
 **Indices vinculados:**
 - Tag: `FI_CIAP` Expressao: `CIAP`
 
+```mermaid
+erDiagram
+    fi_ciap {
+        N CIAP
+        C ATIVO
+        C NOME
+        N FORNECEDO
+        C FORNOME
+        N NRNOTA
+        N NRITEM
+        C LRE
+        C LREF
+        D NRENTREGA
+        N VALORICM
+        N NRSAIDA
+        C MODSAIDA
+        D DTSAIDA
+        D DTINICIO
+        C OBSNF
+    }
+```
+
 ---
 ## Tabela DBF: `fi_ciapi`
 > **Origem:** `fi_ciapi` (Driver: DBFCDX)
@@ -263,6 +436,18 @@
 - Tag: `FI_CIAPI` Expressao: `STR(CIAP,8)+STR(ITEM,2)`
 - Tag: `FI_CIAP2` Expressao: `CIAP`
 
+```mermaid
+erDiagram
+    fi_ciapi {
+        N CIAP
+        N ITEM
+        N MES
+        N ANO
+        N VALOR
+        C SOMAR
+    }
+```
+
 ---
 ## Tabela DBF: `fi_con`
 > **Origem:** `fi_con` (Driver: DBFCDX)
@@ -272,6 +457,15 @@
 | CODSER | C | 5 | 0 |
 | DESSER | C | 60 | 0 |
 | TIPSER | C | 1 | 0 |
+
+```mermaid
+erDiagram
+    fi_con {
+        C CODSER
+        C DESSER
+        C TIPSER
+    }
+```
 
 ---
 ## Tabela DBF: `fi_dipam`
@@ -284,6 +478,14 @@
 
 **Indices vinculados:**
 - Tag: `FI_DIPAM` Expressao: `DIPAM`
+
+```mermaid
+erDiagram
+    fi_dipam {
+        C DIPAM
+        C NOME
+    }
+```
 
 ---
 ## Tabela DBF: `fi_esp`
@@ -298,6 +500,16 @@
 
 **Indices vinculados:**
 - Tag: `FI_ESP` Expressao: `CODSER`
+
+```mermaid
+erDiagram
+    fi_esp {
+        C CODSER
+        C DESSER
+        C TIPSER
+        C EXPCONT
+    }
+```
 
 ---
 ## Tabela DBF: `fi_inv`
@@ -318,6 +530,21 @@
 **Indices vinculados:**
 - Tag: `FI_INV01` Expressao: `NUMERO`
 
+```mermaid
+erDiagram
+    fi_inv {
+        N NUMERO
+        C CODIPI
+        C CLASSIFI
+        C NOME
+        N QTDDE
+        C UNIDADE
+        N VALORUNI
+        N VALORPAR
+        C OBS
+    }
+```
+
 ---
 ## Tabela DBF: `fi_mens`
 > **Origem:** `fi_mens` (Driver: DBFCDX)
@@ -331,6 +558,16 @@
 
 **Indices vinculados:**
 - Tag: `FI_MENS` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    fi_mens {
+        N CODIGO
+        C OCORR
+        C FLEGAL
+        C OPERACAO
+    }
+```
 
 ---
 ## Tabela DBF: `fi_mes`
@@ -393,6 +630,63 @@
 **Indices vinculados:**
 - Tag: `FI_MES` Expressao: `STR(NUMERO,5)+STRZERO(ANO,4)+STRZERO(MES,2)`
 
+```mermaid
+erDiagram
+    fi_mes {
+        N NUMERO
+        N MES
+        N ANO
+        D FIFECE
+        D FIFECS
+        D FIFECICM
+        D FIFECIPI
+        D FIFECISS
+        D FIFECISE
+        N FILIVE
+        N FILIVS
+        N FILIVICM
+        N FILIVIPI
+        N FILIVISS
+        N FILIVISE
+        N FIPAGE
+        N FIPAGS
+        N FIPAGICM
+        N FIPAGIPI
+        N FIPAGISS
+        N FIPAGISE
+        N FIPAXICM
+        N FIPAXIPI
+        N FILIME
+        N FILIMS
+        N FILIMICM
+        N FILIMIPI
+        N FILIMISS
+        N FILIMISE
+        N FISEQE
+        N FISEQS
+        N FISEQISS
+        N FISEQISE
+        D FILANE
+        D FILANS
+        D FILANISS
+        D FILANISE
+        D FILAICM
+        D FILAIPI
+        D FILAISS
+        D FILAISE
+        N FISALICM
+        N FISALIPI
+        N FISALISS
+        N FISALISE
+        N FILIFE
+        N FILIFS
+        N FILIFICM
+        N FILIFIPI
+        N FILIFISS
+        N FILIFISE
+    }
+```
+
 ---
 ## Tabela DBF: `fi_nbm`
 > **Origem:** `fi_nbm` (Driver: DBFCDX)
@@ -417,6 +711,25 @@
 - Tag: `FI_NBM` Expressao: `NUMERONBM`
 - Tag: `FI_NBM-2` Expressao: `CODNBM`
 
+```mermaid
+erDiagram
+    fi_nbm {
+        C NUMERONBM
+        C DESCRI
+        N IPI_NBM
+        N ICMS_NBM
+        C TIPO
+        C CODNBM
+        C TRIBUTAR
+        N ALIQNAC
+        N ALIQIMP
+        N EX
+        N ALIQEST
+        N ALIQMUN
+        D DATAIMP
+    }
+```
+
 ---
 ## Tabela DBF: `fi_nbmcnv`
 > **Origem:** `fi_nbmcnv` (Driver: DBFCDX)
@@ -430,6 +743,15 @@
 **Indices vinculados:**
 - Tag: `FI_NBM` Expressao: `NUMERONBM`
 - Tag: `FI_NBM-2` Expressao: `CODNBM`
+
+```mermaid
+erDiagram
+    fi_nbmcnv {
+        C NUMERONBM
+        C CODNBM
+        C NOMENBM
+    }
+```
 
 ---
 ## Tabela DBF: `fi_nbms`
@@ -455,6 +777,25 @@
 - Tag: `FI_NBM` Expressao: `NUMERONBM`
 - Tag: `FI_NBM-2` Expressao: `CODNBM`
 
+```mermaid
+erDiagram
+    fi_nbms {
+        C NUMERONBM
+        C DESCRI
+        N IPI_NBM
+        N ICMS_NBM
+        C TIPO
+        C CODNBM
+        C TRIBUTAR
+        N ALIQNAC
+        N ALIQIMP
+        N EX
+        N ALIQEST
+        N ALIQMUN
+        D DATAIMP
+    }
+```
+
 ---
 ## Tabela DBF: `fi_oco`
 > **Origem:** `fi_oco` (Driver: DBFCDX)
@@ -472,6 +813,19 @@
 **Indices vinculados:**
 - Tag: `FI_OCO` Expressao: `STR(ANO,4)+STR(MES,2)+TIPO+STR(ITEM,2)`
 
+```mermaid
+erDiagram
+    fi_oco {
+        N ANO
+        N MES
+        C TIPO
+        N ITEM
+        C DESCRICAO
+        N VALICM
+        N VALIPI
+    }
+```
+
 ---
 ## Tabela DBF: `fi_ser`
 > **Origem:** `fi_ser` (Driver: DBFCDX)
@@ -485,6 +839,16 @@
 
 **Indices vinculados:**
 - Tag: `FI_SER01` Expressao: `CODSER`
+
+```mermaid
+erDiagram
+    fi_ser {
+        C CODSER
+        C DESSER
+        C TIPSER
+        C EXPCONT
+    }
+```
 
 ---
 ## Tabela DBF: `fi_temp1`
@@ -514,6 +878,28 @@
 - Tag: `FI_TEM12` Expressao: `CFONEW+STR(ICM,5,2)`
 - Tag: `FI_TEM13` Expressao: `CFO+SUBCFO+STR(IPI,5,2)`
 - Tag: `FI_TEM14` Expressao: `CFONEW+STR(IPI,5,2)`
+
+```mermaid
+erDiagram
+    fi_temp1 {
+        C CFO
+        C CFONEW
+        C SUBCFO
+        N ICM
+        N IPI
+        N CONTABIL
+        N ICMBAS
+        N ICMVAL
+        N ICMISE
+        N ICMOUT
+        N OBSICM
+        N IPIBAS
+        N IPIVAL
+        N IPIISE
+        N IPIOUT
+        N OBSIPI
+    }
+```
 
 ---
 ## Tabela DBF: `ibs`
@@ -549,6 +935,36 @@
 **Indices vinculados:**
 - Tag: `IBS` Expressao: `IBS`
 
+```mermaid
+erDiagram
+    ibs {
+        C IBS
+        C DESCRIBS
+        C CLASTRIB
+        C NOMECLAST1
+        C NOMECLAST2
+        C DESCRTRIB1
+        C DESCRTRIB2
+        C DESCRLC01
+        C DESCRLC02
+        C LC
+        C TIPOALIQ
+        C PREDIBS
+        C PREDCBS
+        C INDREDBC
+        C INDGTRREG
+        C INDCREDP
+        C INDMONO
+        C INDMORETEN
+        C INDMONORET
+        C INDMONODIF
+        C CREDPARA
+        C DINIVIG
+        C DFIMVIG
+        C ULTATUALIZ
+    }
+```
+
 ---
 ## Tabela DBF: `indicador_presenca`
 > **Origem:** `indicador_presenca` (Driver: DBFCDX)
@@ -560,6 +976,14 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    indicador_presenca {
+        C CODIGO
+        C DESCRICAO
+    }
+```
 
 ---
 ## Tabela DBF: `md03`
@@ -574,6 +998,19 @@
 | ALIQUOTAR | N | 5 | 2 |
 | ALIQUOTAI | N | 5 | 2 |
 | DSTA | C | 1 | 0 |
+
+```mermaid
+erDiagram
+    md03 {
+        C CODIGO
+        C CLASSIFIC
+        C DESCRICAO
+        N ALIQUOTA
+        N ALIQUOTAR
+        N ALIQUOTAI
+        C DSTA
+    }
+```
 
 ---
 ## Tabela DBF: `md04`
@@ -621,6 +1058,46 @@
 - Tag: `MD04-2` Expressao: `CFONEW`
 - Tag: `MD04-3` Expressao: `CFO`
 
+```mermaid
+erDiagram
+    md04 {
+        C CFONEW
+        C DESCRICAO
+        C CFO
+        C NOMENOTA
+        C TIPO
+        C DIPAM
+        C FIN
+        C PIS
+        C REMESSA
+        C DIPIPI
+        C DIPICM
+        C CODICM
+        C EXPCONT
+        C CONTACRE
+        C CONTADEB
+        C CONTAS
+        C APURA
+        C ZERAIPI
+        C FICHA
+        C FATURA
+        C IRENDA
+        C ST
+        C STFRETE
+        C BENEF
+        C ICMS
+        C IPI
+        C ISS
+        C DEVOLUCAO
+        C SERVPROD
+        C ESTOQUE
+        C TIPO2
+        C NFE
+        C COMUNICA
+        C TRANSP
+    }
+```
+
 ---
 ## Tabela DBF: `md05x`
 > **Origem:** `md05x` (Driver: DBFCDX)
@@ -639,6 +1116,18 @@
 - Tag: `MD05X-2` Expressao: `NOMEEXT`
 - Tag: `MD05X-3` Expressao: `UFICMS+UFDEST`
 
+```mermaid
+erDiagram
+    md05x {
+        C UFICMS
+        C UFDEST
+        C NOMEEXT
+        N ALIQUOTA
+        N ALIQUOTAR
+        C ZONAFRANCA
+    }
+```
+
 ---
 ## Tabela DBF: `modais_frete`
 > **Origem:** `modais_frete` (Driver: DBFCDX)
@@ -650,6 +1139,14 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    modais_frete {
+        C CODIGO
+        C DESCRICAO
+    }
+```
 
 ---
 ## Tabela DBF: `modalidade_frete`
@@ -663,6 +1160,14 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    modalidade_frete {
+        C CODIGO
+        C DESCRICAO
+    }
+```
+
 ---
 ## Tabela DBF: `modalidade_frete_anp`
 > **Origem:** `modalidade_frete_anp` (Driver: DBFCDX)
@@ -674,6 +1179,14 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    modalidade_frete_anp {
+        C CODIGO
+        C DESCRICAO
+    }
+```
 
 ---
 ## Tabela DBF: `modelo_cobranca`
@@ -687,6 +1200,14 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    modelo_cobranca {
+        C CODIGO
+        C DESCRICAO
+    }
+```
+
 ---
 ## Tabela DBF: `modelo_cobranca_cst`
 > **Origem:** `modelo_cobranca_cst` (Driver: DBFCDX)
@@ -698,6 +1219,14 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    modelo_cobranca_cst {
+        C CODIGO
+        C DESCRICAO
+    }
+```
 
 ---
 ## Tabela DBF: `moeda`
@@ -723,6 +1252,23 @@
 - Tag: `PAIS` Expressao: `PAIS`
 - Tag: `NOME` Expressao: `NOME`
 
+```mermaid
+erDiagram
+    moeda {
+        N CODIGO
+        C NOME
+        D DATA_INI
+        D DATA_FIM
+        C PAIS
+        C SIMBOLO
+        N BACEN
+        C TIPO
+        C MOEDA
+        N NUMINT
+        N NUMDEC
+    }
+```
+
 ---
 ## Tabela DBF: `nbs`
 > **Origem:** `nbs` (Driver: DBFCDX)
@@ -742,6 +1288,22 @@
 
 **Indices vinculados:**
 - Tag: `NBS` Expressao: `NBS`
+
+```mermaid
+erDiagram
+    nbs {
+        C NBS
+        C DESC_NBS
+        C ITEM
+        C DESC_ITEM
+        C ONEROSA
+        C EXTERIOR
+        C INDOP
+        C LOCAL_INC
+        C CLASSTRIB
+        C DESC_CLAS
+    }
+```
 
 ---
 ## Tabela DBF: `ncmuf`
@@ -779,6 +1341,41 @@
 | SE | N | 6 | 2 |
 | TO | N | 6 | 2 |
 
+```mermaid
+erDiagram
+    ncmuf {
+        C COD_NBM
+        C COD_NCM
+        N AC
+        N AL
+        N AM
+        N AP
+        N BA
+        N CE
+        N DF
+        N ES
+        N GO
+        N MA
+        N MT
+        N MS
+        N MG
+        N PA
+        N PB
+        N PR
+        N PE
+        N PI
+        N RN
+        N RS
+        N RJ
+        N RO
+        N RR
+        N SC
+        N SP
+        N SE
+        N TO
+    }
+```
+
 ---
 ## Tabela DBF: `nfecorrecao`
 > **Origem:** `nfecorrecao` (Driver: DBFCDX)
@@ -791,6 +1388,14 @@
 **Indices vinculados:**
 - Tag: `NFECRET` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    nfecorrecao {
+        C CODIGO
+        C DESCRICAO
+    }
+```
+
 ---
 ## Tabela DBF: `nfecret`
 > **Origem:** `nfecret` (Driver: DBFCDX)
@@ -802,6 +1407,14 @@
 
 **Indices vinculados:**
 - Tag: `NFECRET` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    nfecret {
+        C CODIGO
+        C DESCRICAO
+    }
+```
 
 ---
 ## Tabela DBF: `qualif_assinante`
@@ -816,6 +1429,16 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    qualif_assinante {
+        C CODIGO
+        C DESCRICAO
+        D DT_INI
+        D DT_FIN
+    }
+```
 
 ---
 ## Tabela DBF: `sintdoc`
@@ -834,6 +1457,16 @@
 - Tag: `SINTDOC` Expressao: `CODIGO`
 - Tag: `SINTDOC2` Expressao: `NOME`
 
+```mermaid
+erDiagram
+    sintdoc {
+        C CODIGO
+        C NOME
+        D DT_INI
+        D DT_FIN
+    }
+```
+
 ---
 ## Tabela DBF: `sintsitu`
 > **Origem:** `sintsitu` (Driver: DBFCDX)
@@ -846,6 +1479,14 @@
 **Indices vinculados:**
 - Tag: `SINTSITU` Expressao: `CODIGO`
 - Tag: `SINTSIT2` Expressao: `NOME`
+
+```mermaid
+erDiagram
+    sintsitu {
+        C CODIGO
+        C NOME
+    }
+```
 
 ---
 ## Tabela DBF: `tabenqipi`
@@ -860,9 +1501,20 @@
 | DESCRICAO | C | 255 | 0 |
 
 **Indices vinculados:**
-- Tag: `ENQIPI01` Expressao: `field->CODIGO`
-- Tag: `ENQIPI02` Expressao: `field->GRUPOCST`
-- Tag: `ENQIPI03` Expressao: `upper( left( field->DESCR1, 240 ) )`
+- Tag: `ENQIPI01` Expressao: `CODIGO`
+- Tag: `ENQIPI02` Expressao: `GRUPOCST`
+- Tag: `ENQIPI03` Expressao: `upper( left( DESCR1, 240 ) )`
+
+```mermaid
+erDiagram
+    tabenqipi {
+        C CODIGO
+        C GRUPOCST
+        C DESCR1
+        C DESCR2
+        C DESCRICAO
+    }
+```
 
 ---
 ## Tabela DBF: `tipo_pagamento`
@@ -876,6 +1528,14 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    tipo_pagamento {
+        C CODIGO
+        C DESCRICAO
+    }
+```
+
 ---
 ## Tabela DBF: `unidade_medida_comercial`
 > **Origem:** `unidade_medida_comercial` (Driver: DBFCDX)
@@ -888,5 +1548,14 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `UNIDADE`
+
+```mermaid
+erDiagram
+    unidade_medida_comercial {
+        C UNIDADE
+        C UNIDDES
+        C UNIDDEC
+    }
+```
 
 ---

@@ -1,5 +1,5 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 31/07/2026
+> Varredura automatica realizada em: 09/09/2026
 
 ## Tabela DBF: `curemi`
 > **Origem:** `curemi` (Driver: DBFCDX)
@@ -12,6 +12,15 @@
 
 **Indices vinculados:**
 - Tag: `CUREMI` Expressao: `STR(NUMERO,5)+CURSO`
+
+```mermaid
+erDiagram
+    curemi {
+        N NUMERO
+        C CURSO
+        C DESCUR
+    }
+```
 
 ---
 ## Tabela DBF: `curemp`
@@ -47,6 +56,35 @@
 - Tag: `CUREMP` Expressao: `NUMERO`
 - Tag: `CUREMP-2` Expressao: `COGNOME`
 
+```mermaid
+erDiagram
+    curemp {
+        N NUMERO
+        C COGNOME
+        C NOME
+        C ENDERECO
+        C BAIRRO
+        C CIDADE
+        C ESTADO
+        C CEP
+        C DDD
+        C TELEFONE
+        C RAMAL
+        C CONTATO
+        C DDDFAX
+        C TELEFAX
+        C CGC
+        C IESTADUAL
+        C DDD1
+        C TELEFONE1
+        C RAMAL1
+        C CONTATO1
+        C PESSOA
+        C SITE
+        C EMAIL
+    }
+```
+
 ---
 ## Tabela DBF: `curgrp`
 > **Origem:** `curgrp` (Driver: DBFCDX)
@@ -58,6 +96,14 @@
 
 **Indices vinculados:**
 - Tag: `CURGRP` Expressao: `GRUPO`
+
+```mermaid
+erDiagram
+    curgrp {
+        C GRUPO
+        C NOME
+    }
+```
 
 ---
 ## Tabela DBF: `curso`
@@ -77,6 +123,18 @@
 - Tag: `CURSO-2` Expressao: `DESCUR`
 - Tag: `CURSO-3` Expressao: `GRUPO+CURSO`
 
+```mermaid
+erDiagram
+    curso {
+        C CURSO
+        C GRUPO
+        C DESCUR
+        N CARGA
+        C CERT
+        C TIPCUR
+    }
+```
+
 ---
 ## Tabela DBF: `mp02c`
 > **Origem:** `mp02c` (Driver: DBFCDX)
@@ -89,6 +147,15 @@
 
 **Indices vinculados:**
 - Tag: `MP02C` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    mp02c {
+        C CODIGO
+        C CURSO
+        C TIPO
+    }
+```
 
 ---
 ## Tabela DBF: `mp02p`
@@ -103,6 +170,15 @@
 **Indices vinculados:**
 - Tag: `MPO2P` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    mp02p {
+        C CODIGO
+        C CURSO
+        C TIPO
+    }
+```
+
 ---
 ## Tabela DBF: `mp06`
 > **Origem:** `mp06` (Driver: DBFCDX)
@@ -116,6 +192,14 @@
 - Tag: `MP06-1` Expressao: `CODIGO`
 - Tag: `MP06-2` Expressao: `NOME`
 
+```mermaid
+erDiagram
+    mp06 {
+        C CODIGO
+        C NOME
+    }
+```
+
 ---
 ## Tabela DBF: `mp06c`
 > **Origem:** `mp06c` (Driver: DBFCDX)
@@ -127,6 +211,14 @@
 
 **Indices vinculados:**
 - Tag: `MP06C` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    mp06c {
+        C CODIGO
+        C CURSO
+    }
+```
 
 ---
 ## Tabela DBF: `procedim`
@@ -144,6 +236,16 @@
 - Tag: `PROCEDI2` Expressao: `DESCUR`
 - Tag: `PROCEDI3` Expressao: `GRUPO+CURSO`
 
+```mermaid
+erDiagram
+    procedim {
+        C CURSO
+        C DESCUR
+        C TIPO
+        C GRUPO
+    }
+```
+
 ---
 ## Tabela DBF: `rhabcod`
 > **Origem:** `rhabcod` (Driver: DBFCDX)
@@ -155,6 +257,14 @@
 
 **Indices vinculados:**
 - Tag: `RHABCOD` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    rhabcod {
+        C CODIGO
+        C NOME
+    }
+```
 
 ---
 ## Tabela DBF: `rhesc`
@@ -169,6 +279,16 @@
 
 **Indices vinculados:**
 - Tag: `RHESC` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    rhesc {
+        C CODIGO
+        C ESCOLA
+        C CODIGOOLD
+        C DESCRI
+    }
+```
 
 ---
 ## Tabela DBF: `rhsel`
@@ -305,6 +425,135 @@
 - Tag: `RHSEL-2` Expressao: `NOME`
 - Tag: `RHSEL-3` Expressao: `STR(FUNCAO,8)+STR(EMPRESA,3)`
 
+```mermaid
+erDiagram
+    rhsel {
+        N EMPRESA
+        N NUMERO
+        C NOME
+        C PIS
+        C CPF
+        D NASC
+        C NASCIBGE
+        C NASCPAIS
+        C RG
+        C RGUF
+        C RGEMIS
+        C RGTIP
+        C ENDER
+        C ENDNUM
+        C ENDCOMPL
+        C ENDTIP
+        C BAIRRO
+        C IBGE
+        C CIDADE
+        C ESTADO
+        C CEP
+        C CODMP02
+        C INDICACAO
+        C INDIPARAR
+        L COMPARECE
+        L APROVADO
+        L PROCESSO
+        C PROCOBS
+        C OBS
+        C SEXO
+        C FONE
+        C CELULAR
+        C FONEREC
+        C CONTATO
+        C EMAIL
+        C FOR01
+        C FOR02
+        C FOR03
+        C APF01
+        C APF02
+        C APF03
+        C PROFIS
+        C SERIE
+        C CTPSUF
+        C EX01EMP
+        C EX01RAM
+        C EX01TEL
+        D EX01DEM
+        D EX01ADM
+        C EX01FUN
+        N EX01ULT
+        C EX01AT1
+        C EX01AT2
+        C EX02EMP
+        C EX02RAM
+        C EX02TEL
+        D EX02DEM
+        D EX02ADM
+        C EX02FUN
+        N EX02ULT
+        C EX02AT1
+        C EX02AT2
+        C EX03EMP
+        C EX03RAM
+        C EX03TEL
+        D EX03DEM
+        D EX03ADM
+        C EX03FUN
+        N EX03ULT
+        C EX03AT1
+        C EX03AT2
+        C FUNC01
+        C FUNC02
+        N SALARIO
+        C OBSEN01
+        C OBSEN02
+        C OBSEN03
+        N NUMREGANT
+        N FUNCAO
+        N NUMEMPANT
+        D DATTRANSF
+        C ESCRAIS
+        C SITUACAO
+        C CNH
+        C CATCNH
+        D VALCNH
+        D EXPCNH
+        C OC
+        D OCVAL
+        D OCEXP
+        C OCEMI
+        C BANCO
+        C AGENCIA
+        C CONTA
+        C CONTAFGTS
+        C TITULO
+        C TITUZONA
+        C TITUSECA
+        C PAI
+        C MAE
+        C CNS
+        C DEFICI
+        C EVINC
+        C TIPO
+        N CCUSTO
+        C UNIFUN
+        C APOSENT
+        D APOSEND
+        C ESTCIVIL
+        C RESERV
+        C RESECAT
+        D RGDATA
+        D CTPSDATA
+        N ANONASCI
+        C RACS
+        D DEMITIDO
+        D FGTS
+        C ADMITIDO
+        C OCUF
+        C RICUF
+        D RICEXP
+        C RIC
+        C RICEMI
+    }
+```
+
 ---
 ## Tabela DBF: `rhselhist`
 > **Origem:** `rhselhist` (Driver: DBFCDX)
@@ -391,5 +640,86 @@
 - Tag: `RHSEL-1` Expressao: `STR(EMPRESA,3)+STR(NUMERO,8)`
 - Tag: `RHSEL-2` Expressao: `NOME`
 - Tag: `RHSEL-3` Expressao: `STR(FUNCAO,8)+STR(EMPRESA,3)`
+
+```mermaid
+erDiagram
+    rhselhist {
+        N EMPRESA
+        N NUMERO
+        C NOME
+        C ENDER
+        D NASC
+        C BAIRRO
+        C CIDADE
+        C ESTADO
+        C CEP
+        C CODMP02
+        C INDICACAO
+        C INDIPARAR
+        L COMPARECE
+        L APROVADO
+        L PROCESSO
+        C PROCOBS
+        C OBS
+        C SEXO
+        N CIVIL
+        C FONE
+        C CELULAR
+        C FONEREC
+        C CONTATO
+        C EMAIL
+        C FOR01
+        C FOR02
+        C FOR03
+        C APF01
+        C APF02
+        C APF03
+        C RG
+        C CPF
+        C PIS
+        C PROFIS
+        C SERIE
+        C CTPSUF
+        C CATEGORIA
+        C EX01EMP
+        C EX01RAM
+        C EX01TEL
+        D EX01DEM
+        D EX01ADM
+        C EX01FUN
+        N EX01ULT
+        C EX01AT1
+        C EX01AT2
+        C EX02EMP
+        C EX02RAM
+        C EX02TEL
+        D EX02DEM
+        D EX02ADM
+        C EX02FUN
+        N EX02ULT
+        C EX02AT1
+        C EX02AT2
+        C EX03EMP
+        C EX03RAM
+        C EX03TEL
+        D EX03DEM
+        D EX03ADM
+        C EX03FUN
+        N EX03ULT
+        C EX03AT1
+        C EX03AT2
+        C FUNC01
+        C FUNC02
+        N SALARIO
+        C OBSEN01
+        C OBSEN02
+        C OBSEN03
+        N NUMREGANT
+        N FUNCAO
+        N NUMEMPANT
+        D DATTRANSF
+        C ESCRAIS
+    }
+```
 
 ---

@@ -1,0 +1,118 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "dosprn1" as dosprn1 {
+  PR_NO : integer
+  PR_NAME : varchar(50)
+  INIT_PR : varchar(50)
+  EXIT_PR : varchar(40)
+  BOLD_ON : varchar(40)
+  BOLD_OFF : varchar(40)
+  UNDL_ON : varchar(40)
+  UNDL_OFF : varchar(40)
+  ENL_ON : varchar(40)
+  ENL_OFF : varchar(40)
+  ITAL_ON : varchar(40)
+  ITAL_OFF : varchar(40)
+  HIGH_ON : varchar(40)
+  HIGH_OFF : varchar(40)
+  LOW_ON : varchar(40)
+  LOW_OFF : varchar(40)
+  COND_ON : varchar(40)
+  COND_OFF : varchar(40)
+  NLQ_ON : varchar(40)
+  NLQ_OFF : varchar(40)
+  RESERV_ON : varchar(40)
+  RESERV_OFF : varchar(40)
+  GRAPH_DRIV : varchar(20)
+  PAGE_LEN : integer
+  HEAD_MARG : integer
+  FOOT_MARG : integer
+  --
+  .. Índices ..
+  + DOSPRN : PR_NAME
+}
+
+entity "dosprn2" as dosprn2 {
+  EMPRESA : varchar(15)
+  IMPRESS : varchar(14)
+  EMULA : varchar(14)
+  INICIALIZA : varchar(14)
+  C10PP : varchar(14)
+  C12PP : varchar(14)
+  CONDON : varchar(14)
+  CONDOFF : varchar(14)
+  SPCPRON : varchar(14)
+  SPCPROFF : varchar(14)
+  SETCHAR : varchar(14)
+  MSTFNT : varchar(14)
+  PRTSTYL : varchar(14)
+  DRAFT : varchar(14)
+  CARTA : varchar(14)
+  L6PP : varchar(14)
+  L8PP : varchar(14)
+  L12PP : varchar(14)
+  SPCLINE : varchar(14)
+  SPCLINEA : varchar(14)
+  NEGRON : varchar(14)
+  NEGROFF : varchar(14)
+  DWIDEON : varchar(14)
+  DWIDEOFF : varchar(14)
+  DHEIGON : varchar(14)
+  DHEIGOFF : varchar(14)
+  ENFATON : varchar(14)
+  ENFATOFF : varchar(14)
+  BOLDON : varchar(14)
+  BOLDOFF : varchar(14)
+  SUBSCRON : varchar(14)
+  SUBSCROFF : varchar(14)
+  ITALON : varchar(14)
+  ITALOFF : varchar(14)
+  SUPSCRON : varchar(14)
+  SUPSCROFF : varchar(14)
+  SUB1SCRON : varchar(14)
+  SUB1SCROFF : varchar(14)
+  SKPON : varchar(14)
+  SKPOFF : varchar(14)
+  UNIPRT : varchar(14)
+  BIPRT : varchar(14)
+  SVCURSOR : varchar(14)
+  RTCURSOR : varchar(14)
+  PGTAM : varchar(14)
+  PGLIN : varchar(14)
+  TABSTOP : varchar(14)
+  MARGTOP : varchar(14)
+  MARGBOTT : varchar(14)
+  MARGLEFT : varchar(14)
+  MARGRIGHT : varchar(14)
+  MVABSVLOC : varchar(14)
+  MVRELVLOC : varchar(14)
+  MVABSHLOC : varchar(14)
+  MVRELHLOC : varchar(14)
+  INTCHSPHMI : varchar(14)
+  C11PP : varchar(14)
+  C13PP : varchar(14)
+  C14PP : varchar(14)
+  C16PP : varchar(14)
+  C20PP : varchar(14)
+  EXPAND01 : varchar(14)
+  EXPAND02 : varchar(14)
+  EXPAND03 : varchar(14)
+  EXPAND04 : varchar(14)
+  --
+  .. Índices ..
+  + DOSPRN2 : EMPRESA+IMPRESS
+}
+
+entity "dosprn3" as dosprn3 {
+  NOME : varchar(22)
+  C_10CPI : varchar(20)
+  C_17CPI : varchar(20)
+  --
+  .. Índices ..
+  + NOME : NOME
+}
+
+
+@enduml

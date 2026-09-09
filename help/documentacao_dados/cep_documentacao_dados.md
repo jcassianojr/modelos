@@ -1,5 +1,5 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 28/07/2026
+> Varredura automatica realizada em: 09/09/2026
 
 ## Tabela DBF: `cepbai`
 > **Origem:** `cepbai` (Driver: DBFCDX)
@@ -12,6 +12,14 @@
 **Indices vinculados:**
 - Tag: `CEPBAI01` Expressao: `BAI_NU_SEQ`
 - Tag: `CEPBAI02` Expressao: `BAI_NO`
+
+```mermaid
+erDiagram
+    cepbai {
+        N BAI_NU_SEQ
+        C BAI_NO
+    }
+```
 
 ---
 ## Tabela DBF: `cepbailx`
@@ -26,6 +34,15 @@
 **Indices vinculados:**
 - Tag: `CEPBAILX-1` Expressao: `CODIBGE+STR(BAI_NU_NEW,7)`
 
+```mermaid
+erDiagram
+    cepbailx {
+        C CODIBGE
+        N BAI_NU_NEW
+        N CODBAILX
+    }
+```
+
 ---
 ## Tabela DBF: `cepgeo`
 > **Origem:** `cepgeo` (Driver: DBFCDX)
@@ -37,6 +54,17 @@
 | LATITUDE | C | 8 | 0 |
 | LONGITUDE | C | 8 | 0 |
 | HEMISFERIO | C | 1 | 0 |
+
+```mermaid
+erDiagram
+    cepgeo {
+        C CEP
+        C DDD
+        C LATITUDE
+        C LONGITUDE
+        C HEMISFERIO
+    }
+```
 
 ---
 ## Tabela DBF: `ceprua`
@@ -53,6 +81,20 @@
 | PARID | C | 1 | 0 |
 | TITULO | C | 1 | 0 |
 
+```mermaid
+erDiagram
+    ceprua {
+        C RUA
+        C CEP
+        C TIPO
+        N CHVBAI
+        N NINI
+        N NFIM
+        C PARID
+        C TITULO
+    }
+```
+
 ---
 ## Tabela DBF: `cidconv`
 > **Origem:** `cidconv` (Driver: DBFCDX)
@@ -66,6 +108,16 @@
 
 **Indices vinculados:**
 - Tag: `CIDORI` Expressao: `ESTADO + CIDORI`
+
+```mermaid
+erDiagram
+    cidconv {
+        C ESTADO
+        C CIDORI
+        C ESTDES
+        C CIDDES
+    }
+```
 
 ---
 ## Tabela DBF: `md05`
@@ -98,6 +150,33 @@
 **Indices vinculados:**
 - Tag: `MD05-1` Expressao: `UFICMS`
 - Tag: `MD05-2` Expressao: `NOMEEXT`
+
+```mermaid
+erDiagram
+    md05 {
+        C UFICMS
+        C ZONAFRANCA
+        N ALIQUOTA
+        N ALIQUOTAR
+        C NOMEEXT
+        C CAPITAL
+        C INICEP
+        C FIMCEP
+        C INICEP2
+        C FIMCEP2
+        C REGIAO
+        C CODMUN
+        N CORREIO
+        C AREATEL
+        N ALIQTEL
+        N QTDECID
+        C REGCOD
+        N AREA
+        N TAMIE
+        C MASCIE
+        C UFDEST
+    }
+```
 
 ---
 ## Tabela DBF: `md10`
@@ -132,6 +211,32 @@
 - Tag: `MD10-3` Expressao: `CODIBGE`
 - Tag: `MD10-4` Expressao: `CODIRRF`
 
+```mermaid
+erDiagram
+    md10 {
+        C UF
+        C NOME
+        C DDD
+        C CODIRRF
+        C CODIBGE
+        C CODBACEN
+        N ZONAELE
+        C CODTEL
+        C NOMTEL
+        C INICEP
+        C FIMCEP
+        C INICEP2
+        C FIMCEP2
+        N ALTITUDE
+        N AREA
+        C LATITUDE
+        C LONGITUDE
+        C HEMISFERIO
+        C LOGIX
+        C CODSIAFI
+    }
+```
+
 ---
 ## Tabela DBF: `md10nao`
 > **Origem:** `md10nao` (Driver: DBFCDX)
@@ -165,6 +270,32 @@
 - Tag: `MD10-3` Expressao: `CODIBGE`
 - Tag: `MD10-4` Expressao: `CODIRRF`
 
+```mermaid
+erDiagram
+    md10nao {
+        C UF
+        C NOME
+        C DDD
+        C CODIRRF
+        C CODIBGE
+        C CODBACEN
+        N ZONAELE
+        C CODTEL
+        C NOMTEL
+        C INICEP
+        C FIMCEP
+        C INICEP2
+        C FIMCEP2
+        N ALTITUDE
+        N AREA
+        C LATITUDE
+        C LONGITUDE
+        C HEMISFERIO
+        C LOGIX
+        C CODSIAFI
+    }
+```
+
 ---
 ## Tabela DBF: `md11`
 > **Origem:** `md11` (Driver: DBFCDX)
@@ -175,6 +306,13 @@
 
 **Indices vinculados:**
 - Tag: `MD11-1` Expressao: `CEP`
+
+```mermaid
+erDiagram
+    md11 {
+        C CEP
+    }
+```
 
 ---
 ## Tabela DBF: `mdtip`
@@ -191,6 +329,16 @@
 - Tag: `MDTIP1` Expressao: `CODIGO`
 - Tag: `MDTIP2` Expressao: `NOME`
 
+```mermaid
+erDiagram
+    mdtip {
+        C CODIGO
+        C NOME
+        N ID
+        C ESOCIAL
+    }
+```
+
 ---
 ## Tabela DBF: `mdtit`
 > **Origem:** `mdtit` (Driver: DBFCDX)
@@ -203,6 +351,14 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
 - Tag: `DESCRICAO` Expressao: `DESCRICAO`
+
+```mermaid
+erDiagram
+    mdtit {
+        C CODIGO
+        C DESCRICAO
+    }
+```
 
 ---
 ## Tabela DBF: `mdufddd`
@@ -217,6 +373,14 @@
 - Tag: `MDUFDD-1` Expressao: `UF+DDD`
 - Tag: `MDUFDDD-2` Expressao: `UF`
 - Tag: `MDUFDDD-3` Expressao: `DDD`
+
+```mermaid
+erDiagram
+    mdufddd {
+        C UF
+        C DDD
+    }
+```
 
 ---
 ## Tabela DBF: `paises`
@@ -263,5 +427,42 @@
 - Tag: `PAISES4` Expressao: `DDD`
 - Tag: `PAISES5` Expressao: `BACEN`
 - Tag: `PAISES6` Expressao: `NOMEINT`
+
+```mermaid
+erDiagram
+    paises {
+        N BACEN
+        C NOME
+        C UF
+        C DDD
+        C DDDDIRETO
+        C ISO3166A
+        C ISO3166B
+        C ISO3166C
+        C NOMEINT
+        N AREA
+        N PERIM
+        N INDEPYEAR
+        C CONTINENT
+        N CONTI_COD
+        N LOGIXCONT
+        C MOEDA
+        C MOEDA_NOME
+        C MOEDA_SYMB
+        C CONTREGIAO
+        N CONTREGCOD
+        C CAPITAL
+        C URLPAIS
+        C NATIVE
+        N POPULACAO
+        N GDP
+        C NATIONALIT
+        C CEP_FORMAT
+        C CEP_REGEX
+        N LATITUDE
+        N LONGITUDE
+        C WIKIDATAID
+    }
+```
 
 ---

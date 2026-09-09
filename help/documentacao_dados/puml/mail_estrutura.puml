@@ -1,0 +1,48 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "mail" as mail {
+  NUMERO : integer
+  ERRO : varchar(8)
+  DATA : datetime
+  HORA : varchar(8)
+  DE : varchar(12)
+  DESTINO : varchar(12)
+  ASSUNTO : varchar(120)
+  TEXTO : longtext
+  DATAOK : datetime
+  HORAOK : varchar(8)
+}
+
+entity "mailerro" as mailerro {
+  ERRO : varchar(8)
+  ASSUNTO : varchar(120)
+  --
+  .. Índices ..
+  + MAILERRO : ERRO
+}
+
+entity "mailpara" as mailpara {
+  ERRO : varchar(8)
+  DESTINO : varchar(12)
+  --
+  .. Índices ..
+  + MAILPARA : ERRO
+}
+
+entity "mailpg" as mailpg {
+  NUMERO : integer
+  ERRO : varchar(8)
+  DATA : datetime
+  HORA : varchar(8)
+  DE : varchar(12)
+  DESTINO : varchar(12)
+  ASSUNTO : varchar(120)
+  TEXTO : longtext
+  DATAOK : datetime
+  HORAOK : varchar(8)
+}
+
+
+@enduml

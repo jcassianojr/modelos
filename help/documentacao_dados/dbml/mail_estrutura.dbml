@@ -1,0 +1,50 @@
+// Origem: mail (DBFCDX)
+Table "mail" {
+  Note: "Origem: mail"
+  "NUMERO" INTEGER [default: 0]
+  "ERRO" VARCHAR(8)
+  "DATA" DATETIME
+  "HORA" VARCHAR(8)
+  "DE" VARCHAR(12)
+  "DESTINO" VARCHAR(12)
+  "ASSUNTO" VARCHAR(120)
+  "TEXTO" LONGTEXT
+  "DATAOK" DATETIME
+  "HORAOK" VARCHAR(8)
+}
+
+// Origem: mailerro (DBFCDX)
+Table "mailerro" {
+  Note: "Origem: mailerro"
+  "ERRO" VARCHAR(8)
+  "ASSUNTO" VARCHAR(120)
+  Indexes {
+    (ERRO) [name: "MAILERRO"]
+  }
+}
+
+// Origem: mailpara (DBFCDX)
+Table "mailpara" {
+  Note: "Origem: mailpara"
+  "ERRO" VARCHAR(8)
+  "DESTINO" VARCHAR(12)
+  Indexes {
+    (ERRO) [name: "MAILPARA"]
+  }
+}
+
+// Origem: mailpg (DBFCDX)
+Table "mailpg" {
+  Note: "Origem: mailpg"
+  "NUMERO" INTEGER [default: 0]
+  "ERRO" VARCHAR(8)
+  "DATA" DATETIME
+  "HORA" VARCHAR(8)
+  "DE" VARCHAR(12)
+  "DESTINO" VARCHAR(12)
+  "ASSUNTO" VARCHAR(120)
+  "TEXTO" LONGTEXT
+  "DATAOK" DATETIME
+  "HORAOK" VARCHAR(8)
+}
+

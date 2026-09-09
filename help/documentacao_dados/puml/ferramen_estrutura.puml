@@ -1,0 +1,602 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "cs" as cs {
+  CS : integer
+  DATA : datetime
+  TIPO : varchar(1)
+  FERRAM : varchar(24)
+  NOME : varchar(40)
+  TECNICO : integer
+  TECNOME : varchar(40)
+  QTDEBASE : integer
+  QTDESALDO : integer
+  QTDEPED : integer
+  QTDEURG : integer
+  DATASALDO : datetime
+  DATAPED : datetime
+  DATAURG : datetime
+  QTDETOT : integer
+  HRBAS : decimal(9,2)
+  HRTOT : decimal(9,2)
+  HRPRE : decimal(9,2)
+  HRURG : decimal(9,2)
+  HRSAL : decimal(9,2)
+  DATHPED : datetime
+  DATHURG : datetime
+  DATHSAL : datetime
+  LANCADA : boolean
+  LANCDAT : datetime
+  LANCUSR : integer
+  --
+  .. Índices ..
+  + CS : CS
+}
+
+entity "fapu" as fapu {
+  SEQ : integer
+  DINI : datetime
+  DFIM : datetime
+  APURADO : boolean
+  PCPLIB : boolean
+  PCPNUM : integer
+  PCPDAT : datetime
+  --
+  .. Índices ..
+  + FAPU : SEQ
+}
+
+entity "fapubai" as fapubai {
+  SEQ : integer
+  FERRAM : varchar(24)
+  QTDE : integer
+  HORAS : decimal(9,2)
+  --
+  .. Índices ..
+  + FAPUBAI : STR(SEQ,3)+FERRAM
+}
+
+entity "fapufer" as fapufer {
+  SEQ : integer
+  FERRAM : varchar(24)
+  QTDE : integer
+  HORAS : decimal(9,2)
+  --
+  .. Índices ..
+  + FAPUFER : STR(SEQ,3)+FERRAM
+  + FAPUFER2 : FERRAM
+}
+
+entity "fapui" as fapui {
+  SEQ : integer
+  FERRAM : varchar(24)
+  QTDE : integer
+  HORAS : decimal(9,2)
+  --
+  .. Índices ..
+  + FAPUI : SEQ
+}
+
+entity "fapumaq" as fapumaq {
+  SEQ : integer
+  FERRAM : varchar(4)
+  QTDE : integer
+  HORAS : decimal(9,2)
+  --
+  .. Índices ..
+  + FAPUMAQ : STR(SEQ,3)+FERRAM
+  + FAPUMAQ2 : FERRAM
+}
+
+entity "fe02" as fe02 {
+  TIPO : varchar(24)
+  CODIGO : varchar(20)
+  ANO : integer
+  MES : integer
+  USO : decimal(16,5)
+  --
+  .. Índices ..
+  + FE02-1 : TIPO+CODIGO+STR(ANO,4)+STR(MES,2)
+}
+
+entity "fe99" as fe99 {
+  ARQUIVO : varchar(8)
+  DOCUMENTO : varchar(40)
+  OPERACAO : varchar(1)
+  USUARIO : varchar(5)
+  QTDE : decimal(12,3)
+  OLDQTDE : decimal(12,3)
+  NUMERO : integer
+  DATA : datetime
+  CODIGO : varchar(24)
+  RASTRO : varchar(6)
+  ESTQXXX : decimal(12,3)
+  ESTQYYY : decimal(12,3)
+  --
+  .. Índices ..
+  + FE99-1 : ARQUIVO+DOCUMENTO
+  + FE99-2 : CODIGO+DTOS(DATA)
+}
+
+entity "fergi" as fergi {
+  FERRAM : varchar(24)
+  CODIGO : varchar(20)
+  NOME : varchar(40)
+  DESENHO : varchar(40)
+  SAIMIN : decimal(12,3)
+  ESTQMIN : decimal(12,3)
+  ESTQENT : decimal(12,3)
+  ESTQSAI : decimal(12,3)
+  ESTQINI : decimal(12,3)
+  ESTQSAL : decimal(12,3)
+  DIASENT : integer
+  DIASEST : integer
+  DATABALAN : datetime
+  DATMIN : datetime
+  MINDI : decimal(12,3)
+  MININD : decimal(12,3)
+  CAUTO : decimal(12,3)
+  CCM : decimal(15,6)
+  NOM2 : varchar(1)
+  UNIDADE : varchar(2)
+  --
+  .. Índices ..
+  + FERGI : FERRAM
+  + FERGI-2 : FERRAM+CODIGO
+}
+
+entity "fergrp" as fergrp {
+  GRUPO : varchar(24)
+  --
+  .. Índices ..
+  + FERGRP : GRUPO
+}
+
+entity "ferhg" as ferhg {
+  OS : integer
+  CODFERR : varchar(24)
+  CODME01 : varchar(4)
+  DATA : datetime
+  SEQ : integer
+  SSQ : integer
+  TIPSER : varchar(1)
+  SERVICO : varchar(255)
+  --
+  .. Índices ..
+  + OS : OS
+  + CODFERR : CODFERR
+}
+
+entity "ferhgi" as ferhgi {
+  OS : integer
+  DATA : datetime
+  HINI : decimal(5,2)
+  HFIM : decimal(5,2)
+  HGAS : decimal(5,2)
+  OBS : varchar(255)
+  --
+  .. Índices ..
+  + OS : OS
+}
+
+entity "fernf" as fernf {
+  FERRAM : varchar(24)
+  TIPO : varchar(2)
+  NRNOTA : integer
+  DTNOTA : datetime
+  VLNOTA : decimal(12,2)
+  TIPCAD : varchar(1)
+  CLIFOR : integer
+  CLICOG : varchar(12)
+  OBS : varchar(70)
+  --
+  .. Índices ..
+  + FERNF : FERRAM+STR(NRNOTA,8)
+  + FERNF-2 : FERRAM
+}
+
+entity "feros" as feros {
+  FEROS : integer
+  REVISAO : varchar(1)
+  CHAVE : varchar(9)
+  CLIENTE : integer
+  COGCLI : varchar(12)
+  FERRAM : varchar(24)
+  NOME : varchar(40)
+  DATAOS : datetime
+  DATAPE : datetime
+  DATANF : datetime
+  DATAPRZ : datetime
+  NRNOTA : integer
+  VALORMER : decimal(10,2)
+  VALORICM : decimal(10,2)
+  VALORIPI : decimal(10,2)
+  VALORTOT : decimal(10,2)
+  BASEICM : decimal(10,2)
+  BASEIPI : decimal(10,2)
+  ICM : decimal(5,2)
+  IPI : decimal(5,2)
+  CONSUMO : varchar(1)
+  SOMANF : varchar(1)
+  QTDE : integer
+  PRECO : decimal(10,2)
+  OBS : varchar(240)
+  CODIPI : varchar(2)
+  CLASSIPI : varchar(10)
+  PEDIDOCLI : varchar(20)
+  ANTIGO : integer
+  PPAPPREV : datetime
+  PPAPDATA : datetime
+  GP11PREV : datetime
+  GP11DATA : datetime
+  ADTODATA : datetime
+  ADTOVALOR : decimal(12,2)
+  OBS2 : varchar(254)
+  TIPO : varchar(1)
+  NFPGVCTO : datetime
+  --
+  .. Índices ..
+  + FEROS-1 : CHAVE
+  + FEROS-2 : FERRAM
+  + FEROS-3 : STR(CLIENTE,8)+FERRAM
+  + FEROS-4 : PEDIDOCLI
+}
+
+entity "ferram" as ferram {
+  FERRAM : varchar(24)
+  GRUPO : varchar(24)
+  NUMERO : integer
+  NOME : varchar(40)
+  CLIENTE : integer
+  COGCLI : varchar(12)
+  SITUACAO : varchar(1)
+  OBS : varchar(50)
+  DATAATV : datetime
+  DATADES : datetime
+  DATADEV : datetime
+  DATAOUT : datetime
+  CLASSE : varchar(1)
+  QTDEBASE : integer
+  QTDESALDO : integer
+  QTDEPED : integer
+  QTDEURG : integer
+  DATASALDO : datetime
+  DATAPED : datetime
+  DATAURG : datetime
+  TIPOFER : varchar(1)
+  QTDETOT : integer
+  HRBAS : decimal(9,2)
+  HRTOT : decimal(10,2)
+  HRPRE : decimal(7,2)
+  HRURG : decimal(7,2)
+  HRSAL : decimal(9,2)
+  DATHPED : datetime
+  DATHURG : datetime
+  DATHSAL : datetime
+  PREVER : varchar(1)
+  VDBAS : integer
+  VDPRE : integer
+  VDURG : integer
+  VDDPRE : datetime
+  VDDURG : datetime
+  VDHBAS : decimal(9,2)
+  VDHPRE : decimal(10,2)
+  VDHURG : decimal(10,2)
+  VDHDPRE : datetime
+  VDHDURG : datetime
+  PROPRIA : varchar(1)
+  NAEMPRESA : varchar(1)
+  VISUALNUM : integer
+  VISUALNOM : varchar(40)
+  VISUALOBS : varchar(50)
+  MEDA : decimal(7,3)
+  MEDB : decimal(7,3)
+  MEDC : decimal(7,3)
+  MEDD : decimal(7,3)
+  MEDH : decimal(7,3)
+  PESO : decimal(7,3)
+  CONTABIL : varchar(8)
+  CODMP01 : varchar(12)
+  PECA : varchar(24)
+  SEQ : integer
+  SSQ : integer
+  OPERN : varchar(40)
+  PECAN : varchar(40)
+  PRENSA : varchar(4)
+  PRENSAN : varchar(40)
+  ALTURA : varchar(30)
+  ALMOFADA : varchar(20)
+  PINOS : varchar(30)
+  MATCOD : varchar(24)
+  MATNOM : varchar(100)
+  LARG : varchar(30)
+  ESPMAT : varchar(30)
+  PASSOFER : varchar(25)
+  PECAROL : varchar(5)
+  PRATILE : varchar(5)
+  USADEMI : varchar(1)
+  USADISP : varchar(1)
+  OBST01 : varchar(40)
+  DATAT : datetime
+  ESQTIP : varchar(1)
+  ESQL01 : varchar(8)
+  ESQL02 : varchar(8)
+  ESQL03 : varchar(8)
+  ESQL04 : varchar(8)
+  ESQL05 : varchar(8)
+  ESQL06 : varchar(8)
+  ESQL07 : varchar(8)
+  ESQL08 : varchar(8)
+  MEDIARO : integer
+  PF : integer
+  --
+  .. Índices ..
+  + FERRAM : FERRAM
+  + FERRAM2 : GRUPO
+  + FERRAM3 : NUMERO
+}
+
+entity "ferrami" as ferrami {
+  FERRAM : varchar(24)
+  ITEM : integer
+  LIN01 : varchar(80)
+  --
+  .. Índices ..
+  + FERRAMI : FERRAM
+}
+
+entity "lvf" as lvf {
+  LVF : integer
+  FERRAM : varchar(24)
+  AREA : varchar(2)
+  DESCRI : varchar(40)
+  ACESSOR : varchar(50)
+  NOME : varchar(40)
+  CLIENTE : integer
+  CLINOME : varchar(50)
+  DATA : datetime
+  TECNICO : integer
+  TECNOME : varchar(40)
+  OBS01 : varchar(60)
+  OBS02 : varchar(60)
+  OBS03 : varchar(60)
+  OBS04 : varchar(60)
+  OBS05 : varchar(60)
+  RO : integer
+  --
+  .. Índices ..
+  + LVF : LVF
+}
+
+entity "lvfi" as lvfi {
+  LVF : integer
+  ITEM : integer
+  DESCRI : varchar(50)
+  OPER01 : varchar(1)
+  OPER02 : varchar(1)
+  --
+  .. Índices ..
+  + LVFI : LVF
+}
+
+entity "lvfp" as lvfp {
+  ITEM : integer
+  DESCRI : varchar(60)
+  GRUPO : varchar(1)
+  --
+  .. Índices ..
+  + LVFP : ITEM
+}
+
+entity "lvm" as lvm {
+  LVM : integer
+  NUMERO : varchar(24)
+  NOME : varchar(40)
+  DATA : datetime
+  SETOR : varchar(10)
+  ACESSOR : varchar(20)
+  CONTABIL : varchar(8)
+  FABRICANTE : varchar(20)
+  MODELO : varchar(20)
+  TECNICO : integer
+  TECNOME : varchar(40)
+  OBS01 : varchar(60)
+  OBS02 : varchar(60)
+  OBS03 : varchar(60)
+  OBS04 : varchar(60)
+  OBS05 : varchar(60)
+  RO : integer
+  HORAS : decimal(6,2)
+  --
+  .. Índices ..
+  + LVM : LVM
+}
+
+entity "lvmi" as lvmi {
+  LVM : integer
+  ITEM : integer
+  DESCRI : varchar(150)
+  OPER01 : varchar(1)
+  OPER02 : varchar(1)
+  OPER03 : varchar(1)
+  --
+  .. Índices ..
+  + LVMI : LVM
+}
+
+entity "lvmp" as lvmp {
+  ITEM : integer
+  DESCRI : varchar(200)
+  GRUPO : varchar(3)
+  --
+  .. Índices ..
+  + LVMP : STR(ITEM,2)+GRUPO
+}
+
+entity "mapu" as mapu {
+  SEQ : integer
+  DINI : datetime
+  DFIM : datetime
+  APURADO : boolean
+  PCPLIB : boolean
+  PCPNUM : integer
+  PCPDAT : datetime
+  --
+  .. Índices ..
+  + MAPU : SEQ
+}
+
+entity "mapubai" as mapubai {
+  SEQ : integer
+  FERRAM : varchar(4)
+  QTDE : integer
+  HORAS : decimal(9,2)
+  --
+  .. Índices ..
+  + MAPUBAI : STR(SEQ,3)+FERRAM
+}
+
+entity "mapui" as mapui {
+  SEQ : integer
+  FERRAM : varchar(4)
+  QTDE : integer
+  HORAS : decimal(9,2)
+  --
+  .. Índices ..
+  + MUPUI : SEQ
+}
+
+entity "me01cr" as me01cr {
+  CODIGO : varchar(4)
+  NOME : varchar(40)
+  PROGRAMA : datetime
+  EFETUADA : datetime
+  LVM : integer
+  ANO : integer
+  CANO : varchar(4)
+  --
+  .. Índices ..
+  + ME01CR : CODIGO+DTOS(PROGRAMA)
+}
+
+entity "rl" as rl {
+  RL : integer
+  DATA : datetime
+  --
+  .. Índices ..
+  + RL : RL
+}
+
+entity "rli" as rli {
+  RL : integer
+  CODME01 : varchar(5)
+  LUB01 : varchar(1)
+  LUB02 : varchar(1)
+  LUB03 : varchar(1)
+  LUB04 : varchar(1)
+  LUB05 : varchar(1)
+  --
+  .. Índices ..
+  + RL : RL
+}
+
+entity "ro" as ro {
+  RO : integer
+  AREA : varchar(2)
+  DESCRI : varchar(20)
+  FERRAM : varchar(24)
+  NOME : varchar(40)
+  DATA : datetime
+  TECNICO : integer
+  TECNOME : varchar(40)
+  HORA : decimal(5,2)
+  TIPO : varchar(1)
+  TIPORO : varchar(1)
+  DEFEITO : varchar(80)
+  DEFEIT2 : varchar(40)
+  DEFEIT3 : varchar(40)
+  SOLUCAO : varchar(200)
+  SOLUCA2 : varchar(80)
+  SOLUCA3 : varchar(80)
+  SOLUCA4 : varchar(80)
+  SM : integer
+  QTDESALDO : integer
+  QTDEPED : integer
+  QTDEURG : integer
+  DATASALDO : datetime
+  DATAPED : datetime
+  DATAURG : datetime
+  CLIENTE : integer
+  CLINOME : varchar(50)
+  CONCLUIDA : boolean
+  QTDETOT : integer
+  HRBAS : decimal(10,2)
+  HRTOT : decimal(9,2)
+  HRPRE : decimal(7,2)
+  HRURG : decimal(7,2)
+  HRSAL : decimal(9,2)
+  DATHPED : datetime
+  DATHURG : datetime
+  DATHSAL : datetime
+  REQNUM : integer
+  REQNOME : varchar(40)
+  ZERO : integer
+  DATAPAR : datetime
+  HORAPAR : decimal(5,2)
+  HORAINI : decimal(5,2)
+  HORAFIM : decimal(5,2)
+  DATAINI : datetime
+  DATAFIM : datetime
+  HORAPINI : decimal(5,2)
+  DIASANT : integer
+  DIASPAI : integer
+  DIASAVO : integer
+  --
+  .. Índices ..
+  + RO : RO
+  + RO-2 : SM
+  + RO-3 : TIPO+FERRAM+DTOS(DATA)
+  + RO-4 : TIPO+FERRAM+DTOS(DATAINI)
+  + RO-5 : TIPO+FERRAM+DTOS(DATAFIM)
+}
+
+entity "roapud" as roapud {
+  DIAINI : datetime
+  DIAFIM : datetime
+}
+
+entity "roi" as roi {
+  RO : integer
+  CODIGO : varchar(20)
+  QTDE : integer
+  --
+  .. Índices ..
+  + ROI : RO
+}
+
+entity "sm" as sm {
+  SM : integer
+  DATA : datetime
+  TIPO : varchar(1)
+  CODIGO : varchar(24)
+  NOME : varchar(40)
+  CLIENTE : integer
+  CLINOME : varchar(50)
+  DEF01 : varchar(80)
+  DEF02 : varchar(30)
+  DATAPP : datetime
+  PRIOR : varchar(1)
+  RO : integer
+  CONCLUIDA : boolean
+  REQNUM : integer
+  REQNOME : varchar(40)
+  HORAPINI : decimal(5,2)
+  DATAPAR : datetime
+  --
+  .. Índices ..
+  + SM : SM
+}
+
+
+@enduml

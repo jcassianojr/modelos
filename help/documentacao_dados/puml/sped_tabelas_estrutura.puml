@@ -1,0 +1,3460 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "aj_apur_ded" as aj_apur_ded {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "aj_apur_ipi" as aj_apur_ipi {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "aj_contrib_cred" as aj_contrib_cred {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "aj_preco_parametro_exp" as aj_preco_parametro_exp {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "aj_preco_parametro_imp" as aj_preco_parametro_imp {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "aliq_agro_frigo" as aliq_agro_frigo {
+  CODIGO : varchar(3)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  LISTA_COD_ : varchar(254)
+  LISTA_COD2 : varchar(254)
+  EX_IPI : varchar(3)
+  ALIQ_PIS : decimal(15,4)
+  ALIQ_COFIN : decimal(15,4)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "ativos_exterior" as ativos_exterior {
+  CODIGO : varchar(8)
+  NOME : varchar(86)
+  DATAINICIO : varchar(8)
+  DATAFIM : datetime
+  GRUPO : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "bc_cred" as bc_cred {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "beneficio_fiscal" as beneficio_fiscal {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "CBC_MOEDA_CONVERSAO" as CBC_MOEDA_CONVERSAO {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  TIPO : varchar(8)
+  REAL_COMPR : varchar(9)
+  REAL_VENDA : varchar(9)
+  DOLAR_COMP : varchar(11)
+  DOLAR_VEND : varchar(11)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "cbc_pais_acordo" as cbc_pais_acordo {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "cbc_pais_falha" as cbc_pais_falha {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "cfop_credito" as cfop_credito {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  NAT_BC_CRE : varchar(2)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "cfop_devolucao" as cfop_devolucao {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "cfop_devolucao_venda" as cfop_devolucao_venda {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "cfop_receita" as cfop_receita {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  DESC_REC : varchar(254)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "classificacao_item" as classificacao_item {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "class_contrib_ipi" as class_contrib_ipi {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "cl_itens_eng_com_telecom" as cl_itens_eng_com_telecom {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "cnc" as cnc {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "cod_ajus_base_calculo_contrib" as cod_ajus_base_calculo_contrib {
+  COD_AJUSTE : varchar(8)
+  DESCRICAO : varchar(89)
+  OBRIGA_DET : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  --
+  .. Índices ..
+  + CHAVE : COD_AJUSTE
+}
+
+entity "cod_atividade" as cod_atividade {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  NCM_ATV : varchar(8)
+  ALIQ_ATV : decimal(6,2)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "cod_detalham" as cod_detalham {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "cod_enq" as cod_enq {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "cod_natureza_ajus_base_calculo" as cod_natureza_ajus_base_calculo {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "cod_prod_usinas" as cod_prod_usinas {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "cod_rec_f600" as cod_rec_f600 {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  PERIODICID : varchar(10)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "cod_rec_p200" as cod_rec_p200 {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  PERIODICID : varchar(10)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "cod_sit" as cod_sit {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "cond_pessoa_envolv_operacao" as cond_pessoa_envolv_operacao {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "consumo_agua" as consumo_agua {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "consumo_energia" as consumo_energia {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "consumo_gas" as consumo_gas {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "consumo_telecom" as consumo_telecom {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "contasref" as contasref {
+  CODIGO : varchar(20)
+  NOME : varchar(110)
+  DATAINICIO : datetime
+  DATAFIM : datetime
+  TIPO_CONTA : varchar(1)
+  COD_CTA_SU : varchar(9)
+  NIVEL_CONT : varchar(1)
+  COD_NAT : varchar(1)
+  UTILIZACAO : varchar(1)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "contasref_bacen" as contasref_bacen {
+  CODIGO : varchar(8)
+  NOME : varchar(60)
+  DATAINICIO : datetime
+  DATAFIM : datetime
+  TIPO_CONTA : varchar(1)
+  COD_CTA_SU : varchar(8)
+  NIVEL_CONT : varchar(1)
+  COD_NAT : varchar(1)
+  UTILIZACAO : varchar(1)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "contasref_susep" as contasref_susep {
+  CODIGO : varchar(8)
+  NOME : varchar(100)
+  DATAINICIO : datetime
+  DATAFIM : datetime
+  TIPO_CONTA : varchar(1)
+  COD_CTA_SU : varchar(8)
+  NIVEL_CONT : varchar(1)
+  COD_NAT : varchar(1)
+  UTILIZACAO : varchar(1)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "contasref_tse" as contasref_tse {
+  CODIGO : varchar(20)
+  DESCRICAO : varchar(110)
+  DATAINICIO : datetime
+  DATAFIM : datetime
+  TIPO_CONTA : varchar(1)
+  COD_CTA_SU : varchar(20)
+  NIVEL_CONT : varchar(1)
+  COD_NAT : varchar(1)
+  UTILIZACAO : varchar(1)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "contribuicoes_cofins" as contribuicoes_cofins {
+  CODIGO : varchar(6)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  PERIODICID : varchar(10)
+  --
+  .. Índices ..
+  + REGISTRO : recno()
+}
+
+entity "contribuicoes_pispasep" as contribuicoes_pispasep {
+  CODIGO : varchar(6)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  PERIODICID : varchar(10)
+  --
+  .. Índices ..
+  + REGISTRO : recno()
+}
+
+entity "csll" as csll {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(15)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ALIQUOTA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "cs_apur" as cs_apur {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "data_limite_entrega" as data_limite_entrega {
+  MES_ANO : varchar(8)
+  DATA_LIMIT : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  --
+  .. Índices ..
+  + CHAVE : MES_ANO
+}
+
+entity "deducoes" as deducoes {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  IND_ATIV : varchar(15)
+  IND_AJUSTE : varchar(1)
+  GRUPO : varchar(3)
+  IND_OUTROS : varchar(1)
+  TIPO_DEDUC : varchar(1)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "deducoes_grupo000" as deducoes_grupo000 {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  IND_ATIV : varchar(15)
+  IND_AJUSTE : varchar(1)
+  GRUPO : varchar(3)
+  SUBGRUPO : varchar(5)
+  IND_OUTROS : varchar(1)
+  --
+  .. Índices ..
+  + REGISTRO : recno()
+}
+
+entity "deducoes_grupo100" as deducoes_grupo100 {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  IND_ATIV : varchar(15)
+  IND_AJUSTE : varchar(1)
+  GRUPO : varchar(3)
+  SUBGRUPO : varchar(5)
+  IND_OUTROS : varchar(1)
+  --
+  .. Índices ..
+  + REGISTRO : recno()
+}
+
+entity "deducoes_grupo200" as deducoes_grupo200 {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  IND_ATIV : varchar(15)
+  IND_AJUSTE : varchar(1)
+  GRUPO : varchar(3)
+  SUBGRUPO : varchar(5)
+  IND_OUTROS : varchar(1)
+  --
+  .. Índices ..
+  + REGISTRO : recno()
+}
+
+entity "deducoes_grupo300" as deducoes_grupo300 {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  IND_ATIV : varchar(15)
+  IND_AJUSTE : varchar(1)
+  GRUPO : varchar(3)
+  SUBGRUPO : varchar(5)
+  IND_OUTROS : varchar(1)
+  --
+  .. Índices ..
+  + REGISTRO : recno()
+}
+
+entity "deducoes_grupo400" as deducoes_grupo400 {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  IND_ATIV : varchar(15)
+  IND_AJUSTE : varchar(1)
+  GRUPO : varchar(3)
+  SUBGRUPO : varchar(5)
+  IND_OUTROS : varchar(1)
+  --
+  .. Índices ..
+  + REGISTRO : recno()
+}
+
+entity "deducoes_grupo500" as deducoes_grupo500 {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  IND_ATIV : varchar(15)
+  IND_AJUSTE : varchar(1)
+  GRUPO : varchar(3)
+  SUBGRUPO : varchar(5)
+  IND_OUTROS : varchar(1)
+  --
+  .. Índices ..
+  + REGISTRO : recno()
+}
+
+entity "deducoes_grupo600" as deducoes_grupo600 {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  IND_ATIV : varchar(15)
+  IND_AJUSTE : varchar(1)
+  GRUPO : varchar(3)
+  SUBGRUPO : varchar(5)
+  IND_OUTROS : varchar(1)
+  --
+  .. Índices ..
+  + REGISTRO : recno()
+}
+
+entity "deducoes_grupo700" as deducoes_grupo700 {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  IND_ATIV : varchar(15)
+  IND_AJUSTE : varchar(1)
+  GRUPO : varchar(3)
+  SUBGRUPO : varchar(5)
+  IND_OUTROS : varchar(1)
+  --
+  .. Índices ..
+  + REGISTRO : recno()
+}
+
+entity "deducoes_grupo800" as deducoes_grupo800 {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  IND_ATIV : varchar(15)
+  IND_AJUSTE : varchar(1)
+  GRUPO : varchar(3)
+  SUBGRUPO : varchar(5)
+  IND_OUTROS : varchar(1)
+  --
+  .. Índices ..
+  + REGISTRO : recno()
+}
+
+entity "derex_documento" as derex_documento {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "enq_legal_ipi" as enq_legal_ipi {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "entidades" as entidades {
+  CODIGO : varchar(2)
+  NOME : varchar(82)
+  DATAINICIO : datetime
+  DATAFIM : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "entrega" as entrega {
+  ANOCALENDA : varchar(8)
+  DTLIMITE : varchar(8)
+  DATAINICIO : varchar(8)
+  DATAFIM : datetime
+  --
+  .. Índices ..
+  + CHAVE : ANOCALENDA
+}
+
+entity "faixa_cons_eng_elet" as faixa_cons_eng_elet {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "fontes_preco_parametro" as fontes_preco_parametro {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(92)
+  DATAINICIO : varchar(8)
+  DATAFIM : datetime
+  EXP_IMP : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "forma_doacao" as forma_doacao {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "forma_recto_pagto" as forma_recto_pagto {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "forma_tributacao" as forma_tributacao {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "genero_item" as genero_item {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "gen_item_merc_serv" as gen_item_merc_serv {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "grupos_deducoes" as grupos_deducoes {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + ANP : CODIGO
+}
+
+entity "grupos_receitas" as grupos_receitas {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "in86manad_campos" as in86manad_campos {
+  SISTEMA : varchar(5)
+  SUB : varchar(3)
+  BLOCO : varchar(4)
+  SEQ : varchar(2)
+  CAMPO : varchar(24)
+  DESCRICAO : varchar(46)
+  TIPO : varchar(1)
+  VALIDACAO : varchar(37)
+  OBRIGATORI : varchar(1)
+  INICIO : varchar(3)
+  COMPRIMENT : varchar(3)
+  DECIMAIS : varchar(1)
+  TAMANHO : varchar(3)
+  SEQSALVAR : varchar(2)
+  --
+  .. Índices ..
+  + BLOCOS : SISTEMA+SUB+BLOCO
+}
+
+entity "incentivo_fiscal" as incentivo_fiscal {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "indicador_inicio_periodo" as indicador_inicio_periodo {
+  CODIGO : varchar(1)
+  NOME : varchar(172)
+  DATAINICIO : datetime
+  DATAFIM : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "ind_emit" as ind_emit {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "instituicoes" as instituicoes {
+  CODIGO : varchar(2)
+  NOME : varchar(153)
+  DATAINICIO : datetime
+  DATAFIM : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "l100_a" as l100_a {
+  CODIGO : varchar(13)
+  DESCRICAO : varchar(167)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  COD_SUP : varchar(10)
+  NIVEL : varchar(8)
+  NATUREZA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "l100_a_regras" as l100_a_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(58)
+  MENSAGEM : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "l100_b" as l100_b {
+  CODIGO : varchar(15)
+  DESCRICAO : varchar(118)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  COD_SUP : varchar(15)
+  NIVEL : varchar(8)
+  NATUREZA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "l100_c" as l100_c {
+  CODIGO : varchar(10)
+  DESCRICAO : varchar(88)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  COD_SUP : varchar(8)
+  NIVEL : varchar(8)
+  NATUREZA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "l210" as l210 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(93)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(44)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "l210_regras" as l210_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(90)
+  MENSAGEM : varchar(164)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "l300_a" as l300_a {
+  CODIGO : varchar(16)
+  DESCRICAO : varchar(138)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  COD_SUP : varchar(13)
+  NIVEL : varchar(8)
+  NATUREZA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "l300_a_regras" as l300_a_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(16)
+  NIVEL : varchar(8)
+  FORMULA : varchar(110)
+  MENSAGEM : varchar(174)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "l300_b" as l300_b {
+  CODIGO : varchar(15)
+  DESCRICAO : varchar(115)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  COD_SUP : varchar(15)
+  NIVEL : varchar(8)
+  NATUREZA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "l300_b_regras" as l300_b_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(15)
+  NIVEL : varchar(8)
+  FORMULA : varchar(99)
+  MENSAGEM : varchar(218)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "l300_c" as l300_c {
+  CODIGO : varchar(19)
+  DESCRICAO : varchar(158)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  COD_SUP : varchar(16)
+  NIVEL : varchar(8)
+  NATUREZA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "l300_c_regras" as l300_c_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(13)
+  NIVEL : varchar(8)
+  FORMULA : varchar(58)
+  MENSAGEM : varchar(156)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "l300_r" as l300_r {
+  CODIGO : varchar(16)
+  DESCRICAO : varchar(138)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  COD_SUP : varchar(13)
+  NIVEL : varchar(8)
+  NATUREZA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "l300_r_regras" as l300_r_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(13)
+  NIVEL : varchar(8)
+  FORMULA : varchar(94)
+  MENSAGEM : varchar(126)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "m300_a" as m300_a {
+  CODIGO : varchar(6)
+  DESCRICAO : varchar(215)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(47)
+  TIPO : varchar(62)
+  FORMATO : varchar(41)
+  LINHA_ECF : varchar(27)
+  FORMULA : varchar(127)
+  TIPO_LANC : varchar(30)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "m300_a_regras" as m300_a_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(213)
+  MENSAGEM : varchar(193)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "m300_b" as m300_b {
+  CODIGO : varchar(6)
+  DESCRICAO : varchar(215)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(47)
+  TIPO : varchar(62)
+  FORMATO : varchar(41)
+  LINHA_ECF : varchar(27)
+  FORMULA : varchar(127)
+  TIPO_LANC : varchar(30)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "m300_b_regras" as m300_b_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(152)
+  MENSAGEM : varchar(193)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "m300_c" as m300_c {
+  CODIGO : varchar(6)
+  DESCRICAO : varchar(215)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(47)
+  TIPO : varchar(62)
+  FORMATO : varchar(41)
+  LINHA_ECF : varchar(27)
+  FORMULA : varchar(127)
+  TIPO_LANC : varchar(30)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "m300_c_regras" as m300_c_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(152)
+  MENSAGEM : varchar(193)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "m300_r" as m300_r {
+  CODIGO : varchar(6)
+  DESCRICAO : varchar(215)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(47)
+  TIPO : varchar(62)
+  FORMATO : varchar(41)
+  LINHA_ECF : varchar(27)
+  FORMULA : varchar(127)
+  TIPO_LANC : varchar(30)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "m300_r_regras" as m300_r_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(213)
+  MENSAGEM : varchar(193)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "m350_a" as m350_a {
+  CODIGO : varchar(6)
+  DESCRICAO : varchar(215)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(47)
+  TIPO : varchar(62)
+  FORMATO : varchar(41)
+  LINHA_ECF : varchar(27)
+  FORMULA : varchar(127)
+  TIPO_LANC : varchar(30)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "m350_a_regras" as m350_a_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(213)
+  MENSAGEM : varchar(193)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "m350_b" as m350_b {
+  CODIGO : varchar(6)
+  DESCRICAO : varchar(215)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(47)
+  TIPO : varchar(62)
+  FORMATO : varchar(41)
+  LINHA_ECF : varchar(27)
+  FORMULA : varchar(127)
+  TIPO_LANC : varchar(30)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "m350_b_regras" as m350_b_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(152)
+  MENSAGEM : varchar(193)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "m350_c" as m350_c {
+  CODIGO : varchar(6)
+  DESCRICAO : varchar(215)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(47)
+  TIPO : varchar(62)
+  FORMATO : varchar(41)
+  LINHA_ECF : varchar(27)
+  FORMULA : varchar(127)
+  TIPO_LANC : varchar(30)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "m350_c_regras" as m350_c_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(152)
+  MENSAGEM : varchar(193)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "m350_r" as m350_r {
+  CODIGO : varchar(6)
+  DESCRICAO : varchar(215)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(47)
+  TIPO : varchar(62)
+  FORMATO : varchar(41)
+  LINHA_ECF : varchar(27)
+  FORMULA : varchar(127)
+  TIPO_LANC : varchar(30)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "m350_r_regras" as m350_r_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(213)
+  MENSAGEM : varchar(193)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "metodo_avaliacao_estoque" as metodo_avaliacao_estoque {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "metodo_control" as metodo_control {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "metodo_export" as metodo_export {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "metodo_import" as metodo_import {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "modelos" as modelos {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "motivo_dispensa_entrega" as motivo_dispensa_entrega {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "motivo_situacao_cadastral" as motivo_situacao_cadastral {
+  CODIGO : varchar(2)
+  DESCRICAO : varchar(90)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "motivo_substituicao" as motivo_substituicao {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "n500" as n500 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(71)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "n500_regras" as n500_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(22)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(69)
+  MENSAGEM : varchar(186)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "n600" as n600 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(202)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(159)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "n600_regras" as n600_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(101)
+  MENSAGEM : varchar(129)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "n610" as n610 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(90)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(161)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "n610_regras" as n610_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(121)
+  MENSAGEM : varchar(61)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "n620" as n620 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(128)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(178)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "n620_regras" as n620_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(30)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(244)
+  MENSAGEM : varchar(231)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "n630_a" as n630_a {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(128)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(178)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "n630_a_regras" as n630_a_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(156)
+  MENSAGEM : varchar(220)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "n630_b" as n630_b {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(123)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(103)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "n630_b_regras" as n630_b_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(139)
+  MENSAGEM : varchar(143)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "n630_c" as n630_c {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(123)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(103)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "n630_c_regras" as n630_c_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(139)
+  MENSAGEM : varchar(143)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "n650" as n650 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(71)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "n650_regras" as n650_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(21)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(69)
+  MENSAGEM : varchar(191)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "n660" as n660 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(131)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(96)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "n660_regras" as n660_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(30)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(244)
+  MENSAGEM : varchar(199)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "n670" as n670 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(131)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(26)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "n670_regras" as n670_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(134)
+  MENSAGEM : varchar(115)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "natureza" as natureza {
+  CODIGO : varchar(2)
+  NOME : varchar(65)
+  DATAINICIO : datetime
+  DATAFIM : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "natureza_acao_judicial" as natureza_acao_judicial {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "natureza_juridica" as natureza_juridica {
+  CODIGO : varchar(4)
+  DESCRICAO : varchar(80)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "natureza_operacao" as natureza_operacao {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "natureza_processo_adm" as natureza_processo_adm {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "natureza_subconta" as natureza_subconta {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "obr_icms_recol" as obr_icms_recol {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "oper_com_isencao" as oper_com_isencao {
+  CODIGO : varchar(3)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  LISTA_COD_ : varchar(254)
+  LISTA_COD2 : varchar(254)
+  EX_IPI : varchar(3)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "oper_com_suspensao" as oper_com_suspensao {
+  CODIGO : varchar(3)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  LISTA_COD_ : varchar(254)
+  LISTA_COD2 : varchar(254)
+  EX_IPI : varchar(3)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "oper_sem_incidencia" as oper_sem_incidencia {
+  CODIGO : varchar(3)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  LISTA_COD_ : varchar(254)
+  LISTA_COD2 : varchar(254)
+  EX_IPI : varchar(3)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "outros_aliq_difer" as outros_aliq_difer {
+  CODIGO : varchar(3)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  LISTA_COD_ : varchar(254)
+  LISTA_COD2 : varchar(254)
+  EX_IPI : varchar(3)
+  ALIQ_PIS_C : decimal(15,4)
+  ALIQ_PIS2 : decimal(15,4)
+  ALIQ_COFIN : decimal(15,4)
+  ALIQ_COFI2 : decimal(15,4)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "p100" as p100 {
+  CODIGO : varchar(13)
+  DESCRICAO : varchar(167)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  COD_SUP : varchar(10)
+  NIVEL : varchar(8)
+  NATUREZA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "p100_b" as p100_b {
+  CODIGO : varchar(15)
+  DESCRICAO : varchar(118)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  COD_SUP : varchar(15)
+  NIVEL : varchar(8)
+  NATUREZA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "p100_b_regras" as p100_b_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(15)
+  NIVEL : varchar(8)
+  FORMULA : varchar(58)
+  MENSAGEM : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "p100_regras" as p100_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(58)
+  MENSAGEM : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "p130" as p130 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(68)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(95)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "p130_regras" as p130_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(189)
+  MENSAGEM : varchar(142)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "p150" as p150 {
+  CODIGO : varchar(16)
+  DESCRICAO : varchar(138)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  COD_SUP : varchar(13)
+  NIVEL : varchar(8)
+  NATUREZA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "p150_b" as p150_b {
+  CODIGO : varchar(15)
+  DESCRICAO : varchar(115)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  COD_SUP : varchar(15)
+  NIVEL : varchar(8)
+  NATUREZA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "p150_b_regras" as p150_b_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(15)
+  NIVEL : varchar(8)
+  FORMULA : varchar(99)
+  MENSAGEM : varchar(218)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "p150_r" as p150_r {
+  CODIGO : varchar(16)
+  DESCRICAO : varchar(138)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  COD_SUP : varchar(13)
+  NIVEL : varchar(8)
+  NATUREZA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "p150_regras" as p150_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(16)
+  NIVEL : varchar(8)
+  FORMULA : varchar(110)
+  MENSAGEM : varchar(164)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "p150_r_regras" as p150_r_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(13)
+  NIVEL : varchar(8)
+  FORMULA : varchar(94)
+  MENSAGEM : varchar(126)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "p200" as p200 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(219)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(203)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "p200_regras" as p200_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(205)
+  MENSAGEM : varchar(228)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "p230" as p230 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(59)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(147)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "p230_regras" as p230_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(120)
+  MENSAGEM : varchar(111)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "p300" as p300 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(121)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(122)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "p300_regras" as p300_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(128)
+  MENSAGEM : varchar(201)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "p400" as p400 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(219)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(141)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "p400_regras" as p400_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(246)
+  MENSAGEM : varchar(208)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "p500" as p500 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(131)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(26)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "p500_regras" as p500_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(133)
+  MENSAGEM : varchar(114)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "parteb_padrao" as parteb_padrao {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(242)
+  DT_INI : datetime
+  DT_FIM : datetime
+  TRIBUTO : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "parteb_partea" as parteb_partea {
+  COD_PB_RFB : varchar(8)
+  COD_PART_A : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  COD_QUALIF : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : COD_PB_RFB
+}
+
+entity "prod_aliq_zero" as prod_aliq_zero {
+  CODIGO : varchar(3)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  LISTA_COD_ : varchar(254)
+  LISTA_COD2 : varchar(254)
+  EX_IPI : varchar(3)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "prod_mono_aliq_difer" as prod_mono_aliq_difer {
+  CODIGO : varchar(3)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  LISTA_COD_ : varchar(254)
+  LISTA_COD2 : varchar(254)
+  EX_IPI : varchar(3)
+  ALIQ_PIS : decimal(15,4)
+  ALIQ_COFIN : decimal(15,4)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "prod_mono_aliq_unid" as prod_mono_aliq_unid {
+  CODIGO : varchar(6)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  LISTA_COD_ : varchar(254)
+  LISTA_CO2 : varchar(254)
+  EX_IPI : varchar(3)
+  ALIQ_PIS_Q : decimal(15,4)
+  ALIQ_COFIN : decimal(15,4)
+  UNID : varchar(254)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "prod_st" as prod_st {
+  CODIGO : varchar(3)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  LISTA_COD_ : varchar(254)
+  LISTA_COD2 : varchar(254)
+  EX_IPI : varchar(3)
+  ALIQ_PIS : decimal(15,4)
+  ALIQ_COFIN : decimal(15,4)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "projeto" as projeto {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "qualificacao" as qualificacao {
+  CODIGO : varchar(3)
+  NOME : varchar(161)
+  DATAINICIO : datetime
+  DATAFIM : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "qualif_assin_termo" as qualif_assin_termo {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "qualif_pessoa_juridica" as qualif_pessoa_juridica {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "qualif_repres_legal" as qualif_repres_legal {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "qualif_socio_cnpj" as qualif_socio_cnpj {
+  CODIGO : varchar(2)
+  DESCRICAO : varchar(80)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "qualif_socio_titular" as qualif_socio_titular {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "receitas" as receitas {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  IND_ATIV : varchar(15)
+  IND_AJUSTE : varchar(1)
+  GRUPO : varchar(3)
+  IND_OUTROS : varchar(1)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "receitas_grupo000" as receitas_grupo000 {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  IND_ATIV : varchar(15)
+  IND_AJUSTE : varchar(1)
+  GRUPO : varchar(3)
+  SUBGRUPO : varchar(5)
+  IND_OUTROS : varchar(1)
+  --
+  .. Índices ..
+  + REGISTRO : recno()
+}
+
+entity "receitas_grupo100" as receitas_grupo100 {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  IND_ATIV : varchar(15)
+  IND_AJUSTE : varchar(1)
+  GRUPO : varchar(3)
+  SUBGRUPO : varchar(5)
+  IND_OUTROS : varchar(1)
+  --
+  .. Índices ..
+  + REGISTRO : recno()
+}
+
+entity "receitas_grupo200" as receitas_grupo200 {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  IND_ATIV : varchar(15)
+  IND_AJUSTE : varchar(1)
+  GRUPO : varchar(3)
+  SUBGRUPO : varchar(5)
+  IND_OUTROS : varchar(1)
+  --
+  .. Índices ..
+  + REGISTRO : recno()
+}
+
+entity "receitas_grupo300" as receitas_grupo300 {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  IND_ATIV : varchar(15)
+  IND_AJUSTE : varchar(1)
+  GRUPO : varchar(3)
+  SUBGRUPO : varchar(5)
+  IND_OUTROS : varchar(1)
+  --
+  .. Índices ..
+  + REGISTRO : recno()
+}
+
+entity "receitas_grupo400" as receitas_grupo400 {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  IND_ATIV : varchar(15)
+  IND_AJUSTE : varchar(1)
+  GRUPO : varchar(3)
+  SUBGRUPO : varchar(5)
+  IND_OUTROS : varchar(1)
+  --
+  .. Índices ..
+  + REGISTRO : recno()
+}
+
+entity "receitas_grupo500" as receitas_grupo500 {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  IND_ATIV : varchar(15)
+  IND_AJUSTE : varchar(1)
+  GRUPO : varchar(3)
+  SUBGRUPO : varchar(5)
+  IND_OUTROS : varchar(1)
+  --
+  .. Índices ..
+  + REGISTRO : recno()
+}
+
+entity "receitas_grupo600" as receitas_grupo600 {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  IND_ATIV : varchar(15)
+  IND_AJUSTE : varchar(1)
+  GRUPO : varchar(3)
+  SUBGRUPO : varchar(5)
+  IND_OUTROS : varchar(1)
+  --
+  .. Índices ..
+  + REGISTRO : recno()
+}
+
+entity "receitas_grupo700" as receitas_grupo700 {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  IND_ATIV : varchar(15)
+  IND_AJUSTE : varchar(1)
+  GRUPO : varchar(3)
+  SUBGRUPO : varchar(5)
+  IND_OUTROS : varchar(1)
+  --
+  .. Índices ..
+  + REGISTRO : recno()
+}
+
+entity "receitas_visao_analit_refer" as receitas_visao_analit_refer {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  IND_ATIV : varchar(15)
+  IND_AJUSTE : varchar(1)
+  GRUPO : varchar(3)
+  IND_OUTROS : varchar(1)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "rec_ref_obrigacao" as rec_ref_obrigacao {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "REGRAS_GERAIS" as REGRAS_GERAIS {
+  CODIGO : varchar(20)
+  DESCRICAO : varchar(83)
+  DT_INI : datetime
+  DT_FIM : datetime
+  REGISTRO : varchar(8)
+  CAMPO_REF : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(63)
+  MENSAGEM : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "relacionamentos" as relacionamentos {
+  CODIGO : varchar(2)
+  NOME : varchar(255)
+  DATAINICIO : datetime
+  DATAFIM : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "retencao_fonte" as retencao_fonte {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(111)
+  DATAINICIO : varchar(8)
+  DATAFIM : datetime
+  BENEFIC : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "selo_cont_ipi" as selo_cont_ipi {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "servico_lcp_116" as servico_lcp_116 {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "siscomex_paises" as siscomex_paises {
+  CODIGO : varchar(3)
+  DESCRICAO : varchar(40)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "situacao" as situacao {
+  CODIGO : varchar(1)
+  NOME : varchar(37)
+  DATAINICIO : datetime
+  DATAFIM : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "sit_trib_icms_a" as sit_trib_icms_a {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "sit_trib_icms_b" as sit_trib_icms_b {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "sped_contabil_campos" as sped_contabil_campos {
+  BLOCO : varchar(4)
+  SEQUENCIA : varchar(2)
+  CAMPO : varchar(30)
+  DESCRICAO : varchar(254)
+  TIPO : varchar(1)
+  TAMANHO : varchar(4)
+}
+
+entity "sped_contabil_registros" as sped_contabil_registros {
+  CODIGO : varchar(4)
+  DESCRICAO : varchar(254)
+}
+
+entity "sped_contribuicoes_campos" as sped_contribuicoes_campos {
+  BLOCO : varchar(4)
+  SEQUENCIA : varchar(2)
+  CAMPO : varchar(30)
+  DESCRICAO : varchar(254)
+  TIPO : varchar(1)
+  TAMANHO : varchar(4)
+}
+
+entity "sped_contribuicoes_registros" as sped_contribuicoes_registros {
+  CODIGO : varchar(4)
+  DESCRICAO : varchar(254)
+}
+
+entity "sped_fcont_campos" as sped_fcont_campos {
+  BLOCO : varchar(4)
+  SEQUENCIA : varchar(2)
+  CAMPO : varchar(30)
+  DESCRICAO : varchar(254)
+  TIPO : varchar(1)
+  TAMANHO : varchar(4)
+}
+
+entity "sped_fcont_registros" as sped_fcont_registros {
+  CODIGO : varchar(4)
+  DESCRICAO : varchar(254)
+}
+
+entity "sped_fiscal_campos" as sped_fiscal_campos {
+  BLOCO : varchar(4)
+  SEQUENCIA : varchar(2)
+  CAMPO : varchar(30)
+  DESCRICAO : varchar(254)
+  TIPO : varchar(1)
+  TAMANHO : varchar(4)
+}
+
+entity "sped_fiscal_registros" as sped_fiscal_registros {
+  CODIGO : varchar(4)
+  DESCRICAO : varchar(254)
+}
+
+entity "sped_paises" as sped_paises {
+  BACEN : integer
+  NOME : varchar(35)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + BACEN : BACEN
+}
+
+entity "subgrupos_receitas" as subgrupos_receitas {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  GRUPO : varchar(3)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "t120" as t120 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(219)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(229)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "t120_regras" as t120_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(94)
+  MENSAGEM : varchar(126)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "t150" as t150 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(121)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(122)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "t150_regras" as t150_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(133)
+  MENSAGEM : varchar(168)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "t170" as t170 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(219)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(103)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "t170_regras" as t170_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(133)
+  MENSAGEM : varchar(168)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "t181" as t181 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(131)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(34)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "t181_regras" as t181_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(42)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(53)
+  MENSAGEM : varchar(46)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "tipo_beneficiario" as tipo_beneficiario {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "tipo_cred" as tipo_cred {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "tipo_ct_e" as tipo_ct_e {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "tipo_doc" as tipo_doc {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "tipo_empresa" as tipo_empresa {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "tipo_entidade" as tipo_entidade {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "tipo_export_import" as tipo_export_import {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "tipo_plano_ref" as tipo_plano_ref {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "tipo_termo" as tipo_termo {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "tot_parc_redz" as tot_parc_redz {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "tp_conhec_trans" as tp_conhec_trans {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "tp_util_cred_fiscais" as tp_util_cred_fiscais {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "u100_a" as u100_a {
+  CODIGO : varchar(13)
+  DESCRICAO : varchar(88)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  COD_SUP : varchar(10)
+  NIVEL : varchar(8)
+  NATUREZA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "u100_b" as u100_b {
+  CODIGO : varchar(15)
+  DESCRICAO : varchar(118)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  COD_SUP : varchar(15)
+  NIVEL : varchar(8)
+  NATUREZA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "u100_c" as u100_c {
+  CODIGO : varchar(10)
+  DESCRICAO : varchar(88)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  COD_SUP : varchar(8)
+  NIVEL : varchar(8)
+  NATUREZA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "u100_d" as u100_d {
+  CODIGO : varchar(16)
+  DESCRICAO : varchar(72)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  COD_SUP : varchar(13)
+  NIVEL : varchar(8)
+  NATUREZA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "u100_e" as u100_e {
+  CODIGO : varchar(14)
+  DESCRICAO : varchar(108)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  COD_SUP : varchar(11)
+  NIVEL : varchar(8)
+  NATUREZA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "u150_a" as u150_a {
+  CODIGO : varchar(19)
+  DESCRICAO : varchar(150)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  COD_SUP : varchar(16)
+  NIVEL : varchar(8)
+  NATUREZA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "u150_a_regras" as u150_a_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(10)
+  NIVEL : varchar(8)
+  FORMULA : varchar(67)
+  MENSAGEM : varchar(140)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "u150_b" as u150_b {
+  CODIGO : varchar(15)
+  DESCRICAO : varchar(115)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  COD_SUP : varchar(15)
+  NIVEL : varchar(8)
+  NATUREZA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "u150_b_regras" as u150_b_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(15)
+  NIVEL : varchar(8)
+  FORMULA : varchar(72)
+  MENSAGEM : varchar(185)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "u150_c" as u150_c {
+  CODIGO : varchar(19)
+  DESCRICAO : varchar(158)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  COD_SUP : varchar(16)
+  NIVEL : varchar(8)
+  NATUREZA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "u150_c_regras" as u150_c_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(16)
+  NIVEL : varchar(8)
+  FORMULA : varchar(73)
+  MENSAGEM : varchar(128)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "u150_d" as u150_d {
+  CODIGO : varchar(16)
+  DESCRICAO : varchar(64)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  COD_SUP : varchar(13)
+  NIVEL : varchar(8)
+  NATUREZA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "u150_d_regras" as u150_d_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(60)
+  MENSAGEM : varchar(92)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "u150_e" as u150_e {
+  CODIGO : varchar(14)
+  DESCRICAO : varchar(115)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  COD_SUP : varchar(11)
+  NIVEL : varchar(8)
+  NATUREZA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "u150_e_regras" as u150_e_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(62)
+  MENSAGEM : varchar(112)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "u180" as u180 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(121)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(62)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "u180_regras" as u180_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(18)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(95)
+  MENSAGEM : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "u182" as u182 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(131)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(26)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "u182_regras" as u182_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(37)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(95)
+  MENSAGEM : varchar(62)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "uf_codigo_sigla" as uf_codigo_sigla {
+  CODIGO : varchar(2)
+  DESCRICAO : varchar(2)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "uf_nire" as uf_nire {
+  UF : varchar(2)
+  CODIGONIRE : varchar(2)
+  DATAINICIO : datetime
+  DATAFIM : datetime
+  --
+  .. Índices ..
+  + UF : UF
+}
+
+entity "uf_sigla_nome" as uf_sigla_nome {
+  CODIGO : varchar(2)
+  DESCRICAO : varchar(25)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "unid_medida" as unid_medida {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "v100" as v100 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(55)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(95)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "v100_regras" as v100_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(74)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(67)
+  MENSAGEM : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "versao" as versao {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "versoes_leiaute" as versoes_leiaute {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "x291" as x291 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(99)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "x291_regras" as x291_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(30)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(179)
+  MENSAGEM : varchar(192)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "x292" as x292 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(63)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "x390" as x390 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(78)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(18)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "x390_regras" as x390_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(125)
+  MENSAGEM : varchar(180)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "x400" as x400 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(95)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(20)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "x460" as x460 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(160)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "x460_regras" as x460_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(38)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(105)
+  MENSAGEM : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "x470" as x470 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(213)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "x480" as x480 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(245)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "x480_regras" as x480_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(181)
+  MENSAGEM : varchar(116)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "x490" as x490 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(187)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "x500" as x500 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(107)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "x510" as x510 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(148)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "y681" as y681 {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(133)
+  DT_INI : datetime
+  DT_FIM : datetime
+  ORDEM : varchar(8)
+  TIPO : varchar(8)
+  FORMATO : varchar(8)
+  LINHA_ECF : varchar(8)
+  FORMULA : varchar(27)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "y681_regras" as y681_regras {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(175)
+  MENSAGEM : varchar(122)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+entity "Y682_REGRAS" as Y682_REGRAS {
+  CODIGO : varchar(8)
+  DESCRICAO : varchar(8)
+  DT_INI : datetime
+  DT_FIM : datetime
+  CAMPO_REF : varchar(8)
+  CHAVE : varchar(8)
+  NIVEL : varchar(8)
+  FORMULA : varchar(82)
+  MENSAGEM : varchar(8)
+  --
+  .. Índices ..
+  + CHAVE : CODIGO
+}
+
+
+@enduml

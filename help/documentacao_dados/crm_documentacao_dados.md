@@ -1,33 +1,88 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 27/07/2026
+> Varredura automatica realizada em: 09/09/2026
 
-## Tabela DBF: `aut.dbf`
-> **Origem:** `aut.dbf` (Driver: DBFCDX)
+## Tabela DBF: `aut`
+> **Origem:** `aut` (Driver: DBFCDX)
 
-| Campo | Tipo | Tam | Dec |
-| :--- | :--- | :--- | :--- |
-| AUT | N | 8 | 0 |
-| USADA | L | 1 | 0 |
-| USER | N | 8 | 0 |
-| MOTIVO | C | 150 | 0 |
-| MOTIV2 | C | 150 | 0 |
-| CARTA | C | 1 | 0 |
-| DATA | D | 8 | 0 |
-| DATABX | D | 8 | 0 |
-| CRM | N | 8 | 0 |
-| DATACR | D | 8 | 0 |
-| FISOBS01 | C | 80 | 0 |
-| FISOBS02 | C | 80 | 0 |
-| FISOBS03 | C | 80 | 0 |
-| LIBPOR | C | 15 | 0 |
-| LIBFISCAL | C | 1 | 0 |
+| Campo     | Tipo | Tam | Dec |
+| :-------- | :--- | :-- | :-- |
+| AUT       | N    | 8   | 0   |
+| USADA     | L    | 1   | 0   |
+| USER      | N    | 8   | 0   |
+| MOTIVO    | C    | 150 | 0   |
+| MOTIV2    | C    | 150 | 0   |
+| CARTA     | C    | 1   | 0   |
+| DATA      | D    | 8   | 0   |
+| DATABX    | D    | 8   | 0   |
+| CRM       | N    | 8   | 0   |
+| DATACR    | D    | 8   | 0   |
+| FISOBS01  | C    | 80  | 0   |
+| FISOBS02  | C    | 80  | 0   |
+| FISOBS03  | C    | 80  | 0   |
+| LIBPOR    | C    | 15  | 0   |
+| LIBFISCAL | C    | 1   | 0   |
 
 **Indices vinculados:**
 - Tag: `AUT` Expressao: `AUT`
 
+```mermaid
+erDiagram
+    aut {
+        N AUT
+        L USADA
+        N USER
+        C MOTIVO
+        C MOTIV2
+        C CARTA
+        D DATA
+        D DATABX
+        N CRM
+        D DATACR
+        C FISOBS01
+        C FISOBS02
+        C FISOBS03
+        C LIBPOR
+        C LIBFISCAL
+    }
+```
+
 ---
-## Tabela DBF: `crgec.dbf`
-> **Origem:** `crgec.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crgec`
+> **Origem:** `crgec` (Driver: DBFCDX)
+
+| Campo     | Tipo | Tam | Dec |
+| :-------- | :--- | :-- | :-- |
+| CRGEX     | N    | 8   | 0   |
+| DATA      | D    | 8   | 0   |
+| FORNECEDO | N    | 8   | 0   |
+| COGNOME   | C    | 20  | 0   |
+| NOTA      | C    | 50  | 0   |
+| PESONF    | N    | 6   | 0   |
+| PESOEC    | N    | 6   | 0   |
+| PESOLQ    | N    | 6   | 0   |
+| PERCEX    | N    | 8   | 3   |
+
+**Indices vinculados:**
+- Tag: `CRGEX` Expressao: `CRGEX`
+
+```mermaid
+erDiagram
+    crgec {
+        N CRGEX
+        D DATA
+        N FORNECEDO
+        C COGNOME
+        C NOTA
+        N PESONF
+        N PESOEC
+        N PESOLQ
+        N PERCEX
+    }
+```
+
+---
+## Tabela DBF: `crgex`
+> **Origem:** `crgex` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -44,28 +99,24 @@
 **Indices vinculados:**
 - Tag: `CRGEX` Expressao: `CRGEX`
 
----
-## Tabela DBF: `crgex.dbf`
-> **Origem:** `crgex.dbf` (Driver: DBFCDX)
-
-| Campo | Tipo | Tam | Dec |
-| :--- | :--- | :--- | :--- |
-| CRGEX | N | 8 | 0 |
-| DATA | D | 8 | 0 |
-| FORNECEDO | N | 8 | 0 |
-| COGNOME | C | 20 | 0 |
-| NOTA | C | 50 | 0 |
-| PESONF | N | 6 | 0 |
-| PESOEC | N | 6 | 0 |
-| PESOLQ | N | 6 | 0 |
-| PERCEX | N | 8 | 3 |
-
-**Indices vinculados:**
-- Tag: `CRGEX` Expressao: `CRGEX`
+```mermaid
+erDiagram
+    crgex {
+        N CRGEX
+        D DATA
+        N FORNECEDO
+        C COGNOME
+        C NOTA
+        N PESONF
+        N PESOEC
+        N PESOLQ
+        N PERCEX
+    }
+```
 
 ---
-## Tabela DBF: `crm.dbf`
-> **Origem:** `crm.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crm`
+> **Origem:** `crm` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -132,9 +183,70 @@
 - Tag: `CRM-4` Expressao: `STR(NRNOTA,8)+STR(CLIFOR,8)`
 - Tag: `CRM-5` Expressao: `STR(NRNOTB,8)+STR(CLIFOR,8)`
 
+```mermaid
+erDiagram
+    crm {
+        N CRM
+        C TIPCAD
+        N CLIFOR
+        C COGNOME
+        D DATA
+        C TIPOE
+        C DESCRI
+        C PEDIDO
+        N NRNOTA
+        N NRNOTB
+        N QTDE
+        N QTDEA
+        N QTDEB
+        C NIVEL
+        C INSP
+        C LAUDO
+        N TECNICO
+        C OBS
+        C CBUSCA
+        C NOMEF
+        C UNID
+        N RIST
+        N RIRM
+        C APLICACAO
+        C PRODUTO
+        N VALOR
+        C GRAVOU
+        C GRAVOUY
+        N PROGRAMA
+        C GRAVAUP
+        N PRPED
+        N PRITE
+        N PRCLI
+        N PEPED
+        N PEITE
+        C CERT
+        N PEREQ
+        N AUT
+        C USERNM
+        D USERDT
+        C USERHT
+        D NRDATA
+        C RASTRO
+        N PRECO
+        N PRECOPR
+        N PRECONF
+        C CLOTECRT
+        C PRECOOK
+        N QTDEPED
+        N PESONFA
+        N PESONFB
+        C PEDCLI
+        D ENTREGA
+        D ENTREG2
+        C TRIANGULAR
+    }
+```
+
 ---
-## Tabela DBF: `crm3l.dbf`
-> **Origem:** `crm3l.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crm3l`
+> **Origem:** `crm3l` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -150,9 +262,23 @@
 **Indices vinculados:**
 - Tag: `CRM3L` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    crm3l {
+        C CODIGO
+        N NVEZES
+        N RACF
+        C DESC01
+        C DESC02
+        C DESC03
+        C DESC04
+        C DESC05
+    }
+```
+
 ---
-## Tabela DBF: `crma.dbf`
-> **Origem:** `crma.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crma`
+> **Origem:** `crma` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -176,9 +302,30 @@
 - Tag: `CRMA-1` Expressao: `NUMERO`
 - Tag: `CRMA-2` Expressao: `RASTROA`
 
+```mermaid
+erDiagram
+    crma {
+        N NUMERO
+        D DATA
+        C TIPOENT
+        C CODIGO
+        N FORNECEDO
+        C COGFOR
+        N NF
+        C PRODUTO
+        N CLIENTE
+        C COGCLI
+        C RASTROA
+        C RASTROOK
+        D DATAOK
+        C MOTIVO
+        N CRM
+    }
+```
+
 ---
-## Tabela DBF: `crmar.dbf`
-> **Origem:** `crmar.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crmar`
+> **Origem:** `crmar` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -207,9 +354,34 @@
 - Tag: `CRMAR-2` Expressao: `STR(NRNOTA,8)+STR(FORNECEDO,8)+CODIGO`
 - Tag: `CRMAR-3` Expressao: `CODIGOINT`
 
+```mermaid
+erDiagram
+    crmar {
+        C TIPOENT
+        C CODIGO
+        C UNIDADE
+        C NOME
+        N NRNOTA
+        D DATA
+        N QTDE
+        C TIPOCLI
+        N FORNECEDO
+        C COGNOME
+        N CRM
+        N AR
+        N ITEM
+        N RIRM
+        N RIST
+        C CODFORN
+        C EMPRESA
+        C CODIGOINT
+        N MC
+    }
+```
+
 ---
-## Tabela DBF: `crmcesp.dbf`
-> **Origem:** `crmcesp.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crmcesp`
+> **Origem:** `crmcesp` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -223,9 +395,19 @@
 - Tag: `CRMCESP2` Expressao: `NOME`
 - Tag: `CRMCESP3` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    crmcesp {
+        N NUMERO
+        C NOME
+        C TIPOENT
+        C CODIGO
+    }
+```
+
 ---
-## Tabela DBF: `crmdev.dbf`
-> **Origem:** `crmdev.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crmdev`
+> **Origem:** `crmdev` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -292,18 +474,87 @@
 - Tag: `CRM-4` Expressao: `STR(NRNOTA,8)+STR(CLIFOR,8)`
 - Tag: `CRM-5` Expressao: `STR(NRNOTB,8)+STR(CLIFOR,8)`
 
+```mermaid
+erDiagram
+    crmdev {
+        N CRM
+        C TIPCAD
+        N CLIFOR
+        C COGNOME
+        D DATA
+        C TIPOE
+        C DESCRI
+        C PEDIDO
+        N NRNOTA
+        N NRNOTB
+        N QTDE
+        N QTDEA
+        N QTDEB
+        C NIVEL
+        C INSP
+        C LAUDO
+        N TECNICO
+        C OBS
+        C CBUSCA
+        C NOMEF
+        C UNID
+        N RIST
+        N RIRM
+        C APLICACAO
+        C PRODUTO
+        N VALOR
+        C GRAVOU
+        C GRAVOUY
+        N PROGRAMA
+        C GRAVAUP
+        N PRPED
+        N PRITE
+        N PRCLI
+        N PEPED
+        N PEITE
+        C CERT
+        N PEREQ
+        N AUT
+        C USERNM
+        D USERDT
+        C USERHT
+        D NRDATA
+        C RASTRO
+        N PRECO
+        N PRECOPR
+        N PRECONF
+        C CLOTECRT
+        C PRECOOK
+        N QTDEPED
+        N PESONFA
+        N PESONFB
+        C PEDCLI
+        D ENTREGA
+        D ENTREG2
+        C TRIANGULAR
+    }
+```
+
 ---
-## Tabela DBF: `crme01.dbf`
-> **Origem:** `crme01.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crme01`
+> **Origem:** `crme01` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
 | RASTRO | C | 10 | 0 |
 | DATA | D | 8 | 0 |
 
+```mermaid
+erDiagram
+    crme01 {
+        C RASTRO
+        D DATA
+    }
+```
+
 ---
-## Tabela DBF: `crme02.dbf`
-> **Origem:** `crme02.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crme02`
+> **Origem:** `crme02` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -325,9 +576,32 @@
 | CODIGO | C | 24 | 0 |
 | CERT | C | 50 | 0 |
 
+```mermaid
+erDiagram
+    crme02 {
+        C RASTRO
+        D DATA
+        C NOME
+        C NOM2
+        C NOM3
+        C APLICACAO
+        N FORNECEDOR
+        C RESPO
+        N NRNOTA
+        N NRNOTB
+        N PESONFA
+        N PESONFB
+        N QTDEA
+        N QTDEB
+        C POS
+        C CODIGO
+        C CERT
+    }
+```
+
 ---
-## Tabela DBF: `crme03.dbf`
-> **Origem:** `crme03.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crme03`
+> **Origem:** `crme03` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -344,9 +618,27 @@
 | REFNUM | N | 8 | 0 |
 | CERT | C | 50 | 0 |
 
+```mermaid
+erDiagram
+    crme03 {
+        C ESPE
+        C USUARIO
+        C SETOR
+        D DATA
+        C CODIGO
+        C NOME
+        N NCLI
+        C CLIENTE
+        C RASTRO
+        N QTAMO
+        N REFNUM
+        C CERT
+    }
+```
+
 ---
-## Tabela DBF: `crmebx.dbf`
-> **Origem:** `crmebx.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crmebx`
+> **Origem:** `crmebx` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -386,9 +678,43 @@
 - Tag: `CRREBX-4` Expressao: `CLIENTE`
 - Tag: `CRMEBX-5` Expressao: `OSINI`
 
+```mermaid
+erDiagram
+    crmebx {
+        C CODIGO
+        C UNIDADE
+        C NOME
+        N NRNOTAINI
+        C DIGCTR
+        C SERIE
+        D DATAFAT
+        N OSINI
+        N VALORINI
+        N TOTKGINI
+        N NRNOTASAI
+        N TOTKGANT
+        N TOTKGSAI
+        N TOTKGEST
+        C TIPOCLI
+        N CLIENTE
+        C COGNOME
+        D DATASAI
+        N CRM
+        N PESOREF
+        C CLASSIPI
+        N PRECO
+        C TIPOENT
+        C OBS
+        C RASTRO
+        N DIFSALDO
+        C LOCAL
+        N QTDEEMB
+    }
+```
+
 ---
-## Tabela DBF: `crmens.dbf`
-> **Origem:** `crmens.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crmens`
+> **Origem:** `crmens` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -399,9 +725,18 @@
 **Indices vinculados:**
 - Tag: `CRMENS` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    crmens {
+        C CODIGO
+        C NOME
+        N VALOR
+    }
+```
+
 ---
-## Tabela DBF: `crmest.dbf`
-> **Origem:** `crmest.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crmest`
+> **Origem:** `crmest` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -441,9 +776,43 @@
 - Tag: `CRMEST-4` Expressao: `CLIENTE`
 - Tag: `CRMEST-5` Expressao: `OSINI`
 
+```mermaid
+erDiagram
+    crmest {
+        C CODIGO
+        C UNIDADE
+        C NOME
+        N NRNOTAINI
+        C DIGCTR
+        C SERIE
+        D DATAFAT
+        N OSINI
+        N VALORINI
+        N TOTKGINI
+        N NRNOTASAI
+        N TOTKGANT
+        N TOTKGSAI
+        N TOTKGEST
+        C TIPOCLI
+        N CLIENTE
+        C COGNOME
+        D DATASAI
+        N CRM
+        N PESOREF
+        C CLASSIPI
+        N PRECO
+        C TIPOENT
+        C OBS
+        C RASTRO
+        N DIFSALDO
+        C LOCAL
+        N QTDEEMB
+    }
+```
+
 ---
-## Tabela DBF: `crmfn.dbf`
-> **Origem:** `crmfn.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crmfn`
+> **Origem:** `crmfn` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -467,9 +836,29 @@
 - Tag: `CRMFN-2` Expressao: `DATA`
 - Tag: `CRMFN-3` Expressao: `RASTRO`
 
+```mermaid
+erDiagram
+    crmfn {
+        N NUMERO
+        D DATA
+        C RASTRO
+        N FORNECEDO
+        C COGNOME
+        C CODIGO
+        N CLIENTE
+        N PESOUNI
+        C CODMR01
+        C NOMMR01
+        N PCEMB
+        N PCEMBQ
+        N QTDEKG
+        N QTDEPC
+    }
+```
+
 ---
-## Tabela DBF: `crmgp12.dbf`
-> **Origem:** `crmgp12.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crmgp12`
+> **Origem:** `crmgp12` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -478,9 +867,16 @@
 **Indices vinculados:**
 - Tag: `CRMGP12` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    crmgp12 {
+        C CODIGO
+    }
+```
+
 ---
-## Tabela DBF: `crml.dbf`
-> **Origem:** `crml.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crml`
+> **Origem:** `crml` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -491,9 +887,18 @@
 **Indices vinculados:**
 - Tag: `CRML` Expressao: `STR(CLIFOR,8)+CODIGO`
 
+```mermaid
+erDiagram
+    crml {
+        N CLIFOR
+        C CODIGO
+        N LOTE
+    }
+```
+
 ---
-## Tabela DBF: `crmmot.dbf`
-> **Origem:** `crmmot.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crmmot`
+> **Origem:** `crmmot` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -503,9 +908,17 @@
 **Indices vinculados:**
 - Tag: `CRMMOT` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    crmmot {
+        C CODIGO
+        C DIZER
+    }
+```
+
 ---
-## Tabela DBF: `crmnf.dbf`
-> **Origem:** `crmnf.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crmnf`
+> **Origem:** `crmnf` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -516,9 +929,18 @@
 **Indices vinculados:**
 - Tag: `CRMNF` Expressao: `FORNECEDO`
 
+```mermaid
+erDiagram
+    crmnf {
+        N FORNECEDO
+        N NRNOTA
+        D DATA
+    }
+```
+
 ---
-## Tabela DBF: `crmr.dbf`
-> **Origem:** `crmr.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crmr`
+> **Origem:** `crmr` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -536,9 +958,25 @@
 **Indices vinculados:**
 - Tag: `CRMR` Expressao: `RASTRON`
 
+```mermaid
+erDiagram
+    crmr {
+        C RASTRO
+        N RASTRON
+        N RASTROA
+        N CRM
+        N RIRM
+        N RIST
+        D DATAF
+        C OBS
+        D DATA
+        C PRODUTO
+    }
+```
+
 ---
-## Tabela DBF: `crmss.dbf`
-> **Origem:** `crmss.dbf` (Driver: DBFCDX)
+## Tabela DBF: `crmss`
+> **Origem:** `crmss` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -563,9 +1001,30 @@
 - Tag: `CRMSS-2` Expressao: `RASTRO`
 - Tag: `CRMSS-3` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    crmss {
+        N NUMERO
+        C CODIGO
+        C CODIGOINT
+        C NORMA
+        C APLICACAO
+        N FORNECEDO
+        C FORNOME
+        C ESPE
+        C RASTRO
+        D DATA
+        N RIST
+        N AR
+        N ITEM
+        D DATAENV
+        C HORAENV
+    }
+```
+
 ---
-## Tabela DBF: `mp01i.dbf`
-> **Origem:** `mp01i.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mp01i`
+> **Origem:** `mp01i` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -586,9 +1045,28 @@
 **Indices vinculados:**
 - Tag: `MP01I-1` Expressao: `CODIGO+STR(ITEM,3)`
 
+```mermaid
+erDiagram
+    mp01i {
+        C CODIGO
+        N ITEM
+        C ESPE
+        C ENCO
+        N VALPAD
+        N VALMAX
+        N VALMIN
+        N TOLMAX
+        N TOLMIN
+        C UNIDADE
+        C TIPA
+        C UNIDREF
+        N QTDEREF
+    }
+```
+
 ---
-## Tabela DBF: `mp01r.dbf`
-> **Origem:** `mp01r.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mp01r`
+> **Origem:** `mp01r` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -610,9 +1088,29 @@
 **Indices vinculados:**
 - Tag: `MP01R-1` Expressao: `CODIGO+STR(ITEM,3)`
 
+```mermaid
+erDiagram
+    mp01r {
+        C CODIGO
+        N ITEM
+        C ESPE
+        C ENCO
+        N VALPAD
+        N VALMAX
+        N VALMIN
+        N TOLMAX
+        N TOLMIN
+        C UNIDADE
+        C TIPA
+        C UNIDREF
+        N QTDEREF
+        C CHECADO
+    }
+```
+
 ---
-## Tabela DBF: `mp02i.dbf`
-> **Origem:** `mp02i.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mp02i`
+> **Origem:** `mp02i` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -633,9 +1131,28 @@
 **Indices vinculados:**
 - Tag: `MP02I-1` Expressao: `CODIGO+STR(ITEM,3)`
 
+```mermaid
+erDiagram
+    mp02i {
+        C CODIGO
+        N ITEM
+        C ESPE
+        C ENCO
+        N VALPAD
+        N VALMAX
+        N VALMIN
+        N TOLMAX
+        N TOLMIN
+        C UNIDADE
+        C TIPA
+        C UNIDREF
+        N QTDEREF
+    }
+```
+
 ---
-## Tabela DBF: `mp02r.dbf`
-> **Origem:** `mp02r.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mp02r`
+> **Origem:** `mp02r` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -657,9 +1174,29 @@
 **Indices vinculados:**
 - Tag: `MP02R-1` Expressao: `CODIGO+STR(ITEM,3)`
 
+```mermaid
+erDiagram
+    mp02r {
+        C CODIGO
+        N ITEM
+        C ESPE
+        C ENCO
+        N VALPAD
+        N VALMAX
+        N VALMIN
+        N TOLMAX
+        N TOLMIN
+        C UNIDADE
+        C TIPA
+        C UNIDREF
+        N QTDEREF
+        C CHECADO
+    }
+```
+
 ---
-## Tabela DBF: `mp03i.dbf`
-> **Origem:** `mp03i.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mp03i`
+> **Origem:** `mp03i` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -680,9 +1217,28 @@
 **Indices vinculados:**
 - Tag: `MP03I-1` Expressao: `CODIGO+STR(ITEM,3)`
 
+```mermaid
+erDiagram
+    mp03i {
+        C CODIGO
+        N ITEM
+        C ESPE
+        C ENCO
+        N VALPAD
+        N VALMAX
+        N VALMIN
+        N TOLMAX
+        N TOLMIN
+        C UNIDADE
+        C TIPA
+        C UNIDREF
+        N QTDEREF
+    }
+```
+
 ---
-## Tabela DBF: `mp03r.dbf`
-> **Origem:** `mp03r.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mp03r`
+> **Origem:** `mp03r` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -704,9 +1260,29 @@
 **Indices vinculados:**
 - Tag: `MP03R-1` Expressao: `CODIGO+STR(ITEM,3)`
 
+```mermaid
+erDiagram
+    mp03r {
+        C CODIGO
+        N ITEM
+        C ESPE
+        C ENCO
+        N VALPAD
+        N VALMAX
+        N VALMIN
+        N TOLMAX
+        N TOLMIN
+        C UNIDADE
+        C TIPA
+        C UNIDREF
+        N QTDEREF
+        C CHECADO
+    }
+```
+
 ---
-## Tabela DBF: `mq01i.dbf`
-> **Origem:** `mq01i.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mq01i`
+> **Origem:** `mq01i` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -727,9 +1303,28 @@
 **Indices vinculados:**
 - Tag: `MQ01I-1` Expressao: `CODIGO+STR(ITEM,3)`
 
+```mermaid
+erDiagram
+    mq01i {
+        C CODIGO
+        N ITEM
+        C ESPE
+        C ENCO
+        N VALPAD
+        N VALMAX
+        N VALMIN
+        N TOLMAX
+        N TOLMIN
+        C UNIDADE
+        C TIPA
+        C UNIDREF
+        N QTDEREF
+    }
+```
+
 ---
-## Tabela DBF: `mq01r.dbf`
-> **Origem:** `mq01r.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mq01r`
+> **Origem:** `mq01r` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -751,9 +1346,29 @@
 **Indices vinculados:**
 - Tag: `MQ01R-1` Expressao: `CODIGO+STR(ITEM,3)`
 
+```mermaid
+erDiagram
+    mq01r {
+        C CODIGO
+        N ITEM
+        C ESPE
+        C ENCO
+        N VALPAD
+        N VALMAX
+        N VALMIN
+        N TOLMAX
+        N TOLMIN
+        C UNIDADE
+        C TIPA
+        C UNIDREF
+        N QTDEREF
+        C CHECADO
+    }
+```
+
 ---
-## Tabela DBF: `mr01i.dbf`
-> **Origem:** `mr01i.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mr01i`
+> **Origem:** `mr01i` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -774,9 +1389,28 @@
 **Indices vinculados:**
 - Tag: `MR01I-1` Expressao: `CODIGO+STR(ITEM,3)`
 
+```mermaid
+erDiagram
+    mr01i {
+        C CODIGO
+        N ITEM
+        C ESPE
+        C ENCO
+        N VALPAD
+        N VALMAX
+        N VALMIN
+        N TOLMAX
+        N TOLMIN
+        C UNIDADE
+        C TIPA
+        C UNIDREF
+        N QTDEREF
+    }
+```
+
 ---
-## Tabela DBF: `mr01r.dbf`
-> **Origem:** `mr01r.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mr01r`
+> **Origem:** `mr01r` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -798,9 +1432,29 @@
 **Indices vinculados:**
 - Tag: `MR01R-1` Expressao: `CODIGO+STR(ITEM,3)`
 
+```mermaid
+erDiagram
+    mr01r {
+        C CODIGO
+        N ITEM
+        C ESPE
+        C ENCO
+        N VALPAD
+        N VALMAX
+        N VALMIN
+        N TOLMAX
+        N TOLMIN
+        C UNIDADE
+        C TIPA
+        C UNIDREF
+        N QTDEREF
+        C CHECADO
+    }
+```
+
 ---
-## Tabela DBF: `ms01i.dbf`
-> **Origem:** `ms01i.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ms01i`
+> **Origem:** `ms01i` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -821,9 +1475,28 @@
 **Indices vinculados:**
 - Tag: `MS01I-1` Expressao: `CODIGO+STR(ITEM,3)`
 
+```mermaid
+erDiagram
+    ms01i {
+        C CODIGO
+        N ITEM
+        C ESPE
+        C ENCO
+        N VALPAD
+        N VALMAX
+        N VALMIN
+        N TOLMAX
+        N TOLMIN
+        C UNIDADE
+        C TIPA
+        C UNIDREF
+        N QTDEREF
+    }
+```
+
 ---
-## Tabela DBF: `ms01r.dbf`
-> **Origem:** `ms01r.dbf` (Driver: DBFCDX)
+## Tabela DBF: `ms01r`
+> **Origem:** `ms01r` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -845,9 +1518,29 @@
 **Indices vinculados:**
 - Tag: `MS01R-1` Expressao: `CODIGO+STR(ITEM,3)`
 
+```mermaid
+erDiagram
+    ms01r {
+        C CODIGO
+        N ITEM
+        C ESPE
+        C ENCO
+        N VALPAD
+        N VALMAX
+        N VALMIN
+        N TOLMAX
+        N TOLMIN
+        C UNIDADE
+        C TIPA
+        C UNIDREF
+        N QTDEREF
+        C CHECADO
+    }
+```
+
 ---
-## Tabela DBF: `mt01i.dbf`
-> **Origem:** `mt01i.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mt01i`
+> **Origem:** `mt01i` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -868,9 +1561,28 @@
 **Indices vinculados:**
 - Tag: `MT01I-1` Expressao: `CODIGO+STR(ITEM,3)`
 
+```mermaid
+erDiagram
+    mt01i {
+        C CODIGO
+        N ITEM
+        C ESPE
+        C ENCO
+        N VALPAD
+        N VALMAX
+        N VALMIN
+        N TOLMAX
+        N TOLMIN
+        C UNIDADE
+        C TIPA
+        C UNIDREF
+        N QTDEREF
+    }
+```
+
 ---
-## Tabela DBF: `mt01r.dbf`
-> **Origem:** `mt01r.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mt01r`
+> **Origem:** `mt01r` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -892,9 +1604,29 @@
 **Indices vinculados:**
 - Tag: `MT01R-1` Expressao: `CODIGO+STR(ITEM,3)`
 
+```mermaid
+erDiagram
+    mt01r {
+        C CODIGO
+        N ITEM
+        C ESPE
+        C ENCO
+        N VALPAD
+        N VALMAX
+        N VALMIN
+        N TOLMAX
+        N TOLMIN
+        C UNIDADE
+        C TIPA
+        C UNIDREF
+        N QTDEREF
+        C CHECADO
+    }
+```
+
 ---
-## Tabela DBF: `mu01i.dbf`
-> **Origem:** `mu01i.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mu01i`
+> **Origem:** `mu01i` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -915,9 +1647,28 @@
 **Indices vinculados:**
 - Tag: `MU01I-1` Expressao: `CODIGO+STR(ITEM,3)`
 
+```mermaid
+erDiagram
+    mu01i {
+        C CODIGO
+        N ITEM
+        C ESPE
+        C ENCO
+        N VALPAD
+        N VALMAX
+        N VALMIN
+        N TOLMAX
+        N TOLMIN
+        C UNIDADE
+        C TIPA
+        C UNIDREF
+        N QTDEREF
+    }
+```
+
 ---
-## Tabela DBF: `mu01r.dbf`
-> **Origem:** `mu01r.dbf` (Driver: DBFCDX)
+## Tabela DBF: `mu01r`
+> **Origem:** `mu01r` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -939,9 +1690,29 @@
 **Indices vinculados:**
 - Tag: `MU01R-1` Expressao: `CODIGO+STR(ITEM,3)`
 
+```mermaid
+erDiagram
+    mu01r {
+        C CODIGO
+        N ITEM
+        C ESPE
+        C ENCO
+        N VALPAD
+        N VALMAX
+        N VALMIN
+        N TOLMAX
+        N TOLMIN
+        C UNIDADE
+        C TIPA
+        C UNIDREF
+        N QTDEREF
+        C CHECADO
+    }
+```
+
 ---
-## Tabela DBF: `rirm.dbf`
-> **Origem:** `rirm.dbf` (Driver: DBFCDX)
+## Tabela DBF: `rirm`
+> **Origem:** `rirm` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -986,9 +1757,48 @@
 - Tag: `RIRM-4` Expressao: `NRNOTA`
 - Tag: `RIRM-5` Expressao: `DATA`
 
+```mermaid
+erDiagram
+    rirm {
+        N RIRM
+        C CLASSI
+        C RASTRO
+        C DESENHO
+        C DESCR
+        C INSTRU
+        N NFORN
+        C FORNE
+        C PEDIDO
+        N NRNOTA
+        N NRNOTB
+        D DATANF
+        N QTDE
+        C CERT
+        C LAUDOF
+        D DATAL
+        C OBS01
+        C OBS02
+        C OBS03
+        C OBS04
+        C UNID
+        C TIPOENT
+        C APLICACAO
+        C AREA
+        C CARGO
+        C RESPO
+        C CLOTECRT
+        N CRM
+        D DATA
+        L LLAUDO
+        L CONTIG
+        N QTAMO
+        C INSP
+    }
+```
+
 ---
-## Tabela DBF: `rirmi.dbf`
-> **Origem:** `rirmi.dbf` (Driver: DBFCDX)
+## Tabela DBF: `rirmi`
+> **Origem:** `rirmi` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1005,9 +1815,24 @@
 **Indices vinculados:**
 - Tag: `RIRMI` Expressao: `RIRM`
 
+```mermaid
+erDiagram
+    rirmi {
+        N RIRM
+        N ITEM
+        C TIPA
+        N QTITEM
+        C ESPE
+        C ENCO
+        C LAUDO
+        C UNIITEM
+        C PULAAPU
+    }
+```
+
 ---
-## Tabela DBF: `rist.dbf`
-> **Origem:** `rist.dbf` (Driver: DBFCDX)
+## Tabela DBF: `rist`
+> **Origem:** `rist` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1053,9 +1878,49 @@
 - Tag: `RIST-4` Expressao: `NF`
 - Tag: `RIST-5` Expressao: `DATA`
 
+```mermaid
+erDiagram
+    rist {
+        N RIST
+        C RASTRO
+        C TIPO
+        N NFORN
+        C FORNE
+        C CLASSI
+        N NF
+        N NFB
+        D DATANF
+        C CERT
+        C CODIGO
+        C DENO
+        N NCLI
+        C CLIENTE
+        C OS
+        C INSP
+        C NIVEL
+        N QTAMO
+        C CORPO
+        C LAUDOF
+        D DATAL
+        C OBS01
+        C OBS02
+        D DATA
+        C UNID
+        C APLICACAO
+        C AREA
+        C CARGO
+        C RESPO
+        C CLOTECRT
+        N CRM
+        L LLAUDO
+        N QTDE
+        L CONTIG
+    }
+```
+
 ---
-## Tabela DBF: `risti.dbf`
-> **Origem:** `risti.dbf` (Driver: DBFCDX)
+## Tabela DBF: `risti`
+> **Origem:** `risti` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -1072,5 +1937,21 @@
 
 **Indices vinculados:**
 - Tag: `RIST` Expressao: `RIST`
+
+```mermaid
+erDiagram
+    risti {
+        N RIST
+        N ITEM
+        C ESPE
+        C ENCO
+        C LAUDO
+        C TIPA
+        D DATAENV
+        C HORAENV
+        D DATALAU
+        C PULAAPU
+    }
+```
 
 ---

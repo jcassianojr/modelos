@@ -1,0 +1,602 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "sint" as sint {
+  REG : varchar(2)
+  --
+  .. Índices ..
+  + REGISTRO : REG
+}
+
+entity "sint10" as sint10 {
+  TIPO : varchar(2)
+  CGC : varchar(14)
+  IE : varchar(14)
+  NOME : varchar(35)
+  MUNICIPIO : varchar(30)
+  UF : varchar(2)
+  FAX : varchar(10)
+  DATAINI : datetime
+  DATAFIM : datetime
+  CONVENIO : varchar(1)
+  NATUREZA : integer
+  FINALIDADE : varchar(1)
+  --
+  .. Índices ..
+  + CGC : CGC
+}
+
+entity "sint11" as sint11 {
+  TIPO : varchar(2)
+  LOGRADOURO : varchar(34)
+  NUMERO : integer
+  COMPL : varchar(22)
+  BAIRRO : varchar(15)
+  CEP : varchar(8)
+  CONTATO : varchar(28)
+  TELEFONE : varchar(12)
+  --
+  .. Índices ..
+  + CEP : CEP
+}
+
+entity "sint50" as sint50 {
+  TIPO : varchar(2)
+  CGC : varchar(18)
+  IE : varchar(20)
+  DATA : datetime
+  UF : varchar(2)
+  MODELO : integer
+  SERIE : varchar(3)
+  SUB : varchar(2)
+  NUMERO : integer
+  CFOP : varchar(4)
+  VALORTOT : decimal(10,2)
+  BASE : decimal(10,2)
+  VALOR : decimal(10,2)
+  ISENTA : decimal(10,2)
+  OUTRAS : decimal(10,2)
+  ALIQUOTA : decimal(5,2)
+  SITUACAO : varchar(1)
+  TIPONF : varchar(1)
+  OBS : decimal(10,2)
+  EMITENTE : varchar(1)
+  FORNECEDO : integer
+  TIPOCLI : varchar(1)
+  --
+  .. Índices ..
+  + SINT50-1 : DTOS(DATA)+STR(NUMERO,8)
+  + SINT50-2 : STR(NUMERO,8)+TIPONF
+}
+
+entity "sint51" as sint51 {
+  TIPO : varchar(2)
+  CGC : varchar(18)
+  IE : varchar(20)
+  DATA : datetime
+  UF : varchar(2)
+  MODELO : integer
+  SERIE : varchar(3)
+  SUB : varchar(2)
+  NUMERO : integer
+  CFOP : varchar(4)
+  VALORTOT : decimal(10,2)
+  BASE : decimal(10,2)
+  VALOR : decimal(10,2)
+  ISENTA : decimal(10,2)
+  OUTRAS : decimal(10,2)
+  ALIQUOTA : decimal(5,2)
+  SITUACAO : varchar(1)
+  TIPONF : varchar(1)
+  OBS : decimal(10,2)
+  FORNECEDO : integer
+  TIPOCLI : varchar(1)
+  BRANCOS : varchar(1)
+  --
+  .. Índices ..
+  + SINT51-1 : DTOS(DATA)+STR(NUMERO,8)
+  + SINT51-2 : STR(NUMERO,8)+TIPONF
+}
+
+entity "sint53" as sint53 {
+  TIPO : varchar(2)
+  CGC : varchar(18)
+  IE : varchar(20)
+  DATA : datetime
+  UF : varchar(2)
+  MODELO : integer
+  SERIE : varchar(3)
+  SUB : varchar(2)
+  NUMERO : integer
+  CFOP : varchar(4)
+  VALORTOT : decimal(10,2)
+  BASE : decimal(10,2)
+  VALOR : decimal(10,2)
+  ISENTA : decimal(10,2)
+  OUTRAS : decimal(10,2)
+  ALIQUOTA : decimal(5,2)
+  SITUACAO : varchar(1)
+  TIPONF : varchar(1)
+  OBS : decimal(10,2)
+  ANTECIPA : varchar(1)
+  DESPESAS : decimal(10,2)
+  FORNECEDO : integer
+  EMITENTE : varchar(1)
+  TIPOCLI : varchar(1)
+  --
+  .. Índices ..
+  + SINT53-1 : DTOS(DATA)+STR(NUMERO,8)
+  + SINT53-2 : STR(NUMERO,8)+TIPONF
+}
+
+entity "sint54" as sint54 {
+  TIPO : varchar(2)
+  CGC : varchar(18)
+  MODELO : integer
+  SERIE : varchar(3)
+  NUMERO : integer
+  CFOP : varchar(4)
+  SITUACAO : integer
+  ITEM : integer
+  CODIGORED : varchar(14)
+  QTDE : decimal(11,3)
+  VALORMER : decimal(10,2)
+  DESCONTO : decimal(10,2)
+  BASEICM : decimal(10,2)
+  BASESUB : decimal(10,2)
+  VALORIPI : decimal(10,2)
+  ICM : decimal(5,2)
+  TIPOENT : varchar(1)
+  CODIGO : varchar(24)
+  TIPONF : varchar(1)
+  TIPOCLI : varchar(1)
+  FORNECEDO : integer
+  UF : varchar(2)
+  SUB : varchar(2)
+  DATA : datetime
+  --
+  .. Índices ..
+  + SINT54-1 : CGC+SERIE+SUB+STR(NUMERO,8)+STR(ITEM,3)
+  + SINT54-2 : STR(NUMERO,8)+TIPONF
+  + SINT54-3 : CODIGORED
+  + SINT54-4 : CODIGO
+  + SINT54-5 : FORNECEDO
+  + SINT54-6 : STR(NUMERO,8)+CGC
+}
+
+entity "sint55" as sint55 {
+  TIPO : varchar(2)
+  CGC : varchar(14)
+  IE : varchar(14)
+  DTGNRE : datetime
+  UF : varchar(2)
+  UFFAVOR : varchar(2)
+  BANCO : varchar(3)
+  AGENCIA : varchar(4)
+  NUMGNRE : varchar(20)
+  VALGNRE : decimal(13,2)
+  DTVENC : datetime
+  MESANOREF : varchar(6)
+  CONVENIO : varchar(30)
+  --
+  .. Índices ..
+  + NUMGNRE : NUMGNRE
+}
+
+entity "sint56" as sint56 {
+  REG : varchar(2)
+  CNPJCPF : varchar(14)
+  MODELO : integer
+  SERIE : varchar(3)
+  NUMERO : varchar(6)
+  CFOP : varchar(4)
+  CST : integer
+  NRITEM : integer
+  CODPROD : varchar(14)
+  TPOPERACAO : integer
+  CNPJCONC : integer
+  ALQIPI : varchar(4)
+  CHASSI : varchar(17)
+  BRANCOS : varchar(39)
+  --
+  .. Índices ..
+  + CNPJNUMERO : CNPJCPF+NUMERO
+}
+
+entity "sint60a" as sint60a {
+  TIPO : varchar(2)
+  SUB60A : varchar(1)
+  EMIS60A : datetime
+  NUMFABA : varchar(20)
+  SITTRI60A : varchar(4)
+  VALOR60 : decimal(12,2)
+  BRANCO60A : varchar(79)
+  --
+  .. Índices ..
+  + NUMFABA : NUMFABA
+}
+
+entity "sint60d" as sint60d {
+  TIPO : varchar(2)
+  SUB60D : varchar(1)
+  EMIS60D : datetime
+  NUMFABD : varchar(20)
+  PROD60D : varchar(14)
+  QUANT60D : decimal(13,3)
+  VALPRO60D : decimal(16,2)
+  BASEIC60D : decimal(16,2)
+  SITTRI60D : varchar(4)
+  VALICM60D : decimal(13,2)
+  BRANCO60D : varchar(19)
+  --
+  .. Índices ..
+  + FUMFABD : NUMFABD
+}
+
+entity "sint60i" as sint60i {
+  TIPO : varchar(2)
+  SUB60I : varchar(1)
+  EMIS60I : datetime
+  NUMFABI : varchar(20)
+  MODEL60I : varchar(2)
+  NUMCOO : varchar(6)
+  NUMITE60I : varchar(3)
+  PROD60I : varchar(14)
+  QUANT60I : decimal(13,3)
+  VALUNI60I : decimal(13,3)
+  BASEIC60I : decimal(12,2)
+  SITTRI60I : varchar(4)
+  VALICM60I : integer
+  BRANCO60I : varchar(16)
+  --
+  .. Índices ..
+  + NUMFABI : NUMFABI
+}
+
+entity "sint60m" as sint60m {
+  TIPO : varchar(2)
+  SUB60M : varchar(1)
+  EMIS60M : datetime
+  NUMFABM : varchar(20)
+  NUMPDVM : varchar(3)
+  MODEL60M : varchar(2)
+  NUINI60M : varchar(6)
+  NUFIM60M : varchar(6)
+  REDUZ60M : varchar(6)
+  CRO60M : integer
+  VENDA60M : decimal(16,2)
+  TOTGER60M : decimal(16,2)
+  BRANCO60M : varchar(37)
+  --
+  .. Índices ..
+  + NUNFABM : NUMFABM
+}
+
+entity "sint60r" as sint60r {
+  TIPO : varchar(2)
+  SUB60R : varchar(1)
+  MESANOEMR : varchar(6)
+  PROD60R : varchar(14)
+  QUANT60R : decimal(13,3)
+  VALUNI60R : decimal(16,2)
+  BASEIC60R : decimal(16,2)
+  SITTRI60R : varchar(4)
+  BRANCO60R : varchar(54)
+  --
+  .. Índices ..
+  + SUB60R : SUB60R
+}
+
+entity "sint61" as sint61 {
+  TIPO : varchar(2)
+  BRANCO611 : varchar(14)
+  BRANCO612 : varchar(14)
+  EMIS61 : datetime
+  MODEL61M : varchar(2)
+  SERIE61 : varchar(3)
+  SUBSER61 : varchar(2)
+  NUINI61M : varchar(6)
+  NUFIM61M : varchar(6)
+  VALTOT61 : decimal(13,2)
+  BASEIC61 : decimal(13,2)
+  VALICM61 : decimal(12,2)
+  ISENTA61 : decimal(13,2)
+  OUTRAS61 : decimal(13,2)
+  ALIQIC61 : decimal(4,2)
+  BRANCO61 : varchar(1)
+  --
+  .. Índices ..
+  + NUINI61M : NUINI61M
+}
+
+entity "sint70" as sint70 {
+  TIPO : varchar(2)
+  CGC : varchar(18)
+  IE : varchar(20)
+  DATA : datetime
+  UF : varchar(2)
+  MODELO : integer
+  SERIE : varchar(3)
+  SUB : varchar(2)
+  NUMERO : integer
+  CFOP : varchar(4)
+  VALORTOT : decimal(10,2)
+  BASE : decimal(10,2)
+  VALOR : decimal(10,2)
+  ISENTA : decimal(10,2)
+  OUTRAS : decimal(10,2)
+  ALIQUOTA : decimal(5,2)
+  SITUACAO : varchar(1)
+  TIPONF : varchar(1)
+  OBS : decimal(10,2)
+  EMITENTE : varchar(1)
+  FRETE : varchar(1)
+  FORNECEDO : integer
+  TIPOCLI : varchar(1)
+  --
+  .. Índices ..
+  + SINT70-1 : DTOS(DATA)+STR(NUMERO,8)
+  + SINT70-2 : STR(NUMERO,8)+TIPONF
+}
+
+entity "sint71" as sint71 {
+  TIPO : varchar(2)
+  CGC : varchar(14)
+  IE : varchar(14)
+  EMIS71 : datetime
+  UF : varchar(2)
+  MODEL71 : varchar(2)
+  SERIE71 : varchar(1)
+  SUBSER71 : varchar(2)
+  NFISC71 : varchar(6)
+  UFREM : varchar(2)
+  CNPJREM : varchar(14)
+  INSCREM : varchar(14)
+  EMISREM71 : datetime
+  MODREM71 : varchar(2)
+  SERIREM71 : varchar(3)
+  NFISREM71 : varchar(6)
+  VALTOT71 : decimal(14,2)
+  BRANCO71 : varchar(12)
+  --
+  .. Índices ..
+  + CGC : CGC
+}
+
+entity "sint74" as sint74 {
+  TIPO : varchar(2)
+  DATA_INVEN : varchar(8)
+  COD_MERCAD : varchar(14)
+  QUANTIDADE : integer
+  VALORTOTAL : integer
+  SITU_ESTOQ : varchar(1)
+  CGC : varchar(14)
+  IE : varchar(14)
+  UF : varchar(2)
+  BRANCO74 : varchar(45)
+  --
+  .. Índices ..
+  + DATA_INVEN : DATA_INVEN
+}
+
+entity "sint75" as sint75 {
+  TIPO : varchar(2)
+  DATAINI : datetime
+  DATAFIM : datetime
+  CODIGORED : varchar(14)
+  CLASSIPI : varchar(14)
+  DESCRICAO : varchar(53)
+  UNID : varchar(2)
+  SITUACAO : integer
+  TIPOENT : varchar(1)
+  IPI : decimal(5,2)
+  ICM : decimal(5,2)
+  REDICM : decimal(5,2)
+  SUBICM : decimal(5,2)
+  GERADO : boolean
+  CODIGO : varchar(24)
+  --
+  .. Índices ..
+  + SINT75-1 : CODIGORED
+  + SINT75-2 : CODIGO
+}
+
+entity "sint76" as sint76 {
+  TIPO : varchar(2)
+  CGC : varchar(14)
+  IE : varchar(14)
+  MODEL76 : varchar(2)
+  SERIE76 : varchar(2)
+  SUBSER76 : varchar(2)
+  NFISC76 : varchar(10)
+  CFOP76 : varchar(4)
+  TIPREC76 : varchar(1)
+  EMIS76 : datetime
+  UF : varchar(2)
+  VALTOT76 : decimal(13,2)
+  BASEIC76 : decimal(13,2)
+  VALICM76 : decimal(12,2)
+  ISENTO76 : decimal(12,2)
+  OUTRAS76 : decimal(12,2)
+  ALIQICM76 : integer
+  SITUAC76 : varchar(1)
+  --
+  .. Índices ..
+  + CGC : CGC
+}
+
+entity "sint77" as sint77 {
+  TIPO : varchar(2)
+  CGC : varchar(14)
+  MODEL77 : varchar(2)
+  SERIE77 : varchar(2)
+  SUBSER77 : varchar(2)
+  NFISC77 : varchar(10)
+  CFOP77 : varchar(4)
+  TIPREC77 : varchar(1)
+  ITEM77 : varchar(3)
+  PRODUT77 : varchar(11)
+  QUANT77 : decimal(13,3)
+  VALPRO77 : decimal(12,2)
+  VALDES77 : decimal(12,2)
+  BASEIC77 : decimal(12,2)
+  ALIQIC77 : integer
+  CNPJMF : varchar(14)
+  CODTERM : varchar(10)
+  --
+  .. Índices ..
+  + CGC : CGC
+}
+
+entity "sint85" as sint85 {
+  REG : varchar(2)
+  DECLARACAO : integer
+  DATADEC : datetime
+  AVERBACAO : varchar(1)
+  REGEXP : integer
+  DTREGEXP : datetime
+  CONHEC : varchar(16)
+  DTCONHEC : datetime
+  TIPOCONHEC : integer
+  PAIS : integer
+  COMPROV : integer
+  DTCOMPROV : datetime
+  NFEXPORT : varchar(6)
+  EMISSAO : datetime
+  MODELO : integer
+  SERIE : varchar(3)
+  BRANCOS : varchar(19)
+  --
+  .. Índices ..
+  + CONHEC : CONHEC
+}
+
+entity "sint86" as sint86 {
+  REG : varchar(2)
+  REGEXP : integer
+  DTREGEXP : datetime
+  CNPJREMET : integer
+  IEREMET : varchar(14)
+  UFREMET : varchar(2)
+  NF : varchar(6)
+  EMISSAO : datetime
+  MODELO : integer
+  SERIE : varchar(3)
+  PRODUTO : varchar(14)
+  QUANT : decimal(11,3)
+  VALUNIT : decimal(12,2)
+  VALPROD : decimal(12,2)
+  RELAC : integer
+  BRANCOS : varchar(5)
+  --
+  .. Índices ..
+  + REGEXP : REGEXP
+}
+
+entity "sint88c" as sint88c {
+  REG : varchar(2)
+  SUB : varchar(1)
+  CNPJ : varchar(14)
+  MODELONF : varchar(2)
+  SERIENF : varchar(3)
+  NUMERONF : varchar(6)
+  CFOP : varchar(4)
+  NUMITEM : varchar(3)
+  CODPRODUTO : varchar(14)
+  QUANTIDADE : decimal(11,3)
+  BCST : decimal(12,2)
+  VLRST : decimal(12,2)
+  VLRSTCOMPL : decimal(12,2)
+  RETENCAO : decimal(12,2)
+  PARCIMPRET : decimal(12,2)
+  BRANCOS : varchar(6)
+  --
+  .. Índices ..
+  + CNPJNUM : CNPJ+NUMERONF
+}
+
+entity "sint88d" as sint88d {
+  REG : varchar(2)
+  SUB : varchar(1)
+  CNPJ : varchar(14)
+  IE : varchar(14)
+  UF : varchar(2)
+  MODELONF : varchar(2)
+  SERIENF : varchar(3)
+  NUMERONF : varchar(6)
+  EMITENTE : varchar(1)
+  DTEMISSAO : varchar(8)
+  DTSAIDA : varchar(8)
+  CNPJSAIDA : varchar(14)
+  UFSAIDA : varchar(2)
+  IESAIDA : varchar(14)
+  CNPJENT : varchar(14)
+  UFENTREGA : varchar(2)
+  IEENTREGA : varchar(14)
+  BRANCOS : varchar(5)
+  --
+  .. Índices ..
+  + CNPJNUM : CNPJ+NUMERONF
+}
+
+entity "sint88e" as sint88e {
+  REG : varchar(2)
+  SUB : varchar(1)
+  CNPJ : varchar(14)
+  IE : varchar(14)
+  CODPROINF : varchar(14)
+  CODPROSEF : varchar(14)
+  BRANCOS : varchar(67)
+  --
+  .. Índices ..
+  + CNPJSUB : CNPJ+SUB
+}
+
+entity "sint88m" as sint88m {
+  REG : varchar(2)
+  SUB : varchar(1)
+  CNPJ : varchar(14)
+  MENSAGEM : varchar(34)
+  BRANCOS : varchar(75)
+  --
+  .. Índices ..
+  + CNPJSUB : CNPJ+SUB
+}
+
+entity "sint88t" as sint88t {
+  REG : varchar(2)
+  SUB : varchar(1)
+  CNPJ : varchar(14)
+  DTEMISSAO : varchar(8)
+  UF : varchar(2)
+  MODELONF : varchar(2)
+  SERIENF : varchar(3)
+  NUMERONF : varchar(6)
+  EMITENTE : varchar(1)
+  CIFFOB : varchar(1)
+  CNPJFRETE : varchar(14)
+  UFFRETE : varchar(2)
+  IEFRETE : varchar(14)
+  MODAL : varchar(1)
+  PLACA1 : varchar(7)
+  UF1 : varchar(2)
+  PLACA2 : varchar(7)
+  UF2 : varchar(2)
+  PLACA3 : varchar(7)
+  UF3 : varchar(2)
+  BRANCOS : varchar(28)
+  --
+  .. Índices ..
+  + CNPJSUB : CNPJ+SUB
+}
+
+entity "sint90" as sint90 {
+  REG90 : varchar(126)
+  --
+  .. Índices ..
+  + REG90 : REG90
+}
+
+
+@enduml

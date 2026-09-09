@@ -1,5 +1,5 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 29/07/2026
+> Varredura automatica realizada em: 09/09/2026
 
 ## Tabela DBF: `ME04`
 > **Origem:** `ME04` (Driver: DBFCDX)
@@ -55,6 +55,55 @@
 - Tag: `ME04-2` Expressao: `CODTIPO+CODIGO`
 - Tag: `ME04-3` Expressao: `CALPRO`
 
+```mermaid
+erDiagram
+    ME04 {
+        C CODIGO
+        C TIPO
+        C MARCA
+        C CAPACI
+        C DIVI
+        C NOMTIPO
+        C CODTIPO
+        N CODFOR
+        C COGFOR
+        D COMPRA
+        N VALOR
+        C SITUACAO
+        D DATAUSO
+        D DATAFIM
+        C NORMA
+        C APLIC
+        C TIPCAL
+        N CALIBRAR
+        C ATIVO
+        C ERROADM
+        C OBS01
+        C OBS02
+        C OBS03
+        C MODELO
+        D CALULT
+        D CALPRO
+        C CADTIP
+        C DIME
+        C MATE
+        C CARA
+        N PRECO
+        N ULTPRC
+        C ULTUND
+        D ULTDATA
+        C NOME
+        C APLICACAO
+        C DESENHO
+        D DATAEXT
+        C CLASSIPI
+        C UNIDADE
+        N PF
+        D RRMDATA
+        C CODIGOINT
+    }
+```
+
 ---
 ## Tabela DBF: `ME04C`
 > **Origem:** `ME04C` (Driver: DBFCDX)
@@ -74,6 +123,20 @@
 - Tag: `ME04C-1` Expressao: `OCC`
 - Tag: `ME04C-2` Expressao: `CODIGO`
 - Tag: `ME04C-3` Expressao: `CERTIFI`
+
+```mermaid
+erDiagram
+    ME04C {
+        N OCC
+        C CODIGO
+        D DATA
+        D DATAP
+        N CODFOR
+        C COGFOR
+        C CERTIFI
+        N NFCC
+    }
+```
 
 ---
 ## Tabela DBF: `ME04CI`
@@ -95,6 +158,22 @@
 **Indices vinculados:**
 - Tag: `ME04CI-1` Expressao: `STR(OCC,8)+STR(ITEM,3)`
 - Tag: `ME04CI-2` Expressao: `OCC`
+
+```mermaid
+erDiagram
+    ME04CI {
+        N OCC
+        N ITEM
+        C ESPECI
+        C ENCTR
+        C DESVIO
+        C INCTOT
+        C LAUDO
+        C NRELAT
+        C ASSNOM
+        D ASSDAT
+    }
+```
 
 ---
 ## Tabela DBF: `ME04D`
@@ -130,6 +209,35 @@
 - Tag: `ME04D-1` Expressao: `OCD`
 - Tag: `ME04D-2` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    ME04D {
+        N OCD
+        C CODIGO
+        C MOTIVO
+        C OBS01
+        C OBS02
+        C OBS03
+        C INVALIDA
+        C VERIFI
+        C INSPECAO
+        C CODIGOS
+        C CLINOME
+        C NF
+        C ACLI01
+        C ACLI02
+        C INCIDE
+        C FREQ1
+        C FREQ2
+        C ACOR01
+        C ACOR02
+        C ACOR03
+        C ACOR04
+        C RESPON
+        D DATAOCD
+    }
+```
+
 ---
 ## Tabela DBF: `ME04R`
 > **Origem:** `ME04R` (Driver: DBFCDX)
@@ -150,6 +258,21 @@
 - Tag: `ME04R-1` Expressao: `NUMERO`
 - Tag: `ME04R-2` Expressao: `CODOPER`
 - Tag: `ME04R-3` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    ME04R {
+        N NUMERO
+        C CODIGO
+        N CODOPER
+        D SAIDA
+        N HORASAI
+        D DEVOLUCAO
+        N HORADEV
+        C AREA
+        C SETOR
+    }
+```
 
 ---
 ## Tabela DBF: `ME06`
@@ -205,6 +328,54 @@
 - Tag: `ME06-2` Expressao: `CODTIPO+CODIGO`
 - Tag: `ME06-3` Expressao: `CALPRO`
 
+```mermaid
+erDiagram
+    ME06 {
+        C CODIGO
+        C TIPO
+        C MARCA
+        C CAPACI
+        C DIVI
+        C NOMTIPO
+        C CODTIPO
+        N CODFOR
+        C COGFOR
+        D COMPRA
+        N VALOR
+        C SITUACAO
+        D DATAUSO
+        D DATAFIM
+        C NORMA
+        C APLIC
+        C TIPCAL
+        N CALIBRAR
+        C ATIVO
+        C ERROADM
+        C OBS01
+        C OBS02
+        C OBS03
+        C MODELO
+        D CALULT
+        D CALPRO
+        C CADTIP
+        C DIME
+        C MATE
+        C CARA
+        N PRECO
+        N ULTPRC
+        C ULTUND
+        D ULTDATA
+        C NOME
+        C APLICACAO
+        C DESENHO
+        D DATAEXT
+        C CLASSIPI
+        C UNIDADE
+        N PF
+        D RRMDATA
+    }
+```
+
 ---
 ## Tabela DBF: `ME06R`
 > **Origem:** `ME06R` (Driver: DBFCDX)
@@ -225,6 +396,21 @@
 - Tag: `ME06R-1` Expressao: `NUMERO`
 - Tag: `ME06R-2` Expressao: `CODOPER`
 - Tag: `ME06R-3` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    ME06R {
+        N NUMERO
+        C CODIGO
+        N CODOPER
+        D SAIDA
+        N HORASAI
+        D DEVOLUCAO
+        N HORADEV
+        C AREA
+        C SETOR
+    }
+```
 
 ---
 ## Tabela DBF: `ME06X`
@@ -270,6 +456,44 @@
 - Tag: `ME06X-2` Expressao: `CODTIPO+CODIGO`
 - Tag: `ME06X-3` Expressao: `CALPRO`
 
+```mermaid
+erDiagram
+    ME06X {
+        C CODIGO
+        C TIPO
+        C MARCA
+        C CAPACI
+        C DIVI
+        C NOMTIPO
+        C CODTIPO
+        N CODFOR
+        C COGFOR
+        D COMPRA
+        N VALOR
+        C SITUACAO
+        D DATAUSO
+        D DATAFIM
+        C NORMA
+        C APLIC
+        C TIPCAL
+        N CALIBRAR
+        C ATIVO
+        C ERROADM
+        C OBS01
+        C OBS02
+        C OBS03
+        C MODELO
+        D CALULT
+        D CALPRO
+        C CADTIP
+        C DIME
+        C MATE
+        C CARA
+        N PRECO
+        D RRMDATA
+    }
+```
+
 ---
 ## Tabela DBF: `ME4CC`
 > **Origem:** `ME4CC` (Driver: DBFCDX)
@@ -302,6 +526,33 @@
 - Tag: `NUMERO` Expressao: `NUMERO`
 - Tag: `CODIGO` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    ME4CC {
+        N NUMERO
+        D DATA
+        C CODIGO
+        D DATAREV
+        C CODME04A
+        C CODME04
+        C NOMME04
+        C TEMPER
+        C UMIDADE
+        L NOVO
+        L SUJOEXT
+        L SUJOINT
+        L DANIFIC
+        C LAUDOF
+        D LAUDOD
+        N NUMTEC
+        C NOMTEC
+        D VALPAD
+        C INSTRU
+        L DISPLIN
+        L DISPMAT
+    }
+```
+
 ---
 ## Tabela DBF: `ME4CCI`
 > **Origem:** `ME4CCI` (Driver: DBFCDX)
@@ -317,6 +568,18 @@
 
 **Indices vinculados:**
 - Tag: `NUMERO` Expressao: `NUMERO`
+
+```mermaid
+erDiagram
+    ME4CCI {
+        N NUMERO
+        C DIMENSAO
+        C ENCONTRA
+        C TENDENCIA
+        C LAUDO
+        C INCTOT
+    }
+```
 
 ---
 ## Tabela DBF: `RRM`
@@ -410,5 +673,94 @@
 
 **Indices vinculados:**
 - Tag: `RRS` Expressao: `RRS`
+
+```mermaid
+erDiagram
+    RRM {
+        N RRS
+        N CLIENTE
+        C CLINOME
+        C DESENHO
+        C DESCRI
+        C INSTRU
+        C DESCII
+        C CARAC
+        C ESPEC
+        C AVA
+        C AVB
+        N AVAN
+        N AVBN
+        N AMA01
+        N AMA02
+        N AMA03
+        N AMA04
+        N AMA05
+        N AMAA01
+        N AMAA02
+        N AMAA03
+        N AMAA04
+        N AMAA05
+        N AMB01
+        N AMB02
+        N AMB03
+        N AMB04
+        N AMB05
+        N AMBB01
+        N AMBB02
+        N AMBB03
+        N AMBB04
+        N AMBB05
+        N DIFA01
+        N DIFA02
+        N DIFA03
+        N DIFA04
+        N DIFA05
+        N DIFB01
+        N DIFB02
+        N DIFB03
+        N DIFB04
+        N DIFB05
+        N TOTAA
+        N TOTAB
+        N MEDAA
+        N TOTALA
+        N TOTBA
+        N TOTBB
+        N MEDBB
+        N TOTALB
+        N MEDIA
+        N MEDIB
+        N MEDSOM
+        N MEDMED
+        N DIFMED
+        N VE
+        N VA
+        N RR
+        N VP
+        N VT
+        N PRR
+        D DATA
+        C OBS01
+        C OBS02
+        N RP
+        N M01
+        N M02
+        N M03
+        N M04
+        N M05
+        N RPMAX
+        N RPMIN
+        N XMAX
+        N XMIN
+        N K01
+        N K02
+        N K03
+        N TOLMIN
+        N TOLMAX
+        N NUMASS
+        D DATASS
+        C NOMASS
+    }
+```
 
 ---

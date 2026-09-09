@@ -1,0 +1,27 @@
+// Origem: lc (DBFCDX)
+Table "lc" {
+  Note: "Origem: lc"
+  "DOCUMENTO" VARCHAR(20)
+  "DATA" VARCHAR(10)
+  "NOVODOC" VARCHAR(40)
+  "NOVODATA" VARCHAR(10)
+  "TIPO" VARCHAR(20)
+  "NUMCOMP" VARCHAR(10)
+  "PASTA" VARCHAR(10)
+  "NUMERO" INTEGER [default: 0]
+  Indexes {
+    (DOCUMENTO) [name: "DOCUMENTO"]
+    (NOVODOC) [name: "NOVODOC"]
+    (TIPO,NUMERO) [name: "TIPONUMERO"]
+  }
+}
+
+// Origem: lct (DBFCDX)
+Table "lct" {
+  Note: "Origem: lct"
+  "TIPO" VARCHAR(20)
+  Indexes {
+    (TIPO) [name: "TIPO"]
+  }
+}
+

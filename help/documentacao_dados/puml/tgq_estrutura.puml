@@ -1,0 +1,819 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "acpnc" as acpnc {
+  ACPNC : integer
+  DATA : datetime
+  DATAFEC : datetime
+  CLIENTE : integer
+  CLINOME : varchar(50)
+  PRODUTO : varchar(24)
+  DESPRO : varchar(40)
+  APNC : integer
+  RNC : integer
+  RAT : integer
+  SAIR : boolean
+  QTI01 : decimal(9,2)
+  QTI02 : decimal(9,2)
+  QTI03 : decimal(9,2)
+  QTI04 : decimal(9,2)
+  QTI05 : decimal(9,2)
+  QTI06 : decimal(9,2)
+  QTI07 : decimal(9,2)
+  QTE01 : decimal(9,2)
+  QTE02 : decimal(9,2)
+  QTE03 : decimal(9,2)
+  QTE04 : decimal(9,2)
+  QTE05 : decimal(9,2)
+  QTE06 : decimal(9,2)
+  QTE07 : decimal(9,2)
+  QTE08 : decimal(9,2)
+  QTE09 : decimal(9,2)
+  QTE10 : decimal(9,2)
+  QTE11 : decimal(9,2)
+  VLI01 : decimal(12,2)
+  VLI02 : decimal(12,2)
+  VLI03 : decimal(12,2)
+  VLI04 : decimal(12,2)
+  VLI05 : decimal(12,2)
+  VLI06 : decimal(12,2)
+  VLI07 : decimal(12,2)
+  VLE01 : decimal(12,2)
+  VLE02 : decimal(12,2)
+  VLE03 : decimal(12,2)
+  VLE04 : decimal(12,2)
+  VLE05 : decimal(12,2)
+  VLE06 : decimal(12,2)
+  VLE07 : decimal(12,2)
+  VLE08 : decimal(12,2)
+  VLE09 : decimal(12,2)
+  VLE10 : decimal(12,2)
+  VLE11 : decimal(12,2)
+  PCVALEXT : decimal(18,4)
+  PCVALINT : decimal(18,4)
+  SAC : integer
+  COMPETE : varchar(6)
+  --
+  .. Índices ..
+  + ACPNC : ACPNC
+  + DATA : DATA
+  + RNC : RNC
+  + RATPRODUTO : STR(RAT,8)+PRODUTO
+  + SAC : SAC
+  + COMPETE : COMPETE
+}
+
+entity "adp" as adp {
+  ADP : integer
+  CODIGO : varchar(24)
+  NOME : varchar(40)
+  CLIENTE : integer
+  CLINOME : varchar(50)
+  NFDEV : varchar(15)
+  CLIRET : varchar(30)
+  RASTRO : varchar(10)
+  INSNUM : integer
+  INSNOME : varchar(40)
+  DATA : datetime
+  INIHOR : decimal(5,2)
+  FIMHOR : decimal(5,2)
+  HORAS : decimal(5,2)
+  REQUER : varchar(1)
+  AREA : varchar(2)
+  RESPO : varchar(40)
+  RNC : integer
+  --
+  .. Índices ..
+  + ADP : ADP
+  + RNC : RNC
+}
+
+entity "adpi" as adpi {
+  ADP : integer
+  ESPC : varchar(80)
+  ENCO : varchar(80)
+  LAUDO : varchar(1)
+  --
+  .. Índices ..
+  + ADP : ADP
+}
+
+entity "caf" as caf {
+  NUMERO : integer
+  PREVISTO : datetime
+  EFETUADO : datetime
+  DPLANO : datetime
+  EFICAZ : varchar(1)
+  OBS : varchar(80)
+  --
+  .. Índices ..
+  + NUMERO : NUMERO
+}
+
+entity "cfe" as cfe {
+  NUMERO : integer
+  DATA : datetime
+  TIPOCLI : varchar(1)
+  CLIFOR : integer
+  COGNOME : varchar(20)
+  NOTA : varchar(30)
+  PESO : decimal(12,2)
+  MEIOTRAN : varchar(30)
+  JUSTIFI : varchar(80)
+  TIPOENT : varchar(1)
+  PRODUTO : varchar(24)
+  --
+  .. Índices ..
+  + NUMERO : NUMERO
+}
+
+entity "crdias" as crdias {
+  SEQ : integer
+  NFOR : integer
+  DIAS : decimal(7,2)
+  QTENT : integer
+  QTPRZ : integer
+  --
+  .. Índices ..
+  + SEQ : SEQ
+}
+
+entity "crfa" as crfa {
+  SEQ : integer
+  NFOR : integer
+  NOME : varchar(40)
+  QTRA : integer
+  QTNA : integer
+  PPMA : integer
+  DIAA : integer
+  IAFA : decimal(7,2)
+  IQFA : integer
+  MESA : integer
+  QTRS : integer
+  QTNS : integer
+  PPMS : integer
+  DIAS : integer
+  IAFS : decimal(7,2)
+  IQFS : integer
+  MESS : integer
+  CONCEITO : varchar(1)
+  PPM : integer
+  IAF : decimal(7,2)
+  SUBRAMO : varchar(3)
+  --
+  .. Índices ..
+  + SEQNFOR : STR(SEQ,3)+STR(NFOR,8)
+  + NFOR : NFOR
+}
+
+entity "crfor" as crfor {
+  SEQ : integer
+  NFOR : integer
+  QTDREC : integer
+  QTDNC : integer
+  PPM : integer
+  DIAS : integer
+  IAF : decimal(7,2)
+  IQF : integer
+  ANUAL : varchar(1)
+  SEMES : varchar(1)
+  DESCRI : varchar(20)
+  PPMS : integer
+  PPMA : integer
+  IAFS : decimal(7,2)
+  IAFA : decimal(7,2)
+  NOME : varchar(50)
+  --
+  .. Índices ..
+  + SEQ : SEQ
+  + NFOR : NFOR
+  + SEQNFOR : STR(SEQ,3)+STR(NFOR,8)
+}
+
+entity "crft" as crft {
+  NFOR : integer
+  SEQ : integer
+  ITEM : integer
+  DESCRICAO : varchar(15)
+  VAL01 : integer
+  VAL02 : integer
+  VAL03 : integer
+  VAL04 : integer
+  VAL05 : integer
+  VAL06 : integer
+  VAL07 : integer
+  VAL08 : integer
+  VAL09 : integer
+  VAL10 : integer
+  VAL11 : integer
+  VAL12 : integer
+  TOTAL : integer
+  IAFS : decimal(7,2)
+  PPMS : integer
+  --
+  .. Índices ..
+  + SEQNFOR : STR(SEQ,3)+STR(NFOR,8)
+}
+
+entity "crrsapc" as crrsapc {
+  SEQ : integer
+  CLIENTE : integer
+  QTDE : integer
+  --
+  .. Índices ..
+  + SEQCLIENTE : STR(SEQ,3)+STR(CLIENTE,8)
+}
+
+entity "crrsapp" as crrsapp {
+  SEQ : integer
+  CODIGO : varchar(24)
+  NOME : varchar(40)
+  PRODUSO : varchar(1)
+  QTDE : integer
+  SET01 : integer
+  SET02 : integer
+  SET03 : integer
+  SET04 : integer
+  SET05 : integer
+  SET06 : integer
+  SET07 : integer
+  SET08 : integer
+  SET09 : integer
+  SET00 : integer
+  --
+  .. Índices ..
+  + SEQCODIGO : STR(SEQ,3)+CODIGO
+}
+
+entity "crrsaps" as crrsaps {
+  SEQ : integer
+  SETCOD : varchar(1)
+  SETOR : varchar(10)
+  SETCOG : varchar(5)
+  QTDE : integer
+  QTDENC : integer
+  PPM : integer
+  RET : integer
+  DEV : integer
+  SUC : integer
+  PPMRET : integer
+  PPMDEV : integer
+  PPMSUC : integer
+  SEMRET : integer
+  SEMSUC : integer
+  SEMDEV : integer
+  SEMPPM : integer
+  SEMPPMRET : integer
+  SEMPPMSUC : integer
+  SEMPPMDEV : integer
+  SEMTOT : integer
+  SEMPRO : integer
+  ANURET : integer
+  ANUSUC : integer
+  ANUDEV : integer
+  ANUPPM : integer
+  ANUPPMRET : integer
+  ANUPPMSUC : integer
+  ANUPPMDEV : integer
+  ANUTOT : integer
+  ANUPRO : integer
+  --
+  .. Índices ..
+  + SEQSETOR : STR(SEQ,3)+SETCOD
+}
+
+entity "crrserr" as crrserr {
+  CODIGO : varchar(3)
+  NOME : varchar(40)
+  GRAFICO : boolean
+  COGNOME : varchar(5)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "crrsseq" as crrsseq {
+  SEQ : integer
+  DIAFIM : datetime
+  DIAINI : datetime
+  MES : integer
+  ANO : integer
+  DESCR2 : varchar(10)
+  DESCRI : varchar(30)
+  RET : integer
+  SUC : integer
+  DEV : integer
+  TOTMES : integer
+  PPMMES : integer
+  PPMRET : integer
+  PPMSUC : integer
+  PPMDEV : integer
+  PRODMES : integer
+  PRODMY : integer
+  ANUAL : varchar(1)
+  SEMES : varchar(1)
+  PRODNF : integer
+  SEMRET : integer
+  SEMSUC : integer
+  SEMDEV : integer
+  SEMPPMRET : integer
+  SEMPPMSUC : integer
+  SEMPPMDEV : integer
+  SEMTOT : integer
+  SEMPRO : integer
+  SEMPPM : integer
+  SEMINI : datetime
+  SEMFIM : datetime
+  ANURET : integer
+  ANUSUC : integer
+  ANUDEV : integer
+  ANUPPMRET : integer
+  ANUPPMSUC : integer
+  ANUPPMDEV : integer
+  ANUTOT : integer
+  ANUPRO : integer
+  ANUPPM : integer
+  ANUINI : datetime
+  ANUFIM : datetime
+  PLANO01 : varchar(120)
+  PLANO02 : varchar(120)
+  PLANO03 : varchar(120)
+  PLANO04 : varchar(120)
+  PLANO05 : varchar(120)
+  PLANO06 : varchar(120)
+  PLANO07 : varchar(120)
+  ACAO01 : varchar(120)
+  ACAO02 : varchar(120)
+  ACAO03 : varchar(120)
+  ACAO04 : varchar(120)
+  ACAO05 : varchar(120)
+  ACAO06 : varchar(120)
+  ACAO07 : varchar(120)
+  NUMFUN : integer
+  NUMREG : integer
+  NUMTEM : integer
+  ZERO : integer
+  --
+  .. Índices ..
+  + SEQ : SEQ
+}
+
+entity "crrsset" as crrsset {
+  CODIGO : varchar(1)
+  NOME : varchar(10)
+  GRAFICO : boolean
+  COGNOME : varchar(5)
+  --
+  .. Índices ..
+  + SEQ : CODIGO
+}
+
+entity "crseq" as crseq {
+  SEQ : integer
+  DIAFIM : datetime
+  DIAINI : datetime
+  MES : integer
+  ANO : integer
+  DESCRI : varchar(30)
+  ANUAL : varchar(1)
+  SEMES : varchar(1)
+  --
+  .. Índices ..
+  + SEQ : SEQ
+}
+
+entity "crts" as crts {
+  SEQ : integer
+  PRODMES : integer
+  RET : integer
+  SUC : integer
+  DEV : integer
+  PPMRET : integer
+  PPMSUC : integer
+  PPMDEV : integer
+  --
+  .. Índices ..
+  + SEQ : SEQ
+}
+
+entity "msrd" as msrd {
+  MSRD : integer
+  CODIGO : varchar(24)
+  PF : integer
+  DATA : datetime
+  OCORREU : varchar(20)
+  DESC01 : varchar(80)
+  DESC02 : varchar(80)
+  INV01 : varchar(80)
+  ACA01 : varchar(80)
+  CLIENTE : integer
+  --
+  .. Índices ..
+  + MSRD : MSRD
+  + CODIGO : CODIGO
+}
+
+entity "pe01tmp" as pe01tmp {
+  TIPPED : varchar(1)
+  CODIGO : varchar(24)
+  UNIDADE : varchar(2)
+  NOME : varchar(50)
+  NOM2 : varchar(50)
+  NRNOTAINI : decimal(8,2)
+  DIGCTR : varchar(1)
+  DATAFAT : datetime
+  VALORINI : decimal(9,2)
+  TOTKGINI : integer
+  NRNOTASAI : integer
+  TOTKGANT : integer
+  TOTKGSAI : integer
+  TOTKGEST : integer
+  TIPOCLI : varchar(1)
+  CLIENTE : integer
+  COGNOME : varchar(12)
+  DATASAI : datetime
+  CRM : integer
+  PEDIDO : integer
+  ITEM : integer
+  RECEBER : varchar(1)
+  OBS : varchar(20)
+  RASTROFOR : varchar(20)
+  DCORTE : datetime
+  AR : integer
+  ARITEM : integer
+  RIRM : integer
+  --
+  .. Índices ..
+  + PE01TMP1 : STR(PEDIDO,5)+STR(ITEM,2)+DIGCTR
+  + PE01TMP2 : STR(NRNOTASAI,8)+STR(CLIENTE,8)
+  + PE01TMP3 : PEDIDO
+  + PE01TMP4 : CLIENTE
+  + PE01TMP5 : STR(AR,8)+STR(ARITEM,3)
+  + PE01TMP6 : CODIGO
+  + PE01TMP7 : STR(CLIENTE,8)+STR(NRNOTASAI,8)+CODIGO
+}
+
+entity "racf" as racf {
+  RACF : integer
+  RNC : integer
+  RAT : integer
+  DATA : datetime
+  DENO : varchar(40)
+  DESENHO : varchar(24)
+  REVISAO : varchar(2)
+  RASTRO : varchar(20)
+  FORNECEDO : integer
+  NOMEF : varchar(40)
+  RESP : varchar(30)
+  RESPC : varchar(30)
+  FONE : varchar(12)
+  FAX : varchar(12)
+  EMAIL : varchar(30)
+  DESC01 : varchar(90)
+  DESC02 : varchar(90)
+  DESC03 : varchar(90)
+  DESC04 : varchar(90)
+  DESC05 : varchar(90)
+  ACAO01 : varchar(80)
+  ACAO02 : varchar(80)
+  CAUSA01 : varchar(80)
+  CAUSA02 : varchar(80)
+  CAUSA03 : varchar(80)
+  CAUSA04 : varchar(80)
+  CORRE01 : varchar(80)
+  CORRE02 : varchar(80)
+  CORRE03 : varchar(80)
+  CORRE04 : varchar(80)
+  DATAI : datetime
+  RESPF : varchar(30)
+  CARGOF : varchar(30)
+  DATAF : datetime
+  DATAE : datetime
+  VERI : varchar(25)
+  APRO : varchar(1)
+  NOTA : varchar(8)
+  CNFITA : varchar(8)
+  CNFFOR : varchar(25)
+  AREA : varchar(2)
+  RESPO : varchar(40)
+  CARGO : varchar(40)
+  QTL1 : integer
+  QTL2 : integer
+  QTN1 : integer
+  QTN2 : integer
+  QTD1 : integer
+  QTD2 : integer
+  UNID : varchar(3)
+  CRM : integer
+  TIPOE : varchar(1)
+  CBUSCA : varchar(24)
+  DESCRI : varchar(100)
+  INCUSER : varchar(10)
+  INCDATA : datetime
+  EFICAZ : varchar(1)
+  DEMERITO : varchar(1)
+  DESCRI01 : varchar(50)
+  --
+  .. Índices ..
+  + RACF : RACF
+  + RACF-2 : DATA
+}
+
+entity "racfsal" as racfsal {
+  SEQ : integer
+  CLIFOR : integer
+  QTDE : integer
+  --
+  .. Índices ..
+  + SEQCLIFOR : STR(SEQ,3)+STR(CLIFOR,8)
+}
+
+entity "rat" as rat {
+  RAT : integer
+  CLIENTE : integer
+  CLINOME : varchar(50)
+  DATA : datetime
+  VISITA : boolean
+  RECCLI : boolean
+  RELCLI : boolean
+  --
+  .. Índices ..
+  + RAT : RAT
+  + DATA : DATA
+}
+
+entity "rati" as rati {
+  RAT : integer
+  CODIGO : varchar(24)
+  QTDE : integer
+  RASTRO : varchar(9)
+  PROB01 : varchar(100)
+  PROB02 : varchar(100)
+  PROB03 : varchar(100)
+  ANAL01 : varchar(100)
+  ANAL02 : varchar(100)
+  ANAL03 : varchar(100)
+  ANAL04 : varchar(100)
+  ANAL05 : varchar(100)
+  ACAO01 : varchar(100)
+  ACAO02 : varchar(100)
+  ACAO03 : varchar(100)
+  PRAZO : datetime
+  RESNUM : integer
+  RESNOME : varchar(40)
+  LACAO : boolean
+  SAC : integer
+  RACF : integer
+  PARADA : boolean
+  RELACAO : varchar(1)
+  --
+  .. Índices ..
+  + RAT : RAT
+}
+
+entity "rnc" as rnc {
+  RNC : integer
+  CODRNC : varchar(1)
+  DESCRI : varchar(30)
+  CODIGO : varchar(20)
+  REVI : varchar(2)
+  OFC : varchar(20)
+  SETOR : varchar(20)
+  RASTRO : varchar(20)
+  NOME : varchar(45)
+  NFC : varchar(20)
+  RIC : varchar(20)
+  NFIC : varchar(20)
+  PED : varchar(20)
+  QTL : integer
+  QTLN : integer
+  DEC01 : varchar(100)
+  DEC02 : varchar(100)
+  DEC03 : varchar(100)
+  DATA : datetime
+  DISPO : varchar(1)
+  DATAD : datetime
+  RAC : varchar(1)
+  SACR : varchar(20)
+  OBS01 : varchar(100)
+  OBS02 : varchar(100)
+  OBS03 : varchar(100)
+  OBS04 : varchar(100)
+  RESP : varchar(30)
+  ACAO01 : varchar(60)
+  ACAO02 : varchar(60)
+  ACAO03 : varchar(60)
+  ACAO04 : varchar(60)
+  LAUDO : varchar(1)
+  DATAR : datetime
+  DIST01 : varchar(60)
+  DIST02 : varchar(60)
+  REFDOC : varchar(15)
+  QTDEREI : integer
+  TIPCAD : varchar(1)
+  CLIFOR : integer
+  TIPACAO : varchar(1)
+  NSAC : integer
+  NRACF : integer
+  TIPERR : varchar(1)
+  UNID : varchar(2)
+  AREA : varchar(2)
+  RESPO : varchar(40)
+  CARGO : varchar(40)
+  CODRET : varchar(1)
+  INCUSER : varchar(10)
+  INCDATA : datetime
+  FECUSER : varchar(10)
+  FECDATA : datetime
+  ABRNUM : integer
+  ABRNOM : varchar(40)
+  SELHI : decimal(5,2)
+  SELHF : decimal(5,2)
+  SELDI : datetime
+  SELDF : datetime
+  SELVL : decimal(12,2)
+  SELTH : decimal(12,2)
+  RETHI : decimal(5,2)
+  RETHF : decimal(5,2)
+  RETDI : datetime
+  RETDF : datetime
+  RETVL : decimal(12,2)
+  RETTH : decimal(12,2)
+  REIQT : decimal(12,2)
+  REIHI : decimal(5,2)
+  REIHF : decimal(5,2)
+  REIDI : datetime
+  REIDF : datetime
+  REIVL : decimal(12,2)
+  REITH : decimal(12,2)
+  MATCOD : varchar(20)
+  MATNOM : varchar(40)
+  RETOPR : integer
+  RETOP2 : integer
+  RETOP3 : integer
+  RETNOM : varchar(40)
+  RETNO2 : varchar(40)
+  RETNO3 : varchar(40)
+  RETVAL : decimal(12,2)
+  CRM : integer
+  TIPOE : varchar(1)
+  DESCE : varchar(40)
+  CBUSCA : varchar(24)
+  FECHADA : boolean
+  RAT : integer
+  REHHI : decimal(5,2)
+  REHHF : decimal(5,2)
+  REHDI : datetime
+  REHDF : datetime
+  REHVL : decimal(12,2)
+  REHTH : decimal(12,2)
+  VALSUC : decimal(12,2)
+  QTDSUC : integer
+  PECSUC : decimal(18,4)
+  --
+  .. Índices ..
+  + RNC : RNC
+  + RNC-2 : DATA
+}
+
+entity "rnci" as rnci {
+  RNC : integer
+  QTNC : integer
+  SETCOD : varchar(1)
+  CODERR : varchar(3)
+  --
+  .. Índices ..
+  + RNCI : RNC
+}
+
+entity "sac" as sac {
+  RNC : integer
+  RAT : integer
+  DOCUMENTO : varchar(25)
+  RASTRO : varchar(12)
+  DATA : datetime
+  NOME : varchar(40)
+  CODIGO : varchar(24)
+  QTL : integer
+  QTN : integer
+  CLIENTE : integer
+  CLINOME : varchar(50)
+  DESC01 : varchar(100)
+  DESC02 : varchar(100)
+  DESC03 : varchar(100)
+  DESC04 : varchar(80)
+  OS : decimal(8,2)
+  NF : integer
+  ITEM : integer
+  TIPSAC : varchar(2)
+  DATOS : datetime
+  DATEN : datetime
+  PRAZO : datetime
+  DATAF : datetime
+  EFICA : varchar(1)
+  NOVA : integer
+  TIPO : varchar(1)
+  FECHO : datetime
+  CONG : varchar(40)
+  RESUL : varchar(1)
+  EQP01 : varchar(25)
+  EQP02 : varchar(25)
+  EQP03 : varchar(25)
+  EQP04 : varchar(25)
+  PF : integer
+  FEMEAREV : integer
+  FEMEAREVD : datetime
+  INCDATA : datetime
+  INCUSER : varchar(10)
+  NOTSETOR : varchar(25)
+  ANTERIOR : integer
+  FECNOME : varchar(40)
+  SAC : integer
+  PMED01 : varchar(30)
+  PMED02 : varchar(30)
+  PMED03 : varchar(30)
+  PMED04 : varchar(30)
+  PMED05 : varchar(30)
+  PAMB01 : varchar(30)
+  PAMB02 : varchar(30)
+  PAMB03 : varchar(30)
+  PAMB04 : varchar(30)
+  PAMB05 : varchar(30)
+  PMAO01 : varchar(30)
+  PMAO02 : varchar(30)
+  PMAO03 : varchar(30)
+  PMAO04 : varchar(30)
+  PMAO05 : varchar(30)
+  PMAQ01 : varchar(30)
+  PMAQ02 : varchar(30)
+  PMAQ03 : varchar(30)
+  PMAQ04 : varchar(30)
+  PMAQ05 : varchar(30)
+  PMET01 : varchar(30)
+  PMET02 : varchar(30)
+  PMET03 : varchar(30)
+  PMET04 : varchar(30)
+  PMET05 : varchar(30)
+  PMAT01 : varchar(30)
+  PMAT02 : varchar(30)
+  PMAT03 : varchar(30)
+  PMAT04 : varchar(30)
+  PMAT05 : varchar(30)
+  POA : integer
+  REVPF : varchar(1)
+  REVPC : varchar(1)
+  REVPFOBS : varchar(30)
+  REVPCOBS : varchar(30)
+  --
+  .. Índices ..
+  + SAC : SAC
+  + SAC-2 : STR(OS,8,2)+STR(NF,8)+STR(ITEM,3)
+  + SAC-3 : CODIGO
+}
+
+entity "saci" as saci {
+  SAC : integer
+  CAUSA : integer
+  ACAO : integer
+  AREA : varchar(2)
+  DESARE : varchar(30)
+  RESPON : varchar(40)
+  ACAO01 : varchar(100)
+  ACAO02 : varchar(100)
+  ACAO03 : varchar(100)
+  ACAO04 : varchar(100)
+  ACAO05 : varchar(100)
+  ACAO06 : varchar(100)
+  ACAO07 : varchar(100)
+  ACAO08 : varchar(100)
+  ACAO09 : varchar(100)
+  ACAO10 : varchar(100)
+  PRAZO : datetime
+  DATAF : datetime
+  FECHO : datetime
+  POSICAO : varchar(1)
+  INV01 : varchar(100)
+  INV02 : varchar(100)
+  INV03 : varchar(100)
+  INV04 : varchar(100)
+  INV05 : varchar(100)
+  INV06 : varchar(100)
+  INV07 : varchar(100)
+  INV08 : varchar(100)
+  INV09 : varchar(100)
+  INV10 : varchar(100)
+  ACM01 : varchar(100)
+  ACM02 : varchar(100)
+  ACM03 : varchar(100)
+  ACM04 : varchar(100)
+  ACM05 : varchar(100)
+  ACM06 : varchar(100)
+  LPAE : boolean
+  --
+  .. Índices ..
+  + SACI : SAC
+}
+
+
+@enduml

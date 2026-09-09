@@ -1,5 +1,5 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 29/07/2026
+> Varredura automatica realizada em: 09/09/2026
 
 ## Tabela DBF: `cs`
 > **Origem:** `cs` (Driver: DBFCDX)
@@ -36,6 +36,38 @@
 **Indices vinculados:**
 - Tag: `CS` Expressao: `CS`
 
+```mermaid
+erDiagram
+    cs {
+        N CS
+        D DATA
+        C TIPO
+        C FERRAM
+        C NOME
+        N TECNICO
+        C TECNOME
+        N QTDEBASE
+        N QTDESALDO
+        N QTDEPED
+        N QTDEURG
+        D DATASALDO
+        D DATAPED
+        D DATAURG
+        N QTDETOT
+        N HRBAS
+        N HRTOT
+        N HRPRE
+        N HRURG
+        N HRSAL
+        D DATHPED
+        D DATHURG
+        D DATHSAL
+        L LANCADA
+        D LANCDAT
+        N LANCUSR
+    }
+```
+
 ---
 ## Tabela DBF: `fapu`
 > **Origem:** `fapu` (Driver: DBFCDX)
@@ -53,6 +85,19 @@
 **Indices vinculados:**
 - Tag: `FAPU` Expressao: `SEQ`
 
+```mermaid
+erDiagram
+    fapu {
+        N SEQ
+        D DINI
+        D DFIM
+        L APURADO
+        L PCPLIB
+        N PCPNUM
+        D PCPDAT
+    }
+```
+
 ---
 ## Tabela DBF: `fapubai`
 > **Origem:** `fapubai` (Driver: DBFCDX)
@@ -66,6 +111,16 @@
 
 **Indices vinculados:**
 - Tag: `FAPUBAI` Expressao: `STR(SEQ,3)+FERRAM`
+
+```mermaid
+erDiagram
+    fapubai {
+        N SEQ
+        C FERRAM
+        N QTDE
+        N HORAS
+    }
+```
 
 ---
 ## Tabela DBF: `fapufer`
@@ -82,6 +137,16 @@
 - Tag: `FAPUFER` Expressao: `STR(SEQ,3)+FERRAM`
 - Tag: `FAPUFER2` Expressao: `FERRAM`
 
+```mermaid
+erDiagram
+    fapufer {
+        N SEQ
+        C FERRAM
+        N QTDE
+        N HORAS
+    }
+```
+
 ---
 ## Tabela DBF: `fapui`
 > **Origem:** `fapui` (Driver: DBFCDX)
@@ -95,6 +160,16 @@
 
 **Indices vinculados:**
 - Tag: `FAPUI` Expressao: `SEQ`
+
+```mermaid
+erDiagram
+    fapui {
+        N SEQ
+        C FERRAM
+        N QTDE
+        N HORAS
+    }
+```
 
 ---
 ## Tabela DBF: `fapumaq`
@@ -111,6 +186,16 @@
 - Tag: `FAPUMAQ` Expressao: `STR(SEQ,3)+FERRAM`
 - Tag: `FAPUMAQ2` Expressao: `FERRAM`
 
+```mermaid
+erDiagram
+    fapumaq {
+        N SEQ
+        C FERRAM
+        N QTDE
+        N HORAS
+    }
+```
+
 ---
 ## Tabela DBF: `fe02`
 > **Origem:** `fe02` (Driver: DBFCDX)
@@ -125,6 +210,17 @@
 
 **Indices vinculados:**
 - Tag: `FE02-1` Expressao: `TIPO+CODIGO+STR(ANO,4)+STR(MES,2)`
+
+```mermaid
+erDiagram
+    fe02 {
+        C TIPO
+        C CODIGO
+        N ANO
+        N MES
+        N USO
+    }
+```
 
 ---
 ## Tabela DBF: `fe99`
@@ -148,6 +244,24 @@
 **Indices vinculados:**
 - Tag: `FE99-1` Expressao: `ARQUIVO+DOCUMENTO`
 - Tag: `FE99-2` Expressao: `CODIGO+DTOS(DATA)`
+
+```mermaid
+erDiagram
+    fe99 {
+        C ARQUIVO
+        C DOCUMENTO
+        C OPERACAO
+        C USUARIO
+        N QTDE
+        N OLDQTDE
+        N NUMERO
+        D DATA
+        C CODIGO
+        C RASTRO
+        N ESTQXXX
+        N ESTQYYY
+    }
+```
 
 ---
 ## Tabela DBF: `fergi`
@@ -180,6 +294,32 @@
 - Tag: `FERGI` Expressao: `FERRAM`
 - Tag: `FERGI-2` Expressao: `FERRAM+CODIGO`
 
+```mermaid
+erDiagram
+    fergi {
+        C FERRAM
+        C CODIGO
+        C NOME
+        C DESENHO
+        N SAIMIN
+        N ESTQMIN
+        N ESTQENT
+        N ESTQSAI
+        N ESTQINI
+        N ESTQSAL
+        N DIASENT
+        N DIASEST
+        D DATABALAN
+        D DATMIN
+        N MINDI
+        N MININD
+        N CAUTO
+        N CCM
+        C NOM2
+        C UNIDADE
+    }
+```
+
 ---
 ## Tabela DBF: `fergrp`
 > **Origem:** `fergrp` (Driver: DBFCDX)
@@ -190,6 +330,13 @@
 
 **Indices vinculados:**
 - Tag: `FERGRP` Expressao: `GRUPO`
+
+```mermaid
+erDiagram
+    fergrp {
+        C GRUPO
+    }
+```
 
 ---
 ## Tabela DBF: `ferhg`
@@ -210,6 +357,20 @@
 - Tag: `OS` Expressao: `OS`
 - Tag: `CODFERR` Expressao: `CODFERR`
 
+```mermaid
+erDiagram
+    ferhg {
+        N OS
+        C CODFERR
+        C CODME01
+        D DATA
+        N SEQ
+        N SSQ
+        C TIPSER
+        C SERVICO
+    }
+```
+
 ---
 ## Tabela DBF: `ferhgi`
 > **Origem:** `ferhgi` (Driver: DBFCDX)
@@ -225,6 +386,18 @@
 
 **Indices vinculados:**
 - Tag: `OS` Expressao: `OS`
+
+```mermaid
+erDiagram
+    ferhgi {
+        N OS
+        D DATA
+        N HINI
+        N HFIM
+        N HGAS
+        C OBS
+    }
+```
 
 ---
 ## Tabela DBF: `fernf`
@@ -245,6 +418,21 @@
 **Indices vinculados:**
 - Tag: `FERNF` Expressao: `FERRAM+STR(NRNOTA,8)`
 - Tag: `FERNF-2` Expressao: `FERRAM`
+
+```mermaid
+erDiagram
+    fernf {
+        C FERRAM
+        C TIPO
+        N NRNOTA
+        D DTNOTA
+        N VLNOTA
+        C TIPCAD
+        N CLIFOR
+        C CLICOG
+        C OBS
+    }
+```
 
 ---
 ## Tabela DBF: `feros`
@@ -296,6 +484,50 @@
 - Tag: `FEROS-2` Expressao: `FERRAM`
 - Tag: `FEROS-3` Expressao: `STR(CLIENTE,8)+FERRAM`
 - Tag: `FEROS-4` Expressao: `PEDIDOCLI`
+
+```mermaid
+erDiagram
+    feros {
+        N FEROS
+        C REVISAO
+        C CHAVE
+        N CLIENTE
+        C COGCLI
+        C FERRAM
+        C NOME
+        D DATAOS
+        D DATAPE
+        D DATANF
+        D DATAPRZ
+        N NRNOTA
+        N VALORMER
+        N VALORICM
+        N VALORIPI
+        N VALORTOT
+        N BASEICM
+        N BASEIPI
+        N ICM
+        N IPI
+        C CONSUMO
+        C SOMANF
+        N QTDE
+        N PRECO
+        C OBS
+        C CODIPI
+        C CLASSIPI
+        C PEDIDOCLI
+        N ANTIGO
+        D PPAPPREV
+        D PPAPDATA
+        D GP11PREV
+        D GP11DATA
+        D ADTODATA
+        N ADTOVALOR
+        C OBS2
+        C TIPO
+        D NFPGVCTO
+    }
+```
 
 ---
 ## Tabela DBF: `ferram`
@@ -395,6 +627,98 @@
 - Tag: `FERRAM2` Expressao: `GRUPO`
 - Tag: `FERRAM3` Expressao: `NUMERO`
 
+```mermaid
+erDiagram
+    ferram {
+        C FERRAM
+        C GRUPO
+        N NUMERO
+        C NOME
+        N CLIENTE
+        C COGCLI
+        C SITUACAO
+        C OBS
+        D DATAATV
+        D DATADES
+        D DATADEV
+        D DATAOUT
+        C CLASSE
+        N QTDEBASE
+        N QTDESALDO
+        N QTDEPED
+        N QTDEURG
+        D DATASALDO
+        D DATAPED
+        D DATAURG
+        C TIPOFER
+        N QTDETOT
+        N HRBAS
+        N HRTOT
+        N HRPRE
+        N HRURG
+        N HRSAL
+        D DATHPED
+        D DATHURG
+        D DATHSAL
+        C PREVER
+        N VDBAS
+        N VDPRE
+        N VDURG
+        D VDDPRE
+        D VDDURG
+        N VDHBAS
+        N VDHPRE
+        N VDHURG
+        D VDHDPRE
+        D VDHDURG
+        C PROPRIA
+        C NAEMPRESA
+        N VISUALNUM
+        C VISUALNOM
+        C VISUALOBS
+        N MEDA
+        N MEDB
+        N MEDC
+        N MEDD
+        N MEDH
+        N PESO
+        C CONTABIL
+        C CODMP01
+        C PECA
+        N SEQ
+        N SSQ
+        C OPERN
+        C PECAN
+        C PRENSA
+        C PRENSAN
+        C ALTURA
+        C ALMOFADA
+        C PINOS
+        C MATCOD
+        C MATNOM
+        C LARG
+        C ESPMAT
+        C PASSOFER
+        C PECAROL
+        C PRATILE
+        C USADEMI
+        C USADISP
+        C OBST01
+        D DATAT
+        C ESQTIP
+        C ESQL01
+        C ESQL02
+        C ESQL03
+        C ESQL04
+        C ESQL05
+        C ESQL06
+        C ESQL07
+        C ESQL08
+        N MEDIARO
+        N PF
+    }
+```
+
 ---
 ## Tabela DBF: `ferrami`
 > **Origem:** `ferrami` (Driver: DBFCDX)
@@ -407,6 +731,15 @@
 
 **Indices vinculados:**
 - Tag: `FERRAMI` Expressao: `FERRAM`
+
+```mermaid
+erDiagram
+    ferrami {
+        C FERRAM
+        N ITEM
+        C LIN01
+    }
+```
 
 ---
 ## Tabela DBF: `lvf`
@@ -435,6 +768,29 @@
 **Indices vinculados:**
 - Tag: `LVF` Expressao: `LVF`
 
+```mermaid
+erDiagram
+    lvf {
+        N LVF
+        C FERRAM
+        C AREA
+        C DESCRI
+        C ACESSOR
+        C NOME
+        N CLIENTE
+        C CLINOME
+        D DATA
+        N TECNICO
+        C TECNOME
+        C OBS01
+        C OBS02
+        C OBS03
+        C OBS04
+        C OBS05
+        N RO
+    }
+```
+
 ---
 ## Tabela DBF: `lvfi`
 > **Origem:** `lvfi` (Driver: DBFCDX)
@@ -450,6 +806,17 @@
 **Indices vinculados:**
 - Tag: `LVFI` Expressao: `LVF`
 
+```mermaid
+erDiagram
+    lvfi {
+        N LVF
+        N ITEM
+        C DESCRI
+        C OPER01
+        C OPER02
+    }
+```
+
 ---
 ## Tabela DBF: `lvfp`
 > **Origem:** `lvfp` (Driver: DBFCDX)
@@ -462,6 +829,15 @@
 
 **Indices vinculados:**
 - Tag: `LVFP` Expressao: `ITEM`
+
+```mermaid
+erDiagram
+    lvfp {
+        N ITEM
+        C DESCRI
+        C GRUPO
+    }
+```
 
 ---
 ## Tabela DBF: `lvm`
@@ -491,6 +867,30 @@
 **Indices vinculados:**
 - Tag: `LVM` Expressao: `LVM`
 
+```mermaid
+erDiagram
+    lvm {
+        N LVM
+        C NUMERO
+        C NOME
+        D DATA
+        C SETOR
+        C ACESSOR
+        C CONTABIL
+        C FABRICANTE
+        C MODELO
+        N TECNICO
+        C TECNOME
+        C OBS01
+        C OBS02
+        C OBS03
+        C OBS04
+        C OBS05
+        N RO
+        N HORAS
+    }
+```
+
 ---
 ## Tabela DBF: `lvmi`
 > **Origem:** `lvmi` (Driver: DBFCDX)
@@ -507,6 +907,18 @@
 **Indices vinculados:**
 - Tag: `LVMI` Expressao: `LVM`
 
+```mermaid
+erDiagram
+    lvmi {
+        N LVM
+        N ITEM
+        C DESCRI
+        C OPER01
+        C OPER02
+        C OPER03
+    }
+```
+
 ---
 ## Tabela DBF: `lvmp`
 > **Origem:** `lvmp` (Driver: DBFCDX)
@@ -519,6 +931,15 @@
 
 **Indices vinculados:**
 - Tag: `LVMP` Expressao: `STR(ITEM,2)+GRUPO`
+
+```mermaid
+erDiagram
+    lvmp {
+        N ITEM
+        C DESCRI
+        C GRUPO
+    }
+```
 
 ---
 ## Tabela DBF: `mapu`
@@ -537,6 +958,19 @@
 **Indices vinculados:**
 - Tag: `MAPU` Expressao: `SEQ`
 
+```mermaid
+erDiagram
+    mapu {
+        N SEQ
+        D DINI
+        D DFIM
+        L APURADO
+        L PCPLIB
+        N PCPNUM
+        D PCPDAT
+    }
+```
+
 ---
 ## Tabela DBF: `mapubai`
 > **Origem:** `mapubai` (Driver: DBFCDX)
@@ -551,6 +985,16 @@
 **Indices vinculados:**
 - Tag: `MAPUBAI` Expressao: `STR(SEQ,3)+FERRAM`
 
+```mermaid
+erDiagram
+    mapubai {
+        N SEQ
+        C FERRAM
+        N QTDE
+        N HORAS
+    }
+```
+
 ---
 ## Tabela DBF: `mapui`
 > **Origem:** `mapui` (Driver: DBFCDX)
@@ -564,6 +1008,16 @@
 
 **Indices vinculados:**
 - Tag: `MUPUI` Expressao: `SEQ`
+
+```mermaid
+erDiagram
+    mapui {
+        N SEQ
+        C FERRAM
+        N QTDE
+        N HORAS
+    }
+```
 
 ---
 ## Tabela DBF: `me01cr`
@@ -582,6 +1036,19 @@
 **Indices vinculados:**
 - Tag: `ME01CR` Expressao: `CODIGO+DTOS(PROGRAMA)`
 
+```mermaid
+erDiagram
+    me01cr {
+        C CODIGO
+        C NOME
+        D PROGRAMA
+        D EFETUADA
+        N LVM
+        N ANO
+        C CANO
+    }
+```
+
 ---
 ## Tabela DBF: `rl`
 > **Origem:** `rl` (Driver: DBFCDX)
@@ -593,6 +1060,14 @@
 
 **Indices vinculados:**
 - Tag: `RL` Expressao: `RL`
+
+```mermaid
+erDiagram
+    rl {
+        N RL
+        D DATA
+    }
+```
 
 ---
 ## Tabela DBF: `rli`
@@ -610,6 +1085,19 @@
 
 **Indices vinculados:**
 - Tag: `RL` Expressao: `RL`
+
+```mermaid
+erDiagram
+    rli {
+        N RL
+        C CODME01
+        C LUB01
+        C LUB02
+        C LUB03
+        C LUB04
+        C LUB05
+    }
+```
 
 ---
 ## Tabela DBF: `ro`
@@ -675,6 +1163,62 @@
 - Tag: `RO-4` Expressao: `TIPO+FERRAM+DTOS(DATAINI)`
 - Tag: `RO-5` Expressao: `TIPO+FERRAM+DTOS(DATAFIM)`
 
+```mermaid
+erDiagram
+    ro {
+        N RO
+        C AREA
+        C DESCRI
+        C FERRAM
+        C NOME
+        D DATA
+        N TECNICO
+        C TECNOME
+        N HORA
+        C TIPO
+        C TIPORO
+        C DEFEITO
+        C DEFEIT2
+        C DEFEIT3
+        C SOLUCAO
+        C SOLUCA2
+        C SOLUCA3
+        C SOLUCA4
+        N SM
+        N QTDESALDO
+        N QTDEPED
+        N QTDEURG
+        D DATASALDO
+        D DATAPED
+        D DATAURG
+        N CLIENTE
+        C CLINOME
+        L CONCLUIDA
+        N QTDETOT
+        N HRBAS
+        N HRTOT
+        N HRPRE
+        N HRURG
+        N HRSAL
+        D DATHPED
+        D DATHURG
+        D DATHSAL
+        N REQNUM
+        C REQNOME
+        N ZERO
+        D DATAPAR
+        N HORAPAR
+        N HORAINI
+        N HORAFIM
+        D DATAINI
+        D DATAFIM
+        N HORAPINI
+        N DIASANT
+        N DIASPAI
+        N DIASAVO
+    }
+```
+
 ---
 ## Tabela DBF: `roapud`
 > **Origem:** `roapud` (Driver: DBFCDX)
@@ -683,6 +1227,14 @@
 | :--- | :--- | :--- | :--- |
 | DIAINI | D | 8 | 0 |
 | DIAFIM | D | 8 | 0 |
+
+```mermaid
+erDiagram
+    roapud {
+        D DIAINI
+        D DIAFIM
+    }
+```
 
 ---
 ## Tabela DBF: `roi`
@@ -696,6 +1248,15 @@
 
 **Indices vinculados:**
 - Tag: `ROI` Expressao: `RO`
+
+```mermaid
+erDiagram
+    roi {
+        N RO
+        C CODIGO
+        N QTDE
+    }
+```
 
 ---
 ## Tabela DBF: `sm`
@@ -723,5 +1284,28 @@
 
 **Indices vinculados:**
 - Tag: `SM` Expressao: `SM`
+
+```mermaid
+erDiagram
+    sm {
+        N SM
+        D DATA
+        C TIPO
+        C CODIGO
+        C NOME
+        N CLIENTE
+        C CLINOME
+        C DEF01
+        C DEF02
+        D DATAPP
+        C PRIOR
+        N RO
+        L CONCLUIDA
+        N REQNUM
+        C REQNOME
+        N HORAPINI
+        D DATAPAR
+    }
+```
 
 ---

@@ -1,5 +1,5 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 02/08/2026
+> Varredura automatica realizada em: 09/09/2026
 
 ## Tabela DBF: `agenda`
 > **Origem:** `agenda` (Driver: DBFCDX)
@@ -15,6 +15,21 @@
 | OBS6 | C | 60 | 0 |
 | OBS7 | C | 60 | 0 |
 | OBS8 | C | 60 | 0 |
+
+```mermaid
+erDiagram
+    agenda {
+        D CDDATA
+        C OBS1
+        C OBS2
+        C OBS3
+        C OBS4
+        C OBS5
+        C OBS6
+        C OBS7
+        C OBS8
+    }
+```
 
 ---
 ## Tabela DBF: `apucfo`
@@ -36,6 +51,22 @@
 **Indices vinculados:**
 - Tag: `APUCFO` Expressao: `CFO+SUBCFO`
 - Tag: `APUCFO-2` Expressao: `CFONEW`
+
+```mermaid
+erDiagram
+    apucfo {
+        C CFO
+        C CFONEW
+        C SUBCFO
+        C DESCRICAO
+        N CONTABIL
+        N BASE
+        N VALOR
+        N ISENTA
+        N OUTRA
+        N OBS
+    }
+```
 
 ---
 ## Tabela DBF: `apucfouf`
@@ -61,6 +92,24 @@
 - Tag: `APUCFOU2` Expressao: `CFONEW+UF`
 - Tag: `APUCFOU3` Expressao: `CFONEW+UFGIA`
 
+```mermaid
+erDiagram
+    apucfouf {
+        C CFO
+        C CFONEW
+        C SUBCFO
+        C UF
+        C DESCRICAO
+        N CONTABIL
+        N BASE
+        N VALOR
+        N ISENTA
+        N OUTRA
+        N OBS
+        C UFGIA
+    }
+```
+
 ---
 ## Tabela DBF: `apucfozf`
 > **Origem:** `apucfozf` (Driver: DBFCDX)
@@ -76,6 +125,17 @@
 **Indices vinculados:**
 - Tag: `APUCFOZF` Expressao: `NF`
 
+```mermaid
+erDiagram
+    apucfozf {
+        N NF
+        D DATA
+        N VALOR
+        C CNPJ
+        C CODMUN
+    }
+```
+
 ---
 ## Tabela DBF: `apuita`
 > **Origem:** `apuita` (Driver: DBFCDX)
@@ -88,6 +148,15 @@
 
 **Indices vinculados:**
 - Tag: `APUITA` Expressao: `STR(ANO,4)+STR(MES,2)`
+
+```mermaid
+erDiagram
+    apuita {
+        N MES
+        N ANO
+        N SALDO
+    }
+```
 
 ---
 ## Tabela DBF: `apura`
@@ -117,6 +186,31 @@
 
 **Indices vinculados:**
 - Tag: `APURA-1` Expressao: `COGNOME`
+
+```mermaid
+erDiagram
+    apura {
+        N FORNECEDO
+        C COGNOME
+        C GRUPOEMP
+        N PROD
+        N FERRA
+        N MOPROD
+        N MOFERRA
+        N SERV
+        N TOTALMER
+        N PORCENTO
+        N TOTAL
+        N MES
+        N PROD2
+        N FERRA2
+        N MOPROD2
+        N MOFERRA2
+        N SERV2
+        N TOTDEV
+        N TOTDEVNF
+    }
+```
 
 ---
 ## Tabela DBF: `apura2`
@@ -151,6 +245,34 @@
 - Tag: `APURA2-1` Expressao: `TOTAL`
 - Tag: `APURA2-2` Expressao: `GRUPOEMP`
 
+```mermaid
+erDiagram
+    apura2 {
+        N FORNECEDO
+        C COGNOME
+        C GRUPOEMP
+        N PROD
+        N FERRA
+        N MOPROD
+        N MOFERRA
+        N SERV
+        N TOTALMER
+        N PORCENTO
+        N TOTAL
+        N MES
+        N PROD2
+        N FERRA2
+        N MOPROD2
+        N MOFERRA2
+        N SERV2
+        N TOTDEV
+        N TOTDEVNF
+        N ABADEV
+        N ABA
+        N DEV
+    }
+```
+
 ---
 ## Tabela DBF: `apura2c`
 > **Origem:** `apura2c` (Driver: DBFCDX)
@@ -182,6 +304,34 @@
 
 **Indices vinculados:**
 - Tag: `APURA2C1` Expressao: `TOTAL`
+
+```mermaid
+erDiagram
+    apura2c {
+        N FORNECEDO
+        C COGNOME
+        C GRUPOEMP
+        N PROD
+        N FERRA
+        N MOPROD
+        N MOFERRA
+        N SERV
+        N TOTALMER
+        N PORCENTO
+        N TOTAL
+        N MES
+        N PROD2
+        N FERRA2
+        N MOPROD2
+        N MOFERRA2
+        N SERV2
+        N TOTDEV
+        N TOTDEVNF
+        N ABADEV
+        N ABA
+        N DEV
+    }
+```
 
 ---
 ## Tabela DBF: `apura5`
@@ -218,6 +368,33 @@
 - Tag: `APURA5-4` Expressao: `PERLUC`
 - Tag: `APURA5-5` Expressao: `DIFLUC`
 
+```mermaid
+erDiagram
+    apura5 {
+        N CLIENTE
+        C COGCLI
+        C GRUPO
+        C CODIGO
+        C NOME
+        N ICM
+        N PARTI
+        N PPLAN
+        C PPLANL
+        N PPCAL
+        N QTDDE
+        N VALORMER
+        N VALORTOT
+        N PRECOM
+        N PERCLI
+        N PERLUC
+        N VALLUC
+        N DIFLUC
+        C SUBGER
+        N CLITOTPER
+        N CLITOTVAL
+    }
+```
+
 ---
 ## Tabela DBF: `apura5a`
 > **Origem:** `apura5a` (Driver: DBFCDX)
@@ -237,6 +414,22 @@
 
 **Indices vinculados:**
 - Tag: `APURA5A1` Expressao: `CLIENTE`
+
+```mermaid
+erDiagram
+    apura5a {
+        N CLIENTE
+        C COGCLI
+        N VALORTOT
+        N PERCLI
+        N PERPRO
+        N INTPERC
+        C TGRUPO
+        L LEXPORTA
+        N VALOREXP
+        C SUBGER
+    }
+```
 
 ---
 ## Tabela DBF: `apura5b`
@@ -259,6 +452,26 @@
 | INTCLI | N | 8 | 0 |
 | JUNTO | C | 40 | 0 |
 
+```mermaid
+erDiagram
+    apura5b {
+        N CLIENTE
+        C COGCLI
+        C CODIGO
+        C NOME
+        N PARTI
+        N PPLAN
+        N QTDDE
+        N VALORMER
+        N VALORTOT
+        N PRECOM
+        N PERCLI
+        N INTCOM
+        N INTCLI
+        C JUNTO
+    }
+```
+
 ---
 ## Tabela DBF: `apura5d`
 > **Origem:** `apura5d` (Driver: DBFCDX)
@@ -268,6 +481,15 @@
 | JUNTO | C | 40 | 0 |
 | PERLUC | N | 6 | 2 |
 | INTPER | N | 6 | 0 |
+
+```mermaid
+erDiagram
+    apura5d {
+        C JUNTO
+        N PERLUC
+        N INTPER
+    }
+```
 
 ---
 ## Tabela DBF: `apuser`
@@ -284,6 +506,17 @@
 **Indices vinculados:**
 - Tag: `APUSER` Expressao: `STR(CLIENTE,8)+STR(ANO,4)+STR(MES,2)`
 - Tag: `APUSER-2` Expressao: `STR(ANO,4)+STR(MES,2)+STR(CLIENTE,8)`
+
+```mermaid
+erDiagram
+    apuser {
+        N CLIENTE
+        N ANO
+        N MES
+        N VALOR
+        C SEMNOTA
+    }
+```
 
 ---
 ## Tabela DBF: `cnab400r`
@@ -327,6 +560,44 @@
 **Indices vinculados:**
 - Tag: `CNAB400R` Expressao: `SEQARQ`
 
+```mermaid
+erDiagram
+    cnab400r {
+        C TITEMP
+        C TITBAN
+        C CODREG
+        C INDOPE
+        C CODCAR
+        C CODOCO
+        D DATAOCO
+        C SEUNUM
+        D DATAVEN
+        N VALTIT
+        C CODBCO
+        C AGCBCO
+        C ESPTIT
+        N VALDEP
+        N VALIOF
+        N VALABT
+        N VALDES
+        N VALPAG
+        N VALJUR
+        N VALMUL
+        C CODMOD
+        D CREDATA
+        N SEQARQ
+        N VALDEPOUT
+        N VALJURATR
+        C MOTPRO
+        C MOTREG01
+        C MOTREG02
+        C MOTREG03
+        C MOTREG04
+        C MOTREG05
+        D LIQDATA
+    }
+```
+
 ---
 ## Tabela DBF: `dipam`
 > **Origem:** `dipam` (Driver: DBFCDX)
@@ -344,6 +615,17 @@
 - Tag: `DIPAM-2` Expressao: `STR(VALORMER,12,2)`
 - Tag: `DIPAM-3` Expressao: `CLASSIPI+NOME`
 
+```mermaid
+erDiagram
+    dipam {
+        N FORNECEDO
+        C CODIGO
+        C CLASSIPI
+        N VALORMER
+        C NOME
+    }
+```
+
 ---
 ## Tabela DBF: `dipam2`
 > **Origem:** `dipam2` (Driver: DBFCDX)
@@ -355,6 +637,14 @@
 
 **Indices vinculados:**
 - Tag: `DIPAM2-1` Expressao: `VALORMER`
+
+```mermaid
+erDiagram
+    dipam2 {
+        N FORNECEDO
+        N VALORMER
+    }
+```
 
 ---
 ## Tabela DBF: `dipam3`
@@ -368,6 +658,15 @@
 
 **Indices vinculados:**
 - Tag: `DIPAM3` Expressao: `VALORMER`
+
+```mermaid
+erDiagram
+    dipam3 {
+        C CLASSIPI
+        N VALORMER
+        C NOME
+    }
+```
 
 ---
 ## Tabela DBF: `eti`
@@ -401,6 +700,33 @@
 - Tag: `ETI` Expressao: `CODIGO`
 - Tag: `ETI-2` Expressao: `NOME`
 
+```mermaid
+erDiagram
+    eti {
+        C CODIGO
+        C NOME
+        C NOM2
+        C CAMADA
+        C SALTO
+        C ESPE
+        C SUPE
+        N CCM
+        N ULTPRC
+        C ULTUND
+        D ULTDATA
+        N REDICM
+        N REV
+        D REVDATA
+        N VALOR
+        N CUSTF
+        C CODMW
+        N LEADTIME
+        C COGNOME
+        C PISCON
+        N NINTERNO
+    }
+```
+
 ---
 ## Tabela DBF: `fo_chis`
 > **Origem:** `fo_chis` (Driver: DBFCDX)
@@ -417,6 +743,18 @@
 **Indices vinculados:**
 - Tag: `FO_CHIS` Expressao: `NUMERO`
 - Tag: `FO_CHI2` Expressao: `NOME`
+
+```mermaid
+erDiagram
+    fo_chis {
+        N NUMERO
+        C NOME
+        D ADMISSAO
+        D DEMISSAO
+        C ARQUIVO
+        C OBS
+    }
+```
 
 ---
 ## Tabela DBF: `irrf`
@@ -440,6 +778,27 @@
 | V611 | N | 12 | 2 |
 | V602 | N | 12 | 2 |
 
+```mermaid
+erDiagram
+    irrf {
+        C CPF
+        C NOME
+        N V401
+        N V402
+        N V403
+        N V404
+        N V405
+        N V501
+        N V502
+        N V503
+        N V504
+        N V605
+        N V606
+        N V611
+        N V602
+    }
+```
+
 ---
 ## Tabela DBF: `irrf01`
 > **Origem:** `irrf01` (Driver: DBFCDX)
@@ -462,6 +821,27 @@
 | TELEFONE | C | 9 | 0 |
 | CONTATO | C | 12 | 0 |
 
+```mermaid
+erDiagram
+    irrf01 {
+        N NUMERO
+        C DARF
+        C DOCUMENTO
+        N ANO
+        C CGC
+        C PESSOA
+        C NOME
+        C ENDERECO
+        C CIDADE
+        C ESTADO
+        C BAIRRO
+        C CEP
+        C DDD
+        C TELEFONE
+        C CONTATO
+    }
+```
+
 ---
 ## Tabela DBF: `irrf02`
 > **Origem:** `irrf02` (Driver: DBFCDX)
@@ -476,6 +856,20 @@
 | RENDA | N | 12 | 2 |
 | ALIQUOTA | N | 5 | 2 |
 | IRRF | N | 8 | 2 |
+
+```mermaid
+erDiagram
+    irrf02 {
+        N NUMERO
+        N ITEM
+        N MES
+        C DARF
+        C NATUREZA
+        N RENDA
+        N ALIQUOTA
+        N IRRF
+    }
+```
 
 ---
 ## Tabela DBF: `ma01`
@@ -602,6 +996,120 @@
 - Tag: `MA01-7` Expressao: `CNUMERO`
 - Tag: `MA01-8` Expressao: `CODIGOINT`
 
+```mermaid
+erDiagram
+    ma01 {
+        N NUMERO
+        C CNUMERO
+        C COGNOME
+        C NOME
+        C ENDERECO
+        C BAIRRO
+        C CIDADE
+        C ESTADO
+        C CEP
+        C CXPOSTAL
+        C DDD
+        C TELEFONE
+        C RAMAL
+        C CONTATO
+        C DDD1
+        C TELEFONE1
+        C RAMAL1
+        C CONTATO1
+        C DDDFAX
+        C TELEFAX
+        C CGC
+        C INSCR
+        C VENDEDOR
+        C CODIGO
+        N TRANSPORTE
+        C ZONA
+        C ENDERECO2
+        C BAIRRO2
+        C CIDADE2
+        C ESTADO2
+        C CEP2
+        C DDD2
+        C TELEFONE2
+        C RAMAL2
+        C CONTATO2
+        C DDDFAX2
+        C TELEFAX2
+        C CONDPAG
+        C TIPOCOB
+        C CONCEITO
+        N LIMITE
+        N LIMITEACU
+        C NOME3
+        C ENDERECO3
+        C BAIRRO3
+        C CIDADE3
+        C ESTADO3
+        C CEP3
+        C DDD3
+        C TELEFONE3
+        C RAMAL3
+        C CONTATO3
+        C DDDFAX3
+        C TELEFAX3
+        C CGC3
+        C INSCR3
+        N TOTDEV
+        C RAMO
+        D DTCAD
+        D DT1COM
+        N VL1CRU
+        N VL1DOL
+        D DTMCOM
+        N VLMCRU
+        N VLMDOL
+        D DTUCOM
+        N VLUCRU
+        N VLUDOL
+        N DIAATRA
+        N VLACRU
+        N VLADOL
+        C PESSOA
+        C CTACONTB
+        C ZONAROT
+        N ZONASEQ
+        N KM
+        C CONDCONC
+        C GRUPOEMP
+        C CODCONC
+        C COMPRADOR
+        N LUCRO
+        C TABCOB
+        C TABESP
+        C DOCA
+        C PLANTA
+        C SISCO
+        N MO02LISTA
+        C CONTACRE
+        C CONTADEB
+        N CONTRCRE
+        N CONTRDEB
+        C TIPOGER
+        C SUBGER
+        C PADHIS
+        C GERAAE
+        C TEMICMS
+        C TEMIPI
+        C IMUNICIPI
+        C CGCCOMP
+        C CLICOMP
+        C CLIENTR
+        C ATIVO
+        N BCOCOB
+        C TEMPISFIN
+        C EMAIL
+        C CODIGOINT
+        C CNAE
+        C SUFRAMA
+    }
+```
+
 ---
 ## Tabela DBF: `mala`
 > **Origem:** `mala` (Driver: DBFCDX)
@@ -626,6 +1134,29 @@
 | IMPRIME | C | 1 | 0 |
 | OBS | M | 10 | 0 |
 
+```mermaid
+erDiagram
+    mala {
+        N NUMERO
+        C NOME
+        C ENDLOG
+        C ENDRUA
+        C ENDNUM
+        C ENDERECO
+        C BAIRRO
+        C CIDADE
+        C ESTADO
+        C CEP
+        C DDD
+        C TELEFONE
+        C RAMAL
+        D DATACONTAT
+        C CONTATO
+        C IMPRIME
+        M OBS
+    }
+```
+
 ---
 ## Tabela DBF: `malaconf`
 > **Origem:** `malaconf` (Driver: DBFCDX)
@@ -635,6 +1166,15 @@
 | CODIGO | N | 8 | 0 |
 | DESCRICAO | C | 60 | 0 |
 | DBF | C | 8 | 0 |
+
+```mermaid
+erDiagram
+    malaconf {
+        N CODIGO
+        C DESCRICAO
+        C DBF
+    }
+```
 
 ---
 ## Tabela DBF: `manerr`
@@ -648,6 +1188,18 @@
 | ERRO | C | 40 | 0 |
 | OPR | C | 3 | 0 |
 | ARQUIVO | C | 8 | 0 |
+
+```mermaid
+erDiagram
+    manerr {
+        C USUARIO
+        D DATA
+        C HORA
+        C ERRO
+        C OPR
+        C ARQUIVO
+    }
+```
 
 ---
 ## Tabela DBF: `manivers`
@@ -663,6 +1215,16 @@
 **Indices vinculados:**
 - Tag: `MANIVER1` Expressao: `NOME`
 - Tag: `MANIVER2` Expressao: `STR(DAY(DATA))+STR(MONTH(DATA))`
+
+```mermaid
+erDiagram
+    manivers {
+        C NOME
+        C APELIDO
+        D DATA
+        C FIRMA
+    }
+```
 
 ---
 ## Tabela DBF: `mb01`
@@ -736,6 +1298,71 @@
 - Tag: `MB01-3` Expressao: `CGC`
 - Tag: `MB01-4` Expressao: `NOME`
 
+```mermaid
+erDiagram
+    mb01 {
+        C COGNOME
+        C NOME
+        C ENDERECO
+        C BAIRRO
+        C CIDADE
+        C ESTADO
+        C CEP
+        C DDD
+        C TELEFONE
+        C RAMAL
+        C CONTATO
+        C DDDFAX
+        C TELEFAX
+        C CGC
+        C IESTADUAL
+        C DDD1
+        C TELEFONE1
+        C RAMAL1
+        C CONTATO1
+        C NOMEMAT
+        C PESSOA
+        C CODMAT
+        C CTACONTB
+        C CONDPAG
+        C VENDEDOR
+        C BANCO
+        C AGENCIA
+        C CONTA
+        C CONCEITO
+        C QUALIFI
+        C ZONA
+        C TIPPAG
+        C SITE
+        C EMAIL
+        C RESPF
+        C CARGOR
+        C CONTACRE
+        C CONTADEB
+        N CONTRCRE
+        N CONTRDEB
+        C DDDPCP
+        C TELPCP
+        C RAMPCP
+        C CONPCP
+        C DDDFAXPCP
+        C TELFAXPCP
+        C EMAILPCP
+        C PADHIS
+        C RESPPCP
+        C CARGOPCP
+        N NUMERO
+        C IMUNICIPI
+        C NFSESP
+        C NFSCOD
+        C NFSSER
+        C SUBRAMO
+        C CODIGOINT
+        C CNAE
+        C SUFRAMA
+    }
+```
+
 ---
 ## Tabela DBF: `mc01`
 > **Origem:** `mc01` (Driver: DBFCDX)
@@ -781,6 +1408,47 @@
 **Indices vinculados:**
 - Tag: `MC01-1` Expressao: `NUMERO`
 
+```mermaid
+erDiagram
+    mc01 {
+        C NUMERO
+        C COGNOME
+        C NOME
+        C ENDERECO
+        C BAIRRO
+        C CIDADE
+        C ESTADO
+        C CEP
+        C DDD
+        C TELEFONE
+        C RAMAL
+        C CONTATO
+        C DDD1
+        C TELEFONE1
+        C RAMAL1
+        C CONTATO1
+        C CELULAR
+        C DDDFAX
+        C TELEFAX
+        C CGC
+        C IESTADUAL
+        C OBSERVA
+        C ZONA
+        D DATANASC
+        C PESSOA
+        N PORCOMIS
+        N COTA
+        C BANCO
+        C AGENCIA
+        C CONTA
+        C DDDBIP
+        C TELBIP
+        C CODBIP
+        C VENGRU
+        C VENHIE
+    }
+```
+
 ---
 ## Tabela DBF: `mc01r`
 > **Origem:** `mc01r` (Driver: DBFCDX)
@@ -824,6 +1492,49 @@
 | SITE | C | 30 | 0 |
 | RESPF | C | 30 | 0 |
 | CARGOR | C | 30 | 0 |
+
+```mermaid
+erDiagram
+    mc01r {
+        N NUMERO
+        C NOME
+        C COGNOME
+        C ENDERECO
+        C BAIRRO
+        C CIDADE
+        C ESTADO
+        C CEP
+        C DDD
+        C TELEFONE
+        C RAMAL
+        C DDDFAX
+        C TELEFAX
+        C CGC
+        C IESTADUAL
+        C CONTATO
+        C DDD1
+        C TELEFONE1
+        C RAMAL1
+        C CONTATO1
+        C NOMEMAT
+        C PESSOA
+        C CODMAT
+        C CTACONTB
+        C CONDPAG
+        N BANCO
+        C AGENCIA
+        C CONTA
+        C CONCEITO
+        C QUALIFI
+        C TIPPAG
+        C VENDEDOR
+        C ZONA
+        C EMAIL
+        C SITE
+        C RESPF
+        C CARGOR
+    }
+```
 
 ---
 ## Tabela DBF: `mc02`
@@ -870,6 +1581,47 @@
 **Indices vinculados:**
 - Tag: `MC02-1` Expressao: `NUMERO`
 
+```mermaid
+erDiagram
+    mc02 {
+        C NUMERO
+        C COGNOME
+        C NOME
+        C ENDERECO
+        C BAIRRO
+        C CIDADE
+        C ESTADO
+        C CEP
+        C DDD
+        C TELEFONE
+        C RAMAL
+        C CONTATO
+        C DDD1
+        C TELEFONE1
+        C RAMAL1
+        C CONTATO1
+        C CELULAR
+        C DDDFAX
+        C TELEFAX
+        C CGC
+        C IESTADUAL
+        C OBSERVA
+        C ZONA
+        D DATANASC
+        C PESSOA
+        N PORCOMIS
+        N COTA
+        C BANCO
+        C AGENCIA
+        C CONTA
+        C DDDBIP
+        C TELBIP
+        C CODBIP
+        C VENGRU
+        C VENHIE
+    }
+```
+
 ---
 ## Tabela DBF: `mc03`
 > **Origem:** `mc03` (Driver: DBFCDX)
@@ -915,6 +1667,47 @@
 **Indices vinculados:**
 - Tag: `MC03-1` Expressao: `NUMERO`
 
+```mermaid
+erDiagram
+    mc03 {
+        C NUMERO
+        C COGNOME
+        C NOME
+        C ENDERECO
+        C BAIRRO
+        C CIDADE
+        C ESTADO
+        C CEP
+        C DDD
+        C TELEFONE
+        C RAMAL
+        C CONTATO
+        C DDD1
+        C TELEFONE1
+        C RAMAL1
+        C CONTATO1
+        C CELULAR
+        C DDDFAX
+        C TELEFAX
+        C CGC
+        C IESTADUAL
+        C OBSERVA
+        C ZONA
+        D DATANASC
+        C PESSOA
+        N PORCOMIS
+        N COTA
+        C BANCO
+        C AGENCIA
+        C CONTA
+        C DDDBIP
+        C TELBIP
+        C CODBIP
+        C VENGRU
+        C VENHIE
+    }
+```
+
 ---
 ## Tabela DBF: `mc04`
 > **Origem:** `mc04` (Driver: DBFCDX)
@@ -959,6 +1752,47 @@
 
 **Indices vinculados:**
 - Tag: `MC04-1` Expressao: `NUMERO`
+
+```mermaid
+erDiagram
+    mc04 {
+        C NUMERO
+        C COGNOME
+        C NOME
+        C ENDERECO
+        C BAIRRO
+        C CIDADE
+        C ESTADO
+        C CEP
+        C DDD
+        C TELEFONE
+        C RAMAL
+        C CONTATO
+        C DDD1
+        C TELEFONE1
+        C RAMAL1
+        C CONTATO1
+        C CELULAR
+        C DDDFAX
+        C TELEFAX
+        C CGC
+        C IESTADUAL
+        C OBSERVA
+        C ZONA
+        D DATANASC
+        C PESSOA
+        N PORCOMIS
+        N COTA
+        C BANCO
+        C AGENCIA
+        C CONTA
+        C DDDBIP
+        C TELBIP
+        C CODBIP
+        C VENGRU
+        C VENHIE
+    }
+```
 
 ---
 ## Tabela DBF: `mc05`
@@ -1006,6 +1840,48 @@
 **Indices vinculados:**
 - Tag: `MC05-1` Expressao: `NUMERO`
 
+```mermaid
+erDiagram
+    mc05 {
+        C NUMERO
+        C COGNOME
+        C NOME
+        C ENDERECO
+        C BAIRRO
+        C CIDADE
+        C ESTADO
+        C CEP
+        C DDD
+        C TELEFONE
+        C RAMAL
+        C CONTATO
+        C DDD1
+        C TELEFONE1
+        C RAMAL1
+        C CONTATO1
+        C CELULAR
+        C DDDFAX
+        C TELEFAX
+        C CGC
+        C IESTADUAL
+        C OBSERVA
+        C ZONA
+        D DATANASC
+        C PESSOA
+        N PORCOMIS
+        N COTA
+        C BANCO
+        C AGENCIA
+        C CONTA
+        C DDDBIP
+        C TELBIP
+        C CODBIP
+        C VENGRU
+        C VENHIE
+        C EMAIL
+    }
+```
+
 ---
 ## Tabela DBF: `mcarta`
 > **Origem:** `mcarta` (Driver: DBFCDX)
@@ -1021,6 +1897,21 @@
 | MARESQ | N | 2 | 0 |
 | MARCOL | N | 3 | 0 |
 | MARLIN | N | 2 | 0 |
+
+```mermaid
+erDiagram
+    mcarta {
+        C ARQUIVO
+        C NOME
+        C SETUP
+        N MARSUP
+        N MARINF
+        N MARDIR
+        N MARESQ
+        N MARCOL
+        N MARLIN
+    }
+```
 
 ---
 ## Tabela DBF: `mcopia`
@@ -1072,6 +1963,55 @@
 | ARQ39 | C | 12 | 0 |
 | ARQ40 | C | 12 | 0 |
 
+```mermaid
+erDiagram
+    mcopia {
+        C NOME
+        C DIRETORIO
+        C DESCRICAO
+        C ARQ01
+        C ARQ02
+        C ARQ03
+        C ARQ04
+        C ARQ05
+        C ARQ06
+        C ARQ07
+        C ARQ08
+        C ARQ09
+        C ARQ10
+        C ARQ11
+        C ARQ12
+        C ARQ13
+        C ARQ14
+        C ARQ15
+        C ARQ16
+        C ARQ17
+        C ARQ18
+        C ARQ19
+        C ARQ20
+        C ARQ21
+        C ARQ22
+        C ARQ23
+        C ARQ24
+        C ARQ25
+        C ARQ26
+        C ARQ27
+        C ARQ28
+        C ARQ29
+        C ARQ30
+        C ARQ31
+        C ARQ32
+        C ARQ33
+        C ARQ34
+        C ARQ35
+        C ARQ36
+        C ARQ37
+        C ARQ38
+        C ARQ39
+        C ARQ40
+    }
+```
+
 ---
 ## Tabela DBF: `md01`
 > **Origem:** `md01` (Driver: DBFCDX)
@@ -1085,6 +2025,16 @@
 
 **Indices vinculados:**
 - Tag: `MD01-1` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    md01 {
+        C CODIGO
+        C NOME
+        C TIPO
+        C GRUPO
+    }
+```
 
 ---
 ## Tabela DBF: `md02`
@@ -1110,6 +2060,23 @@
 - Tag: `MD02-3` Expressao: `CODIGO`
 - Tag: `MD02-4` Expressao: `CODIGO+DTOS(DATA)`
 
+```mermaid
+erDiagram
+    md02 {
+        C CODIGO
+        C CODIGO1
+        C DESCRICAO
+        D DATA
+        N VALOR
+        N VARIACAO
+        N ACUMULADO
+        N ACUMULANU
+        N ACUMUGERA
+        C CODIGO2
+        C CODIGO3
+    }
+```
+
 ---
 ## Tabela DBF: `md03`
 > **Origem:** `md03` (Driver: DBFCDX)
@@ -1130,6 +2097,21 @@
 - Tag: `MD03-1` Expressao: `CODIGO`
 - Tag: `MD03-2` Expressao: `CLASSIFIC`
 - Tag: `MD03-3` Expressao: `CLASSIFIC+CODIGO`
+
+```mermaid
+erDiagram
+    md03 {
+        C CODIGO
+        C CLASSIFIC
+        C DESCRICAO
+        N ALIQUOTA
+        N ALIQUOTAR
+        N ALIQUOTAI
+        C DSTA
+        C DIPIPI
+        C DIPICM
+    }
+```
 
 ---
 ## Tabela DBF: `md06`
@@ -1203,6 +2185,74 @@
 **Indices vinculados:**
 - Tag: `MD06-1` Expressao: `STR(MES)+STR(ANO)`
 
+```mermaid
+erDiagram
+    md06 {
+        N MES
+        N ANO
+        N FIN01
+        N FIN02
+        N FIN03
+        N FIN04
+        N FIN05
+        N FIN06
+        N FIN07
+        N FIN08
+        N FIN09
+        N FIN10
+        N FIN11
+        N FIN12
+        N FIN13
+        N FIN14
+        N FIN15
+        N FIN16
+        N FIN17
+        N FIN18
+        N FIN19
+        N FIN20
+        N FIN21
+        N FIN22
+        N FIN23
+        N FIN24
+        N FIN25
+        N FIN26
+        N FIN27
+        N FIN28
+        N FIN29
+        N FIN30
+        N FIN31
+        N FIN32
+        N FIN33
+        N FIN34
+        N FIN35
+        N FIN36
+        N FIN37
+        N FIN38
+        N FIN39
+        N FIN40
+        N FIN41
+        N FIN42
+        N FIN43
+        N FIN44
+        N FIN45
+        N FIN46
+        N FIN47
+        N FIN48
+        N FIN49
+        N FIN50
+        N FIN51
+        N FIN52
+        N FIN53
+        N FIN54
+        N FIN55
+        N FIN56
+        N FIN57
+        N FIN58
+        N FIN59
+        N FIN60
+    }
+```
+
 ---
 ## Tabela DBF: `md07`
 > **Origem:** `md07` (Driver: DBFCDX)
@@ -1215,6 +2265,15 @@
 
 **Indices vinculados:**
 - Tag: `MD07-1` Expressao: `UNIDADE`
+
+```mermaid
+erDiagram
+    md07 {
+        C UNIDADE
+        C UNIDDES
+        C UNIDDEC
+    }
+```
 
 ---
 ## Tabela DBF: `md08`
@@ -1257,6 +2316,43 @@
 **Indices vinculados:**
 - Tag: `MD08-1` Expressao: `SEDEXT+STR(KILO,2)`
 
+```mermaid
+erDiagram
+    md08 {
+        C SEDEXT
+        N KILO
+        N RJ
+        N SP
+        N MT
+        N RS
+        N AC
+        N AL
+        N AP
+        N AM
+        N BA
+        N CE
+        N DF
+        N ES
+        N GO
+        N MA
+        N MG
+        N MS
+        N PA
+        N PB
+        N PR
+        N PE
+        N PI
+        N RN
+        N RR
+        N RO
+        N SC
+        N SE
+        N TO
+        N XX
+        N FN
+    }
+```
+
 ---
 ## Tabela DBF: `md09`
 > **Origem:** `md09` (Driver: DBFCDX)
@@ -1269,6 +2365,14 @@
 **Indices vinculados:**
 - Tag: `MD09-1` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    md09 {
+        C CODIGO
+        C DESCRICAO
+    }
+```
+
 ---
 ## Tabela DBF: `mdchedev`
 > **Origem:** `mdchedev` (Driver: DBFCDX)
@@ -1277,6 +2381,14 @@
 | :--- | :--- | :--- | :--- |
 | CODIGO | C | 2 | 0 |
 | NOME | C | 255 | 0 |
+
+```mermaid
+erDiagram
+    mdchedev {
+        C CODIGO
+        C NOME
+    }
+```
 
 ---
 ## Tabela DBF: `mdmoeda`
@@ -1289,6 +2401,17 @@
 | PAIS | C | 3 | 0 |
 | PAISNOME | C | 35 | 0 |
 | SIMBOLO | C | 5 | 0 |
+
+```mermaid
+erDiagram
+    mdmoeda {
+        C CODIGO
+        C DESCRICAO
+        C PAIS
+        C PAISNOME
+        C SIMBOLO
+    }
+```
 
 ---
 ## Tabela DBF: `me01`
@@ -1397,6 +2520,107 @@
 - Tag: `ME01-2` Expressao: `NOME+MODELO`
 - Tag: `ME01-3` Expressao: `CODMP01+NUMERO`
 
+```mermaid
+erDiagram
+    me01 {
+        C NUMERO
+        C CONTABIL
+        C NOME
+        C LOCALIZA
+        C NUMFAB
+        C FABRICANTE
+        C MODELO
+        N MOTORCV
+        N KWH
+        C ESPECIFI
+        C ESPECIFI1
+        C ESPECIFI2
+        C ESPECIFI3
+        C ESPECIFI4
+        C ESPECIFI5
+        C ESPECIFI6
+        C SETOR
+        C TIPO
+        N QTDE
+        N ANO
+        N NRFORNE
+        C COGNOME
+        D DATA
+        N VALOR
+        C TABELA
+        N VALOR_CONV
+        N MESES
+        C OBSERVA
+        C GRUPO
+        C CHT
+        N CHM
+        N CHS
+        N CH1
+        N CH2
+        N CH3
+        N CH4
+        N CH5
+        N CH6
+        N CH7
+        C CODMP01
+        C ATIVA
+        C SETCOD
+        C APUEFI
+        C APLICACAO
+        C SITUACAO
+        D DATAATV
+        D DATADES
+        D DATADEV
+        D DATAOUT
+        N QTDEBASE
+        N QTDESALDO
+        N QTDEPED
+        N QTDEURG
+        D DATASALDO
+        D DATAPED
+        D DATAURG
+        N QTDETOT
+        N HRBAS
+        N HRTOT
+        N HRPRE
+        N HRURG
+        N HRSAL
+        D DATHPED
+        D DATHURG
+        D DATHSAL
+        C GRUPOUTL
+        C PREVER
+        L LUBRI
+        L LUB01
+        L LUB02
+        L LUB03
+        L LUB04
+        L LUB05
+        N VDBAS
+        N VDPRE
+        N VDURG
+        D VDDPRE
+        D VDDURG
+        N VDHBAS
+        N VDHPRE
+        N VDHURG
+        D VDHDPRE
+        D VDHDURG
+        C PROPRIA
+        C NAEMPRESA
+        N VISUALNUM
+        C VISUALNOM
+        C VISUALOBS
+        N MEDA
+        N MEDB
+        N MEDC
+        N MEDD
+        N MEDH
+        N PESO
+        N FEMEA
+    }
+```
+
 ---
 ## Tabela DBF: `me01inv`
 > **Origem:** `me01inv` (Driver: DBFCDX)
@@ -1410,6 +2634,16 @@
 
 **Indices vinculados:**
 - Tag: `ME01INV` Expressao: `CONTABIL`
+
+```mermaid
+erDiagram
+    me01inv {
+        C CONTABIL
+        C NOME
+        N NRFORNE
+        C COGNOME
+    }
+```
 
 ---
 ## Tabela DBF: `me02`
@@ -1426,6 +2660,16 @@
 - Tag: `ME02-1` Expressao: `NUMERO+STR(SEQ,3)`
 - Tag: `ME02-2` Expressao: `CODMP01+STR(SEQ,3)`
 
+```mermaid
+erDiagram
+    me02 {
+        C NUMERO
+        N SEQ
+        C CODMP01
+        C NOMMP01
+    }
+```
+
 ---
 ## Tabela DBF: `me03`
 > **Origem:** `me03` (Driver: DBFCDX)
@@ -1440,6 +2684,17 @@
 
 **Indices vinculados:**
 - Tag: `ME03-1` Expressao: `NUMERO+DTOS(DATA)`
+
+```mermaid
+erDiagram
+    me03 {
+        C NUMERO
+        D DATA
+        N ESTQINI
+        N ESTQSAI
+        N ESTQSAL
+    }
+```
 
 ---
 ## Tabela DBF: `me03a`
@@ -1459,6 +2714,21 @@
 
 **Indices vinculados:**
 - Tag: `ME03A-1` Expressao: `NUMERO+DTOS(DATA)+STR(OF,8,2)`
+
+```mermaid
+erDiagram
+    me03a {
+        C NUMERO
+        N OF
+        D DATA
+        N QTDDE
+        C CODMP01
+        C CODRES
+        N SEQ
+        N SSQ
+        N QTDPEC
+    }
+```
 
 ---
 ## Tabela DBF: `me04`
@@ -1497,6 +2767,42 @@
 | MATERIAL | C | 30 | 0 |
 | CARA | C | 50 | 0 |
 
+```mermaid
+erDiagram
+    me04 {
+        C CODIGO
+        C CADTIP
+        C TIPO
+        C MARCA
+        C CAPACI
+        C DIVI
+        C NOMTIPO
+        C CODTIPO
+        N CODFOR
+        C COGFOR
+        D COMPRA
+        N VALOR
+        C SITUACAO
+        D DATAUSO
+        D DATAFIM
+        C NORMA
+        C APLIC
+        C TIPCAL
+        N CALIBRAR
+        C ATIVO
+        C ERROADM
+        C OBS01
+        C OBS02
+        C OBS03
+        C MODELO
+        D CALULT
+        D CALPRO
+        C DIME
+        C MATERIAL
+        C CARA
+    }
+```
+
 ---
 ## Tabela DBF: `me04c`
 > **Origem:** `me04c` (Driver: DBFCDX)
@@ -1509,6 +2815,18 @@
 | CODFOR | N | 8 | 0 |
 | COGFOR | C | 12 | 0 |
 | CERTIFI | C | 10 | 0 |
+
+```mermaid
+erDiagram
+    me04c {
+        N OCC
+        C CODIGO
+        D DATA
+        N CODFOR
+        C COGFOR
+        C CERTIFI
+    }
+```
 
 ---
 ## Tabela DBF: `me04ci`
@@ -1523,6 +2841,19 @@
 | DESVIO | C | 10 | 0 |
 | INCTOT | C | 10 | 0 |
 | LAUDO | C | 2 | 0 |
+
+```mermaid
+erDiagram
+    me04ci {
+        N OCC
+        N ITEM
+        C ESPECI
+        C ENCTR
+        C DESVIO
+        C INCTOT
+        C LAUDO
+    }
+```
 
 ---
 ## Tabela DBF: `me04d`
@@ -1554,6 +2885,35 @@
 | RESPON | C | 30 | 0 |
 | DATAOCD | D | 8 | 0 |
 
+```mermaid
+erDiagram
+    me04d {
+        N OCD
+        C CODIGO
+        C MOTIVO
+        C OBS01
+        C OBS02
+        C OBS03
+        C INVALIDA
+        C VERIFI
+        C INSPECAO
+        C CODIGOS
+        C CLINOME
+        C NF
+        C ACLI01
+        C ACLI02
+        C INCIDE
+        C FREQ1
+        C FREQ2
+        C ACOR01
+        C ACOR02
+        C ACOR03
+        C ACOR04
+        C RESPON
+        D DATAOCD
+    }
+```
+
 ---
 ## Tabela DBF: `me04r`
 > **Origem:** `me04r` (Driver: DBFCDX)
@@ -1570,6 +2930,21 @@
 | SETOR | C | 3 | 0 |
 | AREA | C | 2 | 0 |
 
+```mermaid
+erDiagram
+    me04r {
+        N NUMERO
+        C CODIGO
+        N CODOPER
+        D SAIDA
+        N HORASAI
+        D DEVOLUCAO
+        N HORADEV
+        C SETOR
+        C AREA
+    }
+```
+
 ---
 ## Tabela DBF: `me05`
 > **Origem:** `me05` (Driver: DBFCDX)
@@ -1584,6 +2959,17 @@
 
 **Indices vinculados:**
 - Tag: `ME05-1` Expressao: `DDD+NUMERO`
+
+```mermaid
+erDiagram
+    me05 {
+        C DDD
+        C NUMERO
+        C TIPOT
+        C HEXA
+        C MODELO
+    }
+```
 
 ---
 ## Tabela DBF: `metiq`
@@ -1616,6 +3002,36 @@
 | CONFIL | C | 50 | 0 |
 | PFIL | C | 1 | 0 |
 
+```mermaid
+erDiagram
+    metiq {
+        C CODIGO
+        C NOME
+        C LINHA1
+        C LINHA2
+        C LINHA3
+        C LINHA4
+        C LINHA5
+        C LINHA6
+        C LINHA7
+        C LINHA8
+        N NLIN
+        N NCOL
+        N NCAR
+        C SETUP
+        C SETUPFIM
+        C ARQUIVO
+        N INDICE
+        C FILTRO
+        C ARQGRA
+        C PIND
+        N NIND
+        C TIPFIL
+        C CONFIL
+        C PFIL
+    }
+```
+
 ---
 ## Tabela DBF: `mf01`
 > **Origem:** `mf01` (Driver: DBFCDX)
@@ -1639,6 +3055,23 @@
 - Tag: `MF01-2` Expressao: `COGNOME`
 - Tag: `MF01-3` Expressao: `NOME`
 - Tag: `MF01-4` Expressao: `ISPB`
+
+```mermaid
+erDiagram
+    mf01 {
+        C NUMERO
+        C DIGITO
+        C COGNOME
+        C NOME
+        N BANCO
+        C CARTEIRA
+        C FLUXODIA
+        C SITE
+        C ISPB
+        C CNPJ
+        C NOMECOMP
+    }
+```
 
 ---
 ## Tabela DBF: `mf02`
@@ -1707,6 +3140,68 @@
 - Tag: `MF02-1` Expressao: `STR(NUMERO,5)+AGENCIA+CONTA`
 - Tag: `MF02-2` Expressao: `NRCONTA`
 
+```mermaid
+erDiagram
+    mf02 {
+        N NUMERO
+        C AGENCIA
+        C CONTA
+        N NRCONTA
+        C NOMEAG
+        C COGNAG
+        C ENDERECO
+        C BAIRRO
+        C CIDADE
+        C ESTADO
+        C CEP
+        C CXPOSTAL
+        C DDD
+        C TELEFONE
+        C RAMAL
+        C CONTATO
+        C DDD1
+        C TELEFONE1
+        C RAMAL1
+        C CONTATO1
+        C DDDFAX
+        C TELEFAX
+        C PESSOA
+        C CGC
+        C INSCR
+        C PRACA
+        C TITULAR1
+        C TITULAR2
+        C TIPOCTA
+        C XNDERECO1
+        C XAIRRO1
+        C XIDADE1
+        C XSTADO1
+        C XEP1
+        C XXPOSTAL1
+        C XDD1
+        C XELEFONE1
+        C XAMAL1
+        C XONTATO1
+        C XDF1
+        C XAX1
+        C XPF1
+        C XNDERECO2
+        C XAIRRO2
+        C XIDADE2
+        C XSTADO2
+        C XEP2
+        C XXPOSTAL2
+        C XDD2
+        C XELEFONE2
+        C XAMAL2
+        C XONTATO2
+        C XDF2
+        C XAX2
+        C XPF2
+        C DVAG
+    }
+```
+
 ---
 ## Tabela DBF: `mf03`
 > **Origem:** `mf03` (Driver: DBFCDX)
@@ -1749,6 +3244,44 @@
 **Indices vinculados:**
 - Tag: `MF03-1` Expressao: `STR(NUMERO,5)+AGENCIA+CONTA`
 
+```mermaid
+erDiagram
+    mf03 {
+        N NUMERO
+        C AGENCIA
+        C CONTA
+        C TITULAR1
+        C TITULAR2
+        C TIPOCTA
+        C ENDERECO1
+        C BAIRRO1
+        C CIDADE1
+        C ESTADO1
+        C CEP1
+        C CXPOSTAL1
+        C DDD1
+        C TELEFONE1
+        C RAMAL1
+        C CONTATO1
+        C DDF1
+        C FAX1
+        C CPF1
+        C ENDERECO2
+        C BAIRRO2
+        C CIDADE2
+        C ESTADO2
+        C CEP2
+        C CXPOSTAL2
+        C DDD2
+        C TELEFONE2
+        C RAMAL2
+        C CONTATO2
+        C DDF2
+        C FAX2
+        C CPF2
+    }
+```
+
 ---
 ## Tabela DBF: `mf04`
 > **Origem:** `mf04` (Driver: DBFCDX)
@@ -1770,6 +3303,24 @@
 
 **Indices vinculados:**
 - Tag: `MF04-1` Expressao: `STR(NUMERO,5)+PRACA`
+
+```mermaid
+erDiagram
+    mf04 {
+        N NUMERO
+        C PRACA
+        C NOMEPR
+        C CIDPRA
+        C ESTPRA
+        C AREA1
+        C AREA2
+        C AREA3
+        C AREA4
+        C AREA5
+        D FERIADO
+        C CEPPRA
+    }
+```
 
 ---
 ## Tabela DBF: `mf05`
@@ -1815,6 +3366,46 @@
 **Indices vinculados:**
 - Tag: `MF05-1` Expressao: `CARTAO`
 
+```mermaid
+erDiagram
+    mf05 {
+        C CARTAO
+        C NOME
+        N VENC
+        N LIMITENAC
+        N LIMITEINT
+        C TITULAR1
+        C TITULAR2
+        C TIPOCTA
+        C ENDERECO1
+        C BAIRRO1
+        C CIDADE1
+        C ESTADO1
+        C CEP1
+        C CXPOSTAL1
+        C DDD1
+        C TELEFONE1
+        C RAMAL1
+        C CONTATO1
+        C DDF1
+        C FAX1
+        C CPF1
+        C ENDERECO2
+        C BAIRRO2
+        C CIDADE2
+        C ESTADO2
+        C CEP2
+        C CXPOSTAL2
+        C DDD2
+        C TELEFONE2
+        C RAMAL2
+        C CONTATO2
+        C DDF2
+        C FAX2
+        C CPF2
+    }
+```
+
 ---
 ## Tabela DBF: `mf06`
 > **Origem:** `mf06` (Driver: DBFCDX)
@@ -1826,6 +3417,14 @@
 
 **Indices vinculados:**
 - Tag: `MF06-1` Expressao: `CONTA`
+
+```mermaid
+erDiagram
+    mf06 {
+        C CONTA
+        C NOME
+    }
+```
 
 ---
 ## Tabela DBF: `mg01`
@@ -1898,6 +3497,71 @@
 - Tag: `MG01-2` Expressao: `COGNOME`
 - Tag: `MG01-3` Expressao: `CGC`
 
+```mermaid
+erDiagram
+    mg01 {
+        C NUMERO
+        C COGNOME
+        C NOME
+        C ENDERECO
+        C BAIRRO
+        C CIDADE
+        C ESTADO
+        C CEP
+        C CXPOSTAL
+        C DDDTLX
+        C TELEX
+        C DDD
+        C TELEFONE
+        C RAMAL
+        C CONTATO
+        C DDD1
+        C TELEFONE1
+        C RAMAL1
+        C CONTATO1
+        C DDDFAX
+        C TELEFAX
+        C CGC
+        C INSCR
+        C JUCESP
+        C OBSERVA
+        C CODMAT
+        C MATERIAL
+        C NOMEMAT
+        N ZONA
+        C CLICAD
+        C CLIPRIN
+        C PESSOA
+        C CHAPA
+        C MOTORISTA
+        C IMUNI
+        D ADMITIDO
+        D DEMITIDO
+        N DEPENDE
+        N DEPTO
+        N SETOR
+        N SECAO
+        N SALJAN
+        N SALFEV
+        N SALMAR
+        N SALABR
+        N SALMAI
+        N SALJUN
+        N SALJUL
+        N SALAGO
+        N SALSET
+        N SALOUT
+        N SALNOV
+        N SALDEZ
+        N HRSEM
+        C TIPO
+        N FUNCAO
+        C TIPSER
+        C GRUPO
+        C SITUACAO
+    }
+```
+
 ---
 ## Tabela DBF: `mg02`
 > **Origem:** `mg02` (Driver: DBFCDX)
@@ -1917,6 +3581,22 @@
 
 **Indices vinculados:**
 - Tag: `MG02-1` Expressao: `NUMERO+CODEMP`
+
+```mermaid
+erDiagram
+    mg02 {
+        C NUMERO
+        C CHAPAF
+        C MOTORF
+        C OBS1
+        C CODEMP
+        C CNH
+        C CATCNH
+        D VALCNH
+        D EXPCNH
+        N KMINI
+    }
+```
 
 ---
 ## Tabela DBF: `mg03`
@@ -1957,6 +3637,41 @@
 **Indices vinculados:**
 - Tag: `MG03-1` Expressao: `NUMERO+CODFRO`
 
+```mermaid
+erDiagram
+    mg03 {
+        C NUMERO
+        C CODEMP
+        C CODFRO
+        C CHAPAF
+        C PROFRO
+        N ANOMOD
+        N ANOFRO
+        N KMINI
+        C CHASSI
+        C TIPFRO
+        C MARFRO
+        C MODFRO
+        C COMFRO
+        C RENAVAM
+        C CATFRO
+        C ESTFRO
+        C CIDIPVA
+        C CIDFRO
+        C ESPFRO
+        C CARFRO
+        N CODIPVA
+        C NOMPRO
+        C ENDPRO
+        C BAIPRO
+        C CIDPRO
+        C ESTPRO
+        C PESSOA
+        C CGC
+        C CEPPRO
+    }
+```
+
 ---
 ## Tabela DBF: `mg04`
 > **Origem:** `mg04` (Driver: DBFCDX)
@@ -1979,6 +3694,24 @@
 **Indices vinculados:**
 - Tag: `MG04-1` Expressao: `str(nummarca,8)+modelo`
 
+```mermaid
+erDiagram
+    mg04 {
+        N COD_IPVA
+        N TIPO
+        N FAIXA_IPVA
+        N LINHA
+        N COD_REF
+        C MARCA
+        C MODELO
+        C ORIGEM
+        N NUMMARCA
+        C CATEGORIA
+        N CAPACID
+        C CODFIPE
+    }
+```
+
 ---
 ## Tabela DBF: `mg05`
 > **Origem:** `mg05` (Driver: DBFCDX)
@@ -1991,6 +3724,14 @@
 **Indices vinculados:**
 - Tag: `MG05-1` Expressao: `NUMERO`
 - Tag: `MG05-2` Expressao: `NOME`
+
+```mermaid
+erDiagram
+    mg05 {
+        N NUMERO
+        C NOME
+    }
+```
 
 ---
 ## Tabela DBF: `mh01`
@@ -2011,6 +3752,20 @@
 - Tag: `MH01-1` Expressao: `NUMERO`
 - Tag: `MH01-2` Expressao: `COGNOME`
 
+```mermaid
+erDiagram
+    mh01 {
+        C NUMERO
+        C COGNOME
+        C LOCAL1
+        C LOCAL2
+        C LOCAL3
+        C LOCAL4
+        C LOCAL5
+        C LOCAL6
+    }
+```
+
 ---
 ## Tabela DBF: `mh02`
 > **Origem:** `mh02` (Driver: DBFCDX)
@@ -2030,6 +3785,20 @@
 - Tag: `MH02-1` Expressao: `NUMERO`
 - Tag: `MH02-2` Expressao: `COGNOME`
 
+```mermaid
+erDiagram
+    mh02 {
+        C NUMERO
+        C COGNOME
+        C LOCAL1
+        C LOCAL2
+        C LOCAL3
+        C LOCAL4
+        C LOCAL5
+        C LOCAL6
+    }
+```
+
 ---
 ## Tabela DBF: `mh03`
 > **Origem:** `mh03` (Driver: DBFCDX)
@@ -2048,6 +3817,20 @@
 **Indices vinculados:**
 - Tag: `MH03-1` Expressao: `NUMERO`
 - Tag: `MH03-2` Expressao: `COGNOME`
+
+```mermaid
+erDiagram
+    mh03 {
+        C NUMERO
+        C COGNOME
+        C LOCAL1
+        C LOCAL2
+        C LOCAL3
+        C LOCAL4
+        C LOCAL5
+        C LOCAL6
+    }
+```
 
 ---
 ## Tabela DBF: `mi01`
@@ -2104,6 +3887,56 @@
 - Tag: `MI01-1` Expressao: `CONTA`
 - Tag: `MI01-2` Expressao: `NUMERO`
 
+```mermaid
+erDiagram
+    mi01 {
+        C CONTA
+        N NIVEL
+        C TIPO
+        C NOME
+        N NUMERO
+        C IDENTIFICA
+        N DAC
+        N SAL01
+        N SAL02
+        N SAL03
+        N SAL04
+        N SAL05
+        N SAL06
+        N SAL07
+        N SAL08
+        N SAL09
+        N SAL10
+        N SAL11
+        N SAL12
+        N SAS01
+        N SAS02
+        N SAS03
+        N SAS04
+        N SAS05
+        N SAS06
+        N SAS07
+        N SAS08
+        N SAS09
+        N SAS10
+        N SAS11
+        N SAS12
+        N SAO01
+        N SAO02
+        N SAO03
+        N SAO04
+        N SAO05
+        N SAO06
+        N SAO07
+        N SAO08
+        N SAO09
+        N SAO10
+        N SAO11
+        N SAO12
+        C CONTAREF
+    }
+```
+
 ---
 ## Tabela DBF: `mi02`
 > **Origem:** `mi02` (Driver: DBFCDX)
@@ -2118,6 +3951,17 @@
 
 **Indices vinculados:**
 - Tag: `MI02-1` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    mi02 {
+        C CODIGO
+        C DESCRICAO
+        N VALOR
+        N VALOR1
+        C TIPO
+    }
+```
 
 ---
 ## Tabela DBF: `mi03`
@@ -2134,6 +3978,17 @@
 **Indices vinculados:**
 - Tag: `MI03-1` Expressao: `CENTRO`
 
+```mermaid
+erDiagram
+    mi03 {
+        C UE
+        C ATIVIDADE
+        C GASTO
+        C CENTRO
+        N CFOLHA
+    }
+```
+
 ---
 ## Tabela DBF: `mi04`
 > **Origem:** `mi04` (Driver: DBFCDX)
@@ -2146,6 +4001,15 @@
 
 **Indices vinculados:**
 - Tag: `MI04-1` Expressao: `CONTA`
+
+```mermaid
+erDiagram
+    mi04 {
+        C CONTA
+        C NOME
+        C SAIREL
+    }
+```
 
 ---
 ## Tabela DBF: `mj01`
@@ -2198,6 +4062,53 @@
 **Indices vinculados:**
 - Tag: `MJ01-1` Expressao: `NUMERO`
 - Tag: `MJ01-2` Expressao: `NOME`
+
+```mermaid
+erDiagram
+    mj01 {
+        C NUMERO
+        C NOME
+        C PGIPI
+        N DIA1
+        N DIA2
+        N DIA3
+        N DIA4
+        N DIA5
+        N DIA6
+        N DIA7
+        N DIA8
+        N DIA9
+        N DIA10
+        N POR1
+        N POR2
+        N POR3
+        N POR4
+        N POR5
+        N POR6
+        N POR7
+        N POR8
+        N POR9
+        N POR10
+        C DATA
+        N CAI1
+        N CAI2
+        N CAI3
+        N CAI4
+        N SEMANA
+        C PAGADESF
+        N JPAG
+        C TPC01
+        C TPC02
+        C TPC03
+        C TPC04
+        C TPC05
+        C TPC06
+        C TPC07
+        C TPC08
+        C TPC09
+        C TPC10
+    }
+```
 
 ---
 ## Tabela DBF: `mk01`
@@ -2312,6 +4223,110 @@
 - Tag: `MK01-5` Expressao: `ORDEM`
 - Tag: `MK01-6` Expressao: `OPERACAO`
 
+```mermaid
+erDiagram
+    mk01 {
+        N NRNOTA
+        D DATA
+        D DATAREF
+        D ENTREGA
+        C TIPOCLI
+        N FORNECEDO
+        C COGNOME
+        C OPERACAO
+        C CFONEW
+        C CFONEWB
+        C SUBOPER
+        C VIATRANS
+        N ICM
+        N TOTBICM
+        N TOTICM
+        N TOTBIPI
+        N TOTIPI
+        N TOTMER
+        N TOTNF
+        C INCLUSO
+        N TOTPLIQ
+        N TOTPBRU
+        C EMBMARCA
+        C EMBNUMERO
+        N EMBQTDDE
+        C EMBESPEC
+        C CONDPAG
+        N TAXA
+        D DAT01
+        D DAT02
+        D DAT03
+        D DAT04
+        D DAT05
+        D DAT06
+        D DAT07
+        D DAT08
+        D DAT09
+        D DAT10
+        N VAL01
+        N VAL02
+        N VAL03
+        N VAL04
+        N VAL05
+        N VAL06
+        N VAL07
+        N VAL08
+        N VAL09
+        N VAL10
+        C OBS1
+        C OBS2
+        C OBS3
+        C LIN01
+        C LIN02
+        C LIN03
+        C LIN04
+        C LIN05
+        C LIN06
+        C LIN07
+        C LIN08
+        N TRANSPORT
+        C NOMETRANS
+        C ENDETRANS
+        C BAIRTRANS
+        C CIDATRANS
+        C ESTATRANS
+        C CEPTRANS
+        C CHAPA
+        C ENDERECO3
+        C BAIRRO3
+        C CIDADE3
+        C ESTADO3
+        C CEP3
+        C CGC3
+        C INSC3
+        N ORDEM
+        N TOTBASICM
+        N TOTVALICM
+        N TOTISEICM
+        N TOTOUTICM
+        N TOTBASIPI
+        N TOTVALIPI
+        N TOTISEIPI
+        N TOTOUTIPI
+        N TOTVALNF
+        C APURA
+        N ISENTA
+        C ESPECIE
+        C SERIE
+        C MODELO
+        C ESTADO
+        C COD
+        N DIFDUP
+        C CONTSIM
+        C OBSPED
+        N DIFPG
+        N VALPIS
+        N VALFIN
+        N TOTFRETE
+    }
+```
+
 ---
 ## Tabela DBF: `mk02`
 > **Origem:** `mk02` (Driver: DBFCDX)
@@ -2392,6 +4407,78 @@
 - Tag: `MK02-4` Expressao: `NRNOTA`
 - Tag: `MK02-5` Expressao: `TIPOENT+CODIGO`
 
+```mermaid
+erDiagram
+    mk02 {
+        N NRNOTA
+        N ITEM
+        D DATA
+        N FORNECEDO
+        C COGFOR
+        C OPERACAO
+        C CFONEW
+        C CFONEWB
+        C SUBOPER
+        N QTDE
+        C UNID
+        N PESO
+        C TIPOENT
+        C CODIGO
+        C NOME
+        N PRECO
+        N VALORMER
+        C CODIPI
+        C CLASSIPI
+        N IPI
+        N BASEIPI
+        N VALORIPI
+        N VALORTOT
+        N ICM
+        N BASEICM
+        N VALORICM
+        C SOMANF
+        C CONSUMO
+        C DIPICM
+        C DIPIPI
+        C APURA
+        N VALFRE
+        C TIPOSERV
+        N COMPE
+        N COMPRAS
+        N COMITEM
+        N REDICM
+        C CODDEP
+        N CRM
+        N AUT
+        N PRCCRM
+        N NUMMY04
+        N PRCMY04
+        C CODPGMW
+        N PRCMW02
+        N PESOCRM
+        C PEDCCRM
+        N REDICMMW
+        D ENTRCRM
+        C PISCON
+        C CODICM
+        N NOTA_DEV
+        D DATA_DEV
+        N QTDE_DEV
+        N VALD_DEV
+        N NOTA_DEV2
+        D DATA_DEV2
+        N QTDE_DEV2
+        N VALD_DEV2
+        N ISENTAICM
+        N OUTRAICM
+        N ISENTAIPI
+        N OUTRAIPI
+        C INDICE
+        N VAIPIS
+        N VAIFIN
+    }
+```
+
 ---
 ## Tabela DBF: `mk03`
 > **Origem:** `mk03` (Driver: DBFCDX)
@@ -2406,6 +4493,20 @@
 | ANO | N | 4 | 0 |
 | VALORMES | N | 12 | 2 |
 | CONTA | C | 11 | 0 |
+
+```mermaid
+erDiagram
+    mk03 {
+        N NRNOTA
+        D DATA
+        N FORNECEDO
+        C CODIGO
+        N MES
+        N ANO
+        N VALORMES
+        C CONTA
+    }
+```
 
 ---
 ## Tabela DBF: `mk04`
@@ -2426,6 +4527,24 @@
 | VALORMES | N | 12 | 2 |
 | CONTA | C | 11 | 0 |
 
+```mermaid
+erDiagram
+    mk04 {
+        N NRNOTA
+        D DATA
+        C TIPOCLI
+        N FORNECEDO
+        C COGNOME
+        C CENTRO
+        C GASTO
+        C CODIGO
+        N MES
+        N ANO
+        N VALORMES
+        C CONTA
+    }
+```
+
 ---
 ## Tabela DBF: `mk05`
 > **Origem:** `mk05` (Driver: DBFCDX)
@@ -2442,6 +4561,22 @@
 | MES | N | 2 | 0 |
 | ANO | N | 4 | 0 |
 | VALORMES | N | 12 | 2 |
+
+```mermaid
+erDiagram
+    mk05 {
+        N REQUISI
+        N NRNOTA
+        D DATA
+        C TIPOCLI
+        N FORNECEDO
+        C COGNOME
+        C CONTA
+        N MES
+        N ANO
+        N VALORMES
+    }
+```
 
 ---
 ## Tabela DBF: `mk06`
@@ -2500,6 +4635,56 @@
 - Tag: `MK06-3` Expressao: `NUMERO`
 - Tag: `MK06-4` Expressao: `LOTE`
 - Tag: `MK06-5` Expressao: `DVALORNF`
+
+```mermaid
+erDiagram
+    mk06 {
+        N ORDEM
+        N NUMERO
+        N ITEM
+        D DATA
+        D DATAREF
+        C TIPOFOR
+        N FORNECEDO
+        C COGNOME
+        C DOPER
+        C DCFONEW
+        C SUBDOPER
+        C SOMANF
+        C CONSUMO
+        N DBASEICM
+        N DICM
+        N DVALICM
+        N ISENTAICM
+        N OUTRAICM
+        N DBASEIPI
+        N DIPI
+        N DVALIPI
+        N ISENTAIPI
+        N OUTRAIPI
+        C DCLASSIPI
+        N DVALORNF
+        C UNIDADE
+        N QUANT
+        N MICM01
+        N MICM02
+        N MICM03
+        N MIPI01
+        N MIPI02
+        N MIPI03
+        N LOTE
+        C DIPAM
+        C ESPECIE
+        C OBS
+        N OBSICM
+        N OBSIPI
+        D DCANCEL
+        C DPISCON
+        C CHKIPI
+        C PULASIN
+        N DESCSIN
+    }
+```
 
 ---
 ## Tabela DBF: `mk09`
@@ -2565,6 +4750,63 @@
 - Tag: `MK09-3` Expressao: `DVALORNF`
 - Tag: `MK09-4` Expressao: `LOTE`
 
+```mermaid
+erDiagram
+    mk09 {
+        N ORDEM
+        N NUMERO
+        N ITEM
+        D DATA
+        D DATAREF
+        C TIPOFOR
+        N FORNECEDO
+        C COGNOME
+        C DOPER
+        C DCFONEW
+        C SUBDOPER
+        C SOMANF
+        C CONSUMO
+        N DBASEICM
+        N DICM
+        N DVALICM
+        N ISENTAICM
+        N OUTRAICM
+        N DBASEIPI
+        N DIPI
+        N DVALIPI
+        N ISENTAIPI
+        N OUTRAIPI
+        C DCLASSIPI
+        N DVALORNF
+        C UNIDADE
+        N QUANT
+        N MICM01
+        N MICM02
+        N MICM03
+        N MIPI01
+        N MIPI02
+        N MIPI03
+        N LOTE
+        C DIPAM
+        C ESPECIE
+        C OBS
+        N OBSICM
+        N OBSIPI
+        D DCANCEL
+        C DPISCON
+        C CHKIPI
+        C SERIE
+        C SITUACAO
+        C CODREC
+        N BCPIS
+        N BCALI
+        N BCVAL
+        C CODDEP
+        D DAT01
+        N VAL01
+    }
+```
+
 ---
 ## Tabela DBF: `mk90`
 > **Origem:** `mk90` (Driver: DBFCDX)
@@ -2624,6 +4866,59 @@
 - Tag: `MK90-2` Expressao: `NUMERO`
 - Tag: `MK90-3` Expressao: `DVALORNF`
 - Tag: `MK90-4` Expressao: `LOTE`
+
+```mermaid
+erDiagram
+    mk90 {
+        N ORDEM
+        N NUMERO
+        N ITEM
+        D DATA
+        D DATAREF
+        C TIPOFOR
+        N FORNECEDO
+        C COGNOME
+        C DOPER
+        C DCFONEW
+        C SUBDOPER
+        C SOMANF
+        C CONSUMO
+        N DBASEICM
+        N DICM
+        N DVALICM
+        N ISENTAICM
+        N OUTRAICM
+        N DBASEIPI
+        N DIPI
+        N DVALIPI
+        N ISENTAIPI
+        N OUTRAIPI
+        C DCLASSIPI
+        N DVALORNF
+        C UNIDADE
+        N QUANT
+        N MICM01
+        N MICM02
+        N MICM03
+        N MIPI01
+        N MIPI02
+        N MIPI03
+        N LOTE
+        C DIPAM
+        C ESPECIE
+        C OBS
+        N OBSICM
+        N OBSIPI
+        D DCANCEL
+        C DPISCON
+        C CHKIPI
+        C SERIE
+        C SITUACAO
+        C CODREC
+        N MES
+        N ANO
+    }
+```
 
 ---
 ## Tabela DBF: `mk91`
@@ -2739,6 +5034,112 @@
 - Tag: `MK91-4` Expressao: `COGNOME`
 - Tag: `MK91-5` Expressao: `ORDEM`
 
+```mermaid
+erDiagram
+    mk91 {
+        N NRNOTA
+        D DATA
+        D DATAREF
+        D ENTREGA
+        C TIPOCLI
+        N FORNECEDO
+        C COGNOME
+        C OPERACAO
+        C CFONEW
+        C CFONEWB
+        C SUBOPER
+        C VIATRANS
+        N ICM
+        N TOTBICM
+        N TOTICM
+        N TOTBIPI
+        N TOTIPI
+        N TOTMER
+        N TOTNF
+        C INCLUSO
+        N TOTPLIQ
+        N TOTPBRU
+        C EMBMARCA
+        C EMBNUMERO
+        N EMBQTDDE
+        C EMBESPEC
+        C CONDPAG
+        N TAXA
+        D DAT01
+        D DAT02
+        D DAT03
+        D DAT04
+        D DAT05
+        D DAT06
+        D DAT07
+        D DAT08
+        D DAT09
+        D DAT10
+        N VAL01
+        N VAL02
+        N VAL03
+        N VAL04
+        N VAL05
+        N VAL06
+        N VAL07
+        N VAL08
+        N VAL09
+        N VAL10
+        C OBS1
+        C OBS2
+        C OBS3
+        C LIN01
+        C LIN02
+        C LIN03
+        C LIN04
+        C LIN05
+        C LIN06
+        C LIN07
+        C LIN08
+        N TRANSPORT
+        C NOMETRANS
+        C ENDETRANS
+        C BAIRTRANS
+        C CIDATRANS
+        C ESTATRANS
+        C CEPTRANS
+        C CHAPA
+        C ENDERECO3
+        C BAIRRO3
+        C CIDADE3
+        C ESTADO3
+        C CEP3
+        C CGC3
+        C INSC3
+        N ORDEM
+        N TOTBASICM
+        N TOTVALICM
+        N TOTISEICM
+        N TOTOUTICM
+        N TOTBASIPI
+        N TOTVALIPI
+        N TOTISEIPI
+        N TOTOUTIPI
+        N TOTVALNF
+        C APURA
+        N ISENTA
+        C ESPECIE
+        C SERIE
+        C MODELO
+        C ESTADO
+        C COD
+        N DIFDUP
+        C CONTSIM
+        C OBSPED
+        N DIFPG
+        N VALPIS
+        N VALFIN
+        N TOTFRETE
+        N MES
+        N ANO
+    }
+```
+
 ---
 ## Tabela DBF: `mk92`
 > **Origem:** `mk92` (Driver: DBFCDX)
@@ -2820,6 +5221,80 @@
 - Tag: `MK92-3` Expressao: `LEFT(OPERACAO,3)+CLASSIPI`
 - Tag: `MK92-4` Expressao: `NRNOTA`
 
+```mermaid
+erDiagram
+    mk92 {
+        N NRNOTA
+        N ITEM
+        D DATA
+        N FORNECEDO
+        C COGFOR
+        C OPERACAO
+        C CFONEW
+        C CFONEWB
+        C SUBOPER
+        N QTDE
+        C UNID
+        N PESO
+        C TIPOENT
+        C CODIGO
+        C NOME
+        N PRECO
+        N VALORMER
+        C CODIPI
+        C CLASSIPI
+        N IPI
+        N BASEIPI
+        N VALORIPI
+        N VALORTOT
+        N ICM
+        N BASEICM
+        N VALORICM
+        C SOMANF
+        C CONSUMO
+        C DIPICM
+        C DIPIPI
+        C APURA
+        N VALFRE
+        C TIPOSERV
+        N COMPE
+        N COMPRAS
+        N COMITEM
+        N REDICM
+        C CODDEP
+        N CRM
+        N AUT
+        N PRCCRM
+        N NUMMY04
+        N PRCMY04
+        C CODPGMW
+        N PRCMW02
+        N PESOCRM
+        C PEDCCRM
+        N REDICMMW
+        D ENTRCRM
+        C PISCON
+        C CODICM
+        N NOTA_DEV
+        D DATA_DEV
+        N QTDE_DEV
+        N VALD_DEV
+        N NOTA_DEV2
+        D DATA_DEV2
+        N QTDE_DEV2
+        N VALD_DEV2
+        N ISENTAICM
+        N OUTRAICM
+        N ISENTAIPI
+        N OUTRAIPI
+        C INDICE
+        N VAIPIS
+        N VAIFIN
+        N MES
+        N ANO
+    }
+```
+
 ---
 ## Tabela DBF: `mk96`
 > **Origem:** `mk96` (Driver: DBFCDX)
@@ -2880,6 +5355,58 @@
 - Tag: `MK96-4` Expressao: `LOTE`
 - Tag: `MK96-5` Expressao: `DVALORNF`
 
+```mermaid
+erDiagram
+    mk96 {
+        N ORDEM
+        N NUMERO
+        N ITEM
+        D DATA
+        D DATAREF
+        C TIPOFOR
+        N FORNECEDO
+        C COGNOME
+        C DOPER
+        C DCFONEW
+        C SUBDOPER
+        C SOMANF
+        C CONSUMO
+        N DBASEICM
+        N DICM
+        N DVALICM
+        N ISENTAICM
+        N OUTRAICM
+        N DBASEIPI
+        N DIPI
+        N DVALIPI
+        N ISENTAIPI
+        N OUTRAIPI
+        C DCLASSIPI
+        N DVALORNF
+        C UNIDADE
+        N QUANT
+        N MICM01
+        N MICM02
+        N MICM03
+        N MIPI01
+        N MIPI02
+        N MIPI03
+        N LOTE
+        C DIPAM
+        C ESPECIE
+        C OBS
+        N OBSICM
+        N OBSIPI
+        D DCANCEL
+        C DPISCON
+        C CHKIPI
+        C PULASIN
+        N DESCSIN
+        N MES
+        N ANO
+    }
+```
+
 ---
 ## Tabela DBF: `mk99`
 > **Origem:** `mk99` (Driver: DBFCDX)
@@ -2930,6 +5457,56 @@
 | CHKIPI | C | 1 | 0 |
 | MES | N | 2 | 0 |
 | ANO | N | 4 | 0 |
+
+```mermaid
+erDiagram
+    mk99 {
+        N ORDEM
+        N NUMERO
+        N ITEM
+        D DATA
+        D DATAREF
+        C TIPOFOR
+        N FORNECEDO
+        C COGNOME
+        C DOPER
+        C DCFONEW
+        C SUBDOPER
+        C SOMANF
+        C CONSUMO
+        N DBASEICM
+        N DICM
+        N DVALICM
+        N ISENTAICM
+        N OUTRAICM
+        N DBASEIPI
+        N DIPI
+        N DVALIPI
+        N ISENTAIPI
+        N OUTRAIPI
+        C DCLASSIPI
+        N DVALORNF
+        C UNIDADE
+        N QUANT
+        N MICM01
+        N MICM02
+        N MICM03
+        N MIPI01
+        N MIPI02
+        N MIPI03
+        N LOTE
+        C DIPAM
+        C ESPECIE
+        C OBS
+        N OBSICM
+        N OBSIPI
+        D DCANCEL
+        C DPISCON
+        C CHKIPI
+        N MES
+        N ANO
+    }
+```
 
 ---
 ## Tabela DBF: `ml01`
@@ -2990,6 +5567,55 @@
 - Tag: `ML01-6` Expressao: `DATA`
 - Tag: `ML01-7` Expressao: `FORNECEDO`
 
+```mermaid
+erDiagram
+    ml01 {
+        N NRNOTA
+        C TIPFAT
+        D DATA
+        C TIPOCLI
+        N FORNECEDO
+        C COGNOME
+        N PEDIDO
+        C DDD
+        C TELEFONE
+        C VENDEDOR
+        N TOTFAT
+        N SITUACAO
+        C COD
+        C BANCO
+        C NOMEBCO
+        N DOCBOL
+        N DOCDUP
+        D VENCIMENT
+        N VALOR
+        N NOTA
+        N DOCABATE
+        N ABATER
+        N TAXA
+        N DIAS
+        N JUROS
+        N VALATUAL
+        C OBS
+        C OBS1
+        C OBS2
+        C OBS3
+        C OBS4
+        D DATAPG
+        N VALORPG
+        N DIFERENCA
+        N PREVATR
+        C FLUXO
+        N BCODEP
+        C AGCDEP
+        C CTADEP
+        C OBSPG
+        C CONTA
+        C GERACOB
+        N CLIENTE
+    }
+```
+
 ---
 ## Tabela DBF: `ml01pg`
 > **Origem:** `ml01pg` (Driver: DBFCDX)
@@ -3047,6 +5673,55 @@
 - Tag: `ML01PG-4` Expressao: `BANCO+DTOS(DATAPG)`
 - Tag: `ML01PG-5` Expressao: `VALOR`
 
+```mermaid
+erDiagram
+    ml01pg {
+        N NRNOTA
+        C TIPFAT
+        D DATA
+        C TIPOCLI
+        N FORNECEDO
+        C COGNOME
+        N PEDIDO
+        C DDD
+        C TELEFONE
+        C VENDEDOR
+        N TOTFAT
+        N SITUACAO
+        C COD
+        C BANCO
+        C NOMEBCO
+        N DOCBOL
+        N DOCDUP
+        D VENCIMENT
+        N VALOR
+        N NOTA
+        N DOCABATE
+        N ABATER
+        N TAXA
+        N DIAS
+        N JUROS
+        N VALATUAL
+        C OBS
+        C OBS1
+        C OBS2
+        C OBS3
+        C OBS4
+        D DATAPG
+        N VALORPG
+        N DIFERENCA
+        N PREVATR
+        C FLUXO
+        N BCODEP
+        C AGCDEP
+        C CTADEP
+        C OBSPG
+        C CONTA
+        C GERACOB
+        N CLIENTE
+    }
+```
+
 ---
 ## Tabela DBF: `ml02`
 > **Origem:** `ml02` (Driver: DBFCDX)
@@ -3082,6 +5757,38 @@
 
 **Indices vinculados:**
 - Tag: `ML02-1` Expressao: `STR(CLIENTE)+VENTIP+STR(DATENT,2)`
+
+```mermaid
+erDiagram
+    ml02 {
+        N NRNOTA
+        C TIPFAT
+        D DATA
+        C TIPOCLI
+        N CLIENTE
+        C COGNOME
+        N PEDIDO
+        C DDD
+        C TELEFONE
+        C VENDEDOR
+        N TOTFAT
+        N SITUACAO
+        C BANCO
+        C NOMEBCO
+        C DOCUMENTO
+        N DATENT
+        C VENTIP
+        N VALOR
+        N JUROS
+        C OBS
+        C OBS1
+        C OBS2
+        C OBS3
+        C OBS4
+        N FATPER
+        C HISTORICO
+    }
+```
 
 ---
 ## Tabela DBF: `ml03`
@@ -3123,6 +5830,42 @@
 **Indices vinculados:**
 - Tag: `ML03-1` Expressao: `STR(NRNOTA)+TIPFAT`
 
+```mermaid
+erDiagram
+    ml03 {
+        N NRNOTA
+        C TIPFAT
+        C BANCO
+        C AGENCIA
+        C CONTA
+        C CHEQUE
+        D DATA
+        D DATADEP
+        N VALOR
+        C PREDATADO
+        D DATAPARA
+        N VALORDES
+        N VALORNEG
+        C CTACUSTO
+        D DEPDATA
+        N DEPBCO
+        C DEPAGC
+        C DEPCTA
+        D DEV01DATA
+        C DEV01COD
+        D DEP01DATA
+        N DEV01DEP
+        D DEV02DATA
+        C DEV02COD
+        N DEV02DEP
+        D REP02DATA
+        D COMPENSADO
+        C OBS
+        C FINALIZADO
+        N CLIENTE
+    }
+```
+
 ---
 ## Tabela DBF: `ml03pg`
 > **Origem:** `ml03pg` (Driver: DBFCDX)
@@ -3162,6 +5905,42 @@
 
 **Indices vinculados:**
 - Tag: `ML03PG-1` Expressao: `STR(NRNOTA)+TIPFAT`
+
+```mermaid
+erDiagram
+    ml03pg {
+        N NRNOTA
+        C TIPFAT
+        C BANCO
+        C AGENCIA
+        C CONTA
+        C CHEQUE
+        D DATA
+        D DATADEP
+        N VALOR
+        C PREDATADO
+        D DATAPARA
+        N VALORDES
+        N VALORNEG
+        C CTACUSTO
+        D DEPDATA
+        N DEPBCO
+        C DEPAGC
+        C DEPCTA
+        D DEV01DATA
+        C DEV01COD
+        D DEP01DATA
+        N DEV01DEP
+        D DEV02DATA
+        C DEV02COD
+        N DEV02DEP
+        D REP02DATA
+        D COMPENSADO
+        C OBS
+        C FINALIZADO
+        N CLIENTE
+    }
+```
 
 ---
 ## Tabela DBF: `ml91pg`
@@ -3227,6 +6006,63 @@
 - Tag: `ML91PG-3` Expressao: `FORNECEDO`
 - Tag: `ML91PG-4` Expressao: `BANCO+DTOS(DATAPG)`
 
+```mermaid
+erDiagram
+    ml91pg {
+        N NRNOTA
+        C TIPFAT
+        D DATA
+        C TIPOCLI
+        N FORNECEDO
+        C COGNOME
+        N PEDIDO
+        C DDD
+        C TELEFONE
+        C VENDEDOR
+        N TOTFAT
+        N SITUACAO
+        C COD
+        C BANCO
+        C NOMEBCO
+        N DOCBOL
+        N DOCDUP
+        D VENCIMENT
+        N VALOR
+        N NOTA
+        N DOCABATE
+        N ABATER
+        N TAXA
+        N DIAS
+        N JUROS
+        N VALATUAL
+        C OBS
+        C OBS1
+        C OBS2
+        C OBS3
+        C OBS4
+        D DATAPG
+        N VALORPG
+        N DIFERENCA
+        N PREVATR
+        C FLUXO
+        C BCODEP
+        C AGCDEP
+        C CTADEP
+        C OBSPG
+        C CONTA
+        C GERACOB
+        N VALPIS
+        N VALFIN
+        N VALCSLL
+        N VALIRRF
+        N VALISS
+        N VALINSS
+        N ENCARGOS
+        N MES
+        N ANO
+    }
+```
+
 ---
 ## Tabela DBF: `ml98`
 > **Origem:** `ml98` (Driver: DBFCDX)
@@ -3269,6 +6105,48 @@
 | PREVATR | N | 3 | 0 |
 | MES | N | 2 | 0 |
 | ANO | N | 4 | 0 |
+
+```mermaid
+erDiagram
+    ml98 {
+        N NRNOTA
+        C TIPOCLI
+        C TIPFAT
+        D DATA
+        N CLIENTE
+        C COGNOME
+        N PEDIDO
+        C DDD
+        C TELEFONE
+        C VENDEDOR
+        N TOTFAT
+        N SITUACAO
+        C BANCO
+        C NOMEBCO
+        N DOCBOL
+        N DOCDUP
+        D VENCIMENT
+        N VALOR
+        N NOTA
+        N DOCABATE
+        N ABATER
+        N TAXA
+        N DIAS
+        N JUROS
+        N VALATUAL
+        C OBS
+        C OBS1
+        C OBS2
+        C OBS3
+        C OBS4
+        D DATAPG
+        N VALORPG
+        N DIFERENCA
+        N PREVATR
+        N MES
+        N ANO
+    }
+```
 
 ---
 ## Tabela DBF: `ml99`
@@ -3325,6 +6203,56 @@
 - Tag: `ML99-1` Expressao: `DTOS(VENCIMENT)+STR(NRNOTA,8)+TIPFAT`
 - Tag: `ML99-2` Expressao: `STR(NRNOTA,8)+TIPFAT`
 - Tag: `ML99-3` Expressao: `FORNECEDO`
+
+```mermaid
+erDiagram
+    ml99 {
+        N NRNOTA
+        C TIPFAT
+        D DATA
+        C TIPOCLI
+        N FORNECEDO
+        C COGNOME
+        N PEDIDO
+        C DDD
+        C TELEFONE
+        C VENDEDOR
+        N TOTFAT
+        N SITUACAO
+        C COD
+        C BANCO
+        C NOMEBCO
+        N DOCBOL
+        N DOCDUP
+        D VENCIMENT
+        N VALOR
+        N NOTA
+        N DOCABATE
+        N ABATER
+        N TAXA
+        N DIAS
+        N JUROS
+        N VALATUAL
+        C OBS
+        C OBS1
+        C OBS2
+        C OBS3
+        C OBS4
+        D DATAPG
+        N VALORPG
+        N DIFERENCA
+        N PREVATR
+        C FLUXO
+        N BCODEP
+        C AGCDEP
+        C CTADEP
+        C OBSPG
+        C CONTA
+        C GERACOB
+        N MES
+        N ANO
+    }
+```
 
 ---
 ## Tabela DBF: `mm01`
@@ -3437,6 +6365,111 @@
 - Tag: `MM01-2` Expressao: `FORNECEDO`
 - Tag: `MM01-3` Expressao: `TOTNF`
 
+```mermaid
+erDiagram
+    mm01 {
+        N NUMERO
+        D DATA
+        C TIPOSERV
+        C TIPOCLI
+        N FORNECEDO
+        C COGNOME
+        C VENDEDOR
+        C OPERACAO
+        C SUBOPER
+        C CFONEW
+        C CFONEWB
+        C VIATRANS
+        N ICM
+        N TOTBICM
+        N TOTICM
+        N TOTBIPI
+        N TOTIPI
+        N TOTMER
+        N TOTNF
+        N TOTALPES
+        N TOTALBRU
+        C MARCAEMB
+        C NUMEROEMB
+        N QUANTEMB
+        C EMBALAGEM
+        C CONDPAG
+        D DAT01
+        D DAT02
+        D DAT03
+        D DAT04
+        D DAT05
+        D DAT06
+        D DAT07
+        D DAT08
+        D DAT09
+        D DAT10
+        N VAL01
+        N VAL02
+        N VAL03
+        N VAL04
+        N VAL05
+        N VAL06
+        N VAL07
+        N VAL08
+        N VAL09
+        N VAL10
+        C OBS1
+        C OBS2
+        C OBS3
+        C LIN01
+        C LIN02
+        C LIN03
+        C LIN04
+        C LIN05
+        C LIN06
+        C LIN07
+        C LIN08
+        N TRANSP
+        C MOTORISTA
+        C NOMETRANS
+        C ENDETRANS
+        C BAIRTRANS
+        C CIDATRANS
+        C ESTATRANS
+        C CEPTRANS
+        C CGCTRANS
+        C IETRANS
+        C CHAPA
+        C ENDERECO3
+        C BAIRRO3
+        C CIDADE3
+        C ESTADO3
+        C CEP3
+        C CGC3
+        C INSC3
+        C TIPONF
+        C TIPOFR
+        C APURA
+        C ESPECIE
+        C SERIE
+        C MODELO
+        C ESTADO
+        N ORDEM
+        N TOTBASICM
+        N TOTVALICM
+        N TOTISEICM
+        N TOTOUTICM
+        N TOTBASIPI
+        N TOTVALIPI
+        N TOTISEIPI
+        N TOTOUTIPI
+        N TOTVALNF
+        N COPIA
+        C CONTSIM
+        C CANCELADA
+        C GERAAE
+        C HORAEMI
+        C HORAAE
+        N VALREM
+    }
+```
+
 ---
 ## Tabela DBF: `mm02`
 > **Origem:** `mm02` (Driver: DBFCDX)
@@ -3533,6 +6566,94 @@
 - Tag: `MM02-4` Expressao: `NUMERO`
 - Tag: `MM02-5` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    mm02 {
+        N NUMERO
+        D DATA
+        N FORNECEDO
+        C OPERACAO
+        C SUBOPER
+        C CFONEW
+        C CFONEWB
+        C TIPOENT
+        C TIPOSERV
+        N OS
+        N QTDE
+        C UNID
+        N PESO
+        C COMPRA
+        C CODIGO
+        C NOME
+        N PRECO
+        N VALORMER
+        C CODIPI
+        N IPI
+        N VALORIPI
+        N BASEIPI
+        N VALORTOT
+        C CLASSIPI
+        N ICM
+        N BASEICM
+        N VALORICM
+        C CONSUMO
+        N NOTADEV
+        N DOCDEV
+        D DATADEV
+        N TOTDEV
+        N TOTSDEV
+        N DEV
+        N QTDEDEV
+        C UNIDEV
+        N PRCDEV
+        C CODDEV
+        N NOTADE2
+        N DOCDEV2
+        D DATADE2
+        N TOTDE2
+        N TOTSDE2
+        N DE2
+        N QTDEDE2
+        C UNIDE2
+        N PRCDE2
+        C CODDE2
+        C ALOS
+        N ALSE
+        C ALMA
+        C ALDE
+        C MBBN
+        C MBBP
+        C CODICM
+        C LINADD01
+        C LINADD02
+        C LINADD03
+        C LINADD04
+        C LINADD05
+        C LINADD06
+        C APURA
+        C INDICE
+        N SEQ
+        N PESTOT
+        C ESPECIE
+        C SOMANF
+        C DIPICM
+        C DIPIPI
+        C RASTRO
+        C RASTR2
+        C PEDIDOCLI
+        D ENTREGA
+        N QTDESAL
+        N REDICM
+        N AVEMBQ
+        C AVEMBC
+        C FATBX
+        C PEDIDO
+        C PISCON
+        L IMPMY
+        N PEDCLIITE
+    }
+```
+
 ---
 ## Tabela DBF: `mm02l`
 > **Origem:** `mm02l` (Driver: DBFCDX)
@@ -3552,6 +6673,22 @@
 
 **Indices vinculados:**
 - Tag: `MM02L-1` Expressao: `NUMMENS`
+
+```mermaid
+erDiagram
+    mm02l {
+        N NUMMENS
+        C DESMENS
+        C LIN01
+        C LIN02
+        C LIN03
+        C LIN04
+        C LIN05
+        C LIN06
+        C LIN07
+        C LIN08
+    }
+```
 
 ---
 ## Tabela DBF: `mm03`
@@ -3573,6 +6710,22 @@
 **Indices vinculados:**
 - Tag: `MM03-1` Expressao: `NUMMENS`
 
+```mermaid
+erDiagram
+    mm03 {
+        N NUMMENS
+        C DESMENS
+        C LIN01
+        C LIN02
+        C LIN03
+        C LIN04
+        C LIN05
+        C LIN06
+        C LIN07
+        C LIN08
+    }
+```
+
 ---
 ## Tabela DBF: `mm04`
 > **Origem:** `mm04` (Driver: DBFCDX)
@@ -3593,6 +6746,22 @@
 **Indices vinculados:**
 - Tag: `MM04-1` Expressao: `NUMMENS`
 
+```mermaid
+erDiagram
+    mm04 {
+        N NUMMENS
+        C DESMENS
+        C LIN01
+        C LIN02
+        C LIN03
+        C LIN04
+        C LIN05
+        C LIN06
+        C LIN07
+        C LIN08
+    }
+```
+
 ---
 ## Tabela DBF: `mm05`
 > **Origem:** `mm05` (Driver: DBFCDX)
@@ -3607,6 +6776,17 @@
 
 **Indices vinculados:**
 - Tag: `MM05-1` Expressao: `OPERACAO+CLASSIPI`
+
+```mermaid
+erDiagram
+    mm05 {
+        C OPERACAO
+        C CLASSIPI
+        N TOTALMER
+        N TOTALIPI
+        N TOTPESO
+    }
+```
 
 ---
 ## Tabela DBF: `mm06`
@@ -3666,6 +6846,56 @@
 - Tag: `MM06-4` Expressao: `LOTE`
 - Tag: `MM06-5` Expressao: `DVALORNF`
 
+```mermaid
+erDiagram
+    mm06 {
+        N ORDEM
+        N NUMERO
+        N ITEM
+        D DATA
+        D DATAREF
+        C TIPOFOR
+        N FORNECEDO
+        C COGNOME
+        C DOPER
+        C DCFONEW
+        C SUBDOPER
+        C SOMANF
+        C CONSUMO
+        N DBASEICM
+        N DICM
+        N DVALICM
+        N ISENTAICM
+        N OUTRAICM
+        N DBASEIPI
+        N DIPI
+        N DVALIPI
+        N ISENTAIPI
+        N OUTRAIPI
+        C DCLASSIPI
+        N DVALORNF
+        C UNIDADE
+        N QUANT
+        N MICM01
+        N MICM02
+        N MICM03
+        N MIPI01
+        N MIPI02
+        N MIPI03
+        N LOTE
+        C DIPAM
+        C ESPECIE
+        D DCANCEL
+        C OBS
+        C CHKIPI
+        N OBSICM
+        N OBSIPI
+        C DPISCON
+        C PULASIN
+        N DESCSIN
+    }
+```
+
 ---
 ## Tabela DBF: `mm07`
 > **Origem:** `mm07` (Driver: DBFCDX)
@@ -3685,6 +6915,21 @@
 **Indices vinculados:**
 - Tag: `MM07-1` Expressao: `REQDEV`
 
+```mermaid
+erDiagram
+    mm07 {
+        N REQDEV
+        N CLIENTE
+        C COGCLI
+        N NF
+        N NFC
+        C PRODUTO
+        D DATANF
+        D DATADEV
+        N VALOR
+    }
+```
+
 ---
 ## Tabela DBF: `mm08`
 > **Origem:** `mm08` (Driver: DBFCDX)
@@ -3698,6 +6943,16 @@
 
 **Indices vinculados:**
 - Tag: `MM08-1` Expressao: `TIPOENT+CODIGO+STR(FORNECEDO,8)`
+
+```mermaid
+erDiagram
+    mm08 {
+        C TIPOENT
+        C CODIGO
+        N FORNECEDO
+        N REDICM
+    }
+```
 
 ---
 ## Tabela DBF: `mm09`
@@ -3756,6 +7011,57 @@
 - Tag: `MM09-2` Expressao: `NUMERO`
 - Tag: `MM09-3` Expressao: `DVALORNF`
 - Tag: `MM09-4` Expressao: `LOTE`
+
+```mermaid
+erDiagram
+    mm09 {
+        N ORDEM
+        N NUMERO
+        N ITEM
+        D DATA
+        D DATAREF
+        C TIPOFOR
+        N FORNECEDO
+        C COGNOME
+        C DOPER
+        C DCFONEW
+        C SUBDOPER
+        C SOMANF
+        C CONSUMO
+        N DBASEICM
+        N DICM
+        N DVALICM
+        N ISENTAICM
+        N OUTRAICM
+        N DBASEIPI
+        N DIPI
+        N DVALIPI
+        N ISENTAIPI
+        N OUTRAIPI
+        C DCLASSIPI
+        N DVALORNF
+        C UNIDADE
+        N QUANT
+        N MICM01
+        N MICM02
+        N MICM03
+        N MIPI01
+        N MIPI02
+        N MIPI03
+        N LOTE
+        C DIPAM
+        C ESPECIE
+        C OBS
+        N OBSICM
+        N OBSIPI
+        D DCANCEL
+        C DPISCON
+        C CHKIPI
+        C SERIE
+        C SITUACAO
+        C CODREC
+    }
+```
 
 ---
 ## Tabela DBF: `mm90`
@@ -3816,6 +7122,59 @@
 - Tag: `MM90-2` Expressao: `NUMERO`
 - Tag: `MM90-3` Expressao: `DVALORNF`
 - Tag: `MM90-4` Expressao: `LOTE`
+
+```mermaid
+erDiagram
+    mm90 {
+        N ORDEM
+        N NUMERO
+        N ITEM
+        D DATA
+        D DATAREF
+        C TIPOFOR
+        N FORNECEDO
+        C COGNOME
+        C DOPER
+        C DCFONEW
+        C SUBDOPER
+        C SOMANF
+        C CONSUMO
+        N DBASEICM
+        N DICM
+        N DVALICM
+        N ISENTAICM
+        N OUTRAICM
+        N DBASEIPI
+        N DIPI
+        N DVALIPI
+        N ISENTAIPI
+        N OUTRAIPI
+        C DCLASSIPI
+        N DVALORNF
+        C UNIDADE
+        N QUANT
+        N MICM01
+        N MICM02
+        N MICM03
+        N MIPI01
+        N MIPI02
+        N MIPI03
+        N LOTE
+        C DIPAM
+        C ESPECIE
+        C OBS
+        N OBSICM
+        N OBSIPI
+        D DCANCEL
+        C DPISCON
+        C CHKIPI
+        C SERIE
+        C SITUACAO
+        C CODREC
+        N MES
+        N ANO
+    }
+```
 
 ---
 ## Tabela DBF: `mm91`
@@ -3928,6 +7287,113 @@
 **Indices vinculados:**
 - Tag: `MM91-1` Expressao: `NUMERO`
 
+```mermaid
+erDiagram
+    mm91 {
+        N NUMERO
+        D DATA
+        C TIPOSERV
+        C TIPOCLI
+        N FORNECEDO
+        C COGNOME
+        C VENDEDOR
+        C OPERACAO
+        C SUBOPER
+        C CFONEW
+        C CFONEWB
+        C VIATRANS
+        N ICM
+        N TOTBICM
+        N TOTICM
+        N TOTBIPI
+        N TOTIPI
+        N TOTMER
+        N TOTNF
+        N TOTALPES
+        N TOTALBRU
+        C MARCAEMB
+        C NUMEROEMB
+        N QUANTEMB
+        C EMBALAGEM
+        C CONDPAG
+        D DAT01
+        D DAT02
+        D DAT03
+        D DAT04
+        D DAT05
+        D DAT06
+        D DAT07
+        D DAT08
+        D DAT09
+        D DAT10
+        N VAL01
+        N VAL02
+        N VAL03
+        N VAL04
+        N VAL05
+        N VAL06
+        N VAL07
+        N VAL08
+        N VAL09
+        N VAL10
+        C OBS1
+        C OBS2
+        C OBS3
+        C LIN01
+        C LIN02
+        C LIN03
+        C LIN04
+        C LIN05
+        C LIN06
+        C LIN07
+        C LIN08
+        N TRANSP
+        C MOTORISTA
+        C NOMETRANS
+        C ENDETRANS
+        C BAIRTRANS
+        C CIDATRANS
+        C ESTATRANS
+        C CEPTRANS
+        C CGCTRANS
+        C IETRANS
+        C CHAPA
+        C ENDERECO3
+        C BAIRRO3
+        C CIDADE3
+        C ESTADO3
+        C CEP3
+        C CGC3
+        C INSC3
+        C TIPONF
+        C TIPOFR
+        C APURA
+        C ESPECIE
+        C SERIE
+        C MODELO
+        C ESTADO
+        N ORDEM
+        N TOTBASICM
+        N TOTVALICM
+        N TOTISEICM
+        N TOTOUTICM
+        N TOTBASIPI
+        N TOTVALIPI
+        N TOTISEIPI
+        N TOTOUTIPI
+        N TOTVALNF
+        N COPIA
+        C CONTSIM
+        C CANCELADA
+        C GERAAE
+        C HORAEMI
+        C HORAAE
+        N VALREM
+        N MES
+        N ANO
+    }
+```
+
 ---
 ## Tabela DBF: `mm92`
 > **Origem:** `mm92` (Driver: DBFCDX)
@@ -4023,6 +7489,93 @@
 - Tag: `MM92-4` Expressao: `NUMERO`
 - Tag: `MM92-5` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    mm92 {
+        N NUMERO
+        D DATA
+        N FORNECEDO
+        C OPERACAO
+        C SUBOPER
+        C CFONEW
+        C CFONEWB
+        C TIPOENT
+        C TIPOSERV
+        N OS
+        N QTDE
+        C UNID
+        N PESO
+        C COMPRA
+        C CODIGO
+        C NOME
+        N PRECO
+        N VALORMER
+        C CODIPI
+        N IPI
+        N VALORIPI
+        N BASEIPI
+        N VALORTOT
+        C CLASSIPI
+        N ICM
+        N BASEICM
+        N VALORICM
+        C CONSUMO
+        N NOTADEV
+        D DATADEV
+        N TOTDEV
+        N TOTSDEV
+        N DEV
+        N QTDEDEV
+        C UNIDEV
+        N PRCDEV
+        C CODDEV
+        N NOTADE2
+        D DATADE2
+        N TOTDE2
+        N TOTSDE2
+        N DE2
+        N QTDEDE2
+        C UNIDE2
+        N PRCDE2
+        C CODDE2
+        C ALOS
+        N ALSE
+        C ALMA
+        C ALDE
+        C MBBN
+        C MBBP
+        C CODICM
+        C LINADD01
+        C LINADD02
+        C LINADD03
+        C LINADD04
+        C LINADD05
+        C LINADD06
+        C APURA
+        C INDICE
+        N SEQ
+        N PESTOT
+        C ESPECIE
+        C SOMANF
+        C DIPICM
+        C DIPIPI
+        C RASTRO
+        C RASTR2
+        C PEDIDOCLI
+        D ENTREGA
+        N QTDESAL
+        N REDICM
+        N AVEMBQ
+        C AVEMBC
+        C FATBX
+        C PEDIDO
+        C PISCON
+        N MES
+        N ANO
+        N PEDCLIITE
+    }
+```
+
 ---
 ## Tabela DBF: `mm96`
 > **Origem:** `mm96` (Driver: DBFCDX)
@@ -4083,6 +7636,58 @@
 - Tag: `MM96-4` Expressao: `LOTE`
 - Tag: `MM96-5` Expressao: `DVALORNF`
 
+```mermaid
+erDiagram
+    mm96 {
+        N ORDEM
+        N NUMERO
+        N ITEM
+        D DATA
+        D DATAREF
+        C TIPOFOR
+        N FORNECEDO
+        C COGNOME
+        C DOPER
+        C DCFONEW
+        C SUBDOPER
+        C SOMANF
+        C CONSUMO
+        N DBASEICM
+        N DICM
+        N DVALICM
+        N ISENTAICM
+        N OUTRAICM
+        N DBASEIPI
+        N DIPI
+        N DVALIPI
+        N ISENTAIPI
+        N OUTRAIPI
+        C DCLASSIPI
+        N DVALORNF
+        C UNIDADE
+        N QUANT
+        N MICM01
+        N MICM02
+        N MICM03
+        N MIPI01
+        N MIPI02
+        N MIPI03
+        N LOTE
+        C DIPAM
+        C ESPECIE
+        D DCANCEL
+        C OBS
+        C CHKIPI
+        N OBSICM
+        N OBSIPI
+        C DPISCON
+        C PULASIN
+        N DESCSIN
+        N MES
+        N ANO
+    }
+```
+
 ---
 ## Tabela DBF: `mm99`
 > **Origem:** `mm99` (Driver: DBFCDX)
@@ -4133,6 +7738,56 @@
 | CHKIPI | C | 1 | 0 |
 | MES | N | 2 | 0 |
 | ANO | N | 4 | 0 |
+
+```mermaid
+erDiagram
+    mm99 {
+        N ORDEM
+        N NUMERO
+        N ITEM
+        D DATA
+        D DATAREF
+        C TIPOFOR
+        N FORNECEDO
+        C COGNOME
+        C DOPER
+        C DCFONEW
+        C SUBDOPER
+        C SOMANF
+        C CONSUMO
+        N DBASEICM
+        N DICM
+        N DVALICM
+        N ISENTAICM
+        N OUTRAICM
+        N DBASEIPI
+        N DIPI
+        N DVALIPI
+        N ISENTAIPI
+        N OUTRAIPI
+        C DCLASSIPI
+        N DVALORNF
+        C UNIDADE
+        N QUANT
+        N MICM01
+        N MICM02
+        N MICM03
+        N MIPI01
+        N MIPI02
+        N MIPI03
+        N LOTE
+        C DIPAM
+        C ESPECIE
+        C OBS
+        N OBSICM
+        N OBSIPI
+        D DCANCEL
+        C DPISCON
+        C CHKIPI
+        N MES
+        N ANO
+    }
+```
 
 ---
 ## Tabela DBF: `mn01`
@@ -4196,6 +7851,59 @@
 - Tag: `MN01-5` Expressao: `FORNECEDO`
 - Tag: `MN01-6` Expressao: `VALOR`
 
+```mermaid
+erDiagram
+    mn01 {
+        N NUMERO
+        N NRNOTA
+        C TIPFAT
+        C OPERACAO
+        D DATA
+        N FORNECEDO
+        C COGNOME
+        N PEDIDO
+        C DDD
+        C TELEFONE
+        C VENDEDOR
+        N TOTNF
+        N SITUACAO
+        C BANCO
+        C NOMEBCO
+        C DOCBOL
+        C DOCDUP
+        D VENCIMENT
+        N VALOR
+        N NOTA
+        N DOCABATE
+        N ABATER
+        N TAXA
+        N DIAS
+        N JUROS
+        N JURVAL
+        N VALATUAL
+        C OBS
+        C OBS1
+        C OBS2
+        C OBS3
+        C OBS4
+        D DATAPG
+        N VALORPG
+        N DIFERENCA
+        C NF_COMPLE
+        C CODCOMP
+        C IMPDUP
+        N PREVATR
+        C FLUXO
+        C TIPOCLI
+        N BCODEP
+        C AGCDEP
+        C CTADEP
+        C CONTA
+        C GERACOB
+        N CLIENTE
+    }
+```
+
 ---
 ## Tabela DBF: `mn01pg`
 > **Origem:** `mn01pg` (Driver: DBFCDX)
@@ -4257,6 +7965,59 @@
 - Tag: `MN01PG-4` Expressao: `BANCO+DTOS(DATAPG)`
 - Tag: `MN01PG-5` Expressao: `NUMERO`
 
+```mermaid
+erDiagram
+    mn01pg {
+        N NUMERO
+        N NRNOTA
+        C TIPFAT
+        C OPERACAO
+        D DATA
+        N FORNECEDO
+        C COGNOME
+        N PEDIDO
+        C DDD
+        C TELEFONE
+        C VENDEDOR
+        N TOTNF
+        N SITUACAO
+        C BANCO
+        C NOMEBCO
+        C DOCBOL
+        C DOCDUP
+        D VENCIMENT
+        N VALOR
+        N NOTA
+        N DOCABATE
+        N ABATER
+        N TAXA
+        N DIAS
+        N JUROS
+        N JURVAL
+        N VALATUAL
+        C OBS
+        C OBS1
+        C OBS2
+        C OBS3
+        C OBS4
+        D DATAPG
+        N VALORPG
+        N DIFERENCA
+        C NF_COMPLE
+        C CODCOMP
+        C IMPDUP
+        N PREVATR
+        C FLUXO
+        C TIPOCLI
+        N BCODEP
+        C AGCDEP
+        C CTADEP
+        C CONTA
+        C GERACOB
+        N CLIENTE
+    }
+```
+
 ---
 ## Tabela DBF: `mn02`
 > **Origem:** `mn02` (Driver: DBFCDX)
@@ -4294,6 +8055,43 @@
 | DATA_DEV2 | D | 8 | 0 |
 | QTDE_DEV2 | N | 7 | 3 |
 | VALD_DEV2 | N | 18 | 2 |
+
+```mermaid
+erDiagram
+    mn02 {
+        N NRNOTA
+        D DATA
+        N CLIENTE
+        C OPERACAO
+        C PEDIDO
+        N OS
+        N ITEMFAT
+        N QTDE
+        C UNID
+        N PESLIQ
+        C CODIGO
+        C NOME
+        N PRECO
+        N VALORMER
+        C CODIPI
+        C CLASSIPI
+        N IPI
+        N BASEIPI
+        N VALORIPI
+        N VALORTOT
+        N ICM
+        N BASEICM
+        N VALORICM
+        N NOTA_DEV
+        D DATA_DEV
+        N QTDE_DEV
+        N VALD_DEV
+        N NOTA_DEV2
+        D DATA_DEV2
+        N QTDE_DEV2
+        N VALD_DEV2
+    }
+```
 
 ---
 ## Tabela DBF: `mn03`
@@ -4335,6 +8133,42 @@
 **Indices vinculados:**
 - Tag: `MN03-1` Expressao: `STR(NRNOTA)+TIPFAT`
 
+```mermaid
+erDiagram
+    mn03 {
+        N NRNOTA
+        C TIPFAT
+        C BANCO
+        C AGENCIA
+        C CONTA
+        C CHEQUE
+        D DATA
+        D DATADEP
+        N VALOR
+        C PREDATADO
+        D DATAPARA
+        N VALORDES
+        N VALORNEG
+        C CTACUSTO
+        D DEPDATA
+        N DEPBCO
+        C DEPAGC
+        C DEPCTA
+        D DEV01DATA
+        C DEV01COD
+        D DEP01DATA
+        N DEV01DEP
+        D DEV02DATA
+        C DEV02COD
+        N DEV02DEP
+        D REP02DATA
+        D COMPENSADO
+        C OBS
+        C FINALIZADO
+        N CLIENTE
+    }
+```
+
 ---
 ## Tabela DBF: `mn03pg`
 > **Origem:** `mn03pg` (Driver: DBFCDX)
@@ -4374,6 +8208,42 @@
 
 **Indices vinculados:**
 - Tag: `MN03PG-1` Expressao: `STR(NRNOTA)+TIPFAT`
+
+```mermaid
+erDiagram
+    mn03pg {
+        N NRNOTA
+        C TIPFAT
+        C BANCO
+        C AGENCIA
+        C CONTA
+        C CHEQUE
+        D DATA
+        D DATADEP
+        N VALOR
+        C PREDATADO
+        D DATAPARA
+        N VALORDES
+        N VALORNEG
+        C CTACUSTO
+        D DEPDATA
+        N DEPBCO
+        C DEPAGC
+        C DEPCTA
+        D DEV01DATA
+        C DEV01COD
+        D DEP01DATA
+        N DEV01DEP
+        D DEV02DATA
+        C DEV02COD
+        N DEV02DEP
+        D REP02DATA
+        D COMPENSADO
+        C OBS
+        C FINALIZADO
+        N CLIENTE
+    }
+```
 
 ---
 ## Tabela DBF: `mn98`
@@ -4418,6 +8288,49 @@
 | AVISO | C | 1 | 0 |
 | MES | N | 2 | 0 |
 | ANO | N | 4 | 0 |
+
+```mermaid
+erDiagram
+    mn98 {
+        N NRNOTA
+        C TIPFAT
+        D DATA
+        N CLIENTE
+        C COGNOME
+        N PEDIDO
+        C DDD
+        C TELEFONE
+        C VENDEDOR
+        N TOTFAT
+        N SITUACAO
+        C BANCO
+        C NOMEBCO
+        N DOCBOL
+        N DOCDUP
+        D VENCIMENT
+        N VALOR
+        N NOTA
+        N DOCABATE
+        N ABATER
+        N TAXA
+        N DIAS
+        N JUROS
+        N VALATUAL
+        C OBS
+        C OBS1
+        C OBS2
+        C OBS3
+        C OBS4
+        D DATAPG
+        N VALORPG
+        N DIFERENCA
+        C FLUXO
+        N PREVATR
+        C AVISO
+        N MES
+        N ANO
+    }
+```
 
 ---
 ## Tabela DBF: `mn99`
@@ -4480,6 +8393,60 @@
 - Tag: `MN99-3` Expressao: `STR(FORNECEDO,5)+STR(NUMERO,8)`
 - Tag: `MN99-4` Expressao: `BANCO+DTOS(DATAPG)`
 
+```mermaid
+erDiagram
+    mn99 {
+        N NUMERO
+        N NRNOTA
+        C TIPFAT
+        C OPERACAO
+        D DATA
+        N FORNECEDO
+        C COGNOME
+        N PEDIDO
+        C DDD
+        C TELEFONE
+        C VENDEDOR
+        N TOTNF
+        N SITUACAO
+        C BANCO
+        C NOMEBCO
+        C DOCBOL
+        C DOCDUP
+        D VENCIMENT
+        N VALOR
+        N NOTA
+        N DOCABATE
+        N ABATER
+        N TAXA
+        N DIAS
+        N JUROS
+        N JURVAL
+        N VALATUAL
+        C OBS
+        C OBS1
+        C OBS2
+        C OBS3
+        C OBS4
+        D DATAPG
+        N VALORPG
+        N DIFERENCA
+        C NF_COMPLE
+        C CODCOMP
+        C IMPDUP
+        N PREVATR
+        C FLUXO
+        C TIPOCLI
+        N BCODEP
+        C AGCDEP
+        C CTADEP
+        C CONTA
+        C GERACOB
+        N MES
+        N ANO
+    }
+```
+
 ---
 ## Tabela DBF: `mo01`
 > **Origem:** `mo01` (Driver: DBFCDX)
@@ -4516,6 +8483,37 @@
 - Tag: `MO01-1` Expressao: `PEDIDO`
 - Tag: `MO01-2` Expressao: `STR(FORNECEDO,8)+DTOS(ENTREGA)+PEDIDOCLI`
 
+```mermaid
+erDiagram
+    mo01 {
+        N PEDIDO
+        N OS
+        C TIPOSERV
+        D DATA
+        N FORNECEDO
+        C COGNOME
+        C VENDEDOR
+        N COMISSAO
+        C ZONA
+        D DATABASE
+        C MATPRIMA
+        C CONDPAG
+        C CONSUMO
+        C PEDIDOCLI
+        N ICM
+        N TOTBICM
+        N TOTICM
+        N TOTBIPI
+        N TOTIPI
+        N TOTMER
+        N TOTNF
+        D ENTREGA
+        C BAIXAM
+        C TIPOPRG
+        N PEDCLIITE
+    }
+```
+
 ---
 ## Tabela DBF: `mo01bx`
 > **Origem:** `mo01bx` (Driver: DBFCDX)
@@ -4550,6 +8548,37 @@
 
 **Indices vinculados:**
 - Tag: `MO01BX-1` Expressao: `PEDIDO`
+
+```mermaid
+erDiagram
+    mo01bx {
+        N PEDIDO
+        N OS
+        C TIPOSERV
+        D DATA
+        N FORNECEDO
+        C COGNOME
+        C VENDEDOR
+        N COMISSAO
+        C ZONA
+        D DATABASE
+        C MATPRIMA
+        C CONDPAG
+        C CONSUMO
+        C PEDIDOCLI
+        N ICM
+        N TOTBICM
+        N TOTICM
+        N TOTBIPI
+        N TOTIPI
+        N TOTMER
+        N TOTNF
+        D ENTREGA
+        C BAIXAM
+        C TIPOPRG
+        N PEDCLIITE
+    }
+```
 
 ---
 ## Tabela DBF: `mo02`
@@ -4654,6 +8683,100 @@
 - Tag: `MO02-5` Expressao: `STR(FORNECEDO,5)+CODIGO+DTOS(ENTREGA)+STR(HORAPRG,5,2)`
 - Tag: `MO02-6` Expressao: `CODIGO+STR(LISTA,5)+COMPRA`
 
+```mermaid
+erDiagram
+    mo02 {
+        N PEDIDO
+        N OS
+        C TIPOSERV
+        D DATA
+        N FORNECEDO
+        C COGNOME
+        C VENDEDOR
+        N COMISSAO
+        C ZONA
+        D DATABASE
+        C MATPRIMA
+        C CONSUMO
+        N HORAPED
+        N HORAENT
+        N HORASAL
+        N HORAFAT
+        N QTDEPED
+        N QTDEENT
+        N QTDESAL
+        N QTDEFAT
+        N FABRICAR
+        N PESOUNI
+        C UNID
+        N ITEM
+        C CODIGO
+        C COMPRA
+        N LISTA
+        C NOME
+        C INDICE
+        N VALOR
+        N VALIND
+        N VALORMER
+        C CODIPI
+        N IPI
+        N VALORIPI
+        N BASEIPI
+        C CLASSIPI
+        C TIPI
+        N ICM
+        N VALORICM
+        N BASEICM
+        N VALORTOT
+        D ENTREGA
+        C OBSERVACAO
+        N NOTADEV
+        N DOCDEV
+        D DATADEV
+        N TOTDEV
+        N TOTSDEV
+        N DEV
+        N QTDEDEV
+        C UNIDEV
+        N PRCDEV
+        C CODDEV
+        N NOTADE2
+        N DOCDEV2
+        D DATADE2
+        N TOTDE2
+        N TOTSDE2
+        N DE2
+        N QTDEDE2
+        C UNIDE2
+        N PRCDE2
+        C CODDE2
+        C ALOS
+        N ALSE
+        C ALMA
+        C ALDE
+        C MBBN
+        C MBBP
+        C CODICM
+        C DIPICM
+        C DIPIPI
+        C RASTRO
+        C RASTR2
+        C GERAOF
+        C PLANTA
+        C PEDMEN
+        C FATURA
+        N AVEMBQ
+        C AVEMBC
+        D DATAIMP
+        N QTDEPRE
+        C CODMR01
+        N PCEMB
+        N PCEMBQ
+        N QTDEANT
+        N HORAPRG
+    }
+```
+
 ---
 ## Tabela DBF: `mo02bx`
 > **Origem:** `mo02bx` (Driver: DBFCDX)
@@ -4751,6 +8874,100 @@
 
 **Indices vinculados:**
 - Tag: `MO02BX-1` Expressao: `STR(PEDIDO,8,2)+STR(ITEM,2)`
+
+```mermaid
+erDiagram
+    mo02bx {
+        N PEDIDO
+        N OS
+        C TIPOSERV
+        D DATA
+        N FORNECEDO
+        C COGNOME
+        C VENDEDOR
+        N COMISSAO
+        C ZONA
+        D DATABASE
+        C MATPRIMA
+        C CONSUMO
+        N HORAPED
+        N HORAENT
+        N HORASAL
+        N HORAFAT
+        N QTDEPED
+        N QTDEENT
+        N QTDESAL
+        N QTDEFAT
+        N FABRICAR
+        N PESOUNI
+        C UNID
+        N ITEM
+        C CODIGO
+        C COMPRA
+        N LISTA
+        C NOME
+        C INDICE
+        N VALOR
+        N VALIND
+        N VALORMER
+        C CODIPI
+        N IPI
+        N VALORIPI
+        N BASEIPI
+        C CLASSIPI
+        C TIPI
+        N ICM
+        N VALORICM
+        N BASEICM
+        N VALORTOT
+        D ENTREGA
+        C OBSERVACAO
+        N NOTADEV
+        N DOCDEV
+        D DATADEV
+        N TOTDEV
+        N TOTSDEV
+        N DEV
+        N QTDEDEV
+        C UNIDEV
+        N PRCDEV
+        C CODDEV
+        N NOTADE2
+        N DOCDEV2
+        D DATADE2
+        N TOTDE2
+        N TOTSDE2
+        N DE2
+        N QTDEDE2
+        C UNIDE2
+        N PRCDE2
+        C CODDE2
+        C ALOS
+        N ALSE
+        C ALMA
+        C ALDE
+        C MBBN
+        C MBBP
+        C CODICM
+        C DIPICM
+        C DIPIPI
+        C RASTRO
+        C RASTR2
+        C GERAOF
+        C PLANTA
+        C PEDMEN
+        C FATURA
+        N AVEMBQ
+        C AVEMBC
+        D DATAIMP
+        N QTDEPRE
+        C CODMR01
+        N PCEMB
+        N PCEMBQ
+        N QTDEANT
+        N HORAPRG
+    }
+```
 
 ---
 ## Tabela DBF: `mo02x`
@@ -4850,6 +9067,100 @@
 **Indices vinculados:**
 - Tag: `MO02X-1` Expressao: `STR(PEDIDO,8,2)+STR(ITEM,2)`
 
+```mermaid
+erDiagram
+    mo02x {
+        N PEDIDO
+        N OS
+        C TIPOSERV
+        D DATA
+        N FORNECEDO
+        C COGNOME
+        C VENDEDOR
+        N COMISSAO
+        C ZONA
+        D DATABASE
+        C MATPRIMA
+        C CONSUMO
+        N HORAPED
+        N HORAENT
+        N HORASAL
+        N HORAFAT
+        N QTDEPED
+        N QTDEENT
+        N QTDESAL
+        N QTDEFAT
+        N FABRICAR
+        N PESOUNI
+        C UNID
+        N ITEM
+        C CODIGO
+        C COMPRA
+        N LISTA
+        C NOME
+        C INDICE
+        N VALOR
+        N VALIND
+        N VALORMER
+        C CODIPI
+        N IPI
+        N VALORIPI
+        N BASEIPI
+        C CLASSIPI
+        C TIPI
+        N ICM
+        N VALORICM
+        N BASEICM
+        N VALORTOT
+        D ENTREGA
+        C OBSERVACAO
+        N NOTADEV
+        N DOCDEV
+        D DATADEV
+        N TOTDEV
+        N TOTSDEV
+        N DEV
+        N QTDEDEV
+        C UNIDEV
+        N PRCDEV
+        C CODDEV
+        N NOTADE2
+        N DOCDEV2
+        D DATADE2
+        N TOTDE2
+        N TOTSDE2
+        N DE2
+        N QTDEDE2
+        C UNIDE2
+        N PRCDE2
+        C CODDE2
+        C ALOS
+        N ALSE
+        C ALMA
+        C ALDE
+        C MBBN
+        C MBBP
+        C CODICM
+        C DIPICM
+        C DIPIPI
+        C RASTRO
+        C RASTR2
+        C GERAOF
+        C PLANTA
+        C PEDMEN
+        C FATURA
+        N AVEMBQ
+        C AVEMBC
+        D DATAIMP
+        N QTDEPRE
+        C CODMR01
+        N PCEMB
+        N PCEMBQ
+        N QTDEANT
+        N HORAPRG
+    }
+```
+
 ---
 ## Tabela DBF: `mofp`
 > **Origem:** `mofp` (Driver: DBFCDX)
@@ -4870,6 +9181,20 @@
 - Tag: `MOFP-2` Expressao: `CODIGO+STR(SEQ,3)+STR(SSQ,3)`
 - Tag: `MOFP-3` Expressao: `ME01COD`
 
+```mermaid
+erDiagram
+    mofp {
+        N FP
+        C CODIGO
+        N SEQ
+        N SSQ
+        C ME01COD
+        D DATA
+        N QTDEPF
+        N QTDEBX
+    }
+```
+
 ---
 ## Tabela DBF: `mosb01`
 > **Origem:** `mosb01` (Driver: DBFCDX)
@@ -4885,6 +9210,18 @@
 
 **Indices vinculados:**
 - Tag: `MOSB01-1` Expressao: `NUMERO`
+
+```mermaid
+erDiagram
+    mosb01 {
+        N NUMERO
+        D DATA
+        N FORNECEDO
+        C COGNOME
+        C CFONEW
+        C TIPOFRE
+    }
+```
 
 ---
 ## Tabela DBF: `mosb02`
@@ -4917,6 +9254,33 @@
 **Indices vinculados:**
 - Tag: `MOSB02-1` Expressao: `STR(NUMERO,8)+STR(SEQ,2)`
 - Tag: `MOSB02-2` Expressao: `STR(NUMERO,8)+TIPOENT`
+
+```mermaid
+erDiagram
+    mosb02 {
+        N NUMERO
+        C CODIGO
+        N SEQ
+        C UNID
+        N QTDE
+        N PESO
+        C TIPOENT
+        C NOME
+        N PRECO
+        C RASTRO
+        C RASTR2
+        N LISTA
+        C TIPOSERV
+        C CODIPI
+        C PISCON
+        N REDICM
+        C UNIDTAB
+        N PRECTAB
+        C CODITAB
+        C OBS
+        C INDICE
+    }
+```
 
 ---
 ## Tabela DBF: `mp01`
@@ -4981,6 +9345,63 @@
 - Tag: `MP01-2` Expressao: `NOME`
 - Tag: `MP01-3` Expressao: `CODFOLHA`
 
+```mermaid
+erDiagram
+    mp01 {
+        C CODIGO
+        C NOME
+        C COGNOME
+        C UNIDADE
+        C NOM2
+        N QTDEMIN
+        N VALOR
+        N ESTQENT
+        N ESTQSAI
+        N ESTQSAL
+        N ESTQINI
+        N ESTQPRO
+        C SUBAPL
+        D DATABALAN
+        N DIASENT
+        N DIASEST
+        N ESTQMIN
+        N SAIMIN
+        D DATMIN
+        C CHT
+        N CHM
+        N CHS
+        N CHD
+        C AREA
+        C CCCLI
+        C NORMA
+        C APLICACAO
+        C OBS01
+        C OBS02
+        C OBS03
+        N QTDEEQ
+        N CCM
+        N ULTPRC
+        C ULTUND
+        D ULTDATA
+        N CODFOLHA
+        N REDICM
+        C GRUPOUTL
+        C SETOR
+        C TIPTRA
+        C CODMW
+        C COGCUSTO
+        N LEADTIME
+        C PISCON
+        N TURNO
+        N MININD
+        N TURN2
+        N QTDEE2
+        N QTDEAPU
+        N CRMSEL
+        C CODIGOINT
+    }
+```
+
 ---
 ## Tabela DBF: `mp01a`
 > **Origem:** `mp01a` (Driver: DBFCDX)
@@ -4995,6 +9416,16 @@
 **Indices vinculados:**
 - Tag: `MP01A-1` Expressao: `CODIGO+STR(SEQ,3)`
 - Tag: `MP01A-2` Expressao: `CODMPSB+STR(SEQ,3)`
+
+```mermaid
+erDiagram
+    mp01a {
+        C CODIGO
+        N SEQ
+        C CODMPSB
+        C NOMMPSB
+    }
+```
 
 ---
 ## Tabela DBF: `mp02`
@@ -5113,6 +9544,117 @@
 - Tag: `MP02-2` Expressao: `NOME`
 - Tag: `MP02-3` Expressao: `CODFOLHA`
 
+```mermaid
+erDiagram
+    mp02 {
+        C CODIGO
+        C COGNOME
+        C NOME
+        C NOM2
+        C UNIDADE
+        N QTDEMIN
+        N VALOR
+        N VALORC
+        N ESTQENT
+        N ESTQSAI
+        N ESTQSAL
+        N ESTQINI
+        N ESTQPRO
+        D DATABALAN
+        N DIASENT
+        N DIASEST
+        N ESTQMIN
+        N SAIMIN
+        D DATMIN
+        C CHT
+        N CHM
+        N CHS
+        N CHD
+        C AREA
+        C CCCLI
+        C NORMA
+        C APLICACAO
+        C SUBAPL
+        C OBS01
+        C OBS02
+        C OBS03
+        C DES01
+        C DES02
+        C DES03
+        C DES04
+        C DES05
+        C DES06
+        C DES07
+        C DES08
+        C DES09
+        C DES10
+        C REQ01
+        C REQ02
+        C REQ03
+        C REQ04
+        C REQ05
+        C REQ06
+        C REQ07
+        C REQ08
+        C REQ09
+        C REQ10
+        C RED01
+        C RED02
+        C RED03
+        C RED04
+        C RED05
+        C RED06
+        C RED07
+        C RED08
+        C RED09
+        C RED10
+        N QTDEEQ
+        N CCM
+        N ULTPRC
+        C ULTUND
+        D ULTDATA
+        N CODFOLHA
+        N REDICM
+        C GRUPOUTL
+        C SETOR
+        C TIPTRA
+        C CODMW
+        D DATATAL
+        C ESCOLA
+        N LEADTIME
+        C PISCON
+        N TURNO
+        C ESCOLD
+        C SUPIME
+        C EXP01
+        C EXP02
+        C EXP03
+        C HAB01
+        C HAB02
+        C HAB03
+        D DATAREV
+        C ESCOLA2
+        C ESCOLD2
+        C ESCOLA3
+        C ESCOLD3
+        N MININD
+        N QTDEE2
+        N TURN2
+        N QTDEAPU
+        N CRMSEL
+        C CODIGOINT
+        N ELANUM
+        C ELANOM
+        D ELADAT
+        N ANANUM
+        C ANANOM
+        D ANADAT
+        N APRNUM
+        C APRNOM
+        D APRDAT
+    }
+```
+
 ---
 ## Tabela DBF: `mp02a`
 > **Origem:** `mp02a` (Driver: DBFCDX)
@@ -5128,6 +9670,16 @@
 - Tag: `MP02A-1` Expressao: `CODIGO+STR(SEQ,3)`
 - Tag: `MP02A-2` Expressao: `CODMPSB+STR(SEQ,3)`
 
+```mermaid
+erDiagram
+    mp02a {
+        C CODIGO
+        N SEQ
+        C CODMPSB
+        C NOMMPSB
+    }
+```
+
 ---
 ## Tabela DBF: `mp02tal`
 > **Origem:** `mp02tal` (Driver: DBFCDX)
@@ -5141,6 +9693,16 @@
 
 **Indices vinculados:**
 - Tag: `CHAVE` Expressao: `CODIGO+CURSO+STR(NUMFUN,8)`
+
+```mermaid
+erDiagram
+    mp02tal {
+        C CODIGO
+        C CURSO
+        N NUMFUN
+        N TREIN
+    }
+```
 
 ---
 ## Tabela DBF: `mp03`
@@ -5209,6 +9771,67 @@
 - Tag: `MP03-2` Expressao: `NOME`
 - Tag: `MP03-3` Expressao: `CODIGOINT`
 
+```mermaid
+erDiagram
+    mp03 {
+        C CODIGO
+        C NOME
+        C COGNOME
+        C UNIDADE
+        C NOM2
+        N QTDEMIN
+        N VALOR
+        N ESTQENT
+        N ESTQSAI
+        N ESTQSAL
+        N ESTQINI
+        N ESTQPRO
+        D DATABALAN
+        N DIASENT
+        N DIASEST
+        N ESTQMIN
+        N SAIMIN
+        D DATMIN
+        C CHT
+        N CHM
+        N CHS
+        N CHD
+        C AREA
+        C CCCLI
+        C NORMA
+        C APLICACAO
+        C SUBAPL
+        C SUBPROD
+        C OBS01
+        C OBS02
+        C OBS03
+        N QTDEEQ
+        N ULTPRC
+        C ULTUND
+        D ULTDATA
+        N CCM
+        N CODFOLHA
+        N REDICM
+        C GRUPOUTL
+        C SETOR
+        C TIPTRA
+        C CODMW
+        N LEADTIME
+        C PISCON
+        N TURNO
+        C CODIPI
+        C CLASSIPI
+        N IPI
+        N MININD
+        N QTDEE2
+        N TURN2
+        N QTDEAPU
+        N CRMSEL
+        C CTACONTB
+        C CODIGOINT
+    }
+```
+
 ---
 ## Tabela DBF: `mp03a`
 > **Origem:** `mp03a` (Driver: DBFCDX)
@@ -5223,6 +9846,16 @@
 **Indices vinculados:**
 - Tag: `MP03A-1` Expressao: `CODIGO+STR(SEQ,3)`
 - Tag: `MP03A-2` Expressao: `CODMPSB+STR(SEQ,3)`
+
+```mermaid
+erDiagram
+    mp03a {
+        C CODIGO
+        N SEQ
+        C CODMPSB
+        C NOMMPSB
+    }
+```
 
 ---
 ## Tabela DBF: `mp03x`
@@ -5292,6 +9925,68 @@
 - Tag: `MP03X-2` Expressao: `NOME`
 - Tag: `MP03X-3` Expressao: `CODIGOINT`
 
+```mermaid
+erDiagram
+    mp03x {
+        C CODIGO
+        C NOME
+        C COGNOME
+        C UNIDADE
+        C NOM2
+        N QTDEMIN
+        N VALOR
+        N ESTQENT
+        N ESTQSAI
+        N ESTQSAL
+        N ESTQINI
+        N ESTQPRO
+        D DATABALAN
+        N DIASENT
+        N DIASEST
+        N ESTQMIN
+        N SAIMIN
+        D DATMIN
+        C CHT
+        N CHM
+        N CHS
+        N CHD
+        C AREA
+        C CCCLI
+        C NORMA
+        C APLICACAO
+        C SUBAPL
+        C SUBPROD
+        C OBS01
+        C OBS02
+        C OBS03
+        N QTDEEQ
+        N ULTPRC
+        C ULTUND
+        D ULTDATA
+        N CCM
+        N CODFOLHA
+        N REDICM
+        C GRUPOUTL
+        C SETOR
+        C TIPTRA
+        C CODMW
+        N LEADTIME
+        C PISCON
+        N TURNO
+        C CODIPI
+        C CLASSIPI
+        N IPI
+        N MININD
+        N QTDEE2
+        N TURN2
+        N QTDEAPU
+        N CRMSEL
+        C CTACONTB
+        C CODIGOINT
+        C CLICODINT
+    }
+```
+
 ---
 ## Tabela DBF: `mp04`
 > **Origem:** `mp04` (Driver: DBFCDX)
@@ -5336,6 +10031,43 @@
 - Tag: `MP04-3` Expressao: `CNUMERO`
 - Tag: `MP04-4` Expressao: `TABTEC`
 
+```mermaid
+erDiagram
+    mp04 {
+        N TECNICO
+        C CNUMERO
+        C COGTEC
+        C NOMTEC
+        C TABTEC
+        C AREA
+        C ARE2
+        C SETOR
+        D ADMITIDO
+        D DEMITIDO
+        C APONTA
+        D DATAEXM
+        D DATAHAB
+        D DATAVIS
+        C EMAILINT
+        C EMAILEXT
+        L SOLDADOR
+        L EMPILHAD
+        L PONTOROL
+        C OBSESCOLA
+        C OBSTECNO
+        C OBSUNIVER
+        N NUMFOLHA
+        L ESCCOMPR
+        C ESCCOMOB
+        C OBSPOS
+        C ESCRAIS
+        N NUMREGANT
+        N NUMEMPANT
+        D DATTRANSF
+        C CPF
+    }
+```
+
 ---
 ## Tabela DBF: `mp04a`
 > **Origem:** `mp04a` (Driver: DBFCDX)
@@ -5352,6 +10084,18 @@
 **Indices vinculados:**
 - Tag: `TECNICO` Expressao: `TECNICO`
 - Tag: `CURSO` Expressao: `CURSO`
+
+```mermaid
+erDiagram
+    mp04a {
+        N TECNICO
+        C CURSO
+        C DESCUR
+        N TREIN
+        N NUMANT
+        N CARHOR
+    }
+```
 
 ---
 ## Tabela DBF: `mp04c`
@@ -5370,6 +10114,18 @@
 - Tag: `TECNICO` Expressao: `TECNICO`
 - Tag: `CURSO` Expressao: `CURSO`
 
+```mermaid
+erDiagram
+    mp04c {
+        N TECNICO
+        C CURSO
+        C DESCUR
+        N TREIN
+        N NUMANT
+        N CARHOR
+    }
+```
+
 ---
 ## Tabela DBF: `mp05`
 > **Origem:** `mp05` (Driver: DBFCDX)
@@ -5387,6 +10143,19 @@
 **Indices vinculados:**
 - Tag: `MP05-1` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    mp05 {
+        C CODIGO
+        C DESCRI
+        C RESPON
+        C SUPLE
+        C SETOR
+        C CARGO
+        L PPAP
+    }
+```
+
 ---
 ## Tabela DBF: `mp07`
 > **Origem:** `mp07` (Driver: DBFCDX)
@@ -5400,6 +10169,15 @@
 **Indices vinculados:**
 - Tag: `MP07-1` Expressao: `ARMARIO`
 - Tag: `MP07-2` Expressao: `NUMERO`
+
+```mermaid
+erDiagram
+    mp07 {
+        N ARMARIO
+        N NUMERO
+        C NOME
+    }
+```
 
 ---
 ## Tabela DBF: `mp08`
@@ -5422,6 +10200,22 @@
 - Tag: `MP08-1` Expressao: `NUMERO`
 - Tag: `MP08-2` Expressao: `NUMMP04`
 - Tag: `MP08-3` Expressao: `PRAZO`
+
+```mermaid
+erDiagram
+    mp08 {
+        N NUMERO
+        N NUMMP04
+        D DATA
+        C TIPO
+        C CODIGO
+        N QTDE
+        D PRAZO
+        N PRAZOD
+        D RETORNO
+        N PRORROGA
+    }
+```
 
 ---
 ## Tabela DBF: `mp91`
@@ -5446,6 +10240,24 @@
 - Tag: `MP91-1` Expressao: `ARQUIVO+DOCUMENTO`
 - Tag: `MP91-2` Expressao: `CODIGO+DTOS(DATA)`
 
+```mermaid
+erDiagram
+    mp91 {
+        C ARQUIVO
+        C DOCUMENTO
+        C OPERACAO
+        C USUARIO
+        N QTDE
+        N OLDQTDE
+        D DATA
+        N NUMERO
+        C CODIGO
+        C RASTRO
+        N ESTQXXX
+        N ESTQYYY
+    }
+```
+
 ---
 ## Tabela DBF: `mp92`
 > **Origem:** `mp92` (Driver: DBFCDX)
@@ -5469,6 +10281,24 @@
 - Tag: `MP92-1` Expressao: `ARQUIVO+DOCUMENTO`
 - Tag: `MP92-2` Expressao: `CODIGO+DTOS(DATA)`
 
+```mermaid
+erDiagram
+    mp92 {
+        C ARQUIVO
+        C DOCUMENTO
+        C OPERACAO
+        C USUARIO
+        N QTDE
+        N OLDQTDE
+        D DATA
+        N NUMERO
+        C CODIGO
+        C RASTRO
+        N ESTQXXX
+        N ESTQYYY
+    }
+```
+
 ---
 ## Tabela DBF: `mp93`
 > **Origem:** `mp93` (Driver: DBFCDX)
@@ -5491,6 +10321,24 @@
 **Indices vinculados:**
 - Tag: `MP93-1` Expressao: `ARQUIVO+DOCUMENTO`
 - Tag: `MP93-2` Expressao: `CODIGO+DTOS(DATA)`
+
+```mermaid
+erDiagram
+    mp93 {
+        C ARQUIVO
+        C DOCUMENTO
+        C OPERACAO
+        C USUARIO
+        N QTDE
+        N OLDQTDE
+        D DATA
+        N NUMERO
+        C CODIGO
+        C RASTRO
+        N ESTQXXX
+        N ESTQYYY
+    }
+```
 
 ---
 ## Tabela DBF: `mq01`
@@ -5558,6 +10406,67 @@
 - Tag: `MQ01-1` Expressao: `CODIGO`
 - Tag: `MQ01-2` Expressao: `NOME`
 
+```mermaid
+erDiagram
+    mq01 {
+        C CODIGO
+        C UNIDADE
+        C NOME
+        C NOM2
+        C CTACONTB
+        C APLICACAO
+        C LOCACAO
+        N PESLIQ
+        C CODIPI
+        D COTDATA
+        N COTFORN
+        C COTCOGN
+        C COTCONT
+        N COTVAL
+        C COTIN1
+        C COTIN2
+        D COTDA1
+        D COTDA2
+        N COTCO1
+        N COTCO2
+        N COTIV1
+        N COTIV2
+        D DATABALAN
+        N ESTQINI
+        N ESTQENT
+        N ESTQSAI
+        N ESTQSAL
+        N ESTQMIN
+        N ESTQPRO
+        N SAIMIN
+        D DATMIN
+        N DIASENT
+        N DIASEST
+        C FREPES
+        N PRECUST
+        N DIMX
+        N DIMY
+        N DIMZ
+        C CLASSIPI
+        N CUSTF
+        N MMENSAL
+        N MINDI
+        N MININD
+        N CAUTO
+        N IPI
+        C CCCLI
+        N VALINV
+        C INSTRU
+        N ULTPRC
+        C ULTUND
+        D ULTDATA
+        N CCM
+        C CONSIG
+        C CODMW
+        C PISCON
+    }
+```
+
 ---
 ## Tabela DBF: `mq01i`
 > **Origem:** `mq01i` (Driver: DBFCDX)
@@ -5577,6 +10486,25 @@
 | TIPA | C | 3 | 0 |
 | UNIDREF | C | 4 | 0 |
 | QTDEREF | N | 8 | 2 |
+
+```mermaid
+erDiagram
+    mq01i {
+        C CODIGO
+        N ITEM
+        C ESPE
+        C ENCO
+        N VALPAD
+        N VALMAX
+        N VALMIN
+        N TOLMAX
+        N TOLMIN
+        C UNIDADE
+        C TIPA
+        C UNIDREF
+        N QTDEREF
+    }
+```
 
 ---
 ## Tabela DBF: `mq01x`
@@ -5649,6 +10577,72 @@
 - Tag: `MQ01X-1` Expressao: `CODIGO`
 - Tag: `MQ01X-2` Expressao: `NOME`
 - Tag: `MQ01X-3` Expressao: `CODIGOINT`
+
+```mermaid
+erDiagram
+    mq01x {
+        C CODIGO
+        C UNIDADE
+        C NOME
+        C NOM2
+        C CTACONTB
+        C APLICACAO
+        C LOCACAO
+        N PESLIQ
+        C CODIPI
+        D COTDATA
+        N COTFORN
+        C COTCOGN
+        C COTCONT
+        N COTVAL
+        C COTIN1
+        C COTIN2
+        D COTDA1
+        D COTDA2
+        N COTCO1
+        N COTCO2
+        N COTIV1
+        N COTIV2
+        D DATABALAN
+        N ESTQINI
+        N ESTQENT
+        N ESTQSAI
+        N ESTQSAL
+        N ESTQMIN
+        N ESTQPRO
+        N SAIMIN
+        D DATMIN
+        N DIASENT
+        N DIASEST
+        C FREPES
+        N PRECUST
+        N DIMX
+        N DIMY
+        N DIMZ
+        C CLASSIPI
+        N CUSTF
+        N MMENSAL
+        N MINDI
+        N MININD
+        N CAUTO
+        N IPI
+        C CCCLI
+        N VALINV
+        C INSTRU
+        N ULTPRC
+        C ULTUND
+        D ULTDATA
+        N CCM
+        C CONSIG
+        C CODMW
+        C PISCON
+        N PLTINV
+        N QTDEAPU
+        N CRMSEL
+        C CODIGOINT
+        C CLICODINT
+    }
+```
 
 ---
 ## Tabela DBF: `mq02`
@@ -5724,6 +10718,76 @@
 **Indices vinculados:**
 - Tag: `MQ02-1` Expressao: `CODIGO+STR(COTFORN)`
 
+```mermaid
+erDiagram
+    mq02 {
+        C CODIGO
+        C UNIDADE
+        C NOME
+        D COTDATA
+        N COTFORN
+        C COTCOGN
+        C COTCONT
+        N COTVAL
+        C COTIN1
+        C COTIN2
+        D COTDA1
+        D COTDA2
+        N COTCO1
+        N COTCO2
+        N COTIV1
+        N COTIV2
+        D COTM01
+        D COTM02
+        D COTM03
+        D COTM04
+        D COTM05
+        D COTM06
+        D COTM07
+        D COTM08
+        D COTM09
+        D COTM10
+        D COTM11
+        D COTM12
+        N VALM01
+        N VALM02
+        N VALM03
+        N VALM04
+        N VALM05
+        N VALM06
+        N VALM07
+        N VALM08
+        N VALM09
+        N VALM10
+        N VALM11
+        N VALM12
+        N INDM01
+        N INDM02
+        N INDM03
+        N INDM04
+        N INDM05
+        N INDM06
+        N INDM07
+        N INDM08
+        N INDM09
+        N INDM10
+        N INDM11
+        N INDM12
+        N CONM01
+        N CONM02
+        N CONM03
+        N CONM04
+        N CONM05
+        N CONM06
+        N CONM07
+        N CONM08
+        N CONM09
+        N CONM10
+        N CONM11
+        N CONM12
+    }
+```
+
 ---
 ## Tabela DBF: `mq03`
 > **Origem:** `mq03` (Driver: DBFCDX)
@@ -5760,6 +10824,36 @@
 - Tag: `MQ03-2` Expressao: `STR(NRNOTAINI,8)+CODIGO`
 - Tag: `MQ03-3` Expressao: `STR(CLIENTE,8)+CODIGO`
 - Tag: `MQ03-4` Expressao: `CLIENTE`
+
+```mermaid
+erDiagram
+    mq03 {
+        C CODIGO
+        C UNIDADE
+        C NOME
+        N NRNOTAINI
+        C DIGCTR
+        C SERIE
+        D DATAFAT
+        N OSINI
+        N VALORINI
+        N TOTKGINI
+        N NRNOTASAI
+        N TOTKGANT
+        N TOTKGSAI
+        N TOTKGEST
+        C TIPOCLI
+        N CLIENTE
+        C COGNOME
+        D DATASAI
+        N CRM
+        N PESOREF
+        C CLASSIPI
+        N PRECO
+        C TIPOENT
+        C OBS
+    }
+```
 
 ---
 ## Tabela DBF: `mq03bx`
@@ -5798,6 +10892,36 @@
 - Tag: `MQ03BX-3` Expressao: `NRNOTAINI`
 - Tag: `MQ03BX-4` Expressao: `CLIENTE`
 
+```mermaid
+erDiagram
+    mq03bx {
+        C CODIGO
+        C UNIDADE
+        C NOME
+        N NRNOTAINI
+        C DIGCTR
+        C SERIE
+        D DATAFAT
+        N OSINI
+        N VALORINI
+        N TOTKGINI
+        N NRNOTASAI
+        N TOTKGANT
+        N TOTKGSAI
+        N TOTKGEST
+        C TIPOCLI
+        N CLIENTE
+        C COGNOME
+        D DATASAI
+        N CRM
+        N PESOREF
+        C CLASSIPI
+        N PRECO
+        C TIPOENT
+        C OBS
+    }
+```
+
 ---
 ## Tabela DBF: `mq04`
 > **Origem:** `mq04` (Driver: DBFCDX)
@@ -5818,6 +10942,23 @@
 
 **Indices vinculados:**
 - Tag: `MQ04-1` Expressao: `CODIGO+STR(SEQ,5)`
+
+```mermaid
+erDiagram
+    mq04 {
+        C CODIGO
+        N SEQ
+        D DATA
+        C HISTORICO
+        C TIPOENT
+        N QTDDE
+        N PRECO
+        N TOTQTDDE
+        N TOTPRECO
+        N TOTITEM
+        N MEDIO
+    }
+```
 
 ---
 ## Tabela DBF: `mq99`
@@ -5841,6 +10982,24 @@
 **Indices vinculados:**
 - Tag: `MQ99-1` Expressao: `ARQUIVO+DOCUMENTO`
 - Tag: `MQ99-2` Expressao: `CODIGO+DTOS(DATA)`
+
+```mermaid
+erDiagram
+    mq99 {
+        C ARQUIVO
+        C DOCUMENTO
+        C OPERACAO
+        C USUARIO
+        N QTDE
+        N OLDQTDE
+        D DATA
+        N NUMERO
+        C CODIGO
+        C RASTRO
+        N ESTQXXX
+        N ESTQYYY
+    }
+```
 
 ---
 ## Tabela DBF: `mr01`
@@ -5910,6 +11069,70 @@
 **Indices vinculados:**
 - Tag: `MR01-1` Expressao: `CODIGO`
 - Tag: `MR01-2` Expressao: `NOME`
+
+```mermaid
+erDiagram
+    mr01 {
+        C CODIGO
+        C UNIDADE
+        C NOME
+        C NOM2
+        C CTACONTB
+        C APLICACAO
+        C LOCACAO
+        N PESLIQ
+        C CODIPI
+        D COTDATA
+        N COTFORN
+        C COTCOGN
+        C COTCONT
+        N COTVAL
+        C COTIN1
+        C COTIN2
+        D COTDA1
+        D COTDA2
+        N COTCO1
+        N COTCO2
+        N COTIV1
+        N COTIV2
+        D DATABALAN
+        N ESTQINI
+        N ESTQENT
+        N ESTQSAI
+        N ESTQSAL
+        N ESTQMIN
+        N ESTQPRO
+        N SAIMIN
+        D DATMIN
+        N DIASENT
+        N DIASEST
+        C FREPES
+        N PRECUST
+        N DIMX
+        N DIMY
+        N DIMZ
+        C CLASSIPI
+        N CUSTF
+        N MMENSAL
+        N MINDI
+        N MININD
+        N CAUTO
+        N IPI
+        C CCCLI
+        N VALINV
+        C INSTRU
+        N ULTPRC
+        C ULTUND
+        D ULTDATA
+        N CCM
+        C CONSIG
+        C CODMW
+        C PISCON
+        N PLTINV
+        N QTDEAPU
+        N CRMSEL
+    }
+```
 
 ---
 ## Tabela DBF: `mr02`
@@ -5985,6 +11208,76 @@
 **Indices vinculados:**
 - Tag: `MR02-1` Expressao: `CODIGO+STR(COTFORN)`
 
+```mermaid
+erDiagram
+    mr02 {
+        C CODIGO
+        C UNIDADE
+        C NOME
+        D COTDATA
+        N COTFORN
+        C COTCOGN
+        C COTCONT
+        N COTVAL
+        C COTIN1
+        C COTIN2
+        D COTDA1
+        D COTDA2
+        N COTCO1
+        N COTCO2
+        N COTIV1
+        N COTIV2
+        D COTM01
+        D COTM02
+        D COTM03
+        D COTM04
+        D COTM05
+        D COTM06
+        D COTM07
+        D COTM08
+        D COTM09
+        D COTM10
+        D COTM11
+        D COTM12
+        N VALM01
+        N VALM02
+        N VALM03
+        N VALM04
+        N VALM05
+        N VALM06
+        N VALM07
+        N VALM08
+        N VALM09
+        N VALM10
+        N VALM11
+        N VALM12
+        N INDM01
+        N INDM02
+        N INDM03
+        N INDM04
+        N INDM05
+        N INDM06
+        N INDM07
+        N INDM08
+        N INDM09
+        N INDM10
+        N INDM11
+        N INDM12
+        N CONM01
+        N CONM02
+        N CONM03
+        N CONM04
+        N CONM05
+        N CONM06
+        N CONM07
+        N CONM08
+        N CONM09
+        N CONM10
+        N CONM11
+        N CONM12
+    }
+```
+
 ---
 ## Tabela DBF: `mr03`
 > **Origem:** `mr03` (Driver: DBFCDX)
@@ -6025,6 +11318,40 @@
 - Tag: `MR03-2` Expressao: `STR(NRNOTAINI,8)+CODIGO`
 - Tag: `MR03-3` Expressao: `STR(CLIENTE,8)+CODIGO`
 - Tag: `MR03-4` Expressao: `CLIENTE`
+
+```mermaid
+erDiagram
+    mr03 {
+        C CODIGO
+        C UNIDADE
+        C NOME
+        N NRNOTAINI
+        C DIGCTR
+        C SERIE
+        D DATAFAT
+        N OSINI
+        N VALORINI
+        N TOTKGINI
+        N NRNOTASAI
+        N TOTKGANT
+        N TOTKGSAI
+        N TOTKGEST
+        C TIPOCLI
+        N CLIENTE
+        C COGNOME
+        D DATASAI
+        N CRM
+        N PESOREF
+        C CLASSIPI
+        N PRECO
+        C TIPOENT
+        C OBS
+        C RASTRO
+        N DIFSALDO
+        C LOCAL
+        N QTDEEMB
+    }
+```
 
 ---
 ## Tabela DBF: `mr03bx`
@@ -6067,6 +11394,40 @@
 - Tag: `MR03BX-3` Expressao: `NRNOTAINI`
 - Tag: `MR03BX-4` Expressao: `CLIENTE`
 
+```mermaid
+erDiagram
+    mr03bx {
+        C CODIGO
+        C UNIDADE
+        C NOME
+        N NRNOTAINI
+        C DIGCTR
+        C SERIE
+        D DATAFAT
+        N OSINI
+        N VALORINI
+        N TOTKGINI
+        N NRNOTASAI
+        N TOTKGANT
+        N TOTKGSAI
+        N TOTKGEST
+        C TIPOCLI
+        N CLIENTE
+        C COGNOME
+        D DATASAI
+        N CRM
+        N PESOREF
+        C CLASSIPI
+        N PRECO
+        C TIPOENT
+        C OBS
+        C RASTRO
+        N DIFSALDO
+        C LOCAL
+        N QTDEEMB
+    }
+```
+
 ---
 ## Tabela DBF: `mr04`
 > **Origem:** `mr04` (Driver: DBFCDX)
@@ -6087,6 +11448,23 @@
 
 **Indices vinculados:**
 - Tag: `MR04-1` Expressao: `CODIGO+STR(SEQ,5)`
+
+```mermaid
+erDiagram
+    mr04 {
+        C CODIGO
+        N SEQ
+        D DATA
+        C HISTORICO
+        C TIPOENT
+        N QTDDE
+        N PRECO
+        N TOTQTDDE
+        N TOTPRECO
+        N TOTITEM
+        N MEDIO
+    }
+```
 
 ---
 ## Tabela DBF: `mr99`
@@ -6111,6 +11489,24 @@
 - Tag: `MR99-1` Expressao: `ARQUIVO+DOCUMENTO`
 - Tag: `MR99-2` Expressao: `CODIGO+DTOS(DATA)`
 
+```mermaid
+erDiagram
+    mr99 {
+        C ARQUIVO
+        C DOCUMENTO
+        C OPERACAO
+        C USUARIO
+        N QTDE
+        N OLDQTDE
+        D DATA
+        N NUMERO
+        C CODIGO
+        C RASTRO
+        N ESTQXXX
+        N ESTQYYY
+    }
+```
+
 ---
 ## Tabela DBF: `mrms`
 > **Origem:** `mrms` (Driver: DBFCDX)
@@ -6124,6 +11520,16 @@
 
 **Indices vinculados:**
 - Tag: `MRMS-1` Expressao: `CODMS01+STR(CODMA01,8)`
+
+```mermaid
+erDiagram
+    mrms {
+        C CODMS01
+        C CODMR01
+        N CODMA01
+        N PCEMB
+    }
+```
 
 ---
 ## Tabela DBF: `ms01`
@@ -6225,6 +11631,98 @@
 - Tag: `MS01-4` Expressao: `STR(FORNECEDO)+CODIGO`
 - Tag: `MS01-5` Expressao: `FORNECEDO`
 
+```mermaid
+erDiagram
+    ms01 {
+        C CODIGO
+        N FORNECEDO
+        N CLIPCP
+        C COMPRA
+        C UNID
+        C NOME
+        C NOM2
+        C CODIPI
+        D DATABALAN
+        N ESTQINI
+        N ESTQENT
+        N ESTQSAI
+        N ESTQSAL
+        N ESTQMIN
+        N ESTQPRO
+        N SAIMIN
+        D DATMIN
+        N DIASENT
+        N DIASEST
+        N PESOUNI
+        N VALDOLAR
+        C INDICE
+        N VALIND
+        C LOCACAO
+        N DIACOM
+        N DIAENT
+        N PERTOL
+        N LMINIMO
+        N TEMP
+        C UNIDADE
+        N PARTI
+        N PPLAN
+        N CUSTF
+        C NORMAT
+        C REVI
+        C DELIVERY
+        C USING
+        C EQUIP
+        N QTDEETI
+        N VALINV
+        C SEQAREA
+        C ATIVO
+        C OPCAO
+        N PESUNIPF
+        N PESEMBPF
+        C PRODUSO
+        C IMPOSTO
+        C BAIXAFAT
+        C TIPOGER
+        N MIND
+        N MININD
+        N CCM
+        N ULTPRC
+        C ULTUND
+        D ULTDATA
+        C PLANTAFAB
+        C MODELO
+        C PART_NUM
+        C PLT
+        C DUNS
+        C PART_NAME
+        N QTDEMBA
+        C CONTNER
+        C DLOC
+        C DOCK_STCK
+        C EMBAL
+        C CODMW
+        C SAILISTA
+        N PCPRGMED
+        N PCPRGHOR
+        D ULTIMOFA
+        N ULTIMONF
+        C PISCON
+        N FILIAL
+        C TIPOQUA
+        N IPI
+        C CLASSIPI
+        N PRECUST
+        N PLTINV
+        N VALFATINV
+        N QTDEAPU
+        N CRMSEL
+        C CODIGOINT
+        C CLICODINT
+        D PRIFATDAT
+        N PRIFATNF
+    }
+```
+
 ---
 ## Tabela DBF: `ms01p`
 > **Origem:** `ms01p` (Driver: DBFCDX)
@@ -6237,6 +11735,15 @@
 
 **Indices vinculados:**
 - Tag: `MS01P-1` Expressao: `CODIGO+STR(FORNECEDO,5)`
+
+```mermaid
+erDiagram
+    ms01p {
+        C CODIGO
+        N FORNECEDO
+        N PPLAN
+    }
+```
 
 ---
 ## Tabela DBF: `MS01x`
@@ -6336,6 +11843,98 @@
 - Tag: `MS01X-2` Expressao: `NOME`
 - Tag: `MS01X-3` Expressao: `CODIGOINT`
 
+```mermaid
+erDiagram
+    MS01x {
+        C CODIGO
+        N FORNECEDO
+        N CLIPCP
+        C COMPRA
+        C UNID
+        C NOME
+        C NOM2
+        C CODIPI
+        D DATABALAN
+        N ESTQINI
+        N ESTQENT
+        N ESTQSAI
+        N ESTQSAL
+        N ESTQMIN
+        N ESTQPRO
+        N SAIMIN
+        D DATMIN
+        N DIASENT
+        N DIASEST
+        N PESOUNI
+        N VALDOLAR
+        C INDICE
+        N VALIND
+        C LOCACAO
+        N DIACOM
+        N DIAENT
+        N PERTOL
+        N LMINIMO
+        N TEMP
+        C UNIDADE
+        N PARTI
+        N PPLAN
+        N CUSTF
+        C NORMAT
+        C REVI
+        C DELIVERY
+        C USING
+        C EQUIP
+        N QTDEETI
+        N VALINV
+        C SEQAREA
+        C ATIVO
+        C OPCAO
+        N PESUNIPF
+        N PESEMBPF
+        C PRODUSO
+        C IMPOSTO
+        C BAIXAFAT
+        C TIPOGER
+        N MIND
+        N MININD
+        N CCM
+        N ULTPRC
+        C ULTUND
+        D ULTDATA
+        C PLANTAFAB
+        C MODELO
+        C PART_NUM
+        C PLT
+        C DUNS
+        C PART_NAME
+        N QTDEMBA
+        C CONTNER
+        C DLOC
+        C DOCK_STCK
+        C EMBAL
+        C CODMW
+        C SAILISTA
+        N PCPRGMED
+        N PCPRGHOR
+        D ULTIMOFA
+        N ULTIMONF
+        C PISCON
+        N FILIAL
+        C TIPOQUA
+        N IPI
+        C CLASSIPI
+        N PRECUST
+        N PLTINV
+        N VALFATINV
+        N QTDEAPU
+        N CRMSEL
+        C CODIGOINT
+        C CLICODINT
+        D PRIFATDAT
+        N PRIFATNF
+    }
+```
+
 ---
 ## Tabela DBF: `ms02`
 > **Origem:** `ms02` (Driver: DBFCDX)
@@ -6361,6 +11960,24 @@
 - Tag: `MS02-3` Expressao: `CODIGO`
 - Tag: `MS02-4` Expressao: `CODIGO+STR(YEAR(DATA),4)+STR(MONTH(DATA),2)+STR(DAY(DATA),2)`
 - Tag: `MS02-5` Expressao: `CODIGO+STR(FORNECEDO,5)+DTOS(DATA)`
+
+```mermaid
+erDiagram
+    ms02 {
+        C CODIGO
+        N FORNECEDO
+        C COMPRA
+        C TIPOCLI
+        D DATA
+        C TIPO
+        C TIPI
+        N VALOR
+        C UNIDE
+        C COIDE
+        C ATUAL
+        N CLIFOR
+    }
+```
 
 ---
 ## Tabela DBF: `ms03`
@@ -6396,6 +12013,34 @@
 - Tag: `MS03-2` Expressao: `CODIGO+STR(BSEQ,3)+STR(BSSQ,3)`
 - Tag: `MS03-3` Expressao: `CODCOMP`
 - Tag: `MS03-4` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    ms03 {
+        C CODIGO
+        C TIPOENT
+        C CODCOMP
+        C NOMECOMP
+        C NOMECOM2
+        N QTDDE
+        N PRECO
+        N TOTAL
+        C BAIXAC
+        N BSEQ
+        N BSSQ
+        C OPCAO
+        C GERARN
+        N QPAA2
+        N QPAAS
+        N QPAAA
+        N XPAA2
+        N XPAAS
+        N XPAAA
+        N FILIAL
+        N QTDEPC
+        N QTDEEST
+    }
+```
 
 ---
 ## Tabela DBF: `ms04`
@@ -6435,6 +12080,37 @@
 - Tag: `MS04-3` Expressao: `NRNOTAINI`
 - Tag: `MS04-4` Expressao: `CLIENTE`
 
+```mermaid
+erDiagram
+    ms04 {
+        C CODIGO
+        C UNIDADE
+        C NOME
+        N NRNOTAINI
+        C DIGCTR
+        C SERIE
+        D DATAFAT
+        N OSINI
+        N VALORINI
+        N TOTKGINI
+        N NRNOTASAI
+        N TOTKGANT
+        N TOTKGSAI
+        N TOTKGEST
+        C TIPOCLI
+        N CLIENTE
+        C COGNOME
+        D DATASAI
+        N CRM
+        N PESOREF
+        C CLASSIPI
+        N PRECO
+        C TIPOENT
+        C OBS
+        C RASTRO
+    }
+```
+
 ---
 ## Tabela DBF: `ms04bx`
 > **Origem:** `ms04bx` (Driver: DBFCDX)
@@ -6473,6 +12149,37 @@
 - Tag: `MS04BX-3` Expressao: `NRNOTAINI`
 - Tag: `MS04BX-4` Expressao: `CLIENTE`
 
+```mermaid
+erDiagram
+    ms04bx {
+        C CODIGO
+        C UNIDADE
+        C NOME
+        N NRNOTAINI
+        C DIGCTR
+        C SERIE
+        D DATAFAT
+        N OSINI
+        N VALORINI
+        N TOTKGINI
+        N NRNOTASAI
+        N TOTKGANT
+        N TOTKGSAI
+        N TOTKGEST
+        C TIPOCLI
+        N CLIENTE
+        C COGNOME
+        D DATASAI
+        N CRM
+        N PESOREF
+        C CLASSIPI
+        N PRECO
+        C TIPOENT
+        C OBS
+        C RASTRO
+    }
+```
+
 ---
 ## Tabela DBF: `ms05`
 > **Origem:** `ms05` (Driver: DBFCDX)
@@ -6482,6 +12189,15 @@
 | DOCODIGO | C | 13 | 0 |
 | CODIGO | C | 13 | 0 |
 | CENTRAL | C | 1 | 0 |
+
+```mermaid
+erDiagram
+    ms05 {
+        C DOCODIGO
+        C CODIGO
+        C CENTRAL
+    }
+```
 
 ---
 ## Tabela DBF: `ms06`
@@ -6556,6 +12272,70 @@
 - Tag: `MS06-5` Expressao: `STR(PF,8)+STR(SEQ,3)+STR(SSQ,3)`
 - Tag: `MS06-6` Expressao: `CODINT`
 
+```mermaid
+erDiagram
+    ms06 {
+        C CODIGO
+        N SEQ
+        N SSQ
+        C DESCRI
+        C CODMP01
+        C CODMP02
+        C CODMP03
+        C CODMP02B
+        C CODMP02C
+        C CODMP02D
+        D DATABALAN
+        N ESTQINI
+        N ESTQENT
+        N ESTQSAI
+        N ESTQSAL
+        N ESTQMIN
+        N SAIMIN
+        D DAIMIN
+        N DIASENT
+        N DIASEST
+        C TIPFEC
+        C TIPBAI
+        C CODFEC
+        N FATOR
+        C AREA
+        N VALINV
+        N FATBAT
+        N PCHORA
+        N PCHOR2
+        N PCHOR3
+        N PCHOR4
+        C OPCAO
+        C PULREQ
+        C FERRAMEN
+        C FERRAME2
+        C FERRAME3
+        C FERRAME4
+        C NOMER
+        C SETOROP
+        N LIMTIME
+        N PF
+        D DATAINI
+        N LMINOPR
+        N PCHORMED
+        N PCHORMEQ
+        N PCHORDIA
+        N LEADCALC
+        N LEADARRE
+        N PCHORNEC
+        N FILIAL
+        N PCHORAX1
+        N PCHORAX2
+        N LEADESP
+        N PCHORAMD
+        C PARCEIRO
+        N ULTPRC
+        N PLTINV
+        C CODINT
+    }
+```
+
 ---
 ## Tabela DBF: `ms06bx`
 > **Origem:** `ms06bx` (Driver: DBFCDX)
@@ -6628,6 +12408,70 @@
 - Tag: `MS06BX-4` Expressao: `CODIGO+TIPFEC`
 - Tag: `MS06BX-5` Expressao: `STR(PF,8)+STR(SEQ,3)+STR(SSQ,3)`
 
+```mermaid
+erDiagram
+    ms06bx {
+        C CODIGO
+        N SEQ
+        N SSQ
+        C DESCRI
+        C CODMP01
+        C CODMP02
+        C CODMP03
+        C CODMP02B
+        C CODMP02C
+        C CODMP02D
+        D DATABALAN
+        N ESTQINI
+        N ESTQENT
+        N ESTQSAI
+        N ESTQSAL
+        N ESTQMIN
+        N SAIMIN
+        D DAIMIN
+        N DIASENT
+        N DIASEST
+        C TIPFEC
+        C TIPBAI
+        C CODFEC
+        N FATOR
+        C AREA
+        N VALINV
+        N FATBAT
+        N PCHORA
+        N PCHOR2
+        N PCHOR3
+        N PCHOR4
+        C OPCAO
+        C PULREQ
+        C FERRAMEN
+        C FERRAME2
+        C FERRAME3
+        C FERRAME4
+        C NOMER
+        C SETOROP
+        N LIMTIME
+        N PF
+        D DATAINI
+        N LMINOPR
+        N PCHORMED
+        N PCHORMEQ
+        N PCHORDIA
+        N LEADCALC
+        N LEADARRE
+        N PCHORNEC
+        N FILIAL
+        N PCHORAX1
+        N PCHORAX2
+        N LEADESP
+        N PCHORAMD
+        C PARCEIRO
+        N ULTPRC
+        N PLTINV
+        N VALIII
+    }
+```
+
 ---
 ## Tabela DBF: `ms06req`
 > **Origem:** `ms06req` (Driver: DBFCDX)
@@ -6646,6 +12490,20 @@
 **Indices vinculados:**
 - Tag: `MS06REQ1` Expressao: `NUMERO`
 - Tag: `MS06REQ2` Expressao: `CODIGO+STR(SEQ,3)+STR(SSQ,3)`
+
+```mermaid
+erDiagram
+    ms06req {
+        N NUMERO
+        C CODIGO
+        N SEQ
+        N SSQ
+        C BXCOD
+        N BXSEQ
+        N BXSSQ
+        N BXFAT
+    }
+```
 
 ---
 ## Tabela DBF: `ms07`
@@ -6684,6 +12542,36 @@
 - Tag: `MS07-3` Expressao: `NRNOTAINI`
 - Tag: `MS07-4` Expressao: `CLIENTE`
 
+```mermaid
+erDiagram
+    ms07 {
+        C CODIGO
+        C UNIDADE
+        C NOME
+        N NRNOTAINI
+        C DIGCTR
+        C SERIE
+        D DATAFAT
+        N OSINI
+        N VALORINI
+        N TOTKGINI
+        N NRNOTASAI
+        N TOTKGANT
+        N TOTKGSAI
+        N TOTKGEST
+        C TIPOCLI
+        N CLIENTE
+        C COGNOME
+        D DATASAI
+        N CRM
+        N PESOREF
+        C CLASSIPI
+        N PRECO
+        C TIPOENT
+        C OBS
+    }
+```
+
 ---
 ## Tabela DBF: `ms07bx`
 > **Origem:** `ms07bx` (Driver: DBFCDX)
@@ -6721,6 +12609,36 @@
 - Tag: `MS07BX-3` Expressao: `NRNOTAINI`
 - Tag: `MS07BX-4` Expressao: `CLIENTE`
 
+```mermaid
+erDiagram
+    ms07bx {
+        C CODIGO
+        C UNIDADE
+        C NOME
+        N NRNOTAINI
+        C DIGCTR
+        C SERIE
+        D DATAFAT
+        N OSINI
+        N VALORINI
+        N TOTKGINI
+        N NRNOTASAI
+        N TOTKGANT
+        N TOTKGSAI
+        N TOTKGEST
+        C TIPOCLI
+        N CLIENTE
+        C COGNOME
+        D DATASAI
+        N CRM
+        N PESOREF
+        C CLASSIPI
+        N PRECO
+        C TIPOENT
+        C OBS
+    }
+```
+
 ---
 ## Tabela DBF: `ms96`
 > **Origem:** `ms96` (Driver: DBFCDX)
@@ -6746,6 +12664,26 @@
 - Tag: `MS96-1` Expressao: `ARQUIVO+DOCUMENTO`
 - Tag: `MS96-2` Expressao: `CODIGO+STR(SEQ,3)+STR(SSQ,3)+DTOS(DATA)`
 
+```mermaid
+erDiagram
+    ms96 {
+        C ARQUIVO
+        C DOCUMENTO
+        C OPERACAO
+        C USUARIO
+        N QTDE
+        N OLDQTDE
+        N NUMERO
+        D DATA
+        C CODIGO
+        C RASTRO
+        N ESTQXXX
+        N ESTQYYY
+        N SEQ
+        N SSQ
+    }
+```
+
 ---
 ## Tabela DBF: `ms99`
 > **Origem:** `ms99` (Driver: DBFCDX)
@@ -6769,6 +12707,24 @@
 - Tag: `MS99-1` Expressao: `ARQUIVO+DOCUMENTO`
 - Tag: `MS99-2` Expressao: `CODIGO+DTOS(DATA)`
 
+```mermaid
+erDiagram
+    ms99 {
+        C ARQUIVO
+        C DOCUMENTO
+        C OPERACAO
+        C USUARIO
+        N QTDE
+        N OLDQTDE
+        N NUMERO
+        D DATA
+        C CODIGO
+        C RASTRO
+        N ESTQXXX
+        N ESTQYYY
+    }
+```
+
 ---
 ## Tabela DBF: `msbai`
 > **Origem:** `msbai` (Driver: DBFCDX)
@@ -6781,6 +12737,15 @@
 
 **Indices vinculados:**
 - Tag: `MSBAI` Expressao: `ORIGEM+STR(PLANTA,8)`
+
+```mermaid
+erDiagram
+    msbai {
+        C ORIGEM
+        C DESTINO
+        N PLANTA
+    }
+```
 
 ---
 ## Tabela DBF: `msinv`
@@ -6811,6 +12776,31 @@
 **Indices vinculados:**
 - Tag: `MSINV-1` Expressao: `STR(CLIENTE,8)+STR(ANO,4)+STR(MES,2)`
 
+```mermaid
+erDiagram
+    msinv {
+        N CLIENTE
+        N ANO
+        N MES
+        C COGNOME
+        N FAT
+        N MAT
+        N MATP
+        N COM
+        N COMP
+        N MATCOM
+        N MATCOMP
+        N EST
+        N ESTP
+        N PRO
+        N PROP
+        N ESP
+        N ESPP
+        N TOT
+        N TOTP
+    }
+```
+
 ---
 ## Tabela DBF: `msop`
 > **Origem:** `msop` (Driver: DBFCDX)
@@ -6824,6 +12814,16 @@
 
 **Indices vinculados:**
 - Tag: `MSOP-1` Expressao: `CODIGO+LOCAL+STR(OP,8)`
+
+```mermaid
+erDiagram
+    msop {
+        C CODIGO
+        N QTDE
+        C LOCAL
+        N OP
+    }
+```
 
 ---
 ## Tabela DBF: `mt01`
@@ -6892,6 +12892,68 @@
 - Tag: `MT01-1` Expressao: `CODIGO`
 - Tag: `MT01-2` Expressao: `NOME`
 - Tag: `MT01-3` Expressao: `STR(DIMX,9,2)+STR(DIMY,9,2)+STR(DIMZ,9,2)`
+
+```mermaid
+erDiagram
+    mt01 {
+        C CODIGO
+        C UNIDADE
+        C NOME
+        C NOM2
+        C CTACONTB
+        C APLICACAO
+        C LOCACAO
+        N PESLIQ
+        C CODIPI
+        D COTDATA
+        N COTFORN
+        C COTCOGN
+        C COTCONT
+        N COTVAL
+        C COTIN1
+        C COTIN2
+        D COTDA1
+        D COTDA2
+        N COTCO1
+        N COTCO2
+        N COTIV1
+        N COTIV2
+        D DATABALAN
+        N ESTQINI
+        N ESTQENT
+        N ESTQSAI
+        N ESTQSAL
+        N ESTQMIN
+        N ESTQPRO
+        N SAIMIN
+        D DATMIN
+        N DIASENT
+        N DIASEST
+        C FREPES
+        N PRECUST
+        N DIMX
+        N DIMY
+        N DIMZ
+        C CLASSIPI
+        N CUSTF
+        N MMENSAL
+        N MINDI
+        N MININD
+        N CAUTO
+        N IPI
+        C CCCLI
+        N VALINV
+        C INSTRU
+        N ULTPRC
+        C ULTUND
+        D ULTDATA
+        N CCM
+        C CONSIG
+        C CODMW
+        C PISCON
+        N PLTINV
+    }
+```
 
 ---
 ## Tabela DBF: `mt02`
@@ -6967,6 +13029,76 @@
 **Indices vinculados:**
 - Tag: `MT02-1` Expressao: `CODIGO+STR(COTFORN)`
 
+```mermaid
+erDiagram
+    mt02 {
+        C CODIGO
+        C UNIDADE
+        C NOME
+        D COTDATA
+        N COTFORN
+        C COTCOGN
+        C COTCONT
+        N COTVAL
+        C COTIN1
+        C COTIN2
+        D COTDA1
+        D COTDA2
+        N COTCO1
+        N COTCO2
+        N COTIV1
+        N COTIV2
+        D COTM01
+        D COTM02
+        D COTM03
+        D COTM04
+        D COTM05
+        D COTM06
+        D COTM07
+        D COTM08
+        D COTM09
+        D COTM10
+        D COTM11
+        D COTM12
+        N VALM01
+        N VALM02
+        N VALM03
+        N VALM04
+        N VALM05
+        N VALM06
+        N VALM07
+        N VALM08
+        N VALM09
+        N VALM10
+        N VALM11
+        N VALM12
+        N INDM01
+        N INDM02
+        N INDM03
+        N INDM04
+        N INDM05
+        N INDM06
+        N INDM07
+        N INDM08
+        N INDM09
+        N INDM10
+        N INDM11
+        N INDM12
+        N CONM01
+        N CONM02
+        N CONM03
+        N CONM04
+        N CONM05
+        N CONM06
+        N CONM07
+        N CONM08
+        N CONM09
+        N CONM10
+        N CONM11
+        N CONM12
+    }
+```
+
 ---
 ## Tabela DBF: `mt03`
 > **Origem:** `mt03` (Driver: DBFCDX)
@@ -7003,6 +13135,36 @@
 - Tag: `MT03-2` Expressao: `STR(NRNOTAINI)+CODIGO`
 - Tag: `MT03-3` Expressao: `NRNOTAINI`
 - Tag: `MT03-4` Expressao: `CLIENTE`
+
+```mermaid
+erDiagram
+    mt03 {
+        C CODIGO
+        C UNIDADE
+        C NOME
+        N NRNOTAINI
+        C DIGCTR
+        C SERIE
+        D DATAFAT
+        N OSINI
+        N VALORINI
+        N TOTKGINI
+        N NRNOTASAI
+        N TOTKGANT
+        N TOTKGSAI
+        N TOTKGEST
+        C TIPOCLI
+        N CLIENTE
+        C COGNOME
+        D DATASAI
+        N CRM
+        N PESOREF
+        C CLASSIPI
+        N PRECO
+        C TIPOENT
+        C OBS
+    }
+```
 
 ---
 ## Tabela DBF: `mt03bx`
@@ -7041,6 +13203,36 @@
 - Tag: `MT03BX-3` Expressao: `NRNOTAINI`
 - Tag: `MT03BX-4` Expressao: `STR(CLIENTE,8)+str(NRNOTAINI,8)`
 
+```mermaid
+erDiagram
+    mt03bx {
+        C CODIGO
+        C UNIDADE
+        C NOME
+        N NRNOTAINI
+        C DIGCTR
+        C SERIE
+        D DATAFAT
+        N OSINI
+        N VALORINI
+        N TOTKGINI
+        N NRNOTASAI
+        N TOTKGANT
+        N TOTKGSAI
+        N TOTKGEST
+        C TIPOCLI
+        N CLIENTE
+        C COGNOME
+        D DATASAI
+        N CRM
+        N PESOREF
+        C CLASSIPI
+        N PRECO
+        C TIPOENT
+        C OBS
+    }
+```
+
 ---
 ## Tabela DBF: `mt04`
 > **Origem:** `mt04` (Driver: DBFCDX)
@@ -7061,6 +13253,23 @@
 
 **Indices vinculados:**
 - Tag: `MT04-1` Expressao: `CODIGO+STR(SEQ,5)`
+
+```mermaid
+erDiagram
+    mt04 {
+        C CODIGO
+        N SEQ
+        D DATA
+        C HISTORICO
+        C TIPOENT
+        N QTDDE
+        N PRECO
+        N TOTQTDDE
+        N TOTPRECO
+        N TOTITEM
+        N MEDIO
+    }
+```
 
 ---
 ## Tabela DBF: `mt99`
@@ -7084,6 +13293,24 @@
 **Indices vinculados:**
 - Tag: `MT99-1` Expressao: `ARQUIVO+DOCUMENTO`
 - Tag: `MT99-2` Expressao: `CODIGO+DTOS(DATA)`
+
+```mermaid
+erDiagram
+    mt99 {
+        C ARQUIVO
+        C DOCUMENTO
+        C OPERACAO
+        C USUARIO
+        N QTDE
+        N OLDQTDE
+        D DATA
+        N NUMERO
+        C CODIGO
+        C RASTRO
+        N ESTQXXX
+        N ESTQYYY
+    }
+```
 
 ---
 ## Tabela DBF: `mu01`
@@ -7152,6 +13379,68 @@
 - Tag: `MU01-1` Expressao: `CODIGO`
 - Tag: `MU01-2` Expressao: `NOME`
 - Tag: `MU01-3` Expressao: `STR(DIMX,9,2)+STR(DIMY,9,2)+STR(DIMZ,9,2)`
+
+```mermaid
+erDiagram
+    mu01 {
+        C CODIGO
+        C UNIDADE
+        C NOME
+        C NOM2
+        C CTACONTB
+        C APLICACAO
+        C LOCACAO
+        N PESLIQ
+        C CODIPI
+        D COTDATA
+        N COTFORN
+        C COTCOGN
+        C COTCONT
+        N COTVAL
+        C COTIN1
+        C COTIN2
+        D COTDA1
+        D COTDA2
+        N COTCO1
+        N COTCO2
+        N COTIV1
+        N COTIV2
+        D DATABALAN
+        N ESTQINI
+        N ESTQENT
+        N ESTQSAI
+        N ESTQSAL
+        N ESTQMIN
+        N ESTQPRO
+        N SAIMIN
+        D DATMIN
+        N DIASENT
+        N DIASEST
+        C FREPES
+        N PRECUST
+        N DIMX
+        N DIMY
+        N DIMZ
+        C CLASSIPI
+        N CUSTF
+        N MMENSAL
+        N MINDI
+        N MININD
+        N CAUTO
+        N IPI
+        C CCCLI
+        N VALINV
+        C INSTRU
+        N ULTPRC
+        C ULTUND
+        D ULTDATA
+        N CCM
+        C CONSIG
+        C CODMW
+        C PISCON
+        N PLTINV
+    }
+```
 
 ---
 ## Tabela DBF: `mu02`
@@ -7227,6 +13516,76 @@
 **Indices vinculados:**
 - Tag: `MU02-1` Expressao: `CODIGO+STR(COTFORN)`
 
+```mermaid
+erDiagram
+    mu02 {
+        C CODIGO
+        C UNIDADE
+        C NOME
+        D COTDATA
+        N COTFORN
+        C COTCOGN
+        C COTCONT
+        N COTVAL
+        C COTIN1
+        C COTIN2
+        D COTDA1
+        D COTDA2
+        N COTCO1
+        N COTCO2
+        N COTIV1
+        N COTIV2
+        D COTM01
+        D COTM02
+        D COTM03
+        D COTM04
+        D COTM05
+        D COTM06
+        D COTM07
+        D COTM08
+        D COTM09
+        D COTM10
+        D COTM11
+        D COTM12
+        N VALM01
+        N VALM02
+        N VALM03
+        N VALM04
+        N VALM05
+        N VALM06
+        N VALM07
+        N VALM08
+        N VALM09
+        N VALM10
+        N VALM11
+        N VALM12
+        N INDM01
+        N INDM02
+        N INDM03
+        N INDM04
+        N INDM05
+        N INDM06
+        N INDM07
+        N INDM08
+        N INDM09
+        N INDM10
+        N INDM11
+        N INDM12
+        N CONM01
+        N CONM02
+        N CONM03
+        N CONM04
+        N CONM05
+        N CONM06
+        N CONM07
+        N CONM08
+        N CONM09
+        N CONM10
+        N CONM11
+        N CONM12
+    }
+```
+
 ---
 ## Tabela DBF: `mu03`
 > **Origem:** `mu03` (Driver: DBFCDX)
@@ -7263,6 +13622,36 @@
 - Tag: `MU03-2` Expressao: `STR(NRNOTAINI)+CODIGO`
 - Tag: `MU03-3` Expressao: `NRNOTAINI`
 - Tag: `MU03-4` Expressao: `CLIENTE`
+
+```mermaid
+erDiagram
+    mu03 {
+        C CODIGO
+        C UNIDADE
+        C NOME
+        N NRNOTAINI
+        C DIGCTR
+        C SERIE
+        D DATAFAT
+        N OSINI
+        N VALORINI
+        N TOTKGINI
+        N NRNOTASAI
+        N TOTKGANT
+        N TOTKGSAI
+        N TOTKGEST
+        C TIPOCLI
+        N CLIENTE
+        C COGNOME
+        D DATASAI
+        N CRM
+        N PESOREF
+        C CLASSIPI
+        N PRECO
+        C TIPOENT
+        C OBS
+    }
+```
 
 ---
 ## Tabela DBF: `mu03bx`
@@ -7301,6 +13690,36 @@
 - Tag: `MU03BX-3` Expressao: `NRNOTAINI`
 - Tag: `MU03BX-4` Expressao: `CLIENTE`
 
+```mermaid
+erDiagram
+    mu03bx {
+        C CODIGO
+        C UNIDADE
+        C NOME
+        N NRNOTAINI
+        C DIGCTR
+        C SERIE
+        D DATAFAT
+        N OSINI
+        N VALORINI
+        N TOTKGINI
+        N NRNOTASAI
+        N TOTKGANT
+        N TOTKGSAI
+        N TOTKGEST
+        C TIPOCLI
+        N CLIENTE
+        C COGNOME
+        D DATASAI
+        N CRM
+        N PESOREF
+        C CLASSIPI
+        N PRECO
+        C TIPOENT
+        C OBS
+    }
+```
+
 ---
 ## Tabela DBF: `mu04`
 > **Origem:** `mu04` (Driver: DBFCDX)
@@ -7321,6 +13740,23 @@
 
 **Indices vinculados:**
 - Tag: `MU04-1` Expressao: `CODIGO+STR(SEQ,5)`
+
+```mermaid
+erDiagram
+    mu04 {
+        C CODIGO
+        N SEQ
+        D DATA
+        C HISTORICO
+        C TIPOENT
+        N QTDDE
+        N PRECO
+        N TOTQTDDE
+        N TOTPRECO
+        N TOTITEM
+        N MEDIO
+    }
+```
 
 ---
 ## Tabela DBF: `mu99`
@@ -7344,6 +13780,24 @@
 **Indices vinculados:**
 - Tag: `MU99-1` Expressao: `ARQUIVO+DOCUMENTO`
 - Tag: `MU99-2` Expressao: `CODIGO+DTOS(DATA)`
+
+```mermaid
+erDiagram
+    mu99 {
+        C ARQUIVO
+        C DOCUMENTO
+        C OPERACAO
+        C USUARIO
+        N QTDE
+        N OLDQTDE
+        D DATA
+        N NUMERO
+        C CODIGO
+        C RASTRO
+        N ESTQXXX
+        N ESTQYYY
+    }
+```
 
 ---
 ## Tabela DBF: `mw01`
@@ -7387,6 +13841,43 @@
 - Tag: `MW01-1` Expressao: `COMPED`
 - Tag: `MW01-2` Expressao: `COMCTA`
 
+```mermaid
+erDiagram
+    mw01 {
+        N COMPED
+        N COMFOR
+        C COMCOG
+        C COMCON
+        C COMDDD
+        C COMTEL
+        C COMDDDFAX
+        C COMTELFAX
+        C COMPRAZ
+        D COMDPRAZ
+        C COMCPAG
+        C COMCPAGD
+        C OBS01
+        C OBS02
+        C OBS03
+        C OBS04
+        C OBS05
+        C OBS06
+        D COMDABE
+        D COMDFEC
+        C LIBER
+        C COMCTA
+        C LIBUS
+        D LIBDAT
+        C RECEBER
+        C BAIXAOBS
+        N PRGENT
+        C CONTRATO
+        C BAIXAOBX
+        C TRAVAPED
+        C PAUSA
+    }
+```
+
 ---
 ## Tabela DBF: `mw01bx`
 > **Origem:** `mw01bx` (Driver: DBFCDX)
@@ -7428,6 +13919,43 @@
 **Indices vinculados:**
 - Tag: `MW01BX-1` Expressao: `COMPED`
 - Tag: `MW01BX-2` Expressao: `COMCTA`
+
+```mermaid
+erDiagram
+    mw01bx {
+        N COMPED
+        N COMFOR
+        C COMCOG
+        C COMCON
+        C COMDDD
+        C COMTEL
+        C COMDDDFAX
+        C COMTELFAX
+        C COMPRAZ
+        D COMDPRAZ
+        C COMCPAG
+        C COMCPAGD
+        C OBS01
+        C OBS02
+        C OBS03
+        C OBS04
+        C OBS05
+        C OBS06
+        D COMDABE
+        D COMDFEC
+        C LIBER
+        C COMCTA
+        C LIBUS
+        D LIBDAT
+        C RECEBER
+        C BAIXAOBS
+        N PRGENT
+        C CONTRATO
+        C BAIXAOBX
+        C TRAVAPED
+        C PAUSA
+    }
+```
 
 ---
 ## Tabela DBF: `mw02`
@@ -7485,6 +14013,55 @@
 - Tag: `MW02-3` Expressao: `ITECOD`
 - Tag: `MW02-4` Expressao: `PRGENT`
 
+```mermaid
+erDiagram
+    mw02 {
+        N COMPED
+        N ITEM
+        C ITETIP
+        C ITECOD
+        N ITEREC
+        C ITENOM
+        C ITENO2
+        C ITEO01
+        C ITEO02
+        C ITEO03
+        C ITEN01
+        C ITEN02
+        C ITEUNI
+        N ITEQTD
+        N ITETOT
+        N ITEPRC
+        D RECDAT
+        C ITEUE
+        C ITESOL
+        C ITECTA
+        N ITEIPI
+        N ITEENT
+        N ITERES
+        N ITESAL
+        N ITECCM
+        C DESTINO
+        C CODDEP
+        C RECO01
+        C RECO02
+        C RECO03
+        N RECNUM
+        N RECNOT
+        N PRGENT
+        D REQDAT
+        C PEDCLI
+        D VIGENCIA
+        D VERIFICA
+        C RESIDUO
+        N PPAP
+        D PPAPD
+        N REDICM
+        C PEDATIVO
+        C CODMW
+    }
+```
+
 ---
 ## Tabela DBF: `mw02bx`
 > **Origem:** `mw02bx` (Driver: DBFCDX)
@@ -7539,6 +14116,55 @@
 - Tag: `MW02BX-1` Expressao: `STR(COMPED,8)+STR(ITEM,3)`
 - Tag: `MW02BX-2` Expressao: `COMPED`
 
+```mermaid
+erDiagram
+    mw02bx {
+        N COMPED
+        N ITEM
+        C ITETIP
+        C ITECOD
+        N ITEREC
+        C ITENOM
+        C ITENO2
+        C ITEO01
+        C ITEO02
+        C ITEO03
+        C ITEN01
+        C ITEN02
+        C ITEUNI
+        N ITEQTD
+        N ITETOT
+        N ITEPRC
+        D RECDAT
+        C ITEUE
+        C ITESOL
+        C ITECTA
+        N ITEIPI
+        N ITEENT
+        N ITERES
+        N ITESAL
+        N ITECCM
+        C DESTINO
+        C CODDEP
+        C RECO01
+        C RECO02
+        C RECO03
+        N RECNUM
+        N RECNOT
+        N PRGENT
+        D REQDAT
+        C PEDCLI
+        D VIGENCIA
+        D VERIFICA
+        C RESIDUO
+        N PPAP
+        D PPAPD
+        N REDICM
+        C PEDATIVO
+        C CODMW
+    }
+```
+
 ---
 ## Tabela DBF: `mw03`
 > **Origem:** `mw03` (Driver: DBFCDX)
@@ -7563,6 +14189,26 @@
 **Indices vinculados:**
 - Tag: `MW03-1` Expressao: `STR(COMPED,8)+STR(ITEM,3)+STR(ITEENT,3)`
 
+```mermaid
+erDiagram
+    mw03 {
+        N COMPED
+        N ITEM
+        N ITEENT
+        D DATENT
+        C DATOBS
+        N QTDINI
+        N QTDENT
+        N QTDSAL
+        N QTDNF
+        N NFENT
+        D NFDAT
+        N COMFOR
+        C COMCOG
+        C ITECOD
+    }
+```
+
 ---
 ## Tabela DBF: `mw03bx`
 > **Origem:** `mw03bx` (Driver: DBFCDX)
@@ -7586,6 +14232,26 @@
 
 **Indices vinculados:**
 - Tag: `MW03BX-1` Expressao: `STR(COMPED,8)+STR(ITEM,3)+STR(ITEENT,3)`
+
+```mermaid
+erDiagram
+    mw03bx {
+        N COMPED
+        N ITEM
+        N ITEENT
+        D DATENT
+        C DATOBS
+        N QTDINI
+        N QTDENT
+        N QTDSAL
+        N QTDNF
+        N NFENT
+        D NFDAT
+        N COMFOR
+        C COMCOG
+        C ITECOD
+    }
+```
 
 ---
 ## Tabela DBF: `mw04`
@@ -7648,6 +14314,63 @@
 **Indices vinculados:**
 - Tag: `MW04-1` Expressao: `RECCOM`
 - Tag: `MW04-2` Expressao: `RECUE+STR(RECCOM,8)`
+
+```mermaid
+erDiagram
+    mw04 {
+        N RECCOM
+        D RECDAT
+        C RECUE
+        C RECSOL
+        C RECTIP
+        C RECCOD
+        C RECNOM
+        C RECNO2
+        C RECCTA
+        N RELQTDI
+        N RELQTDP
+        N RELQTDS
+        N RECPED
+        D RECPD
+        N RECPI
+        C RECUND
+        C RECO01
+        C RECO02
+        C RECO03
+        C LIRER
+        C LIRUS
+        D LIRDAT
+        N LIBHOR
+        C LICER
+        C LICUS
+        D LICDAT
+        N LICHOR
+        D RECPRA
+        C RECPRO
+        N RECESQ
+        C RECCTR
+        N COTACAO
+        C AVULSA
+        C RECGRU
+        N RECULT
+        N RECCCM
+        N COMF01
+        N COMF02
+        N COMF03
+        N ITEP01
+        N ITEP02
+        N ITEP03
+        C ITEU01
+        C ITEU02
+        C ITEU03
+        D ITED01
+        D ITED02
+        D ITED03
+        C OBSNF
+        C OBSFO
+        N OBSPR
+    }
+```
 
 ---
 ## Tabela DBF: `mw04pg`
@@ -7712,6 +14435,63 @@
 - Tag: `MW04PG-2` Expressao: `RECCOM`
 - Tag: `MW04PG-3` Expressao: `RECUE+STR(RECCOM,8)`
 
+```mermaid
+erDiagram
+    mw04pg {
+        N RECCOM
+        D RECDAT
+        C RECUE
+        C RECSOL
+        C RECTIP
+        C RECCOD
+        C RECNOM
+        C RECNO2
+        C RECCTA
+        N RELQTDI
+        N RELQTDP
+        N RELQTDS
+        N RECPED
+        D RECPD
+        N RECPI
+        C RECUND
+        C RECO01
+        C RECO02
+        C RECO03
+        C LIRER
+        C LIRUS
+        D LIRDAT
+        N LIBHOR
+        C LICER
+        C LICUS
+        D LICDAT
+        N LICHOR
+        D RECPRA
+        C RECPRO
+        N RECESQ
+        C RECCTR
+        N COTACAO
+        C AVULSA
+        C RECGRU
+        N RECULT
+        N RECCCM
+        N COMF01
+        N COMF02
+        N COMF03
+        N ITEP01
+        N ITEP02
+        N ITEP03
+        C ITEU01
+        C ITEU02
+        C ITEU03
+        D ITED01
+        D ITED02
+        D ITED03
+        C OBSNF
+        C OBSFO
+        N OBSPR
+    }
+```
+
 ---
 ## Tabela DBF: `mw05`
 > **Origem:** `mw05` (Driver: DBFCDX)
@@ -7762,6 +14542,51 @@
 - Tag: `MW05-1` Expressao: `CODIGO`
 - Tag: `MW05-2` Expressao: `NOME`
 
+```mermaid
+erDiagram
+    mw05 {
+        C CODIGO
+        C NOME
+        C NOM2
+        C CTACONTB
+        C UNIDADE
+        N SAIMIN
+        N ESTQMIN
+        N ESTQENT
+        N ESTQSAI
+        N ESTQINI
+        N ESTQSAL
+        N ESTQPRO
+        N DIASENT
+        N DIASEST
+        D DATABALAN
+        D DATMIN
+        N MMENSAL
+        N MINDI
+        N MININD
+        N CAUTO
+        C MW05GRU
+        C TIPDIS
+        N DIADIS
+        C OBS
+        N COTVAL
+        N ULTPRC
+        C ULTUND
+        D ULTDATA
+        N CCM
+        N REDICM
+        C APLICACAO
+        C CODMW
+        C PISCON
+        C CODIPI
+        C CLASSIPI
+        N IPI
+        N VALINV
+        N PRECUST
+        N PLTINV
+    }
+```
+
 ---
 ## Tabela DBF: `mw06`
 > **Origem:** `mw06` (Driver: DBFCDX)
@@ -7776,6 +14601,17 @@
 
 **Indices vinculados:**
 - Tag: `MW06-1` Expressao: `TIPO+CODIGO+STR(ANO,4)+STR(MES,2)`
+
+```mermaid
+erDiagram
+    mw06 {
+        C TIPO
+        C CODIGO
+        N ANO
+        N MES
+        N USO
+    }
+```
 
 ---
 ## Tabela DBF: `mw07`
@@ -7830,6 +14666,54 @@
 - Tag: `MW07-1` Expressao: `CODIGO`
 - Tag: `MW07-2` Expressao: `NOME`
 
+```mermaid
+erDiagram
+    mw07 {
+        C CODIGO
+        C NOME
+        C NOM2
+        C CTACONTB
+        C UNIDADE
+        N SAIMIN
+        N ESTQMIN
+        N ESTQENT
+        N ESTQSAI
+        N ESTQINI
+        N ESTQSAL
+        N ESTQPRO
+        N DIASENT
+        N DIASEST
+        D DATABALAN
+        D DATMIN
+        N MMENSAL
+        N MINDI
+        N MININD
+        N CAUTO
+        C MW05GRU
+        C TIPDIS
+        N DIADIS
+        C OBS
+        N COTVAL
+        N ULTPRC
+        C ULTUND
+        D ULTDATA
+        N CCM
+        N REDICM
+        C APLICACAO
+        C CODMW
+        C PISCON
+        C CODIPI
+        C CLASSIPI
+        N IPI
+        N VALINV
+        N PRECUST
+        N PLTINV
+        N PESLIQ
+        N QTDEAPU
+        N CRMSEL
+    }
+```
+
 ---
 ## Tabela DBF: `mw08`
 > **Origem:** `mw08` (Driver: DBFCDX)
@@ -7853,6 +14737,23 @@
 - Tag: `MW08-2` Expressao: `ITETIP+ITECOD+DTOS(DATA)`
 - Tag: `MW08-3` Expressao: `COMFOR`
 - Tag: `MW08-4` Expressao: `COMPED`
+
+```mermaid
+erDiagram
+    mw08 {
+        C ITETIP
+        C ITECOD
+        N COMFOR
+        N ITEPRC
+        C ITEUNI
+        D DATA
+        N COMPED
+        N ITEM
+        C PEDATIVO
+        C CODMW
+        D DATAINI
+    }
+```
 
 ---
 ## Tabela DBF: `mw91`
@@ -7896,6 +14797,45 @@
 
 **Indices vinculados:**
 - Tag: `MW91-1` Expressao: `COMPED`
+
+```mermaid
+erDiagram
+    mw91 {
+        N COMPED
+        N COMFOR
+        C COMCOG
+        C COMCON
+        C COMDDD
+        C COMTEL
+        C COMDDDFAX
+        C COMTELFAX
+        C COMPRAZ
+        D COMDPRAZ
+        C COMCPAG
+        C COMCPAGD
+        C OBS01
+        C OBS02
+        C OBS03
+        C OBS04
+        C OBS05
+        C OBS06
+        D COMDABE
+        D COMDFEC
+        C LIBER
+        C COMCTA
+        C LIBUS
+        D LIBDAT
+        C RECEBER
+        C BAIXAOBS
+        N PRGENT
+        C CONTRATO
+        C BAIXAOBX
+        C TRAVAPED
+        C PAUSA
+        N MES
+        N ANO
+    }
+```
 
 ---
 ## Tabela DBF: `mw92`
@@ -7952,6 +14892,57 @@
 **Indices vinculados:**
 - Tag: `MW92-1` Expressao: `STR(COMPED,8)+STR(ITEM,3)`
 
+```mermaid
+erDiagram
+    mw92 {
+        N COMPED
+        N ITEM
+        C ITETIP
+        C ITECOD
+        N ITEREC
+        C ITENOM
+        C ITENO2
+        C ITEO01
+        C ITEO02
+        C ITEO03
+        C ITEN01
+        C ITEN02
+        C ITEUNI
+        N ITEQTD
+        N ITETOT
+        N ITEPRC
+        D RECDAT
+        C ITEUE
+        C ITESOL
+        C ITECTA
+        N ITEIPI
+        N ITEENT
+        N ITERES
+        N ITESAL
+        N ITECCM
+        C DESTINO
+        C CODDEP
+        C RECO01
+        C RECO02
+        C RECO03
+        N RECNUM
+        N RECNOT
+        N PRGENT
+        D REQDAT
+        C PEDCLI
+        D VIGENCIA
+        D VERIFICA
+        C RESIDUO
+        N PPAP
+        D PPAPD
+        N REDICM
+        C PEDATIVO
+        C CODMW
+        N MES
+        N ANO
+    }
+```
+
 ---
 ## Tabela DBF: `mw95`
 > **Origem:** `mw95` (Driver: DBFCDX)
@@ -7975,6 +14966,24 @@
 - Tag: `MW95-1` Expressao: `ARQUIVO+DOCUMENTO`
 - Tag: `MW95-2` Expressao: `CODIGO+DTOS(DATA)`
 
+```mermaid
+erDiagram
+    mw95 {
+        C ARQUIVO
+        C DOCUMENTO
+        C OPERACAO
+        C USUARIO
+        N QTDE
+        N OLDQTDE
+        N NUMERO
+        D DATA
+        C CODIGO
+        C RASTRO
+        N ESTQXXX
+        N ESTQYYY
+    }
+```
+
 ---
 ## Tabela DBF: `mw97`
 > **Origem:** `mw97` (Driver: DBFCDX)
@@ -7997,6 +15006,24 @@
 **Indices vinculados:**
 - Tag: `MW97-1` Expressao: `ARQUIVO+DOCUMENTO`
 - Tag: `MW97-2` Expressao: `CODIGO+DTOS(DATA)`
+
+```mermaid
+erDiagram
+    mw97 {
+        C ARQUIVO
+        C DOCUMENTO
+        C OPERACAO
+        C USUARIO
+        N QTDE
+        N OLDQTDE
+        N NUMERO
+        D DATA
+        C CODIGO
+        C RASTRO
+        N ESTQXXX
+        N ESTQYYY
+    }
+```
 
 ---
 ## Tabela DBF: `mx01`
@@ -8035,6 +15062,38 @@
 - Tag: `MX01-1` Expressao: `OS`
 - Tag: `MX01-2` Expressao: `CLIENTE`
 
+```mermaid
+erDiagram
+    mx01 {
+        N OS
+        D DATA
+        N CLIENTE
+        C COGNOME
+        N EMPREGADO
+        C NOME
+        C CARGO
+        N COD_CARGO
+        C SERVICO
+        C DESCRICAO
+        N HRINI
+        N HRFIM
+        N HRDES
+        N HRQTDE
+        D DATABASE
+        C TIPBASE
+        C TIPOSERV
+        N VALOR
+        N VALORTOT
+        C OBSERVACAO
+        N QTDDE
+        C IMPOSTO
+        N ALIQUOTA
+        C UNID
+        N VALORIMP
+        N VALORMER
+    }
+```
+
 ---
 ## Tabela DBF: `mx02`
 > **Origem:** `mx02` (Driver: DBFCDX)
@@ -8052,6 +15111,18 @@
 - Tag: `MX02-1` Expressao: `OS`
 - Tag: `MX02-2` Expressao: `CLIENTE`
 
+```mermaid
+erDiagram
+    mx02 {
+        N OS
+        D DATA
+        N CLIENTE
+        C COGNOME
+        C DESCRICAO
+        C OBS
+    }
+```
+
 ---
 ## Tabela DBF: `mx03`
 > **Origem:** `mx03` (Driver: DBFCDX)
@@ -8064,6 +15135,15 @@
 
 **Indices vinculados:**
 - Tag: `MX03-1` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    mx03 {
+        C CODIGO
+        C DESCRICAO
+        N TOTAL
+    }
+```
 
 ---
 ## Tabela DBF: `mx03a`
@@ -8078,6 +15158,16 @@
 
 **Indices vinculados:**
 - Tag: `MX03A-1` Expressao: `CODIGO+STR(SEQ,3)`
+
+```mermaid
+erDiagram
+    mx03a {
+        C CODIGO
+        N SEQ
+        C DESCRI
+        N PRECO
+    }
+```
 
 ---
 ## Tabela DBF: `mx04`
@@ -8094,6 +15184,18 @@
 
 **Indices vinculados:**
 - Tag: `MX04` Expressao: `SEQ`
+
+```mermaid
+erDiagram
+    mx04 {
+        N SEQ
+        N CLIENTE
+        C COGNOME
+        D DATA
+        N HORA
+        N VALOR
+    }
+```
 
 ---
 ## Tabela DBF: `mx05`
@@ -8118,6 +15220,26 @@
 
 **Indices vinculados:**
 - Tag: `MX05-1` Expressao: `SEQ`
+
+```mermaid
+erDiagram
+    mx05 {
+        N SEQ
+        N CLIENTE
+        C COGCLI
+        D SOLICITA
+        N HORASOL
+        C CONTATO
+        N TECNICO
+        C COGTEC
+        D PREVISAO
+        D EFETUADA
+        N HORAEFE
+        C ASSUNTO
+        C DIZER1
+        C DIZER2
+    }
+```
 
 ---
 ## Tabela DBF: `my01`
@@ -8157,6 +15279,37 @@
 - Tag: `MY01-3` Expressao: `STR(NRNOTA,8)+STR(NUMMB01,8)`
 - Tag: `MY01-4` Expressao: `OS`
 
+```mermaid
+erDiagram
+    my01 {
+        N NUMERO
+        D DATA
+        C TIPO1
+        C TIPO2
+        C CODIGO
+        N QTDE
+        C UNID
+        N OS
+        N ITEM
+        C OBS
+        C DISTRI
+        C RASTRO
+        N TECNICO
+        N NRNOTA
+        N CRM
+        N REQINT
+        N NUMMB01
+        N PRCMW02
+        N PRCMY04
+        N PRCMK02
+        N AUT
+        N NUMMW04
+        C NAOMEDIO
+        N FIRMA
+        C TIPO3
+    }
+```
+
 ---
 ## Tabela DBF: `my01e`
 > **Origem:** `my01e` (Driver: DBFCDX)
@@ -8176,6 +15329,24 @@
 | ESTQXXX | N | 6 | 0 |
 | ESTQYYY | N | 6 | 0 |
 
+```mermaid
+erDiagram
+    my01e {
+        C ARQUIVO
+        C DOCUMENTO
+        C OPERACAO
+        C USUARIO
+        N QTDE
+        N OLDQTDE
+        N NUMERO
+        D DATA
+        C CODIGO
+        C RASTRO
+        N ESTQXXX
+        N ESTQYYY
+    }
+```
+
 ---
 ## Tabela DBF: `my02`
 > **Origem:** `my02` (Driver: DBFCDX)
@@ -8190,6 +15361,20 @@
 | QTDE | N | 10 | 3 |
 | UNID | C | 2 | 0 |
 | OS | N | 8 | 2 |
+
+```mermaid
+erDiagram
+    my02 {
+        N NUMERO
+        D DATA
+        C TIPO1
+        C TIPO2
+        C CODIGO
+        N QTDE
+        C UNID
+        N OS
+    }
+```
 
 ---
 ## Tabela DBF: `my03`
@@ -8240,6 +15425,47 @@
 - Tag: `MY03-4` Expressao: `CODMAQ+STR(SEQ,3)+STR(SSQ,3)+CODIGO+DTOS(DATOPR)`
 - Tag: `MY03-5` Expressao: `CODIGOINT`
 
+```mermaid
+erDiagram
+    my03 {
+        N NUMERO
+        D DATA
+        C CODIGO
+        C CODIG2
+        N SEQ
+        N SSQ
+        N QTDDE
+        C TIOOPE
+        N CODOPE
+        C CODMAQ
+        N INIOPR
+        N FIMOPR
+        N ALMINI
+        N ALMFIM
+        D DATOPR
+        N HOROPR
+        C RASTRO
+        N PARADA
+        N OP
+        N VALREF
+        N ANTREF
+        N FATREF
+        N SALREF
+        C TURNO
+        C OBSLAN
+        C VIRADA
+        C BXMY03
+        C TPMY03
+        C EXCMAQ
+        C SUBMAQ
+        N HORUSO
+        N FIRMA
+        N NUMMB01
+        N TEMPOREF
+        C CODIGOINT
+    }
+```
+
 ---
 ## Tabela DBF: `my03a`
 > **Origem:** `my03a` (Driver: DBFCDX)
@@ -8260,6 +15486,22 @@
 **Indices vinculados:**
 - Tag: `MY03A-1` Expressao: `STR(NUMERO,8)+STR(ITEM,3)`
 
+```mermaid
+erDiagram
+    my03a {
+        N NUMERO
+        N ITEM
+        C CODPAR
+        C CODPARD
+        N PINI
+        N PFIM
+        N PALI
+        N PALF
+        N TEMPO
+        C OBS
+    }
+```
+
 ---
 ## Tabela DBF: `my03i`
 > **Origem:** `my03i` (Driver: DBFCDX)
@@ -8278,6 +15520,24 @@
 | RASTRO | C | 10 | 0 |
 | ESTQXXX | N | 12 | 3 |
 | ESTQYYY | N | 12 | 3 |
+
+```mermaid
+erDiagram
+    my03i {
+        C ARQUIVO
+        C DOCUMENTO
+        C OPERACAO
+        C USUARIO
+        N QTDE
+        N OLDQTDE
+        D DATA
+        N NUMERO
+        C CODIGO
+        C RASTRO
+        N ESTQXXX
+        N ESTQYYY
+    }
+```
 
 ---
 ## Tabela DBF: `my03mid`
@@ -8301,6 +15561,23 @@
 - Tag: `MY03MID` Expressao: `CODIGO+STR(SEQ,3)+STR(SSQ,3)+DTOS(DATOPR)`
 - Tag: `MY03MID2` Expressao: `CODIGO+STR(SEQ,3)+STR(SSQ,3)+STR(PCHORA)`
 
+```mermaid
+erDiagram
+    my03mid {
+        C CODIGO
+        N SEQ
+        N SSQ
+        N QTDDE
+        N HORAS
+        L TIRADO
+        D DATOPR
+        N PCHORA
+        N INIOPR
+        N FIMOPR
+        N PARADA
+    }
+```
+
 ---
 ## Tabela DBF: `my03tmp`
 > **Origem:** `my03tmp` (Driver: DBFCDX)
@@ -8317,6 +15594,19 @@
 
 **Indices vinculados:**
 - Tag: `MY03TMP` Expressao: `CODIGO+STR(SEQ,3)+STR(SSQ,3)+DTOS(DATOPR)`
+
+```mermaid
+erDiagram
+    my03tmp {
+        C CODIGO
+        N SEQ
+        N SSQ
+        N QTDDE
+        N HORAS
+        D DATOPR
+        C CODIGOINT
+    }
+```
 
 ---
 ## Tabela DBF: `my04`
@@ -8360,6 +15650,40 @@
 - Tag: `MY04-4` Expressao: `STR(OS,8)+STR(ITEM,3)`
 - Tag: `MY04-5` Expressao: `TECNICO`
 
+```mermaid
+erDiagram
+    my04 {
+        N NUMERO
+        D DATA
+        C TIPO1
+        C TIPO2
+        C CODIGO
+        N QTDE
+        N QTDEINI
+        N QTDESAL
+        C UNID
+        N OS
+        N ITEM
+        C OBS
+        C DISTRI
+        C RASTRO
+        N TECNICO
+        N NRNOTA
+        N CRM
+        N REQINT
+        N NUMMB01
+        N PRCMW02
+        N PRCMY04
+        N PRCMK02
+        N AUT
+        N NUMMW04
+        C NAOMEDIO
+        N FIRMA
+        C TIPO3
+        C CODDEP
+    }
+```
+
 ---
 ## Tabela DBF: `my04e`
 > **Origem:** `my04e` (Driver: DBFCDX)
@@ -8378,6 +15702,24 @@
 | RASTRO | C | 10 | 0 |
 | ESTQXXX | N | 12 | 3 |
 | ESTQYYY | N | 12 | 3 |
+
+```mermaid
+erDiagram
+    my04e {
+        C ARQUIVO
+        C DOCUMENTO
+        C OPERACAO
+        C USUARIO
+        N QTDE
+        N OLDQTDE
+        N NUMERO
+        D DATA
+        C CODIGO
+        C RASTRO
+        N ESTQXXX
+        N ESTQYYY
+    }
+```
 
 ---
 ## Tabela DBF: `mz01`
@@ -8419,6 +15761,42 @@
 **Indices vinculados:**
 - Tag: `MZ01-1` Expressao: `DTOS(VENCIMENT)+STR(NRNOTA,8)+TIPFAT`
 
+```mermaid
+erDiagram
+    mz01 {
+        N NRNOTA
+        D DATA
+        N CLIENTE
+        C COGNOME
+        C DDD
+        C TELEFONE
+        C VENDEDOR
+        N FATURA
+        C TIPFAT
+        N TOTFAT
+        N NRPV
+        D DATAPV
+        N TOTPVS
+        N CAMBIO
+        N PAGTO
+        C BANCO
+        C NOMEBCO
+        C CHEQUE
+        N VALORCH
+        D VENCIMENT
+        N VALORS
+        N JUROS
+        N SITUACAO
+        N BANCOC
+        C DOCUMENTO
+        C OBS1
+        C OBS2
+        C OBS3
+        C OBS4
+        C DEBCRE
+    }
+```
+
 ---
 ## Tabela DBF: `nfscod`
 > **Origem:** `nfscod` (Driver: DBFCDX)
@@ -8429,6 +15807,16 @@
 | DESCRICAO | C | 255 | 0 |
 | CODIGO2 | C | 1 | 0 |
 | CODIGO3 | C | 5 | 0 |
+
+```mermaid
+erDiagram
+    nfscod {
+        C CODIGO1
+        C DESCRICAO
+        C CODIGO2
+        C CODIGO3
+    }
+```
 
 ---
 ## Tabela DBF: `nota`
@@ -8445,6 +15833,20 @@
 | OBS6 | C | 60 | 0 |
 | OBS7 | C | 60 | 0 |
 
+```mermaid
+erDiagram
+    nota {
+        C NOME
+        C OBS1
+        C OBS2
+        C OBS3
+        C OBS4
+        C OBS5
+        C OBS6
+        C OBS7
+    }
+```
+
 ---
 ## Tabela DBF: `oc01`
 > **Origem:** `oc01` (Driver: DBFCDX)
@@ -8458,6 +15860,16 @@
 
 **Indices vinculados:**
 - Tag: `OC01-1` Expressao: `OC`
+
+```mermaid
+erDiagram
+    oc01 {
+        N OC
+        D DATA
+        C OBS
+        N TOTAL
+    }
+```
 
 ---
 ## Tabela DBF: `oc01a`
@@ -8476,6 +15888,20 @@
 
 **Indices vinculados:**
 - Tag: `OC01A-1` Expressao: `STR(OC,8)+STR(ITEM,3)`
+
+```mermaid
+erDiagram
+    oc01a {
+        N OC
+        N ITEM
+        C CODIGO
+        N QTDUNI
+        N QTDEMB
+        N PESUNI
+        N PESEMB
+        N SOMA
+    }
+```
 
 ---
 ## Tabela DBF: `of01`
@@ -8507,6 +15933,30 @@
 - Tag: `OF01-2` Expressao: `STR(CLIENTE)+DTOS(DLIMITE)`
 - Tag: `OF01-3` Expressao: `CODIGO+DTOS(DLIMITE)`
 
+```mermaid
+erDiagram
+    of01 {
+        N OF
+        N ITEM
+        N CLIENTE
+        C COGNOME
+        C CODIGO
+        N QPEDIDO
+        N QRESERVA
+        N QTOLERA
+        N QFABRICAR
+        N QFABRICAD
+        N QSALDO
+        D DLIMITE
+        N PERTO
+        N DIAFAB
+        N DIACOM
+        C UNID
+        D DPEDI
+        D DLIMP
+    }
+```
+
 ---
 ## Tabela DBF: `of02`
 > **Origem:** `of02` (Driver: DBFCDX)
@@ -8532,6 +15982,26 @@
 - Tag: `OF02-1` Expressao: `STR(OF,8,2)+STR(ITEM,3)+TIPCOMP+CODCOMP`
 - Tag: `OF02-2` Expressao: `TIPCOMP+CODCOMP`
 - Tag: `OF02-3` Expressao: `TIPCOMP+DTOS(DLIMP)+CODCOMP`
+
+```mermaid
+erDiagram
+    of02 {
+        N OF
+        N ITEM
+        C CODIGO
+        N QUSO
+        C TIPCOMP
+        C CODCOMP
+        C NOMECOMP
+        N QTCOMP
+        N QTTOT
+        N RESERVA
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C BAIXAC
+    }
+```
 
 ---
 ## Tabela DBF: `of03`
@@ -8563,6 +16033,30 @@
 - Tag: `OF03-2` Expressao: `CODIGO+STR(SEQ,3)+STR(SSQ,3)+DTOS(DLIMP)`
 - Tag: `OF03-3` Expressao: `DTOS(DLIMP)+STR(SEQ,3)+STR(SSQ,3)`
 
+```mermaid
+erDiagram
+    of03 {
+        N OF
+        N ITEM
+        C CODIGO
+        N SEQ
+        N SSQ
+        D DLIMP
+        D DLIMITE
+        D DPEDI
+        C CODMP01
+        C CODMP02
+        C CODMP02B
+        C CODMP02C
+        C CODMP02D
+        C CODMP03
+        N QTTIME
+        N QTFAB
+        N QTRES
+        N QTFAL
+    }
+```
+
 ---
 ## Tabela DBF: `of99`
 > **Origem:** `of99` (Driver: DBFCDX)
@@ -8578,6 +16072,21 @@
 | DATA | D | 8 | 0 |
 | NUMERO | N | 8 | 0 |
 | CODIGO | C | 8 | 0 |
+
+```mermaid
+erDiagram
+    of99 {
+        C ARQUIVO
+        C DOCUMENTO
+        C OPERACAO
+        C USUARIO
+        N QTDE
+        N OLDQTDE
+        D DATA
+        N NUMERO
+        C CODIGO
+    }
+```
 
 ---
 ## Tabela DBF: `or01`
@@ -8606,6 +16115,26 @@
 - Tag: `OR01-3` Expressao: `CODIGO+DTOS(DLIMITE)`
 - Tag: `OR01-4` Expressao: `CODIGO+DTOS(DLIMP)`
 
+```mermaid
+erDiagram
+    or01 {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
+
 ---
 ## Tabela DBF: `or01bx`
 > **Origem:** `or01bx` (Driver: DBFCDX)
@@ -8629,6 +16158,26 @@
 
 **Indices vinculados:**
 - Tag: `OR01BX-1` Expressao: `CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3)`
+
+```mermaid
+erDiagram
+    or01bx {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
 
 ---
 ## Tabela DBF: `or02`
@@ -8657,6 +16206,26 @@
 - Tag: `OR02-3` Expressao: `CODIGO+DTOS(DLIMITE)`
 - Tag: `OR02-4` Expressao: `CODIGO+DTOS(DLIMP)`
 
+```mermaid
+erDiagram
+    or02 {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
+
 ---
 ## Tabela DBF: `or02bx`
 > **Origem:** `or02bx` (Driver: DBFCDX)
@@ -8680,6 +16249,26 @@
 
 **Indices vinculados:**
 - Tag: `OR02BX-1` Expressao: `CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3)`
+
+```mermaid
+erDiagram
+    or02bx {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
 
 ---
 ## Tabela DBF: `or03`
@@ -8708,6 +16297,26 @@
 - Tag: `OR03-3` Expressao: `CODIGO+DTOS(DLIMITE)`
 - Tag: `OR03-4` Expressao: `CODIGO+DTOS(DLIMP)`
 
+```mermaid
+erDiagram
+    or03 {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
+
 ---
 ## Tabela DBF: `or03bx`
 > **Origem:** `or03bx` (Driver: DBFCDX)
@@ -8731,6 +16340,26 @@
 
 **Indices vinculados:**
 - Tag: `OR03BX-1` Expressao: `CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3)`
+
+```mermaid
+erDiagram
+    or03bx {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
 
 ---
 ## Tabela DBF: `or04`
@@ -8759,6 +16388,26 @@
 - Tag: `OR04-3` Expressao: `CODIGO+DTOS(DLIMITE)`
 - Tag: `OR04-4` Expressao: `CODIGO+DTOS(DLIMP)`
 
+```mermaid
+erDiagram
+    or04 {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
+
 ---
 ## Tabela DBF: `or04bx`
 > **Origem:** `or04bx` (Driver: DBFCDX)
@@ -8782,6 +16431,26 @@
 
 **Indices vinculados:**
 - Tag: `OR04BX-1` Expressao: `CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3)`
+
+```mermaid
+erDiagram
+    or04bx {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
 
 ---
 ## Tabela DBF: `or05`
@@ -8810,6 +16479,26 @@
 - Tag: `OR05-3` Expressao: `CODIGO+DTOS(DLIMITE)`
 - Tag: `OR05-4` Expressao: `CODIGO+DTOS(DLIMP)`
 
+```mermaid
+erDiagram
+    or05 {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
+
 ---
 ## Tabela DBF: `or05bx`
 > **Origem:** `or05bx` (Driver: DBFCDX)
@@ -8833,6 +16522,26 @@
 
 **Indices vinculados:**
 - Tag: `OR05BX-1` Expressao: `CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3)`
+
+```mermaid
+erDiagram
+    or05bx {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
 
 ---
 ## Tabela DBF: `or06`
@@ -8861,6 +16570,26 @@
 - Tag: `OR06-3` Expressao: `CODIGO+DTOS(DLIMITE)`
 - Tag: `OR06-4` Expressao: `CODIGO+DTOS(DLIMP)`
 
+```mermaid
+erDiagram
+    or06 {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
+
 ---
 ## Tabela DBF: `or06bx`
 > **Origem:** `or06bx` (Driver: DBFCDX)
@@ -8884,6 +16613,26 @@
 
 **Indices vinculados:**
 - Tag: `OR06BX-1` Expressao: `CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3)`
+
+```mermaid
+erDiagram
+    or06bx {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
 
 ---
 ## Tabela DBF: `or07`
@@ -8912,6 +16661,26 @@
 - Tag: `OR07-3` Expressao: `CODIGO+DTOS(DLIMITE)`
 - Tag: `OR07-4` Expressao: `CODIGO+DTOS(DLIMP)`
 
+```mermaid
+erDiagram
+    or07 {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
+
 ---
 ## Tabela DBF: `or07bx`
 > **Origem:** `or07bx` (Driver: DBFCDX)
@@ -8935,6 +16704,26 @@
 
 **Indices vinculados:**
 - Tag: `OR07BX-1` Expressao: `CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3)`
+
+```mermaid
+erDiagram
+    or07bx {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
 
 ---
 ## Tabela DBF: `or08`
@@ -8963,6 +16752,26 @@
 - Tag: `OR08-3` Expressao: `CODIGO+DTOS(DLIMITE)`
 - Tag: `OR08-4` Expressao: `CODIGO+DTOS(DLIMP)`
 
+```mermaid
+erDiagram
+    or08 {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
+
 ---
 ## Tabela DBF: `or08bx`
 > **Origem:** `or08bx` (Driver: DBFCDX)
@@ -8986,6 +16795,26 @@
 
 **Indices vinculados:**
 - Tag: `OR08BX-1` Expressao: `CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3)`
+
+```mermaid
+erDiagram
+    or08bx {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
 
 ---
 ## Tabela DBF: `or09`
@@ -9014,6 +16843,26 @@
 - Tag: `OR09-3` Expressao: `CODIGO+DTOS(DLIMITE)`
 - Tag: `OR09-4` Expressao: `CODIGO+DTOS(DLIMP)`
 
+```mermaid
+erDiagram
+    or09 {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
+
 ---
 ## Tabela DBF: `or09bx`
 > **Origem:** `or09bx` (Driver: DBFCDX)
@@ -9037,6 +16886,26 @@
 
 **Indices vinculados:**
 - Tag: `OR09BX-1` Expressao: `CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3)`
+
+```mermaid
+erDiagram
+    or09bx {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
 
 ---
 ## Tabela DBF: `or10`
@@ -9065,6 +16934,26 @@
 - Tag: `OR10-3` Expressao: `CODIGO+DTOS(DLIMITE)`
 - Tag: `OR10-4` Expressao: `CODIGO+DTOS(DLIMP)`
 
+```mermaid
+erDiagram
+    or10 {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
+
 ---
 ## Tabela DBF: `or10bx`
 > **Origem:** `or10bx` (Driver: DBFCDX)
@@ -9088,6 +16977,26 @@
 
 **Indices vinculados:**
 - Tag: `OR10BX-1` Expressao: `CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3)`
+
+```mermaid
+erDiagram
+    or10bx {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
 
 ---
 ## Tabela DBF: `or11`
@@ -9116,6 +17025,26 @@
 - Tag: `OR11-3` Expressao: `CODIGO+DTOS(DLIMITE)`
 - Tag: `OR11-4` Expressao: `CODIGO+DTOS(DLIMP)`
 
+```mermaid
+erDiagram
+    or11 {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
+
 ---
 ## Tabela DBF: `or11bx`
 > **Origem:** `or11bx` (Driver: DBFCDX)
@@ -9139,6 +17068,26 @@
 
 **Indices vinculados:**
 - Tag: `OR11BX-1` Expressao: `CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3)`
+
+```mermaid
+erDiagram
+    or11bx {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
 
 ---
 ## Tabela DBF: `or12`
@@ -9167,6 +17116,26 @@
 - Tag: `OR12-3` Expressao: `CODIGO+DTOS(DLIMITE)`
 - Tag: `OR12-4` Expressao: `CODIGO+DTOS(DLIMP)`
 
+```mermaid
+erDiagram
+    or12 {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
+
 ---
 ## Tabela DBF: `or12bx`
 > **Origem:** `or12bx` (Driver: DBFCDX)
@@ -9190,6 +17159,26 @@
 
 **Indices vinculados:**
 - Tag: `OR12BX-1` Expressao: `CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3)`
+
+```mermaid
+erDiagram
+    or12bx {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
 
 ---
 ## Tabela DBF: `or15`
@@ -9218,6 +17207,26 @@
 - Tag: `OR15-3` Expressao: `CODIGO+DTOS(DLIMITE)`
 - Tag: `OR15-4` Expressao: `CODIGO+DTOS(DLIMP)`
 
+```mermaid
+erDiagram
+    or15 {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
+
 ---
 ## Tabela DBF: `or15bx`
 > **Origem:** `or15bx` (Driver: DBFCDX)
@@ -9241,6 +17250,26 @@
 
 **Indices vinculados:**
 - Tag: `OR15BX-1` Expressao: `CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3)`
+
+```mermaid
+erDiagram
+    or15bx {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
 
 ---
 ## Tabela DBF: `or16`
@@ -9269,6 +17298,26 @@
 - Tag: `OR16-3` Expressao: `CODIGO+DTOS(DLIMITE)`
 - Tag: `OR16-4` Expressao: `CODIGO+DTOS(DLIMP)`
 
+```mermaid
+erDiagram
+    or16 {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
+
 ---
 ## Tabela DBF: `or16bx`
 > **Origem:** `or16bx` (Driver: DBFCDX)
@@ -9292,6 +17341,26 @@
 
 **Indices vinculados:**
 - Tag: `OR16BX-1` Expressao: `CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3)`
+
+```mermaid
+erDiagram
+    or16bx {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
 
 ---
 ## Tabela DBF: `or17`
@@ -9320,6 +17389,26 @@
 - Tag: `OR17-3` Expressao: `CODIGO+DTOS(DLIMITE)`
 - Tag: `OR17-4` Expressao: `CODIGO+DTOS(DLIMP)`
 
+```mermaid
+erDiagram
+    or17 {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
+
 ---
 ## Tabela DBF: `or17bx`
 > **Origem:** `or17bx` (Driver: DBFCDX)
@@ -9343,6 +17432,26 @@
 
 **Indices vinculados:**
 - Tag: `OR17BX-1` Expressao: `CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3)`
+
+```mermaid
+erDiagram
+    or17bx {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
 
 ---
 ## Tabela DBF: `or18`
@@ -9371,6 +17480,26 @@
 - Tag: `OR18-3` Expressao: `CODIGO+DTOS(DLIMITE)`
 - Tag: `OR18-4` Expressao: `CODIGO+DTOS(DLIMP)`
 
+```mermaid
+erDiagram
+    or18 {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
+
 ---
 ## Tabela DBF: `or18bx`
 > **Origem:** `or18bx` (Driver: DBFCDX)
@@ -9394,6 +17523,26 @@
 
 **Indices vinculados:**
 - Tag: `OR18BX-1` Expressao: `CODIGO+STR(OS,8,2)+STR(NRNOTA,5)+STR(SEQ,3)`
+
+```mermaid
+erDiagram
+    or18bx {
+        C CODIGO
+        N OS
+        N OF
+        N QTDDE
+        N REQUISI
+        N NRNOTA
+        N SEQ
+        D BAIXA
+        C TIPO
+        N QTDEBAI
+        D DLIMITE
+        D DPEDI
+        D DLIMP
+        C RASTRO
+    }
+```
 
 ---
 ## Tabela DBF: `pt`
@@ -9434,6 +17583,40 @@
 - Tag: `PT` Expressao: `TREIN`
 - Tag: `PT-2` Expressao: `CURSO`
 
+```mermaid
+erDiagram
+    pt {
+        N TREIN
+        C TIPCUR
+        C TIPDIS
+        N CARGA
+        C APROVADA
+        D APRODATA
+        D DATA
+        N PARTI
+        C CERT
+        C CURSO
+        C DESCUR
+        D PRINI
+        D PRFIM
+        D DATACUR
+        D DATAFIM
+        N HORINI
+        N HORFIM
+        C AREA
+        C RESPO
+        C INSTRU
+        N NINSTU
+        N NESCOLA
+        C REFER
+        N MES
+        N ANO
+        N NTREIN
+        N NUMSOL
+        C NOMSOL
+    }
+```
+
 ---
 ## Tabela DBF: `pti`
 > **Origem:** `pti` (Driver: DBFCDX)
@@ -9447,6 +17630,15 @@
 **Indices vinculados:**
 - Tag: `PTI` Expressao: `TREIN`
 - Tag: `PTI-2` Expressao: `NUMFUN`
+
+```mermaid
+erDiagram
+    pti {
+        N TREIN
+        N NUMFUN
+        C NOMFUN
+    }
+```
 
 ---
 ## Tabela DBF: `rhab`
@@ -9467,6 +17659,21 @@
 **Indices vinculados:**
 - Tag: `RHAB` Expressao: `STR(NUMERO,8)+DTOS(DATA)`
 - Tag: `RHAB-2` Expressao: `STR(ANO,4)+STR(MES,2)+STR(NUMERO,8)+DTOS(DATA)`
+
+```mermaid
+erDiagram
+    rhab {
+        N NUMERO
+        C CODIGO
+        D DATA
+        C JUSTIFICA
+        N HORAS
+        N SEQ
+        N MES
+        N ANO
+        C CODIGO2
+    }
+```
 
 ---
 ## Tabela DBF: `rhabseq`
@@ -9516,6 +17723,51 @@
 
 **Indices vinculados:**
 - Tag: `SEQ` Expressao: `SEQ`
+
+```mermaid
+erDiagram
+    rhabseq {
+        N SEQ
+        D DIAFIM
+        D DIAINI
+        N MES
+        N ANO
+        C DESCRI
+        C ANUAL
+        C SEMES
+        D DIA01
+        D DIA02
+        D DIA03
+        D DIA04
+        D DIA05
+        D DIA06
+        D DIA07
+        D DIA08
+        D DIA09
+        D DIA10
+        D DIA11
+        D DIA12
+        D DIA13
+        D DIA14
+        D DIA15
+        D DIA16
+        D DIA17
+        D DIA18
+        D DIA19
+        D DIA20
+        D DIA21
+        D DIA22
+        D DIA23
+        D DIA24
+        D DIA25
+        D DIA26
+        D DIA27
+        D DIA28
+        D DIA29
+        D DIA30
+        D DIA31
+    }
+```
 
 ---
 ## Tabela DBF: `rhabtb`
@@ -9567,6 +17819,52 @@
 **Indices vinculados:**
 - Tag: `SEQNUM` Expressao: `STR(ANO,4)+STR(MES,2)+STR(NUMERO,8)`
 
+```mermaid
+erDiagram
+    rhabtb {
+        N ANO
+        N MES
+        N NUMERO
+        C NOME
+        C SETOR
+        N SEQ
+        C COD01
+        C COD02
+        C COD03
+        C COD04
+        C COD05
+        C COD06
+        C COD07
+        C COD08
+        C COD09
+        C COD10
+        C COD11
+        C COD12
+        C COD13
+        C COD14
+        C COD15
+        C COD16
+        C COD17
+        C COD18
+        C COD19
+        C COD20
+        C COD21
+        C COD22
+        C COD23
+        C COD24
+        C COD25
+        C COD26
+        C COD27
+        C COD28
+        C COD29
+        C COD30
+        C COD31
+        N TOTJU
+        N TOTNJ
+        N TOT
+    }
+```
+
 ---
 ## Tabela DBF: `telememo`
 > **Origem:** `telememo` (Driver: DBFCDX)
@@ -9577,6 +17875,16 @@
 | ESPECIF | C | 35 | 0 |
 | TELEF | C | 14 | 0 |
 | FAX | C | 14 | 0 |
+
+```mermaid
+erDiagram
+    telememo {
+        C NOME
+        C ESPECIF
+        C TELEF
+        C FAX
+    }
+```
 
 ---
 ## Tabela DBF: `treii`
@@ -9594,6 +17902,18 @@
 **Indices vinculados:**
 - Tag: `TREII` Expressao: `TREIN`
 - Tag: `TREII2` Expressao: `NUMFUN`
+
+```mermaid
+erDiagram
+    treii {
+        N TREIN
+        N NUMFUN
+        C NOMFUN
+        C COMPAR
+        C AVALIA
+        C TRXCER
+    }
+```
 
 ---
 ## Tabela DBF: `trein`
@@ -9633,6 +17953,37 @@
 - Tag: `TREIN-3` Expressao: `REFER`
 - Tag: `TREIN-4` Expressao: `DATACUR`
 
+```mermaid
+erDiagram
+    trein {
+        N TREIN
+        C TIPCUR
+        C TIPDIS
+        N CARGA
+        N PARTI
+        C CERT
+        C CURSO
+        C DESCUR
+        C PRO
+        C DESPRO
+        D DATACUR
+        D DATAFIM
+        N HORINI
+        N HORFIM
+        C AREA
+        C RESPO
+        C INSTRU
+        N NINSTU
+        N NESCOLA
+        C REFER
+        C TIPOANA
+        C AVAGER
+        N NUMSOL
+        C NOMSOL
+        C OBJETIVO
+    }
+```
+
 ---
 ## Tabela DBF: `trjob`
 > **Origem:** `trjob` (Driver: DBFCDX)
@@ -9648,6 +17999,18 @@
 
 **Indices vinculados:**
 - Tag: `NUMERO` Expressao: `NUMERO`
+
+```mermaid
+erDiagram
+    trjob {
+        N NUMERO
+        D DATA
+        N NUMINS
+        C NOMINS
+        C CODMAQ
+        D DATF
+    }
+```
 
 ---
 ## Tabela DBF: `trjobi`
@@ -9665,6 +18028,17 @@
 - Tag: `NUMERO` Expressao: `NUMERO`
 - Tag: `PECA` Expressao: `PECA`
 - Tag: `NUMTEC` Expressao: `NUMTEC`
+
+```mermaid
+erDiagram
+    trjobi {
+        N NUMERO
+        C PECA
+        N NUMTEC
+        C NOMTEC
+        N CARGA
+    }
+```
 
 ---
 ## Tabela DBF: `y399`
@@ -9711,6 +18085,46 @@
 - Tag: `Y399-1` Expressao: `NUMERO`
 - Tag: `Y399-2` Expressao: `CODIGO+STR(SEQ,3)+STR(SSQ,3)+CODMAQ+STR(NUMERO,8)`
 
+```mermaid
+erDiagram
+    y399 {
+        N NUMERO
+        D DATA
+        C CODIGO
+        C CODIG2
+        N SEQ
+        N SSQ
+        N QTDDE
+        C TIOOPE
+        N CODOPE
+        N CODOP2
+        N CODOP3
+        C CODMAQ
+        N INIOPR
+        N FIMOPR
+        N ALMINI
+        N ALMFIM
+        D DATOPR
+        N HOROPR
+        C RASTRO
+        N PARADA
+        N OP
+        C CODPAR
+        N VALREF
+        N ANTREF
+        N FATREF
+        N SALREF
+        N TOTAL
+        C TURNO
+        C OBSLAN
+        C VIRADA
+        C BXMY03
+        C TPMY03
+        N MES
+        N ANO
+    }
+```
+
 ---
 ## Tabela DBF: `ya99`
 > **Origem:** `ya99` (Driver: DBFCDX)
@@ -9732,5 +18146,23 @@
 
 **Indices vinculados:**
 - Tag: `YA99-1` Expressao: `STR(NUMERO,8)+STR(ITEM,3)`
+
+```mermaid
+erDiagram
+    ya99 {
+        N NUMERO
+        N ITEM
+        C CODPAR
+        C CODPARD
+        N PINI
+        N PFIM
+        N PALI
+        N PALF
+        N TEMPO
+        C OBS
+        N MES
+        N ANO
+    }
+```
 
 ---

@@ -1,0 +1,39 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "dic" as dic {
+  ARQUIVO : varchar(30)
+  DESCRICAO : varchar(60)
+  CAMINHO : varchar(40)
+  DRIVER : varchar(10)
+  --
+  .. Índices ..
+  + MANARQ : ARQUIVO
+}
+
+entity "dici" as dici {
+  TABELA : varchar(30)
+  CAMPO : varchar(10)
+  TIPO : varchar(1)
+  TAM : integer
+  DEC : integer
+  EXCLUIDO : varchar(10)
+  DATAUP : datetime
+  --
+  .. Índices ..
+  + DICI : TABELA+CAMPO
+}
+
+entity "dicidx" as dicidx {
+  ARQUIVO : varchar(30)
+  SEQ : integer
+  TAG : varchar(20)
+  CHAVE : varchar(70)
+  --
+  .. Índices ..
+  + ARQSEG : ARQUIVO+STR(SEQ,3)
+}
+
+
+@enduml

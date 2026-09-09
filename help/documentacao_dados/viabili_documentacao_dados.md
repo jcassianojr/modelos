@@ -1,5 +1,5 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 31/07/2026
+> Varredura automatica realizada em: 09/09/2026
 
 ## Tabela DBF: `bti`
 > **Origem:** `bti` (Driver: DBFCDX)
@@ -18,6 +18,20 @@
 **Indices vinculados:**
 - Tag: `BTI` Expressao: `BTI`
 
+```mermaid
+erDiagram
+    bti {
+        N BTI
+        N CLIENTE
+        C CLINOME
+        C CODIGO
+        C NOME
+        C DUNS
+        C RFQ
+        D DATA
+    }
+```
+
 ---
 ## Tabela DBF: `btii`
 > **Origem:** `btii` (Driver: DBFCDX)
@@ -34,6 +48,19 @@
 
 **Indices vinculados:**
 - Tag: `BTI` Expressao: `BTI`
+
+```mermaid
+erDiagram
+    btii {
+        N BTI
+        N QTDE
+        C DESCRICAO
+        N CAVIDADE
+        N PRECO
+        C CICLO
+        C CAPACIDA
+    }
+```
 
 ---
 ## Tabela DBF: `cd`
@@ -119,6 +146,82 @@
 - Tag: `CD-4` Expressao: `STR(CLIENTE,8)+PECA`
 - Tag: `CD-5` Expressao: `VIABILI`
 
+```mermaid
+erDiagram
+    cd {
+        N CD
+        C DIGCTR
+        C CHAVE
+        D DATA
+        N CLIENTE
+        C CLINOME
+        C CLICOGN
+        C COMPRADOR
+        C COMPNOME
+        C PECA
+        C PROJETO
+        C NOME
+        C ENGENHA
+        C PLANTA
+        D DATAAUT
+        L PT
+        N PTQT
+        L FD
+        L DC
+        L PCMP
+        L PCMO
+        L MP
+        L OUT
+        C OUTOBS
+        C OBS01
+        C OBS02
+        C OBS03
+        C OBS04
+        C OBS05
+        C DATADIM
+        C DATAPRO
+        L EP
+        L MM
+        L NT
+        L FE
+        L DE
+        L AMO
+        L OUTANX
+        C OUTANXOBS
+        N FUNNUM
+        C FUNNOM
+        D DATAEMI
+        D DATAOBS
+        C OBSG01
+        C OBSG02
+        C OBSG03
+        L ATUAL
+        N LOTEANUAL
+        C SETOR
+        C CARGO
+        C RESPO
+        C CODIGOINT
+        N LOTEENTR
+        L RET
+        N VALPEC
+        C IMPOSTO
+        C CPAGP
+        C CEMB
+        C FRETE
+        N FERRA
+        C IMPFER
+        C CPAGF
+        C OBSC01
+        C OBSC02
+        C OBSC03
+        N NUMPRE
+        C NOMPRE
+        D DATAPRE
+        N VIABILI
+        C CODCLI
+    }
+```
+
 ---
 ## Tabela DBF: `cdapuprd`
 > **Origem:** `cdapuprd` (Driver: DBFCDX)
@@ -169,6 +272,49 @@
 - Tag: `CD03` Expressao: `CODIGO+STR(ANO,4)`
 - Tag: `CD04` Expressao: `CODIGOINT+STR(ANO,4)`
 
+```mermaid
+erDiagram
+    cdapuprd {
+        N CD
+        N ANO
+        C CODIGO
+        C CODIGOINT
+        D DATAINI
+        D DATAPRO
+        N EAC
+        C ATIVA
+        N MES01
+        N MES02
+        N MES03
+        N MES04
+        N MES05
+        N MES06
+        N MES07
+        N MES08
+        N MES09
+        N MES10
+        N MES11
+        N MES12
+        N PRC01
+        N PRC02
+        N PRC03
+        N PRC04
+        N PRC05
+        N PRC06
+        N PRC07
+        N PRC08
+        N PRC09
+        N PRC10
+        N PRC11
+        N PRC12
+        N MESESF
+        N MESESP
+        N PRECO
+        N CLIENTE
+        C COGCLI
+    }
+```
+
 ---
 ## Tabela DBF: `cdi`
 > **Origem:** `cdi` (Driver: DBFCDX)
@@ -186,6 +332,19 @@
 **Indices vinculados:**
 - Tag: `CHAVE` Expressao: `CHAVE`
 
+```mermaid
+erDiagram
+    cdi {
+        N CD
+        C DIGCTR
+        C CHAVE
+        C DESENHO
+        L DESTEM
+        C REV
+        D DATAREV
+    }
+```
+
 ---
 ## Tabela DBF: `declmot`
 > **Origem:** `declmot` (Driver: DBFCDX)
@@ -197,6 +356,14 @@
 
 **Indices vinculados:**
 - Tag: `DECLMOT` Expressao: `NUMERO`
+
+```mermaid
+erDiagram
+    declmot {
+        N NUMERO
+        C NOME
+    }
+```
 
 ---
 ## Tabela DBF: `esc`
@@ -294,6 +461,96 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 - Tag: `VIABILI` Expressao: `VIABILI`
 
+```mermaid
+erDiagram
+    esc {
+        N CLIENTE
+        C COGCLI
+        C CODIGO
+        C NOME
+        N VCOM
+        N VCOMI
+        N VCOML
+        N VMAT
+        N VMATI
+        N VMATL
+        N VTER
+        N VMAOM
+        N VMAOO
+        N VREJ
+        N VMAR
+        N FMAR
+        C PUF
+        N PMAK
+        N PICM
+        N PMAR
+        N LANU
+        N LMES
+        N LMIN
+        N VFER
+        N VFERHR
+        N VFERID
+        D PRAZO
+        N PVEN
+        N PVEN2
+        N PREF
+        N DLUC
+        N DPRE
+        C OBS01
+        C OBS02
+        C OBS03
+        C OBS04
+        C OBS05
+        C OBS06
+        C OBS07
+        C OBS08
+        C OBC01
+        C OBC02
+        C OBC03
+        C OBC04
+        C OBC05
+        C OBE01
+        C OBE02
+        C OBE03
+        N SUBTOT01
+        N SUBTOT02
+        C REV
+        N VIABILI
+        C DUNS
+        C PROJETO
+        D NIVELDAT
+        D VIGENDAT
+        D DATA
+        N USUMEDIO
+        N ELANUM
+        C ELANOM
+        D ELADAT
+        C ELAHOR
+        N PCPRGMED
+        C TIPOIMP
+        N PPIS
+        N PCON
+        C TIPMEDIA
+        N PLUC
+        N PADM
+        N PCOM
+        N PCPM
+        L LICM
+        N PRRJ
+        C CAPPRO
+        N OV
+        D DATACALC
+        N OVORI
+        C PISCON
+        N VTERI
+        N VTERL
+        C OBSP01
+        C OBSP02
+        C OVREV
+        N VSIMP
+    }
+```
+
 ---
 ## Tabela DBF: `escms03`
 > **Origem:** `escms03` (Driver: DBFCDX)
@@ -318,6 +575,27 @@
 
 **Indices vinculados:**
 - Tag: `OV` Expressao: `OV`
+
+```mermaid
+erDiagram
+    escms03 {
+        N OV
+        C CODIGO
+        C TIPOENT
+        C CODCOMP
+        C NOMECOMP
+        C ORIGEM
+        N QTDDE
+        N PRECO
+        N TOTAL
+        L IICM
+        N REDICM
+        N CODFOLHA
+        C OBS01
+        D ULTDATA
+        C ULTUND
+    }
+```
 
 ---
 ## Tabela DBF: `escms06`
@@ -356,6 +634,40 @@
 
 **Indices vinculados:**
 - Tag: `OV` Expressao: `OV`
+
+```mermaid
+erDiagram
+    escms06 {
+        N OV
+        C CODIGO
+        N SEQ
+        N SSQ
+        C DESCRI
+        C CODMP01
+        C NOMMP01
+        C CODMP02
+        C NOMMP02
+        C CODMP02B
+        C NOMMP02B
+        C CODMP02C
+        C NOMMP02C
+        C CODMP02D
+        C NOMMP02D
+        C CODMP03
+        C NOMMP03
+        N PCHORA
+        C AREA
+        N HRFER
+        N CODFOLHA
+        N PRECO
+        N QTDDE
+        N TOTAL
+        C COGMP01
+        N PCMEDIA
+        N FLUXO
+        N FATOR
+    }
+```
 
 ---
 ## Tabela DBF: `esf`
@@ -453,6 +765,96 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 - Tag: `VIABILI` Expressao: `VIABILI`
 
+```mermaid
+erDiagram
+    esf {
+        N CLIENTE
+        C COGCLI
+        C CODIGO
+        C NOME
+        N VCOM
+        N VCOMI
+        N VCOML
+        N VMAT
+        N VMATI
+        N VMATL
+        N VTER
+        N VMAOM
+        N VMAOO
+        N VREJ
+        N VMAR
+        N FMAR
+        C PUF
+        N PMAK
+        N PICM
+        N PMAR
+        N LANU
+        N LMES
+        N LMIN
+        N VFER
+        N VFERHR
+        N VFERID
+        D PRAZO
+        N PVEN
+        N PVEN2
+        N PREF
+        N DLUC
+        N DPRE
+        C OBS01
+        C OBS02
+        C OBS03
+        C OBS04
+        C OBS05
+        C OBS06
+        C OBS07
+        C OBS08
+        C OBC01
+        C OBC02
+        C OBC03
+        C OBC04
+        C OBC05
+        C OBE01
+        C OBE02
+        C OBE03
+        N SUBTOT01
+        N SUBTOT02
+        C REV
+        N VIABILI
+        C DUNS
+        C PROJETO
+        D NIVELDAT
+        D VIGENDAT
+        D DATA
+        N USUMEDIO
+        N ELANUM
+        C ELANOM
+        D ELADAT
+        C ELAHOR
+        N PCPRGMED
+        C TIPOIMP
+        N PPIS
+        N PCON
+        C TIPMEDIA
+        N PLUC
+        N PADM
+        N PCOM
+        N PCPM
+        L LICM
+        N PRRJ
+        C CAPPRO
+        N OV
+        D DATACALC
+        N OVORI
+        C PISCON
+        N VTERI
+        N VTERL
+        C OBSP01
+        C OBSP02
+        C OVREV
+        N VSIMP
+    }
+```
+
 ---
 ## Tabela DBF: `esfms03`
 > **Origem:** `esfms03` (Driver: DBFCDX)
@@ -477,6 +879,27 @@
 
 **Indices vinculados:**
 - Tag: `OV` Expressao: `OV`
+
+```mermaid
+erDiagram
+    esfms03 {
+        N OV
+        C CODIGO
+        C TIPOENT
+        C CODCOMP
+        C NOMECOMP
+        C ORIGEM
+        N QTDDE
+        N PRECO
+        N TOTAL
+        L IICM
+        N REDICM
+        N CODFOLHA
+        C OBS01
+        D ULTDATA
+        C ULTUND
+    }
+```
 
 ---
 ## Tabela DBF: `esfms06`
@@ -515,6 +938,40 @@
 
 **Indices vinculados:**
 - Tag: `OV` Expressao: `OV`
+
+```mermaid
+erDiagram
+    esfms06 {
+        N OV
+        C CODIGO
+        N SEQ
+        N SSQ
+        C DESCRI
+        C CODMP01
+        C NOMMP01
+        C CODMP02
+        C NOMMP02
+        C CODMP02B
+        C NOMMP02B
+        C CODMP02C
+        C NOMMP02C
+        C CODMP02D
+        C NOMMP02D
+        C CODMP03
+        C NOMMP03
+        N PCHORA
+        C AREA
+        N HRFER
+        N CODFOLHA
+        N PRECO
+        N QTDDE
+        N TOTAL
+        C COGMP01
+        N PCMEDIA
+        N FLUXO
+        N FATOR
+    }
+```
 
 ---
 ## Tabela DBF: `eso`
@@ -612,6 +1069,96 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 - Tag: `VIABILI` Expressao: `VIABILI`
 
+```mermaid
+erDiagram
+    eso {
+        N CLIENTE
+        C COGCLI
+        C CODIGO
+        C NOME
+        N VCOM
+        N VCOMI
+        N VCOML
+        N VMAT
+        N VMATI
+        N VMATL
+        N VTER
+        N VMAOM
+        N VMAOO
+        N VREJ
+        N VMAR
+        N FMAR
+        C PUF
+        N PMAK
+        N PICM
+        N PMAR
+        N LANU
+        N LMES
+        N LMIN
+        N VFER
+        N VFERHR
+        N VFERID
+        D PRAZO
+        N PVEN
+        N PVEN2
+        N PREF
+        N DLUC
+        N DPRE
+        C OBS01
+        C OBS02
+        C OBS03
+        C OBS04
+        C OBS05
+        C OBS06
+        C OBS07
+        C OBS08
+        C OBC01
+        C OBC02
+        C OBC03
+        C OBC04
+        C OBC05
+        C OBE01
+        C OBE02
+        C OBE03
+        N SUBTOT01
+        N SUBTOT02
+        C REV
+        N VIABILI
+        C DUNS
+        C PROJETO
+        D NIVELDAT
+        D VIGENDAT
+        D DATA
+        N USUMEDIO
+        N ELANUM
+        C ELANOM
+        D ELADAT
+        C ELAHOR
+        N PCPRGMED
+        C TIPOIMP
+        N PPIS
+        N PCON
+        C TIPMEDIA
+        N PLUC
+        N PADM
+        N PCOM
+        N PCPM
+        L LICM
+        N PRRJ
+        C CAPPRO
+        N OV
+        D DATACALC
+        N OVORI
+        C PISCON
+        N VTERI
+        N VTERL
+        C OBSP01
+        C OBSP02
+        C OVREV
+        N VSIMP
+    }
+```
+
 ---
 ## Tabela DBF: `esoms03`
 > **Origem:** `esoms03` (Driver: DBFCDX)
@@ -636,6 +1183,27 @@
 
 **Indices vinculados:**
 - Tag: `OV` Expressao: `OV`
+
+```mermaid
+erDiagram
+    esoms03 {
+        N OV
+        C CODIGO
+        C TIPOENT
+        C CODCOMP
+        C NOMECOMP
+        C ORIGEM
+        N QTDDE
+        N PRECO
+        N TOTAL
+        L IICM
+        N REDICM
+        N CODFOLHA
+        C OBS01
+        D ULTDATA
+        C ULTUND
+    }
+```
 
 ---
 ## Tabela DBF: `esoms06`
@@ -671,6 +1239,40 @@
 | PCMEDIA | N | 5 | 0 |
 | FLUXO | N | 3 | 0 |
 | FATOR | N | 5 | 2 |
+
+```mermaid
+erDiagram
+    esoms06 {
+        N OV
+        C CODIGO
+        N SEQ
+        N SSQ
+        C DESCRI
+        C CODMP01
+        C NOMMP01
+        C CODMP02
+        C NOMMP02
+        C CODMP02B
+        C NOMMP02B
+        C CODMP02C
+        C NOMMP02C
+        C CODMP02D
+        C NOMMP02D
+        C CODMP03
+        C NOMMP03
+        N PCHORA
+        C AREA
+        N HRFER
+        N CODFOLHA
+        N PRECO
+        N QTDDE
+        N TOTAL
+        C COGMP01
+        N PCMEDIA
+        N FLUXO
+        N FATOR
+    }
+```
 
 ---
 ## Tabela DBF: `esp`
@@ -768,6 +1370,96 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 - Tag: `VIABILI` Expressao: `VIABILI`
 
+```mermaid
+erDiagram
+    esp {
+        N CLIENTE
+        C COGCLI
+        C CODIGO
+        C NOME
+        N VCOM
+        N VCOMI
+        N VCOML
+        N VMAT
+        N VMATI
+        N VMATL
+        N VTER
+        N VMAOM
+        N VMAOO
+        N VREJ
+        N VMAR
+        N FMAR
+        C PUF
+        N PMAK
+        N PICM
+        N PMAR
+        N LANU
+        N LMES
+        N LMIN
+        N VFER
+        N VFERHR
+        N VFERID
+        D PRAZO
+        N PVEN
+        N PVEN2
+        N PREF
+        N DLUC
+        N DPRE
+        C OBS01
+        C OBS02
+        C OBS03
+        C OBS04
+        C OBS05
+        C OBS06
+        C OBS07
+        C OBS08
+        C OBC01
+        C OBC02
+        C OBC03
+        C OBC04
+        C OBC05
+        C OBE01
+        C OBE02
+        C OBE03
+        N SUBTOT01
+        N SUBTOT02
+        C REV
+        N VIABILI
+        C DUNS
+        C PROJETO
+        D NIVELDAT
+        D VIGENDAT
+        D DATA
+        N USUMEDIO
+        N ELANUM
+        C ELANOM
+        D ELADAT
+        C ELAHOR
+        N PCPRGMED
+        C TIPOIMP
+        N PPIS
+        N PCON
+        C TIPMEDIA
+        N PLUC
+        N PADM
+        N PCOM
+        N PCPM
+        L LICM
+        N PRRJ
+        C CAPPRO
+        N OV
+        D DATACALC
+        N OVORI
+        C PISCON
+        N VTERI
+        N VTERL
+        C OBSP01
+        C OBSP02
+        C OVREV
+        N VSIMP
+    }
+```
+
 ---
 ## Tabela DBF: `espms03`
 > **Origem:** `espms03` (Driver: DBFCDX)
@@ -792,6 +1484,27 @@
 
 **Indices vinculados:**
 - Tag: `OV` Expressao: `OV`
+
+```mermaid
+erDiagram
+    espms03 {
+        N OV
+        C CODIGO
+        C TIPOENT
+        C CODCOMP
+        C NOMECOMP
+        C ORIGEM
+        N QTDDE
+        N PRECO
+        N TOTAL
+        L IICM
+        N REDICM
+        N CODFOLHA
+        C OBS01
+        D ULTDATA
+        C ULTUND
+    }
+```
 
 ---
 ## Tabela DBF: `espms06`
@@ -831,6 +1544,40 @@
 **Indices vinculados:**
 - Tag: `OV` Expressao: `OV`
 
+```mermaid
+erDiagram
+    espms06 {
+        N OV
+        C CODIGO
+        N SEQ
+        N SSQ
+        C DESCRI
+        C CODMP01
+        C NOMMP01
+        C CODMP02
+        C NOMMP02
+        C CODMP02B
+        C NOMMP02B
+        C CODMP02C
+        C NOMMP02C
+        C CODMP02D
+        C NOMMP02D
+        C CODMP03
+        C NOMMP03
+        N PCHORA
+        C AREA
+        N HRFER
+        N CODFOLHA
+        N PRECO
+        N QTDDE
+        N TOTAL
+        C COGMP01
+        N PCMEDIA
+        N FLUXO
+        N FATOR
+    }
+```
+
 ---
 ## Tabela DBF: `fluxo`
 > **Origem:** `fluxo` (Driver: DBFCDX)
@@ -843,6 +1590,15 @@
 
 **Indices vinculados:**
 - Tag: `FLUXO-1` Expressao: `NUMERO`
+
+```mermaid
+erDiagram
+    fluxo {
+        C CODIGO
+        C NOME
+        N NUMERO
+    }
+```
 
 ---
 ## Tabela DBF: `np`
@@ -872,6 +1628,29 @@
 - Tag: `NP` Expressao: `NP`
 - Tag: `CLIENTE` Expressao: `CLIENTE`
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    np {
+        N NP
+        C CODIGO
+        C NOME
+        N CLIENTE
+        C CLINOME
+        C VEICULO
+        N PRSICM
+        N PRCICM
+        N VLFER
+        D PRAZO
+        N QTDMES
+        C COMPRADOR
+        C COMPNOME
+        N DESANUAL
+        C OS
+        N ANO
+        L PENDENTE
+    }
+```
 
 ---
 ## Tabela DBF: `orca`
@@ -913,6 +1692,42 @@
 **Indices vinculados:**
 - Tag: `ORCA` Expressao: `ORCA`
 
+```mermaid
+erDiagram
+    orca {
+        N ORCA
+        N CLIENTE
+        C CLINOME
+        C AC
+        C REFER
+        D DATA
+        C ORC
+        C ORC01
+        C ORC02
+        C PRAZO
+        C PRAZ2
+        C PRAZ3
+        C PRAZ4
+        C CPAG
+        C CFER
+        C CVAL
+        C OBS01
+        C OBS02
+        C OBS03
+        C OBS04
+        C OBS05
+        C OBS06
+        C OBS07
+        C OBS08
+        C SETOR
+        C CARGO
+        C RESPO
+        D NIVEL
+        C CAMBIO
+        C REVI
+    }
+```
+
 ---
 ## Tabela DBF: `orcai`
 > **Origem:** `orcai` (Driver: DBFCDX)
@@ -941,6 +1756,30 @@
 **Indices vinculados:**
 - Tag: `ORCA` Expressao: `ORCA`
 
+```mermaid
+erDiagram
+    orcai {
+        N ORCA
+        N ORD
+        N QTDDE
+        C UNID
+        C DESCR
+        C UNIPEC
+        N VALPEC
+        N FERRA
+        N LOTEMIN
+        N VIABILI
+        C OBSITEM
+        C OBSITE2
+        C OBSITE3
+        C OBSITE4
+        C OBSITE5
+        C DESENHO
+        C REV
+        C DATAREV
+    }
+```
+
 ---
 ## Tabela DBF: `vfms03`
 > **Origem:** `vfms03` (Driver: DBFCDX)
@@ -965,6 +1804,27 @@
 
 **Indices vinculados:**
 - Tag: `OV` Expressao: `OV`
+
+```mermaid
+erDiagram
+    vfms03 {
+        N OV
+        C CODIGO
+        C TIPOENT
+        C CODCOMP
+        C NOMECOMP
+        C ORIGEM
+        N QTDDE
+        N PRECO
+        N TOTAL
+        L IICM
+        N REDICM
+        N CODFOLHA
+        C OBS01
+        D ULTDATA
+        C ULTUND
+    }
+```
 
 ---
 ## Tabela DBF: `vfms06`
@@ -1003,6 +1863,40 @@
 
 **Indices vinculados:**
 - Tag: `OV` Expressao: `OV`
+
+```mermaid
+erDiagram
+    vfms06 {
+        N OV
+        C CODIGO
+        N SEQ
+        N SSQ
+        C DESCRI
+        C CODMP01
+        C NOMMP01
+        C CODMP02
+        C NOMMP02
+        C CODMP02B
+        C NOMMP02B
+        C CODMP02C
+        C NOMMP02C
+        C CODMP02D
+        C NOMMP02D
+        C CODMP03
+        C NOMMP03
+        N PCHORA
+        C AREA
+        N HRFER
+        N CODFOLHA
+        N PRECO
+        N QTDDE
+        N TOTAL
+        C COGMP01
+        N PCMEDIA
+        N FLUXO
+        N FATOR
+    }
+```
 
 ---
 ## Tabela DBF: `vforc`
@@ -1100,6 +1994,96 @@
 - Tag: `CODIGO` Expressao: `CODIGO`
 - Tag: `VIABILI` Expressao: `VIABILI`
 
+```mermaid
+erDiagram
+    vforc {
+        N CLIENTE
+        C COGCLI
+        C CODIGO
+        C NOME
+        N VCOM
+        N VCOMI
+        N VCOML
+        N VMAT
+        N VMATI
+        N VMATL
+        N VTER
+        N VMAOM
+        N VMAOO
+        N VREJ
+        N VMAR
+        N FMAR
+        C PUF
+        N PMAK
+        N PICM
+        N PMAR
+        N LANU
+        N LMES
+        N LMIN
+        N VFER
+        N VFERHR
+        N VFERID
+        D PRAZO
+        N PVEN
+        N PVEN2
+        N PREF
+        N DLUC
+        N DPRE
+        C OBS01
+        C OBS02
+        C OBS03
+        C OBS04
+        C OBS05
+        C OBS06
+        C OBS07
+        C OBS08
+        C OBC01
+        C OBC02
+        C OBC03
+        C OBC04
+        C OBC05
+        C OBE01
+        C OBE02
+        C OBE03
+        N SUBTOT01
+        N SUBTOT02
+        C REV
+        N VIABILI
+        C DUNS
+        C PROJETO
+        D NIVELDAT
+        D VIGENDAT
+        D DATA
+        N USUMEDIO
+        N ELANUM
+        C ELANOM
+        D ELADAT
+        C ELAHOR
+        N PCPRGMED
+        C TIPOIMP
+        N PPIS
+        N PCON
+        C TIPMEDIA
+        N PLUC
+        N PADM
+        N PCOM
+        N PCPM
+        L LICM
+        N PRRJ
+        C CAPPRO
+        N OV
+        D DATACALC
+        N OVORI
+        C PISCON
+        N VTERI
+        N VTERL
+        C OBSP01
+        C OBSP02
+        C OVREV
+        N VSIMP
+    }
+```
+
 ---
 ## Tabela DBF: `viabiii`
 > **Origem:** `viabiii` (Driver: DBFCDX)
@@ -1135,6 +2119,37 @@
 **Indices vinculados:**
 - Tag: `OVITEM` Expressao: `STR(OV,8)+STR(ITEM,3)`
 - Tag: `OV` Expressao: `OV`
+
+```mermaid
+erDiagram
+    viabiii {
+        N OV
+        N ITEM
+        C TIPO
+        C REV
+        C SITUACAO
+        C SITUSER
+        D SITDATA
+        C SITHORA
+        N PRECO
+        D PRECODT
+        C PRECOUN
+        N CLIFOR
+        C CLICOG
+        C APROVACAO
+        C APRUSER
+        D APRDATA
+        C APRTIME
+        C COTUSR
+        D COTDATA
+        C COTTIME
+        D DATALC
+        D PRAZOI
+        M DADO
+        M SITOBS
+        M APROBS
+    }
+```
 
 ---
 ## Tabela DBF: `viabili`
@@ -1247,6 +2262,109 @@
 - Tag: `PEDCLI` Expressao: `PEDCLI`
 - Tag: `CODIGOINT` Expressao: `CODIGOINT`
 
+```mermaid
+erDiagram
+    viabili {
+        N OV
+        N OVORI
+        N CLIENTE
+        C CLINOME
+        C CLICOGN
+        C COMCOMP
+        C COMPRADOR
+        C DESENHO
+        C PECA
+        C GPS
+        C DENOMINA
+        C NORMAT
+        C AM
+        N QTDEANO
+        N LOTEMIN
+        C PR
+        D DATAS
+        C COTAR
+        D DATAV
+        D DATAEC
+        C SITUACAO
+        C EAC
+        C VIAVEL
+        C VIA01
+        C VIA02
+        C FESP
+        C OBSF01
+        C OBSF02
+        C MATM
+        C MATS
+        C OBSM01
+        C TRATM
+        C TRATS
+        C OBST01
+        C OBST02
+        C DISPE
+        C OBSE01
+        C OBSE02
+        C DISPO
+        C OBSO01
+        C OBSG01
+        C OBSG02
+        C OBSG03
+        C OBSG04
+        C OBSG05
+        C OBSG06
+        C OBSG07
+        C OBSG08
+        L COT01
+        L COT02
+        L COT03
+        L COT04
+        L COT05
+        L COT06
+        L COT07
+        C REQC
+        C REQ01
+        C PEDCLI
+        D PRZCLI
+        D DATAPRE
+        C OBSVEN
+        N VALORFER
+        N VALORUNI
+        N QTDENEG
+        N ORCAMENTO
+        N ITEM
+        N FVALORFER
+        N FVALORUNI
+        D FDATA
+        C INCUSER
+        D INCDATA
+        C INCHORA
+        N ESP
+        C OBSCUS01
+        C OBSCUS02
+        C OBSCUS03
+        C RFQN
+        C DUNS
+        C PROJETO
+        C RISCO
+        C OBSR01
+        C TIPOVIA
+        C CODIGOINT
+        C REV
+        C OBSCLI
+        C DESORC
+        C DESORCREV
+        D DESORCDAT
+        L CANCELADO
+        C ENVELOPE
+        L DECLINADO
+        L FOLLOWUP
+        C GI
+        C SEGMENTO
+        N DECLMOT
+        C VENDEDOR
+        C COMVEND
+    }
+```
+
 ---
 ## Tabela DBF: `viarev`
 > **Origem:** `viarev` (Driver: DBFCDX)
@@ -1264,6 +2382,19 @@
 **Indices vinculados:**
 - Tag: `VIAREV` Expressao: `OV`
 
+```mermaid
+erDiagram
+    viarev {
+        N OV
+        C OPR
+        C REV
+        D DATA
+        C HORA
+        C USUARIO
+        C MOTIVO
+    }
+```
+
 ---
 ## Tabela DBF: `vmark`
 > **Origem:** `vmark` (Driver: DBFCDX)
@@ -1276,6 +2407,15 @@
 
 **Indices vinculados:**
 - Tag: `SEQ` Expressao: `SEQ`
+
+```mermaid
+erDiagram
+    vmark {
+        N SEQ
+        C DESCRI
+        N PERCE
+    }
+```
 
 ---
 ## Tabela DBF: `vms03`
@@ -1301,6 +2441,27 @@
 
 **Indices vinculados:**
 - Tag: `OV` Expressao: `OV`
+
+```mermaid
+erDiagram
+    vms03 {
+        N OV
+        C CODIGO
+        C TIPOENT
+        C CODCOMP
+        C NOMECOMP
+        C ORIGEM
+        N QTDDE
+        N PRECO
+        N TOTAL
+        L IICM
+        N REDICM
+        N CODFOLHA
+        C OBS01
+        D ULTDATA
+        C ULTUND
+    }
+```
 
 ---
 ## Tabela DBF: `vms06`
@@ -1339,6 +2500,40 @@
 
 **Indices vinculados:**
 - Tag: `OV` Expressao: `OV`
+
+```mermaid
+erDiagram
+    vms06 {
+        N OV
+        C CODIGO
+        N SEQ
+        N SSQ
+        C DESCRI
+        C CODMP01
+        C NOMMP01
+        C CODMP02
+        C NOMMP02
+        C CODMP02B
+        C NOMMP02B
+        C CODMP02C
+        C NOMMP02C
+        C CODMP02D
+        C NOMMP02D
+        C CODMP03
+        C NOMMP03
+        N PCHORA
+        C AREA
+        N HRFER
+        N CODFOLHA
+        N PRECO
+        N QTDDE
+        N TOTAL
+        C COGMP01
+        N PCMEDIA
+        N FLUXO
+        N FATOR
+    }
+```
 
 ---
 ## Tabela DBF: `vporc`
@@ -1435,5 +2630,95 @@
 - Tag: `OV` Expressao: `OV`
 - Tag: `CODIGO` Expressao: `CODIGO`
 - Tag: `VIABILI` Expressao: `VIABILI`
+
+```mermaid
+erDiagram
+    vporc {
+        N CLIENTE
+        C COGCLI
+        C CODIGO
+        C NOME
+        N VCOM
+        N VCOMI
+        N VCOML
+        N VMAT
+        N VMATI
+        N VMATL
+        N VTER
+        N VMAOM
+        N VMAOO
+        N VREJ
+        N VMAR
+        N FMAR
+        C PUF
+        N PMAK
+        N PICM
+        N PMAR
+        N LANU
+        N LMES
+        N LMIN
+        N VFER
+        N VFERHR
+        N VFERID
+        D PRAZO
+        N PVEN
+        N PVEN2
+        N PREF
+        N DLUC
+        N DPRE
+        C OBS01
+        C OBS02
+        C OBS03
+        C OBS04
+        C OBS05
+        C OBS06
+        C OBS07
+        C OBS08
+        C OBC01
+        C OBC02
+        C OBC03
+        C OBC04
+        C OBC05
+        C OBE01
+        C OBE02
+        C OBE03
+        N SUBTOT01
+        N SUBTOT02
+        C REV
+        N VIABILI
+        C DUNS
+        C PROJETO
+        D NIVELDAT
+        D VIGENDAT
+        D DATA
+        N USUMEDIO
+        N ELANUM
+        C ELANOM
+        D ELADAT
+        C ELAHOR
+        N PCPRGMED
+        C TIPOIMP
+        N PPIS
+        N PCON
+        C TIPMEDIA
+        N PLUC
+        N PADM
+        N PCOM
+        N PCPM
+        L LICM
+        N PRRJ
+        C CAPPRO
+        N OV
+        D DATACALC
+        N OVORI
+        C PISCON
+        N VTERI
+        N VTERL
+        C OBSP01
+        C OBSP02
+        C OVREV
+        N VSIMP
+    }
+```
 
 ---

@@ -1,0 +1,695 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "anp" as anp {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "cartaobandeira" as cartaobandeira {
+  CODIGO : varchar(2)
+  NOME : varchar(20)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "cest" as cest {
+  CODIGO : varchar(7)
+  NCM : varchar(8)
+  DESCRICAO : varchar(255)
+  SEGMENTO : varchar(2)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "cest_ncm" as cest_ncm {
+  CEST_ID : varchar(7)
+  NCM_ID : varchar(8)
+  TAMANHO : varchar(1)
+  FAIXA_I : varchar(8)
+  FAIXA_F : varchar(8)
+  CEST_SEGME : varchar(2)
+  --
+  .. Índices ..
+  + CEST_NCM01 : CEST_ID
+  + CEST_NCM02 : NCM_ID
+  + CEST_NCM03 : CEST_SEGME
+  + CEST_NCM04 : CEST_SEGME+NCM_ID
+}
+
+entity "cest_segmento" as cest_segmento {
+  ID : varchar(2)
+  ANEXO : varchar(10)
+  DESCRICAO : varchar(120)
+  --
+  .. Índices ..
+  + SEGMENTO01 : ID
+  + SEGMENTO02 : DESCRICAO
+}
+
+entity "cl_enq_ipi" as cl_enq_ipi {
+  CODIGO : varchar(30)
+  DESCRICAO : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "cst_cofins" as cst_cofins {
+  CODIGO : varchar(2)
+  NOME : varchar(150)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+  + NOME : NOME
+}
+
+entity "cst_icm" as cst_icm {
+  CODIGO : varchar(3)
+  NOME : varchar(150)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+  + NOME : NOME
+}
+
+entity "cst_icms" as cst_icms {
+  CODIGO : varchar(30)
+  NOME : varchar(254)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "cst_ipi" as cst_ipi {
+  CODIGO : varchar(2)
+  NOME : varchar(150)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+  + NOME : NOME
+}
+
+entity "cst_pis" as cst_pis {
+  CODIGO : varchar(2)
+  NOME : varchar(150)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+  + NOME : NOME
+}
+
+entity "ctecret" as ctecret {
+  CODIGO : varchar(3)
+  DESCRICAO : varchar(120)
+  --
+  .. Índices ..
+  + NFECRET : CODIGO
+}
+
+entity "efdtprod" as efdtprod {
+  CODIGO : varchar(2)
+  NOME : varchar(30)
+  --
+  .. Índices ..
+  + EFDPROD : CODIGO
+}
+
+entity "fi_cai" as fi_cai {
+  SEQ : integer
+  DATA : datetime
+  DESCR : varchar(30)
+  CREDITO : decimal(12,2)
+  DEBITO : decimal(12,2)
+  SALDO : decimal(15,2)
+  CONTA : varchar(11)
+  --
+  .. Índices ..
+  + FI_CAI : SEQ
+}
+
+entity "fi_cdipam" as fi_cdipam {
+  CODIGO : varchar(8)
+  NOME : varchar(35)
+  UF : varchar(2)
+  UFIBGE : varchar(2)
+  DIPAM : varchar(4)
+  --
+  .. Índices ..
+  + FI_CDIPAM : CODIGO
+  + FI_CDIPAM2 : UF+NOME
+}
+
+entity "fi_ciap" as fi_ciap {
+  CIAP : integer
+  ATIVO : varchar(10)
+  NOME : varchar(40)
+  FORNECEDO : integer
+  FORNOME : varchar(40)
+  NRNOTA : integer
+  NRITEM : integer
+  LRE : varchar(3)
+  LREF : varchar(3)
+  NRENTREGA : datetime
+  VALORICM : decimal(10,2)
+  NRSAIDA : integer
+  MODSAIDA : varchar(3)
+  DTSAIDA : datetime
+  DTINICIO : datetime
+  OBSNF : varchar(20)
+  --
+  .. Índices ..
+  + FI_CIAP : CIAP
+}
+
+entity "fi_ciapi" as fi_ciapi {
+  CIAP : integer
+  ITEM : integer
+  MES : integer
+  ANO : integer
+  VALOR : decimal(8,2)
+  SOMAR : varchar(1)
+  --
+  .. Índices ..
+  + FI_CIAPI : STR(CIAP,8)+STR(ITEM,2)
+  + FI_CIAP2 : CIAP
+}
+
+entity "fi_con" as fi_con {
+  CODSER : varchar(5)
+  DESSER : varchar(60)
+  TIPSER : varchar(1)
+}
+
+entity "fi_dipam" as fi_dipam {
+  DIPAM : varchar(2)
+  NOME : varchar(100)
+  --
+  .. Índices ..
+  + FI_DIPAM : DIPAM
+}
+
+entity "fi_esp" as fi_esp {
+  CODSER : varchar(7)
+  DESSER : varchar(60)
+  TIPSER : varchar(1)
+  EXPCONT : varchar(1)
+  --
+  .. Índices ..
+  + FI_ESP : CODSER
+}
+
+entity "fi_inv" as fi_inv {
+  NUMERO : integer
+  CODIPI : varchar(2)
+  CLASSIFI : varchar(14)
+  NOME : varchar(40)
+  QTDDE : decimal(10,2)
+  UNIDADE : varchar(2)
+  VALORUNI : decimal(10,2)
+  VALORPAR : decimal(10,2)
+  OBS : varchar(15)
+  --
+  .. Índices ..
+  + FI_INV01 : NUMERO
+}
+
+entity "fi_mens" as fi_mens {
+  CODIGO : integer
+  OCORR : varchar(254)
+  FLEGAL : varchar(100)
+  OPERACAO : varchar(1)
+  --
+  .. Índices ..
+  + FI_MENS : CODIGO
+}
+
+entity "fi_mes" as fi_mes {
+  NUMERO : integer
+  MES : integer
+  ANO : integer
+  FIFECE : datetime
+  FIFECS : datetime
+  FIFECICM : datetime
+  FIFECIPI : datetime
+  FIFECISS : datetime
+  FIFECISE : datetime
+  FILIVE : integer
+  FILIVS : integer
+  FILIVICM : integer
+  FILIVIPI : integer
+  FILIVISS : integer
+  FILIVISE : integer
+  FIPAGE : integer
+  FIPAGS : integer
+  FIPAGICM : integer
+  FIPAGIPI : integer
+  FIPAGISS : integer
+  FIPAGISE : integer
+  FIPAXICM : integer
+  FIPAXIPI : integer
+  FILIME : integer
+  FILIMS : integer
+  FILIMICM : integer
+  FILIMIPI : integer
+  FILIMISS : integer
+  FILIMISE : integer
+  FISEQE : integer
+  FISEQS : integer
+  FISEQISS : integer
+  FISEQISE : integer
+  FILANE : datetime
+  FILANS : datetime
+  FILANISS : datetime
+  FILANISE : datetime
+  FILAICM : datetime
+  FILAIPI : datetime
+  FILAISS : datetime
+  FILAISE : datetime
+  FISALICM : decimal(18,2)
+  FISALIPI : decimal(18,2)
+  FISALISS : decimal(18,2)
+  FISALISE : decimal(18,2)
+  FILIFE : integer
+  FILIFS : integer
+  FILIFICM : integer
+  FILIFIPI : integer
+  FILIFISS : integer
+  FILIFISE : integer
+  --
+  .. Índices ..
+  + FI_MES : STR(NUMERO,5)+STRZERO(ANO,4)+STRZERO(MES,2)
+}
+
+entity "fi_nbm" as fi_nbm {
+  NUMERONBM : varchar(8)
+  DESCRI : varchar(100)
+  IPI_NBM : decimal(5,2)
+  ICMS_NBM : decimal(5,2)
+  TIPO : varchar(1)
+  CODNBM : varchar(10)
+  TRIBUTAR : varchar(1)
+  ALIQNAC : decimal(5,2)
+  ALIQIMP : decimal(5,2)
+  EX : decimal(5,2)
+  ALIQEST : decimal(5,2)
+  ALIQMUN : decimal(5,2)
+  DATAIMP : datetime
+  --
+  .. Índices ..
+  + FI_NBM : NUMERONBM
+  + FI_NBM-2 : CODNBM
+}
+
+entity "fi_nbmcnv" as fi_nbmcnv {
+  NUMERONBM : varchar(8)
+  CODNBM : varchar(10)
+  NOMENBM : varchar(55)
+  --
+  .. Índices ..
+  + FI_NBM : NUMERONBM
+  + FI_NBM-2 : CODNBM
+}
+
+entity "fi_nbms" as fi_nbms {
+  NUMERONBM : varchar(9)
+  DESCRI : varchar(100)
+  IPI_NBM : decimal(5,2)
+  ICMS_NBM : decimal(5,2)
+  TIPO : varchar(1)
+  CODNBM : varchar(10)
+  TRIBUTAR : varchar(1)
+  ALIQNAC : decimal(5,2)
+  ALIQIMP : decimal(5,2)
+  EX : decimal(5,2)
+  ALIQEST : decimal(5,2)
+  ALIQMUN : decimal(5,2)
+  DATAIMP : datetime
+  --
+  .. Índices ..
+  + FI_NBM : NUMERONBM
+  + FI_NBM-2 : CODNBM
+}
+
+entity "fi_oco" as fi_oco {
+  ANO : integer
+  MES : integer
+  TIPO : varchar(1)
+  ITEM : integer
+  DESCRICAO : varchar(50)
+  VALICM : decimal(12,2)
+  VALIPI : decimal(12,2)
+  --
+  .. Índices ..
+  + FI_OCO : STR(ANO,4)+STR(MES,2)+TIPO+STR(ITEM,2)
+}
+
+entity "fi_ser" as fi_ser {
+  CODSER : varchar(5)
+  DESSER : varchar(60)
+  TIPSER : varchar(1)
+  EXPCONT : varchar(1)
+  --
+  .. Índices ..
+  + FI_SER01 : CODSER
+}
+
+entity "fi_temp1" as fi_temp1 {
+  CFO : varchar(3)
+  CFONEW : varchar(4)
+  SUBCFO : varchar(1)
+  ICM : decimal(5,2)
+  IPI : decimal(5,2)
+  CONTABIL : decimal(18,2)
+  ICMBAS : decimal(18,2)
+  ICMVAL : decimal(18,2)
+  ICMISE : decimal(18,2)
+  ICMOUT : decimal(18,2)
+  OBSICM : decimal(18,2)
+  IPIBAS : decimal(18,2)
+  IPIVAL : decimal(18,2)
+  IPIISE : decimal(18,2)
+  IPIOUT : decimal(18,2)
+  OBSIPI : decimal(18,2)
+  --
+  .. Índices ..
+  + FI_TEM11 : CFO+SUBCFO+STR(ICM,5,2)
+  + FI_TEM12 : CFONEW+STR(ICM,5,2)
+  + FI_TEM13 : CFO+SUBCFO+STR(IPI,5,2)
+  + FI_TEM14 : CFONEW+STR(IPI,5,2)
+}
+
+entity "ibs" as ibs {
+  IBS : varchar(3)
+  DESCRIBS : varchar(55)
+  CLASTRIB : varchar(6)
+  NOMECLAST1 : varchar(250)
+  NOMECLAST2 : varchar(250)
+  DESCRTRIB1 : varchar(250)
+  DESCRTRIB2 : varchar(250)
+  DESCRLC01 : varchar(250)
+  DESCRLC02 : varchar(250)
+  LC : varchar(20)
+  TIPOALIQ : varchar(100)
+  PREDIBS : varchar(100)
+  PREDCBS : varchar(100)
+  INDREDBC : varchar(100)
+  INDGTRREG : varchar(100)
+  INDCREDP : varchar(100)
+  INDMONO : varchar(100)
+  INDMORETEN : varchar(100)
+  INDMONORET : varchar(100)
+  INDMONODIF : varchar(100)
+  CREDPARA : varchar(100)
+  DINIVIG : varchar(100)
+  DFIMVIG : varchar(100)
+  ULTATUALIZ : varchar(100)
+  --
+  .. Índices ..
+  + IBS : IBS
+}
+
+entity "indicador_presenca" as indicador_presenca {
+  CODIGO : varchar(1)
+  DESCRICAO : varchar(50)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "md03" as md03 {
+  CODIGO : varchar(2)
+  CLASSIFIC : varchar(14)
+  DESCRICAO : varchar(50)
+  ALIQUOTA : integer
+  ALIQUOTAR : decimal(5,2)
+  ALIQUOTAI : decimal(5,2)
+  DSTA : varchar(1)
+}
+
+entity "md04" as md04 {
+  CFONEW : varchar(4)
+  DESCRICAO : varchar(150)
+  CFO : varchar(3)
+  NOMENOTA : varchar(25)
+  TIPO : varchar(1)
+  DIPAM : varchar(2)
+  FIN : varchar(1)
+  PIS : varchar(1)
+  REMESSA : varchar(1)
+  DIPIPI : varchar(1)
+  DIPICM : varchar(1)
+  CODICM : varchar(3)
+  EXPCONT : varchar(1)
+  CONTACRE : varchar(11)
+  CONTADEB : varchar(11)
+  CONTAS : varchar(1)
+  APURA : varchar(1)
+  ZERAIPI : varchar(1)
+  FICHA : varchar(1)
+  FATURA : varchar(1)
+  IRENDA : varchar(1)
+  ST : varchar(1)
+  STFRETE : varchar(1)
+  BENEF : varchar(1)
+  ICMS : varchar(1)
+  IPI : varchar(1)
+  ISS : varchar(1)
+  DEVOLUCAO : varchar(1)
+  SERVPROD : varchar(1)
+  ESTOQUE : varchar(1)
+  TIPO2 : varchar(1)
+  NFE : varchar(1)
+  COMUNICA : varchar(1)
+  TRANSP : varchar(1)
+  --
+  .. Índices ..
+  + MD04-1 : CFO+CFONEW
+  + MD04-2 : CFONEW
+  + MD04-3 : CFO
+}
+
+entity "md05x" as md05x {
+  UFICMS : varchar(2)
+  UFDEST : varchar(2)
+  NOMEEXT : varchar(20)
+  ALIQUOTA : decimal(5,2)
+  ALIQUOTAR : decimal(5,2)
+  ZONAFRANCA : varchar(1)
+  --
+  .. Índices ..
+  + MD05X-1 : UFICMS
+  + MD05X-2 : NOMEEXT
+  + MD05X-3 : UFICMS+UFDEST
+}
+
+entity "modais_frete" as modais_frete {
+  CODIGO : varchar(1)
+  DESCRICAO : varchar(30)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "modalidade_frete" as modalidade_frete {
+  CODIGO : varchar(1)
+  DESCRICAO : varchar(55)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "modalidade_frete_anp" as modalidade_frete_anp {
+  CODIGO : varchar(2)
+  DESCRICAO : varchar(50)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "modelo_cobranca" as modelo_cobranca {
+  CODIGO : varchar(1)
+  DESCRICAO : varchar(50)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "modelo_cobranca_cst" as modelo_cobranca_cst {
+  CODIGO : varchar(1)
+  DESCRICAO : varchar(50)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "moeda" as moeda {
+  CODIGO : integer
+  NOME : varchar(17)
+  DATA_INI : datetime
+  DATA_FIM : datetime
+  PAIS : varchar(60)
+  SIMBOLO : varchar(3)
+  BACEN : integer
+  TIPO : varchar(1)
+  MOEDA : varchar(60)
+  NUMINT : integer
+  NUMDEC : integer
+  --
+  .. Índices ..
+  + MOEDA : CODIGO
+  + SIMBOLO : SIMBOLO
+  + PAIS : PAIS
+  + NOME : NOME
+}
+
+entity "nbs" as nbs {
+  NBS : varchar(12)
+  DESC_NBS : varchar(999)
+  ITEM : varchar(5)
+  DESC_ITEM : varchar(300)
+  ONEROSA : varchar(1)
+  EXTERIOR : varchar(1)
+  INDOP : varchar(6)
+  LOCAL_INC : varchar(300)
+  CLASSTRIB : varchar(6)
+  DESC_CLAS : varchar(999)
+  --
+  .. Índices ..
+  + NBS : NBS
+}
+
+entity "ncmuf" as ncmuf {
+  COD_NBM : varchar(12)
+  COD_NCM : varchar(10)
+  AC : decimal(6,2)
+  AL : decimal(6,2)
+  AM : decimal(6,2)
+  AP : decimal(6,2)
+  BA : decimal(6,2)
+  CE : decimal(6,2)
+  DF : decimal(6,2)
+  ES : decimal(6,2)
+  GO : decimal(6,2)
+  MA : decimal(6,2)
+  MT : decimal(6,2)
+  MS : decimal(6,2)
+  MG : decimal(6,2)
+  PA : decimal(6,2)
+  PB : decimal(6,2)
+  PR : decimal(6,2)
+  PE : decimal(6,2)
+  PI : decimal(6,2)
+  RN : decimal(6,2)
+  RS : decimal(6,2)
+  RJ : decimal(6,2)
+  RO : decimal(6,2)
+  RR : decimal(6,2)
+  SC : decimal(6,2)
+  SP : decimal(6,2)
+  SE : decimal(6,2)
+  TO : decimal(6,2)
+}
+
+entity "nfecorrecao" as nfecorrecao {
+  CODIGO : varchar(2)
+  DESCRICAO : varchar(30)
+  --
+  .. Índices ..
+  + NFECRET : CODIGO
+}
+
+entity "nfecret" as nfecret {
+  CODIGO : varchar(3)
+  DESCRICAO : varchar(120)
+  --
+  .. Índices ..
+  + NFECRET : CODIGO
+}
+
+entity "qualif_assinante" as qualif_assinante {
+  CODIGO : varchar(3)
+  DESCRICAO : varchar(70)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "sintdoc" as sintdoc {
+  CODIGO : varchar(2)
+  NOME : varchar(70)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+  + NOME : NOME
+  + SINTDOC : CODIGO
+  + SINTDOC2 : NOME
+}
+
+entity "sintsitu" as sintsitu {
+  CODIGO : varchar(1)
+  NOME : varchar(20)
+  --
+  .. Índices ..
+  + SINTSITU : CODIGO
+  + SINTSIT2 : NOME
+}
+
+entity "tabenqipi" as tabenqipi {
+  CODIGO : varchar(3)
+  GRUPOCST : varchar(10)
+  DESCR1 : varchar(254)
+  DESCR2 : varchar(180)
+  DESCRICAO : varchar(255)
+  --
+  .. Índices ..
+  + ENQIPI01 : CODIGO
+  + ENQIPI02 : GRUPOCST
+  + ENQIPI03 : upper( left( DESCR1, 240 ) )
+}
+
+entity "tipo_pagamento" as tipo_pagamento {
+  CODIGO : varchar(2)
+  DESCRICAO : varchar(60)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "unidade_medida_comercial" as unidade_medida_comercial {
+  UNIDADE : varchar(7)
+  UNIDDES : varchar(25)
+  UNIDDEC : varchar(1)
+  --
+  .. Índices ..
+  + CODIGO : UNIDADE
+}
+
+
+@enduml

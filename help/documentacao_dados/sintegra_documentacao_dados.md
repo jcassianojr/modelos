@@ -1,5 +1,5 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 31/07/2026
+> Varredura automatica realizada em: 09/09/2026
 
 ## Tabela DBF: `sint`
 > **Origem:** `sint` (Driver: DBFCDX)
@@ -10,6 +10,13 @@
 
 **Indices vinculados:**
 - Tag: `REGISTRO` Expressao: `REG`
+
+```mermaid
+erDiagram
+    sint {
+        C REG
+    }
+```
 
 ---
 ## Tabela DBF: `sint10`
@@ -33,6 +40,24 @@
 **Indices vinculados:**
 - Tag: `CGC` Expressao: `CGC`
 
+```mermaid
+erDiagram
+    sint10 {
+        C TIPO
+        C CGC
+        C IE
+        C NOME
+        C MUNICIPIO
+        C UF
+        C FAX
+        D DATAINI
+        D DATAFIM
+        C CONVENIO
+        N NATUREZA
+        C FINALIDADE
+    }
+```
+
 ---
 ## Tabela DBF: `sint11`
 > **Origem:** `sint11` (Driver: DBFCDX)
@@ -50,6 +75,20 @@
 
 **Indices vinculados:**
 - Tag: `CEP` Expressao: `CEP`
+
+```mermaid
+erDiagram
+    sint11 {
+        C TIPO
+        C LOGRADOURO
+        N NUMERO
+        C COMPL
+        C BAIRRO
+        C CEP
+        C CONTATO
+        C TELEFONE
+    }
+```
 
 ---
 ## Tabela DBF: `sint50`
@@ -84,6 +123,34 @@
 - Tag: `SINT50-1` Expressao: `DTOS(DATA)+STR(NUMERO,8)`
 - Tag: `SINT50-2` Expressao: `STR(NUMERO,8)+TIPONF`
 
+```mermaid
+erDiagram
+    sint50 {
+        C TIPO
+        C CGC
+        C IE
+        D DATA
+        C UF
+        N MODELO
+        C SERIE
+        C SUB
+        N NUMERO
+        C CFOP
+        N VALORTOT
+        N BASE
+        N VALOR
+        N ISENTA
+        N OUTRAS
+        N ALIQUOTA
+        C SITUACAO
+        C TIPONF
+        N OBS
+        C EMITENTE
+        N FORNECEDO
+        C TIPOCLI
+    }
+```
+
 ---
 ## Tabela DBF: `sint51`
 > **Origem:** `sint51` (Driver: DBFCDX)
@@ -116,6 +183,34 @@
 **Indices vinculados:**
 - Tag: `SINT51-1` Expressao: `DTOS(DATA)+STR(NUMERO,8)`
 - Tag: `SINT51-2` Expressao: `STR(NUMERO,8)+TIPONF`
+
+```mermaid
+erDiagram
+    sint51 {
+        C TIPO
+        C CGC
+        C IE
+        D DATA
+        C UF
+        N MODELO
+        C SERIE
+        C SUB
+        N NUMERO
+        C CFOP
+        N VALORTOT
+        N BASE
+        N VALOR
+        N ISENTA
+        N OUTRAS
+        N ALIQUOTA
+        C SITUACAO
+        C TIPONF
+        N OBS
+        N FORNECEDO
+        C TIPOCLI
+        C BRANCOS
+    }
+```
 
 ---
 ## Tabela DBF: `sint53`
@@ -151,6 +246,36 @@
 **Indices vinculados:**
 - Tag: `SINT53-1` Expressao: `DTOS(DATA)+STR(NUMERO,8)`
 - Tag: `SINT53-2` Expressao: `STR(NUMERO,8)+TIPONF`
+
+```mermaid
+erDiagram
+    sint53 {
+        C TIPO
+        C CGC
+        C IE
+        D DATA
+        C UF
+        N MODELO
+        C SERIE
+        C SUB
+        N NUMERO
+        C CFOP
+        N VALORTOT
+        N BASE
+        N VALOR
+        N ISENTA
+        N OUTRAS
+        N ALIQUOTA
+        C SITUACAO
+        C TIPONF
+        N OBS
+        C ANTECIPA
+        N DESPESAS
+        N FORNECEDO
+        C EMITENTE
+        C TIPOCLI
+    }
+```
 
 ---
 ## Tabela DBF: `sint54`
@@ -191,6 +316,36 @@
 - Tag: `SINT54-5` Expressao: `FORNECEDO`
 - Tag: `SINT54-6` Expressao: `STR(NUMERO,8)+CGC`
 
+```mermaid
+erDiagram
+    sint54 {
+        C TIPO
+        C CGC
+        N MODELO
+        C SERIE
+        N NUMERO
+        C CFOP
+        N SITUACAO
+        N ITEM
+        C CODIGORED
+        N QTDE
+        N VALORMER
+        N DESCONTO
+        N BASEICM
+        N BASESUB
+        N VALORIPI
+        N ICM
+        C TIPOENT
+        C CODIGO
+        C TIPONF
+        C TIPOCLI
+        N FORNECEDO
+        C UF
+        C SUB
+        D DATA
+    }
+```
+
 ---
 ## Tabela DBF: `sint55`
 > **Origem:** `sint55` (Driver: DBFCDX)
@@ -213,6 +368,25 @@
 
 **Indices vinculados:**
 - Tag: `NUMGNRE` Expressao: `NUMGNRE`
+
+```mermaid
+erDiagram
+    sint55 {
+        C TIPO
+        C CGC
+        C IE
+        D DTGNRE
+        C UF
+        C UFFAVOR
+        C BANCO
+        C AGENCIA
+        C NUMGNRE
+        N VALGNRE
+        D DTVENC
+        C MESANOREF
+        C CONVENIO
+    }
+```
 
 ---
 ## Tabela DBF: `sint56`
@@ -238,6 +412,26 @@
 **Indices vinculados:**
 - Tag: `CNPJNUMERO` Expressao: `CNPJCPF+NUMERO`
 
+```mermaid
+erDiagram
+    sint56 {
+        C REG
+        C CNPJCPF
+        N MODELO
+        C SERIE
+        C NUMERO
+        C CFOP
+        N CST
+        N NRITEM
+        C CODPROD
+        N TPOPERACAO
+        N CNPJCONC
+        C ALQIPI
+        C CHASSI
+        C BRANCOS
+    }
+```
+
 ---
 ## Tabela DBF: `sint60a`
 > **Origem:** `sint60a` (Driver: DBFCDX)
@@ -254,6 +448,19 @@
 
 **Indices vinculados:**
 - Tag: `NUMFABA` Expressao: `NUMFABA`
+
+```mermaid
+erDiagram
+    sint60a {
+        C TIPO
+        C SUB60A
+        D EMIS60A
+        C NUMFABA
+        C SITTRI60A
+        N VALOR60
+        C BRANCO60A
+    }
+```
 
 ---
 ## Tabela DBF: `sint60d`
@@ -275,6 +482,23 @@
 
 **Indices vinculados:**
 - Tag: `FUMFABD` Expressao: `NUMFABD`
+
+```mermaid
+erDiagram
+    sint60d {
+        C TIPO
+        C SUB60D
+        D EMIS60D
+        C NUMFABD
+        C PROD60D
+        N QUANT60D
+        N VALPRO60D
+        N BASEIC60D
+        C SITTRI60D
+        N VALICM60D
+        C BRANCO60D
+    }
+```
 
 ---
 ## Tabela DBF: `sint60i`
@@ -300,6 +524,26 @@
 **Indices vinculados:**
 - Tag: `NUMFABI` Expressao: `NUMFABI`
 
+```mermaid
+erDiagram
+    sint60i {
+        C TIPO
+        C SUB60I
+        D EMIS60I
+        C NUMFABI
+        C MODEL60I
+        C NUMCOO
+        C NUMITE60I
+        C PROD60I
+        N QUANT60I
+        N VALUNI60I
+        N BASEIC60I
+        C SITTRI60I
+        N VALICM60I
+        C BRANCO60I
+    }
+```
+
 ---
 ## Tabela DBF: `sint60m`
 > **Origem:** `sint60m` (Driver: DBFCDX)
@@ -323,6 +567,25 @@
 **Indices vinculados:**
 - Tag: `NUNFABM` Expressao: `NUMFABM`
 
+```mermaid
+erDiagram
+    sint60m {
+        C TIPO
+        C SUB60M
+        D EMIS60M
+        C NUMFABM
+        C NUMPDVM
+        C MODEL60M
+        C NUINI60M
+        C NUFIM60M
+        C REDUZ60M
+        N CRO60M
+        N VENDA60M
+        N TOTGER60M
+        C BRANCO60M
+    }
+```
+
 ---
 ## Tabela DBF: `sint60r`
 > **Origem:** `sint60r` (Driver: DBFCDX)
@@ -341,6 +604,21 @@
 
 **Indices vinculados:**
 - Tag: `SUB60R` Expressao: `SUB60R`
+
+```mermaid
+erDiagram
+    sint60r {
+        C TIPO
+        C SUB60R
+        C MESANOEMR
+        C PROD60R
+        N QUANT60R
+        N VALUNI60R
+        N BASEIC60R
+        C SITTRI60R
+        C BRANCO60R
+    }
+```
 
 ---
 ## Tabela DBF: `sint61`
@@ -367,6 +645,28 @@
 
 **Indices vinculados:**
 - Tag: `NUINI61M` Expressao: `NUINI61M`
+
+```mermaid
+erDiagram
+    sint61 {
+        C TIPO
+        C BRANCO611
+        C BRANCO612
+        D EMIS61
+        C MODEL61M
+        C SERIE61
+        C SUBSER61
+        C NUINI61M
+        C NUFIM61M
+        N VALTOT61
+        N BASEIC61
+        N VALICM61
+        N ISENTA61
+        N OUTRAS61
+        N ALIQIC61
+        C BRANCO61
+    }
+```
 
 ---
 ## Tabela DBF: `sint70`
@@ -402,6 +702,35 @@
 - Tag: `SINT70-1` Expressao: `DTOS(DATA)+STR(NUMERO,8)`
 - Tag: `SINT70-2` Expressao: `STR(NUMERO,8)+TIPONF`
 
+```mermaid
+erDiagram
+    sint70 {
+        C TIPO
+        C CGC
+        C IE
+        D DATA
+        C UF
+        N MODELO
+        C SERIE
+        C SUB
+        N NUMERO
+        C CFOP
+        N VALORTOT
+        N BASE
+        N VALOR
+        N ISENTA
+        N OUTRAS
+        N ALIQUOTA
+        C SITUACAO
+        C TIPONF
+        N OBS
+        C EMITENTE
+        C FRETE
+        N FORNECEDO
+        C TIPOCLI
+    }
+```
+
 ---
 ## Tabela DBF: `sint71`
 > **Origem:** `sint71` (Driver: DBFCDX)
@@ -430,6 +759,30 @@
 **Indices vinculados:**
 - Tag: `CGC` Expressao: `CGC`
 
+```mermaid
+erDiagram
+    sint71 {
+        C TIPO
+        C CGC
+        C IE
+        D EMIS71
+        C UF
+        C MODEL71
+        C SERIE71
+        C SUBSER71
+        C NFISC71
+        C UFREM
+        C CNPJREM
+        C INSCREM
+        D EMISREM71
+        C MODREM71
+        C SERIREM71
+        C NFISREM71
+        N VALTOT71
+        C BRANCO71
+    }
+```
+
 ---
 ## Tabela DBF: `sint74`
 > **Origem:** `sint74` (Driver: DBFCDX)
@@ -449,6 +802,22 @@
 
 **Indices vinculados:**
 - Tag: `DATA_INVEN` Expressao: `DATA_INVEN`
+
+```mermaid
+erDiagram
+    sint74 {
+        C TIPO
+        C DATA_INVEN
+        C COD_MERCAD
+        N QUANTIDADE
+        N VALORTOTAL
+        C SITU_ESTOQ
+        C CGC
+        C IE
+        C UF
+        C BRANCO74
+    }
+```
 
 ---
 ## Tabela DBF: `sint75`
@@ -475,6 +844,27 @@
 **Indices vinculados:**
 - Tag: `SINT75-1` Expressao: `CODIGORED`
 - Tag: `SINT75-2` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    sint75 {
+        C TIPO
+        D DATAINI
+        D DATAFIM
+        C CODIGORED
+        C CLASSIPI
+        C DESCRICAO
+        C UNID
+        N SITUACAO
+        C TIPOENT
+        N IPI
+        N ICM
+        N REDICM
+        N SUBICM
+        L GERADO
+        C CODIGO
+    }
+```
 
 ---
 ## Tabela DBF: `sint76`
@@ -504,6 +894,30 @@
 **Indices vinculados:**
 - Tag: `CGC` Expressao: `CGC`
 
+```mermaid
+erDiagram
+    sint76 {
+        C TIPO
+        C CGC
+        C IE
+        C MODEL76
+        C SERIE76
+        C SUBSER76
+        C NFISC76
+        C CFOP76
+        C TIPREC76
+        D EMIS76
+        C UF
+        N VALTOT76
+        N BASEIC76
+        N VALICM76
+        N ISENTO76
+        N OUTRAS76
+        N ALIQICM76
+        C SITUAC76
+    }
+```
+
 ---
 ## Tabela DBF: `sint77`
 > **Origem:** `sint77` (Driver: DBFCDX)
@@ -530,6 +944,29 @@
 
 **Indices vinculados:**
 - Tag: `CGC` Expressao: `CGC`
+
+```mermaid
+erDiagram
+    sint77 {
+        C TIPO
+        C CGC
+        C MODEL77
+        C SERIE77
+        C SUBSER77
+        C NFISC77
+        C CFOP77
+        C TIPREC77
+        C ITEM77
+        C PRODUT77
+        N QUANT77
+        N VALPRO77
+        N VALDES77
+        N BASEIC77
+        N ALIQIC77
+        C CNPJMF
+        C CODTERM
+    }
+```
 
 ---
 ## Tabela DBF: `sint85`
@@ -558,6 +995,29 @@
 **Indices vinculados:**
 - Tag: `CONHEC` Expressao: `CONHEC`
 
+```mermaid
+erDiagram
+    sint85 {
+        C REG
+        N DECLARACAO
+        D DATADEC
+        C AVERBACAO
+        N REGEXP
+        D DTREGEXP
+        C CONHEC
+        D DTCONHEC
+        N TIPOCONHEC
+        N PAIS
+        N COMPROV
+        D DTCOMPROV
+        C NFEXPORT
+        D EMISSAO
+        N MODELO
+        C SERIE
+        C BRANCOS
+    }
+```
+
 ---
 ## Tabela DBF: `sint86`
 > **Origem:** `sint86` (Driver: DBFCDX)
@@ -584,6 +1044,28 @@
 **Indices vinculados:**
 - Tag: `REGEXP` Expressao: `REGEXP`
 
+```mermaid
+erDiagram
+    sint86 {
+        C REG
+        N REGEXP
+        D DTREGEXP
+        N CNPJREMET
+        C IEREMET
+        C UFREMET
+        C NF
+        D EMISSAO
+        N MODELO
+        C SERIE
+        C PRODUTO
+        N QUANT
+        N VALUNIT
+        N VALPROD
+        N RELAC
+        C BRANCOS
+    }
+```
+
 ---
 ## Tabela DBF: `sint88c`
 > **Origem:** `sint88c` (Driver: DBFCDX)
@@ -609,6 +1091,28 @@
 
 **Indices vinculados:**
 - Tag: `CNPJNUM` Expressao: `CNPJ+NUMERONF`
+
+```mermaid
+erDiagram
+    sint88c {
+        C REG
+        C SUB
+        C CNPJ
+        C MODELONF
+        C SERIENF
+        C NUMERONF
+        C CFOP
+        C NUMITEM
+        C CODPRODUTO
+        N QUANTIDADE
+        N BCST
+        N VLRST
+        N VLRSTCOMPL
+        N RETENCAO
+        N PARCIMPRET
+        C BRANCOS
+    }
+```
 
 ---
 ## Tabela DBF: `sint88d`
@@ -638,6 +1142,30 @@
 **Indices vinculados:**
 - Tag: `CNPJNUM` Expressao: `CNPJ+NUMERONF`
 
+```mermaid
+erDiagram
+    sint88d {
+        C REG
+        C SUB
+        C CNPJ
+        C IE
+        C UF
+        C MODELONF
+        C SERIENF
+        C NUMERONF
+        C EMITENTE
+        C DTEMISSAO
+        C DTSAIDA
+        C CNPJSAIDA
+        C UFSAIDA
+        C IESAIDA
+        C CNPJENT
+        C UFENTREGA
+        C IEENTREGA
+        C BRANCOS
+    }
+```
+
 ---
 ## Tabela DBF: `sint88e`
 > **Origem:** `sint88e` (Driver: DBFCDX)
@@ -655,6 +1183,19 @@
 **Indices vinculados:**
 - Tag: `CNPJSUB` Expressao: `CNPJ+SUB`
 
+```mermaid
+erDiagram
+    sint88e {
+        C REG
+        C SUB
+        C CNPJ
+        C IE
+        C CODPROINF
+        C CODPROSEF
+        C BRANCOS
+    }
+```
+
 ---
 ## Tabela DBF: `sint88m`
 > **Origem:** `sint88m` (Driver: DBFCDX)
@@ -668,7 +1209,18 @@
 | BRANCOS | C | 75 | 0 |
 
 **Indices vinculados:**
-- Tag: `CNPJ+SUB` Expressao: `CNPJ+SUB`
+- Tag: `CNPJSUB` Expressao: `CNPJ+SUB`
+
+```mermaid
+erDiagram
+    sint88m {
+        C REG
+        C SUB
+        C CNPJ
+        C MENSAGEM
+        C BRANCOS
+    }
+```
 
 ---
 ## Tabela DBF: `sint88t`
@@ -701,6 +1253,33 @@
 **Indices vinculados:**
 - Tag: `CNPJSUB` Expressao: `CNPJ+SUB`
 
+```mermaid
+erDiagram
+    sint88t {
+        C REG
+        C SUB
+        C CNPJ
+        C DTEMISSAO
+        C UF
+        C MODELONF
+        C SERIENF
+        C NUMERONF
+        C EMITENTE
+        C CIFFOB
+        C CNPJFRETE
+        C UFFRETE
+        C IEFRETE
+        C MODAL
+        C PLACA1
+        C UF1
+        C PLACA2
+        C UF2
+        C PLACA3
+        C UF3
+        C BRANCOS
+    }
+```
+
 ---
 ## Tabela DBF: `sint90`
 > **Origem:** `sint90` (Driver: DBFCDX)
@@ -711,5 +1290,12 @@
 
 **Indices vinculados:**
 - Tag: `REG90` Expressao: `REG90`
+
+```mermaid
+erDiagram
+    sint90 {
+        C REG90
+    }
+```
 
 ---

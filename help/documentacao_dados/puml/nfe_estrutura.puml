@@ -1,0 +1,297 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "cnpjxml" as cnpjxml {
+  CNPJ : varchar(14)
+  IE : varchar(14)
+  NOME : varchar(60)
+  ENDERECO : varchar(60)
+  CIDADE : varchar(35)
+  CEP : varchar(8)
+  TELEFONE : varchar(14)
+  DDD : varchar(2)
+  UF : varchar(2)
+  IESUBST : varchar(14)
+  IMUNICIPAL : varchar(15)
+  COGNOME : varchar(60)
+  EMAIL : varchar(60)
+  NUMEND : varchar(15)
+  COMPLEM : varchar(30)
+  BAIRRO : varchar(35)
+  BACEN : varchar(5)
+  PAIS : varchar(10)
+  CNAE : varchar(7)
+  SUFRAMA : varchar(9)
+  CODIBGE : varchar(7)
+  ULTIMAIMP : datetime
+  CODPART : varchar(20)
+  CSIT : varchar(1)
+  INDCREDNFE : varchar(1)
+  INDCREDCTE : varchar(1)
+  XREGAPUR : varchar(7)
+  DINIATIV : varchar(10)
+  DULTSIT : varchar(10)
+  DINIXML : datetime
+  ENDTIP : varchar(10)
+  --
+  .. Índices ..
+  + CNPJXML1 : CNPJ
+  + CNPJXML2 : IE
+  + CNPJXML3 : CODPART
+  + CNPJXML4 : UF+CIDADE
+}
+
+entity "cnpjxmlfec" as cnpjxmlfec {
+  CNPJ : varchar(14)
+  IE : varchar(14)
+  NOME : varchar(60)
+  ENDERECO : varchar(60)
+  CIDADE : varchar(35)
+  CEP : varchar(8)
+  TELEFONE : varchar(14)
+  DDD : varchar(2)
+  UF : varchar(2)
+  IESUBST : varchar(14)
+  IMUNICIPAL : varchar(15)
+  COGNOME : varchar(60)
+  EMAIL : varchar(60)
+  NUMEND : varchar(15)
+  COMPLEM : varchar(30)
+  BAIRRO : varchar(35)
+  BACEN : varchar(5)
+  PAIS : varchar(10)
+  CNAE : varchar(7)
+  SUFRAMA : varchar(9)
+  CODIBGE : varchar(7)
+  ULTIMAIMP : datetime
+  CODPART : varchar(20)
+  CSIT : varchar(1)
+  INDCREDNFE : varchar(1)
+  INDCREDCTE : varchar(1)
+  XREGAPUR : varchar(7)
+  DINIATIV : varchar(10)
+  DULTSIT : varchar(10)
+  DINIXML : datetime
+  ENDTIP : varchar(10)
+  --
+  .. Índices ..
+  + CNPJXML1 : CNPJ
+  + CNPJXML2 : IE
+  + CNPJXML3 : CODPART
+  + CNPJXML4 : UF+CIDADE
+}
+
+entity "danfe" as danfe {
+  ID : varchar(44)
+  CPROD : varchar(16)
+  XPROD : varchar(60)
+  QCOM : decimal(13,3)
+  VUNCOM : decimal(11,3)
+  UCOM : varchar(4)
+  CFOP : varchar(4)
+  NCM : varchar(10)
+  CSTICMS : varchar(4)
+  CSTIPI : varchar(4)
+  CSTPIS : varchar(4)
+  CSTCOFINS : varchar(4)
+  VICMS : decimal(11,3)
+  VPIS : decimal(11,3)
+  VIPI : decimal(11,3)
+  VCOFINS : decimal(11,3)
+  VBCICMS : decimal(11,3)
+  VBCPIS : decimal(12,3)
+  VBCIPI : decimal(11,3)
+  VBCCOFINS : decimal(11,3)
+  PICMS : decimal(6,2)
+  PPIS : decimal(6,2)
+  PIPI : decimal(6,2)
+  PCOFINS : decimal(6,2)
+  --
+  .. Índices ..
+  + DANFE : Id+cProd
+}
+
+entity "danfe2" as danfe2 {
+  ID : varchar(44)
+  CNPJ : varchar(14)
+  CNPJDEST : varchar(14)
+  NNF : varchar(9)
+  SERIE : varchar(3)
+  EMISSAO : varchar(10)
+  CANCELADA : varchar(1)
+  AVB : varchar(1)
+  XML : varchar(1)
+  DANFEVIEW : varchar(1)
+  CSTATUS : varchar(3)
+  LOGIXSUP : varchar(1)
+  PROTOCOLO : varchar(20)
+  --
+  .. Índices ..
+  + DANFE2 : ID
+  + DANFE2-2 : CNPJ+ NNF
+  + DANFE2-3 : NNF
+}
+
+entity "danfe2fec" as danfe2fec {
+  ID : varchar(44)
+  CNPJ : varchar(14)
+  CNPJDEST : varchar(14)
+  NNF : varchar(9)
+  SERIE : varchar(3)
+  EMISSAO : varchar(10)
+  CANCELADA : varchar(1)
+  AVB : varchar(1)
+  XML : varchar(1)
+  DANFEVIEW : varchar(1)
+  CSTATUS : varchar(3)
+  LOGIXSUP : varchar(1)
+  PROTOCOLO : varchar(20)
+  --
+  .. Índices ..
+  + DANFE2 : ID
+  + DANFE2-2 : CNPJ+ NNF
+  + DANFE2-3 : NNF
+}
+
+entity "nfe" as nfe {
+  EMPRESA : varchar(2)
+  SINTEL : datetime
+  NFS : integer
+  GMPROTREC : integer
+  DANFEVREC : integer
+  STATUSREC : integer
+  CHAVESUP : integer
+  --
+  .. Índices ..
+  + NFE : EMPRESA
+}
+
+entity "nfecorrecao" as nfecorrecao {
+  CODIGO : varchar(2)
+  DESCRICAO : varchar(30)
+  --
+  .. Índices ..
+  + NFECORRE : CODIGO
+}
+
+entity "NFECRET" as NFECRET {
+  CODIGO : varchar(3)
+  DESCRICAO : varchar(120)
+  --
+  .. Índices ..
+  + NFECRET : CODIGO
+}
+
+entity "sintcert" as sintcert {
+  CNPJ : varchar(20)
+  IE : varchar(20)
+  CCM : varchar(20)
+  UF : varchar(2)
+  CIDADE : varchar(35)
+  CNPJOK : varchar(1)
+  IEOK : varchar(1)
+  CCMOK : varchar(1)
+  RAZAO : varchar(60)
+  ORI : varchar(10)
+  DIG3OK : varchar(1)
+  OBS : varchar(60)
+  CEP : varchar(8)
+  DDD : varchar(2)
+  SUFRAMA : varchar(9)
+  CNAE : varchar(7)
+  EMAIL : varchar(60)
+  TELEFONE : varchar(15)
+  CSIT : varchar(1)
+  INDCREDNFE : varchar(1)
+  INDCREDCTE : varchar(1)
+  XREGAPUR : varchar(7)
+  DINIATIV : varchar(10)
+  DULTSIT : varchar(10)
+  BAIRRO : varchar(35)
+  CODIBGE : varchar(7)
+  ENDERECO : varchar(60)
+  NUMEND : varchar(15)
+  COMPLEM : varchar(30)
+  ULTIMAIMP : datetime
+  ENDTIP : varchar(10)
+  --
+  .. Índices ..
+  + SINTCE01 : CNPJ
+  + SINTCE02 : IE
+  + SINTCE03 : RAZAO
+  + SINTCE04 : UF+CIDADE
+}
+
+entity "sintcertfec" as sintcertfec {
+  CNPJ : varchar(20)
+  IE : varchar(20)
+  CCM : varchar(20)
+  UF : varchar(2)
+  CIDADE : varchar(35)
+  CNPJOK : varchar(1)
+  IEOK : varchar(1)
+  CCMOK : varchar(1)
+  RAZAO : varchar(60)
+  ORI : varchar(10)
+  DIG3OK : varchar(1)
+  OBS : varchar(60)
+  CEP : varchar(8)
+  DDD : varchar(2)
+  SUFRAMA : varchar(9)
+  CNAE : varchar(7)
+  EMAIL : varchar(60)
+  TELEFONE : varchar(15)
+  CSIT : varchar(1)
+  INDCREDNFE : varchar(1)
+  INDCREDCTE : varchar(1)
+  XREGAPUR : varchar(7)
+  DINIATIV : varchar(10)
+  DULTSIT : varchar(10)
+  BAIRRO : varchar(35)
+  CODIBGE : varchar(7)
+  ENDERECO : varchar(60)
+  NUMEND : varchar(15)
+  COMPLEM : varchar(30)
+  ULTIMAIMP : datetime
+  ENDTIP : varchar(10)
+  --
+  .. Índices ..
+  + SINTCE01 : CNPJ
+  + SINTCE02 : IE
+  + SINTCE03 : RAZAO
+  + SINTCE04 : UF+CIDADE
+}
+
+entity "sintpend" as sintpend {
+  CNPJ : varchar(20)
+  IE : varchar(20)
+  CCM : varchar(20)
+  UF : varchar(2)
+  CIDADE : varchar(35)
+  CNPJOK : varchar(1)
+  IEOK : varchar(1)
+  CCMOK : varchar(1)
+  RAZAO : varchar(60)
+  ORI : varchar(10)
+  DIG3OK : varchar(1)
+  OBS : varchar(60)
+  CEP : varchar(8)
+  DDD : varchar(2)
+  --
+  .. Índices ..
+  + SINTPE01 : CNPJ
+  + SINTPE02 : IE
+  + SINTPE03 : RAZAO
+  + SINTPE04 : UF+CIDADE
+}
+
+entity "xmlpend" as xmlpend {
+  ID : varchar(44)
+  --
+  .. Índices ..
+  + XMLPEND : ID
+}
+
+
+@enduml

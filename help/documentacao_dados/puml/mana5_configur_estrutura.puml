@@ -1,0 +1,771 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "agenda" as agenda {
+  CDDATA : datetime
+  OBS1 : varchar(60)
+  OBS2 : varchar(60)
+  OBS3 : varchar(60)
+  OBS4 : varchar(60)
+  OBS5 : varchar(60)
+  OBS6 : varchar(60)
+  OBS7 : varchar(60)
+  OBS8 : varchar(60)
+  --
+  .. Índices ..
+  + AGENDA : CDDATA
+}
+
+entity "codimp" as codimp {
+  CODIGO : varchar(6)
+  NOMEIMP : varchar(12)
+  DESCRICAO : varchar(50)
+  CONTEUDO : varchar(70)
+  --
+  .. Índices ..
+  + CODIMP : CODIGO
+}
+
+entity "cores" as cores {
+  CODIGO : varchar(7)
+  DESCRICAO : varchar(60)
+  COR1 : varchar(6)
+  COR2 : varchar(6)
+  COR3 : varchar(6)
+  COR4 : varchar(6)
+  COR5 : varchar(6)
+  COR6 : varchar(6)
+  --
+  .. Índices ..
+  + CORES : CODIGO
+}
+
+entity "macess" as macess {
+  CODIGO : varchar(6)
+  DESCRICAO : varchar(60)
+  SENHA : varchar(5)
+  --
+  .. Índices ..
+  + MACESS : CODIGO
+}
+
+entity "manaman" as manaman {
+  DESCRICAO : varchar(76)
+  ARQUIVO : varchar(12)
+  --
+  .. Índices ..
+  + MANAMAN : ARQUIVO
+}
+
+entity "manarq" as manarq {
+  ARQUIVO : varchar(8)
+  DESCRICAO : varchar(60)
+  CAMINHO : varchar(40)
+  FIXAR : varchar(1)
+  LACHI : integer
+  PADRAO : varchar(1)
+  VIDEO : varchar(1)
+  PBUS : varchar(1)
+  PIND : varchar(1)
+  CBAR : varchar(120)
+  TIPG : varchar(1)
+  LAYGET : varchar(6)
+  CBAS : varchar(78)
+  IBUS : integer
+  IEXI : integer
+  ARQMES : integer
+  ARQANO : integer
+  PULAFIX : varchar(1)
+  DRIVER : varchar(10)
+  --
+  .. Índices ..
+  + MANARQ : ARQUIVO
+}
+
+entity "manarq1" as manarq1 {
+  ARQUIVO : varchar(8)
+  ITEM : integer
+  INDICE : varchar(8)
+  INDEXP : varchar(60)
+  DESC : varchar(55)
+  LIN1 : integer
+  LIN2 : integer
+  LIN3 : integer
+  COL1 : integer
+  COL2 : integer
+  COL3 : integer
+  VAR1 : varchar(10)
+  VAR2 : varchar(10)
+  VAR3 : varchar(10)
+  DES1 : varchar(30)
+  DES2 : varchar(30)
+  DES3 : varchar(30)
+  FORMULA : varchar(60)
+  --
+  .. Índices ..
+  + MANARQ1 : ARQUIVO+STR(ITEM,2)
+}
+
+entity "manatu" as manatu {
+  ARQUIVO1 : varchar(8)
+  ARQUIVO2 : varchar(8)
+  INDICE : integer
+  --
+  .. Índices ..
+  + MANATU : ARQUIVO1
+}
+
+entity "manerr" as manerr {
+  USUARIO : varchar(10)
+  DATA : datetime
+  HORA : varchar(8)
+  ERRO : varchar(20)
+  OPR : varchar(3)
+  ARQUIVO : varchar(8)
+  --
+  .. Índices ..
+  + MANERR : USUARIO+DTOS(DATA)
+}
+
+entity "manfec" as manfec {
+  ARQORI : varchar(8)
+  STRANO : varchar(8)
+  STRDES : varchar(2)
+  STRATU : varchar(8)
+  STRBAI : varchar(8)
+  FECANU : varchar(100)
+  CAMDAT : varchar(10)
+  CAMDA2 : varchar(10)
+  OPER01 : varchar(200)
+  OPER02 : varchar(200)
+  OPER03 : varchar(200)
+  OPER04 : varchar(200)
+  OPER05 : varchar(200)
+  OPER06 : varchar(200)
+  OPER07 : varchar(200)
+  FECHAAUTO : varchar(1)
+  --
+  .. Índices ..
+  + MANFEC : ARQORI
+  + MANFEC-2 : STRANO
+  + MANFEC-3 : STRDES
+}
+
+entity "manfer" as manfer {
+  DIA : integer
+  MES : integer
+  DESCRICAO : varchar(40)
+  --
+  .. Índices ..
+  + MANFER : STR(DIA)+STR(MES)
+}
+
+entity "manget" as manget {
+  CODIGO : varchar(6)
+  SEQ : integer
+  TIP : varchar(1)
+  LININI : integer
+  COLINI : integer
+  LINFIM : integer
+  COLFIM : integer
+  CAMPO : varchar(10)
+  ESTILO : varchar(25)
+  MENSAGEM : varchar(40)
+  CONDICAO : varchar(200)
+  PRECOND : varchar(200)
+  --
+  .. Índices ..
+  + MANGET : CODIGO+STR(SEQ,3)
+}
+
+entity "manopt" as manopt {
+  ITEMENU : varchar(1)
+  POSICAO : integer
+  DESCP : varchar(30)
+  DESCM : varchar(75)
+  LINHA : integer
+  COLUNA : integer
+  TECLA : integer
+  EXECUTAR : varchar(254)
+  --
+  .. Índices ..
+  + MANOPT : ITEMENU+STR(POSICAO,2)
+}
+
+entity "manre1" as manre1 {
+  ARQUIVO : integer
+  MENU : varchar(2)
+  CODIGO : varchar(8)
+  TIPO : varchar(1)
+  SEQUENCIA : integer
+  SEQ : integer
+  ESPACEJAR : integer
+  COLUNA : integer
+  CONTEUDO : varchar(78)
+  MASCARA : varchar(25)
+  TOTALIZA : boolean
+  FORMULA : varchar(35)
+  QUEBRAR : integer
+  --
+  .. Índices ..
+  + MANRE1-1 : MENU+CODIGO+STR(ARQUIVO)+STR(SEQUENCIA)+STR(COLUNA)
+}
+
+entity "manreg" as manreg {
+  POSICAO : integer
+  GRUPO : varchar(2)
+  DESCRICAO : varchar(70)
+  --
+  .. Índices ..
+  + MANREG-1 : POSICAO
+  + MANREG-2 : GRUPO
+}
+
+entity "manrel" as manrel {
+  MENU : varchar(2)
+  MENU1 : varchar(2)
+  CODIGO : varchar(8)
+  CODIGO1 : varchar(8)
+  NOME : varchar(60)
+  FOLHA : integer
+  ETIQ : varchar(1)
+  ALTURA : integer
+  LARGURA : integer
+  COLUNAS : integer
+  ARQUIVO1 : varchar(8)
+  PIND1 : varchar(1)
+  INDICE1 : integer
+  CAMPO1 : varchar(150)
+  ARQUIVO2 : varchar(8)
+  PIND2 : varchar(1)
+  INDICE2 : integer
+  CAMPO2 : varchar(150)
+  ARQUIVO3 : varchar(8)
+  PIND3 : varchar(1)
+  INDICE3 : integer
+  CAMPO3 : varchar(150)
+  ARQUIVO4 : varchar(8)
+  PIND4 : varchar(1)
+  INDICE4 : integer
+  CAMPO4 : varchar(150)
+  ARQUIVO5 : varchar(8)
+  PIND5 : varchar(1)
+  INDICE5 : integer
+  CAMPO5 : varchar(150)
+  ARQUIVO6 : varchar(8)
+  PIND6 : varchar(1)
+  INDICE6 : integer
+  CAMPO6 : varchar(150)
+  INDEXACAO : varchar(78)
+  SETUP : varchar(78)
+  FILTRO : varchar(78)
+  REL1ARQ : integer
+  REL2ARQ : integer
+  REL3ARQ : integer
+  REL4ARQ : integer
+  RELACAO1 : varchar(71)
+  RELACAO2 : varchar(71)
+  RELACAO3 : varchar(71)
+  RELACAO4 : varchar(71)
+  DEFAULT : integer
+  QUEBRA1A : varchar(53)
+  QUEBRA1B : varchar(53)
+  QUEBRA1C : varchar(53)
+  QUEBRA1D : varchar(53)
+  QUEBRA1E : varchar(53)
+  QUEBRA2A : varchar(53)
+  QUEBRA2B : varchar(53)
+  QUEBRA2C : varchar(53)
+  QUEBRA2D : varchar(53)
+  QUEBRA2E : varchar(53)
+  QUEBRA3A : varchar(53)
+  QUEBRA3B : varchar(53)
+  QUEBRA3C : varchar(53)
+  QUEBRA3D : varchar(53)
+  QUEBRA3E : varchar(53)
+  QUEBRA4A : varchar(53)
+  QUEBRA4B : varchar(53)
+  QUEBRA4C : varchar(53)
+  QUEBRA4D : varchar(53)
+  QUEBRA4E : varchar(53)
+  QUEBRA5A : varchar(53)
+  QUEBRA5B : varchar(53)
+  QUEBRA5C : varchar(53)
+  QUEBRA5D : varchar(53)
+  QUEBRA5E : varchar(53)
+  SELECAO : integer
+  FATOR1 : varchar(1)
+  FATOR2 : varchar(1)
+  FATOR3 : varchar(1)
+  FATOR4 : varchar(1)
+  FATOR5 : varchar(1)
+  DESCRICA1 : varchar(25)
+  DESCRICA2 : varchar(25)
+  DESCRICA3 : varchar(25)
+  DESCRICA4 : varchar(25)
+  DESCRICA5 : varchar(25)
+  TAM1 : integer
+  TAM2 : integer
+  TAM3 : integer
+  TAM4 : integer
+  TAM5 : integer
+  NOME_LISTA : varchar(70)
+  REL_NIV2 : varchar(1)
+  REL_NIV3 : varchar(1)
+  REL_NIV4 : varchar(1)
+  REL_NIV5 : varchar(1)
+  ACESSOS : integer
+  DATAULT : datetime
+  --
+  .. Índices ..
+  + MANREL : MENU+CODIGO
+}
+
+entity "mansub" as mansub {
+  ITEMENU : varchar(4)
+  POSICAO : integer
+  DESCP : varchar(30)
+  DESCM : varchar(75)
+  LINHA : integer
+  COLUNA : integer
+  TECLA : integer
+  EXECUTAR : varchar(200)
+  --
+  .. Índices ..
+  + MANSUB : ITEMENU+STR(POSICAO,2)
+}
+
+entity "mantel" as mantel {
+  CODIGO : varchar(6)
+  SEQ : integer
+  TIP : varchar(1)
+  LININI : integer
+  COLINI : integer
+  LINFIM : integer
+  COLFIM : integer
+  DIZER : varchar(80)
+  ESTILO : varchar(20)
+  --
+  .. Índices ..
+  + MANTEL : CODIGO+STR(SEQ,3)
+}
+
+entity "mcarta" as mcarta {
+  ARQUIVO : varchar(8)
+  NOME : varchar(50)
+  SETUP : varchar(20)
+  MARSUP : integer
+  MARINF : integer
+  MARDIR : integer
+  MARESQ : integer
+  MARCOL : integer
+  MARLIN : integer
+  --
+  .. Índices ..
+  + MCARTA : ARQUIVO
+}
+
+entity "mcopia" as mcopia {
+  NOME : varchar(6)
+  DIRETORIO : varchar(35)
+  ARQ01 : varchar(12)
+  ARQ02 : varchar(12)
+  ARQ03 : varchar(12)
+  ARQ04 : varchar(12)
+  ARQ05 : varchar(12)
+  ARQ06 : varchar(12)
+  ARQO7 : varchar(12)
+  ARQO8 : varchar(12)
+  ARQ09 : varchar(12)
+  ARQ10 : varchar(12)
+  ARQ11 : varchar(12)
+  ARQ12 : varchar(12)
+  ARQ13 : varchar(12)
+  ARQ14 : varchar(12)
+  ARQ15 : varchar(12)
+  ARQ16 : varchar(12)
+  ARQ17 : varchar(12)
+  ARQ18 : varchar(12)
+  ARQ19 : varchar(12)
+  ARQ20 : varchar(12)
+  ARQ21 : varchar(12)
+  ARQ22 : varchar(12)
+  ARQ23 : varchar(12)
+  ARQ24 : varchar(12)
+  ARQ25 : varchar(12)
+  ARQ26 : varchar(12)
+  ARQ27 : varchar(12)
+  ARQ28 : varchar(12)
+  ARQ29 : varchar(12)
+  ARQ30 : varchar(12)
+  ARQ31 : varchar(12)
+  ARQ32 : varchar(12)
+  ARQ33 : varchar(12)
+  ARQ34 : varchar(12)
+  ARQ35 : varchar(12)
+  ARQ36 : varchar(12)
+  ARQ37 : varchar(12)
+  ARQ38 : varchar(12)
+  ARQ39 : varchar(12)
+  ARQ40 : varchar(12)
+  --
+  .. Índices ..
+  + MCOPIA : NOME
+}
+
+entity "metiq" as metiq {
+  CODIGO : varchar(6)
+  NOME : varchar(50)
+  LINHA1 : varchar(75)
+  LINHA2 : varchar(75)
+  LINHA3 : varchar(75)
+  LINHA4 : varchar(75)
+  LINHA5 : varchar(75)
+  LINHA6 : varchar(75)
+  LINHA7 : varchar(75)
+  LINHA8 : varchar(75)
+  NLIN : integer
+  NCOL : integer
+  NCAR : integer
+  SETUP : varchar(20)
+  ARQUIVO : varchar(8)
+  INDICE : integer
+  FILTRO : varchar(50)
+  ARQGRA : varchar(8)
+  PIND : varchar(1)
+  NIND : integer
+  TIPFIL : varchar(1)
+  CONFIL : varchar(50)
+  PFIL : varchar(1)
+  SETUPFIM : varchar(20)
+  --
+  .. Índices ..
+  + METIQ : CODIGO
+}
+
+entity "mexpor" as mexpor {
+  ARQORI : varchar(8)
+  ARQDES : varchar(8)
+  CODIGO : varchar(6)
+  DESCRICAO : varchar(50)
+  CHAVEIND : varchar(30)
+  DESAPP : varchar(10)
+  ORIAPP : varchar(40)
+  REPENC : varchar(1)
+  APAGA : varchar(1)
+  TIPO : varchar(1)
+  ARQORIEXT : varchar(3)
+  ARQDESEXT : varchar(3)
+  --
+  .. Índices ..
+  + MEXPOR : CODIGO
+}
+
+entity "mexpor1" as mexpor1 {
+  CODIGO : varchar(6)
+  VARDES : varchar(20)
+  VARDRI : varchar(100)
+  --
+  .. Índices ..
+  + MEXPOR1 : CODIGO+VARDES
+}
+
+entity "mf11" as mf11 {
+  VARIAVEL : varchar(10)
+  EXECUTE : varchar(120)
+  ARQUIVO : varchar(8)
+  --
+  .. Índices ..
+  + MF11-1 : VARIAVEL+ARQUIVO
+}
+
+entity "mmes" as mmes {
+  CODIGO : varchar(6)
+  USO : varchar(50)
+  MENSAGEM : varchar(50)
+  DESCRICAO : longtext
+  --
+  .. Índices ..
+  + MMES : CODIGO
+}
+
+entity "muser" as muser {
+  USUARIO : varchar(10)
+  SENHA : varchar(8)
+  VALIDADE : varchar(8)
+  VALDATA : datetime
+  EQUIVALE : varchar(10)
+  ESTADO : varchar(1)
+  ARQFON : varchar(8)
+  SETOR : varchar(10)
+  WRPTNO : integer
+  FOLHANO : integer
+  DATATRO : datetime
+  USUARIOW : varchar(20)
+  SENHAW : varchar(20)
+  POSTEL01 : integer
+  POSTEL02 : integer
+  POSTEL03 : integer
+  POSTEL04 : integer
+  POSTEL05 : integer
+  POSTEL06 : integer
+  POSTEL07 : integer
+  POSTEL08 : integer
+  POSTEL09 : integer
+  POSTEL10 : integer
+  POSTEL11 : integer
+  POSTEL12 : integer
+  POSTEL13 : integer
+  POSTEL14 : integer
+  POSTEL15 : integer
+  POSTEL16 : integer
+  POSTEL17 : integer
+  POSTEL18 : integer
+  CHAVEH : varchar(64)
+  CHAVEWC : varchar(64)
+  CHAVEWW : varchar(64)
+  CHAVEWS : varchar(64)
+  --
+  .. Índices ..
+  + MUSER : USUARIO
+}
+
+entity "musera" as musera {
+  CONTROLE : varchar(20)
+  --
+  .. Índices ..
+  + MUSERA : CONTROLE
+}
+
+entity "muserb" as muserb {
+  CONTROLE : varchar(20)
+  ITEMENU : varchar(3)
+  POSICAO : integer
+  POSTELA : varchar(30)
+  --
+  .. Índices ..
+  + MUSERB : CONTROLE
+  + MUSERB-2 : ITEMENU+STRZERO(POSICAO,3)+POSTELA
+}
+
+entity "muserf" as muserf {
+  CONTROLE : varchar(20)
+  --
+  .. Índices ..
+  + MUSERF : CONTROLE
+}
+
+entity "muserm" as muserm {
+  CONTROLE : varchar(13)
+  --
+  .. Índices ..
+  + MUSERM : CONTROLE
+}
+
+entity "musern" as musern {
+  USUARIO : varchar(10)
+  ID : varchar(40)
+  --
+  .. Índices ..
+  + MUSERN : USUARIO
+}
+
+entity "musero" as musero {
+  CONTROLE : varchar(20)
+  --
+  .. Índices ..
+  + MUSERO : CONTROLE
+}
+
+entity "muserr" as muserr {
+  CONTROLE : varchar(20)
+  --
+  .. Índices ..
+  + MUSERR : CONTROLE
+}
+
+entity "muserw" as muserw {
+  CONTROLE : varchar(20)
+  ITEMENU : varchar(3)
+  POSICAO : integer
+  POSTELA : varchar(30)
+  --
+  .. Índices ..
+  + MUSERW : CONTROLE
+  + MUSERW-2 : ITEMENU+STRZERO(POSICAO,3)+POSTELA
+}
+
+entity "nota" as nota {
+  NOME : varchar(10)
+  OBS1 : varchar(60)
+  OBS2 : varchar(60)
+  OBS3 : varchar(60)
+  OBS4 : varchar(60)
+  OBS5 : varchar(60)
+  OBS6 : varchar(60)
+  OBS7 : varchar(60)
+  --
+  .. Índices ..
+  + NOTA : NOME
+}
+
+entity "padre1" as padre1 {
+  ARQUIVO : integer
+  MENU : varchar(2)
+  CODIGO : varchar(8)
+  TIPO : varchar(1)
+  SEQUENCIA : integer
+  SEQ : integer
+  ESPACEJAR : integer
+  COLUNA : integer
+  CONTEUDO : varchar(78)
+  MASCARA : varchar(25)
+  TOTALIZA : boolean
+  FORMULA : varchar(35)
+  QUEBRAR : integer
+  --
+  .. Índices ..
+  + PADRE1-1 : MENU+CODIGO+STR(ARQUIVO)+STR(SEQUENCIA)+STR(COLUNA)
+}
+
+entity "padrel" as padrel {
+  MENU : varchar(2)
+  MENU1 : varchar(2)
+  CODIGO : varchar(8)
+  CODIGO1 : varchar(8)
+  NOME : varchar(60)
+  FOLHA : integer
+  ETIQ : varchar(1)
+  ALTURA : integer
+  LARGURA : integer
+  COLUNAS : integer
+  ARQUIVO1 : varchar(8)
+  PIND1 : varchar(1)
+  INDICE1 : integer
+  CAMPO1 : varchar(150)
+  ARQUIVO2 : varchar(8)
+  PIND2 : varchar(1)
+  INDICE2 : integer
+  CAMPO2 : varchar(150)
+  ARQUIVO3 : varchar(8)
+  PIND3 : varchar(1)
+  INDICE3 : integer
+  CAMPO3 : varchar(150)
+  ARQUIVO4 : varchar(8)
+  PIND4 : varchar(1)
+  INDICE4 : integer
+  CAMPO4 : varchar(150)
+  ARQUIVO5 : varchar(8)
+  PIND5 : varchar(1)
+  INDICE5 : integer
+  CAMPO5 : varchar(150)
+  ARQUIVO6 : varchar(8)
+  PIND6 : varchar(1)
+  INDICE6 : integer
+  CAMPO6 : varchar(150)
+  INDEXACAO : varchar(78)
+  SETUP : varchar(78)
+  FILTRO : varchar(78)
+  REL1ARQ : integer
+  REL2ARQ : integer
+  REL3ARQ : integer
+  REL4ARQ : integer
+  RELACAO1 : varchar(71)
+  RELACAO2 : varchar(71)
+  RELACAO3 : varchar(71)
+  RELACAO4 : varchar(71)
+  DEFAULT : integer
+  QUEBRA1A : varchar(53)
+  QUEBRA1B : varchar(53)
+  QUEBRA1C : varchar(53)
+  QUEBRA1D : varchar(53)
+  QUEBRA1E : varchar(53)
+  QUEBRA2A : varchar(53)
+  QUEBRA2B : varchar(53)
+  QUEBRA2C : varchar(53)
+  QUEBRA2D : varchar(53)
+  QUEBRA2E : varchar(53)
+  QUEBRA3A : varchar(53)
+  QUEBRA3B : varchar(53)
+  QUEBRA3C : varchar(53)
+  QUEBRA3D : varchar(53)
+  QUEBRA3E : varchar(53)
+  QUEBRA4A : varchar(53)
+  QUEBRA4B : varchar(53)
+  QUEBRA4C : varchar(53)
+  QUEBRA4D : varchar(53)
+  QUEBRA4E : varchar(53)
+  QUEBRA5A : varchar(53)
+  QUEBRA5B : varchar(53)
+  QUEBRA5C : varchar(53)
+  QUEBRA5D : varchar(53)
+  QUEBRA5E : varchar(53)
+  SELECAO : integer
+  FATOR1 : varchar(1)
+  FATOR2 : varchar(1)
+  FATOR3 : varchar(1)
+  FATOR4 : varchar(1)
+  FATOR5 : varchar(1)
+  DESCRICA1 : varchar(25)
+  DESCRICA2 : varchar(25)
+  DESCRICA3 : varchar(25)
+  DESCRICA4 : varchar(25)
+  DESCRICA5 : varchar(25)
+  TAM1 : integer
+  TAM2 : integer
+  TAM3 : integer
+  TAM4 : integer
+  TAM5 : integer
+  NOME_LISTA : varchar(70)
+  REL_NIV2 : varchar(1)
+  REL_NIV3 : varchar(1)
+  REL_NIV4 : varchar(1)
+  REL_NIV5 : varchar(1)
+  ACESSOS : integer
+  DATAULT : datetime
+  --
+  .. Índices ..
+  + PADREL-1 : MENU+CODIGO
+}
+
+entity "sysopt" as sysopt {
+  ITEMENU : varchar(3)
+  POSICAO : integer
+  DESCP : varchar(30)
+  DESCM : varchar(75)
+  LINHA : integer
+  COLUNA : integer
+  TECLA : integer
+  EXECUTAR : varchar(200)
+  --
+  .. Índices ..
+  + SYSOPT : ITEMENU+STR(POSICAO,2)
+}
+
+entity "telememo" as telememo {
+  NOME : varchar(15)
+  ESPECIF : varchar(35)
+  TELEF : varchar(15)
+  FAX : varchar(15)
+  --
+  .. Índices ..
+  + TELEMEMO : NOME
+}
+
+entity "winopt" as winopt {
+  ITEMENU : varchar(3)
+  POSICAO : integer
+  DESCP : varchar(30)
+  DESCM : varchar(75)
+  LINHA : integer
+  COLUNA : integer
+  TECLA : integer
+  EXECUTAR : varchar(200)
+  --
+  .. Índices ..
+  + WINOPT : ITEMENU+STR(POSICAO,3)
+}
+
+
+@enduml

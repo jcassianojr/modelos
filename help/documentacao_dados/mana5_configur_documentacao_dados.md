@@ -1,5 +1,5 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 01/08/2026
+> Varredura automatica realizada em: 09/09/2026
 
 ## Tabela DBF: `agenda`
 > **Origem:** `agenda` (Driver: DBFCDX)
@@ -19,6 +19,21 @@
 **Indices vinculados:**
 - Tag: `AGENDA` Expressao: `CDDATA`
 
+```mermaid
+erDiagram
+    agenda {
+        D CDDATA
+        C OBS1
+        C OBS2
+        C OBS3
+        C OBS4
+        C OBS5
+        C OBS6
+        C OBS7
+        C OBS8
+    }
+```
+
 ---
 ## Tabela DBF: `codimp`
 > **Origem:** `codimp` (Driver: DBFCDX)
@@ -32,6 +47,16 @@
 
 **Indices vinculados:**
 - Tag: `CODIMP` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    codimp {
+        C CODIGO
+        C NOMEIMP
+        C DESCRICAO
+        C CONTEUDO
+    }
+```
 
 ---
 ## Tabela DBF: `cores`
@@ -51,6 +76,20 @@
 **Indices vinculados:**
 - Tag: `CORES` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    cores {
+        C CODIGO
+        C DESCRICAO
+        C COR1
+        C COR2
+        C COR3
+        C COR4
+        C COR5
+        C COR6
+    }
+```
+
 ---
 ## Tabela DBF: `macess`
 > **Origem:** `macess` (Driver: DBFCDX)
@@ -64,6 +103,15 @@
 **Indices vinculados:**
 - Tag: `MACESS` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    macess {
+        C CODIGO
+        C DESCRICAO
+        C SENHA
+    }
+```
+
 ---
 ## Tabela DBF: `manaman`
 > **Origem:** `manaman` (Driver: DBFCDX)
@@ -75,6 +123,14 @@
 
 **Indices vinculados:**
 - Tag: `MANAMAN` Expressao: `ARQUIVO`
+
+```mermaid
+erDiagram
+    manaman {
+        C DESCRICAO
+        C ARQUIVO
+    }
+```
 
 ---
 ## Tabela DBF: `manarq`
@@ -105,6 +161,31 @@
 **Indices vinculados:**
 - Tag: `MANARQ` Expressao: `ARQUIVO`
 
+```mermaid
+erDiagram
+    manarq {
+        C ARQUIVO
+        C DESCRICAO
+        C CAMINHO
+        C FIXAR
+        N LACHI
+        C PADRAO
+        C VIDEO
+        C PBUS
+        C PIND
+        C CBAR
+        C TIPG
+        C LAYGET
+        C CBAS
+        N IBUS
+        N IEXI
+        N ARQMES
+        N ARQANO
+        C PULAFIX
+        C DRIVER
+    }
+```
+
 ---
 ## Tabela DBF: `manarq1`
 > **Origem:** `manarq1` (Driver: DBFCDX)
@@ -133,6 +214,30 @@
 **Indices vinculados:**
 - Tag: `MANARQ1` Expressao: `ARQUIVO+STR(ITEM,2)`
 
+```mermaid
+erDiagram
+    manarq1 {
+        C ARQUIVO
+        N ITEM
+        C INDICE
+        C INDEXP
+        C DESC
+        N LIN1
+        N LIN2
+        N LIN3
+        N COL1
+        N COL2
+        N COL3
+        C VAR1
+        C VAR2
+        C VAR3
+        C DES1
+        C DES2
+        C DES3
+        C FORMULA
+    }
+```
+
 ---
 ## Tabela DBF: `manatu`
 > **Origem:** `manatu` (Driver: DBFCDX)
@@ -145,6 +250,15 @@
 
 **Indices vinculados:**
 - Tag: `MANATU` Expressao: `ARQUIVO1`
+
+```mermaid
+erDiagram
+    manatu {
+        C ARQUIVO1
+        C ARQUIVO2
+        N INDICE
+    }
+```
 
 ---
 ## Tabela DBF: `manerr`
@@ -161,6 +275,18 @@
 
 **Indices vinculados:**
 - Tag: `MANERR` Expressao: `USUARIO+DTOS(DATA)`
+
+```mermaid
+erDiagram
+    manerr {
+        C USUARIO
+        D DATA
+        C HORA
+        C ERRO
+        C OPR
+        C ARQUIVO
+    }
+```
 
 ---
 ## Tabela DBF: `manfec`
@@ -190,6 +316,28 @@
 - Tag: `MANFEC-2` Expressao: `STRANO`
 - Tag: `MANFEC-3` Expressao: `STRDES`
 
+```mermaid
+erDiagram
+    manfec {
+        C ARQORI
+        C STRANO
+        C STRDES
+        C STRATU
+        C STRBAI
+        C FECANU
+        C CAMDAT
+        C CAMDA2
+        C OPER01
+        C OPER02
+        C OPER03
+        C OPER04
+        C OPER05
+        C OPER06
+        C OPER07
+        C FECHAAUTO
+    }
+```
+
 ---
 ## Tabela DBF: `manfer`
 > **Origem:** `manfer` (Driver: DBFCDX)
@@ -202,6 +350,15 @@
 
 **Indices vinculados:**
 - Tag: `MANFER` Expressao: `STR(DIA)+STR(MES)`
+
+```mermaid
+erDiagram
+    manfer {
+        N DIA
+        N MES
+        C DESCRICAO
+    }
+```
 
 ---
 ## Tabela DBF: `manget`
@@ -225,6 +382,24 @@
 **Indices vinculados:**
 - Tag: `MANGET` Expressao: `CODIGO+STR(SEQ,3)`
 
+```mermaid
+erDiagram
+    manget {
+        C CODIGO
+        N SEQ
+        C TIP
+        N LININI
+        N COLINI
+        N LINFIM
+        N COLFIM
+        C CAMPO
+        C ESTILO
+        C MENSAGEM
+        C CONDICAO
+        C PRECOND
+    }
+```
+
 ---
 ## Tabela DBF: `manopt`
 > **Origem:** `manopt` (Driver: DBFCDX)
@@ -242,6 +417,20 @@
 
 **Indices vinculados:**
 - Tag: `MANOPT` Expressao: `ITEMENU+STR(POSICAO,2)`
+
+```mermaid
+erDiagram
+    manopt {
+        C ITEMENU
+        N POSICAO
+        C DESCP
+        C DESCM
+        N LINHA
+        N COLUNA
+        N TECLA
+        C EXECUTAR
+    }
+```
 
 ---
 ## Tabela DBF: `manre1`
@@ -266,6 +455,25 @@
 **Indices vinculados:**
 - Tag: `MANRE1-1` Expressao: `MENU+CODIGO+STR(ARQUIVO)+STR(SEQUENCIA)+STR(COLUNA)`
 
+```mermaid
+erDiagram
+    manre1 {
+        N ARQUIVO
+        C MENU
+        C CODIGO
+        C TIPO
+        N SEQUENCIA
+        N SEQ
+        N ESPACEJAR
+        N COLUNA
+        C CONTEUDO
+        C MASCARA
+        L TOTALIZA
+        C FORMULA
+        N QUEBRAR
+    }
+```
+
 ---
 ## Tabela DBF: `manreg`
 > **Origem:** `manreg` (Driver: DBFCDX)
@@ -279,6 +487,15 @@
 **Indices vinculados:**
 - Tag: `MANREG-1` Expressao: `POSICAO`
 - Tag: `MANREG-2` Expressao: `GRUPO`
+
+```mermaid
+erDiagram
+    manreg {
+        N POSICAO
+        C GRUPO
+        C DESCRICAO
+    }
+```
 
 ---
 ## Tabela DBF: `manrel`
@@ -384,6 +601,106 @@
 **Indices vinculados:**
 - Tag: `MANREL` Expressao: `MENU+CODIGO`
 
+```mermaid
+erDiagram
+    manrel {
+        C MENU
+        C MENU1
+        C CODIGO
+        C CODIGO1
+        C NOME
+        N FOLHA
+        C ETIQ
+        N ALTURA
+        N LARGURA
+        N COLUNAS
+        C ARQUIVO1
+        C PIND1
+        N INDICE1
+        C CAMPO1
+        C ARQUIVO2
+        C PIND2
+        N INDICE2
+        C CAMPO2
+        C ARQUIVO3
+        C PIND3
+        N INDICE3
+        C CAMPO3
+        C ARQUIVO4
+        C PIND4
+        N INDICE4
+        C CAMPO4
+        C ARQUIVO5
+        C PIND5
+        N INDICE5
+        C CAMPO5
+        C ARQUIVO6
+        C PIND6
+        N INDICE6
+        C CAMPO6
+        C INDEXACAO
+        C SETUP
+        C FILTRO
+        N REL1ARQ
+        N REL2ARQ
+        N REL3ARQ
+        N REL4ARQ
+        C RELACAO1
+        C RELACAO2
+        C RELACAO3
+        C RELACAO4
+        N DEFAULT
+        C QUEBRA1A
+        C QUEBRA1B
+        C QUEBRA1C
+        C QUEBRA1D
+        C QUEBRA1E
+        C QUEBRA2A
+        C QUEBRA2B
+        C QUEBRA2C
+        C QUEBRA2D
+        C QUEBRA2E
+        C QUEBRA3A
+        C QUEBRA3B
+        C QUEBRA3C
+        C QUEBRA3D
+        C QUEBRA3E
+        C QUEBRA4A
+        C QUEBRA4B
+        C QUEBRA4C
+        C QUEBRA4D
+        C QUEBRA4E
+        C QUEBRA5A
+        C QUEBRA5B
+        C QUEBRA5C
+        C QUEBRA5D
+        C QUEBRA5E
+        N SELECAO
+        C FATOR1
+        C FATOR2
+        C FATOR3
+        C FATOR4
+        C FATOR5
+        C DESCRICA1
+        C DESCRICA2
+        C DESCRICA3
+        C DESCRICA4
+        C DESCRICA5
+        N TAM1
+        N TAM2
+        N TAM3
+        N TAM4
+        N TAM5
+        C NOME_LISTA
+        C REL_NIV2
+        C REL_NIV3
+        C REL_NIV4
+        C REL_NIV5
+        N ACESSOS
+        D DATAULT
+    }
+```
+
 ---
 ## Tabela DBF: `mansub`
 > **Origem:** `mansub` (Driver: DBFCDX)
@@ -401,6 +718,20 @@
 
 **Indices vinculados:**
 - Tag: `MANSUB` Expressao: `ITEMENU+STR(POSICAO,2)`
+
+```mermaid
+erDiagram
+    mansub {
+        C ITEMENU
+        N POSICAO
+        C DESCP
+        C DESCM
+        N LINHA
+        N COLUNA
+        N TECLA
+        C EXECUTAR
+    }
+```
 
 ---
 ## Tabela DBF: `mantel`
@@ -421,6 +752,21 @@
 **Indices vinculados:**
 - Tag: `MANTEL` Expressao: `CODIGO+STR(SEQ,3)`
 
+```mermaid
+erDiagram
+    mantel {
+        C CODIGO
+        N SEQ
+        C TIP
+        N LININI
+        N COLINI
+        N LINFIM
+        N COLFIM
+        C DIZER
+        C ESTILO
+    }
+```
+
 ---
 ## Tabela DBF: `mcarta`
 > **Origem:** `mcarta` (Driver: DBFCDX)
@@ -439,6 +785,21 @@
 
 **Indices vinculados:**
 - Tag: `MCARTA` Expressao: `ARQUIVO`
+
+```mermaid
+erDiagram
+    mcarta {
+        C ARQUIVO
+        C NOME
+        C SETUP
+        N MARSUP
+        N MARINF
+        N MARDIR
+        N MARESQ
+        N MARCOL
+        N MARLIN
+    }
+```
 
 ---
 ## Tabela DBF: `mcopia`
@@ -492,6 +853,54 @@
 **Indices vinculados:**
 - Tag: `MCOPIA` Expressao: `NOME`
 
+```mermaid
+erDiagram
+    mcopia {
+        C NOME
+        C DIRETORIO
+        C ARQ01
+        C ARQ02
+        C ARQ03
+        C ARQ04
+        C ARQ05
+        C ARQ06
+        C ARQO7
+        C ARQO8
+        C ARQ09
+        C ARQ10
+        C ARQ11
+        C ARQ12
+        C ARQ13
+        C ARQ14
+        C ARQ15
+        C ARQ16
+        C ARQ17
+        C ARQ18
+        C ARQ19
+        C ARQ20
+        C ARQ21
+        C ARQ22
+        C ARQ23
+        C ARQ24
+        C ARQ25
+        C ARQ26
+        C ARQ27
+        C ARQ28
+        C ARQ29
+        C ARQ30
+        C ARQ31
+        C ARQ32
+        C ARQ33
+        C ARQ34
+        C ARQ35
+        C ARQ36
+        C ARQ37
+        C ARQ38
+        C ARQ39
+        C ARQ40
+    }
+```
+
 ---
 ## Tabela DBF: `metiq`
 > **Origem:** `metiq` (Driver: DBFCDX)
@@ -526,6 +935,36 @@
 **Indices vinculados:**
 - Tag: `METIQ` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    metiq {
+        C CODIGO
+        C NOME
+        C LINHA1
+        C LINHA2
+        C LINHA3
+        C LINHA4
+        C LINHA5
+        C LINHA6
+        C LINHA7
+        C LINHA8
+        N NLIN
+        N NCOL
+        N NCAR
+        C SETUP
+        C ARQUIVO
+        N INDICE
+        C FILTRO
+        C ARQGRA
+        C PIND
+        N NIND
+        C TIPFIL
+        C CONFIL
+        C PFIL
+        C SETUPFIM
+    }
+```
+
 ---
 ## Tabela DBF: `mexpor`
 > **Origem:** `mexpor` (Driver: DBFCDX)
@@ -548,6 +987,24 @@
 **Indices vinculados:**
 - Tag: `MEXPOR` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    mexpor {
+        C ARQORI
+        C ARQDES
+        C CODIGO
+        C DESCRICAO
+        C CHAVEIND
+        C DESAPP
+        C ORIAPP
+        C REPENC
+        C APAGA
+        C TIPO
+        C ARQORIEXT
+        C ARQDESEXT
+    }
+```
+
 ---
 ## Tabela DBF: `mexpor1`
 > **Origem:** `mexpor1` (Driver: DBFCDX)
@@ -560,6 +1017,15 @@
 
 **Indices vinculados:**
 - Tag: `MEXPOR1` Expressao: `CODIGO+VARDES`
+
+```mermaid
+erDiagram
+    mexpor1 {
+        C CODIGO
+        C VARDES
+        C VARDRI
+    }
+```
 
 ---
 ## Tabela DBF: `mf11`
@@ -574,6 +1040,15 @@
 **Indices vinculados:**
 - Tag: `MF11-1` Expressao: `VARIAVEL+ARQUIVO`
 
+```mermaid
+erDiagram
+    mf11 {
+        C VARIAVEL
+        C EXECUTE
+        C ARQUIVO
+    }
+```
+
 ---
 ## Tabela DBF: `mmes`
 > **Origem:** `mmes` (Driver: DBFCDX)
@@ -587,6 +1062,16 @@
 
 **Indices vinculados:**
 - Tag: `MMES` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    mmes {
+        C CODIGO
+        C USO
+        C MENSAGEM
+        M DESCRICAO
+    }
+```
 
 ---
 ## Tabela DBF: `muser`
@@ -633,6 +1118,47 @@
 **Indices vinculados:**
 - Tag: `MUSER` Expressao: `USUARIO`
 
+```mermaid
+erDiagram
+    muser {
+        C USUARIO
+        C SENHA
+        C VALIDADE
+        D VALDATA
+        C EQUIVALE
+        C ESTADO
+        C ARQFON
+        C SETOR
+        N WRPTNO
+        N FOLHANO
+        D DATATRO
+        C USUARIOW
+        C SENHAW
+        N POSTEL01
+        N POSTEL02
+        N POSTEL03
+        N POSTEL04
+        N POSTEL05
+        N POSTEL06
+        N POSTEL07
+        N POSTEL08
+        N POSTEL09
+        N POSTEL10
+        N POSTEL11
+        N POSTEL12
+        N POSTEL13
+        N POSTEL14
+        N POSTEL15
+        N POSTEL16
+        N POSTEL17
+        N POSTEL18
+        C CHAVEH
+        C CHAVEWC
+        C CHAVEWW
+        C CHAVEWS
+    }
+```
+
 ---
 ## Tabela DBF: `musera`
 > **Origem:** `musera` (Driver: DBFCDX)
@@ -643,6 +1169,13 @@
 
 **Indices vinculados:**
 - Tag: `MUSERA` Expressao: `CONTROLE`
+
+```mermaid
+erDiagram
+    musera {
+        C CONTROLE
+    }
+```
 
 ---
 ## Tabela DBF: `muserb`
@@ -659,6 +1192,16 @@
 - Tag: `MUSERB` Expressao: `CONTROLE`
 - Tag: `MUSERB-2` Expressao: `ITEMENU+STRZERO(POSICAO,3)+POSTELA`
 
+```mermaid
+erDiagram
+    muserb {
+        C CONTROLE
+        C ITEMENU
+        N POSICAO
+        C POSTELA
+    }
+```
+
 ---
 ## Tabela DBF: `muserf`
 > **Origem:** `muserf` (Driver: DBFCDX)
@@ -670,6 +1213,13 @@
 **Indices vinculados:**
 - Tag: `MUSERF` Expressao: `CONTROLE`
 
+```mermaid
+erDiagram
+    muserf {
+        C CONTROLE
+    }
+```
+
 ---
 ## Tabela DBF: `muserm`
 > **Origem:** `muserm` (Driver: DBFCDX)
@@ -680,6 +1230,13 @@
 
 **Indices vinculados:**
 - Tag: `MUSERM` Expressao: `CONTROLE`
+
+```mermaid
+erDiagram
+    muserm {
+        C CONTROLE
+    }
+```
 
 ---
 ## Tabela DBF: `musern`
@@ -693,6 +1250,14 @@
 **Indices vinculados:**
 - Tag: `MUSERN` Expressao: `USUARIO`
 
+```mermaid
+erDiagram
+    musern {
+        C USUARIO
+        C ID
+    }
+```
+
 ---
 ## Tabela DBF: `musero`
 > **Origem:** `musero` (Driver: DBFCDX)
@@ -704,6 +1269,13 @@
 **Indices vinculados:**
 - Tag: `MUSERO` Expressao: `CONTROLE`
 
+```mermaid
+erDiagram
+    musero {
+        C CONTROLE
+    }
+```
+
 ---
 ## Tabela DBF: `muserr`
 > **Origem:** `muserr` (Driver: DBFCDX)
@@ -714,6 +1286,13 @@
 
 **Indices vinculados:**
 - Tag: `MUSERR` Expressao: `CONTROLE`
+
+```mermaid
+erDiagram
+    muserr {
+        C CONTROLE
+    }
+```
 
 ---
 ## Tabela DBF: `muserw`
@@ -729,6 +1308,16 @@
 **Indices vinculados:**
 - Tag: `MUSERW` Expressao: `CONTROLE`
 - Tag: `MUSERW-2` Expressao: `ITEMENU+STRZERO(POSICAO,3)+POSTELA`
+
+```mermaid
+erDiagram
+    muserw {
+        C CONTROLE
+        C ITEMENU
+        N POSICAO
+        C POSTELA
+    }
+```
 
 ---
 ## Tabela DBF: `nota`
@@ -747,6 +1336,20 @@
 
 **Indices vinculados:**
 - Tag: `NOTA` Expressao: `NOME`
+
+```mermaid
+erDiagram
+    nota {
+        C NOME
+        C OBS1
+        C OBS2
+        C OBS3
+        C OBS4
+        C OBS5
+        C OBS6
+        C OBS7
+    }
+```
 
 ---
 ## Tabela DBF: `padre1`
@@ -770,6 +1373,25 @@
 
 **Indices vinculados:**
 - Tag: `PADRE1-1` Expressao: `MENU+CODIGO+STR(ARQUIVO)+STR(SEQUENCIA)+STR(COLUNA)`
+
+```mermaid
+erDiagram
+    padre1 {
+        N ARQUIVO
+        C MENU
+        C CODIGO
+        C TIPO
+        N SEQUENCIA
+        N SEQ
+        N ESPACEJAR
+        N COLUNA
+        C CONTEUDO
+        C MASCARA
+        L TOTALIZA
+        C FORMULA
+        N QUEBRAR
+    }
+```
 
 ---
 ## Tabela DBF: `padrel`
@@ -875,6 +1497,106 @@
 **Indices vinculados:**
 - Tag: `PADREL-1` Expressao: `MENU+CODIGO`
 
+```mermaid
+erDiagram
+    padrel {
+        C MENU
+        C MENU1
+        C CODIGO
+        C CODIGO1
+        C NOME
+        N FOLHA
+        C ETIQ
+        N ALTURA
+        N LARGURA
+        N COLUNAS
+        C ARQUIVO1
+        C PIND1
+        N INDICE1
+        C CAMPO1
+        C ARQUIVO2
+        C PIND2
+        N INDICE2
+        C CAMPO2
+        C ARQUIVO3
+        C PIND3
+        N INDICE3
+        C CAMPO3
+        C ARQUIVO4
+        C PIND4
+        N INDICE4
+        C CAMPO4
+        C ARQUIVO5
+        C PIND5
+        N INDICE5
+        C CAMPO5
+        C ARQUIVO6
+        C PIND6
+        N INDICE6
+        C CAMPO6
+        C INDEXACAO
+        C SETUP
+        C FILTRO
+        N REL1ARQ
+        N REL2ARQ
+        N REL3ARQ
+        N REL4ARQ
+        C RELACAO1
+        C RELACAO2
+        C RELACAO3
+        C RELACAO4
+        N DEFAULT
+        C QUEBRA1A
+        C QUEBRA1B
+        C QUEBRA1C
+        C QUEBRA1D
+        C QUEBRA1E
+        C QUEBRA2A
+        C QUEBRA2B
+        C QUEBRA2C
+        C QUEBRA2D
+        C QUEBRA2E
+        C QUEBRA3A
+        C QUEBRA3B
+        C QUEBRA3C
+        C QUEBRA3D
+        C QUEBRA3E
+        C QUEBRA4A
+        C QUEBRA4B
+        C QUEBRA4C
+        C QUEBRA4D
+        C QUEBRA4E
+        C QUEBRA5A
+        C QUEBRA5B
+        C QUEBRA5C
+        C QUEBRA5D
+        C QUEBRA5E
+        N SELECAO
+        C FATOR1
+        C FATOR2
+        C FATOR3
+        C FATOR4
+        C FATOR5
+        C DESCRICA1
+        C DESCRICA2
+        C DESCRICA3
+        C DESCRICA4
+        C DESCRICA5
+        N TAM1
+        N TAM2
+        N TAM3
+        N TAM4
+        N TAM5
+        C NOME_LISTA
+        C REL_NIV2
+        C REL_NIV3
+        C REL_NIV4
+        C REL_NIV5
+        N ACESSOS
+        D DATAULT
+    }
+```
+
 ---
 ## Tabela DBF: `sysopt`
 > **Origem:** `sysopt` (Driver: DBFCDX)
@@ -893,6 +1615,20 @@
 **Indices vinculados:**
 - Tag: `SYSOPT` Expressao: `ITEMENU+STR(POSICAO,2)`
 
+```mermaid
+erDiagram
+    sysopt {
+        C ITEMENU
+        N POSICAO
+        C DESCP
+        C DESCM
+        N LINHA
+        N COLUNA
+        N TECLA
+        C EXECUTAR
+    }
+```
+
 ---
 ## Tabela DBF: `telememo`
 > **Origem:** `telememo` (Driver: DBFCDX)
@@ -906,6 +1642,16 @@
 
 **Indices vinculados:**
 - Tag: `TELEMEMO` Expressao: `NOME`
+
+```mermaid
+erDiagram
+    telememo {
+        C NOME
+        C ESPECIF
+        C TELEF
+        C FAX
+    }
+```
 
 ---
 ## Tabela DBF: `winopt`
@@ -924,5 +1670,19 @@
 
 **Indices vinculados:**
 - Tag: `WINOPT` Expressao: `ITEMENU+STR(POSICAO,3)`
+
+```mermaid
+erDiagram
+    winopt {
+        C ITEMENU
+        N POSICAO
+        C DESCP
+        C DESCM
+        N LINHA
+        N COLUNA
+        N TECLA
+        C EXECUTAR
+    }
+```
 
 ---

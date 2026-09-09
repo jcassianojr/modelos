@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "documentacao_dados/apura_documentacao_dados.md",
+                "file": "documentacao_dados/crm_documentacao_dados.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "apura_documentacao_dados"
+              "title": "crm_documentacao_dados"
             }
           }
         ]
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "documentacao_dados/apura_documentacao_dados.md",
+                "file": "documentacao_dados/crm_documentacao_dados.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -184,8 +184,9 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "4fc12cc3e3dad855",
+  "active": "64a93de4ed1d145b",
   "lastOpenFiles": [
+    "documentacao_dados/apura_documentacao_dados.md",
     "estrutura.banco.dbml",
     "estrutura.banco.dbml.md",
     "crm.md",
@@ -208,7 +209,6 @@
     "controle.md",
     "documentacao_dados/cep_documentacao_dados.md",
     "cep.md",
-    "documentacao_dados/apura_documentacao_dados.md",
     "dosprn.md",
     "documentacao_dados/crmlocal.md",
     "alteracoes/controle_alteracoes.md",
@@ -220,7 +220,6 @@
     "chm/wrptlib.chm",
     "chm/padrao.chm",
     "chm/img .chm",
-    "pdf",
-    "chm"
+    "pdf"
   ]
 }

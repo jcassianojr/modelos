@@ -1,5 +1,5 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 29/07/2026
+> Varredura automatica realizada em: 09/09/2026
 
 ## Tabela DBF: `ac2`
 > **Origem:** `ac2` (Driver: DBFCDX)
@@ -121,6 +121,122 @@
 - Tag: `ACP` Expressao: `ACP`
 - Tag: `ACD` Expressao: `ACD`
 
+```mermaid
+erDiagram
+    ac2 {
+        N ACP
+        D DATA
+        N CLIENTE
+        C CLINOME
+        C DESENHO
+        C DESCRI
+        C AMOSTRA
+        C INSTRU
+        C DESCII
+        C CARAC
+        N SUMX
+        N MEDX
+        N SUMR
+        N MEDR
+        N MIN
+        N MAX
+        N X01
+        N X02
+        N X03
+        N X04
+        N X05
+        N X06
+        N X07
+        N X08
+        N X09
+        N X10
+        N X11
+        N X12
+        N X13
+        N X14
+        N X15
+        N X16
+        N X17
+        N X18
+        N X19
+        N X20
+        N X21
+        N X22
+        N X23
+        N X24
+        N X25
+        N X26
+        N X27
+        N X28
+        N X29
+        N X30
+        N R01
+        N R02
+        N R03
+        N R04
+        N R05
+        N R06
+        N R07
+        N R08
+        N R09
+        N R10
+        N R11
+        N R12
+        N R13
+        N R14
+        N R15
+        N R16
+        N R17
+        N R18
+        N R19
+        N R20
+        N R21
+        N R22
+        N R23
+        N R24
+        N R25
+        N R26
+        N R27
+        N R28
+        N R29
+        N R30
+        N SIGMA
+        N PP
+        N PPKA
+        N PPKB
+        N PPK
+        N ACD
+        N LIC
+        N LSC
+        N RMAX
+        N RMIN
+        N XMAX
+        N XMIN
+        N DESV
+        N ELANUM
+        C ELANOM
+        D ELADAT
+        N RESNUM
+        C RESNOM
+        D RESDAT
+        N FORAE
+        N FORAX
+        N FORAR
+        N RLSC
+        N MODAX
+        N MODAR
+        N MEDIX
+        N MEDIR
+        N SEQ
+        N SSQ
+        C OPERACAO
+        C REVD
+        D DATAR
+        C DISTNOR
+        C OBS
+    }
+```
+
 ---
 ## Tabela DBF: `acd`
 > **Origem:** `acd` (Driver: DBFCDX)
@@ -147,6 +263,29 @@
 
 **Indices vinculados:**
 - Tag: `ACD` Expressao: `ACD`
+
+```mermaid
+erDiagram
+    acd {
+        N ACD
+        D DATA
+        N CLIENTE
+        C CLINOME
+        C DESENHO
+        C DESCRI
+        C INSTRU
+        C DESCII
+        C CARAC
+        N MIN
+        N MAX
+        L CONV
+        N SEQ
+        N SSQ
+        C OPERACAO
+        D DATAR
+        C REVD
+    }
+```
 
 ---
 ## Tabela DBF: `acdi`
@@ -175,6 +314,27 @@
 - Tag: `ACDI-2` Expressao: `STR(ACD,8)+DTOS(DATA)+STR(HORA,5,2)`
 - Tag: `ACDI-3` Expressao: `ACP`
 - Tag: `ACDI-4` Expressao: `AEP`
+
+```mermaid
+erDiagram
+    acdi {
+        N ACD
+        N VAL01
+        N VAL02
+        N VAL03
+        N VAL04
+        N VAL05
+        N MEDX
+        N VALR
+        D DATA
+        N HORA
+        N ACP
+        N AEP
+        N ORDEM
+        N LIC
+        N LSC
+    }
+```
 
 ---
 ## Tabela DBF: `acp`
@@ -297,6 +457,122 @@
 - Tag: `ACP` Expressao: `ACP`
 - Tag: `ACD` Expressao: `ACD`
 
+```mermaid
+erDiagram
+    acp {
+        N ACP
+        D DATA
+        N CLIENTE
+        C CLINOME
+        C DESENHO
+        C DESCRI
+        C AMOSTRA
+        C INSTRU
+        C DESCII
+        C CARAC
+        N SUMX
+        N MEDX
+        N SUMR
+        N MEDR
+        N MIN
+        N MAX
+        N X01
+        N X02
+        N X03
+        N X04
+        N X05
+        N X06
+        N X07
+        N X08
+        N X09
+        N X10
+        N X11
+        N X12
+        N X13
+        N X14
+        N X15
+        N X16
+        N X17
+        N X18
+        N X19
+        N X20
+        N X21
+        N X22
+        N X23
+        N X24
+        N X25
+        N X26
+        N X27
+        N X28
+        N X29
+        N X30
+        N R01
+        N R02
+        N R03
+        N R04
+        N R05
+        N R06
+        N R07
+        N R08
+        N R09
+        N R10
+        N R11
+        N R12
+        N R13
+        N R14
+        N R15
+        N R16
+        N R17
+        N R18
+        N R19
+        N R20
+        N R21
+        N R22
+        N R23
+        N R24
+        N R25
+        N R26
+        N R27
+        N R28
+        N R29
+        N R30
+        N SIGMA
+        N PP
+        N PPKA
+        N PPKB
+        N PPK
+        N ACD
+        N LIC
+        N LSC
+        N RMAX
+        N RMIN
+        N XMAX
+        N XMIN
+        N DESV
+        N ELANUM
+        C ELANOM
+        D ELADAT
+        N RESNUM
+        C RESNOM
+        D RESDAT
+        N FORAE
+        N FORAX
+        N FORAR
+        N RLSC
+        N MODAX
+        N MODAR
+        N MEDIX
+        N MEDIR
+        N SEQ
+        N SSQ
+        C OPERACAO
+        C REVD
+        D DATAR
+        C DISTNOR
+        C OBS
+    }
+```
+
 ---
 ## Tabela DBF: `acpr`
 > **Origem:** `acpr` (Driver: DBFCDX)
@@ -311,6 +587,16 @@
 **Indices vinculados:**
 - Tag: `ACPVALOR` Expressao: `STR(ACP,8)+STR(VALOR,10,4)`
 - Tag: `ACP` Expressao: `ACP`
+
+```mermaid
+erDiagram
+    acpr {
+        N ACP
+        N VALOR
+        N QTDE
+        N TOTAL
+    }
+```
 
 ---
 ## Tabela DBF: `acpx`
@@ -327,6 +613,16 @@
 - Tag: `ACPVALOR` Expressao: `STR(ACP,8)+STR(VALOR,10,4)`
 - Tag: `ACP` Expressao: `ACP`
 
+```mermaid
+erDiagram
+    acpx {
+        N ACP
+        N VALOR
+        N QTDE
+        N TOTAL
+    }
+```
+
 ---
 ## Tabela DBF: `aepr`
 > **Origem:** `aepr` (Driver: DBFCDX)
@@ -342,6 +638,16 @@
 - Tag: `ACPVALOR` Expressao: `STR(ACP,8)+STR(VALOR,10,4)`
 - Tag: `ACP` Expressao: `ACP`
 
+```mermaid
+erDiagram
+    aepr {
+        N ACP
+        N VALOR
+        N QTDE
+        N TOTAL
+    }
+```
+
 ---
 ## Tabela DBF: `aepx`
 > **Origem:** `aepx` (Driver: DBFCDX)
@@ -356,6 +662,16 @@
 **Indices vinculados:**
 - Tag: `ACPVALOR` Expressao: `STR(ACP,8)+STR(VALOR,10,4)`
 - Tag: `ACP` Expressao: `ACP`
+
+```mermaid
+erDiagram
+    aepx {
+        N ACP
+        N VALOR
+        N QTDE
+        N TOTAL
+    }
+```
 
 ---
 ## Tabela DBF: `ci`
@@ -387,6 +703,32 @@
 **Indices vinculados:**
 - Tag: `CI` Expressao: `CI`
 
+```mermaid
+erDiagram
+    ci {
+        N CI
+        C TIPOI
+        C DESCRI
+        C DESENHO
+        C REVD
+        D DATAD
+        D DATAR
+        C PEDIDO
+        C ORDEM
+        C QTL
+        C QTI
+        C RASTRO
+        N CLIENTE
+        C CLINOME
+        C OBS01
+        C OBS02
+        C LAUDOF
+        D DATA
+        N INSNUM
+        C INSNOM
+    }
+```
+
 ---
 ## Tabela DBF: `cic`
 > **Origem:** `cic` (Driver: DBFCDX)
@@ -402,6 +744,18 @@
 
 **Indices vinculados:**
 - Tag: `DESENHO` Expressao: `DESENHO`
+
+```mermaid
+erDiagram
+    cic {
+        C DESENHO
+        C DESCRI
+        D DATAR
+        D DATAD
+        C REVD
+        N CLIENTE
+    }
+```
 
 ---
 ## Tabela DBF: `cici`
@@ -420,6 +774,20 @@
 
 **Indices vinculados:**
 - Tag: `DESENHO` Expressao: `DESENHO`
+
+```mermaid
+erDiagram
+    cici {
+        C DESENHO
+        N ENC
+        C CESPE
+        N ESPE
+        N MAX
+        N MIN
+        C UND
+        C LOCALI
+    }
+```
 
 ---
 ## Tabela DBF: `cii`
@@ -443,6 +811,24 @@
 **Indices vinculados:**
 - Tag: `CI` Expressao: `CI`
 
+```mermaid
+erDiagram
+    cii {
+        N CI
+        N ITEM
+        N DESVIO
+        N ENC
+        C CENC
+        C CESPE
+        N ESPE
+        N MAX
+        N MIN
+        C UND
+        C LOCALI
+        C LAUDO
+    }
+```
+
 ---
 ## Tabela DBF: `crtaum`
 > **Origem:** `crtaum` (Driver: DBFCDX)
@@ -460,6 +846,18 @@
 - Tag: `DATA` Expressao: `DATA`
 - Tag: `REFCTR` Expressao: `REFCTR`
 
+```mermaid
+erDiagram
+    crtaum {
+        C TIPO
+        D DATA
+        N HORA
+        N VALOR
+        C REFCTR
+        C SALA
+    }
+```
+
 ---
 ## Tabela DBF: `etippp`
 > **Origem:** `etippp` (Driver: DBFCDX)
@@ -471,6 +869,17 @@
 | NOME | C | 50 | 0 |
 | SUFIX | C | 5 | 0 |
 | ENGENHA | C | 50 | 0 |
+
+```mermaid
+erDiagram
+    etippp {
+        N NUMERO
+        C CODIGO
+        C NOME
+        C SUFIX
+        C ENGENHA
+    }
+```
 
 ---
 ## Tabela DBF: `gc`
@@ -517,6 +926,46 @@
 - Tag: `GC` Expressao: `GC`
 - Tag: `REFCTR` Expressao: `REFCTR`
 
+```mermaid
+erDiagram
+    gc {
+        N GC
+        N CLIENTE
+        C CLINOME
+        C CODIGO
+        C NOME
+        C CODME01
+        C NOMME01
+        N SEQ
+        N SSQ
+        C CARAC
+        C ESPEC
+        C FREQ
+        C TAM
+        C CODME04
+        C NOMME04
+        C CO2ME04
+        C NO2ME04
+        C UNIDME
+        C REFCTR
+        N VALX
+        N LIC
+        N LSC
+        N LIE
+        N LSE
+        N VINI
+        N VDIV
+        N VALR
+        N LSCR
+        N VDIR
+        N VMAX
+        N RMAX
+        N ACP
+        N AEP
+        C OBS
+    }
+```
+
 ---
 ## Tabela DBF: `gctem`
 > **Origem:** `gctem` (Driver: DBFCDX)
@@ -528,6 +977,14 @@
 
 **Indices vinculados:**
 - Tag: `REFCTR` Expressao: `REFCTR`
+
+```mermaid
+erDiagram
+    gctem {
+        N ITEM
+        C REFCTR
+    }
+```
 
 ---
 ## Tabela DBF: `gctemp`
@@ -541,6 +998,14 @@
 **Indices vinculados:**
 - Tag: `ITEM` Expressao: `ITEM`
 - Tag: `REFCTR` Expressao: `REFCTR`
+
+```mermaid
+erDiagram
+    gctemp {
+        N ITEM
+        C REFCTR
+    }
+```
 
 ---
 ## Tabela DBF: `opae`
@@ -559,6 +1024,19 @@
 **Indices vinculados:**
 - Tag: `OPAE` Expressao: `OPAE`
 
+```mermaid
+erDiagram
+    opae {
+        N OPAE
+        N CLIENTE
+        D DATA
+        C CODIGO
+        C RASTRO
+        N QTDE
+        N CODMP04
+    }
+```
+
 ---
 ## Tabela DBF: `opai`
 > **Origem:** `opai` (Driver: DBFCDX)
@@ -568,6 +1046,15 @@
 | OPAE | N | 8 | 0 |
 | ESPEC | C | 100 | 0 |
 | LAUDO | C | 1 | 0 |
+
+```mermaid
+erDiagram
+    opai {
+        N OPAE
+        C ESPEC
+        C LAUDO
+    }
+```
 
 ---
 ## Tabela DBF: `pac`
@@ -635,6 +1122,68 @@
 **Indices vinculados:**
 - Tag: `PAC` Expressao: `PAC`
 
+```mermaid
+erDiagram
+    pac {
+        N PAC
+        N ACP
+        N AEP
+        N CLIENTE
+        C CLINOME
+        C CODIGO
+        D DATA
+        C NOME
+        C ESPECI
+        C CARAC
+        C INSTRU
+        C DESCII
+        N SEQ
+        N SSQ
+        C EQU
+        C NEQU
+        C UNID
+        N RMIN
+        N RMAX
+        N VMAX
+        N VMIN
+        N MEDX
+        N PP
+        N XMAX
+        N XMIN
+        N MEDR
+        N PPK
+        C IDE01
+        C IDE02
+        C IDE04
+        C IDE03
+        C CAV01
+        C CAV02
+        C CAV03
+        C CAV04
+        C ACA01
+        C ACA02
+        C ACA03
+        C ACA04
+        C SETOR
+        C SETCOD
+        C DESSEQ
+        N VALP
+        N NXMIN
+        N NXMAX
+        N NXMED
+        N NRMIN
+        N NRMAX
+        N NRMED
+        N NPP
+        N NPPK
+        N NVALP
+        N NAEP
+        N NACP
+        N NVMIN
+        N NVMAX
+    }
+```
+
 ---
 ## Tabela DBF: `paee`
 > **Origem:** `paee` (Driver: DBFCDX)
@@ -652,6 +1201,19 @@
 **Indices vinculados:**
 - Tag: `PAEE` Expressao: `PAEE`
 
+```mermaid
+erDiagram
+    paee {
+        N PAEE
+        D DATA
+        N CLIENTE
+        C CODIGO
+        C OBS01
+        C OBS02
+        C OBS03
+    }
+```
+
 ---
 ## Tabela DBF: `paei`
 > **Origem:** `paei` (Driver: DBFCDX)
@@ -663,6 +1225,14 @@
 
 **Indices vinculados:**
 - Tag: `PAEI` Expressao: `DESENHO`
+
+```mermaid
+erDiagram
+    paei {
+        C DESENHO
+        C ESPEC
+    }
+```
 
 ---
 ## Tabela DBF: `ri`
@@ -699,6 +1269,37 @@
 **Indices vinculados:**
 - Tag: `RI` Expressao: `RI`
 
+```mermaid
+erDiagram
+    ri {
+        N RI
+        C TIPOI
+        C TIPO2
+        C DESCRI
+        C DESENHO
+        C REVD
+        D DATAD
+        D DATAR
+        C PEDIDO
+        C ORDEM
+        C QTL
+        C QTI
+        C RASTRO
+        N CLIENTE
+        C CLINOME
+        C OBS01
+        C OBS02
+        C LAUDOF
+        D DATA
+        N INSNUM
+        C INSNOM
+        N SEQ
+        N SSQ
+        C ORIGEM
+        C CODIGOINT
+    }
+```
+
 ---
 ## Tabela DBF: `rii`
 > **Origem:** `rii` (Driver: DBFCDX)
@@ -717,6 +1318,20 @@
 **Indices vinculados:**
 - Tag: `RII` Expressao: `RI`
 - Tag: `RI` Expressao: `RI`
+
+```mermaid
+erDiagram
+    rii {
+        N RI
+        N ITEM
+        C DESVIO
+        C ENC
+        C ESPE
+        C LOCALI
+        C LAUDO
+        C TIPINSP
+    }
+```
 
 ---
 ## Tabela DBF: `rrl`
@@ -920,6 +1535,204 @@
 **Indices vinculados:**
 - Tag: `RRS` Expressao: `RRS`
 
+```mermaid
+erDiagram
+    rrl {
+        N RRS
+        N CLIENTE
+        C CLINOME
+        C DESENHO
+        C DESCRI
+        C INSTRU
+        C DESCII
+        C CARAC
+        C ESPEC
+        C AVA
+        C AVB
+        C AVC
+        N AVAN
+        N AVBN
+        N AVCN
+        N AMA01
+        N AMA02
+        N AMA03
+        N AMA04
+        N AMA05
+        N AMA06
+        N AMA07
+        N AMA08
+        N AMA09
+        N AMA10
+        N AMAA01
+        N AMAA02
+        N AMAA03
+        N AMAA04
+        N AMAA05
+        N AMAA06
+        N AMAA07
+        N AMAA08
+        N AMAA09
+        N AMAA10
+        N AMAAA01
+        N AMAAA02
+        N AMAAA03
+        N AMAAA04
+        N AMAAA05
+        N AMAAA06
+        N AMAAA07
+        N AMAAA08
+        N AMAAA09
+        N AMAAA10
+        N AMB01
+        N AMB02
+        N AMB03
+        N AMB04
+        N AMB05
+        N AMB06
+        N AMB07
+        N AMB08
+        N AMB09
+        N AMB10
+        N AMBB01
+        N AMBB02
+        N AMBB03
+        N AMBB04
+        N AMBB05
+        N AMBB06
+        N AMBB07
+        N AMBB08
+        N AMBB09
+        N AMBB10
+        N AMBBB01
+        N AMBBB02
+        N AMBBB03
+        N AMBBB04
+        N AMBBB05
+        N AMBBB06
+        N AMBBB07
+        N AMBBB08
+        N AMBBB09
+        N AMBBB10
+        N AMC01
+        N AMC02
+        N AMC03
+        N AMC04
+        N AMC05
+        N AMC06
+        N AMC07
+        N AMC08
+        N AMC09
+        N AMC10
+        N AMCC01
+        N AMCC02
+        N AMCC03
+        N AMCC04
+        N AMCC05
+        N AMCC06
+        N AMCC07
+        N AMCC08
+        N AMCC09
+        N AMCC10
+        N AMCCC01
+        N AMCCC02
+        N AMCCC03
+        N AMCCC04
+        N AMCCC05
+        N AMCCC06
+        N AMCCC07
+        N AMCCC08
+        N AMCCC09
+        N AMCCC10
+        N DIFA01
+        N DIFA02
+        N DIFA03
+        N DIFA04
+        N DIFA05
+        N DIFA06
+        N DIFA07
+        N DIFA08
+        N DIFA09
+        N DIFA10
+        N DIFB01
+        N DIFB02
+        N DIFB03
+        N DIFB04
+        N DIFB05
+        N DIFB06
+        N DIFB07
+        N DIFB08
+        N DIFB09
+        N DIFB10
+        N DIFC01
+        N DIFC02
+        N DIFC03
+        N DIFC04
+        N DIFC05
+        N DIFC06
+        N DIFC07
+        N DIFC08
+        N DIFC09
+        N DIFC10
+        N TOTAA
+        N TOTAB
+        N TOTAC
+        N MEDAA
+        N TOTALA
+        N TOTBA
+        N TOTBB
+        N TOTBC
+        N MEDBB
+        N TOTALB
+        N TOTCA
+        N TOTCB
+        N TOTCC
+        N MEDCC
+        N TOTALC
+        N MEDIA
+        N MEDIB
+        N MEDIC
+        N MEDSOM
+        N MEDMED
+        N DIFMED
+        N VE
+        N VA
+        N RR
+        N VP
+        N VT
+        N PVE
+        N PVA
+        N PRR
+        D DATA
+        C OBS01
+        N XMAX
+        N XMIN
+        N RP
+        N RPMAX
+        N RPMIN
+        N M01
+        N M02
+        N M03
+        N M04
+        N M05
+        N M06
+        N M07
+        N M08
+        N M09
+        N M10
+        N NCP
+        N K01
+        N K02
+        N K03
+        N K04
+        N PVP
+        N TOLMIN
+        N TOLMAX
+        N NUMASS
+        D DATASS
+        C NOMASS
+    }
+```
+
 ---
 ## Tabela DBF: `rrs`
 > **Origem:** `rrs` (Driver: DBFCDX)
@@ -1013,6 +1826,95 @@
 **Indices vinculados:**
 - Tag: `RRS` Expressao: `RRS`
 
+```mermaid
+erDiagram
+    rrs {
+        N RRS
+        N CLIENTE
+        C CLINOME
+        C DESENHO
+        C DESCRI
+        C INSTRU
+        C DESCII
+        C CARAC
+        C ESPEC
+        C AVA
+        C AVB
+        N AVAN
+        N AVBN
+        N AMA01
+        N AMA02
+        N AMA03
+        N AMA04
+        N AMA05
+        N AMAA01
+        N AMAA02
+        N AMAA03
+        N AMAA04
+        N AMAA05
+        N AMB01
+        N AMB02
+        N AMB03
+        N AMB04
+        N AMB05
+        N AMBB01
+        N AMBB02
+        N AMBB03
+        N AMBB04
+        N AMBB05
+        N DIFA01
+        N DIFA02
+        N DIFA03
+        N DIFA04
+        N DIFA05
+        N DIFB01
+        N DIFB02
+        N DIFB03
+        N DIFB04
+        N DIFB05
+        N TOTAA
+        N TOTAB
+        N MEDAA
+        N TOTALA
+        N TOTBA
+        N TOTBB
+        N MEDBB
+        N TOTALB
+        N MEDIA
+        N MEDIB
+        N MEDSOM
+        N MEDMED
+        N DIFMED
+        N VE
+        N VA
+        N RR
+        N VP
+        N VT
+        N PRR
+        D DATA
+        C OBS01
+        C OBS02
+        N RP
+        N M01
+        N M02
+        N M03
+        N M04
+        N M05
+        N RPMAX
+        N RPMIN
+        N XMAX
+        N XMIN
+        N K01
+        N K02
+        N K03
+        N TOLMIN
+        N TOLMAX
+        N NUMASS
+        D DATASS
+        C NOMASS
+    }
+```
+
 ---
 ## Tabela DBF: `teep`
 > **Origem:** `teep` (Driver: DBFCDX)
@@ -1043,5 +1945,32 @@
 
 **Indices vinculados:**
 - Tag: `TEEP` Expressao: `TEEP`
+
+```mermaid
+erDiagram
+    teep {
+        N TEEP
+        D DATA
+        C DESENHO
+        C CARAC
+        N CLIENTE
+        C CLINOME
+        C RR
+        N P1
+        N PP
+        N PPK
+        N PLAN01
+        C ESTAVEL
+        N PLAN02
+        N P2
+        N CP
+        N CPK
+        N PLAN03
+        N ACP
+        N AEP
+        C ACPATR
+        C AEPATR
+    }
+```
 
 ---

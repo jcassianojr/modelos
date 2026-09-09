@@ -1,5 +1,5 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 28/07/2026
+> Varredura automatica realizada em: 09/09/2026
 
 ## Tabela DBF: `adipie`
 > **Origem:** `adipie` (Driver: DBFCDX)
@@ -22,6 +22,22 @@
 - Tag: `ADIPIE-2` Expressao: `STR(FORNECEDO,8)+DCFONEW+DCLASSIPI`
 - Tag: `ADIPIE-3` Expressao: `DCFONEW`
 
+```mermaid
+erDiagram
+    adipie {
+        N FORNECEDO
+        C DCLASSIPI
+        C DOPER
+        N DVALORNF
+        N DVALIPI
+        C CGC
+        C COGNOME
+        C DCFONEW
+        L FICHA
+        C DESCRI
+    }
+```
+
 ---
 ## Tabela DBF: `adipig`
 > **Origem:** `adipig` (Driver: DBFCDX)
@@ -34,6 +50,14 @@
 **Indices vinculados:**
 - Tag: `ADIPIG` Expressao: `GRUPO+CFOP`
 - Tag: `ADIPIG-2` Expressao: `CFOP`
+
+```mermaid
+erDiagram
+    adipig {
+        C GRUPO
+        C CFOP
+    }
+```
 
 ---
 ## Tabela DBF: `adipis`
@@ -57,6 +81,22 @@
 - Tag: `ADIPIS-2` Expressao: `STR(FORNECEDO,8)+DCFONEW+DCLASSIPI`
 - Tag: `ADIPIS-3` Expressao: `DCFONEW`
 
+```mermaid
+erDiagram
+    adipis {
+        N FORNECEDO
+        C DCLASSIPI
+        C DOPER
+        N DVALORNF
+        N DVALIPI
+        C CGC
+        C COGNOME
+        C DCFONEW
+        L FICHA
+        C DESCRI
+    }
+```
+
 ---
 ## Tabela DBF: `bpforc`
 > **Origem:** `bpforc` (Driver: DBFCDX)
@@ -68,6 +108,14 @@
 
 **Indices vinculados:**
 - Tag: `BPFORC` Expressao: `FORNECEDO`
+
+```mermaid
+erDiagram
+    bpforc {
+        N FORNECEDO
+        C SAI
+    }
+```
 
 ---
 ## Tabela DBF: `bpforr`
@@ -86,6 +134,20 @@
 
 **Indices vinculados:**
 - Tag: `BPFORR` Expressao: `STR(ANO,4)+STR(MES,2)+STR(FORNECEDO,8)`
+
+```mermaid
+erDiagram
+    bpforr {
+        N FORNECEDO
+        C TIPO
+        N VALOR
+        N MES
+        N ANO
+        C GRUPO
+        C COGNOME
+        N PERC
+    }
+```
 
 ---
 ## Tabela DBF: `bs3`
@@ -113,5 +175,28 @@
 
 **Indices vinculados:**
 - Tag: `BS3-1` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    bs3 {
+        C CODIGO
+        C NOME
+        C GRUPOUTL
+        N ESTOQUE
+        N ESTOQU3
+        N USO01
+        N USO02
+        N USO03
+        N USO04
+        N SAL01
+        N SAL02
+        N SAL03
+        N SAL04
+        N SA301
+        N SA302
+        N SA303
+        N SA304
+    }
+```
 
 ---

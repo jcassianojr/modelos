@@ -1,0 +1,39 @@
+// Origem: dic (DBFCDX)
+Table "dic" {
+  Note: "Origem: dic"
+  "ARQUIVO" VARCHAR(30)
+  "DESCRICAO" VARCHAR(60)
+  "CAMINHO" VARCHAR(40)
+  "DRIVER" VARCHAR(10)
+  Indexes {
+    (ARQUIVO) [name: "MANARQ"]
+  }
+}
+
+// Origem: dici (DBFCDX)
+Table "dici" {
+  Note: "Origem: dici"
+  "TABELA" VARCHAR(30)
+  "CAMPO" VARCHAR(10)
+  "TIPO" VARCHAR(1)
+  "TAM" INTEGER [default: 0]
+  "DEC" INTEGER [default: 0]
+  "EXCLUIDO" VARCHAR(10)
+  "DATAUP" DATETIME
+  Indexes {
+    (TABELA,CAMPO) [name: "DICI"]
+  }
+}
+
+// Origem: dicidx (DBFCDX)
+Table "dicidx" {
+  Note: "Origem: dicidx"
+  "ARQUIVO" VARCHAR(30)
+  "SEQ" INTEGER [default: 0]
+  "TAG" VARCHAR(20)
+  "CHAVE" VARCHAR(70)
+  Indexes {
+    (ARQUIVO,SEQ) [name: "ARQSEG"]
+  }
+}
+

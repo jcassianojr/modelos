@@ -1,5 +1,5 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 29/07/2026
+> Varredura automatica realizada em: 09/09/2026
 
 ## Tabela DBF: `mail`
 > **Origem:** `mail` (Driver: DBFCDX)
@@ -17,6 +17,22 @@
 | DATAOK | D | 8 | 0 |
 | HORAOK | C | 8 | 0 |
 
+```mermaid
+erDiagram
+    mail {
+        N NUMERO
+        C ERRO
+        D DATA
+        C HORA
+        C DE
+        C DESTINO
+        C ASSUNTO
+        M TEXTO
+        D DATAOK
+        C HORAOK
+    }
+```
+
 ---
 ## Tabela DBF: `mailerro`
 > **Origem:** `mailerro` (Driver: DBFCDX)
@@ -29,6 +45,14 @@
 **Indices vinculados:**
 - Tag: `MAILERRO` Expressao: `ERRO`
 
+```mermaid
+erDiagram
+    mailerro {
+        C ERRO
+        C ASSUNTO
+    }
+```
+
 ---
 ## Tabela DBF: `mailpara`
 > **Origem:** `mailpara` (Driver: DBFCDX)
@@ -40,6 +64,14 @@
 
 **Indices vinculados:**
 - Tag: `MAILPARA` Expressao: `ERRO`
+
+```mermaid
+erDiagram
+    mailpara {
+        C ERRO
+        C DESTINO
+    }
+```
 
 ---
 ## Tabela DBF: `mailpg`
@@ -57,5 +89,21 @@
 | TEXTO | M | 10 | 0 |
 | DATAOK | D | 8 | 0 |
 | HORAOK | C | 8 | 0 |
+
+```mermaid
+erDiagram
+    mailpg {
+        N NUMERO
+        C ERRO
+        D DATA
+        C HORA
+        C DE
+        C DESTINO
+        C ASSUNTO
+        M TEXTO
+        D DATAOK
+        C HORAOK
+    }
+```
 
 ---

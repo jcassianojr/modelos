@@ -1,0 +1,595 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "esocial_cbo" as esocial_cbo {
+  CODIGO : varchar(6)
+  NOME : varchar(150)
+  DT_INI : datetime
+  DT_FIN : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab01" as esocial_tab01 {
+  CODIGO : varchar(3)
+  NOME : varchar(255)
+  DTINICIO : datetime
+  DTFIM : datetime
+  GRUPO : varchar(5)
+  ALIQFGTS : varchar(1)
+  OBRIGA : varchar(1)
+  ALIQFGTSCO : varchar(3)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab02" as esocial_tab02 {
+  CODIGO : integer
+  NOME : varchar(74)
+  DTINICIO : datetime
+  DTFIM : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab03" as esocial_tab03 {
+  CODIGO : varchar(4)
+  NOME : varchar(65)
+  DTINICIO : datetime
+  DTFIM : datetime
+  DESCRICAO : varchar(255)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab04" as esocial_tab04 {
+  CODFPAS : integer
+  INDCOOP : varchar(6)
+  DTINICIO : datetime
+  DTFIM : datetime
+  CLASSTRIB : varchar(2)
+  CODTERC : integer
+  ALIQTERC : decimal(4,2)
+  --
+  .. Índices ..
+  + CODFPAS : CODFPAS
+}
+
+entity "esocial_tab05" as esocial_tab05 {
+  CODIGO : integer
+  NOME : varchar(56)
+  DTINICIO : datetime
+  DTFIM : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab07" as esocial_tab07 {
+  CODIGO : varchar(4)
+  NOME : varchar(55)
+  DTINICIO : datetime
+  DTFIM : datetime
+  MATERIABIO : varchar(3)
+  AGENTEQUIM : integer
+  --
+  .. Índices ..
+  + CODIGO : codigo
+}
+
+entity "esocial_tab08" as esocial_tab08 {
+  CODIGO : integer
+  NOME : varchar(149)
+  DTINICIO : datetime
+  DTFIM : datetime
+  TPINSC : integer
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab09" as esocial_tab09 {
+  CODIGO : varchar(6)
+  NOME : varchar(84)
+  DTINICIO : datetime
+  DTFIM : datetime
+  IDTPEVENTO : integer
+  TAGTPEVENT : varchar(17)
+  IDENTIFIC : varchar(23)
+  INDCHDUPL : integer
+  INDEXCL : integer
+  CLASSTRIB : varchar(11)
+  NCLASSTRI : varchar(2)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab10" as esocial_tab10 {
+  CODIGO : varchar(2)
+  NOME : varchar(255)
+  DTINICIO : datetime
+  DTFIM : datetime
+  TPINSCR : varchar(13)
+  NRINSCR : varchar(98)
+  CDVALID : varchar(1)
+  TXCLASSTRB : varchar(47)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab11" as esocial_tab11 {
+  CODIGO : integer
+  CLASSTRIB : varchar(11)
+  DTINICIO : datetime
+  DTFIM : datetime
+  NCLASSTRI : varchar(8)
+  COOPERATIV : varchar(1)
+  TPLOTACAO : varchar(20)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab13" as esocial_tab13 {
+  CODIGO : varchar(9)
+  NOME : varchar(161)
+  DTINICIO : datetime
+  DTFIM : varchar(8)
+  --
+  .. Índices ..
+  + CODIGO : codigo
+}
+
+entity "esocial_tab14" as esocial_tab14 {
+  CODIGO : integer
+  NOME : varchar(185)
+  DTINICIO : datetime
+  DTFIM : datetime
+  --
+  .. Índices ..
+  + CODIGO : codigo
+}
+
+entity "esocial_tab15" as esocial_tab15 {
+  CODIGO : varchar(9)
+  NOME : varchar(135)
+  DTINICIO : datetime
+  DTFIM : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab16" as esocial_tab16 {
+  CODIGO : varchar(9)
+  NOME : varchar(63)
+  DTINICIO : datetime
+  DTFIM : varchar(8)
+  --
+  .. Índices ..
+  + CODIGO : codigo
+}
+
+entity "esocial_tab17" as esocial_tab17 {
+  CODIGO : varchar(9)
+  NOME : varchar(135)
+  DTINICIO : datetime
+  DTFIM : datetime
+  --
+  .. Índices ..
+  + CODIGO : codigo
+}
+
+entity "esocial_tab18" as esocial_tab18 {
+  CODIGO : varchar(2)
+  NOME : varchar(255)
+  DTINICIO : datetime
+  DTFIM : datetime
+  PERALTMOT : varchar(5)
+  DOMESTICO : varchar(1)
+  DESCRESUM : varchar(50)
+  SUSSALMEN : varchar(1)
+  PAGSALFAM : varchar(1)
+  GERAREMUN : varchar(1)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab19" as esocial_tab19 {
+  CODIGO : integer
+  NOME : varchar(236)
+  DTINICIO : datetime
+  DTFIM : datetime
+  GERADAE : integer
+  LCATEGTRAB : varchar(23)
+  GERAINDCOM : integer
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab20" as esocial_tab20 {
+  CODIGO : varchar(3)
+  NOME : varchar(11)
+  DTINICIO : datetime
+  DTFIM : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab21" as esocial_tab21 {
+  CODIGO : varchar(9)
+  NOME : varchar(135)
+  DTINICIO : datetime
+  DTFIM : datetime
+  CODIGOPAI : varchar(9)
+  TIPO : varchar(1)
+  --
+  .. Índices ..
+  + CODIGO : codigo
+}
+
+entity "esocial_tab22" as esocial_tab22 {
+  CODIGO : varchar(9)
+  NOME : varchar(206)
+  DTINICIO : datetime
+  DTFIM : datetime
+  GRAU : varchar(6)
+  OPERATIV : varchar(255)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab23" as esocial_tab23 {
+  CODIGO : varchar(8)
+  NOME : varchar(148)
+  DTINICIO : datetime
+  DTFIM : datetime
+  TEMPCONTR : integer
+  ALIQ : integer
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab24" as esocial_tab24 {
+  CODIGO : integer
+  LCLASSTRIB : varchar(44)
+  DTINICIO : datetime
+  DTFIM : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab26" as esocial_tab26 {
+  CODIGO : varchar(6)
+  NOME : varchar(255)
+  DTINICIO : datetime
+  DTFIM : datetime
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab51" as esocial_tab51 {
+  CODIGO : integer
+  NOME : varchar(16)
+  DTINICIO : datetime
+  DTFIM : datetime
+  OBRIGA : varchar(1)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab52" as esocial_tab52 {
+  CODIGO : varchar(10)
+  NOME : varchar(56)
+  DTINICIO : datetime
+  DTFIM : datetime
+  HRENTR : integer
+  HRSAIDA : integer
+  DURJORNADA : integer
+  TPINTERV : integer
+  DURINTERV : integer
+  INIINTERV : varchar(1)
+  TERMINTERV : varchar(1)
+  PERHORFLEX : varchar(1)
+  QTDHRSSEM : varchar(2)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab53" as esocial_tab53 {
+  CODIGO : integer
+  NOME : varchar(73)
+  DTINICIO : datetime
+  DTFIM : datetime
+  ESOCFILIAL : varchar(1)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab54" as esocial_tab54 {
+  CODIGO : varchar(11)
+  NOME : varchar(84)
+  DTINICIO : datetime
+  DTFIM : datetime
+  NATRUBR : varchar(4)
+  TPRUBR : varchar(1)
+  CODINCCP : varchar(2)
+  CODINCIRRF : varchar(2)
+  CODINCFGTS : varchar(2)
+  CODINCSIND : varchar(1)
+  REPDSR : varchar(1)
+  REP13 : varchar(1)
+  REPFERIAS : varchar(1)
+  REPRESC : varchar(1)
+  REPAFAST : varchar(1)
+  FATORRUBR : varchar(1)
+  LOCALAPLIC : varchar(24)
+  DOMESTICA : varchar(1)
+  SE : varchar(1)
+  GERAL : varchar(1)
+  DESCRICAO : varchar(255)
+  NOTA : varchar(255)
+  ORDRESCDOM : varchar(2)
+  PERADICRUB : varchar(1)
+  ORDREMDOM : varchar(2)
+  REPSFDOM : varchar(1)
+  PERFOLRES : varchar(1)
+  PEREDITRUB : varchar(1)
+  PEREXCRUB : varchar(1)
+  FILCATRUB : varchar(3)
+  GRUPRENDDO : varchar(5)
+  --
+  .. Índices ..
+  + CODIGO : codigo
+}
+
+entity "esocial_tab55" as esocial_tab55 {
+  CODIGO : integer
+  NOME : varchar(50)
+  DTINICIO : datetime
+  DTFIM : datetime
+  CLASSTRIB : varchar(2)
+  NCLASSTRIB : integer
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab57" as esocial_tab57 {
+  INFSALCONT : decimal(7,2)
+  SUPSALCONT : decimal(7,2)
+  DTINICIO : datetime
+  DTFIM : datetime
+  ALIQ : integer
+  FAIXA : integer
+  --
+  .. Índices ..
+  + FAIXA : FAIXA
+}
+
+entity "esocial_tab58" as esocial_tab58 {
+  INFBC : decimal(7,2)
+  SUPBC : decimal(13,2)
+  DTINICIO : datetime
+  DTFIM : datetime
+  ALIQ : decimal(4,1)
+  PARCDED : decimal(6,2)
+  FAIXA : integer
+  --
+  .. Índices ..
+  + FAIXA : FAIXA
+}
+
+entity "esocial_tab59" as esocial_tab59 {
+  CODIGO : integer
+  NOME : varchar(74)
+  DTINICIO : datetime
+  DTFIM : datetime
+  TPSUSP : integer
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab60" as esocial_tab60 {
+  CODIGO : varchar(4)
+  DESCRICAO : varchar(255)
+  DTINICIO : datetime
+  DTFIM : datetime
+  NOME : varchar(50)
+  --
+  .. Índices ..
+  + CODIGO : codigo
+}
+
+entity "esocial_tab61" as esocial_tab61 {
+  CODIGO : varchar(11)
+  NOME : varchar(98)
+  DTINICIO : datetime
+  DTFIM : datetime
+  CODGRUPO : integer
+  CODCBO : integer
+  TPTRAB : integer
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab62" as esocial_tab62 {
+  CODIGO : integer
+  NOME : varchar(112)
+  DTINICIO : datetime
+  DTFIM : varchar(1)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab63" as esocial_tab63 {
+  CODIGO : integer
+  NOME : varchar(56)
+  DTINICIO : datetime
+  DTFIM : datetime
+  EVENTO : varchar(6)
+  RUBRICAS : varchar(215)
+  CATEGORIA : integer
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab64" as esocial_tab64 {
+  CODIGO : varchar(11)
+  NOME : varchar(62)
+  DTINICIO : datetime
+  DTFIM : datetime
+  TPLOTACAO : integer
+  TPINSC : varchar(1)
+  NRINSC : varchar(1)
+  FPAS : integer
+  CODTERCS : integer
+  CATEGIGUAL : integer
+  CATEGDIF : varchar(1)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab65" as esocial_tab65 {
+  INFBC : decimal(6,2)
+  SUPBC : decimal(7,2)
+  DTINICIO : integer
+  DTFIM : integer
+  PARCDED : decimal(5,2)
+  FAIXA : integer
+  --
+  .. Índices ..
+  + FAIXA : FAIXA
+}
+
+entity "esocial_tab66" as esocial_tab66 {
+  CODIGO : integer
+  DESCRICAO : varchar(27)
+  DTINICIO : integer
+  DTFIM : varchar(8)
+  CATEGORIA : integer
+  NCATEGORIA : varchar(1)
+  VALOR : decimal(6,2)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab67" as esocial_tab67 {
+  CODIGO : varchar(3)
+  DESCRICAO : varchar(113)
+  DTINICIO : integer
+  DTFIM : varchar(1)
+  CODESOCIAL : integer
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab68" as esocial_tab68 {
+  CODIGO : integer
+  NOME : varchar(82)
+  DTINICIO : integer
+  DTFIM : varchar(8)
+  CODIGORUBR : varchar(35)
+  CAMPOFIXO : varchar(1)
+  RESTRICAON : varchar(35)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab69" as esocial_tab69 {
+  CODIGO : varchar(11)
+  DESCRICAO : varchar(39)
+  DTINICIO : integer
+  DTFIM : varchar(1)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab70" as esocial_tab70 {
+  CODIGO : integer
+  DESCRICAO : varchar(66)
+  DTINICIO : integer
+  DTFIM : varchar(1)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab71" as esocial_tab71 {
+  CODIGO : integer
+  DESCRICAO : varchar(20)
+  DTINICIO : integer
+  DTFIM : varchar(1)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab72" as esocial_tab72 {
+  CODIGO : integer
+  DESCRICAO : varchar(59)
+  DTINICIO : integer
+  DTFIM : varchar(1)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab73" as esocial_tab73 {
+  CODIGO : integer
+  DESCRICAO : varchar(202)
+  DTINICIO : integer
+  DTFIM : varchar(1)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab74" as esocial_tab74 {
+  CODIGO : integer
+  DESCRICAO : varchar(44)
+  DTINICIO : integer
+  DTFIM : varchar(1)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "esocial_tab75" as esocial_tab75 {
+  CODIGO : integer
+  DESCRICAO : varchar(33)
+  DTINICIO : integer
+  DTFIM : varchar(1)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+
+@enduml

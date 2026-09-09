@@ -1,0 +1,129 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "configu" as configu {
+  HELP : varchar(8)
+  ARQ : varchar(8)
+  ARQ1 : varchar(8)
+  DIRC : varchar(60)
+  DIRI : varchar(60)
+  DIRP : varchar(60)
+  DIRE : varchar(60)
+  DIRB : varchar(60)
+  DIRA : varchar(60)
+  MOEDA01 : varchar(20)
+  MOEDA02 : varchar(20)
+  MOEDA03 : varchar(20)
+  MOEDA04 : varchar(20)
+  MOEDA05 : varchar(20)
+  MOEDA06 : varchar(20)
+  MANUAL : varchar(8)
+  ACHESC : varchar(1)
+  ARQHIS : varchar(8)
+  MULTIEMP : varchar(1)
+  ARQFON : varchar(8)
+  IMPPAD : varchar(12)
+  INXCGCMA : integer
+  INXCGCMB : integer
+  RECCOM : integer
+  DRIVER : varchar(8)
+}
+
+entity "manemp" as manemp {
+  NUMERO : integer
+  COGNOME : varchar(12)
+  NOME : varchar(40)
+  ENDERECO : varchar(40)
+  BAIRRO : varchar(30)
+  CIDADE : varchar(35)
+  ESTADO : varchar(2)
+  CEP : varchar(9)
+  CXPOSTAL : varchar(5)
+  DDD : varchar(4)
+  TELEFONE : varchar(9)
+  RAMAL : varchar(4)
+  CONTATO : varchar(22)
+  DDD1 : varchar(4)
+  TELEFONE1 : varchar(9)
+  RAMAL1 : varchar(4)
+  CONTATO1 : varchar(22)
+  DDDFAX : varchar(4)
+  TELEFAX : varchar(9)
+  PESSOA : varchar(1)
+  CGC : varchar(18)
+  INSCR : varchar(15)
+  CUSFRETE : decimal(10,2)
+  MEDIA : integer
+  NIVEL1 : integer
+  NIVEL2 : integer
+  NIVEL3 : integer
+  NIVEL4 : integer
+  NIVEL5 : integer
+  NIVEL6 : integer
+  NIVEL7 : integer
+  NIVEL8 : integer
+  NIVEL9 : integer
+  REDUZIDO : varchar(1)
+  BATE : integer
+  POSI : integer
+  LANC : integer
+  CO01 : decimal(6,4)
+  CO02 : decimal(6,4)
+  CO03 : decimal(6,4)
+  CO04 : decimal(6,4)
+  CO05 : decimal(6,4)
+  CO06 : decimal(6,4)
+  CO07 : decimal(6,4)
+  CO08 : decimal(6,4)
+  CO09 : decimal(6,4)
+  CO10 : decimal(6,4)
+  JUCESPC : varchar(15)
+  JUCESPD : datetime
+  IMUNICI : varchar(15)
+  PEDCOM : integer
+  OBJLIN1 : varchar(78)
+  OBJLIN2 : varchar(78)
+  OBJLIN3 : varchar(78)
+  OBJLIN4 : varchar(78)
+  OBJLIN5 : varchar(78)
+  DATAUB : datetime
+  DATAUP : datetime
+  DATAE : datetime
+  RECCOM : integer
+  RNC : integer
+  RACF : integer
+  CRM : integer
+  CONTMA01 : varchar(80)
+  CONTMB01 : varchar(80)
+  CONTMA01D : varchar(80)
+  CONTMB01D : varchar(80)
+  PERPIS : decimal(5,2)
+  PERFIN : decimal(5,2)
+  SITE : varchar(30)
+  EMAIL : varchar(30)
+  RESPF : varchar(30)
+  CARGOR : varchar(30)
+  CODEMPMIG : varchar(2)
+  IMGCON : varchar(8)
+  --
+  .. Índices ..
+  + MANEMP : NUMERO
+}
+
+entity "manhel" as manhel {
+  DBF : varchar(8)
+  CAMPO : varchar(10)
+  DADO : varchar(40)
+  ARQUIVO : varchar(12)
+  DESCRICAO : longtext
+  SEQ : integer
+  PRELAN : varchar(20)
+  CONDICAO : varchar(20)
+  --
+  .. Índices ..
+  + MANHEL : DBF+CAMPO
+}
+
+
+@enduml

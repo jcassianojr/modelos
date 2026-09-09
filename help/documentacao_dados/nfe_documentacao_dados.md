@@ -1,5 +1,5 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 29/07/2026
+> Varredura automatica realizada em: 09/09/2026
 
 ## Tabela DBF: `cnpjxml`
 > **Origem:** `cnpjxml` (Driver: DBFCDX)
@@ -43,6 +43,43 @@
 - Tag: `CNPJXML2` Expressao: `IE`
 - Tag: `CNPJXML3` Expressao: `CODPART`
 - Tag: `CNPJXML4` Expressao: `UF+CIDADE`
+
+```mermaid
+erDiagram
+    cnpjxml {
+        C CNPJ
+        C IE
+        C NOME
+        C ENDERECO
+        C CIDADE
+        C CEP
+        C TELEFONE
+        C DDD
+        C UF
+        C IESUBST
+        C IMUNICIPAL
+        C COGNOME
+        C EMAIL
+        C NUMEND
+        C COMPLEM
+        C BAIRRO
+        C BACEN
+        C PAIS
+        C CNAE
+        C SUFRAMA
+        C CODIBGE
+        D ULTIMAIMP
+        C CODPART
+        C CSIT
+        C INDCREDNFE
+        C INDCREDCTE
+        C XREGAPUR
+        C DINIATIV
+        C DULTSIT
+        D DINIXML
+        C ENDTIP
+    }
+```
 
 ---
 ## Tabela DBF: `cnpjxmlfec`
@@ -88,6 +125,43 @@
 - Tag: `CNPJXML3` Expressao: `CODPART`
 - Tag: `CNPJXML4` Expressao: `UF+CIDADE`
 
+```mermaid
+erDiagram
+    cnpjxmlfec {
+        C CNPJ
+        C IE
+        C NOME
+        C ENDERECO
+        C CIDADE
+        C CEP
+        C TELEFONE
+        C DDD
+        C UF
+        C IESUBST
+        C IMUNICIPAL
+        C COGNOME
+        C EMAIL
+        C NUMEND
+        C COMPLEM
+        C BAIRRO
+        C BACEN
+        C PAIS
+        C CNAE
+        C SUFRAMA
+        C CODIBGE
+        D ULTIMAIMP
+        C CODPART
+        C CSIT
+        C INDCREDNFE
+        C INDCREDCTE
+        C XREGAPUR
+        C DINIATIV
+        C DULTSIT
+        D DINIXML
+        C ENDTIP
+    }
+```
+
 ---
 ## Tabela DBF: `danfe`
 > **Origem:** `danfe` (Driver: DBFCDX)
@@ -122,6 +196,36 @@
 **Indices vinculados:**
 - Tag: `DANFE` Expressao: `Id+cProd`
 
+```mermaid
+erDiagram
+    danfe {
+        C ID
+        C CPROD
+        C XPROD
+        N QCOM
+        N VUNCOM
+        C UCOM
+        C CFOP
+        C NCM
+        C CSTICMS
+        C CSTIPI
+        C CSTPIS
+        C CSTCOFINS
+        N VICMS
+        N VPIS
+        N VIPI
+        N VCOFINS
+        N VBCICMS
+        N VBCPIS
+        N VBCIPI
+        N VBCCOFINS
+        N PICMS
+        N PPIS
+        N PIPI
+        N PCOFINS
+    }
+```
+
 ---
 ## Tabela DBF: `danfe2`
 > **Origem:** `danfe2` (Driver: DBFCDX)
@@ -146,6 +250,25 @@
 - Tag: `DANFE2` Expressao: `ID`
 - Tag: `DANFE2-2` Expressao: `CNPJ+ NNF`
 - Tag: `DANFE2-3` Expressao: `NNF`
+
+```mermaid
+erDiagram
+    danfe2 {
+        C ID
+        C CNPJ
+        C CNPJDEST
+        C NNF
+        C SERIE
+        C EMISSAO
+        C CANCELADA
+        C AVB
+        C XML
+        C DANFEVIEW
+        C CSTATUS
+        C LOGIXSUP
+        C PROTOCOLO
+    }
+```
 
 ---
 ## Tabela DBF: `danfe2fec`
@@ -172,6 +295,25 @@
 - Tag: `DANFE2-2` Expressao: `CNPJ+ NNF`
 - Tag: `DANFE2-3` Expressao: `NNF`
 
+```mermaid
+erDiagram
+    danfe2fec {
+        C ID
+        C CNPJ
+        C CNPJDEST
+        C NNF
+        C SERIE
+        C EMISSAO
+        C CANCELADA
+        C AVB
+        C XML
+        C DANFEVIEW
+        C CSTATUS
+        C LOGIXSUP
+        C PROTOCOLO
+    }
+```
+
 ---
 ## Tabela DBF: `nfe`
 > **Origem:** `nfe` (Driver: DBFCDX)
@@ -189,6 +331,19 @@
 **Indices vinculados:**
 - Tag: `NFE` Expressao: `EMPRESA`
 
+```mermaid
+erDiagram
+    nfe {
+        C EMPRESA
+        D SINTEL
+        N NFS
+        N GMPROTREC
+        N DANFEVREC
+        N STATUSREC
+        N CHAVESUP
+    }
+```
+
 ---
 ## Tabela DBF: `nfecorrecao`
 > **Origem:** `nfecorrecao` (Driver: DBFCDX)
@@ -201,6 +356,14 @@
 **Indices vinculados:**
 - Tag: `NFECORRE` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    nfecorrecao {
+        C CODIGO
+        C DESCRICAO
+    }
+```
+
 ---
 ## Tabela DBF: `NFECRET`
 > **Origem:** `NFECRET` (Driver: DBFCDX)
@@ -212,6 +375,14 @@
 
 **Indices vinculados:**
 - Tag: `NFECRET` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    NFECRET {
+        C CODIGO
+        C DESCRICAO
+    }
+```
 
 ---
 ## Tabela DBF: `sintcert`
@@ -257,6 +428,43 @@
 - Tag: `SINTCE03` Expressao: `RAZAO`
 - Tag: `SINTCE04` Expressao: `UF+CIDADE`
 
+```mermaid
+erDiagram
+    sintcert {
+        C CNPJ
+        C IE
+        C CCM
+        C UF
+        C CIDADE
+        C CNPJOK
+        C IEOK
+        C CCMOK
+        C RAZAO
+        C ORI
+        C DIG3OK
+        C OBS
+        C CEP
+        C DDD
+        C SUFRAMA
+        C CNAE
+        C EMAIL
+        C TELEFONE
+        C CSIT
+        C INDCREDNFE
+        C INDCREDCTE
+        C XREGAPUR
+        C DINIATIV
+        C DULTSIT
+        C BAIRRO
+        C CODIBGE
+        C ENDERECO
+        C NUMEND
+        C COMPLEM
+        D ULTIMAIMP
+        C ENDTIP
+    }
+```
+
 ---
 ## Tabela DBF: `sintcertfec`
 > **Origem:** `sintcertfec` (Driver: DBFCDX)
@@ -301,6 +509,43 @@
 - Tag: `SINTCE03` Expressao: `RAZAO`
 - Tag: `SINTCE04` Expressao: `UF+CIDADE`
 
+```mermaid
+erDiagram
+    sintcertfec {
+        C CNPJ
+        C IE
+        C CCM
+        C UF
+        C CIDADE
+        C CNPJOK
+        C IEOK
+        C CCMOK
+        C RAZAO
+        C ORI
+        C DIG3OK
+        C OBS
+        C CEP
+        C DDD
+        C SUFRAMA
+        C CNAE
+        C EMAIL
+        C TELEFONE
+        C CSIT
+        C INDCREDNFE
+        C INDCREDCTE
+        C XREGAPUR
+        C DINIATIV
+        C DULTSIT
+        C BAIRRO
+        C CODIBGE
+        C ENDERECO
+        C NUMEND
+        C COMPLEM
+        D ULTIMAIMP
+        C ENDTIP
+    }
+```
+
 ---
 ## Tabela DBF: `sintpend`
 > **Origem:** `sintpend` (Driver: DBFCDX)
@@ -328,6 +573,26 @@
 - Tag: `SINTPE03` Expressao: `RAZAO`
 - Tag: `SINTPE04` Expressao: `UF+CIDADE`
 
+```mermaid
+erDiagram
+    sintpend {
+        C CNPJ
+        C IE
+        C CCM
+        C UF
+        C CIDADE
+        C CNPJOK
+        C IEOK
+        C CCMOK
+        C RAZAO
+        C ORI
+        C DIG3OK
+        C OBS
+        C CEP
+        C DDD
+    }
+```
+
 ---
 ## Tabela DBF: `xmlpend`
 > **Origem:** `xmlpend` (Driver: DBFCDX)
@@ -338,5 +603,12 @@
 
 **Indices vinculados:**
 - Tag: `XMLPEND` Expressao: `ID`
+
+```mermaid
+erDiagram
+    xmlpend {
+        C ID
+    }
+```
 
 ---

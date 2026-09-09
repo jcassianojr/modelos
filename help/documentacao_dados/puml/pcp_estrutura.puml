@@ -1,0 +1,1111 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "ac" as ac {
+  AC : integer
+  TIPO : varchar(1)
+  CODIGO : varchar(10)
+  NOME : varchar(100)
+  APLICACAO : varchar(50)
+  PESO : decimal(12,4)
+  FOR01 : integer
+  FOR02 : integer
+  FOR03 : integer
+  COG01 : varchar(15)
+  COG02 : varchar(15)
+  COG03 : varchar(15)
+  UNIDADE : varchar(10)
+  --
+  .. Índices ..
+  + AC : AC
+  + AC2 : CODIGO
+}
+
+entity "aci" as aci {
+  AC : integer
+  ITEM : integer
+  DATA : datetime
+  DETALHE : varchar(20)
+  ENTPC : integer
+  ENTKG : decimal(12,4)
+  SAIPC : integer
+  SAIKG : decimal(12,4)
+  SALPC : integer
+  SALKG : decimal(12,4)
+  --
+  .. Índices ..
+  + ACI : STR(AC,8)+STR(ITEM,3)
+  + ACI-2 : STR(AC,8)+DTOS(DATA)+STR(ITEM,3)
+  + ACI-3 : AC
+}
+
+entity "estqint" as estqint {
+  COD_EMPRES : varchar(2)
+  COD_ITEM : varchar(14)
+  QTD_LIBERA : decimal(12,4)
+  QTD_IMPEDI : decimal(12,4)
+  QTD_REJEIT : decimal(12,4)
+  QTD_LIB_EX : decimal(12,4)
+  QTD_DISP_V : decimal(12,4)
+  QTD_RESERV : decimal(12,4)
+  DAT_ULT_IN : datetime
+  DAT_ULT_EN : datetime
+  DAT_ULT_SA : datetime
+  --
+  .. Índices ..
+  + ESTQINT : COD_ITEM
+}
+
+entity "op01" as op01 {
+  OP : integer
+  CODIGO : varchar(24)
+  NOME : varchar(40)
+  CLIENTE : integer
+  COGNOME : varchar(12)
+  ATIVO : varchar(1)
+  VMES : integer
+  VQUI : integer
+  VMED : integer
+  VMEQ : integer
+  VPRG : integer
+  QATR : integer
+  QSEM : integer
+  QSE2 : integer
+  QINI : integer
+  QIN2 : integer
+  QSAI : integer
+  QSAL : integer
+  QSAA : integer
+  QSAS : integer
+  QSA2 : integer
+  DATAA : datetime
+  DATAS : datetime
+  DATA2 : datetime
+  IMAGEM : varchar(40)
+  CODIGOINT : varchar(24)
+  --
+  .. Índices ..
+  + OP01-1 : OP
+  + OP01-2 : CODIGO
+  + OP01-3 : STR(OP,8,2)
+  + OP01-4 : CODIGOINT
+}
+
+entity "op01x" as op01x {
+  OP : integer
+  CODIGO : varchar(24)
+  NOME : varchar(40)
+  CLIENTE : integer
+  COGNOME : varchar(12)
+  ATIVO : varchar(1)
+  VMES : integer
+  VQUI : integer
+  VMED : integer
+  VMEQ : integer
+  VPRG : integer
+  QATR : integer
+  QSEM : integer
+  QSE2 : integer
+  QINI : integer
+  QIN2 : integer
+  QSAI : integer
+  QSAL : integer
+  QSAA : integer
+  QSAS : integer
+  QSA2 : integer
+  DATAA : datetime
+  DATAS : datetime
+  DATA2 : datetime
+  IMAGEM : varchar(40)
+  CODIGOINT : varchar(24)
+  --
+  .. Índices ..
+  + OP01X-1 : OP
+  + OP01X-2 : CODIGO
+  + OP01X-3 : STR(OP,8,2)
+}
+
+entity "op02" as op02 {
+  OP : integer
+  CODIGO : varchar(24)
+  SEQ : integer
+  SSQ : integer
+  QPINI : integer
+  QPIN2 : integer
+  QPINS : integer
+  QPINA : integer
+  QPSAI : integer
+  QPSAL : integer
+  QPREF : integer
+  QPANT : integer
+  QPAAA : integer
+  QPAA2 : integer
+  QPAAS : integer
+  QPSA2 : integer
+  QPAIN : integer
+  QTTIME : decimal(7,5)
+  QTTIM2 : decimal(7,5)
+  QTTIMM : decimal(7,5)
+  QTTIMD : decimal(7,5)
+  CODMP01 : varchar(12)
+  COGMP01 : varchar(10)
+  CODMP02 : varchar(12)
+  CODMP02B : varchar(12)
+  CODMP02C : varchar(12)
+  CODMP02D : varchar(12)
+  CODMP03 : varchar(24)
+  DESCRI : varchar(70)
+  TIPFEC : varchar(1)
+  PULREQ : varchar(1)
+  NOMER : varchar(15)
+  SETOROP : varchar(1)
+  LIMTIME : integer
+  FILIAL : integer
+  LEADESP : integer
+  FATOR : integer
+  CODINT : varchar(24)
+}
+
+entity "op02set" as op02set {
+  OP : decimal(8,2)
+  CODIGO : varchar(24)
+  SEQ : integer
+  SSQ : integer
+  CLIENTE : integer
+  COGNOME : varchar(12)
+  CODMP01 : varchar(12)
+  COGMP01 : varchar(10)
+  CODMP03 : varchar(12)
+  DESCRI : varchar(70)
+  NOMER : varchar(15)
+  SETOROP : varchar(1)
+  LIMTIME : integer
+  DATA : datetime
+  DATAINI : datetime
+  QTDEINI : decimal(12,2)
+  QTDEUSO : decimal(12,2)
+  BLOQUEAR : varchar(1)
+  URGENTE : varchar(1)
+  OBS : varchar(80)
+  PCHORMEQ : decimal(10,4)
+  PCHORNEC : decimal(12,2)
+  DATAPRZ : datetime
+  SEMANA : varchar(1)
+  PRELEAD : integer
+  FILIAL : integer
+  LEADESP : integer
+  NUMFERR : integer
+  CODINT : varchar(24)
+  --
+  .. Índices ..
+  + OP02SET1 : DTOS(DATA)+CODIGO+STR(SEQ,3)+STR(SSQ,3)
+  + OP02SET2 : CODIGO+STR(SEQ,3)+STR(SSQ,3)+DTOS(DATA)
+  + OP02SET3 : STR(CLIENTE,8)+DTOS(DATA)+CODIGO+STR(SEQ,3)+STR(SSQ,3)
+  + OP02SET4 : CODMP01+DTOS(DATA)+CODIGO+STR(SEQ,3)+STR(SSQ,3)
+  + OP02SET5 : SEMANA+CODIGO+STR(SEQ,3)+STR(SSQ,3)
+}
+
+entity "op02sex" as op02sex {
+  OP : decimal(8,2)
+  CODIGO : varchar(24)
+  SEQ : integer
+  SSQ : integer
+  CLIENTE : integer
+  COGNOME : varchar(12)
+  CODMP01 : varchar(12)
+  COGMP01 : varchar(10)
+  CODMP03 : varchar(12)
+  DESCRI : varchar(70)
+  NOMER : varchar(15)
+  SETOROP : varchar(1)
+  TEMPO01 : integer
+  TEMPO02 : integer
+  TEMPO03 : integer
+  DATAI01 : datetime
+  DATAI02 : datetime
+  DATAI03 : datetime
+  PRAZO01 : datetime
+  PRAZO02 : datetime
+  PRAZO03 : datetime
+  QTDDE01 : integer
+  QTDDE02 : integer
+  QTDDE03 : integer
+  BLOQUEAR : varchar(1)
+  URGEN01 : varchar(1)
+  URGEN02 : varchar(1)
+  URGEN03 : varchar(1)
+  INICI01 : datetime
+  INICI02 : datetime
+  INICI03 : datetime
+  DATAREF : datetime
+  LEADESP : integer
+  FILIAL : integer
+  HORA01 : decimal(7,2)
+  HORA02 : decimal(7,2)
+  HORA03 : decimal(7,2)
+  DATABAS : datetime
+  TEM01 : varchar(1)
+  DATABA2 : datetime
+  DATABA3 : datetime
+  DATABA4 : datetime
+  NUMFERR : integer
+  CODINT : varchar(24)
+  --
+  .. Índices ..
+  + OP02SEX : CODIGO+STR(SEQ,3)+STR(SSQ,3)
+  + OP02SEX2 : SETOROP+CODIGO
+}
+
+entity "op02x" as op02x {
+  OP : decimal(8,2)
+  CODIGO : varchar(24)
+  SEQ : integer
+  SSQ : integer
+  QPINI : integer
+  QPIN2 : integer
+  QPINS : integer
+  QPINA : integer
+  QPSAI : integer
+  QPSAL : integer
+  QPREF : integer
+  QPANT : integer
+  QPAAA : integer
+  QPAA2 : integer
+  QPAAS : integer
+  QPSA2 : integer
+  QPAIN : integer
+  QTTIME : decimal(7,5)
+  QTTIM2 : decimal(7,5)
+  QTTIMM : decimal(7,5)
+  QTTIMD : decimal(7,5)
+  CODMP01 : varchar(12)
+  COGMP01 : varchar(10)
+  CODMP02 : varchar(12)
+  CODMP02B : varchar(12)
+  CODMP02C : varchar(12)
+  CODMP02D : varchar(12)
+  CODMP03 : varchar(24)
+  DESCRI : varchar(70)
+  TIPFEC : varchar(1)
+  PULREQ : varchar(1)
+  NOMER : varchar(15)
+  SETOROP : varchar(1)
+  LIMTIME : integer
+  FILIAL : integer
+  LEADESP : integer
+  FATOR : integer
+  CODINT : varchar(24)
+  --
+  .. Índices ..
+  + OP02X-1 : STR(OP,8,2)+STR(SEQ,3)+STR(SSQ,3)
+  + OP02X-2 : OP
+  + OP02X-3 : CODIGO
+  + OP02X-4 : CODIGO+STR(SEQ,3)+STR(SSQ,3)
+  + OP02X-5 : SETOROP+CODIGO
+}
+
+entity "op03" as op03 {
+  OP : decimal(8,2)
+  CODIGO : varchar(24)
+  SEQ : integer
+  SSQ : integer
+  CLIENTE : integer
+  COGNOME : varchar(12)
+  VMES : integer
+  VQUI : integer
+  VMED : decimal(10,3)
+  VMEQ : decimal(10,3)
+  VPRG : integer
+  CODMP01 : varchar(12)
+  COGMP01 : varchar(10)
+  QTTIME : decimal(8,5)
+  QTTIM2 : decimal(8,5)
+  QTTIMM : decimal(8,5)
+  QTTIMD : decimal(8,5)
+  QINI : integer
+  QSAI : integer
+  QSAL : integer
+  QPRO : integer
+  FILIAL : integer
+  CODINT : varchar(24)
+  --
+  .. Índices ..
+  + OP03-1 : STR(OP,8,2)+CODMP01
+}
+
+entity "op03b" as op03b {
+  OP : decimal(8,2)
+  CODIGO : varchar(24)
+  SEQ : integer
+  SSQ : integer
+  CLIENTE : integer
+  COGNOME : varchar(12)
+  VMES : integer
+  VQUI : integer
+  VMED : decimal(10,3)
+  VMEQ : decimal(10,3)
+  VPRG : integer
+  CODMP01 : varchar(12)
+  COGMP01 : varchar(10)
+  QTTIME : decimal(8,5)
+  QTTIM2 : decimal(8,5)
+  QTTIMM : decimal(8,5)
+  QTTIMD : decimal(8,5)
+  QINI : integer
+  QSAI : integer
+  QSAL : integer
+  QPRO : integer
+  FILIAL : integer
+  CODINT : varchar(24)
+  --
+  .. Índices ..
+  + OP03B-1 : STR(OP,8,2)+CODMP01
+}
+
+entity "oscrt" as oscrt {
+  OS : decimal(8,2)
+  DATA : datetime
+  CLIENTE : integer
+  CLINOME : varchar(50)
+  PEDIDOCLI : varchar(20)
+  CODIGO : varchar(24)
+  NOME : varchar(40)
+  OBS : varchar(30)
+  PF : integer
+  EMUSO : varchar(1)
+  ATIVO : varchar(1)
+  OBSFIN01 : varchar(80)
+  OBSFIN02 : varchar(80)
+  OBSFIN03 : varchar(80)
+  OBSFIN04 : varchar(80)
+  OBSFIN05 : varchar(80)
+  OBSFIN06 : varchar(80)
+  DATAIMP : datetime
+  CODCLI : varchar(15)
+  SAIOBS : boolean
+  PEDCLIITE : integer
+  CODIGOINT : varchar(24)
+  DELIVERY : varchar(20)
+  STOCK : varchar(20)
+  PEDCLIOBS : varchar(10)
+  DOCA : varchar(10)
+  --
+  .. Índices ..
+  + OSCRT : OS
+  + OSCRT-2 : STR(CLIENTE,8)+CODIGO
+  + OSCRT-3 : PF
+  + OSCRT-4 : CODIGO
+  + OSCRT-5 : CODIGOINT
+}
+
+entity "ospr2" as ospr2 {
+  NUMERO : integer
+  PRODUTO : varchar(24)
+  PLANTA : varchar(10)
+  PROGRAMA : datetime
+  QTDE : integer
+  DATAIMP : datetime
+  HORAPRG : decimal(5,2)
+  CODIGOINT : varchar(24)
+  --
+  .. Índices ..
+  + OSPR2-1 : NUMERO
+  + OSPR2-2 : PRODUTO
+  + OSPR2-3 : PRODUTO+PLANTA+DTOS(PROGRAMA)+STR(QTDE,8)
+  + OSPR2-4 : PRODUTO+DTOS(PROGRAMA)
+  + OSPR2-5 : CODIGOINT
+}
+
+entity "ospr3" as ospr3 {
+  NUMERO : integer
+  PRODUTO : varchar(24)
+  PLANTA : varchar(10)
+  PROGRAMA : datetime
+  QTDE : integer
+  DATAIMP : datetime
+  HORAPRG : decimal(5,2)
+  SEQCLIPRG : integer
+}
+
+entity "ospra" as ospra {
+  PRODUTO : varchar(24)
+  DATAACM : datetime
+  DATAPRG : datetime
+  QTDE : integer
+  LISTA : varchar(1)
+  TIPO : varchar(1)
+  --
+  .. Índices ..
+  + OSPRA-1 : PRODUTO+DTOS(DATAACM)+DTOS(DATAPRG)
+}
+
+entity "osprb" as osprb {
+  PRODUTO : varchar(24)
+  DATAACM : datetime
+  DATAPRG : datetime
+  QTDE : integer
+  PLANTA : varchar(5)
+  --
+  .. Índices ..
+  + OSPRB-1 : PRODUTO+DTOS(DATAACM)+DTOS(DATAPRG)
+}
+
+entity "osprd" as osprd {
+  PRODUTO : varchar(24)
+  DATAACM : datetime
+  DATAPRG : datetime
+  QTDE : integer
+  PLANTA : varchar(5)
+}
+
+entity "ospre" as ospre {
+  NUMERO : integer
+  PRODUTO : varchar(24)
+  PLANTA : varchar(10)
+  PROGRAMA : datetime
+  QTDE : integer
+  DATAIMP : datetime
+  HORAPRG : decimal(5,2)
+  SEQCLIPRG : integer
+}
+
+entity "osprf" as osprf {
+  PRODUTO : varchar(24)
+  DATAACM : datetime
+  DATAPRG : datetime
+  QTDE : integer
+  PLANTA : varchar(5)
+}
+
+entity "osprg" as osprg {
+  NUMERO : integer
+  PRODUTO : varchar(24)
+  PLANTA : varchar(10)
+  PROGRAMA : datetime
+  QTDE : integer
+  DATAIMP : datetime
+  HORAPRG : decimal(5,2)
+  CODIGOINT : varchar(24)
+  --
+  .. Índices ..
+  + OSPRG-1 : NUMERO
+  + OSPRG-2 : PRODUTO
+  + OSPRG-3 : PRODUTO+PLANTA+DTOS(PROGRAMA)+STR(QTDE,8)
+  + OSPRG-4 : PRODUTO+DTOS(PROGRAMA)
+  + OSPRG-5 : CODIGOINT
+}
+
+entity "osprh" as osprh {
+  NUMERO : integer
+  PRODUTO : varchar(24)
+  PLANTA : varchar(10)
+  PROGRAMA : datetime
+  QTDE : integer
+  DATAIMP : datetime
+  HORAPRG : decimal(5,2)
+  SEQCLIPRG : integer
+  CODIGOINT : varchar(24)
+  --
+  .. Índices ..
+  + OSPRH-1 : NUMERO
+  + OSPRH-2 : PRODUTO
+  + OSPRH-3 : PRODUTO+PLANTA+DTOS(PROGRAMA)+STR(QTDE,8)
+  + OSPRH-4 : PRODUTO+DTOS(PROGRAMA)
+  + OSPRH-5 : CODIGOINT
+}
+
+entity "ospri" as ospri {
+  NUMERO : integer
+  PRODUTO : varchar(24)
+  PLANTA : varchar(10)
+  PROGRAMA : datetime
+  QTDE : integer
+  DATAIMP : datetime
+  HORAPRG : decimal(5,2)
+  SEQCLIPRG : integer
+  CODIGOINT : varchar(24)
+  --
+  .. Índices ..
+  + OSPRI-1 : NUMERO
+  + OSPRI-2 : PRODUTO
+  + OSPRI-3 : PRODUTO+PLANTA+DTOS(PROGRAMA)+STR(QTDE,8)
+  + OSPRI-4 : PRODUTO+DTOS(PROGRAMA)
+  + OSPRI-5 : CODIGOINT
+}
+
+entity "ospro" as ospro {
+  PRODUTO : varchar(24)
+  DATAACM : datetime
+  DATAPRG : datetime
+  QTDE : integer
+  --
+  .. Índices ..
+  + OSPRO-1 : PRODUTO+DTOS(DATAACM)+DTOS(DATAPRG)
+}
+
+entity "osprr" as osprr {
+  NUMERO : integer
+  PRODUTO : varchar(24)
+  PLANTA : varchar(10)
+  PROGRAMA : datetime
+  QTDE : integer
+  DATAIMP : datetime
+  HORAPRG : decimal(5,2)
+  CODIGOINT : varchar(24)
+  CLIENTE : integer
+  --
+  .. Índices ..
+  + OSPRR-1 : NUMERO
+  + OSPRR-2 : PRODUTO
+  + OSPRR-3 : PRODUTO+PLANTA+DTOS(PROGRAMA)+STR(QTDE,8)
+  + OSPRR-4 : PRODUTO+DTOS(PROGRAMA)
+  + OSPRR-5 : CODIGOINT
+}
+
+entity "osprs" as osprs {
+  NUMERO : integer
+  PRODUTO : varchar(24)
+  PLANTA : varchar(10)
+  PROGRAMA : datetime
+  QTDE : integer
+  DATAIMP : datetime
+  HORAPRG : decimal(5,2)
+  CODIGOINT : varchar(24)
+  CLIENTE : integer
+  --
+  .. Índices ..
+  + OSPRS-1 : NUMERO
+  + OSPRS-2 : PRODUTO
+  + OSPRS-3 : PRODUTO+PLANTA+DTOS(PROGRAMA)+STR(QTDE,8)
+  + OSPRS-4 : PRODUTO+DTOS(PROGRAMA)
+  + OSPRS-5 : CODIGOINT
+}
+
+entity "pcorte" as pcorte {
+  NUMERO : integer
+  NFNOSSA : integer
+  NFUSINA : integer
+  RASTROU : varchar(12)
+  RASTRO : varchar(12)
+  ESP : decimal(10,4)
+  LAR : decimal(10,4)
+  PESO : integer
+  LOCALUSO : varchar(10)
+  AC : varchar(15)
+  CRM : integer
+  OBS01 : varchar(80)
+  OBS02 : varchar(80)
+  NFORN : integer
+  MFORN : varchar(40)
+  NFORNU : integer
+  MFORNU : varchar(40)
+  CODIGO : varchar(24)
+  DESCRICAO : varchar(100)
+  DATA : datetime
+  LANCADO : varchar(1)
+  CRMITEM : integer
+  CRMTIPO : varchar(1)
+  CRMITEMU : integer
+  REFNF : integer
+  REFDATA : datetime
+  REFQTDE : integer
+  LXFORNU : varchar(15)
+  LXFORNC : varchar(15)
+  --
+  .. Índices ..
+  + PCORTE : NUMERO
+  + PCORTE-2 : RASTROU
+  + PCORTE-3 : DATA
+}
+
+entity "pcortei" as pcortei {
+  NUMERO : integer
+  CODIGO : varchar(24)
+  DESCRICAO : varchar(100)
+  ITELAR : decimal(10,4)
+  ITECOM : decimal(10,4)
+  ROLOS : integer
+  PESO : integer
+  PRAZO : datetime
+  COMPRAS : integer
+  COMITEM : integer
+  QTDE : integer
+  PE : integer
+  APLICACAO : varchar(40)
+  RETNF : integer
+  RETDATA : datetime
+  RETQTDE : integer
+  --
+  .. Índices ..
+  + PCORTEI : NUMERO
+  + PCORTEI-2 : CODIGO
+}
+
+entity "pe" as pe {
+  PEDIDO : integer
+  TIPPED : varchar(1)
+  CODIGO : varchar(24)
+  NOME : varchar(50)
+  FORNECEDO : integer
+  COGNOME : varchar(15)
+  UNID : varchar(2)
+  NOM2 : varchar(50)
+  COMPRAS : integer
+  COMITEM : integer
+  APLICACAO : varchar(50)
+  LOCENT : integer
+  OBSOBS : varchar(40)
+  ATIVO : varchar(1)
+  DDDPCP : varchar(2)
+  TELPCP : varchar(12)
+  RAMPCP : varchar(4)
+  CONPCP : varchar(24)
+  DDDFAXPCP : varchar(2)
+  TELFAXPCP : varchar(12)
+  EMAILPCP : varchar(50)
+  NOMEFOR : varchar(40)
+  --
+  .. Índices ..
+  + PE : PEDIDO
+  + PE-2 : TIPPED+CODIGO+STR(FORNECEDO)
+  + PE-3 : CODIGO
+  + PE-4 : FORNECEDO
+}
+
+entity "pe01" as pe01 {
+  TIPPED : varchar(1)
+  CODIGO : varchar(24)
+  UNIDADE : varchar(2)
+  NOME : varchar(50)
+  NOM2 : varchar(50)
+  NRNOTAINI : decimal(8,2)
+  DIGCTR : varchar(1)
+  DATAFAT : datetime
+  VALORINI : decimal(9,2)
+  TOTKGINI : integer
+  NRNOTASAI : integer
+  TOTKGANT : integer
+  TOTKGSAI : integer
+  TOTKGEST : integer
+  TIPOCLI : varchar(1)
+  CLIENTE : integer
+  COGNOME : varchar(12)
+  DATASAI : datetime
+  CRM : integer
+  PEDIDO : integer
+  ITEM : integer
+  RECEBER : varchar(1)
+  OBS : varchar(20)
+  RASTROFOR : varchar(20)
+  DCORTE : datetime
+  AR : integer
+  RIRM : integer
+  --
+  .. Índices ..
+  + PE01 : STR(PEDIDO,5)+STR(ITEM,2)+DIGCTR
+  + PE01-2 : PEDIDO
+}
+
+entity "pe01ap" as pe01ap {
+  TIPPED : varchar(1)
+  CODIGO : varchar(24)
+  UNIDADE : varchar(2)
+  NOME : varchar(50)
+  NOM2 : varchar(50)
+  NRNOTAINI : decimal(8,2)
+  DIGCTR : varchar(1)
+  DATAFAT : datetime
+  VALORINI : decimal(9,2)
+  TOTKGINI : integer
+  NRNOTASAI : integer
+  TOTKGANT : integer
+  TOTKGSAI : integer
+  TOTKGEST : integer
+  TIPOCLI : varchar(1)
+  CLIENTE : integer
+  COGNOME : varchar(12)
+  DATASAI : datetime
+  CRM : integer
+  PEDIDO : integer
+  ITEM : integer
+  RECEBER : varchar(1)
+  --
+  .. Índices ..
+  + PE01AP : STR(CLIENTE,8)+STR(PEDIDO,8)+STR(ITEM,3)+DTOS(DATASAI)
+}
+
+entity "pe01bx" as pe01bx {
+  TIPPED : varchar(1)
+  CODIGO : varchar(24)
+  UNIDADE : varchar(2)
+  NOME : varchar(50)
+  NOM2 : varchar(50)
+  NRNOTAINI : decimal(8,2)
+  DIGCTR : varchar(1)
+  DATAFAT : datetime
+  VALORINI : decimal(9,2)
+  TOTKGINI : integer
+  NRNOTASAI : integer
+  TOTKGANT : integer
+  TOTKGSAI : integer
+  TOTKGEST : integer
+  TIPOCLI : varchar(1)
+  CLIENTE : integer
+  COGNOME : varchar(12)
+  DATASAI : datetime
+  CRM : integer
+  PEDIDO : integer
+  ITEM : integer
+  RECEBER : varchar(1)
+  OBS : varchar(20)
+  RASTROFOR : varchar(20)
+  DCORTE : datetime
+  AR : integer
+  RIRM : integer
+  --
+  .. Índices ..
+  + PE01BX : STR(PEDIDO,5)+STR(ITEM,2)+DIGCTR
+  + PE01BX-2 : STR(NRNOTASAI,8)+STR(CLIENTE,8)
+  + PE01BX-3 : PEDIDO
+  + PE01BX-4 : CLIENTE
+}
+
+entity "pe99" as pe99 {
+  TIPPED : varchar(1)
+  CODIGO : varchar(24)
+  UNIDADE : varchar(2)
+  NOME : varchar(50)
+  NOM2 : varchar(50)
+  NRNOTAINI : decimal(8,2)
+  DIGCTR : varchar(1)
+  DATAFAT : datetime
+  VALORINI : decimal(9,2)
+  TOTKGINI : integer
+  NRNOTASAI : integer
+  TOTKGANT : integer
+  TOTKGSAI : integer
+  TOTKGEST : integer
+  TIPOCLI : varchar(1)
+  CLIENTE : integer
+  COGNOME : varchar(12)
+  DATASAI : datetime
+  CRM : integer
+  PEDIDO : integer
+  ITEM : integer
+  RECEBER : varchar(1)
+  OBS : varchar(20)
+  RASTROFOR : varchar(20)
+  DCORTE : datetime
+  MES : integer
+  ANO : integer
+  --
+  .. Índices ..
+  + PE99-1 : STR(PEDIDO,5)+STR(ITEM,2)+DIGCTR
+  + PE99-2 : STR(NRNOTASAI,8)+STR(CLIENTE,8)
+  + PE99-3 : PEDIDO
+  + PE99-4 : CLIENTE
+}
+
+entity "pecrt" as pecrt {
+  TIPO : varchar(1)
+  CODIGO : varchar(24)
+  UNRNOTA : integer
+  UFORNE : integer
+  UQTDE : decimal(12,2)
+  UDATA : datetime
+  --
+  .. Índices ..
+  + PECRT : TIPO+CODIGO+STR(uFORNE,8)
+  + PECRT-2 : STR(uFORNE,8)+CODIGO
+  + PECRT-3 : uFORNE
+  + PECRT-4 : CODIGO
+}
+
+entity "pemo" as pemo {
+  PEDIDO : integer
+  TIPPED : varchar(1)
+  CODIGO : varchar(24)
+  NOME : varchar(50)
+  FORNECEDO : integer
+  COGNOME : varchar(15)
+  UNID : varchar(2)
+  NOM2 : varchar(50)
+  COMPRAS : integer
+  COMITEM : integer
+  APLICACAO : varchar(50)
+  --
+  .. Índices ..
+  + PEMO : PEDIDO
+  + PEMO-2 : TIPPED+CODIGO+STR(FORNECEDO)
+}
+
+entity "petr" as petr {
+  PEDIDO : integer
+  TIPPED : varchar(1)
+  CODIGO : varchar(24)
+  NOME : varchar(50)
+  FORNECEDO : integer
+  COGNOME : varchar(15)
+  UNID : varchar(2)
+  NOM2 : varchar(50)
+  COMPRAS : integer
+  COMITEM : integer
+  APLICACAO : varchar(50)
+  --
+  .. Índices ..
+  + PETR : PEDIDO
+  + PETR-2 : TIPPED+CODIGO+STR(FORNECEDO)
+}
+
+entity "prnec" as prnec {
+  CODIGO : varchar(24)
+  NOME : varchar(40)
+  QTDSAL : integer
+  QTDE01 : integer
+  QTDR01 : integer
+  QTDI01 : integer
+  DATA01 : datetime
+  QTDE02 : integer
+  QTDR02 : integer
+  QTDI02 : integer
+  DATA02 : datetime
+  QTDE03 : integer
+  QTDR03 : integer
+  QTDI03 : integer
+  DATA03 : datetime
+  QTDE04 : integer
+  QTDR04 : integer
+  QTDI04 : integer
+  DATA04 : datetime
+  QTDE05 : integer
+  QTDR05 : integer
+  QTDI05 : integer
+  DATA05 : datetime
+  QTDE06 : integer
+  QTDR06 : integer
+  QTDI06 : integer
+  DATA06 : datetime
+  QTDE07 : integer
+  QTDR07 : integer
+  QTDI07 : integer
+  DATA07 : datetime
+  QTDE08 : integer
+  QTDR08 : integer
+  QTDI08 : integer
+  DATA08 : datetime
+  QTDE09 : integer
+  QTDR09 : integer
+  QTDI09 : integer
+  DATA09 : datetime
+  QTDE10 : integer
+  QTDR10 : integer
+  QTDI10 : integer
+  DATA10 : datetime
+  QTDE11 : integer
+  QTDR11 : integer
+  QTDI11 : integer
+  DATA11 : datetime
+  QTDE12 : integer
+  QTDR12 : integer
+  QTDI12 : integer
+  DATA12 : datetime
+  QTDE13 : integer
+  QTDR13 : integer
+  QTDI13 : integer
+  DATA13 : datetime
+  QTDE14 : integer
+  QTDR14 : integer
+  QTDI14 : integer
+  DATA14 : datetime
+  QTDE15 : integer
+  QTDR15 : integer
+  QTDI15 : integer
+  DATA15 : datetime
+  QTDE16 : integer
+  QTDR16 : integer
+  QTDI16 : integer
+  DATA16 : datetime
+  QTDE17 : integer
+  QTDR17 : integer
+  QTDI17 : integer
+  DATA17 : datetime
+  QTDE18 : integer
+  QTDR18 : integer
+  QTDI18 : integer
+  DATA18 : datetime
+  QTDE19 : integer
+  QTDR19 : integer
+  QTDI19 : integer
+  DATA19 : datetime
+  QTDE20 : integer
+  QTDR20 : integer
+  QTDI20 : integer
+  DATA20 : datetime
+  OP : integer
+  OPQTDE1 : integer
+  TIPOPRG : varchar(1)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "prneca" as prneca {
+  CODIGO : varchar(24)
+  QTDE : integer
+  QTDE01 : integer
+  QTDE02 : integer
+  QTDE03 : integer
+  QTDE04 : integer
+  QTDE05 : integer
+  QTDE06 : integer
+  QTDE07 : integer
+  QTDE08 : integer
+  QTDE09 : integer
+  QTDE10 : integer
+  QTDE11 : integer
+  QTDE12 : integer
+  QTDE13 : integer
+  QTDE14 : integer
+  QTDE15 : integer
+  QTDE16 : integer
+  QTDE17 : integer
+  QTDE18 : integer
+  QTDE19 : integer
+  QTDE20 : integer
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+}
+
+entity "prneci" as prneci {
+  CODIGO : varchar(24)
+  TIPOENT : varchar(1)
+  CODCOMP : varchar(24)
+  ESTQPRO : integer
+  QTDECOMP : decimal(10,5)
+  QTDI01 : integer
+  QTDI02 : integer
+  QTDI03 : integer
+  QTDI04 : integer
+  QTDI05 : integer
+  QTDI06 : integer
+  QTDI07 : integer
+  QTDI08 : integer
+  QTDI09 : integer
+  QTDI10 : integer
+  QTDI11 : integer
+  QTDI12 : integer
+  QTDI13 : integer
+  QTDI14 : integer
+  QTDI15 : integer
+  QTDI16 : integer
+  QTDI17 : integer
+  QTDI18 : integer
+  QTDI19 : integer
+  QTDI20 : integer
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+  + CHAVE : CODIGO+TIPOENT+CODCOMP
+  + TIPCOD : TIPOENT+CODCOMP
+}
+
+entity "prnect" as prnect {
+  TIPOENT : varchar(1)
+  CODCOMP : varchar(24)
+  DIASPR : integer
+  QTDEST : integer
+  QTDPRO : integer
+  QTDSAL : integer
+  QTDINI : integer
+  QTDTOT : integer
+  QTDT01 : integer
+  DATR01 : datetime
+  QTDI01 : integer
+  DATA01 : datetime
+  QTDT02 : integer
+  DATR02 : datetime
+  QTDI02 : integer
+  DATA02 : datetime
+  QTDT03 : integer
+  DATR03 : datetime
+  QTDI03 : integer
+  DATA03 : datetime
+  QTDT04 : integer
+  DATR04 : datetime
+  QTDI04 : integer
+  DATA04 : datetime
+  QTDT05 : integer
+  DATR05 : datetime
+  QTDI05 : integer
+  DATA05 : datetime
+  QTDT06 : integer
+  DATR06 : datetime
+  QTDI06 : integer
+  DATA06 : datetime
+  QTDT07 : integer
+  DATR07 : datetime
+  QTDI07 : integer
+  DATA07 : datetime
+  QTDT08 : integer
+  DATR08 : datetime
+  QTDI08 : integer
+  DATA08 : datetime
+  QTDT09 : integer
+  DATR09 : datetime
+  QTDI09 : integer
+  DATA09 : datetime
+  QTDT10 : integer
+  DATR10 : datetime
+  QTDI10 : integer
+  DATA10 : datetime
+  QTDT11 : integer
+  DATR11 : datetime
+  QTDI11 : integer
+  DATA11 : datetime
+  QTDT12 : integer
+  DATR12 : datetime
+  QTDI12 : integer
+  DATA12 : datetime
+  QTDT13 : integer
+  DATR13 : datetime
+  QTDI13 : integer
+  DATA13 : datetime
+  QTDT14 : integer
+  DATR14 : datetime
+  QTDI14 : integer
+  DATA14 : datetime
+  QTDT15 : integer
+  DATR15 : datetime
+  QTDI15 : integer
+  DATA15 : datetime
+  QTDT16 : integer
+  DATR16 : datetime
+  QTDI16 : integer
+  DATA16 : datetime
+  QTDT17 : integer
+  DATR17 : datetime
+  QTDI17 : integer
+  DATA17 : datetime
+  QTDT18 : integer
+  DATR18 : datetime
+  QTDI18 : integer
+  DATA18 : datetime
+  QTDT19 : integer
+  DATR19 : datetime
+  QTDI19 : integer
+  DATA19 : datetime
+  QTDT20 : integer
+  DATR20 : datetime
+  QTDI20 : integer
+  DATA20 : datetime
+  SEMANAS : integer
+  NOME : varchar(100)
+  --
+  .. Índices ..
+  + TIPCOD : TIPOENT+CODCOMP
+}
+
+
+@enduml

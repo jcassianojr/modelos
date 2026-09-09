@@ -1,0 +1,218 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "cepbai" as cepbai {
+  BAI_NU_SEQ : integer
+  BAI_NO : varchar(63)
+  --
+  .. Índices ..
+  + CEPBAI01 : BAI_NU_SEQ
+  + CEPBAI02 : BAI_NO
+}
+
+entity "cepbailx" as cepbailx {
+  CODIBGE : varchar(7)
+  BAI_NU_NEW : integer
+  CODBAILX : integer
+  --
+  .. Índices ..
+  + CEPBAILX-1 : CODIBGE+STR(BAI_NU_NEW,7)
+}
+
+entity "cepgeo" as cepgeo {
+  CEP : varchar(8)
+  DDD : varchar(2)
+  LATITUDE : varchar(8)
+  LONGITUDE : varchar(8)
+  HEMISFERIO : varchar(1)
+}
+
+entity "ceprua" as ceprua {
+  RUA : varchar(70)
+  CEP : varchar(8)
+  TIPO : varchar(20)
+  CHVBAI : integer
+  NINI : integer
+  NFIM : integer
+  PARID : varchar(1)
+  TITULO : varchar(1)
+}
+
+entity "cidconv" as cidconv {
+  ESTADO : varchar(2)
+  CIDORI : varchar(60)
+  ESTDES : varchar(2)
+  CIDDES : varchar(35)
+  --
+  .. Índices ..
+  + CIDORI : ESTADO + CIDORI
+}
+
+entity "md05" as md05 {
+  UFICMS : varchar(2)
+  ZONAFRANCA : varchar(1)
+  ALIQUOTA : decimal(5,2)
+  ALIQUOTAR : decimal(5,2)
+  NOMEEXT : varchar(20)
+  CAPITAL : varchar(20)
+  INICEP : varchar(9)
+  FIMCEP : varchar(9)
+  INICEP2 : varchar(9)
+  FIMCEP2 : varchar(9)
+  REGIAO : varchar(2)
+  CODMUN : varchar(2)
+  CORREIO : integer
+  AREATEL : varchar(1)
+  ALIQTEL : decimal(5,2)
+  QTDECID : integer
+  REGCOD : varchar(1)
+  AREA : decimal(12,3)
+  TAMIE : integer
+  MASCIE : varchar(20)
+  UFDEST : varchar(2)
+  --
+  .. Índices ..
+  + MD05-1 : UFICMS
+  + MD05-2 : NOMEEXT
+}
+
+entity "md10" as md10 {
+  UF : varchar(2)
+  NOME : varchar(35)
+  DDD : varchar(2)
+  CODIRRF : varchar(5)
+  CODIBGE : varchar(7)
+  CODBACEN : varchar(5)
+  ZONAELE : integer
+  CODTEL : varchar(5)
+  NOMTEL : varchar(4)
+  INICEP : varchar(8)
+  FIMCEP : varchar(8)
+  INICEP2 : varchar(8)
+  FIMCEP2 : varchar(8)
+  ALTITUDE : integer
+  AREA : decimal(12,3)
+  LATITUDE : varchar(8)
+  LONGITUDE : varchar(8)
+  HEMISFERIO : varchar(1)
+  LOGIX : varchar(5)
+  CODSIAFI : varchar(4)
+  --
+  .. Índices ..
+  + MD10-1 : UF+NOME
+  + MD10-2 : INICEP
+  + MD10-3 : CODIBGE
+  + MD10-4 : CODIRRF
+}
+
+entity "md10nao" as md10nao {
+  UF : varchar(2)
+  NOME : varchar(35)
+  DDD : varchar(2)
+  CODIRRF : varchar(5)
+  CODIBGE : varchar(7)
+  CODBACEN : varchar(5)
+  ZONAELE : integer
+  CODTEL : varchar(5)
+  NOMTEL : varchar(4)
+  INICEP : varchar(8)
+  FIMCEP : varchar(8)
+  INICEP2 : varchar(8)
+  FIMCEP2 : varchar(8)
+  ALTITUDE : integer
+  AREA : decimal(12,3)
+  LATITUDE : varchar(8)
+  LONGITUDE : varchar(8)
+  HEMISFERIO : varchar(1)
+  LOGIX : varchar(5)
+  CODSIAFI : varchar(4)
+  --
+  .. Índices ..
+  + MD10-1 : UF+NOME
+  + MD10-2 : INICEP
+  + MD10-3 : CODIBGE
+  + MD10-4 : CODIRRF
+}
+
+entity "md11" as md11 {
+  CEP : varchar(5)
+  --
+  .. Índices ..
+  + MD11-1 : CEP
+}
+
+entity "mdtip" as mdtip {
+  CODIGO : varchar(8)
+  NOME : varchar(22)
+  ID : integer
+  ESOCIAL : varchar(3)
+  --
+  .. Índices ..
+  + MDTIP1 : CODIGO
+  + MDTIP2 : NOME
+}
+
+entity "mdtit" as mdtit {
+  CODIGO : varchar(15)
+  DESCRICAO : varchar(30)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+  + DESCRICAO : DESCRICAO
+}
+
+entity "mdufddd" as mdufddd {
+  UF : varchar(2)
+  DDD : varchar(2)
+  --
+  .. Índices ..
+  + MDUFDD-1 : UF+DDD
+  + MDUFDDD-2 : UF
+  + MDUFDDD-3 : DDD
+}
+
+entity "paises" as paises {
+  BACEN : integer
+  NOME : varchar(35)
+  UF : varchar(2)
+  DDD : varchar(3)
+  DDDDIRETO : varchar(1)
+  ISO3166A : varchar(2)
+  ISO3166B : varchar(3)
+  ISO3166C : varchar(3)
+  NOMEINT : varchar(35)
+  AREA : integer
+  PERIM : integer
+  INDEPYEAR : integer
+  CONTINENT : varchar(25)
+  CONTI_COD : integer
+  LOGIXCONT : integer
+  MOEDA : varchar(5)
+  MOEDA_NOME : varchar(39)
+  MOEDA_SYMB : varchar(6)
+  CONTREGIAO : varchar(25)
+  CONTREGCOD : integer
+  CAPITAL : varchar(20)
+  URLPAIS : varchar(5)
+  NATIVE : varchar(50)
+  POPULACAO : integer
+  GDP : integer
+  NATIONALIT : varchar(39)
+  CEP_FORMAT : varchar(55)
+  CEP_REGEX : varchar(173)
+  LATITUDE : decimal(15,8)
+  LONGITUDE : decimal(15,8)
+  WIKIDATAID : varchar(8)
+  --
+  .. Índices ..
+  + PAISES1 : ISO3166A
+  + PAISES2 : ISO3166B
+  + PAISES3 : NOME
+  + PAISES4 : DDD
+  + PAISES5 : BACEN
+  + PAISES6 : NOMEINT
+}
+
+
+@enduml

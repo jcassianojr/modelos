@@ -1,8 +1,8 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 27/07/2026
+> Varredura automatica realizada em: 09/09/2026
 
-## Tabela DBF: `lc.dbf`
-> **Origem:** `lc.dbf` (Driver: DBFCDX)
+## Tabela DBF: `lc`
+> **Origem:** `lc` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -20,9 +20,23 @@
 - Tag: `NOVODOC` Expressao: `NOVODOC`
 - Tag: `TIPONUMERO` Expressao: `TIPO+STR(NUMERO,20)`
 
+```mermaid
+erDiagram
+    lc {
+        C DOCUMENTO
+        C DATA
+        C NOVODOC
+        C NOVODATA
+        C TIPO
+        C NUMCOMP
+        C PASTA
+        N NUMERO
+    }
+```
+
 ---
-## Tabela DBF: `lct.dbf`
-> **Origem:** `lct.dbf` (Driver: DBFCDX)
+## Tabela DBF: `lct`
+> **Origem:** `lct` (Driver: DBFCDX)
 
 | Campo | Tipo | Tam | Dec |
 | :--- | :--- | :--- | :--- |
@@ -30,5 +44,12 @@
 
 **Indices vinculados:**
 - Tag: `TIPO` Expressao: `TIPO`
+
+```mermaid
+erDiagram
+    lct {
+        C TIPO
+    }
+```
 
 ---

@@ -1,0 +1,188 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "apu5cd2" as apu5cd2 {
+  CLIENTE : integer
+  COGCLI : varchar(12)
+  CODIGO : varchar(24)
+  ANO : integer
+  MES : integer
+  INTCOM : integer
+  CLIENTE2 : integer
+  COGCLI2 : varchar(12)
+  CODIGO2 : varchar(24)
+  INTCOM2 : integer
+  CLIENT3 : integer
+  COGCLI3 : varchar(12)
+  CODIGO3 : varchar(24)
+  INTCOM3 : integer
+  JUNTO : varchar(105)
+  JUNTOA : varchar(30)
+  JUNTOB : varchar(30)
+  JUNTOC : varchar(30)
+  PERCOM : decimal(7,2)
+  PERCOM2 : decimal(7,2)
+  PERCOM3 : decimal(7,2)
+  --
+  .. Índices ..
+  + APU5CD2 : STR(ANO,4)+STR(MES,2)
+}
+
+entity "apu5em2" as apu5em2 {
+  CLI1 : integer
+  CLI2 : integer
+  COGCLI1 : varchar(12)
+  COGCLI2 : varchar(12)
+  JUNTO : varchar(40)
+  PERCLI1 : decimal(7,2)
+  PERCLI2 : decimal(7,2)
+  MES : integer
+  ANO : integer
+  ANOMES : integer
+  --
+  .. Índices ..
+  + APU5EM21 : STR(ANO,4)+STR(MES,2)
+}
+
+entity "apu5emp" as apu5emp {
+  CLIENTE : integer
+  COGCLI : varchar(12)
+  VALORTOT : decimal(12,2)
+  PERCLI : decimal(6,2)
+  PERPRO : decimal(6,2)
+  INTPERC : integer
+  ANO : integer
+  MES : integer
+  TGRUPO : varchar(1)
+  LEXPORTA : boolean
+  VALOREXP : decimal(12,2)
+  SUBGER : varchar(3)
+  --
+  .. Índices ..
+  + APU5EMP1 : STR(CLIENTE,8)+STR(ANO,4)+STR(MES,2)
+  + APU5EMP2 : STR(ANO,4)+STR(MES,2)+STR(PERCLI,7,2)
+}
+
+entity "apu5g" as apu5g {
+  CLIENTE : integer
+  COGCLI : varchar(12)
+  GRUPO : varchar(12)
+  CODIGO : varchar(24)
+  NOME : varchar(40)
+  ICM : decimal(5,2)
+  PARTI : decimal(8,2)
+  PPLAN : decimal(8,4)
+  PPLANL : varchar(1)
+  PPCAL : decimal(8,4)
+  QTDDE : integer
+  VALORMER : decimal(10,2)
+  VALORTOT : decimal(10,2)
+  PRECOM : decimal(7,2)
+  PERCLI : decimal(7,2)
+  PERLUC : decimal(7,2)
+  VALLUC : decimal(10,2)
+  DIFLUC : decimal(7,2)
+  SUBGER : varchar(2)
+  CLITOTPER : decimal(7,2)
+  CLITOTVAL : decimal(10,2)
+  MES : integer
+  ANO : integer
+  --
+  .. Índices ..
+  + APU5G : STR(ANO,4)+STR(MES,2)
+}
+
+entity "apu5g2" as apu5g2 {
+  CLIENTE : integer
+  COGCLI : varchar(12)
+  CODIGO : varchar(24)
+  NOME : varchar(40)
+  PARTI : decimal(6,2)
+  PPLAN : decimal(9,4)
+  QTDDE : integer
+  VALORMER : decimal(12,2)
+  VALORTOT : decimal(12,2)
+  PRECOM : decimal(8,2)
+  PERCLI : decimal(6,2)
+  INTCOM : integer
+  INTCLI : integer
+  JUNTO : varchar(40)
+  MES : integer
+  ANO : integer
+  --
+  .. Índices ..
+  + APU5G2 : STR(ANO,4)+STR(MES,2)
+}
+
+entity "apu5g3" as apu5g3 {
+  CLIENTE : integer
+  COGCLI : varchar(12)
+  CODIGO : varchar(24)
+  NOME : varchar(40)
+  PARTI : decimal(6,2)
+  PPLAN : decimal(9,4)
+  QTDDE : integer
+  VALORMER : decimal(12,2)
+  VALORTOT : decimal(12,2)
+  PRECOM : decimal(8,2)
+  PERCLI : decimal(6,2)
+  INTCOM : integer
+  INTCLI : integer
+  JUNTO : varchar(40)
+  MES : integer
+  ANO : integer
+  ORDEM : integer
+  PERCLITOR : decimal(6,2)
+  --
+  .. Índices ..
+  + APU5G3 : STR(ANO,4)+STR(MES,2)
+}
+
+entity "apu5g4" as apu5g4 {
+  JUNTO : varchar(40)
+  PERLUC : decimal(6,2)
+  INTPER : integer
+  MES : integer
+  ANO : integer
+  --
+  .. Índices ..
+  + APU5G4 : STR(ANO,4)+STR(MES,2)
+}
+
+entity "apu5g5" as apu5g5 {
+  JUNTO : varchar(40)
+  CODIGO : varchar(24)
+  PERDIF : decimal(7,2)
+  INTDIF : integer
+  MES : integer
+  ANO : integer
+  COGCLI : varchar(15)
+  --
+  .. Índices ..
+  + APU5G5 : STR(ANO,4)+STR(MES,2)
+}
+
+entity "apu5lin" as apu5lin {
+  ANO : integer
+  SUBGER : varchar(2)
+  PERFAT : decimal(5,2)
+  VALORTOT : decimal(12,2)
+  --
+  .. Índices ..
+  + APU5LIN : STR(ANO,4)+SUBGER
+}
+
+entity "apu5tot" as apu5tot {
+  MES : integer
+  ANO : integer
+  VALORTOT : decimal(18,2)
+  VALOREXP : decimal(18,2)
+  JUNTO : varchar(7)
+  --
+  .. Índices ..
+  + APU5TOT : STR(ANO,4)+STR(MES,2)
+}
+
+
+@enduml

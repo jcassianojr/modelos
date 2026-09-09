@@ -1,0 +1,942 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "ac2" as ac2 {
+  ACP : integer
+  DATA : datetime
+  CLIENTE : integer
+  CLINOME : varchar(50)
+  DESENHO : varchar(24)
+  DESCRI : varchar(40)
+  AMOSTRA : varchar(25)
+  INSTRU : varchar(8)
+  DESCII : varchar(40)
+  CARAC : varchar(40)
+  SUMX : decimal(12,4)
+  MEDX : decimal(9,4)
+  SUMR : decimal(9,4)
+  MEDR : decimal(8,4)
+  MIN : decimal(9,4)
+  MAX : decimal(9,4)
+  X01 : decimal(9,4)
+  X02 : decimal(9,4)
+  X03 : decimal(9,4)
+  X04 : decimal(9,4)
+  X05 : decimal(9,4)
+  X06 : decimal(9,4)
+  X07 : decimal(9,4)
+  X08 : decimal(9,4)
+  X09 : decimal(9,4)
+  X10 : decimal(9,4)
+  X11 : decimal(9,4)
+  X12 : decimal(9,4)
+  X13 : decimal(9,4)
+  X14 : decimal(9,4)
+  X15 : decimal(9,4)
+  X16 : decimal(9,4)
+  X17 : decimal(9,4)
+  X18 : decimal(9,4)
+  X19 : decimal(9,4)
+  X20 : decimal(9,4)
+  X21 : decimal(9,4)
+  X22 : decimal(9,4)
+  X23 : decimal(9,4)
+  X24 : decimal(9,4)
+  X25 : decimal(9,4)
+  X26 : decimal(9,4)
+  X27 : decimal(9,4)
+  X28 : decimal(9,4)
+  X29 : decimal(9,4)
+  X30 : decimal(9,4)
+  R01 : decimal(8,4)
+  R02 : decimal(8,4)
+  R03 : decimal(8,4)
+  R04 : decimal(8,4)
+  R05 : decimal(8,4)
+  R06 : decimal(8,4)
+  R07 : decimal(8,4)
+  R08 : decimal(8,4)
+  R09 : decimal(8,4)
+  R10 : decimal(8,4)
+  R11 : decimal(8,4)
+  R12 : decimal(8,4)
+  R13 : decimal(8,4)
+  R14 : decimal(8,4)
+  R15 : decimal(8,4)
+  R16 : decimal(8,4)
+  R17 : decimal(8,4)
+  R18 : decimal(8,4)
+  R19 : decimal(8,4)
+  R20 : decimal(8,4)
+  R21 : decimal(8,4)
+  R22 : decimal(8,4)
+  R23 : decimal(8,4)
+  R24 : decimal(8,4)
+  R25 : decimal(8,4)
+  R26 : decimal(8,4)
+  R27 : decimal(8,4)
+  R28 : decimal(8,4)
+  R29 : decimal(8,4)
+  R30 : decimal(8,4)
+  SIGMA : decimal(12,6)
+  PP : decimal(10,4)
+  PPKA : decimal(10,4)
+  PPKB : decimal(10,4)
+  PPK : decimal(10,4)
+  ACD : integer
+  LIC : decimal(9,4)
+  LSC : decimal(9,4)
+  RMAX : decimal(8,4)
+  RMIN : decimal(8,4)
+  XMAX : decimal(9,4)
+  XMIN : decimal(9,4)
+  DESV : decimal(8,4)
+  ELANUM : integer
+  ELANOM : varchar(40)
+  ELADAT : datetime
+  RESNUM : integer
+  RESNOM : varchar(40)
+  RESDAT : datetime
+  FORAE : integer
+  FORAX : integer
+  FORAR : integer
+  RLSC : decimal(8,4)
+  MODAX : decimal(9,4)
+  MODAR : decimal(8,4)
+  MEDIX : decimal(9,4)
+  MEDIR : decimal(8,4)
+  SEQ : integer
+  SSQ : integer
+  OPERACAO : varchar(70)
+  REVD : varchar(5)
+  DATAR : datetime
+  DISTNOR : varchar(1)
+  OBS : varchar(40)
+  --
+  .. Índices ..
+  + ACP : ACP
+  + ACD : ACD
+}
+
+entity "acd" as acd {
+  ACD : integer
+  DATA : datetime
+  CLIENTE : integer
+  CLINOME : varchar(50)
+  DESENHO : varchar(24)
+  DESCRI : varchar(40)
+  INSTRU : varchar(5)
+  DESCII : varchar(25)
+  CARAC : varchar(40)
+  MIN : decimal(9,4)
+  MAX : decimal(9,4)
+  CONV : boolean
+  SEQ : integer
+  SSQ : integer
+  OPERACAO : varchar(70)
+  DATAR : datetime
+  REVD : varchar(5)
+  --
+  .. Índices ..
+  + ACD : ACD
+}
+
+entity "acdi" as acdi {
+  ACD : integer
+  VAL01 : decimal(9,4)
+  VAL02 : decimal(9,4)
+  VAL03 : decimal(9,4)
+  VAL04 : decimal(9,4)
+  VAL05 : decimal(9,4)
+  MEDX : decimal(9,4)
+  VALR : decimal(9,4)
+  DATA : datetime
+  HORA : decimal(5,2)
+  ACP : integer
+  AEP : integer
+  ORDEM : integer
+  LIC : decimal(9,4)
+  LSC : decimal(9,4)
+  --
+  .. Índices ..
+  + ACDI : ACD
+  + ACDI-2 : STR(ACD,8)+DTOS(DATA)+STR(HORA,5,2)
+  + ACDI-3 : ACP
+  + ACDI-4 : AEP
+}
+
+entity "acp" as acp {
+  ACP : integer
+  DATA : datetime
+  CLIENTE : integer
+  CLINOME : varchar(50)
+  DESENHO : varchar(24)
+  DESCRI : varchar(40)
+  AMOSTRA : varchar(25)
+  INSTRU : varchar(8)
+  DESCII : varchar(40)
+  CARAC : varchar(40)
+  SUMX : decimal(12,4)
+  MEDX : decimal(9,4)
+  SUMR : decimal(9,4)
+  MEDR : decimal(8,4)
+  MIN : decimal(9,4)
+  MAX : decimal(9,4)
+  X01 : decimal(9,4)
+  X02 : decimal(9,4)
+  X03 : decimal(9,4)
+  X04 : decimal(9,4)
+  X05 : decimal(9,4)
+  X06 : decimal(9,4)
+  X07 : decimal(9,4)
+  X08 : decimal(9,4)
+  X09 : decimal(9,4)
+  X10 : decimal(9,4)
+  X11 : decimal(9,4)
+  X12 : decimal(9,4)
+  X13 : decimal(9,4)
+  X14 : decimal(9,4)
+  X15 : decimal(9,4)
+  X16 : decimal(9,4)
+  X17 : decimal(9,4)
+  X18 : decimal(9,4)
+  X19 : decimal(9,4)
+  X20 : decimal(9,4)
+  X21 : decimal(9,4)
+  X22 : decimal(9,4)
+  X23 : decimal(9,4)
+  X24 : decimal(9,4)
+  X25 : decimal(9,4)
+  X26 : decimal(9,4)
+  X27 : decimal(9,4)
+  X28 : decimal(9,4)
+  X29 : decimal(9,4)
+  X30 : decimal(9,4)
+  R01 : decimal(8,4)
+  R02 : decimal(8,4)
+  R03 : decimal(8,4)
+  R04 : decimal(8,4)
+  R05 : decimal(8,4)
+  R06 : decimal(8,4)
+  R07 : decimal(8,4)
+  R08 : decimal(8,4)
+  R09 : decimal(8,4)
+  R10 : decimal(8,4)
+  R11 : decimal(8,4)
+  R12 : decimal(8,4)
+  R13 : decimal(8,4)
+  R14 : decimal(8,4)
+  R15 : decimal(8,4)
+  R16 : decimal(8,4)
+  R17 : decimal(8,4)
+  R18 : decimal(8,4)
+  R19 : decimal(8,4)
+  R20 : decimal(8,4)
+  R21 : decimal(8,4)
+  R22 : decimal(8,4)
+  R23 : decimal(8,4)
+  R24 : decimal(8,4)
+  R25 : decimal(8,4)
+  R26 : decimal(8,4)
+  R27 : decimal(8,4)
+  R28 : decimal(8,4)
+  R29 : decimal(8,4)
+  R30 : decimal(8,4)
+  SIGMA : decimal(12,6)
+  PP : decimal(10,4)
+  PPKA : decimal(10,4)
+  PPKB : decimal(10,4)
+  PPK : decimal(10,4)
+  ACD : integer
+  LIC : decimal(9,4)
+  LSC : decimal(9,4)
+  RMAX : decimal(8,4)
+  RMIN : decimal(8,4)
+  XMAX : decimal(9,4)
+  XMIN : decimal(9,4)
+  DESV : decimal(8,4)
+  ELANUM : integer
+  ELANOM : varchar(40)
+  ELADAT : datetime
+  RESNUM : integer
+  RESNOM : varchar(40)
+  RESDAT : datetime
+  FORAE : integer
+  FORAX : integer
+  FORAR : integer
+  RLSC : decimal(8,4)
+  MODAX : decimal(9,4)
+  MODAR : decimal(8,4)
+  MEDIX : decimal(9,4)
+  MEDIR : decimal(8,4)
+  SEQ : integer
+  SSQ : integer
+  OPERACAO : varchar(70)
+  REVD : varchar(5)
+  DATAR : datetime
+  DISTNOR : varchar(1)
+  OBS : varchar(40)
+  --
+  .. Índices ..
+  + ACP : ACP
+  + ACD : ACD
+}
+
+entity "acpr" as acpr {
+  ACP : integer
+  VALOR : decimal(12,4)
+  QTDE : integer
+  TOTAL : decimal(15,4)
+  --
+  .. Índices ..
+  + ACPVALOR : STR(ACP,8)+STR(VALOR,10,4)
+  + ACP : ACP
+}
+
+entity "acpx" as acpx {
+  ACP : integer
+  VALOR : decimal(12,4)
+  QTDE : integer
+  TOTAL : decimal(15,4)
+  --
+  .. Índices ..
+  + ACPVALOR : STR(ACP,8)+STR(VALOR,10,4)
+  + ACP : ACP
+}
+
+entity "aepr" as aepr {
+  ACP : integer
+  VALOR : decimal(12,4)
+  QTDE : integer
+  TOTAL : decimal(15,4)
+  --
+  .. Índices ..
+  + ACPVALOR : STR(ACP,8)+STR(VALOR,10,4)
+  + ACP : ACP
+}
+
+entity "aepx" as aepx {
+  ACP : integer
+  VALOR : decimal(12,4)
+  QTDE : integer
+  TOTAL : decimal(15,4)
+  --
+  .. Índices ..
+  + ACPVALOR : STR(ACP,8)+STR(VALOR,10,4)
+  + ACP : ACP
+}
+
+entity "ci" as ci {
+  CI : integer
+  TIPOI : varchar(1)
+  DESCRI : varchar(40)
+  DESENHO : varchar(24)
+  REVD : varchar(5)
+  DATAD : datetime
+  DATAR : datetime
+  PEDIDO : varchar(20)
+  ORDEM : varchar(20)
+  QTL : varchar(20)
+  QTI : varchar(20)
+  RASTRO : varchar(12)
+  CLIENTE : integer
+  CLINOME : varchar(50)
+  OBS01 : varchar(80)
+  OBS02 : varchar(80)
+  LAUDOF : varchar(1)
+  DATA : datetime
+  INSNUM : integer
+  INSNOM : varchar(40)
+  --
+  .. Índices ..
+  + CI : CI
+}
+
+entity "cic" as cic {
+  DESENHO : varchar(24)
+  DESCRI : varchar(40)
+  DATAR : datetime
+  DATAD : datetime
+  REVD : varchar(5)
+  CLIENTE : integer
+  --
+  .. Índices ..
+  + DESENHO : DESENHO
+}
+
+entity "cici" as cici {
+  DESENHO : varchar(24)
+  ENC : decimal(9,4)
+  CESPE : varchar(40)
+  ESPE : decimal(9,2)
+  MAX : decimal(9,4)
+  MIN : decimal(9,4)
+  UND : varchar(20)
+  LOCALI : varchar(30)
+  --
+  .. Índices ..
+  + DESENHO : DESENHO
+}
+
+entity "cii" as cii {
+  CI : integer
+  ITEM : integer
+  DESVIO : decimal(9,4)
+  ENC : decimal(9,4)
+  CENC : varchar(30)
+  CESPE : varchar(40)
+  ESPE : decimal(9,4)
+  MAX : decimal(9,4)
+  MIN : decimal(9,4)
+  UND : varchar(20)
+  LOCALI : varchar(30)
+  LAUDO : varchar(1)
+  --
+  .. Índices ..
+  + CI : CI
+}
+
+entity "crtaum" as crtaum {
+  TIPO : varchar(1)
+  DATA : datetime
+  HORA : decimal(5,2)
+  VALOR : integer
+  REFCTR : varchar(1)
+  SALA : varchar(5)
+  --
+  .. Índices ..
+  + DATA : DATA
+  + REFCTR : REFCTR
+}
+
+entity "etippp" as etippp {
+  NUMERO : integer
+  CODIGO : varchar(24)
+  NOME : varchar(50)
+  SUFIX : varchar(5)
+  ENGENHA : varchar(50)
+}
+
+entity "gc" as gc {
+  GC : integer
+  CLIENTE : integer
+  CLINOME : varchar(40)
+  CODIGO : varchar(24)
+  NOME : varchar(40)
+  CODME01 : varchar(12)
+  NOMME01 : varchar(40)
+  SEQ : integer
+  SSQ : integer
+  CARAC : varchar(50)
+  ESPEC : varchar(30)
+  FREQ : varchar(10)
+  TAM : varchar(10)
+  CODME04 : varchar(8)
+  NOMME04 : varchar(40)
+  CO2ME04 : varchar(8)
+  NO2ME04 : varchar(40)
+  UNIDME : varchar(10)
+  REFCTR : varchar(1)
+  VALX : decimal(9,4)
+  LIC : decimal(9,4)
+  LSC : decimal(9,4)
+  LIE : decimal(9,4)
+  LSE : decimal(9,4)
+  VINI : decimal(9,4)
+  VDIV : decimal(7,4)
+  VALR : decimal(7,4)
+  LSCR : decimal(7,4)
+  VDIR : decimal(7,4)
+  VMAX : decimal(9,4)
+  RMAX : decimal(7,4)
+  ACP : integer
+  AEP : integer
+  OBS : varchar(80)
+  --
+  .. Índices ..
+  + GC : GC
+  + REFCTR : REFCTR
+}
+
+entity "gctem" as gctem {
+  ITEM : integer
+  REFCTR : varchar(1)
+  --
+  .. Índices ..
+  + REFCTR : REFCTR
+}
+
+entity "gctemp" as gctemp {
+  ITEM : integer
+  REFCTR : varchar(1)
+  --
+  .. Índices ..
+  + ITEM : ITEM
+  + REFCTR : REFCTR
+}
+
+entity "opae" as opae {
+  OPAE : integer
+  CLIENTE : integer
+  DATA : datetime
+  CODIGO : varchar(24)
+  RASTRO : varchar(15)
+  QTDE : integer
+  CODMP04 : integer
+  --
+  .. Índices ..
+  + OPAE : OPAE
+}
+
+entity "opai" as opai {
+  OPAE : integer
+  ESPEC : varchar(100)
+  LAUDO : varchar(1)
+}
+
+entity "pac" as pac {
+  PAC : integer
+  ACP : integer
+  AEP : integer
+  CLIENTE : integer
+  CLINOME : varchar(60)
+  CODIGO : varchar(24)
+  DATA : datetime
+  NOME : varchar(40)
+  ESPECI : varchar(40)
+  CARAC : varchar(40)
+  INSTRU : varchar(8)
+  DESCII : varchar(40)
+  SEQ : integer
+  SSQ : integer
+  EQU : varchar(4)
+  NEQU : varchar(40)
+  UNID : varchar(2)
+  RMIN : decimal(9,3)
+  RMAX : decimal(9,3)
+  VMAX : decimal(9,3)
+  VMIN : decimal(9,3)
+  MEDX : decimal(9,3)
+  PP : decimal(12,4)
+  XMAX : decimal(9,3)
+  XMIN : decimal(9,3)
+  MEDR : decimal(9,3)
+  PPK : decimal(12,4)
+  IDE01 : varchar(70)
+  IDE02 : varchar(70)
+  IDE04 : varchar(70)
+  IDE03 : varchar(70)
+  CAV01 : varchar(70)
+  CAV02 : varchar(70)
+  CAV03 : varchar(70)
+  CAV04 : varchar(70)
+  ACA01 : varchar(70)
+  ACA02 : varchar(70)
+  ACA03 : varchar(70)
+  ACA04 : varchar(70)
+  SETOR : varchar(20)
+  SETCOD : varchar(1)
+  DESSEQ : varchar(70)
+  VALP : decimal(12,2)
+  NXMIN : decimal(9,3)
+  NXMAX : decimal(9,3)
+  NXMED : decimal(9,3)
+  NRMIN : decimal(9,3)
+  NRMAX : decimal(9,3)
+  NRMED : decimal(9,3)
+  NPP : decimal(12,4)
+  NPPK : decimal(12,4)
+  NVALP : decimal(12,2)
+  NAEP : integer
+  NACP : integer
+  NVMIN : decimal(12,3)
+  NVMAX : decimal(12,3)
+  --
+  .. Índices ..
+  + PAC : PAC
+}
+
+entity "paee" as paee {
+  PAEE : integer
+  DATA : datetime
+  CLIENTE : integer
+  CODIGO : varchar(24)
+  OBS01 : varchar(200)
+  OBS02 : varchar(200)
+  OBS03 : varchar(200)
+  --
+  .. Índices ..
+  + PAEE : PAEE
+}
+
+entity "paei" as paei {
+  DESENHO : varchar(24)
+  ESPEC : varchar(100)
+  --
+  .. Índices ..
+  + PAEI : DESENHO
+}
+
+entity "ri" as ri {
+  RI : integer
+  TIPOI : varchar(1)
+  TIPO2 : varchar(1)
+  DESCRI : varchar(40)
+  DESENHO : varchar(24)
+  REVD : varchar(5)
+  DATAD : datetime
+  DATAR : datetime
+  PEDIDO : varchar(20)
+  ORDEM : varchar(20)
+  QTL : varchar(20)
+  QTI : varchar(20)
+  RASTRO : varchar(10)
+  CLIENTE : integer
+  CLINOME : varchar(50)
+  OBS01 : varchar(80)
+  OBS02 : varchar(80)
+  LAUDOF : varchar(1)
+  DATA : datetime
+  INSNUM : integer
+  INSNOM : varchar(40)
+  SEQ : integer
+  SSQ : integer
+  ORIGEM : varchar(5)
+  CODIGOINT : varchar(24)
+  --
+  .. Índices ..
+  + RI : RI
+}
+
+entity "rii" as rii {
+  RI : integer
+  ITEM : integer
+  DESVIO : varchar(20)
+  ENC : varchar(40)
+  ESPE : varchar(100)
+  LOCALI : varchar(30)
+  LAUDO : varchar(1)
+  TIPINSP : varchar(1)
+  --
+  .. Índices ..
+  + RII : RI
+  + RI : RI
+}
+
+entity "rrl" as rrl {
+  RRS : integer
+  CLIENTE : integer
+  CLINOME : varchar(40)
+  DESENHO : varchar(24)
+  DESCRI : varchar(40)
+  INSTRU : varchar(8)
+  DESCII : varchar(20)
+  CARAC : varchar(25)
+  ESPEC : varchar(25)
+  AVA : varchar(40)
+  AVB : varchar(40)
+  AVC : varchar(40)
+  AVAN : integer
+  AVBN : integer
+  AVCN : integer
+  AMA01 : decimal(9,4)
+  AMA02 : decimal(9,4)
+  AMA03 : decimal(9,4)
+  AMA04 : decimal(9,4)
+  AMA05 : decimal(9,4)
+  AMA06 : decimal(9,4)
+  AMA07 : decimal(9,4)
+  AMA08 : decimal(9,4)
+  AMA09 : decimal(9,4)
+  AMA10 : decimal(9,4)
+  AMAA01 : decimal(9,4)
+  AMAA02 : decimal(9,4)
+  AMAA03 : decimal(9,4)
+  AMAA04 : decimal(9,4)
+  AMAA05 : decimal(9,4)
+  AMAA06 : decimal(9,4)
+  AMAA07 : decimal(9,4)
+  AMAA08 : decimal(9,4)
+  AMAA09 : decimal(9,4)
+  AMAA10 : decimal(9,4)
+  AMAAA01 : decimal(9,4)
+  AMAAA02 : decimal(9,4)
+  AMAAA03 : decimal(9,4)
+  AMAAA04 : decimal(9,4)
+  AMAAA05 : decimal(9,4)
+  AMAAA06 : decimal(9,4)
+  AMAAA07 : decimal(9,4)
+  AMAAA08 : decimal(9,4)
+  AMAAA09 : decimal(9,4)
+  AMAAA10 : decimal(9,4)
+  AMB01 : decimal(9,4)
+  AMB02 : decimal(9,4)
+  AMB03 : decimal(9,4)
+  AMB04 : decimal(9,4)
+  AMB05 : decimal(9,4)
+  AMB06 : decimal(9,4)
+  AMB07 : decimal(9,4)
+  AMB08 : decimal(9,4)
+  AMB09 : decimal(9,4)
+  AMB10 : decimal(9,4)
+  AMBB01 : decimal(9,4)
+  AMBB02 : decimal(9,4)
+  AMBB03 : decimal(9,4)
+  AMBB04 : decimal(9,4)
+  AMBB05 : decimal(9,4)
+  AMBB06 : decimal(9,4)
+  AMBB07 : decimal(9,4)
+  AMBB08 : decimal(9,4)
+  AMBB09 : decimal(9,4)
+  AMBB10 : decimal(9,4)
+  AMBBB01 : decimal(9,4)
+  AMBBB02 : decimal(9,4)
+  AMBBB03 : decimal(9,4)
+  AMBBB04 : decimal(9,4)
+  AMBBB05 : decimal(9,4)
+  AMBBB06 : decimal(9,4)
+  AMBBB07 : decimal(9,4)
+  AMBBB08 : decimal(9,4)
+  AMBBB09 : decimal(9,4)
+  AMBBB10 : decimal(9,4)
+  AMC01 : decimal(9,4)
+  AMC02 : decimal(9,4)
+  AMC03 : decimal(9,4)
+  AMC04 : decimal(9,4)
+  AMC05 : decimal(9,4)
+  AMC06 : decimal(9,4)
+  AMC07 : decimal(9,4)
+  AMC08 : decimal(9,4)
+  AMC09 : decimal(9,4)
+  AMC10 : decimal(9,4)
+  AMCC01 : decimal(9,4)
+  AMCC02 : decimal(9,4)
+  AMCC03 : decimal(9,4)
+  AMCC04 : decimal(9,4)
+  AMCC05 : decimal(9,4)
+  AMCC06 : decimal(9,4)
+  AMCC07 : decimal(9,4)
+  AMCC08 : decimal(9,4)
+  AMCC09 : decimal(9,4)
+  AMCC10 : decimal(9,4)
+  AMCCC01 : decimal(9,4)
+  AMCCC02 : decimal(9,4)
+  AMCCC03 : decimal(9,4)
+  AMCCC04 : decimal(9,4)
+  AMCCC05 : decimal(9,4)
+  AMCCC06 : decimal(9,4)
+  AMCCC07 : decimal(9,4)
+  AMCCC08 : decimal(9,4)
+  AMCCC09 : decimal(9,4)
+  AMCCC10 : decimal(9,4)
+  DIFA01 : decimal(7,4)
+  DIFA02 : decimal(7,4)
+  DIFA03 : decimal(7,4)
+  DIFA04 : decimal(7,4)
+  DIFA05 : decimal(7,4)
+  DIFA06 : decimal(7,4)
+  DIFA07 : decimal(7,4)
+  DIFA08 : decimal(7,4)
+  DIFA09 : decimal(7,4)
+  DIFA10 : decimal(7,4)
+  DIFB01 : decimal(7,4)
+  DIFB02 : decimal(7,4)
+  DIFB03 : decimal(7,4)
+  DIFB04 : decimal(7,4)
+  DIFB05 : decimal(7,4)
+  DIFB06 : decimal(7,4)
+  DIFB07 : decimal(7,4)
+  DIFB08 : decimal(7,4)
+  DIFB09 : decimal(7,4)
+  DIFB10 : decimal(7,4)
+  DIFC01 : decimal(7,4)
+  DIFC02 : decimal(7,4)
+  DIFC03 : decimal(7,4)
+  DIFC04 : decimal(7,4)
+  DIFC05 : decimal(7,4)
+  DIFC06 : decimal(7,4)
+  DIFC07 : decimal(7,4)
+  DIFC08 : decimal(7,4)
+  DIFC09 : decimal(7,4)
+  DIFC10 : decimal(7,4)
+  TOTAA : decimal(11,4)
+  TOTAB : decimal(11,4)
+  TOTAC : decimal(11,4)
+  MEDAA : decimal(7,4)
+  TOTALA : decimal(11,4)
+  TOTBA : decimal(11,4)
+  TOTBB : decimal(11,4)
+  TOTBC : decimal(11,4)
+  MEDBB : decimal(7,4)
+  TOTALB : decimal(11,4)
+  TOTCA : decimal(11,4)
+  TOTCB : decimal(11,4)
+  TOTCC : decimal(11,4)
+  MEDCC : decimal(7,4)
+  TOTALC : decimal(11,4)
+  MEDIA : decimal(9,4)
+  MEDIB : decimal(9,4)
+  MEDIC : decimal(9,4)
+  MEDSOM : decimal(7,4)
+  MEDMED : decimal(7,4)
+  DIFMED : decimal(7,4)
+  VE : decimal(8,5)
+  VA : decimal(8,5)
+  RR : decimal(8,5)
+  VP : decimal(8,5)
+  VT : decimal(8,5)
+  PVE : decimal(8,5)
+  PVA : decimal(8,5)
+  PRR : decimal(8,5)
+  DATA : datetime
+  OBS01 : varchar(50)
+  XMAX : decimal(10,5)
+  XMIN : decimal(10,5)
+  RP : decimal(8,5)
+  RPMAX : decimal(10,5)
+  RPMIN : decimal(10,5)
+  M01 : decimal(10,5)
+  M02 : decimal(10,5)
+  M03 : decimal(10,5)
+  M04 : decimal(10,5)
+  M05 : decimal(10,5)
+  M06 : decimal(10,5)
+  M07 : decimal(10,5)
+  M08 : decimal(10,5)
+  M09 : decimal(10,5)
+  M10 : decimal(10,5)
+  NCP : decimal(10,5)
+  K01 : decimal(6,4)
+  K02 : decimal(6,4)
+  K03 : decimal(6,4)
+  K04 : decimal(6,4)
+  PVP : decimal(10,5)
+  TOLMIN : decimal(9,5)
+  TOLMAX : decimal(9,5)
+  NUMASS : integer
+  DATASS : datetime
+  NOMASS : varchar(40)
+  --
+  .. Índices ..
+  + RRS : RRS
+}
+
+entity "rrs" as rrs {
+  RRS : integer
+  CLIENTE : integer
+  CLINOME : varchar(40)
+  DESENHO : varchar(24)
+  DESCRI : varchar(40)
+  INSTRU : varchar(8)
+  DESCII : varchar(25)
+  CARAC : varchar(40)
+  ESPEC : varchar(40)
+  AVA : varchar(40)
+  AVB : varchar(40)
+  AVAN : integer
+  AVBN : integer
+  AMA01 : decimal(10,4)
+  AMA02 : decimal(10,4)
+  AMA03 : decimal(10,4)
+  AMA04 : decimal(10,4)
+  AMA05 : decimal(10,4)
+  AMAA01 : decimal(10,4)
+  AMAA02 : decimal(10,4)
+  AMAA03 : decimal(10,4)
+  AMAA04 : decimal(10,4)
+  AMAA05 : decimal(10,4)
+  AMB01 : decimal(10,4)
+  AMB02 : decimal(10,4)
+  AMB03 : decimal(10,4)
+  AMB04 : decimal(10,4)
+  AMB05 : decimal(10,4)
+  AMBB01 : decimal(10,4)
+  AMBB02 : decimal(10,4)
+  AMBB03 : decimal(10,4)
+  AMBB04 : decimal(10,4)
+  AMBB05 : decimal(10,4)
+  DIFA01 : decimal(7,4)
+  DIFA02 : decimal(7,4)
+  DIFA03 : decimal(7,4)
+  DIFA04 : decimal(7,4)
+  DIFA05 : decimal(7,4)
+  DIFB01 : decimal(7,4)
+  DIFB02 : decimal(7,4)
+  DIFB03 : decimal(7,4)
+  DIFB04 : decimal(7,4)
+  DIFB05 : decimal(7,4)
+  TOTAA : decimal(11,4)
+  TOTAB : decimal(11,4)
+  MEDAA : decimal(7,4)
+  TOTALA : decimal(11,4)
+  TOTBA : decimal(11,4)
+  TOTBB : decimal(11,4)
+  MEDBB : decimal(7,4)
+  TOTALB : decimal(11,4)
+  MEDIA : decimal(11,4)
+  MEDIB : decimal(11,4)
+  MEDSOM : decimal(11,4)
+  MEDMED : decimal(7,4)
+  DIFMED : decimal(7,4)
+  VE : decimal(7,5)
+  VA : decimal(7,5)
+  RR : decimal(7,5)
+  VP : decimal(10,5)
+  VT : decimal(10,5)
+  PRR : decimal(10,5)
+  DATA : datetime
+  OBS01 : varchar(50)
+  OBS02 : varchar(50)
+  RP : decimal(11,5)
+  M01 : decimal(11,5)
+  M02 : decimal(11,5)
+  M03 : decimal(11,5)
+  M04 : decimal(11,5)
+  M05 : decimal(11,5)
+  RPMAX : decimal(11,4)
+  RPMIN : decimal(11,4)
+  XMAX : decimal(11,4)
+  XMIN : decimal(11,4)
+  K01 : decimal(6,4)
+  K02 : decimal(6,4)
+  K03 : decimal(6,4)
+  TOLMIN : decimal(9,5)
+  TOLMAX : decimal(9,5)
+  NUMASS : integer
+  DATASS : datetime
+  NOMASS : varchar(40)
+  --
+  .. Índices ..
+  + RRS : RRS
+}
+
+entity "teep" as teep {
+  TEEP : integer
+  DATA : datetime
+  DESENHO : varchar(24)
+  CARAC : varchar(40)
+  CLIENTE : integer
+  CLINOME : varchar(50)
+  RR : varchar(1)
+  P1 : decimal(12,4)
+  PP : decimal(12,4)
+  PPK : decimal(12,4)
+  PLAN01 : integer
+  ESTAVEL : varchar(1)
+  PLAN02 : integer
+  P2 : decimal(12,4)
+  CP : decimal(12,4)
+  CPK : decimal(12,4)
+  PLAN03 : integer
+  ACP : integer
+  AEP : integer
+  ACPATR : varchar(1)
+  AEPATR : varchar(1)
+  --
+  .. Índices ..
+  + TEEP : TEEP
+}
+
+
+@enduml

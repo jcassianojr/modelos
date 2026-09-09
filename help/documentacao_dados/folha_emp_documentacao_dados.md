@@ -1,5 +1,5 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 29/07/2026
+> Varredura automatica realizada em: 09/09/2026
 
 ## Tabela DBF: `afdterr`
 > **Origem:** `afdterr` (Driver: DBFCDX)
@@ -14,6 +14,17 @@
 
 **Indices vinculados:**
 - Tag: `AFDTERR` Expressao: `STR(NUMERO,8)+DTOS(DATA)+STR(HORA,5,2)`
+
+```mermaid
+erDiagram
+    afdterr {
+        N NUMERO
+        D DATA
+        N HORA
+        N MOTIVO
+        C MOTOCO
+    }
+```
 
 ---
 ## Tabela DBF: `ajudira`
@@ -42,6 +53,29 @@
 **Indices vinculados:**
 - Tag: `AJUDIRA` Expressao: `CPF+STR(MES,2)`
 
+```mermaid
+erDiagram
+    ajudira {
+        C CPF
+        N MES
+        N NUMERO
+        N VALOR1
+        N VALOR2
+        N VALOR3
+        N VALOR5
+        N VALOR4
+        N VALOR6
+        N VALOR7
+        N VALUF1
+        N VALUF2
+        N VALUF3
+        N VALUF4
+        N VALUF5
+        N VALUF6
+        N VALUF7
+    }
+```
+
 ---
 ## Tabela DBF: `ajudird`
 > **Origem:** `ajudird` (Driver: DBFCDX)
@@ -68,6 +102,29 @@
 
 **Indices vinculados:**
 - Tag: `AJUDIRD` Expressao: `CPF+STR(MES,2)`
+
+```mermaid
+erDiagram
+    ajudird {
+        C CPF
+        N MES
+        N NUMERO
+        N VALOR1
+        N VALOR2
+        N VALOR3
+        N VALOR5
+        N VALOR4
+        N VALOR6
+        N VALOR7
+        N VALUF1
+        N VALUF2
+        N VALUF3
+        N VALUF4
+        N VALUF5
+        N VALUF6
+        N VALUF7
+    }
+```
 
 ---
 ## Tabela DBF: `ajudirf`
@@ -96,6 +153,29 @@
 **Indices vinculados:**
 - Tag: `AJUDIRF` Expressao: `CPF+STR(MES,2)`
 
+```mermaid
+erDiagram
+    ajudirf {
+        C CPF
+        N MES
+        N NUMERO
+        N VALOR1
+        N VALOR2
+        N VALOR3
+        N VALOR5
+        N VALOR4
+        N VALOR6
+        N VALOR7
+        N VALUF1
+        N VALUF2
+        N VALUF3
+        N VALUF4
+        N VALUF5
+        N VALUF6
+        N VALUF7
+    }
+```
+
 ---
 ## Tabela DBF: `bcobak`
 > **Origem:** `bcobak` (Driver: DBFCDX)
@@ -116,6 +196,23 @@
 
 **Indices vinculados:**
 - Tag: `BCOBAK` Expressao: `STR(NUMERO,8)+STR(ANO,4)+STR(MES,2)`
+
+```mermaid
+erDiagram
+    bcobak {
+        N NUMERO
+        N ANO
+        N MES
+        N SALDO
+        N SALANT
+        N CREDITO
+        N DEBITO
+        N DIAANT
+        N DIACRE
+        N DIADEB
+        N DIASAL
+    }
+```
 
 ---
 ## Tabela DBF: `bcodek`
@@ -138,6 +235,23 @@
 **Indices vinculados:**
 - Tag: `BCODEK` Expressao: `STR(NUMERO,8)+STR(ANO,4)+STR(MES,2)`
 
+```mermaid
+erDiagram
+    bcodek {
+        N NUMERO
+        N ANO
+        N MES
+        N SALDO
+        N SALANT
+        N CREDITO
+        N DEBITO
+        N DIAANT
+        N DIACRE
+        N DIADEB
+        N DIASAL
+    }
+```
+
 ---
 ## Tabela DBF: `bcodem`
 > **Origem:** `bcodem` (Driver: DBFCDX)
@@ -158,6 +272,23 @@
 
 **Indices vinculados:**
 - Tag: `BCODEM` Expressao: `STR(NUMERO,8)+STR(ANO,4)+STR(MES,2)`
+
+```mermaid
+erDiagram
+    bcodem {
+        N NUMERO
+        N ANO
+        N MES
+        N SALDO
+        N SALANT
+        N CREDITO
+        N DEBITO
+        N DIAANT
+        N DIACRE
+        N DIADEB
+        N DIASAL
+    }
+```
 
 ---
 ## Tabela DBF: `bcohrs`
@@ -180,6 +311,23 @@
 **Indices vinculados:**
 - Tag: `BCOHRS` Expressao: `STR(NUMERO,8)+STR(ANO,4)+STR(MES,2)`
 
+```mermaid
+erDiagram
+    bcohrs {
+        N NUMERO
+        N ANO
+        N MES
+        N SALDO
+        N SALANT
+        N CREDITO
+        N DEBITO
+        N DIAANT
+        N DIACRE
+        N DIADEB
+        N DIASAL
+    }
+```
+
 ---
 ## Tabela DBF: `bcoreq`
 > **Origem:** `bcoreq` (Driver: DBFCDX)
@@ -194,6 +342,20 @@
 | DIAS | N | 6 | 2 |
 | OBS | C | 60 | 0 |
 | IMP | C | 6 | 0 |
+
+```mermaid
+erDiagram
+    bcoreq {
+        N REQUISI
+        N NUMERO
+        D DATA
+        C TIPO
+        N HORAS
+        N DIAS
+        C OBS
+        C IMP
+    }
+```
 
 ---
 ## Tabela DBF: `bcrbak`
@@ -213,6 +375,20 @@
 **Indices vinculados:**
 - Tag: `BCRBAK` Expressao: `REQUISI`
 
+```mermaid
+erDiagram
+    bcrbak {
+        N REQUISI
+        N NUMERO
+        D DATA
+        C TIPO
+        N HORAS
+        N DIAS
+        C OBS
+        C IMP
+    }
+```
+
 ---
 ## Tabela DBF: `cesta`
 > **Origem:** `cesta` (Driver: DBFCDX)
@@ -227,6 +403,17 @@
 
 **Indices vinculados:**
 - Tag: `CESTA` Expressao: `NUMERO`
+
+```mermaid
+erDiagram
+    cesta {
+        N NUMERO
+        C NOME
+        C CESTA
+        D ADMITIDO
+        C OBS
+    }
+```
 
 ---
 ## Tabela DBF: `ctrhor`
@@ -251,6 +438,26 @@
 
 **Indices vinculados:**
 - Tag: `CTRHOR` Expressao: `STR(ANO,4)+STR(MES,2)+STR(DEPTO,4)`
+
+```mermaid
+erDiagram
+    ctrhor {
+        N DEPTO
+        N SETOR
+        N SECAO
+        C NOMEC
+        N ANO
+        N MES
+        N QTFUN
+        N HRTRA
+        N HRDSR
+        N HRNJU
+        N HRJUS
+        N CCUSTO
+        C UNIFUN
+        C MODIRETO
+    }
+```
 
 ---
 ## Tabela DBF: `ferias`
@@ -287,6 +494,36 @@
 - Tag: `FERIAS01` Expressao: `NUMERO`
 - Tag: `FERIAS02` Expressao: `INIPER`
 - Tag: `FERIAS03` Expressao: `STR(NUMERO,8)+DTOS(INIPER)`
+
+```mermaid
+erDiagram
+    ferias {
+        N NUMERO
+        N DEPTO
+        N SECAO
+        N SETOR
+        C NOME
+        D ADMITIDO
+        N CCUSTO
+        C UNIFUN
+        C MODIRETA
+        N QTVEN
+        D INIPER
+        D FIMPER
+        D INIGOZ
+        D FIMGOZ
+        D INIPRG
+        D FIMPRG
+        N DEPSETSEC
+        C DENUNIFUN
+        C CNUMERO
+        N FUNCAO
+        C FUNNOME
+        C HTT
+        C SITUACAO
+        N SALADM
+    }
+```
 
 ---
 ## Tabela DBF: `foopes`
@@ -427,6 +664,136 @@
 - Tag: `FO_PES5` Expressao: `ordem`
 - Tag: `TEMP` Expressao: `PIS+DTOS(ADMITIDO)`
 
+```mermaid
+erDiagram
+    foopes {
+        N NUMERO
+        C CNUMERO
+        N DEPTO
+        N SECAO
+        N SETOR
+        N DEPSETSEC
+        N CHAPA
+        N ORDEM
+        C NOME
+        C ENDTIP
+        C ENDER
+        C ENDNUM
+        C ENDCOMPL
+        C BAIRRO
+        C IBGE
+        C CIDADE
+        C ESTADO
+        C CEP
+        C FONE
+        D NASC
+        C NASCIBGE
+        N ANONASCI
+        C NASCPAIS
+        N CIVIL
+        C ESTCIVIL
+        C ESCRAIS
+        C PAI
+        C MAE
+        C CPF
+        C PROFIS
+        D CTPSDATA
+        C CTPSUF
+        C SERIE
+        C PIS
+        C RGTIP
+        C RG
+        C RGUF
+        C RGEMIS
+        D RGDATA
+        D FGTS
+        D ADMITIDO
+        C TIPFGTS
+        C TIPO
+        N HRSEM
+        N FUNCAO
+        D DEMITIDO
+        C MOTIVO
+        D DATCONTSIN
+        N SINDICATO
+        C BANCO
+        C AGENCIA
+        C CONTA
+        C SOCIOSIND
+        C SITUACAO
+        C INSALUBRI
+        C PERICULO
+        D AVISOPREV
+        C ALTFGTS
+        C CONTAFGTS
+        N AVOSM
+        C SEXO
+        C ASSM
+        C ASSO
+        C HT
+        C FGTSMOT
+        N MOTIVODEM
+        C HTT
+        C EXCVALE
+        N VALEHORA
+        N SALVAR13S
+        C CNH
+        C CATCNH
+        D VALCNH
+        D EXPCNH
+        C OC
+        D OCVAL
+        D OCEXP
+        C OCEMI
+        D EXADAT
+        D EXAPRO
+        C CATEGORIA
+        C PGFGTS
+        C OCOFGTS
+        C EOCO
+        N VTDIAS
+        N CI
+        N CLASSE
+        N TOMADOR
+        C PGASSI
+        C RACS
+        C DEFICI
+        N CCUSTO
+        C UNIFUN
+        C MODIRETA
+        C CESTA
+        C VT
+        C EMAIL
+        C TITULO
+        C TITUZONA
+        C TITUSECA
+        C CNS
+        N NUMREGANT
+        N NUMEMPANT
+        D DATTRANSF
+        C ETADM
+        C EIADM
+        C E1ADM
+        C EREGI
+        C EPREV
+        C EVINC
+        C ELTRA
+        C ETJOR
+        C ETCOR
+        N SALADM
+        C APOSENT
+        D APOSEND
+        C RESERV
+        C RESECAT
+        C OCUF
+        C CELULAR
+        C RICUF
+        D RICEXP
+        C RIC
+        C RICEMI
+    }
+```
+
 ---
 ## Tabela DBF: `foptoatr`
 > **Origem:** `foptoatr` (Driver: DBFCDX)
@@ -450,6 +817,25 @@
 **Indices vinculados:**
 - Tag: `FOPTOATR` Expressao: `STR(NUMERO,8)+DTOS(DATA)+CODANL`
 
+```mermaid
+erDiagram
+    foptoatr {
+        N NUMERO
+        C NOME
+        D DATA
+        N ENT
+        N RENT
+        N SAI
+        N RSAI
+        C CODANL
+        C COD
+        C SOD
+        C BCOSN
+        C OBSATR
+        N HORXXX
+    }
+```
+
 ---
 ## Tabela DBF: `foptoeve`
 > **Origem:** `foptoeve` (Driver: DBFCDX)
@@ -467,6 +853,19 @@
 **Indices vinculados:**
 - Tag: `FOPTOEVE` Expressao: `STR(DIA,2)+STR(MES,2)`
 
+```mermaid
+erDiagram
+    foptoeve {
+        N DIA
+        N MES
+        C CODIGO
+        C DESCRICAO
+        C BCOSN
+        C REDSN
+        C FOLSN
+    }
+```
+
 ---
 ## Tabela DBF: `foptoprd`
 > **Origem:** `foptoprd` (Driver: DBFCDX)
@@ -480,6 +879,16 @@
 
 **Indices vinculados:**
 - Tag: `FOPTOPRD` Expressao: `STR(ORIGEM,8)+DTOS(DATA)`
+
+```mermaid
+erDiagram
+    foptoprd {
+        N ORIGEM
+        N DESTINO
+        D DATA
+        C NOME
+    }
+```
 
 ---
 ## Tabela DBF: `foptorev`
@@ -500,6 +909,25 @@
 | CODADC | C | 2 | 0 |
 | BCOSN | C | 1 | 0 |
 | HORARIO | N | 8 | 0 |
+
+```mermaid
+erDiagram
+    foptorev {
+        C GRUPO
+        D DATA
+        C CODREV
+        N ENTREV
+        N ALIREV
+        N ALSREV
+        N SAIREV
+        C VIRADA
+        N SEQ
+        C FOLGASN
+        C CODADC
+        C BCOSN
+        N HORARIO
+    }
+```
 
 ---
 ## Tabela DBF: `forais`
@@ -578,6 +1006,78 @@
 - Tag: `FORAIS` Expressao: `STR(ANO,4)+STR(NUMERO,8)`
 - Tag: `FORAIS-2` Expressao: `STR(ANO,4)+NOME`
 
+```mermaid
+erDiagram
+    forais {
+        N ANO
+        N NUMERO
+        C NOME
+        N RAIZJAN
+        N RAIZFEV
+        N RAIZMAR
+        N RAIZABR
+        N RAIZMAI
+        N RAIZJUN
+        N RAIZJUL
+        N RAIZAGO
+        N RAIZSET
+        N RAIZOUT
+        N RAIZNOV
+        N RAIZDEZ
+        N RAIZAVI
+        N SAL13_1
+        N MES_1
+        N SAL13_2
+        N MES_2
+        N RAIZFER
+        N RAIZACR
+        N RAIZGRA
+        N RAIZMUL
+        N RAIZBCH
+        N MESBCH
+        N MESACR
+        N MESGRA
+        C IBGECOD
+        N HORJAN
+        N HORFEV
+        N HORMAR
+        N HORABR
+        N HORMAI
+        N HORJUN
+        N HORJUL
+        N HORAGO
+        N HORSET
+        N HOROUT
+        N HORNOV
+        N HORDEZ
+        C CODAFA01
+        C INIAFA01
+        C FIMAFA01
+        C CODAFA02
+        C INIAFA02
+        C FIMAFA02
+        C CODAFA03
+        C INIAFA03
+        C FIMAFA03
+        N DIASAFA
+        C CGCSOC1
+        N VALSOC1
+        C CGCSOC2
+        N VALSOC2
+        C CGCSIN
+        N VALSIN
+        C CGCASS
+        N VALASS
+        C CGCCON
+        N VALCON
+        C RAISVINC
+        C RAISSITU
+        C RAISDEM
+        C ALVARA
+        C TIPOADM
+    }
+```
+
 ---
 ## Tabela DBF: `fosfam`
 > **Origem:** `fosfam` (Driver: DBFCDX)
@@ -622,6 +1122,44 @@
 - Tag: `FOSFAM-2` Expressao: `CPFTIT+CPF`
 - Tag: `FOSFAM-3` Expressao: `CPFTIT+NOME`
 
+```mermaid
+erDiagram
+    fosfam {
+        N REQUISI
+        N NUMERO
+        C NOME
+        D NASCTO
+        C LOCAL
+        C CARTORIO
+        C NREGIS
+        C LIVRO
+        C FOLHA
+        D ENTREGA
+        D BAIXA
+        C CNS
+        C IRRF
+        C SALFAM
+        C GRPA
+        C ESOCIAL
+        C NCARTORIO
+        C TERMO
+        C LOCALIBGE
+        C SEXO
+        C LOCALUF
+        C CPF
+        C CPFTIT
+        C VIVO
+        D CASAMENTO
+        C ESTCIVIL
+        C ESTUDO
+        C INVALIDEZ
+        C RG
+        C RGUF
+        C RGEMIS
+        D RGDATA
+    }
+```
+
 ---
 ## Tabela DBF: `fo_comp`
 > **Origem:** `fo_comp` (Driver: DBFCDX)
@@ -647,6 +1185,27 @@
 **Indices vinculados:**
 - Tag: `FO_COMP` Expressao: `CONTROLE`
 
+```mermaid
+erDiagram
+    fo_comp {
+        N NUMERO
+        N CONTA
+        N HORAS
+        N VALOR
+        N CONTROLE
+        N FATOR
+        N TRIBUTIRR
+        N TRIBUTINPS
+        N TRIB_FGTS
+        N TIPO
+        N VALORBASE
+        N VALORMES1
+        N VALORMES3
+        N MES1
+        N MES2
+    }
+```
+
 ---
 ## Tabela DBF: `fo_dio`
 > **Origem:** `fo_dio` (Driver: DBFCDX)
@@ -659,6 +1218,18 @@
 | RELOGIO | C | 5 | 0 |
 | TIPOM | C | 1 | 0 |
 | TIPOR | C | 1 | 0 |
+
+```mermaid
+erDiagram
+    fo_dio {
+        N NUMERO
+        D DATA
+        N HORA
+        C RELOGIO
+        C TIPOM
+        C TIPOR
+    }
+```
 
 ---
 ## Tabela DBF: `fo_exp`
@@ -685,6 +1256,28 @@
 
 **Indices vinculados:**
 - Tag: `FO_EXP` Expressao: `NUMERO`
+
+```mermaid
+erDiagram
+    fo_exp {
+        N DEPTO
+        N SETOR
+        N SECAO
+        N CHAPA
+        N NUMERO
+        C NOME
+        D ADMITIDO
+        N DIAS1
+        N DIAS2
+        D DATAFIM1
+        D DATAFIM2
+        C OBS1
+        C OBS2
+        C OBS3
+        C OBS4
+        C OBS5
+    }
+```
 
 ---
 ## Tabela DBF: `fo_fer`
@@ -741,6 +1334,57 @@
 **Indices vinculados:**
 - Tag: `FO_FER` Expressao: `CONTROLE`
 
+```mermaid
+erDiagram
+    fo_fer {
+        N DEPTO
+        N SECAO
+        N SETOR
+        N CHAPA
+        N NUMERO
+        N CONTROLE
+        D DATFERIAS
+        D DATFERIASF
+        N FALTAS
+        D GOZOU1DE
+        D GOZOU1ATE
+        D GOZOU2DE
+        D GOZOU2ATE
+        D PROGRAMA
+        D PROGRAMA1
+        N DIASJUS
+        N DIASPAGO
+        N DIASGOZA
+        C BAIXADO
+        D ABONO1DE
+        D ABONO1ATE
+        N DIASPAGO2
+        N DIASGOZA2
+        N DIASPAGO3
+        N DIASGOZA3
+        C NOME
+        D COMPDATAI
+        D COMPDATAF
+        N FA01
+        N FA02
+        N FA03
+        N FA04
+        N FA05
+        N FA06
+        N FA07
+        N FA08
+        N FA09
+        N FA10
+        N FA11
+        N FA12
+        N FA13
+        N SALVAR
+        N SALVARC
+        D COMPABOI
+        D COMPABOF
+    }
+```
+
 ---
 ## Tabela DBF: `fo_ffe`
 > **Origem:** `fo_ffe` (Driver: DBFCDX)
@@ -755,6 +1399,17 @@
 
 **Indices vinculados:**
 - Tag: `FO_FFE` Expressao: `CONTROLE`
+
+```mermaid
+erDiagram
+    fo_ffe {
+        N CONTA
+        N MES
+        N HORAS
+        N VALOR
+        N CONTROLE
+    }
+```
 
 ---
 ## Tabela DBF: `fo_fp13a`
@@ -777,6 +1432,23 @@
 **Indices vinculados:**
 - Tag: `FO_FP13A` Expressao: `CONTROLE`
 
+```mermaid
+erDiagram
+    fo_fp13a {
+        N NUMERO
+        N CONTA
+        N HORAS
+        N VALOR
+        N CONTROLE
+        N FATOR
+        N TRIBUTIRR
+        N TRIBUTINPS
+        N TRIB_FGTS
+        N TIPO
+        N VALORBASE
+    }
+```
+
 ---
 ## Tabela DBF: `fo_fp13b`
 > **Origem:** `fo_fp13b` (Driver: DBFCDX)
@@ -797,6 +1469,23 @@
 
 **Indices vinculados:**
 - Tag: `FO_FP13B` Expressao: `CONTROLE`
+
+```mermaid
+erDiagram
+    fo_fp13b {
+        N NUMERO
+        N CONTA
+        N HORAS
+        N VALOR
+        N CONTROLE
+        N FATOR
+        N TRIBUTIRR
+        N TRIBUTINPS
+        N TRIB_FGTS
+        N TIPO
+        N VALORBASE
+    }
+```
 
 ---
 ## Tabela DBF: `fo_fp13c`
@@ -819,6 +1508,23 @@
 **Indices vinculados:**
 - Tag: `FO_FP13C` Expressao: `CONTROLE`
 
+```mermaid
+erDiagram
+    fo_fp13c {
+        N NUMERO
+        N CONTA
+        N HORAS
+        N VALOR
+        N CONTROLE
+        N FATOR
+        N TRIBUTIRR
+        N TRIBUTINPS
+        N TRIB_FGTS
+        N TIPO
+        N VALORBASE
+    }
+```
+
 ---
 ## Tabela DBF: `fo_hor`
 > **Origem:** `fo_hor` (Driver: DBFCDX)
@@ -838,6 +1544,21 @@
 **Indices vinculados:**
 - Tag: `FO_HOR` Expressao: `NUMERO`
 
+```mermaid
+erDiagram
+    fo_hor {
+        N NUMERO
+        C NOME
+        C D1
+        C D2
+        C D3
+        C D4
+        C D5
+        C D6
+        C D7
+    }
+```
+
 ---
 ## Tabela DBF: `fo_ira`
 > **Origem:** `fo_ira` (Driver: DBFCDX)
@@ -855,6 +1576,20 @@
 
 **Indices vinculados:**
 - Tag: `FO_IRA` Expressao: `CONTROL2`
+
+```mermaid
+erDiagram
+    fo_ira {
+        N NUMERO
+        N CODREN
+        N MES
+        N VALOR
+        N VALUFIR
+        N CONTROLE
+        C CPF
+        C CONTROL2
+    }
+```
 
 ---
 ## Tabela DBF: `fo_ird`
@@ -874,6 +1609,20 @@
 **Indices vinculados:**
 - Tag: `FO_IRD` Expressao: `CONTROL2`
 
+```mermaid
+erDiagram
+    fo_ird {
+        N NUMERO
+        N CODREN
+        N MES
+        N VALOR
+        N VALUFIR
+        N CONTROLE
+        C CPF
+        C CONTROL2
+    }
+```
+
 ---
 ## Tabela DBF: `fo_irr`
 > **Origem:** `fo_irr` (Driver: DBFCDX)
@@ -891,6 +1640,20 @@
 
 **Indices vinculados:**
 - Tag: `FO_IRR` Expressao: `CONTROL2`
+
+```mermaid
+erDiagram
+    fo_irr {
+        N NUMERO
+        N CODREN
+        N MES
+        N VALOR
+        N VALUFIR
+        N CONTROLE
+        C CPF
+        C CONTROL2
+    }
+```
 
 ---
 ## Tabela DBF: `fo_oco`
@@ -929,6 +1692,39 @@
 **Indices vinculados:**
 - Tag: `FO_OCO` Expressao: `STR(NUMERO,8)+DTOS(DATASAIDA)`
 
+```mermaid
+erDiagram
+    fo_oco {
+        N NUMERO
+        D DATASAIDA
+        N PERIODOPAG
+        D DATARETORN
+        C CODIGO
+        C NOME
+        C TEM_13_SAL
+        N PRAZOMAXIM
+        N CONTA
+        N CONTROLE
+        C OBS
+        C OBS2
+        C NOMEF
+        D DATAFIM13S
+        D DATAFIMPAG
+        N DEPTO
+        N SETOR
+        N SECAO
+        N CHAPA
+        N VALPG
+        C ABTFGTS
+        C CODFGS
+        C CODFGR
+        C PGFGS
+        C PGFGR
+        N DIASS
+        N DIASR
+    }
+```
+
 ---
 ## Tabela DBF: `fo_pdes`
 > **Origem:** `fo_pdes` (Driver: DBFCDX)
@@ -941,6 +1737,18 @@
 | HORAS | N | 6 | 2 |
 | OBS | C | 60 | 0 |
 | HORA2 | N | 6 | 2 |
+
+```mermaid
+erDiagram
+    fo_pdes {
+        N NUMERO
+        D DATA
+        N CONTA
+        N HORAS
+        C OBS
+        N HORA2
+    }
+```
 
 ---
 ## Tabela DBF: `fo_pes`
@@ -1080,6 +1888,136 @@
 - Tag: `FO_PES4` Expressao: `PIS`
 - Tag: `FO_PES5` Expressao: `ORDEM`
 
+```mermaid
+erDiagram
+    fo_pes {
+        N NUMERO
+        C CNUMERO
+        N DEPTO
+        N SECAO
+        N SETOR
+        N DEPSETSEC
+        N CHAPA
+        N ORDEM
+        C NOME
+        C ENDTIP
+        C ENDER
+        C ENDNUM
+        C ENDCOMPL
+        C BAIRRO
+        C IBGE
+        C CIDADE
+        C ESTADO
+        C CEP
+        C FONE
+        D NASC
+        C NASCIBGE
+        N ANONASCI
+        C NASCPAIS
+        N CIVIL
+        C ESTCIVIL
+        C ESCRAIS
+        C PAI
+        C MAE
+        C CPF
+        C PROFIS
+        D CTPSDATA
+        C CTPSUF
+        C SERIE
+        C PIS
+        C RGTIP
+        C RG
+        C RGUF
+        C RGEMIS
+        D RGDATA
+        D FGTS
+        D ADMITIDO
+        C TIPFGTS
+        C TIPO
+        N HRSEM
+        N FUNCAO
+        D DEMITIDO
+        C MOTIVO
+        D DATCONTSIN
+        N SINDICATO
+        C BANCO
+        C AGENCIA
+        C CONTA
+        C SOCIOSIND
+        C SITUACAO
+        C INSALUBRI
+        C PERICULO
+        D AVISOPREV
+        C ALTFGTS
+        C CONTAFGTS
+        N AVOSM
+        C SEXO
+        C ASSM
+        C ASSO
+        C HT
+        C FGTSMOT
+        N MOTIVODEM
+        C HTT
+        C EXCVALE
+        N VALEHORA
+        N SALVAR13S
+        C CNH
+        C CATCNH
+        D VALCNH
+        D EXPCNH
+        C OC
+        D OCVAL
+        D OCEXP
+        C OCEMI
+        D EXADAT
+        D EXAPRO
+        C CATEGORIA
+        C PGFGTS
+        C OCOFGTS
+        C EOCO
+        N VTDIAS
+        N CI
+        N CLASSE
+        N TOMADOR
+        C PGASSI
+        C RACS
+        C DEFICI
+        N CCUSTO
+        C UNIFUN
+        C MODIRETA
+        C CESTA
+        C VT
+        C EMAIL
+        C TITULO
+        C TITUZONA
+        C TITUSECA
+        C CNS
+        N NUMREGANT
+        N NUMEMPANT
+        D DATTRANSF
+        C ETADM
+        C EIADM
+        C E1ADM
+        C EREGI
+        C EPREV
+        C EVINC
+        C ELTRA
+        C ETJOR
+        C ETCOR
+        N SALADM
+        C APOSENT
+        D APOSEND
+        C RESERV
+        C RESECAT
+        C OCUF
+        C CELULAR
+        C RICUF
+        D RICEXP
+        C RIC
+        C RICEMI
+    }
+```
+
 ---
 ## Tabela DBF: `fo_pfe`
 > **Origem:** `fo_pfe` (Driver: DBFCDX)
@@ -1106,6 +2044,28 @@
 **Indices vinculados:**
 - Tag: `FO_PFE` Expressao: `CONTROLE`
 
+```mermaid
+erDiagram
+    fo_pfe {
+        N NUMERO
+        N CONTA
+        N HORAS
+        N VALOR
+        N CONTROLE
+        N FATOR
+        N TRIBUTIRR
+        N TRIBUTINPS
+        N TRIB_FGTS
+        N TIPO
+        N VALORBASE
+        N VALORMES1
+        N VALORMES2
+        N MES1
+        N MES2
+        D DATACOMP
+    }
+```
+
 ---
 ## Tabela DBF: `fo_phor`
 > **Origem:** `fo_phor` (Driver: DBFCDX)
@@ -1118,6 +2078,18 @@
 | OCOCOD | C | 2 | 0 |
 | OCOMOT | C | 60 | 0 |
 | MOTIVO | N | 8 | 0 |
+
+```mermaid
+erDiagram
+    fo_phor {
+        N NUMERO
+        D OCOINI
+        D OCOFIM
+        C OCOCOD
+        C OCOMOT
+        N MOTIVO
+    }
+```
 
 ---
 ## Tabela DBF: `fo_pman`
@@ -1135,6 +2107,22 @@
 | MOTOCO | C | 60 | 0 |
 | MOTIVO | N | 8 | 0 |
 | ZERHOR | C | 1 | 0 |
+
+```mermaid
+erDiagram
+    fo_pman {
+        N NUMERO
+        D DATOCO
+        N HOROCO
+        N HOROC2
+        N HOROC3
+        N HOROC4
+        C TIPOCO
+        C MOTOCO
+        N MOTIVO
+        C ZERHOR
+    }
+```
 
 ---
 ## Tabela DBF: `fo_poco`
@@ -1160,6 +2148,30 @@
 | HRRELDEC | N | 6 | 2 |
 | HRABODEC | N | 6 | 2 |
 | MOTIVO | N | 8 | 0 |
+
+```mermaid
+erDiagram
+    fo_poco {
+        N NUMERO
+        D OCOINI
+        D OCOFIM
+        C OCOCOD
+        C OCOMOT
+        C OCOSUB
+        C OCOBCO
+        C OCORED
+        C OCOFOL
+        C OCOEXT
+        C OCOALM
+        N HRREL
+        C CESTA
+        C ABONA
+        N HRABO
+        N HRRELDEC
+        N HRABODEC
+        N MOTIVO
+    }
+```
 
 ---
 ## Tabela DBF: `fo_pon`
@@ -1209,6 +2221,54 @@
 | MUDALE | C | 1 | 0 |
 | MUDHOR | C | 1 | 0 |
 | HORARIO | N | 8 | 0 |
+
+```mermaid
+erDiagram
+    fo_pon {
+        N NUMERO
+        D DATA
+        N ENT
+        N ALS
+        N ALE
+        N SAI
+        C COD
+        C SOD
+        C ALMOCO
+        C CODREV
+        N ENTREV
+        N ALIREV
+        N ALSREV
+        N SAIREV
+        N CTA01
+        N CTA02
+        N CTA03
+        N CTA04
+        N CTA05
+        N CTA06
+        N CTA07
+        N CTA08
+        N CTA09
+        N CTA10
+        N CTA11
+        N CTA12
+        N CTA13
+        N CTA14
+        N CTA15
+        N CTA16
+        C BCOSN
+        N BCOHRS
+        C REDSN
+        C FOLSN
+        C EXTSN
+        C VIRADA
+        C MUDENT
+        C MUDSAI
+        C MUDALS
+        C MUDALE
+        C MUDHOR
+        N HORARIO
+    }
+```
 
 ---
 ## Tabela DBF: `fo_pos`
@@ -1272,6 +2332,67 @@
 | MES | N | 2 | 0 |
 | ANO | N | 4 | 0 |
 
+```mermaid
+erDiagram
+    fo_pos {
+        N NUMERO
+        C NOME
+        D SEMINI
+        D SEMFIM
+        N CTA01
+        N CTA02
+        N CTA03
+        N CTA04
+        N CTA05
+        N CTA06
+        N CTA07
+        N CTA08
+        N CTA09
+        N CTA10
+        N CTA11
+        N CTA12
+        N CTA13
+        N CTA14
+        N CTA15
+        N CTA16
+        N CTA17
+        N CTA18
+        N CTA19
+        N CTA20
+        N CTA21
+        N CTA22
+        N CTA23
+        N CTA24
+        N VAL01
+        N VAL02
+        N VAL03
+        N VAL04
+        N VAL05
+        N VAL06
+        N VAL07
+        N VAL08
+        N VAL09
+        N VAL10
+        N VAL11
+        N VAL12
+        N VAL13
+        N VAL14
+        N VAL15
+        N VAL16
+        N VAL17
+        N VAL18
+        N VAL19
+        N VAL20
+        N VAL21
+        N VAL22
+        N VAL23
+        N VAL24
+        N BCOHRS
+        N MES
+        N ANO
+    }
+```
+
 ---
 ## Tabela DBF: `fo_pot`
 > **Origem:** `fo_pot` (Driver: DBFCDX)
@@ -1332,6 +2453,65 @@
 | VAL24 | N | 12 | 2 |
 | BCOHRS | N | 7 | 2 |
 
+```mermaid
+erDiagram
+    fo_pot {
+        N NUMERO
+        C NOME
+        N MES
+        N ANO
+        N CTA01
+        N CTA02
+        N CTA03
+        N CTA04
+        N CTA05
+        N CTA06
+        N CTA07
+        N CTA08
+        N CTA09
+        N CTA10
+        N CTA11
+        N CTA12
+        N CTA13
+        N CTA14
+        N CTA15
+        N CTA16
+        N CTA17
+        N CTA18
+        N CTA19
+        N CTA20
+        N CTA21
+        N CTA22
+        N CTA23
+        N CTA24
+        N VAL01
+        N VAL02
+        N VAL03
+        N VAL04
+        N VAL05
+        N VAL06
+        N VAL07
+        N VAL08
+        N VAL09
+        N VAL10
+        N VAL11
+        N VAL12
+        N VAL13
+        N VAL14
+        N VAL15
+        N VAL16
+        N VAL17
+        N VAL18
+        N VAL19
+        N VAL20
+        N VAL21
+        N VAL22
+        N VAL23
+        N VAL24
+        N BCOHRS
+    }
+```
+
 ---
 ## Tabela DBF: `fo_psl`
 > **Origem:** `fo_psl` (Driver: DBFCDX)
@@ -1350,6 +2530,21 @@
 
 **Indices vinculados:**
 - Tag: `FO_PSL` Expressao: `NUMERO`
+
+```mermaid
+erDiagram
+    fo_psl {
+        N NUMERO
+        C NOME
+        D ADMITIDO
+        C FUNCAO
+        N SALANT
+        N SALATU
+        N SALPRO
+        N TAXA1
+        N TAXA2
+    }
+```
 
 ---
 ## Tabela DBF: `fo_ptt`
@@ -1398,6 +2593,49 @@
 **Indices vinculados:**
 - Tag: `FO_PTT` Expressao: `STR(NUMERO,8)+STR(ANO,4)+STR(MES,2)`
 
+```mermaid
+erDiagram
+    fo_ptt {
+        N NUMERO
+        C NOME
+        N MES
+        N ANO
+        N CTA01
+        N CTA02
+        N CTA03
+        N CTA04
+        N CTA05
+        N CTA06
+        N CTA07
+        N CTA08
+        N CTA09
+        N CTA10
+        N CTA11
+        N CTA12
+        N CTA13
+        N CTA14
+        N CTA15
+        N CTA16
+        N VAL01
+        N VAL02
+        N VAL03
+        N VAL04
+        N VAL05
+        N VAL06
+        N VAL07
+        N VAL08
+        N VAL09
+        N VAL10
+        N VAL11
+        N VAL12
+        N VAL13
+        N VAL14
+        N VAL15
+        N VAL16
+        N BCOHRS
+    }
+```
+
 ---
 ## Tabela DBF: `fo_rdd`
 > **Origem:** `fo_rdd` (Driver: DBFCDX)
@@ -1413,6 +2651,18 @@
 
 **Indices vinculados:**
 - Tag: `FO_RDD` Expressao: `CONTROLE`
+
+```mermaid
+erDiagram
+    fo_rdd {
+        N NUMERO
+        N CONTA
+        N MES
+        N HORAS
+        N VALOR
+        N CONTROLE
+    }
+```
 
 ---
 ## Tabela DBF: `fo_relhr`
@@ -1434,6 +2684,22 @@
 **Indices vinculados:**
 - Tag: `FO_RELHR` Expressao: `NUMERO`
 
+```mermaid
+erDiagram
+    fo_relhr {
+        N NUMERO
+        C NOME
+        C HFOL00
+        C GRUPO
+        C ALMOCO
+        C PADRAO
+        C HORREF
+        C MARALM
+        C MARMES
+        D DATAREF1
+    }
+```
+
 ---
 ## Tabela DBF: `fo_res`
 > **Origem:** `fo_res` (Driver: DBFCDX)
@@ -1449,6 +2715,18 @@
 
 **Indices vinculados:**
 - Tag: `FO_RES` Expressao: `CONTROLE`
+
+```mermaid
+erDiagram
+    fo_res {
+        N NUMERO
+        N CONTA
+        N MES
+        N HORAS
+        N VALOR
+        N CONTROLE
+    }
+```
 
 ---
 ## Tabela DBF: `fo_rss`
@@ -1474,6 +2752,27 @@
 
 **Indices vinculados:**
 - Tag: `FO_RSS` Expressao: `CONTROLE`
+
+```mermaid
+erDiagram
+    fo_rss {
+        N NUMERO
+        N CONTA
+        N HORAS
+        N VALOR
+        N CONTROLE
+        N FATOR
+        N TRIBUTIRR
+        N TRIBUTINPS
+        N TRIB_FGTS
+        N TIPO
+        N VALORBASE
+        N MES1
+        N VALORMES1
+        N MES2
+        N VALORMES2
+    }
+```
 
 ---
 ## Tabela DBF: `fo_sal`
@@ -1511,6 +2810,38 @@
 **Indices vinculados:**
 - Tag: `FO_SAL` Expressao: `STR(NUMERO,8)+STR(ANO,4)`
 
+```mermaid
+erDiagram
+    fo_sal {
+        N NUMERO
+        N ANO
+        N SALJAN
+        C MOT1
+        N SALFEV
+        C MOT2
+        N SALMAR
+        C MOT3
+        N SALABR
+        C MOT4
+        N SALMAI
+        C MOT5
+        N SALJUN
+        C MOT6
+        N SALJUL
+        C MOT7
+        N SALAGO
+        C MOT8
+        N SALSET
+        C MOT9
+        N SALOUT
+        C MOT10
+        N SALNOV
+        C MOT11
+        N SALDEZ
+        C MOT12
+    }
+```
+
 ---
 ## Tabela DBF: `fo_var`
 > **Origem:** `fo_var` (Driver: DBFCDX)
@@ -1532,6 +2863,24 @@
 
 **Indices vinculados:**
 - Tag: `FO_VAR` Expressao: `CONTROLE`
+
+```mermaid
+erDiagram
+    fo_var {
+        N NUMERO
+        N CONTA
+        N HORAS
+        N VALOR
+        N TIPO
+        N CONTROLE
+        N VARFER
+        N VARRES
+        N VAR13S
+        N NIVFER
+        N NIVRES
+        N NIV13S
+    }
+```
 
 ---
 ## Tabela DBF: `fo_vbr`
@@ -1555,6 +2904,24 @@
 **Indices vinculados:**
 - Tag: `FO_VBR` Expressao: `CONTROLE`
 
+```mermaid
+erDiagram
+    fo_vbr {
+        N NUMERO
+        N CONTA
+        N HORAS
+        N VALOR
+        N TIPO
+        N CONTROLE
+        N VARFER
+        N VARRES
+        N VAR13S
+        N NIVFER
+        N NIVRES
+        N NIV13S
+    }
+```
+
 ---
 ## Tabela DBF: `fp000100`
 > **Origem:** `fp000100` (Driver: DBFCDX)
@@ -1572,6 +2939,23 @@
 | TRIB_FGTS | N | 1 | 0 |
 | TIPO | N | 1 | 0 |
 | VALORBASE | N | 10 | 2 |
+
+```mermaid
+erDiagram
+    fp000100 {
+        N NUMERO
+        N CONTA
+        N HORAS
+        N VALOR
+        N CONTROLE
+        N FATOR
+        N TRIBUTIRR
+        N TRIBUTINPS
+        N TRIB_FGTS
+        N TIPO
+        N VALORBASE
+    }
+```
 
 ---
 ## Tabela DBF: `fp000101`
@@ -1591,6 +2975,23 @@
 | TIPO | N | 1 | 0 |
 | VALORBASE | N | 10 | 2 |
 
+```mermaid
+erDiagram
+    fp000101 {
+        N NUMERO
+        N CONTA
+        N HORAS
+        N VALOR
+        N CONTROLE
+        N FATOR
+        N TRIBUTIRR
+        N TRIBUTINPS
+        N TRIB_FGTS
+        N TIPO
+        N VALORBASE
+    }
+```
+
 ---
 ## Tabela DBF: `fp000102`
 > **Origem:** `fp000102` (Driver: DBFCDX)
@@ -1608,6 +3009,23 @@
 | TRIB_FGTS | N | 1 | 0 |
 | TIPO | N | 1 | 0 |
 | VALORBASE | N | 10 | 2 |
+
+```mermaid
+erDiagram
+    fp000102 {
+        N NUMERO
+        N CONTA
+        N HORAS
+        N VALOR
+        N CONTROLE
+        N FATOR
+        N TRIBUTIRR
+        N TRIBUTINPS
+        N TRIB_FGTS
+        N TIPO
+        N VALORBASE
+    }
+```
 
 ---
 ## Tabela DBF: `fp000103`
@@ -1627,6 +3045,23 @@
 | TIPO | N | 1 | 0 |
 | VALORBASE | N | 10 | 2 |
 
+```mermaid
+erDiagram
+    fp000103 {
+        N NUMERO
+        N CONTA
+        N HORAS
+        N VALOR
+        N CONTROLE
+        N FATOR
+        N TRIBUTIRR
+        N TRIBUTINPS
+        N TRIB_FGTS
+        N TIPO
+        N VALORBASE
+    }
+```
+
 ---
 ## Tabela DBF: `fp000104`
 > **Origem:** `fp000104` (Driver: DBFCDX)
@@ -1644,6 +3079,23 @@
 | TRIB_FGTS | N | 1 | 0 |
 | TIPO | N | 1 | 0 |
 | VALORBASE | N | 10 | 2 |
+
+```mermaid
+erDiagram
+    fp000104 {
+        N NUMERO
+        N CONTA
+        N HORAS
+        N VALOR
+        N CONTROLE
+        N FATOR
+        N TRIBUTIRR
+        N TRIBUTINPS
+        N TRIB_FGTS
+        N TIPO
+        N VALORBASE
+    }
+```
 
 ---
 ## Tabela DBF: `fp000105`
@@ -1663,6 +3115,23 @@
 | TIPO | N | 1 | 0 |
 | VALORBASE | N | 10 | 2 |
 
+```mermaid
+erDiagram
+    fp000105 {
+        N NUMERO
+        N CONTA
+        N HORAS
+        N VALOR
+        N CONTROLE
+        N FATOR
+        N TRIBUTIRR
+        N TRIBUTINPS
+        N TRIB_FGTS
+        N TIPO
+        N VALORBASE
+    }
+```
+
 ---
 ## Tabela DBF: `fp000106`
 > **Origem:** `fp000106` (Driver: DBFCDX)
@@ -1680,6 +3149,23 @@
 | TRIB_FGTS | N | 1 | 0 |
 | TIPO | N | 1 | 0 |
 | VALORBASE | N | 10 | 2 |
+
+```mermaid
+erDiagram
+    fp000106 {
+        N NUMERO
+        N CONTA
+        N HORAS
+        N VALOR
+        N CONTROLE
+        N FATOR
+        N TRIBUTIRR
+        N TRIBUTINPS
+        N TRIB_FGTS
+        N TIPO
+        N VALORBASE
+    }
+```
 
 ---
 ## Tabela DBF: `fp000107`
@@ -1699,6 +3185,23 @@
 | TIPO | N | 1 | 0 |
 | VALORBASE | N | 10 | 2 |
 
+```mermaid
+erDiagram
+    fp000107 {
+        N NUMERO
+        N CONTA
+        N HORAS
+        N VALOR
+        N CONTROLE
+        N FATOR
+        N TRIBUTIRR
+        N TRIBUTINPS
+        N TRIB_FGTS
+        N TIPO
+        N VALORBASE
+    }
+```
+
 ---
 ## Tabela DBF: `fp000108`
 > **Origem:** `fp000108` (Driver: DBFCDX)
@@ -1716,6 +3219,23 @@
 | TRIB_FGTS | N | 1 | 0 |
 | TIPO | N | 1 | 0 |
 | VALORBASE | N | 10 | 2 |
+
+```mermaid
+erDiagram
+    fp000108 {
+        N NUMERO
+        N CONTA
+        N HORAS
+        N VALOR
+        N CONTROLE
+        N FATOR
+        N TRIBUTIRR
+        N TRIBUTINPS
+        N TRIB_FGTS
+        N TIPO
+        N VALORBASE
+    }
+```
 
 ---
 ## Tabela DBF: `fp000109`
@@ -1735,6 +3255,23 @@
 | TIPO | N | 1 | 0 |
 | VALORBASE | N | 10 | 2 |
 
+```mermaid
+erDiagram
+    fp000109 {
+        N NUMERO
+        N CONTA
+        N HORAS
+        N VALOR
+        N CONTROLE
+        N FATOR
+        N TRIBUTIRR
+        N TRIBUTINPS
+        N TRIB_FGTS
+        N TIPO
+        N VALORBASE
+    }
+```
+
 ---
 ## Tabela DBF: `fp000110`
 > **Origem:** `fp000110` (Driver: DBFCDX)
@@ -1752,6 +3289,23 @@
 | TRIB_FGTS | N | 1 | 0 |
 | TIPO | N | 1 | 0 |
 | VALORBASE | N | 10 | 2 |
+
+```mermaid
+erDiagram
+    fp000110 {
+        N NUMERO
+        N CONTA
+        N HORAS
+        N VALOR
+        N CONTROLE
+        N FATOR
+        N TRIBUTIRR
+        N TRIBUTINPS
+        N TRIB_FGTS
+        N TIPO
+        N VALORBASE
+    }
+```
 
 ---
 ## Tabela DBF: `fp000111`
@@ -1771,6 +3325,23 @@
 | TIPO | N | 1 | 0 |
 | VALORBASE | N | 10 | 2 |
 
+```mermaid
+erDiagram
+    fp000111 {
+        N NUMERO
+        N CONTA
+        N HORAS
+        N VALOR
+        N CONTROLE
+        N FATOR
+        N TRIBUTIRR
+        N TRIBUTINPS
+        N TRIB_FGTS
+        N TIPO
+        N VALORBASE
+    }
+```
+
 ---
 ## Tabela DBF: `fp000112`
 > **Origem:** `fp000112` (Driver: DBFCDX)
@@ -1789,6 +3360,23 @@
 | TIPO | N | 1 | 0 |
 | VALORBASE | N | 10 | 2 |
 
+```mermaid
+erDiagram
+    fp000112 {
+        N NUMERO
+        N CONTA
+        N HORAS
+        N VALOR
+        N CONTROLE
+        N FATOR
+        N TRIBUTIRR
+        N TRIBUTINPS
+        N TRIB_FGTS
+        N TIPO
+        N VALORBASE
+    }
+```
+
 ---
 ## Tabela DBF: `htttroca`
 > **Origem:** `htttroca` (Driver: DBFCDX)
@@ -1803,6 +3391,17 @@
 
 **Indices vinculados:**
 - Tag: `HTTTROCA` Expressao: `NUMERO`
+
+```mermaid
+erDiagram
+    htttroca {
+        N NUMERO
+        C DATA
+        C HORA
+        C ANT
+        C HTT
+    }
+```
 
 ---
 ## Tabela DBF: `irrf`
@@ -1847,6 +3446,45 @@
 **Indices vinculados:**
 - Tag: `IRRF` Expressao: `CPF`
 
+```mermaid
+erDiagram
+    irrf {
+        C CGC
+        C CPF
+        C NOME
+        N V401
+        N V402
+        N V403
+        N V404
+        N V407
+        N V405
+        N V501
+        N V502
+        N V503
+        N V504
+        N V505
+        N V506
+        N V507
+        N V611
+        N V612
+        N V613
+        N V614
+        N V615
+        N V617
+        C OBS01
+        C OBS02
+        C OBS03
+        C OBS04
+        C OBS05
+        N V601
+        N V602
+        N V603
+        N V604
+        N V605
+        N V607
+    }
+```
+
 ---
 ## Tabela DBF: `irrf01`
 > **Origem:** `irrf01` (Driver: DBFCDX)
@@ -1871,6 +3509,26 @@
 **Indices vinculados:**
 - Tag: `IRRF01` Expressao: `NUMERO`
 
+```mermaid
+erDiagram
+    irrf01 {
+        N NUMERO
+        C DOCUMENTO
+        N ANO
+        C CGC
+        C PESSOA
+        C NOME
+        C ENDERECO
+        C BAIRRO
+        C CIDADE
+        C ESTADO
+        C CEP
+        C DDD
+        C TELEFONE
+        C CONTATO
+    }
+```
+
 ---
 ## Tabela DBF: `irrf02`
 > **Origem:** `irrf02` (Driver: DBFCDX)
@@ -1888,6 +3546,20 @@
 
 **Indices vinculados:**
 - Tag: `IRRF02` Expressao: `STR(NUMERO,8)+STR(ITEM,2)`
+
+```mermaid
+erDiagram
+    irrf02 {
+        N NUMERO
+        N ITEM
+        N MES
+        C DARF
+        C NATUREZA
+        N RENDA
+        N ALIQUOTA
+        N IRRF
+    }
+```
 
 ---
 ## Tabela DBF: `prov13`
@@ -1912,6 +3584,26 @@
 
 **Indices vinculados:**
 - Tag: `PROV13` Expressao: `STRZERO(NUMERO,8)+STRZERO(ANO,4)+STRZERO(MES,2)`
+
+```mermaid
+erDiagram
+    prov13 {
+        N NUMERO
+        N SALARIO
+        N SALVAR
+        N AVOS
+        N VALOR
+        N VALENC
+        N VALTOT
+        N VALPRI
+        N VALLIQ
+        N MES
+        N ANO
+        N DEPTO
+        N SETOR
+        N SECAO
+    }
+```
 
 ---
 ## Tabela DBF: `provfe`
@@ -1938,6 +3630,28 @@
 
 **Indices vinculados:**
 - Tag: `PROVFE` Expressao: `CONTROLE`
+
+```mermaid
+erDiagram
+    provfe {
+        N NUMERO
+        D COMP
+        N SALARIO
+        N SALVAR
+        N AVOS
+        N DIAS
+        N VALOR
+        N VALTER
+        N VALENC
+        N VALTOT
+        N MES
+        N ANO
+        N DEPTO
+        N SETOR
+        N SECAO
+        C CONTROLE
+    }
+```
 
 ---
 ## Tabela DBF: `resfor`
@@ -2031,6 +3745,94 @@
 **Indices vinculados:**
 - Tag: `RESFOR` Expressao: `NUMERO`
 
+```mermaid
+erDiagram
+    resfor {
+        N NUMERO
+        N VAL29
+        N HOR29
+        N VAL30
+        N HOR30
+        N VAL31
+        N HOR31
+        N VAL32
+        N HOR32
+        N VAL33
+        N HOR33
+        N VAL34
+        N HOR34
+        N VAL35
+        N HOR35
+        N VAL36
+        N HOR36
+        N VAL37
+        N HOR37
+        N VAL38
+        N HOR38
+        N VAL39
+        N HOR39
+        N VAL40
+        N HOR40
+        N VAL41
+        N HOR41
+        N VAL42
+        N HOR42
+        N VAL43
+        N HOR43
+        N VAL44
+        N HOR44
+        N VAL45
+        N HOR45
+        N VAL46
+        N HOR46
+        N VAL47
+        N HOR47
+        N VAL48
+        N HOR48
+        N VAL49
+        N HOR49
+        N VAL50
+        N HOR50
+        N VAL51
+        N HOR51
+        N VAL52
+        N HOR52
+        N VAL53
+        N HOR53
+        N VAL54
+        N HOR54
+        N VAL55
+        N HOR55
+        C DES29
+        C DES30
+        C DES31
+        C DES32
+        C DES33
+        C DES34
+        C DES35
+        C DES36
+        C DES37
+        C DES38
+        C DES39
+        C DES40
+        C DES41
+        C DES42
+        C DES43
+        C DES44
+        C DES45
+        C DES46
+        C DES47
+        C DES48
+        C DES49
+        C DES50
+        C DES51
+        C DES52
+        C DES53
+        C DES54
+        C DES55
+    }
+```
+
 ---
 ## Tabela DBF: `vtavul`
 > **Origem:** `vtavul` (Driver: DBFCDX)
@@ -2045,6 +3847,17 @@
 
 **Indices vinculados:**
 - Tag: `VTAVUL` Expressao: `CONTROLE`
+
+```mermaid
+erDiagram
+    vtavul {
+        N NUMERO
+        N CONTA
+        N HORAS
+        N VALOR
+        N CONTROLE
+    }
+```
 
 ---
 ## Tabela DBF: `vtfixo`
@@ -2062,6 +3875,18 @@
 **Indices vinculados:**
 - Tag: `VTFIXO` Expressao: `STR(NUMERO,8)+STR(CONTA,4)+STR(CTACOM,4)`
 
+```mermaid
+erDiagram
+    vtfixo {
+        N NUMERO
+        N CONTA
+        N HORAS
+        N VALOR
+        N CONTROLE
+        N CTACOM
+    }
+```
+
 ---
 ## Tabela DBF: `vtfolha`
 > **Origem:** `vtfolha` (Driver: DBFCDX)
@@ -2076,5 +3901,16 @@
 
 **Indices vinculados:**
 - Tag: `VTFOLHA` Expressao: `CONTROLE`
+
+```mermaid
+erDiagram
+    vtfolha {
+        N NUMERO
+        N CONTA
+        N HORAS
+        N VALOR
+        N CONTROLE
+    }
+```
 
 ---

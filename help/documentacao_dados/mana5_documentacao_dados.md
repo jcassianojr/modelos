@@ -1,5 +1,5 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 03/08/2026
+> Varredura automatica realizada em: 09/09/2026
 
 ## Tabela DBF: `configu`
 > **Origem:** `configu` (Driver: DBFCDX)
@@ -31,6 +31,37 @@
 | INXCGCMB | N | 1 | 0 |
 | RECCOM | N | 8 | 0 |
 | DRIVER | C | 8 | 0 |
+
+```mermaid
+erDiagram
+    configu {
+        C HELP
+        C ARQ
+        C ARQ1
+        C DIRC
+        C DIRI
+        C DIRP
+        C DIRE
+        C DIRB
+        C DIRA
+        C MOEDA01
+        C MOEDA02
+        C MOEDA03
+        C MOEDA04
+        C MOEDA05
+        C MOEDA06
+        C MANUAL
+        C ACHESC
+        C ARQHIS
+        C MULTIEMP
+        C ARQFON
+        C IMPPAD
+        N INXCGCMA
+        N INXCGCMB
+        N RECCOM
+        C DRIVER
+    }
+```
 
 ---
 ## Tabela DBF: `manemp`
@@ -117,6 +148,87 @@
 **Indices vinculados:**
 - Tag: `MANEMP` Expressao: `NUMERO`
 
+```mermaid
+erDiagram
+    manemp {
+        N NUMERO
+        C COGNOME
+        C NOME
+        C ENDERECO
+        C BAIRRO
+        C CIDADE
+        C ESTADO
+        C CEP
+        C CXPOSTAL
+        C DDD
+        C TELEFONE
+        C RAMAL
+        C CONTATO
+        C DDD1
+        C TELEFONE1
+        C RAMAL1
+        C CONTATO1
+        C DDDFAX
+        C TELEFAX
+        C PESSOA
+        C CGC
+        C INSCR
+        N CUSFRETE
+        N MEDIA
+        N NIVEL1
+        N NIVEL2
+        N NIVEL3
+        N NIVEL4
+        N NIVEL5
+        N NIVEL6
+        N NIVEL7
+        N NIVEL8
+        N NIVEL9
+        C REDUZIDO
+        N BATE
+        N POSI
+        N LANC
+        N CO01
+        N CO02
+        N CO03
+        N CO04
+        N CO05
+        N CO06
+        N CO07
+        N CO08
+        N CO09
+        N CO10
+        C JUCESPC
+        D JUCESPD
+        C IMUNICI
+        N PEDCOM
+        C OBJLIN1
+        C OBJLIN2
+        C OBJLIN3
+        C OBJLIN4
+        C OBJLIN5
+        D DATAUB
+        D DATAUP
+        D DATAE
+        N RECCOM
+        N RNC
+        N RACF
+        N CRM
+        C CONTMA01
+        C CONTMB01
+        C CONTMA01D
+        C CONTMB01D
+        N PERPIS
+        N PERFIN
+        C SITE
+        C EMAIL
+        C RESPF
+        C CARGOR
+        C CODEMPMIG
+        C IMGCON
+    }
+```
+
 ---
 ## Tabela DBF: `manhel`
 > **Origem:** `manhel` (Driver: DBFCDX)
@@ -134,5 +246,19 @@
 
 **Indices vinculados:**
 - Tag: `MANHEL` Expressao: `DBF+CAMPO`
+
+```mermaid
+erDiagram
+    manhel {
+        C DBF
+        C CAMPO
+        C DADO
+        C ARQUIVO
+        M DESCRICAO
+        N SEQ
+        C PRELAN
+        C CONDICAO
+    }
+```
 
 ---

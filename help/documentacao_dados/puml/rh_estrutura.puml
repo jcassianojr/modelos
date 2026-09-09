@@ -1,0 +1,346 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "curemi" as curemi {
+  NUMERO : integer
+  CURSO : varchar(20)
+  DESCUR : varchar(120)
+  --
+  .. Índices ..
+  + CUREMI : STR(NUMERO,5)+CURSO
+}
+
+entity "curemp" as curemp {
+  NUMERO : integer
+  COGNOME : varchar(15)
+  NOME : varchar(40)
+  ENDERECO : varchar(40)
+  BAIRRO : varchar(30)
+  CIDADE : varchar(30)
+  ESTADO : varchar(2)
+  CEP : varchar(9)
+  DDD : varchar(2)
+  TELEFONE : varchar(12)
+  RAMAL : varchar(4)
+  CONTATO : varchar(22)
+  DDDFAX : varchar(2)
+  TELEFAX : varchar(12)
+  CGC : varchar(18)
+  IESTADUAL : varchar(16)
+  DDD1 : varchar(2)
+  TELEFONE1 : varchar(12)
+  RAMAL1 : varchar(4)
+  CONTATO1 : varchar(22)
+  PESSOA : varchar(1)
+  SITE : varchar(30)
+  EMAIL : varchar(30)
+  --
+  .. Índices ..
+  + CUREMP : NUMERO
+  + CUREMP-2 : COGNOME
+}
+
+entity "curgrp" as curgrp {
+  GRUPO : varchar(5)
+  NOME : varchar(40)
+  --
+  .. Índices ..
+  + CURGRP : GRUPO
+}
+
+entity "curso" as curso {
+  CURSO : varchar(20)
+  GRUPO : varchar(5)
+  DESCUR : varchar(120)
+  CARGA : decimal(8,2)
+  CERT : varchar(1)
+  TIPCUR : varchar(1)
+  --
+  .. Índices ..
+  + CURSO : CURSO
+  + CURSO-2 : DESCUR
+  + CURSO-3 : GRUPO+CURSO
+}
+
+entity "mp02c" as mp02c {
+  CODIGO : varchar(12)
+  CURSO : varchar(20)
+  TIPO : varchar(1)
+  --
+  .. Índices ..
+  + MP02C : CODIGO
+}
+
+entity "mp02p" as mp02p {
+  CODIGO : varchar(12)
+  CURSO : varchar(20)
+  TIPO : varchar(1)
+  --
+  .. Índices ..
+  + MPO2P : CODIGO
+}
+
+entity "mp06" as mp06 {
+  CODIGO : varchar(12)
+  NOME : varchar(30)
+  --
+  .. Índices ..
+  + MP06-1 : CODIGO
+  + MP06-2 : NOME
+}
+
+entity "mp06c" as mp06c {
+  CODIGO : varchar(12)
+  CURSO : varchar(20)
+  --
+  .. Índices ..
+  + MP06C : CODIGO
+}
+
+entity "procedim" as procedim {
+  CURSO : varchar(20)
+  DESCUR : varchar(120)
+  TIPO : varchar(1)
+  GRUPO : varchar(5)
+  --
+  .. Índices ..
+  + PROCEDIM : CURSO
+  + PROCEDI2 : DESCUR
+  + PROCEDI3 : GRUPO+CURSO
+}
+
+entity "rhabcod" as rhabcod {
+  CODIGO : varchar(2)
+  NOME : varchar(40)
+  --
+  .. Índices ..
+  + RHABCOD : CODIGO
+}
+
+entity "rhesc" as rhesc {
+  CODIGO : varchar(2)
+  ESCOLA : varchar(1)
+  CODIGOOLD : varchar(2)
+  DESCRI : varchar(70)
+  --
+  .. Índices ..
+  + RHESC : CODIGO
+}
+
+entity "rhsel" as rhsel {
+  EMPRESA : integer
+  NUMERO : integer
+  NOME : varchar(60)
+  PIS : varchar(11)
+  CPF : varchar(14)
+  NASC : datetime
+  NASCIBGE : varchar(7)
+  NASCPAIS : varchar(4)
+  RG : varchar(12)
+  RGUF : varchar(2)
+  RGEMIS : varchar(6)
+  RGTIP : varchar(3)
+  ENDER : varchar(40)
+  ENDNUM : varchar(10)
+  ENDCOMPL : varchar(30)
+  ENDTIP : varchar(3)
+  BAIRRO : varchar(20)
+  IBGE : varchar(7)
+  CIDADE : varchar(30)
+  ESTADO : varchar(2)
+  CEP : varchar(9)
+  CODMP02 : varchar(12)
+  INDICACAO : varchar(30)
+  INDIPARAR : varchar(10)
+  COMPARECE : boolean
+  APROVADO : boolean
+  PROCESSO : boolean
+  PROCOBS : varchar(40)
+  OBS : varchar(80)
+  SEXO : varchar(1)
+  FONE : varchar(14)
+  CELULAR : varchar(14)
+  FONEREC : varchar(14)
+  CONTATO : varchar(30)
+  EMAIL : varchar(50)
+  FOR01 : varchar(100)
+  FOR02 : varchar(100)
+  FOR03 : varchar(100)
+  APF01 : varchar(100)
+  APF02 : varchar(100)
+  APF03 : varchar(100)
+  PROFIS : varchar(7)
+  SERIE : varchar(5)
+  CTPSUF : varchar(2)
+  EX01EMP : varchar(40)
+  EX01RAM : varchar(12)
+  EX01TEL : varchar(12)
+  EX01DEM : datetime
+  EX01ADM : datetime
+  EX01FUN : varchar(50)
+  EX01ULT : decimal(12,2)
+  EX01AT1 : varchar(100)
+  EX01AT2 : varchar(100)
+  EX02EMP : varchar(40)
+  EX02RAM : varchar(12)
+  EX02TEL : varchar(12)
+  EX02DEM : datetime
+  EX02ADM : datetime
+  EX02FUN : varchar(50)
+  EX02ULT : decimal(12,2)
+  EX02AT1 : varchar(100)
+  EX02AT2 : varchar(100)
+  EX03EMP : varchar(40)
+  EX03RAM : varchar(12)
+  EX03TEL : varchar(12)
+  EX03DEM : datetime
+  EX03ADM : datetime
+  EX03FUN : varchar(50)
+  EX03ULT : decimal(12,2)
+  EX03AT1 : varchar(100)
+  EX03AT2 : varchar(100)
+  FUNC01 : varchar(50)
+  FUNC02 : varchar(50)
+  SALARIO : decimal(12,2)
+  OBSEN01 : varchar(100)
+  OBSEN02 : varchar(100)
+  OBSEN03 : varchar(100)
+  NUMREGANT : integer
+  FUNCAO : integer
+  NUMEMPANT : integer
+  DATTRANSF : datetime
+  ESCRAIS : varchar(2)
+  SITUACAO : varchar(2)
+  CNH : varchar(11)
+  CATCNH : varchar(2)
+  VALCNH : datetime
+  EXPCNH : datetime
+  OC : varchar(10)
+  OCVAL : datetime
+  OCEXP : datetime
+  OCEMI : varchar(10)
+  BANCO : varchar(3)
+  AGENCIA : varchar(7)
+  CONTA : varchar(12)
+  CONTAFGTS : varchar(11)
+  TITULO : varchar(14)
+  TITUZONA : varchar(3)
+  TITUSECA : varchar(3)
+  PAI : varchar(40)
+  MAE : varchar(40)
+  CNS : varchar(15)
+  DEFICI : varchar(1)
+  EVINC : varchar(3)
+  TIPO : varchar(1)
+  CCUSTO : integer
+  UNIFUN : varchar(10)
+  APOSENT : varchar(1)
+  APOSEND : datetime
+  ESTCIVIL : varchar(1)
+  RESERV : varchar(12)
+  RESECAT : varchar(1)
+  RGDATA : datetime
+  CTPSDATA : datetime
+  ANONASCI : integer
+  RACS : varchar(1)
+  DEMITIDO : datetime
+  FGTS : datetime
+  ADMITIDO : varchar(10)
+  OCUF : varchar(2)
+  RICUF : varchar(2)
+  RICEXP : datetime
+  RIC : varchar(32)
+  RICEMI : varchar(3)
+  --
+  .. Índices ..
+  + RHSEL-1 : STR(EMPRESA,3)+STR(NUMERO,8)
+  + RHSEL-2 : NOME
+  + RHSEL-3 : STR(FUNCAO,8)+STR(EMPRESA,3)
+}
+
+entity "rhselhist" as rhselhist {
+  EMPRESA : integer
+  NUMERO : integer
+  NOME : varchar(40)
+  ENDER : varchar(40)
+  NASC : datetime
+  BAIRRO : varchar(20)
+  CIDADE : varchar(30)
+  ESTADO : varchar(2)
+  CEP : varchar(9)
+  CODMP02 : varchar(12)
+  INDICACAO : varchar(30)
+  INDIPARAR : varchar(10)
+  COMPARECE : boolean
+  APROVADO : boolean
+  PROCESSO : boolean
+  PROCOBS : varchar(40)
+  OBS : varchar(80)
+  SEXO : varchar(1)
+  CIVIL : integer
+  FONE : varchar(12)
+  CELULAR : varchar(12)
+  FONEREC : varchar(12)
+  CONTATO : varchar(30)
+  EMAIL : varchar(50)
+  FOR01 : varchar(100)
+  FOR02 : varchar(100)
+  FOR03 : varchar(100)
+  APF01 : varchar(100)
+  APF02 : varchar(100)
+  APF03 : varchar(100)
+  RG : varchar(12)
+  CPF : varchar(14)
+  PIS : varchar(11)
+  PROFIS : varchar(7)
+  SERIE : varchar(5)
+  CTPSUF : varchar(2)
+  CATEGORIA : varchar(2)
+  EX01EMP : varchar(40)
+  EX01RAM : varchar(12)
+  EX01TEL : varchar(12)
+  EX01DEM : datetime
+  EX01ADM : datetime
+  EX01FUN : varchar(50)
+  EX01ULT : decimal(12,2)
+  EX01AT1 : varchar(100)
+  EX01AT2 : varchar(100)
+  EX02EMP : varchar(40)
+  EX02RAM : varchar(12)
+  EX02TEL : varchar(12)
+  EX02DEM : datetime
+  EX02ADM : datetime
+  EX02FUN : varchar(50)
+  EX02ULT : decimal(12,2)
+  EX02AT1 : varchar(100)
+  EX02AT2 : varchar(100)
+  EX03EMP : varchar(40)
+  EX03RAM : varchar(12)
+  EX03TEL : varchar(12)
+  EX03DEM : datetime
+  EX03ADM : datetime
+  EX03FUN : varchar(50)
+  EX03ULT : decimal(12,2)
+  EX03AT1 : varchar(100)
+  EX03AT2 : varchar(100)
+  FUNC01 : varchar(50)
+  FUNC02 : varchar(50)
+  SALARIO : decimal(12,2)
+  OBSEN01 : varchar(100)
+  OBSEN02 : varchar(100)
+  OBSEN03 : varchar(100)
+  NUMREGANT : integer
+  FUNCAO : integer
+  NUMEMPANT : integer
+  DATTRANSF : datetime
+  ESCRAIS : varchar(2)
+  --
+  .. Índices ..
+  + RHSEL-1 : STR(EMPRESA,3)+STR(NUMERO,8)
+  + RHSEL-2 : NOME
+  + RHSEL-3 : STR(FUNCAO,8)+STR(EMPRESA,3)
+}
+
+
+@enduml

@@ -1,5 +1,5 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 29/07/2026
+> Varredura automatica realizada em: 09/09/2026
 
 ## Tabela DBF: `apu5cd2`
 > **Origem:** `apu5cd2` (Driver: DBFCDX)
@@ -31,6 +31,33 @@
 **Indices vinculados:**
 - Tag: `APU5CD2` Expressao: `STR(ANO,4)+STR(MES,2)`
 
+```mermaid
+erDiagram
+    apu5cd2 {
+        N CLIENTE
+        C COGCLI
+        C CODIGO
+        N ANO
+        N MES
+        N INTCOM
+        N CLIENTE2
+        C COGCLI2
+        C CODIGO2
+        N INTCOM2
+        N CLIENT3
+        C COGCLI3
+        C CODIGO3
+        N INTCOM3
+        C JUNTO
+        C JUNTOA
+        C JUNTOB
+        C JUNTOC
+        N PERCOM
+        N PERCOM2
+        N PERCOM3
+    }
+```
+
 ---
 ## Tabela DBF: `apu5em2`
 > **Origem:** `apu5em2` (Driver: DBFCDX)
@@ -50,6 +77,22 @@
 
 **Indices vinculados:**
 - Tag: `APU5EM21` Expressao: `STR(ANO,4)+STR(MES,2)`
+
+```mermaid
+erDiagram
+    apu5em2 {
+        N CLI1
+        N CLI2
+        C COGCLI1
+        C COGCLI2
+        C JUNTO
+        N PERCLI1
+        N PERCLI2
+        N MES
+        N ANO
+        N ANOMES
+    }
+```
 
 ---
 ## Tabela DBF: `apu5emp`
@@ -73,6 +116,24 @@
 **Indices vinculados:**
 - Tag: `APU5EMP1` Expressao: `STR(CLIENTE,8)+STR(ANO,4)+STR(MES,2)`
 - Tag: `APU5EMP2` Expressao: `STR(ANO,4)+STR(MES,2)+STR(PERCLI,7,2)`
+
+```mermaid
+erDiagram
+    apu5emp {
+        N CLIENTE
+        C COGCLI
+        N VALORTOT
+        N PERCLI
+        N PERPRO
+        N INTPERC
+        N ANO
+        N MES
+        C TGRUPO
+        L LEXPORTA
+        N VALOREXP
+        C SUBGER
+    }
+```
 
 ---
 ## Tabela DBF: `apu5g`
@@ -107,6 +168,35 @@
 **Indices vinculados:**
 - Tag: `APU5G` Expressao: `STR(ANO,4)+STR(MES,2)`
 
+```mermaid
+erDiagram
+    apu5g {
+        N CLIENTE
+        C COGCLI
+        C GRUPO
+        C CODIGO
+        C NOME
+        N ICM
+        N PARTI
+        N PPLAN
+        C PPLANL
+        N PPCAL
+        N QTDDE
+        N VALORMER
+        N VALORTOT
+        N PRECOM
+        N PERCLI
+        N PERLUC
+        N VALLUC
+        N DIFLUC
+        C SUBGER
+        N CLITOTPER
+        N CLITOTVAL
+        N MES
+        N ANO
+    }
+```
+
 ---
 ## Tabela DBF: `apu5g2`
 > **Origem:** `apu5g2` (Driver: DBFCDX)
@@ -132,6 +222,28 @@
 
 **Indices vinculados:**
 - Tag: `APU5G2` Expressao: `STR(ANO,4)+STR(MES,2)`
+
+```mermaid
+erDiagram
+    apu5g2 {
+        N CLIENTE
+        C COGCLI
+        C CODIGO
+        C NOME
+        N PARTI
+        N PPLAN
+        N QTDDE
+        N VALORMER
+        N VALORTOT
+        N PRECOM
+        N PERCLI
+        N INTCOM
+        N INTCLI
+        C JUNTO
+        N MES
+        N ANO
+    }
+```
 
 ---
 ## Tabela DBF: `apu5g3`
@@ -161,6 +273,30 @@
 **Indices vinculados:**
 - Tag: `APU5G3` Expressao: `STR(ANO,4)+STR(MES,2)`
 
+```mermaid
+erDiagram
+    apu5g3 {
+        N CLIENTE
+        C COGCLI
+        C CODIGO
+        C NOME
+        N PARTI
+        N PPLAN
+        N QTDDE
+        N VALORMER
+        N VALORTOT
+        N PRECOM
+        N PERCLI
+        N INTCOM
+        N INTCLI
+        C JUNTO
+        N MES
+        N ANO
+        N ORDEM
+        N PERCLITOR
+    }
+```
+
 ---
 ## Tabela DBF: `apu5g4`
 > **Origem:** `apu5g4` (Driver: DBFCDX)
@@ -175,6 +311,17 @@
 
 **Indices vinculados:**
 - Tag: `APU5G4` Expressao: `STR(ANO,4)+STR(MES,2)`
+
+```mermaid
+erDiagram
+    apu5g4 {
+        C JUNTO
+        N PERLUC
+        N INTPER
+        N MES
+        N ANO
+    }
+```
 
 ---
 ## Tabela DBF: `apu5g5`
@@ -193,6 +340,19 @@
 **Indices vinculados:**
 - Tag: `APU5G5` Expressao: `STR(ANO,4)+STR(MES,2)`
 
+```mermaid
+erDiagram
+    apu5g5 {
+        C JUNTO
+        C CODIGO
+        N PERDIF
+        N INTDIF
+        N MES
+        N ANO
+        C COGCLI
+    }
+```
+
 ---
 ## Tabela DBF: `apu5lin`
 > **Origem:** `apu5lin` (Driver: DBFCDX)
@@ -206,6 +366,16 @@
 
 **Indices vinculados:**
 - Tag: `APU5LIN` Expressao: `STR(ANO,4)+SUBGER`
+
+```mermaid
+erDiagram
+    apu5lin {
+        N ANO
+        C SUBGER
+        N PERFAT
+        N VALORTOT
+    }
+```
 
 ---
 ## Tabela DBF: `apu5tot`
@@ -221,5 +391,16 @@
 
 **Indices vinculados:**
 - Tag: `APU5TOT` Expressao: `STR(ANO,4)+STR(MES,2)`
+
+```mermaid
+erDiagram
+    apu5tot {
+        N MES
+        N ANO
+        N VALORTOT
+        N VALOREXP
+        C JUNTO
+    }
+```
 
 ---

@@ -1,5 +1,5 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 30/07/2026
+> Varredura automatica realizada em: 09/09/2026
 
 ## Tabela DBF: `esocial_cbo`
 > **Origem:** `esocial_cbo` (Driver: DBFCDX)
@@ -13,6 +13,16 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    esocial_cbo {
+        C CODIGO
+        C NOME
+        D DT_INI
+        D DT_FIN
+    }
+```
 
 ---
 ## Tabela DBF: `esocial_tab01`
@@ -32,6 +42,20 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    esocial_tab01 {
+        C CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+        C GRUPO
+        C ALIQFGTS
+        C OBRIGA
+        C ALIQFGTSCO
+    }
+```
+
 ---
 ## Tabela DBF: `esocial_tab02`
 > **Origem:** `esocial_tab02` (Driver: DBFCDX)
@@ -45,6 +69,16 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    esocial_tab02 {
+        N CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+    }
+```
 
 ---
 ## Tabela DBF: `esocial_tab03`
@@ -60,6 +94,17 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    esocial_tab03 {
+        C CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+        C DESCRICAO
+    }
+```
 
 ---
 ## Tabela DBF: `esocial_tab04`
@@ -78,6 +123,19 @@
 **Indices vinculados:**
 - Tag: `CODFPAS` Expressao: `CODFPAS`
 
+```mermaid
+erDiagram
+    esocial_tab04 {
+        N CODFPAS
+        C INDCOOP
+        D DTINICIO
+        D DTFIM
+        C CLASSTRIB
+        N CODTERC
+        N ALIQTERC
+    }
+```
+
 ---
 ## Tabela DBF: `esocial_tab05`
 > **Origem:** `esocial_tab05` (Driver: DBFCDX)
@@ -91,6 +149,16 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    esocial_tab05 {
+        N CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+    }
+```
 
 ---
 ## Tabela DBF: `esocial_tab07`
@@ -108,6 +176,18 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `codigo`
 
+```mermaid
+erDiagram
+    esocial_tab07 {
+        C CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+        C MATERIABIO
+        N AGENTEQUIM
+    }
+```
+
 ---
 ## Tabela DBF: `esocial_tab08`
 > **Origem:** `esocial_tab08` (Driver: DBFCDX)
@@ -122,6 +202,17 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    esocial_tab08 {
+        N CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+        N TPINSC
+    }
+```
 
 ---
 ## Tabela DBF: `esocial_tab09`
@@ -144,6 +235,23 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    esocial_tab09 {
+        C CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+        N IDTPEVENTO
+        C TAGTPEVENT
+        C IDENTIFIC
+        N INDCHDUPL
+        N INDEXCL
+        C CLASSTRIB
+        C NCLASSTRI
+    }
+```
+
 ---
 ## Tabela DBF: `esocial_tab10`
 > **Origem:** `esocial_tab10` (Driver: DBFCDX)
@@ -162,6 +270,20 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    esocial_tab10 {
+        C CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+        C TPINSCR
+        C NRINSCR
+        C CDVALID
+        C TXCLASSTRB
+    }
+```
+
 ---
 ## Tabela DBF: `esocial_tab11`
 > **Origem:** `esocial_tab11` (Driver: DBFCDX)
@@ -179,6 +301,19 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    esocial_tab11 {
+        N CODIGO
+        C CLASSTRIB
+        D DTINICIO
+        D DTFIM
+        C NCLASSTRI
+        C COOPERATIV
+        C TPLOTACAO
+    }
+```
+
 ---
 ## Tabela DBF: `esocial_tab13`
 > **Origem:** `esocial_tab13` (Driver: DBFCDX)
@@ -192,6 +327,16 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `codigo`
+
+```mermaid
+erDiagram
+    esocial_tab13 {
+        C CODIGO
+        C NOME
+        D DTINICIO
+        C DTFIM
+    }
+```
 
 ---
 ## Tabela DBF: `esocial_tab14`
@@ -207,6 +352,16 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `codigo`
 
+```mermaid
+erDiagram
+    esocial_tab14 {
+        N CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+    }
+```
+
 ---
 ## Tabela DBF: `esocial_tab15`
 > **Origem:** `esocial_tab15` (Driver: DBFCDX)
@@ -220,6 +375,16 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    esocial_tab15 {
+        C CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+    }
+```
 
 ---
 ## Tabela DBF: `esocial_tab16`
@@ -235,6 +400,16 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `codigo`
 
+```mermaid
+erDiagram
+    esocial_tab16 {
+        C CODIGO
+        C NOME
+        D DTINICIO
+        C DTFIM
+    }
+```
+
 ---
 ## Tabela DBF: `esocial_tab17`
 > **Origem:** `esocial_tab17` (Driver: DBFCDX)
@@ -248,6 +423,16 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `codigo`
+
+```mermaid
+erDiagram
+    esocial_tab17 {
+        C CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+    }
+```
 
 ---
 ## Tabela DBF: `esocial_tab18`
@@ -269,6 +454,22 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    esocial_tab18 {
+        C CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+        C PERALTMOT
+        C DOMESTICO
+        C DESCRESUM
+        C SUSSALMEN
+        C PAGSALFAM
+        C GERAREMUN
+    }
+```
+
 ---
 ## Tabela DBF: `esocial_tab19`
 > **Origem:** `esocial_tab19` (Driver: DBFCDX)
@@ -286,6 +487,19 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    esocial_tab19 {
+        N CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+        N GERADAE
+        C LCATEGTRAB
+        N GERAINDCOM
+    }
+```
+
 ---
 ## Tabela DBF: `esocial_tab20`
 > **Origem:** `esocial_tab20` (Driver: DBFCDX)
@@ -299,6 +513,16 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    esocial_tab20 {
+        C CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+    }
+```
 
 ---
 ## Tabela DBF: `esocial_tab21`
@@ -316,6 +540,18 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `codigo`
 
+```mermaid
+erDiagram
+    esocial_tab21 {
+        C CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+        C CODIGOPAI
+        C TIPO
+    }
+```
+
 ---
 ## Tabela DBF: `esocial_tab22`
 > **Origem:** `esocial_tab22` (Driver: DBFCDX)
@@ -331,6 +567,18 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    esocial_tab22 {
+        C CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+        C GRAU
+        C OPERATIV
+    }
+```
 
 ---
 ## Tabela DBF: `esocial_tab23`
@@ -348,6 +596,18 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    esocial_tab23 {
+        C CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+        N TEMPCONTR
+        N ALIQ
+    }
+```
+
 ---
 ## Tabela DBF: `esocial_tab24`
 > **Origem:** `esocial_tab24` (Driver: DBFCDX)
@@ -361,6 +621,16 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    esocial_tab24 {
+        N CODIGO
+        C LCLASSTRIB
+        D DTINICIO
+        D DTFIM
+    }
+```
 
 ---
 ## Tabela DBF: `esocial_tab26`
@@ -376,6 +646,16 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    esocial_tab26 {
+        C CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+    }
+```
+
 ---
 ## Tabela DBF: `esocial_tab51`
 > **Origem:** `esocial_tab51` (Driver: DBFCDX)
@@ -390,6 +670,17 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    esocial_tab51 {
+        N CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+        C OBRIGA
+    }
+```
 
 ---
 ## Tabela DBF: `esocial_tab52`
@@ -414,6 +705,25 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    esocial_tab52 {
+        C CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+        N HRENTR
+        N HRSAIDA
+        N DURJORNADA
+        N TPINTERV
+        N DURINTERV
+        C INIINTERV
+        C TERMINTERV
+        C PERHORFLEX
+        C QTDHRSSEM
+    }
+```
+
 ---
 ## Tabela DBF: `esocial_tab53`
 > **Origem:** `esocial_tab53` (Driver: DBFCDX)
@@ -428,6 +738,17 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    esocial_tab53 {
+        N CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+        C ESOCFILIAL
+    }
+```
 
 ---
 ## Tabela DBF: `esocial_tab54`
@@ -470,6 +791,43 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `codigo`
 
+```mermaid
+erDiagram
+    esocial_tab54 {
+        C CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+        C NATRUBR
+        C TPRUBR
+        C CODINCCP
+        C CODINCIRRF
+        C CODINCFGTS
+        C CODINCSIND
+        C REPDSR
+        C REP13
+        C REPFERIAS
+        C REPRESC
+        C REPAFAST
+        C FATORRUBR
+        C LOCALAPLIC
+        C DOMESTICA
+        C SE
+        C GERAL
+        C DESCRICAO
+        C NOTA
+        C ORDRESCDOM
+        C PERADICRUB
+        C ORDREMDOM
+        C REPSFDOM
+        C PERFOLRES
+        C PEREDITRUB
+        C PEREXCRUB
+        C FILCATRUB
+        C GRUPRENDDO
+    }
+```
+
 ---
 ## Tabela DBF: `esocial_tab55`
 > **Origem:** `esocial_tab55` (Driver: DBFCDX)
@@ -486,6 +844,18 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    esocial_tab55 {
+        N CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+        C CLASSTRIB
+        N NCLASSTRIB
+    }
+```
+
 ---
 ## Tabela DBF: `esocial_tab57`
 > **Origem:** `esocial_tab57` (Driver: DBFCDX)
@@ -501,6 +871,18 @@
 
 **Indices vinculados:**
 - Tag: `FAIXA` Expressao: `FAIXA`
+
+```mermaid
+erDiagram
+    esocial_tab57 {
+        N INFSALCONT
+        N SUPSALCONT
+        D DTINICIO
+        D DTFIM
+        N ALIQ
+        N FAIXA
+    }
+```
 
 ---
 ## Tabela DBF: `esocial_tab58`
@@ -519,6 +901,19 @@
 **Indices vinculados:**
 - Tag: `FAIXA` Expressao: `FAIXA`
 
+```mermaid
+erDiagram
+    esocial_tab58 {
+        N INFBC
+        N SUPBC
+        D DTINICIO
+        D DTFIM
+        N ALIQ
+        N PARCDED
+        N FAIXA
+    }
+```
+
 ---
 ## Tabela DBF: `esocial_tab59`
 > **Origem:** `esocial_tab59` (Driver: DBFCDX)
@@ -534,6 +929,17 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    esocial_tab59 {
+        N CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+        N TPSUSP
+    }
+```
+
 ---
 ## Tabela DBF: `esocial_tab60`
 > **Origem:** `esocial_tab60` (Driver: DBFCDX)
@@ -548,6 +954,17 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `codigo`
+
+```mermaid
+erDiagram
+    esocial_tab60 {
+        C CODIGO
+        C DESCRICAO
+        D DTINICIO
+        D DTFIM
+        C NOME
+    }
+```
 
 ---
 ## Tabela DBF: `esocial_tab61`
@@ -566,6 +983,19 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    esocial_tab61 {
+        C CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+        N CODGRUPO
+        N CODCBO
+        N TPTRAB
+    }
+```
+
 ---
 ## Tabela DBF: `esocial_tab62`
 > **Origem:** `esocial_tab62` (Driver: DBFCDX)
@@ -579,6 +1009,16 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    esocial_tab62 {
+        N CODIGO
+        C NOME
+        D DTINICIO
+        C DTFIM
+    }
+```
 
 ---
 ## Tabela DBF: `esocial_tab63`
@@ -596,6 +1036,19 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    esocial_tab63 {
+        N CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+        C EVENTO
+        C RUBRICAS
+        N CATEGORIA
+    }
+```
 
 ---
 ## Tabela DBF: `esocial_tab64`
@@ -618,6 +1071,23 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    esocial_tab64 {
+        C CODIGO
+        C NOME
+        D DTINICIO
+        D DTFIM
+        N TPLOTACAO
+        C TPINSC
+        C NRINSC
+        N FPAS
+        N CODTERCS
+        N CATEGIGUAL
+        C CATEGDIF
+    }
+```
+
 ---
 ## Tabela DBF: `esocial_tab65`
 > **Origem:** `esocial_tab65` (Driver: DBFCDX)
@@ -633,6 +1103,18 @@
 
 **Indices vinculados:**
 - Tag: `FAIXA` Expressao: `FAIXA`
+
+```mermaid
+erDiagram
+    esocial_tab65 {
+        N INFBC
+        N SUPBC
+        N DTINICIO
+        N DTFIM
+        N PARCDED
+        N FAIXA
+    }
+```
 
 ---
 ## Tabela DBF: `esocial_tab66`
@@ -651,6 +1133,19 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    esocial_tab66 {
+        N CODIGO
+        C DESCRICAO
+        N DTINICIO
+        C DTFIM
+        N CATEGORIA
+        C NCATEGORIA
+        N VALOR
+    }
+```
+
 ---
 ## Tabela DBF: `esocial_tab67`
 > **Origem:** `esocial_tab67` (Driver: DBFCDX)
@@ -665,6 +1160,17 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    esocial_tab67 {
+        C CODIGO
+        C DESCRICAO
+        N DTINICIO
+        C DTFIM
+        N CODESOCIAL
+    }
+```
 
 ---
 ## Tabela DBF: `esocial_tab68`
@@ -683,6 +1189,19 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    esocial_tab68 {
+        N CODIGO
+        C NOME
+        N DTINICIO
+        C DTFIM
+        C CODIGORUBR
+        C CAMPOFIXO
+        C RESTRICAON
+    }
+```
+
 ---
 ## Tabela DBF: `esocial_tab69`
 > **Origem:** `esocial_tab69` (Driver: DBFCDX)
@@ -696,6 +1215,16 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    esocial_tab69 {
+        C CODIGO
+        C DESCRICAO
+        N DTINICIO
+        C DTFIM
+    }
+```
 
 ---
 ## Tabela DBF: `esocial_tab70`
@@ -711,6 +1240,16 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    esocial_tab70 {
+        N CODIGO
+        C DESCRICAO
+        N DTINICIO
+        C DTFIM
+    }
+```
+
 ---
 ## Tabela DBF: `esocial_tab71`
 > **Origem:** `esocial_tab71` (Driver: DBFCDX)
@@ -724,6 +1263,16 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    esocial_tab71 {
+        N CODIGO
+        C DESCRICAO
+        N DTINICIO
+        C DTFIM
+    }
+```
 
 ---
 ## Tabela DBF: `esocial_tab72`
@@ -739,6 +1288,16 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    esocial_tab72 {
+        N CODIGO
+        C DESCRICAO
+        N DTINICIO
+        C DTFIM
+    }
+```
+
 ---
 ## Tabela DBF: `esocial_tab73`
 > **Origem:** `esocial_tab73` (Driver: DBFCDX)
@@ -752,6 +1311,16 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    esocial_tab73 {
+        N CODIGO
+        C DESCRICAO
+        N DTINICIO
+        C DTFIM
+    }
+```
 
 ---
 ## Tabela DBF: `esocial_tab74`
@@ -767,6 +1336,16 @@
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    esocial_tab74 {
+        N CODIGO
+        C DESCRICAO
+        N DTINICIO
+        C DTFIM
+    }
+```
+
 ---
 ## Tabela DBF: `esocial_tab75`
 > **Origem:** `esocial_tab75` (Driver: DBFCDX)
@@ -780,5 +1359,15 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    esocial_tab75 {
+        N CODIGO
+        C DESCRICAO
+        N DTINICIO
+        C DTFIM
+    }
+```
 
 ---

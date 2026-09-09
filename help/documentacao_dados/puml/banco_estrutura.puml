@@ -1,0 +1,92 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "ba01" as ba01 {
+  NUMERO : integer
+  SUB : varchar(1)
+  DATA : datetime
+  NRCONTA : integer
+  CODIGO : varchar(4)
+  HISTORICO : varchar(30)
+  ITEM : varchar(4)
+  VALOR : decimal(12,2)
+  TIPO : varchar(1)
+  DATADEP : datetime
+  CHAVE : varchar(24)
+  --
+  .. Índices ..
+  + BA01-1 : STR(NRCONTA,2)+STR(NUMERO,7)
+  + BA01-2 : STR(NUMERO,7)+SUB
+  + BA01-3 : CHAVE
+  + BA01-4 : DATA
+  + BA01-5 : ITEM
+}
+
+entity "bc01" as bc01 {
+  CODIGO : varchar(4)
+  DESCRICAO : varchar(35)
+  VALOR : decimal(15,2)
+  VALOR1 : decimal(15,2)
+  TIPO : varchar(1)
+  ITEM : varchar(3)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+  + DESCRICAO : DESCRICAO
+}
+
+entity "bd01" as bd01 {
+  NUMERO : integer
+  COGNOME : varchar(15)
+  NOME : varchar(40)
+  ENDERECO : varchar(40)
+  BAIRRO : varchar(30)
+  CIDADE : varchar(30)
+  ESTADO : varchar(2)
+  CEP : varchar(9)
+  DDD : varchar(2)
+  TELEFONE : varchar(12)
+  RAMAL : varchar(4)
+  CONTATO : varchar(22)
+  DDDFAX : varchar(2)
+  TELEFAX : varchar(12)
+  CGC : varchar(18)
+  IESTADUAL : varchar(16)
+  DDD1 : varchar(2)
+  TELEFONE1 : varchar(12)
+  RAMAL1 : varchar(4)
+  CONTATO1 : varchar(22)
+  PESSOA : varchar(1)
+  SITE : varchar(30)
+  EMAIL : varchar(30)
+  --
+  .. Índices ..
+  + NUMERO : NUMERO
+  + COGNOME : COGNOME
+}
+
+entity "be01" as be01 {
+  CODIGO : varchar(24)
+  NOME : varchar(40)
+  --
+  .. Índices ..
+  + CODIGO : CODIGO
+  + NOME : NOME
+}
+
+entity "bf01" as bf01 {
+  VENDA : integer
+  NUMERO : integer
+  CODIGO : varchar(24)
+  DATA : datetime
+  VALOR : decimal(10,2)
+  --
+  .. Índices ..
+  + VENDA : VENDA
+  + NUMERO : NUMERO
+  + CODIGO : CODIGO
+}
+
+
+@enduml

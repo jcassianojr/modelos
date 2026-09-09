@@ -1,5 +1,5 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 29/07/2026
+> Varredura automatica realizada em: 09/09/2026
 
 ## Tabela DBF: `bs1`
 > **Origem:** `bs1` (Driver: DBFCDX)
@@ -26,6 +26,29 @@
 
 **Indices vinculados:**
 - Tag: `BS1-1` Expressao: `STR(ANO,4)+STR(MES,2)`
+
+```mermaid
+erDiagram
+    bs1 {
+        N QTDDE
+        N QTD01
+        N QTD02
+        N QTD03
+        N MES
+        N ANO
+        N PER01
+        N PER02
+        N PER03
+        N PEQ01
+        N PEQ02
+        N PEQ03
+        N F0
+        N F1
+        N F2
+        N ENT
+        C EMPLOGIX
+    }
+```
 
 ---
 ## Tabela DBF: `bs2`
@@ -55,6 +78,30 @@
 **Indices vinculados:**
 - Tag: `BS2-1` Expressao: `STR(ANO,4)+STR(MES,2)+GRUPO`
 
+```mermaid
+erDiagram
+    bs2 {
+        C GRUPO
+        N QTDDE
+        N QTD01
+        N QTD02
+        N QTD03
+        N MES
+        N ANO
+        N PER01
+        N PER02
+        N PER03
+        N PEQ01
+        N PEQ02
+        N PEQ03
+        N F0
+        N F1
+        N F2
+        N ENT
+        C EMPLOGIX
+    }
+```
+
 ---
 ## Tabela DBF: `bs3`
 > **Origem:** `bs3` (Driver: DBFCDX)
@@ -79,6 +126,30 @@
 | SA303 | N | 10 | 0 |
 | SA304 | N | 10 | 0 |
 | EMPLOGIX | C | 2 | 0 |
+
+```mermaid
+erDiagram
+    bs3 {
+        C CODIGO
+        C NOME
+        C GRUPOUTL
+        N ESTOQUE
+        N ESTOQU3
+        N USO01
+        N USO02
+        N USO03
+        N USO04
+        N SAL01
+        N SAL02
+        N SAL03
+        N SAL04
+        N SA301
+        N SA302
+        N SA303
+        N SA304
+        C EMPLOGIX
+    }
+```
 
 ---
 ## Tabela DBF: `bs5`
@@ -113,6 +184,34 @@
 - Tag: `BS5-1` Expressao: `STR(ANO,4)+STR(MES,2)+STR(CLIENTE,8)+CODIGO`
 - Tag: `BS5-2` Expressao: `CODIGO+STR(ANO,4)+STR(MES,2)`
 
+```mermaid
+erDiagram
+    bs5 {
+        N CLIENTE
+        C COGCLI
+        C GRUPO
+        C CODIGO
+        C NOME
+        N QTDDE
+        N QTD01
+        N QTD02
+        N QTD03
+        N MES
+        N ANO
+        N PER01
+        N PER02
+        N PER03
+        N PEQ01
+        N PEQ02
+        N PEQ03
+        N F0
+        N F1
+        N F2
+        N ENT
+        C EMPLOGIX
+    }
+```
+
 ---
 ## Tabela DBF: `bs6`
 > **Origem:** `bs6` (Driver: DBFCDX)
@@ -144,6 +243,33 @@
 **Indices vinculados:**
 - Tag: `BS6-1` Expressao: `STR(ANO,4)+STR(MES,2)+STR(CLIENTE,8)`
 
+```mermaid
+erDiagram
+    bs6 {
+        N CLIENTE
+        C COGCLI
+        C GRUPO
+        C NOME
+        N QTDDE
+        N QTD01
+        N QTD02
+        N QTD03
+        N MES
+        N ANO
+        N PER01
+        N PER02
+        N PER03
+        N PEQ01
+        N PEQ02
+        N PEQ03
+        N F0
+        N F1
+        N F2
+        N ENT
+        C EMPLOGIX
+    }
+```
+
 ---
 ## Tabela DBF: `iacseq`
 > **Origem:** `iacseq` (Driver: DBFCDX)
@@ -162,6 +288,21 @@
 
 **Indices vinculados:**
 - Tag: `SEQ` Expressao: `SEQ`
+
+```mermaid
+erDiagram
+    iacseq {
+        N SEQ
+        D DIAFIM
+        D DIAINI
+        N MES
+        N ANO
+        C DESCRI
+        C ANUAL
+        C SEMES
+        C DESCR2
+    }
+```
 
 ---
 ## Tabela DBF: `mm02iac`
@@ -188,6 +329,31 @@
 | CGC | C | 18 | 0 |
 | COGNOME | C | 20 | 0 |
 | EMPLOGIX | C | 2 | 0 |
+
+```mermaid
+erDiagram
+    mm02iac {
+        N NUMERO
+        D DATA
+        N FORNECEDO
+        N OS
+        N QTDE
+        C CODIGO
+        D ENTREGA
+        N QTDESAL
+        N OSITEM
+        C CODIGOINT
+        C CODCLIENTE
+        N PRECO
+        C NOME
+        N VALORMER
+        C CLASSIPI
+        C TIPOENT
+        C CGC
+        C COGNOME
+        C EMPLOGIX
+    }
+```
 
 ---
 ## Tabela DBF: `rd`
@@ -232,6 +398,44 @@
 - Tag: `RD` Expressao: `SEQ`
 - Tag: `RD-2` Expressao: `STR(ANO,4)+STR(MES,2)`
 
+```mermaid
+erDiagram
+    rd {
+        N SEQ
+        D DIAINI
+        D DIAFIM
+        C ANUAL
+        C SEMES
+        C DESCRI
+        C DESCR2
+        N MES
+        N ANO
+        N EQPU
+        N EQPE
+        N EQPP
+        N FUPU
+        N FUPE
+        N FUPP
+        N EQHT
+        N EQHP
+        N EQH24
+        N EQHD
+        N EQQP
+        N FUHT
+        N FUHP
+        N FUHD
+        N FUQP
+        N PAHP
+        N EQPERE
+        N EQPPRE
+        N EQPURE
+        N EQPE24
+        N EQPP24
+        N EQPU24
+        N PRPE
+    }
+```
+
 ---
 ## Tabela DBF: `rde`
 > **Origem:** `rde` (Driver: DBFCDX)
@@ -261,6 +465,31 @@
 **Indices vinculados:**
 - Tag: `RDE` Expressao: `SEQ`
 
+```mermaid
+erDiagram
+    rde {
+        N SEQ
+        C NUMERO
+        C NOME
+        N HT
+        N HP
+        N HD
+        N HDRE
+        N HD24
+        N QP
+        N MEDIA
+        N PU
+        N PE
+        N PP
+        N PE24
+        N PERE
+        N PU24
+        N PURE
+        N PP24
+        N PPRE
+    }
+```
+
 ---
 ## Tabela DBF: `rdf`
 > **Origem:** `rdf` (Driver: DBFCDX)
@@ -282,6 +511,23 @@
 **Indices vinculados:**
 - Tag: `RDF` Expressao: `SEQ`
 
+```mermaid
+erDiagram
+    rdf {
+        N SEQ
+        N NUMERO
+        C NOME
+        N HT
+        N HP
+        N HD
+        N QP
+        N MEDIA
+        N PU
+        N PE
+        N PP
+    }
+```
+
 ---
 ## Tabela DBF: `rdp`
 > **Origem:** `rdp` (Driver: DBFCDX)
@@ -299,6 +545,18 @@
 - Tag: `RDP` Expressao: `SEQ`
 - Tag: `RDP-2` Expressao: `NUMERO`
 
+```mermaid
+erDiagram
+    rdp {
+        N SEQ
+        C NUMERO
+        C NOME
+        N HP
+        C ANUAL
+        N MES
+    }
+```
+
 ---
 ## Tabela DBF: `rdpd`
 > **Origem:** `rdpd` (Driver: DBFCDX)
@@ -312,6 +570,16 @@
 
 **Indices vinculados:**
 - Tag: `RDPD` Expressao: `SEQ`
+
+```mermaid
+erDiagram
+    rdpd {
+        N SEQ
+        C NUMERO
+        C NOME
+        N HP
+    }
+```
 
 ---
 ## Tabela DBF: `rdpt`
@@ -377,6 +645,53 @@
 - Tag: `VAL11` Expressao: `DESCEND(VAL11)`
 - Tag: `VAL12` Expressao: `DESCEND(VAL12)`
 
+```mermaid
+erDiagram
+    rdpt {
+        C NUMERO
+        C NOME
+        N VAL01
+        N POS01
+        N POX01
+        N VAL02
+        N POS02
+        N POX02
+        N VAL03
+        N POS03
+        N POX03
+        N VAL04
+        N POS04
+        N POX04
+        N VAL05
+        N POS05
+        N POX05
+        N VAL06
+        N POS06
+        N POX06
+        N VAL07
+        N POS07
+        N POX07
+        N VAL08
+        N POS08
+        N POX08
+        N VAL09
+        N POS09
+        N POX09
+        N VAL10
+        N POS10
+        N POX10
+        N VAL11
+        N POS11
+        N POX11
+        N VAL12
+        N POS12
+        N POX12
+        N TOTAL
+        N POS00
+        N POX00
+    }
+```
+
 ---
 ## Tabela DBF: `rdt`
 > **Origem:** `rdt` (Driver: DBFCDX)
@@ -400,6 +715,26 @@
 
 **Indices vinculados:**
 - Tag: `RDT` Expressao: `CODIGO+STR(SEQ,3)+STR(SSQ,3)+STR(ANO,4)+STR(MES,2)`
+
+```mermaid
+erDiagram
+    rdt {
+        C CODIGO
+        N SEQ
+        N SSQ
+        N MES
+        N ANO
+        N PQTDDE
+        N PHORAS
+        N QTDDE
+        N PADRAO
+        N PADRA4
+        N MEDIA
+        N MEDI4
+        L SIMETRICA
+        D DATAAPU
+    }
+```
 
 ---
 ## Tabela DBF: `rdtbx`
@@ -425,5 +760,26 @@
 
 **Indices vinculados:**
 - Tag: `RDTBX` Expressao: `CODIGO+STR(SEQ,3)+STR(SSQ,3)+STR(ANO,4)+STR(MES,2)`
+
+```mermaid
+erDiagram
+    rdtbx {
+        C CODIGO
+        N SEQ
+        N SSQ
+        N MES
+        N ANO
+        N PQTDDE
+        N PHORAS
+        N QTDDE
+        N PADRAO
+        N PADRA4
+        N MEDIA
+        N MEDI4
+        L SIMETRICA
+        D DATAAPU
+        D DATABAI
+    }
+```
 
 ---

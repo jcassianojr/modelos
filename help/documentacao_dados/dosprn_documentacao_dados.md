@@ -1,5 +1,5 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 29/07/2026
+> Varredura automatica realizada em: 09/09/2026
 
 ## Tabela DBF: `dosprn1`
 > **Origem:** `dosprn1` (Driver: DBFCDX)
@@ -35,6 +35,38 @@
 
 **Indices vinculados:**
 - Tag: `DOSPRN` Expressao: `PR_NAME`
+
+```mermaid
+erDiagram
+    dosprn1 {
+        N PR_NO
+        C PR_NAME
+        C INIT_PR
+        C EXIT_PR
+        C BOLD_ON
+        C BOLD_OFF
+        C UNDL_ON
+        C UNDL_OFF
+        C ENL_ON
+        C ENL_OFF
+        C ITAL_ON
+        C ITAL_OFF
+        C HIGH_ON
+        C HIGH_OFF
+        C LOW_ON
+        C LOW_OFF
+        C COND_ON
+        C COND_OFF
+        C NLQ_ON
+        C NLQ_OFF
+        C RESERV_ON
+        C RESERV_OFF
+        C GRAPH_DRIV
+        N PAGE_LEN
+        N HEAD_MARG
+        N FOOT_MARG
+    }
+```
 
 ---
 ## Tabela DBF: `dosprn2`
@@ -111,6 +143,77 @@
 **Indices vinculados:**
 - Tag: `DOSPRN2` Expressao: `EMPRESA+IMPRESS`
 
+```mermaid
+erDiagram
+    dosprn2 {
+        C EMPRESA
+        C IMPRESS
+        C EMULA
+        C INICIALIZA
+        C C10PP
+        C C12PP
+        C CONDON
+        C CONDOFF
+        C SPCPRON
+        C SPCPROFF
+        C SETCHAR
+        C MSTFNT
+        C PRTSTYL
+        C DRAFT
+        C CARTA
+        C L6PP
+        C L8PP
+        C L12PP
+        C SPCLINE
+        C SPCLINEA
+        C NEGRON
+        C NEGROFF
+        C DWIDEON
+        C DWIDEOFF
+        C DHEIGON
+        C DHEIGOFF
+        C ENFATON
+        C ENFATOFF
+        C BOLDON
+        C BOLDOFF
+        C SUBSCRON
+        C SUBSCROFF
+        C ITALON
+        C ITALOFF
+        C SUPSCRON
+        C SUPSCROFF
+        C SUB1SCRON
+        C SUB1SCROFF
+        C SKPON
+        C SKPOFF
+        C UNIPRT
+        C BIPRT
+        C SVCURSOR
+        C RTCURSOR
+        C PGTAM
+        C PGLIN
+        C TABSTOP
+        C MARGTOP
+        C MARGBOTT
+        C MARGLEFT
+        C MARGRIGHT
+        C MVABSVLOC
+        C MVRELVLOC
+        C MVABSHLOC
+        C MVRELHLOC
+        C INTCHSPHMI
+        C C11PP
+        C C13PP
+        C C14PP
+        C C16PP
+        C C20PP
+        C EXPAND01
+        C EXPAND02
+        C EXPAND03
+        C EXPAND04
+    }
+```
+
 ---
 ## Tabela DBF: `dosprn3`
 > **Origem:** `dosprn3` (Driver: DBFCDX)
@@ -123,5 +226,14 @@
 
 **Indices vinculados:**
 - Tag: `NOME` Expressao: `NOME`
+
+```mermaid
+erDiagram
+    dosprn3 {
+        C NOME
+        C C_10CPI
+        C C_17CPI
+    }
+```
 
 ---

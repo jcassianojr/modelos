@@ -1,0 +1,372 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "bs1" as bs1 {
+  QTDDE : integer
+  QTD01 : integer
+  QTD02 : integer
+  QTD03 : integer
+  MES : integer
+  ANO : integer
+  PER01 : decimal(7,2)
+  PER02 : decimal(7,2)
+  PER03 : decimal(7,2)
+  PEQ01 : decimal(7,2)
+  PEQ02 : decimal(7,2)
+  PEQ03 : decimal(7,2)
+  F0 : integer
+  F1 : integer
+  F2 : integer
+  ENT : integer
+  EMPLOGIX : varchar(2)
+  --
+  .. Índices ..
+  + BS1-1 : STR(ANO,4)+STR(MES,2)
+}
+
+entity "bs2" as bs2 {
+  GRUPO : varchar(12)
+  QTDDE : integer
+  QTD01 : integer
+  QTD02 : integer
+  QTD03 : integer
+  MES : integer
+  ANO : integer
+  PER01 : decimal(7,2)
+  PER02 : decimal(7,2)
+  PER03 : decimal(7,2)
+  PEQ01 : decimal(7,2)
+  PEQ02 : decimal(7,2)
+  PEQ03 : decimal(7,2)
+  F0 : integer
+  F1 : integer
+  F2 : integer
+  ENT : integer
+  EMPLOGIX : varchar(2)
+  --
+  .. Índices ..
+  + BS2-1 : STR(ANO,4)+STR(MES,2)+GRUPO
+}
+
+entity "bs3" as bs3 {
+  CODIGO : varchar(12)
+  NOME : varchar(30)
+  GRUPOUTL : varchar(3)
+  ESTOQUE : integer
+  ESTOQU3 : integer
+  USO01 : integer
+  USO02 : integer
+  USO03 : integer
+  USO04 : integer
+  SAL01 : integer
+  SAL02 : integer
+  SAL03 : integer
+  SAL04 : integer
+  SA301 : integer
+  SA302 : integer
+  SA303 : integer
+  SA304 : integer
+  EMPLOGIX : varchar(2)
+}
+
+entity "bs5" as bs5 {
+  CLIENTE : integer
+  COGCLI : varchar(12)
+  GRUPO : varchar(12)
+  CODIGO : varchar(24)
+  NOME : varchar(40)
+  QTDDE : integer
+  QTD01 : integer
+  QTD02 : integer
+  QTD03 : integer
+  MES : integer
+  ANO : integer
+  PER01 : decimal(7,2)
+  PER02 : decimal(7,2)
+  PER03 : decimal(7,2)
+  PEQ01 : decimal(7,2)
+  PEQ02 : decimal(7,2)
+  PEQ03 : decimal(7,2)
+  F0 : integer
+  F1 : integer
+  F2 : integer
+  ENT : integer
+  EMPLOGIX : varchar(2)
+  --
+  .. Índices ..
+  + BS5-1 : STR(ANO,4)+STR(MES,2)+STR(CLIENTE,8)+CODIGO
+  + BS5-2 : CODIGO+STR(ANO,4)+STR(MES,2)
+}
+
+entity "bs6" as bs6 {
+  CLIENTE : integer
+  COGCLI : varchar(12)
+  GRUPO : varchar(12)
+  NOME : varchar(40)
+  QTDDE : integer
+  QTD01 : integer
+  QTD02 : integer
+  QTD03 : integer
+  MES : integer
+  ANO : integer
+  PER01 : decimal(7,2)
+  PER02 : decimal(7,2)
+  PER03 : decimal(7,2)
+  PEQ01 : decimal(7,2)
+  PEQ02 : decimal(7,2)
+  PEQ03 : decimal(7,2)
+  F0 : integer
+  F1 : integer
+  F2 : integer
+  ENT : integer
+  EMPLOGIX : varchar(2)
+  --
+  .. Índices ..
+  + BS6-1 : STR(ANO,4)+STR(MES,2)+STR(CLIENTE,8)
+}
+
+entity "iacseq" as iacseq {
+  SEQ : integer
+  DIAFIM : datetime
+  DIAINI : datetime
+  MES : integer
+  ANO : integer
+  DESCRI : varchar(30)
+  ANUAL : varchar(1)
+  SEMES : varchar(1)
+  DESCR2 : varchar(10)
+  --
+  .. Índices ..
+  + SEQ : SEQ
+}
+
+entity "mm02iac" as mm02iac {
+  NUMERO : integer
+  DATA : datetime
+  FORNECEDO : integer
+  OS : integer
+  QTDE : decimal(10,3)
+  CODIGO : varchar(24)
+  ENTREGA : datetime
+  QTDESAL : decimal(10,3)
+  OSITEM : integer
+  CODIGOINT : varchar(24)
+  CODCLIENTE : varchar(20)
+  PRECO : decimal(12,5)
+  NOME : varchar(25)
+  VALORMER : decimal(12,2)
+  CLASSIPI : varchar(10)
+  TIPOENT : varchar(1)
+  CGC : varchar(18)
+  COGNOME : varchar(20)
+  EMPLOGIX : varchar(2)
+}
+
+entity "rd" as rd {
+  SEQ : integer
+  DIAINI : datetime
+  DIAFIM : datetime
+  ANUAL : varchar(1)
+  SEMES : varchar(1)
+  DESCRI : varchar(30)
+  DESCR2 : varchar(10)
+  MES : integer
+  ANO : integer
+  EQPU : decimal(10,2)
+  EQPE : decimal(10,2)
+  EQPP : decimal(10,2)
+  FUPU : decimal(10,2)
+  FUPE : decimal(10,2)
+  FUPP : decimal(10,2)
+  EQHT : decimal(10,2)
+  EQHP : decimal(10,2)
+  EQH24 : decimal(10,2)
+  EQHD : decimal(10,2)
+  EQQP : integer
+  FUHT : decimal(10,2)
+  FUHP : decimal(10,2)
+  FUHD : decimal(10,2)
+  FUQP : integer
+  PAHP : decimal(10,2)
+  EQPERE : decimal(10,2)
+  EQPPRE : decimal(10,2)
+  EQPURE : decimal(10,2)
+  EQPE24 : decimal(10,2)
+  EQPP24 : decimal(10,2)
+  EQPU24 : decimal(10,2)
+  PRPE : decimal(10,2)
+  --
+  .. Índices ..
+  + RD : SEQ
+  + RD-2 : STR(ANO,4)+STR(MES,2)
+}
+
+entity "rde" as rde {
+  SEQ : integer
+  NUMERO : varchar(4)
+  NOME : varchar(40)
+  HT : decimal(10,2)
+  HP : decimal(10,2)
+  HD : decimal(10,2)
+  HDRE : decimal(10,2)
+  HD24 : decimal(10,2)
+  QP : integer
+  MEDIA : integer
+  PU : decimal(10,2)
+  PE : decimal(10,2)
+  PP : decimal(10,2)
+  PE24 : decimal(10,2)
+  PERE : decimal(10,2)
+  PU24 : decimal(10,2)
+  PURE : decimal(10,2)
+  PP24 : decimal(10,2)
+  PPRE : decimal(10,2)
+  --
+  .. Índices ..
+  + RDE : SEQ
+}
+
+entity "rdf" as rdf {
+  SEQ : integer
+  NUMERO : integer
+  NOME : varchar(40)
+  HT : decimal(10,2)
+  HP : decimal(10,2)
+  HD : decimal(10,2)
+  QP : integer
+  MEDIA : integer
+  PU : decimal(10,2)
+  PE : decimal(10,2)
+  PP : decimal(10,2)
+  --
+  .. Índices ..
+  + RDF : SEQ
+}
+
+entity "rdp" as rdp {
+  SEQ : integer
+  NUMERO : varchar(3)
+  NOME : varchar(40)
+  HP : decimal(10,2)
+  ANUAL : varchar(1)
+  MES : integer
+  --
+  .. Índices ..
+  + RDP : SEQ
+  + RDP-2 : NUMERO
+}
+
+entity "rdpd" as rdpd {
+  SEQ : integer
+  NUMERO : varchar(2)
+  NOME : varchar(40)
+  HP : decimal(10,2)
+  --
+  .. Índices ..
+  + RDPD : SEQ
+}
+
+entity "rdpt" as rdpt {
+  NUMERO : varchar(3)
+  NOME : varchar(40)
+  VAL01 : decimal(10,2)
+  POS01 : integer
+  POX01 : integer
+  VAL02 : decimal(10,2)
+  POS02 : integer
+  POX02 : integer
+  VAL03 : decimal(10,2)
+  POS03 : integer
+  POX03 : integer
+  VAL04 : decimal(10,2)
+  POS04 : integer
+  POX04 : integer
+  VAL05 : decimal(10,2)
+  POS05 : integer
+  POX05 : integer
+  VAL06 : decimal(10,2)
+  POS06 : integer
+  POX06 : integer
+  VAL07 : decimal(10,2)
+  POS07 : integer
+  POX07 : integer
+  VAL08 : decimal(10,2)
+  POS08 : integer
+  POX08 : integer
+  VAL09 : decimal(10,2)
+  POS09 : integer
+  POX09 : integer
+  VAL10 : decimal(10,2)
+  POS10 : integer
+  POX10 : integer
+  VAL11 : decimal(10,2)
+  POS11 : integer
+  POX11 : integer
+  VAL12 : decimal(10,2)
+  POS12 : integer
+  POX12 : integer
+  TOTAL : decimal(12,2)
+  POS00 : integer
+  POX00 : integer
+  --
+  .. Índices ..
+  + RDPT : NUMERO
+  + TOTAL : DESCEND(TOTAL)
+  + VAL01 : DESCEND(VAL01)
+  + VAL02 : DESCEND(VAL02)
+  + VAL03 : DESCEND(VAL03)
+  + VAL04 : DESCEND(VAL04)
+  + VAL05 : DESCEND(VAL05)
+  + VAL06 : DESCEND(VAL06)
+  + VAL07 : DESCEND(VAL07)
+  + VAL08 : DESCEND(VAL08)
+  + VAL09 : DESCEND(VAL09)
+  + VAL10 : DESCEND(VAL10)
+  + VAL11 : DESCEND(VAL11)
+  + VAL12 : DESCEND(VAL12)
+}
+
+entity "rdt" as rdt {
+  CODIGO : varchar(24)
+  SEQ : integer
+  SSQ : integer
+  MES : integer
+  ANO : integer
+  PQTDDE : integer
+  PHORAS : decimal(7,2)
+  QTDDE : decimal(9,2)
+  PADRAO : integer
+  PADRA4 : integer
+  MEDIA : decimal(7,2)
+  MEDI4 : decimal(7,2)
+  SIMETRICA : boolean
+  DATAAPU : datetime
+  --
+  .. Índices ..
+  + RDT : CODIGO+STR(SEQ,3)+STR(SSQ,3)+STR(ANO,4)+STR(MES,2)
+}
+
+entity "rdtbx" as rdtbx {
+  CODIGO : varchar(24)
+  SEQ : integer
+  SSQ : integer
+  MES : integer
+  ANO : integer
+  PQTDDE : integer
+  PHORAS : decimal(6,2)
+  QTDDE : decimal(9,2)
+  PADRAO : integer
+  PADRA4 : integer
+  MEDIA : decimal(6,2)
+  MEDI4 : decimal(6,2)
+  SIMETRICA : boolean
+  DATAAPU : datetime
+  DATABAI : datetime
+  --
+  .. Índices ..
+  + RDTBX : CODIGO+STR(SEQ,3)+STR(SSQ,3)+STR(ANO,4)+STR(MES,2)
+}
+
+
+@enduml

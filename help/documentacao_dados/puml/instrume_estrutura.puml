@@ -1,0 +1,373 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "ME04" as ME04 {
+  CODIGO : varchar(8)
+  TIPO : varchar(30)
+  MARCA : varchar(20)
+  CAPACI : varchar(30)
+  DIVI : varchar(10)
+  NOMTIPO : varchar(30)
+  CODTIPO : varchar(3)
+  CODFOR : integer
+  COGFOR : varchar(12)
+  COMPRA : datetime
+  VALOR : decimal(9,2)
+  SITUACAO : varchar(1)
+  DATAUSO : datetime
+  DATAFIM : datetime
+  NORMA : varchar(30)
+  APLIC : varchar(30)
+  TIPCAL : varchar(1)
+  CALIBRAR : integer
+  ATIVO : varchar(1)
+  ERROADM : varchar(15)
+  OBS01 : varchar(70)
+  OBS02 : varchar(70)
+  OBS03 : varchar(70)
+  MODELO : varchar(20)
+  CALULT : datetime
+  CALPRO : datetime
+  CADTIP : varchar(1)
+  DIME : varchar(1)
+  MATE : varchar(1)
+  CARA : varchar(1)
+  PRECO : decimal(9,2)
+  ULTPRC : decimal(9,2)
+  ULTUND : varchar(2)
+  ULTDATA : datetime
+  NOME : varchar(1)
+  APLICACAO : varchar(24)
+  DESENHO : varchar(25)
+  DATAEXT : datetime
+  CLASSIPI : varchar(10)
+  UNIDADE : varchar(2)
+  PF : integer
+  RRMDATA : datetime
+  CODIGOINT : varchar(15)
+  --
+  .. Índices ..
+  + ME04-1 : CODIGO
+  + ME04-2 : CODTIPO+CODIGO
+  + ME04-3 : CALPRO
+}
+
+entity "ME04C" as ME04C {
+  OCC : integer
+  CODIGO : varchar(10)
+  DATA : datetime
+  DATAP : datetime
+  CODFOR : integer
+  COGFOR : varchar(20)
+  CERTIFI : varchar(10)
+  NFCC : integer
+  --
+  .. Índices ..
+  + ME04C-1 : OCC
+  + ME04C-2 : CODIGO
+  + ME04C-3 : CERTIFI
+}
+
+entity "ME04CI" as ME04CI {
+  OCC : integer
+  ITEM : integer
+  ESPECI : varchar(30)
+  ENCTR : varchar(30)
+  DESVIO : varchar(10)
+  INCTOT : varchar(10)
+  LAUDO : varchar(1)
+  NRELAT : varchar(5)
+  ASSNOM : varchar(10)
+  ASSDAT : datetime
+  --
+  .. Índices ..
+  + ME04CI-1 : STR(OCC,8)+STR(ITEM,3)
+  + ME04CI-2 : OCC
+}
+
+entity "ME04D" as ME04D {
+  OCD : integer
+  CODIGO : varchar(24)
+  MOTIVO : varchar(1)
+  OBS01 : varchar(50)
+  OBS02 : varchar(50)
+  OBS03 : varchar(50)
+  INVALIDA : varchar(1)
+  VERIFI : varchar(20)
+  INSPECAO : varchar(1)
+  CODIGOS : varchar(40)
+  CLINOME : varchar(40)
+  NF : varchar(30)
+  ACLI01 : varchar(50)
+  ACLI02 : varchar(50)
+  INCIDE : varchar(1)
+  FREQ1 : varchar(20)
+  FREQ2 : varchar(20)
+  ACOR01 : varchar(75)
+  ACOR02 : varchar(75)
+  ACOR03 : varchar(75)
+  ACOR04 : varchar(75)
+  RESPON : varchar(30)
+  DATAOCD : datetime
+  --
+  .. Índices ..
+  + ME04D-1 : OCD
+  + ME04D-2 : CODIGO
+}
+
+entity "ME04R" as ME04R {
+  NUMERO : integer
+  CODIGO : varchar(8)
+  CODOPER : integer
+  SAIDA : datetime
+  HORASAI : decimal(6,2)
+  DEVOLUCAO : datetime
+  HORADEV : decimal(6,2)
+  AREA : varchar(2)
+  SETOR : varchar(3)
+  --
+  .. Índices ..
+  + ME04R-1 : NUMERO
+  + ME04R-2 : CODOPER
+  + ME04R-3 : CODIGO
+}
+
+entity "ME06" as ME06 {
+  CODIGO : varchar(8)
+  TIPO : varchar(30)
+  MARCA : varchar(20)
+  CAPACI : varchar(30)
+  DIVI : varchar(10)
+  NOMTIPO : varchar(30)
+  CODTIPO : varchar(3)
+  CODFOR : integer
+  COGFOR : varchar(12)
+  COMPRA : datetime
+  VALOR : decimal(9,2)
+  SITUACAO : varchar(1)
+  DATAUSO : datetime
+  DATAFIM : datetime
+  NORMA : varchar(30)
+  APLIC : varchar(30)
+  TIPCAL : varchar(1)
+  CALIBRAR : integer
+  ATIVO : varchar(1)
+  ERROADM : varchar(15)
+  OBS01 : varchar(70)
+  OBS02 : varchar(70)
+  OBS03 : varchar(70)
+  MODELO : varchar(20)
+  CALULT : datetime
+  CALPRO : datetime
+  CADTIP : varchar(1)
+  DIME : varchar(1)
+  MATE : varchar(1)
+  CARA : varchar(1)
+  PRECO : decimal(9,2)
+  ULTPRC : decimal(9,2)
+  ULTUND : varchar(2)
+  ULTDATA : datetime
+  NOME : varchar(1)
+  APLICACAO : varchar(24)
+  DESENHO : varchar(25)
+  DATAEXT : datetime
+  CLASSIPI : varchar(10)
+  UNIDADE : varchar(2)
+  PF : integer
+  RRMDATA : datetime
+  --
+  .. Índices ..
+  + ME06-1 : CODIGO
+  + ME06-2 : CODTIPO+CODIGO
+  + ME06-3 : CALPRO
+}
+
+entity "ME06R" as ME06R {
+  NUMERO : integer
+  CODIGO : varchar(8)
+  CODOPER : integer
+  SAIDA : datetime
+  HORASAI : decimal(6,2)
+  DEVOLUCAO : datetime
+  HORADEV : decimal(6,2)
+  AREA : varchar(2)
+  SETOR : varchar(3)
+  --
+  .. Índices ..
+  + ME06R-1 : NUMERO
+  + ME06R-2 : CODOPER
+  + ME06R-3 : CODIGO
+}
+
+entity "ME06X" as ME06X {
+  CODIGO : varchar(8)
+  TIPO : varchar(30)
+  MARCA : varchar(20)
+  CAPACI : varchar(30)
+  DIVI : varchar(10)
+  NOMTIPO : varchar(30)
+  CODTIPO : varchar(3)
+  CODFOR : integer
+  COGFOR : varchar(12)
+  COMPRA : datetime
+  VALOR : decimal(12,2)
+  SITUACAO : varchar(1)
+  DATAUSO : datetime
+  DATAFIM : datetime
+  NORMA : varchar(30)
+  APLIC : varchar(30)
+  TIPCAL : varchar(1)
+  CALIBRAR : integer
+  ATIVO : varchar(8)
+  ERROADM : varchar(15)
+  OBS01 : varchar(70)
+  OBS02 : varchar(70)
+  OBS03 : varchar(70)
+  MODELO : varchar(20)
+  CALULT : datetime
+  CALPRO : datetime
+  CADTIP : varchar(1)
+  DIME : varchar(40)
+  MATE : varchar(30)
+  CARA : varchar(50)
+  PRECO : decimal(12,2)
+  RRMDATA : datetime
+  --
+  .. Índices ..
+  + ME06X-1 : CODIGO
+  + ME06X-2 : CODTIPO+CODIGO
+  + ME06X-3 : CALPRO
+}
+
+entity "ME4CC" as ME4CC {
+  NUMERO : integer
+  DATA : datetime
+  CODIGO : varchar(24)
+  DATAREV : datetime
+  CODME04A : varchar(8)
+  CODME04 : varchar(8)
+  NOMME04 : varchar(30)
+  TEMPER : varchar(10)
+  UMIDADE : varchar(5)
+  NOVO : boolean
+  SUJOEXT : boolean
+  SUJOINT : boolean
+  DANIFIC : boolean
+  LAUDOF : varchar(1)
+  LAUDOD : datetime
+  NUMTEC : integer
+  NOMTEC : varchar(40)
+  VALPAD : datetime
+  INSTRU : varchar(20)
+  DISPLIN : boolean
+  DISPMAT : boolean
+  --
+  .. Índices ..
+  + NUMERO : NUMERO
+  + CODIGO : CODIGO
+}
+
+entity "ME4CCI" as ME4CCI {
+  NUMERO : integer
+  DIMENSAO : varchar(50)
+  ENCONTRA : varchar(30)
+  TENDENCIA : varchar(10)
+  LAUDO : varchar(1)
+  INCTOT : varchar(10)
+  --
+  .. Índices ..
+  + NUMERO : NUMERO
+}
+
+entity "RRM" as RRM {
+  RRS : integer
+  CLIENTE : integer
+  CLINOME : varchar(40)
+  DESENHO : varchar(24)
+  DESCRI : varchar(40)
+  INSTRU : varchar(8)
+  DESCII : varchar(25)
+  CARAC : varchar(40)
+  ESPEC : varchar(40)
+  AVA : varchar(40)
+  AVB : varchar(40)
+  AVAN : integer
+  AVBN : integer
+  AMA01 : decimal(10,4)
+  AMA02 : decimal(10,4)
+  AMA03 : decimal(10,4)
+  AMA04 : decimal(10,4)
+  AMA05 : decimal(10,4)
+  AMAA01 : decimal(10,4)
+  AMAA02 : decimal(10,4)
+  AMAA03 : decimal(10,4)
+  AMAA04 : decimal(10,4)
+  AMAA05 : decimal(10,4)
+  AMB01 : decimal(10,4)
+  AMB02 : decimal(10,4)
+  AMB03 : decimal(10,4)
+  AMB04 : decimal(10,4)
+  AMB05 : decimal(10,4)
+  AMBB01 : decimal(10,4)
+  AMBB02 : decimal(10,4)
+  AMBB03 : decimal(10,4)
+  AMBB04 : decimal(10,4)
+  AMBB05 : decimal(10,4)
+  DIFA01 : decimal(7,4)
+  DIFA02 : decimal(7,4)
+  DIFA03 : decimal(7,4)
+  DIFA04 : decimal(7,4)
+  DIFA05 : decimal(7,4)
+  DIFB01 : decimal(7,4)
+  DIFB02 : decimal(7,4)
+  DIFB03 : decimal(7,4)
+  DIFB04 : decimal(7,4)
+  DIFB05 : decimal(7,4)
+  TOTAA : decimal(11,4)
+  TOTAB : decimal(11,4)
+  MEDAA : decimal(7,4)
+  TOTALA : decimal(11,4)
+  TOTBA : decimal(11,4)
+  TOTBB : decimal(11,4)
+  MEDBB : decimal(7,4)
+  TOTALB : decimal(11,4)
+  MEDIA : decimal(11,4)
+  MEDIB : decimal(11,4)
+  MEDSOM : decimal(11,4)
+  MEDMED : decimal(7,4)
+  DIFMED : decimal(7,4)
+  VE : decimal(7,5)
+  VA : decimal(7,5)
+  RR : decimal(7,5)
+  VP : decimal(10,5)
+  VT : decimal(10,5)
+  PRR : decimal(10,5)
+  DATA : datetime
+  OBS01 : varchar(50)
+  OBS02 : varchar(50)
+  RP : decimal(11,5)
+  M01 : decimal(11,5)
+  M02 : decimal(11,5)
+  M03 : decimal(11,5)
+  M04 : decimal(11,5)
+  M05 : decimal(11,5)
+  RPMAX : decimal(11,4)
+  RPMIN : decimal(11,4)
+  XMAX : decimal(11,4)
+  XMIN : decimal(11,4)
+  K01 : decimal(6,4)
+  K02 : decimal(6,4)
+  K03 : decimal(6,4)
+  TOLMIN : decimal(9,5)
+  TOLMAX : decimal(9,5)
+  NUMASS : integer
+  DATASS : datetime
+  NOMASS : varchar(40)
+  --
+  .. Índices ..
+  + RRS : RRS
+}
+
+
+@enduml

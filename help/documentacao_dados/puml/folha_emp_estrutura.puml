@@ -1,0 +1,1787 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "afdterr" as afdterr {
+  NUMERO : integer
+  DATA : datetime
+  HORA : decimal(5,2)
+  MOTIVO : integer
+  MOTOCO : varchar(70)
+  --
+  .. Índices ..
+  + AFDTERR : STR(NUMERO,8)+DTOS(DATA)+STR(HORA,5,2)
+}
+
+entity "ajudira" as ajudira {
+  CPF : varchar(14)
+  MES : integer
+  NUMERO : integer
+  VALOR1 : decimal(12,2)
+  VALOR2 : decimal(12,2)
+  VALOR3 : decimal(12,2)
+  VALOR5 : decimal(12,2)
+  VALOR4 : decimal(12,2)
+  VALOR6 : decimal(12,2)
+  VALOR7 : decimal(12,2)
+  VALUF1 : decimal(12,2)
+  VALUF2 : decimal(12,2)
+  VALUF3 : decimal(12,2)
+  VALUF4 : decimal(12,2)
+  VALUF5 : decimal(12,2)
+  VALUF6 : decimal(12,2)
+  VALUF7 : decimal(12,2)
+  --
+  .. Índices ..
+  + AJUDIRA : CPF+STR(MES,2)
+}
+
+entity "ajudird" as ajudird {
+  CPF : varchar(14)
+  MES : integer
+  NUMERO : integer
+  VALOR1 : decimal(12,2)
+  VALOR2 : decimal(12,2)
+  VALOR3 : decimal(12,2)
+  VALOR5 : decimal(12,2)
+  VALOR4 : decimal(12,2)
+  VALOR6 : decimal(12,2)
+  VALOR7 : decimal(12,2)
+  VALUF1 : decimal(12,2)
+  VALUF2 : decimal(12,2)
+  VALUF3 : decimal(12,2)
+  VALUF4 : decimal(12,2)
+  VALUF5 : decimal(12,2)
+  VALUF6 : decimal(12,2)
+  VALUF7 : decimal(12,2)
+  --
+  .. Índices ..
+  + AJUDIRD : CPF+STR(MES,2)
+}
+
+entity "ajudirf" as ajudirf {
+  CPF : varchar(14)
+  MES : integer
+  NUMERO : integer
+  VALOR1 : decimal(12,2)
+  VALOR2 : decimal(12,2)
+  VALOR3 : decimal(12,2)
+  VALOR5 : decimal(12,2)
+  VALOR4 : decimal(12,2)
+  VALOR6 : decimal(12,2)
+  VALOR7 : decimal(12,2)
+  VALUF1 : decimal(12,2)
+  VALUF2 : decimal(12,2)
+  VALUF3 : decimal(12,2)
+  VALUF4 : decimal(12,2)
+  VALUF5 : decimal(12,2)
+  VALUF6 : decimal(12,2)
+  VALUF7 : decimal(12,2)
+  --
+  .. Índices ..
+  + AJUDIRF : CPF+STR(MES,2)
+}
+
+entity "bcobak" as bcobak {
+  NUMERO : integer
+  ANO : integer
+  MES : integer
+  SALDO : decimal(8,2)
+  SALANT : decimal(8,2)
+  CREDITO : decimal(8,2)
+  DEBITO : decimal(8,2)
+  DIAANT : decimal(8,2)
+  DIACRE : decimal(8,2)
+  DIADEB : decimal(8,2)
+  DIASAL : decimal(8,2)
+  --
+  .. Índices ..
+  + BCOBAK : STR(NUMERO,8)+STR(ANO,4)+STR(MES,2)
+}
+
+entity "bcodek" as bcodek {
+  NUMERO : integer
+  ANO : integer
+  MES : integer
+  SALDO : decimal(8,2)
+  SALANT : decimal(8,2)
+  CREDITO : decimal(8,2)
+  DEBITO : decimal(8,2)
+  DIAANT : decimal(8,2)
+  DIACRE : decimal(8,2)
+  DIADEB : decimal(8,2)
+  DIASAL : decimal(8,2)
+  --
+  .. Índices ..
+  + BCODEK : STR(NUMERO,8)+STR(ANO,4)+STR(MES,2)
+}
+
+entity "bcodem" as bcodem {
+  NUMERO : integer
+  ANO : integer
+  MES : integer
+  SALDO : decimal(8,2)
+  SALANT : decimal(8,2)
+  CREDITO : decimal(8,2)
+  DEBITO : decimal(8,2)
+  DIAANT : decimal(8,2)
+  DIACRE : decimal(8,2)
+  DIADEB : decimal(8,2)
+  DIASAL : decimal(8,2)
+  --
+  .. Índices ..
+  + BCODEM : STR(NUMERO,8)+STR(ANO,4)+STR(MES,2)
+}
+
+entity "bcohrs" as bcohrs {
+  NUMERO : integer
+  ANO : integer
+  MES : integer
+  SALDO : decimal(8,2)
+  SALANT : decimal(8,2)
+  CREDITO : decimal(8,2)
+  DEBITO : decimal(8,2)
+  DIAANT : decimal(8,2)
+  DIACRE : decimal(8,2)
+  DIADEB : decimal(8,2)
+  DIASAL : decimal(8,2)
+  --
+  .. Índices ..
+  + BCOHRS : STR(NUMERO,8)+STR(ANO,4)+STR(MES,2)
+}
+
+entity "bcoreq" as bcoreq {
+  REQUISI : integer
+  NUMERO : integer
+  DATA : datetime
+  TIPO : varchar(1)
+  HORAS : decimal(6,2)
+  DIAS : decimal(6,2)
+  OBS : varchar(60)
+  IMP : varchar(6)
+}
+
+entity "bcrbak" as bcrbak {
+  REQUISI : integer
+  NUMERO : integer
+  DATA : datetime
+  TIPO : varchar(1)
+  HORAS : decimal(6,2)
+  DIAS : decimal(6,2)
+  OBS : varchar(60)
+  IMP : varchar(6)
+  --
+  .. Índices ..
+  + BCRBAK : REQUISI
+}
+
+entity "cesta" as cesta {
+  NUMERO : integer
+  NOME : varchar(40)
+  CESTA : varchar(1)
+  ADMITIDO : datetime
+  OBS : varchar(40)
+  --
+  .. Índices ..
+  + CESTA : NUMERO
+}
+
+entity "ctrhor" as ctrhor {
+  DEPTO : integer
+  SETOR : integer
+  SECAO : integer
+  NOMEC : varchar(15)
+  ANO : integer
+  MES : integer
+  QTFUN : integer
+  HRTRA : decimal(7,2)
+  HRDSR : decimal(7,2)
+  HRNJU : decimal(7,2)
+  HRJUS : decimal(7,2)
+  CCUSTO : integer
+  UNIFUN : varchar(10)
+  MODIRETO : varchar(1)
+  --
+  .. Índices ..
+  + CTRHOR : STR(ANO,4)+STR(MES,2)+STR(DEPTO,4)
+}
+
+entity "ferias" as ferias {
+  NUMERO : integer
+  DEPTO : integer
+  SECAO : integer
+  SETOR : integer
+  NOME : varchar(30)
+  ADMITIDO : datetime
+  CCUSTO : integer
+  UNIFUN : varchar(10)
+  MODIRETA : varchar(1)
+  QTVEN : integer
+  INIPER : datetime
+  FIMPER : datetime
+  INIGOZ : datetime
+  FIMGOZ : datetime
+  INIPRG : datetime
+  FIMPRG : datetime
+  DEPSETSEC : integer
+  DENUNIFUN : varchar(30)
+  CNUMERO : varchar(8)
+  FUNCAO : integer
+  FUNNOME : varchar(30)
+  HTT : varchar(2)
+  SITUACAO : varchar(2)
+  SALADM : decimal(12,2)
+  --
+  .. Índices ..
+  + FERIAS01 : NUMERO
+  + FERIAS02 : INIPER
+  + FERIAS03 : STR(NUMERO,8)+DTOS(INIPER)
+}
+
+entity "foopes" as foopes {
+  NUMERO : integer
+  CNUMERO : varchar(8)
+  DEPTO : integer
+  SECAO : integer
+  SETOR : integer
+  DEPSETSEC : integer
+  CHAPA : integer
+  ORDEM : integer
+  NOME : varchar(60)
+  ENDTIP : varchar(3)
+  ENDER : varchar(40)
+  ENDNUM : varchar(10)
+  ENDCOMPL : varchar(30)
+  BAIRRO : varchar(30)
+  IBGE : varchar(7)
+  CIDADE : varchar(35)
+  ESTADO : varchar(2)
+  CEP : varchar(9)
+  FONE : varchar(14)
+  NASC : datetime
+  NASCIBGE : varchar(7)
+  ANONASCI : integer
+  NASCPAIS : varchar(4)
+  CIVIL : integer
+  ESTCIVIL : varchar(1)
+  ESCRAIS : varchar(2)
+  PAI : varchar(40)
+  MAE : varchar(40)
+  CPF : varchar(14)
+  PROFIS : varchar(7)
+  CTPSDATA : datetime
+  CTPSUF : varchar(2)
+  SERIE : varchar(5)
+  PIS : varchar(11)
+  RGTIP : varchar(3)
+  RG : varchar(14)
+  RGUF : varchar(2)
+  RGEMIS : varchar(6)
+  RGDATA : datetime
+  FGTS : datetime
+  ADMITIDO : datetime
+  TIPFGTS : varchar(2)
+  TIPO : varchar(1)
+  HRSEM : decimal(5,2)
+  FUNCAO : integer
+  DEMITIDO : datetime
+  MOTIVO : varchar(2)
+  DATCONTSIN : datetime
+  SINDICATO : integer
+  BANCO : varchar(3)
+  AGENCIA : varchar(7)
+  CONTA : varchar(12)
+  SOCIOSIND : varchar(1)
+  SITUACAO : varchar(2)
+  INSALUBRI : varchar(1)
+  PERICULO : varchar(1)
+  AVISOPREV : datetime
+  ALTFGTS : varchar(3)
+  CONTAFGTS : varchar(11)
+  AVOSM : integer
+  SEXO : varchar(1)
+  ASSM : varchar(1)
+  ASSO : varchar(1)
+  HT : varchar(40)
+  FGTSMOT : varchar(2)
+  MOTIVODEM : integer
+  HTT : varchar(2)
+  EXCVALE : varchar(1)
+  VALEHORA : decimal(6,2)
+  SALVAR13S : decimal(12,2)
+  CNH : varchar(11)
+  CATCNH : varchar(2)
+  VALCNH : datetime
+  EXPCNH : datetime
+  OC : varchar(10)
+  OCVAL : datetime
+  OCEXP : datetime
+  OCEMI : varchar(10)
+  EXADAT : datetime
+  EXAPRO : datetime
+  CATEGORIA : varchar(2)
+  PGFGTS : varchar(1)
+  OCOFGTS : varchar(1)
+  EOCO : varchar(1)
+  VTDIAS : integer
+  CI : integer
+  CLASSE : integer
+  TOMADOR : integer
+  PGASSI : varchar(1)
+  RACS : varchar(1)
+  DEFICI : varchar(1)
+  CCUSTO : integer
+  UNIFUN : varchar(10)
+  MODIRETA : varchar(1)
+  CESTA : varchar(1)
+  VT : varchar(1)
+  EMAIL : varchar(50)
+  TITULO : varchar(14)
+  TITUZONA : varchar(3)
+  TITUSECA : varchar(3)
+  CNS : varchar(15)
+  NUMREGANT : integer
+  NUMEMPANT : integer
+  DATTRANSF : datetime
+  ETADM : varchar(1)
+  EIADM : varchar(1)
+  E1ADM : varchar(1)
+  EREGI : varchar(3)
+  EPREV : varchar(4)
+  EVINC : varchar(3)
+  ELTRA : varchar(1)
+  ETJOR : varchar(1)
+  ETCOR : varchar(1)
+  SALADM : decimal(12,2)
+  APOSENT : varchar(1)
+  APOSEND : datetime
+  RESERV : varchar(12)
+  RESECAT : varchar(1)
+  OCUF : varchar(2)
+  CELULAR : varchar(14)
+  RICUF : varchar(2)
+  RICEXP : datetime
+  RIC : varchar(32)
+  RICEMI : varchar(3)
+  --
+  .. Índices ..
+  + FO_PES : NUMERO
+  + FO_PES2 : NOME
+  + FO_PES3 : CPF
+  + FO_PES4 : PIS
+  + FO_PES5 : ordem
+  + TEMP : PIS+DTOS(ADMITIDO)
+}
+
+entity "foptoatr" as foptoatr {
+  NUMERO : integer
+  NOME : varchar(40)
+  DATA : datetime
+  ENT : decimal(5,2)
+  RENT : decimal(5,2)
+  SAI : decimal(5,2)
+  RSAI : decimal(5,2)
+  CODANL : varchar(2)
+  COD : varchar(2)
+  SOD : varchar(2)
+  BCOSN : varchar(1)
+  OBSATR : varchar(78)
+  HORXXX : decimal(5,2)
+  --
+  .. Índices ..
+  + FOPTOATR : STR(NUMERO,8)+DTOS(DATA)+CODANL
+}
+
+entity "foptoeve" as foptoeve {
+  DIA : integer
+  MES : integer
+  CODIGO : varchar(2)
+  DESCRICAO : varchar(40)
+  BCOSN : varchar(1)
+  REDSN : varchar(1)
+  FOLSN : varchar(1)
+  --
+  .. Índices ..
+  + FOPTOEVE : STR(DIA,2)+STR(MES,2)
+}
+
+entity "foptoprd" as foptoprd {
+  ORIGEM : integer
+  DESTINO : integer
+  DATA : datetime
+  NOME : varchar(30)
+  --
+  .. Índices ..
+  + FOPTOPRD : STR(ORIGEM,8)+DTOS(DATA)
+}
+
+entity "foptorev" as foptorev {
+  GRUPO : varchar(2)
+  DATA : datetime
+  CODREV : varchar(2)
+  ENTREV : decimal(6,2)
+  ALIREV : decimal(6,2)
+  ALSREV : decimal(6,2)
+  SAIREV : decimal(6,2)
+  VIRADA : varchar(1)
+  SEQ : integer
+  FOLGASN : varchar(1)
+  CODADC : varchar(2)
+  BCOSN : varchar(1)
+  HORARIO : integer
+}
+
+entity "forais" as forais {
+  ANO : integer
+  NUMERO : integer
+  NOME : varchar(30)
+  RAIZJAN : decimal(10,2)
+  RAIZFEV : decimal(10,2)
+  RAIZMAR : decimal(10,2)
+  RAIZABR : decimal(10,2)
+  RAIZMAI : decimal(10,2)
+  RAIZJUN : decimal(10,2)
+  RAIZJUL : decimal(10,2)
+  RAIZAGO : decimal(10,2)
+  RAIZSET : decimal(10,2)
+  RAIZOUT : decimal(10,2)
+  RAIZNOV : decimal(10,2)
+  RAIZDEZ : decimal(10,2)
+  RAIZAVI : decimal(10,2)
+  SAL13_1 : decimal(10,2)
+  MES_1 : integer
+  SAL13_2 : decimal(10,2)
+  MES_2 : integer
+  RAIZFER : decimal(9,2)
+  RAIZACR : decimal(9,2)
+  RAIZGRA : decimal(9,2)
+  RAIZMUL : decimal(9,2)
+  RAIZBCH : decimal(9,2)
+  MESBCH : integer
+  MESACR : integer
+  MESGRA : integer
+  IBGECOD : varchar(7)
+  HORJAN : integer
+  HORFEV : integer
+  HORMAR : integer
+  HORABR : integer
+  HORMAI : integer
+  HORJUN : integer
+  HORJUL : integer
+  HORAGO : integer
+  HORSET : integer
+  HOROUT : integer
+  HORNOV : integer
+  HORDEZ : integer
+  CODAFA01 : varchar(2)
+  INIAFA01 : varchar(4)
+  FIMAFA01 : varchar(4)
+  CODAFA02 : varchar(2)
+  INIAFA02 : varchar(4)
+  FIMAFA02 : varchar(4)
+  CODAFA03 : varchar(2)
+  INIAFA03 : varchar(4)
+  FIMAFA03 : varchar(4)
+  DIASAFA : integer
+  CGCSOC1 : varchar(14)
+  VALSOC1 : decimal(9,2)
+  CGCSOC2 : varchar(14)
+  VALSOC2 : decimal(9,2)
+  CGCSIN : varchar(14)
+  VALSIN : decimal(9,2)
+  CGCASS : varchar(14)
+  VALASS : decimal(9,2)
+  CGCCON : varchar(14)
+  VALCON : decimal(9,2)
+  RAISVINC : varchar(2)
+  RAISSITU : varchar(1)
+  RAISDEM : varchar(2)
+  ALVARA : varchar(1)
+  TIPOADM : varchar(2)
+  --
+  .. Índices ..
+  + FORAIS : STR(ANO,4)+STR(NUMERO,8)
+  + FORAIS-2 : STR(ANO,4)+NOME
+}
+
+entity "fosfam" as fosfam {
+  REQUISI : integer
+  NUMERO : integer
+  NOME : varchar(40)
+  NASCTO : datetime
+  LOCAL : varchar(35)
+  CARTORIO : varchar(15)
+  NREGIS : varchar(32)
+  LIVRO : varchar(5)
+  FOLHA : varchar(5)
+  ENTREGA : datetime
+  BAIXA : datetime
+  CNS : varchar(15)
+  IRRF : varchar(1)
+  SALFAM : varchar(1)
+  GRPA : varchar(2)
+  ESOCIAL : varchar(2)
+  NCARTORIO : varchar(6)
+  TERMO : varchar(7)
+  LOCALIBGE : varchar(7)
+  SEXO : varchar(1)
+  LOCALUF : varchar(2)
+  CPF : varchar(14)
+  CPFTIT : varchar(14)
+  VIVO : varchar(1)
+  CASAMENTO : datetime
+  ESTCIVIL : varchar(1)
+  ESTUDO : varchar(1)
+  INVALIDEZ : varchar(1)
+  RG : varchar(14)
+  RGUF : varchar(2)
+  RGEMIS : varchar(6)
+  RGDATA : datetime
+  --
+  .. Índices ..
+  + FOSFAM : STR(NUMERO,8)+STR(REQUISI,8)
+  + FOSFAM-2 : CPFTIT+CPF
+  + FOSFAM-3 : CPFTIT+NOME
+}
+
+entity "fo_comp" as fo_comp {
+  NUMERO : integer
+  CONTA : integer
+  HORAS : decimal(6,2)
+  VALOR : decimal(12,2)
+  CONTROLE : integer
+  FATOR : decimal(8,5)
+  TRIBUTIRR : integer
+  TRIBUTINPS : integer
+  TRIB_FGTS : integer
+  TIPO : integer
+  VALORBASE : decimal(10,2)
+  VALORMES1 : decimal(12,2)
+  VALORMES3 : decimal(12,2)
+  MES1 : integer
+  MES2 : integer
+  --
+  .. Índices ..
+  + FO_COMP : CONTROLE
+}
+
+entity "fo_dio" as fo_dio {
+  NUMERO : integer
+  DATA : datetime
+  HORA : decimal(5,2)
+  RELOGIO : varchar(5)
+  TIPOM : varchar(1)
+  TIPOR : varchar(1)
+}
+
+entity "fo_exp" as fo_exp {
+  DEPTO : integer
+  SETOR : integer
+  SECAO : integer
+  CHAPA : integer
+  NUMERO : integer
+  NOME : varchar(30)
+  ADMITIDO : datetime
+  DIAS1 : integer
+  DIAS2 : integer
+  DATAFIM1 : datetime
+  DATAFIM2 : datetime
+  OBS1 : varchar(60)
+  OBS2 : varchar(60)
+  OBS3 : varchar(60)
+  OBS4 : varchar(60)
+  OBS5 : varchar(60)
+  --
+  .. Índices ..
+  + FO_EXP : NUMERO
+}
+
+entity "fo_fer" as fo_fer {
+  DEPTO : integer
+  SECAO : integer
+  SETOR : integer
+  CHAPA : integer
+  NUMERO : integer
+  CONTROLE : integer
+  DATFERIAS : datetime
+  DATFERIASF : datetime
+  FALTAS : integer
+  GOZOU1DE : datetime
+  GOZOU1ATE : datetime
+  GOZOU2DE : datetime
+  GOZOU2ATE : datetime
+  PROGRAMA : datetime
+  PROGRAMA1 : datetime
+  DIASJUS : integer
+  DIASPAGO : integer
+  DIASGOZA : integer
+  BAIXADO : varchar(1)
+  ABONO1DE : datetime
+  ABONO1ATE : datetime
+  DIASPAGO2 : integer
+  DIASGOZA2 : integer
+  DIASPAGO3 : integer
+  DIASGOZA3 : integer
+  NOME : varchar(30)
+  COMPDATAI : datetime
+  COMPDATAF : datetime
+  FA01 : integer
+  FA02 : integer
+  FA03 : integer
+  FA04 : integer
+  FA05 : integer
+  FA06 : integer
+  FA07 : integer
+  FA08 : integer
+  FA09 : integer
+  FA10 : integer
+  FA11 : integer
+  FA12 : integer
+  FA13 : integer
+  SALVAR : decimal(12,2)
+  SALVARC : decimal(12,2)
+  COMPABOI : datetime
+  COMPABOF : datetime
+  --
+  .. Índices ..
+  + FO_FER : CONTROLE
+}
+
+entity "fo_ffe" as fo_ffe {
+  CONTA : integer
+  MES : integer
+  HORAS : decimal(10,2)
+  VALOR : decimal(18,2)
+  CONTROLE : integer
+  --
+  .. Índices ..
+  + FO_FFE : CONTROLE
+}
+
+entity "fo_fp13a" as fo_fp13a {
+  NUMERO : integer
+  CONTA : integer
+  HORAS : decimal(7,2)
+  VALOR : decimal(12,2)
+  CONTROLE : integer
+  FATOR : decimal(6,4)
+  TRIBUTIRR : integer
+  TRIBUTINPS : integer
+  TRIB_FGTS : integer
+  TIPO : integer
+  VALORBASE : decimal(10,2)
+  --
+  .. Índices ..
+  + FO_FP13A : CONTROLE
+}
+
+entity "fo_fp13b" as fo_fp13b {
+  NUMERO : integer
+  CONTA : integer
+  HORAS : decimal(7,2)
+  VALOR : decimal(12,2)
+  CONTROLE : integer
+  FATOR : decimal(6,4)
+  TRIBUTIRR : integer
+  TRIBUTINPS : integer
+  TRIB_FGTS : integer
+  TIPO : integer
+  VALORBASE : decimal(10,2)
+  --
+  .. Índices ..
+  + FO_FP13B : CONTROLE
+}
+
+entity "fo_fp13c" as fo_fp13c {
+  NUMERO : integer
+  CONTA : integer
+  HORAS : decimal(7,2)
+  VALOR : decimal(12,2)
+  CONTROLE : integer
+  FATOR : decimal(6,4)
+  TRIBUTIRR : integer
+  TRIBUTINPS : integer
+  TRIB_FGTS : integer
+  TIPO : integer
+  VALORBASE : decimal(10,2)
+  --
+  .. Índices ..
+  + FO_FP13C : CONTROLE
+}
+
+entity "fo_hor" as fo_hor {
+  NUMERO : integer
+  NOME : varchar(30)
+  D1 : varchar(60)
+  D2 : varchar(60)
+  D3 : varchar(60)
+  D4 : varchar(60)
+  D5 : varchar(60)
+  D6 : varchar(60)
+  D7 : varchar(60)
+  --
+  .. Índices ..
+  + FO_HOR : NUMERO
+}
+
+entity "fo_ira" as fo_ira {
+  NUMERO : integer
+  CODREN : integer
+  MES : integer
+  VALOR : decimal(18,2)
+  VALUFIR : decimal(18,2)
+  CONTROLE : integer
+  CPF : varchar(14)
+  CONTROL2 : varchar(20)
+  --
+  .. Índices ..
+  + FO_IRA : CONTROL2
+}
+
+entity "fo_ird" as fo_ird {
+  NUMERO : integer
+  CODREN : integer
+  MES : integer
+  VALOR : decimal(18,2)
+  VALUFIR : decimal(18,2)
+  CONTROLE : integer
+  CPF : varchar(14)
+  CONTROL2 : varchar(20)
+  --
+  .. Índices ..
+  + FO_IRD : CONTROL2
+}
+
+entity "fo_irr" as fo_irr {
+  NUMERO : integer
+  CODREN : integer
+  MES : integer
+  VALOR : decimal(18,2)
+  VALUFIR : decimal(18,2)
+  CONTROLE : integer
+  CPF : varchar(14)
+  CONTROL2 : varchar(20)
+  --
+  .. Índices ..
+  + FO_IRR : CONTROL2
+}
+
+entity "fo_oco" as fo_oco {
+  NUMERO : integer
+  DATASAIDA : datetime
+  PERIODOPAG : integer
+  DATARETORN : datetime
+  CODIGO : varchar(2)
+  NOME : varchar(30)
+  TEM_13_SAL : varchar(1)
+  PRAZOMAXIM : integer
+  CONTA : integer
+  CONTROLE : integer
+  OBS : varchar(60)
+  OBS2 : varchar(60)
+  NOMEF : varchar(30)
+  DATAFIM13S : datetime
+  DATAFIMPAG : datetime
+  DEPTO : integer
+  SETOR : integer
+  SECAO : integer
+  CHAPA : integer
+  VALPG : decimal(12,2)
+  ABTFGTS : varchar(1)
+  CODFGS : varchar(2)
+  CODFGR : varchar(2)
+  PGFGS : varchar(1)
+  PGFGR : varchar(1)
+  DIASS : integer
+  DIASR : integer
+  --
+  .. Índices ..
+  + FO_OCO : STR(NUMERO,8)+DTOS(DATASAIDA)
+}
+
+entity "fo_pdes" as fo_pdes {
+  NUMERO : integer
+  DATA : datetime
+  CONTA : integer
+  HORAS : decimal(6,2)
+  OBS : varchar(60)
+  HORA2 : decimal(6,2)
+}
+
+entity "fo_pes" as fo_pes {
+  NUMERO : integer
+  CNUMERO : varchar(8)
+  DEPTO : integer
+  SECAO : integer
+  SETOR : integer
+  DEPSETSEC : integer
+  CHAPA : integer
+  ORDEM : integer
+  NOME : varchar(60)
+  ENDTIP : varchar(3)
+  ENDER : varchar(40)
+  ENDNUM : varchar(10)
+  ENDCOMPL : varchar(30)
+  BAIRRO : varchar(30)
+  IBGE : varchar(7)
+  CIDADE : varchar(35)
+  ESTADO : varchar(2)
+  CEP : varchar(9)
+  FONE : varchar(14)
+  NASC : datetime
+  NASCIBGE : varchar(7)
+  ANONASCI : integer
+  NASCPAIS : varchar(4)
+  CIVIL : integer
+  ESTCIVIL : varchar(1)
+  ESCRAIS : varchar(2)
+  PAI : varchar(40)
+  MAE : varchar(40)
+  CPF : varchar(14)
+  PROFIS : varchar(7)
+  CTPSDATA : datetime
+  CTPSUF : varchar(2)
+  SERIE : varchar(5)
+  PIS : varchar(11)
+  RGTIP : varchar(3)
+  RG : varchar(14)
+  RGUF : varchar(2)
+  RGEMIS : varchar(6)
+  RGDATA : datetime
+  FGTS : datetime
+  ADMITIDO : datetime
+  TIPFGTS : varchar(2)
+  TIPO : varchar(1)
+  HRSEM : decimal(5,2)
+  FUNCAO : integer
+  DEMITIDO : datetime
+  MOTIVO : varchar(2)
+  DATCONTSIN : datetime
+  SINDICATO : integer
+  BANCO : varchar(3)
+  AGENCIA : varchar(7)
+  CONTA : varchar(12)
+  SOCIOSIND : varchar(1)
+  SITUACAO : varchar(2)
+  INSALUBRI : varchar(1)
+  PERICULO : varchar(1)
+  AVISOPREV : datetime
+  ALTFGTS : varchar(3)
+  CONTAFGTS : varchar(11)
+  AVOSM : integer
+  SEXO : varchar(1)
+  ASSM : varchar(1)
+  ASSO : varchar(1)
+  HT : varchar(40)
+  FGTSMOT : varchar(2)
+  MOTIVODEM : integer
+  HTT : varchar(2)
+  EXCVALE : varchar(1)
+  VALEHORA : decimal(6,2)
+  SALVAR13S : decimal(12,2)
+  CNH : varchar(11)
+  CATCNH : varchar(2)
+  VALCNH : datetime
+  EXPCNH : datetime
+  OC : varchar(10)
+  OCVAL : datetime
+  OCEXP : datetime
+  OCEMI : varchar(10)
+  EXADAT : datetime
+  EXAPRO : datetime
+  CATEGORIA : varchar(2)
+  PGFGTS : varchar(1)
+  OCOFGTS : varchar(1)
+  EOCO : varchar(1)
+  VTDIAS : integer
+  CI : integer
+  CLASSE : integer
+  TOMADOR : integer
+  PGASSI : varchar(1)
+  RACS : varchar(1)
+  DEFICI : varchar(1)
+  CCUSTO : integer
+  UNIFUN : varchar(10)
+  MODIRETA : varchar(1)
+  CESTA : varchar(1)
+  VT : varchar(1)
+  EMAIL : varchar(50)
+  TITULO : varchar(14)
+  TITUZONA : varchar(3)
+  TITUSECA : varchar(3)
+  CNS : varchar(15)
+  NUMREGANT : integer
+  NUMEMPANT : integer
+  DATTRANSF : datetime
+  ETADM : varchar(1)
+  EIADM : varchar(1)
+  E1ADM : varchar(1)
+  EREGI : varchar(3)
+  EPREV : varchar(4)
+  EVINC : varchar(3)
+  ELTRA : varchar(1)
+  ETJOR : varchar(1)
+  ETCOR : varchar(1)
+  SALADM : decimal(12,2)
+  APOSENT : varchar(1)
+  APOSEND : datetime
+  RESERV : varchar(12)
+  RESECAT : varchar(1)
+  OCUF : varchar(2)
+  CELULAR : varchar(14)
+  RICUF : varchar(2)
+  RICEXP : datetime
+  RIC : varchar(32)
+  RICEMI : varchar(3)
+  --
+  .. Índices ..
+  + FO_PES : NUMERO
+  + FO_PES2 : NOME
+  + FO_PES3 : CPF
+  + FO_PES4 : PIS
+  + FO_PES5 : ORDEM
+}
+
+entity "fo_pfe" as fo_pfe {
+  NUMERO : integer
+  CONTA : integer
+  HORAS : decimal(6,2)
+  VALOR : decimal(12,2)
+  CONTROLE : integer
+  FATOR : decimal(8,5)
+  TRIBUTIRR : integer
+  TRIBUTINPS : integer
+  TRIB_FGTS : integer
+  TIPO : integer
+  VALORBASE : decimal(10,2)
+  VALORMES1 : decimal(18,2)
+  VALORMES2 : decimal(18,2)
+  MES1 : integer
+  MES2 : integer
+  DATACOMP : datetime
+  --
+  .. Índices ..
+  + FO_PFE : CONTROLE
+}
+
+entity "fo_phor" as fo_phor {
+  NUMERO : integer
+  OCOINI : datetime
+  OCOFIM : datetime
+  OCOCOD : varchar(2)
+  OCOMOT : varchar(60)
+  MOTIVO : integer
+}
+
+entity "fo_pman" as fo_pman {
+  NUMERO : integer
+  DATOCO : datetime
+  HOROCO : decimal(5,2)
+  HOROC2 : decimal(5,2)
+  HOROC3 : decimal(5,2)
+  HOROC4 : decimal(5,2)
+  TIPOCO : varchar(1)
+  MOTOCO : varchar(60)
+  MOTIVO : integer
+  ZERHOR : varchar(1)
+}
+
+entity "fo_poco" as fo_poco {
+  NUMERO : integer
+  OCOINI : datetime
+  OCOFIM : datetime
+  OCOCOD : varchar(2)
+  OCOMOT : varchar(60)
+  OCOSUB : varchar(2)
+  OCOBCO : varchar(1)
+  OCORED : varchar(1)
+  OCOFOL : varchar(1)
+  OCOEXT : varchar(1)
+  OCOALM : varchar(1)
+  HRREL : decimal(6,2)
+  CESTA : varchar(1)
+  ABONA : varchar(1)
+  HRABO : decimal(6,2)
+  HRRELDEC : decimal(6,2)
+  HRABODEC : decimal(6,2)
+  MOTIVO : integer
+}
+
+entity "fo_pon" as fo_pon {
+  NUMERO : integer
+  DATA : datetime
+  ENT : decimal(5,2)
+  ALS : decimal(5,2)
+  ALE : decimal(5,2)
+  SAI : decimal(5,2)
+  COD : varchar(2)
+  SOD : varchar(2)
+  ALMOCO : varchar(1)
+  CODREV : varchar(2)
+  ENTREV : decimal(6,2)
+  ALIREV : decimal(6,2)
+  ALSREV : decimal(6,2)
+  SAIREV : decimal(6,2)
+  CTA01 : decimal(6,2)
+  CTA02 : decimal(6,2)
+  CTA03 : decimal(6,2)
+  CTA04 : decimal(6,2)
+  CTA05 : decimal(6,2)
+  CTA06 : decimal(6,2)
+  CTA07 : decimal(6,2)
+  CTA08 : decimal(6,2)
+  CTA09 : decimal(6,2)
+  CTA10 : decimal(6,2)
+  CTA11 : decimal(6,2)
+  CTA12 : decimal(6,2)
+  CTA13 : decimal(6,2)
+  CTA14 : decimal(6,2)
+  CTA15 : decimal(6,2)
+  CTA16 : decimal(6,2)
+  BCOSN : varchar(1)
+  BCOHRS : decimal(7,2)
+  REDSN : varchar(1)
+  FOLSN : varchar(1)
+  EXTSN : varchar(1)
+  VIRADA : varchar(1)
+  MUDENT : varchar(1)
+  MUDSAI : varchar(1)
+  MUDALS : varchar(1)
+  MUDALE : varchar(1)
+  MUDHOR : varchar(1)
+  HORARIO : integer
+}
+
+entity "fo_pos" as fo_pos {
+  NUMERO : integer
+  NOME : varchar(30)
+  SEMINI : datetime
+  SEMFIM : datetime
+  CTA01 : decimal(7,2)
+  CTA02 : decimal(7,2)
+  CTA03 : decimal(7,2)
+  CTA04 : decimal(7,2)
+  CTA05 : decimal(7,2)
+  CTA06 : decimal(7,2)
+  CTA07 : decimal(7,2)
+  CTA08 : decimal(7,2)
+  CTA09 : decimal(7,2)
+  CTA10 : decimal(7,2)
+  CTA11 : decimal(7,2)
+  CTA12 : decimal(7,2)
+  CTA13 : decimal(7,2)
+  CTA14 : decimal(7,2)
+  CTA15 : decimal(7,2)
+  CTA16 : decimal(7,2)
+  CTA17 : decimal(7,2)
+  CTA18 : decimal(7,2)
+  CTA19 : decimal(7,2)
+  CTA20 : decimal(7,2)
+  CTA21 : decimal(7,2)
+  CTA22 : decimal(7,2)
+  CTA23 : decimal(7,2)
+  CTA24 : decimal(7,2)
+  VAL01 : decimal(12,2)
+  VAL02 : decimal(12,2)
+  VAL03 : decimal(12,2)
+  VAL04 : decimal(12,2)
+  VAL05 : decimal(12,2)
+  VAL06 : decimal(12,2)
+  VAL07 : decimal(12,2)
+  VAL08 : decimal(12,2)
+  VAL09 : decimal(12,2)
+  VAL10 : decimal(12,2)
+  VAL11 : decimal(12,2)
+  VAL12 : decimal(12,2)
+  VAL13 : decimal(12,2)
+  VAL14 : decimal(12,2)
+  VAL15 : decimal(12,2)
+  VAL16 : decimal(12,2)
+  VAL17 : decimal(12,2)
+  VAL18 : decimal(12,2)
+  VAL19 : decimal(12,2)
+  VAL20 : decimal(12,2)
+  VAL21 : decimal(12,2)
+  VAL22 : decimal(12,2)
+  VAL23 : decimal(12,2)
+  VAL24 : decimal(12,2)
+  BCOHRS : decimal(7,2)
+  MES : integer
+  ANO : integer
+}
+
+entity "fo_pot" as fo_pot {
+  NUMERO : integer
+  NOME : varchar(30)
+  MES : integer
+  ANO : integer
+  CTA01 : decimal(7,2)
+  CTA02 : decimal(7,2)
+  CTA03 : decimal(7,2)
+  CTA04 : decimal(7,2)
+  CTA05 : decimal(7,2)
+  CTA06 : decimal(7,2)
+  CTA07 : decimal(7,2)
+  CTA08 : decimal(7,2)
+  CTA09 : decimal(7,2)
+  CTA10 : decimal(7,2)
+  CTA11 : decimal(7,2)
+  CTA12 : decimal(7,2)
+  CTA13 : decimal(7,2)
+  CTA14 : decimal(7,2)
+  CTA15 : decimal(7,2)
+  CTA16 : decimal(7,2)
+  CTA17 : decimal(7,2)
+  CTA18 : decimal(7,2)
+  CTA19 : decimal(7,2)
+  CTA20 : decimal(7,2)
+  CTA21 : decimal(7,2)
+  CTA22 : decimal(7,2)
+  CTA23 : decimal(7,2)
+  CTA24 : decimal(7,2)
+  VAL01 : decimal(12,2)
+  VAL02 : decimal(12,2)
+  VAL03 : decimal(12,2)
+  VAL04 : decimal(12,2)
+  VAL05 : decimal(12,2)
+  VAL06 : decimal(12,2)
+  VAL07 : decimal(12,2)
+  VAL08 : decimal(12,2)
+  VAL09 : decimal(12,2)
+  VAL10 : decimal(12,2)
+  VAL11 : decimal(12,2)
+  VAL12 : decimal(12,2)
+  VAL13 : decimal(12,2)
+  VAL14 : decimal(12,2)
+  VAL15 : decimal(12,2)
+  VAL16 : decimal(12,2)
+  VAL17 : decimal(12,2)
+  VAL18 : decimal(12,2)
+  VAL19 : decimal(12,2)
+  VAL20 : decimal(12,2)
+  VAL21 : decimal(12,2)
+  VAL22 : decimal(12,2)
+  VAL23 : decimal(12,2)
+  VAL24 : decimal(12,2)
+  BCOHRS : decimal(7,2)
+}
+
+entity "fo_psl" as fo_psl {
+  NUMERO : integer
+  NOME : varchar(30)
+  ADMITIDO : datetime
+  FUNCAO : varchar(20)
+  SALANT : decimal(11,2)
+  SALATU : decimal(11,2)
+  SALPRO : decimal(11,2)
+  TAXA1 : decimal(6,2)
+  TAXA2 : decimal(6,2)
+  --
+  .. Índices ..
+  + FO_PSL : NUMERO
+}
+
+entity "fo_ptt" as fo_ptt {
+  NUMERO : integer
+  NOME : varchar(30)
+  MES : integer
+  ANO : integer
+  CTA01 : decimal(7,2)
+  CTA02 : decimal(7,2)
+  CTA03 : decimal(7,2)
+  CTA04 : decimal(7,2)
+  CTA05 : decimal(7,2)
+  CTA06 : decimal(7,2)
+  CTA07 : decimal(7,2)
+  CTA08 : decimal(7,2)
+  CTA09 : decimal(7,2)
+  CTA10 : decimal(7,2)
+  CTA11 : decimal(7,2)
+  CTA12 : decimal(7,2)
+  CTA13 : decimal(7,2)
+  CTA14 : decimal(7,2)
+  CTA15 : decimal(7,2)
+  CTA16 : decimal(7,2)
+  VAL01 : decimal(12,2)
+  VAL02 : decimal(12,2)
+  VAL03 : decimal(12,2)
+  VAL04 : decimal(12,2)
+  VAL05 : decimal(12,2)
+  VAL06 : decimal(12,2)
+  VAL07 : decimal(12,2)
+  VAL08 : decimal(12,2)
+  VAL09 : decimal(12,2)
+  VAL10 : decimal(12,2)
+  VAL11 : decimal(12,2)
+  VAL12 : decimal(12,2)
+  VAL13 : decimal(12,2)
+  VAL14 : decimal(12,2)
+  VAL15 : decimal(12,2)
+  VAL16 : decimal(12,2)
+  BCOHRS : decimal(7,2)
+  --
+  .. Índices ..
+  + FO_PTT : STR(NUMERO,8)+STR(ANO,4)+STR(MES,2)
+}
+
+entity "fo_rdd" as fo_rdd {
+  NUMERO : integer
+  CONTA : integer
+  MES : integer
+  HORAS : decimal(6,2)
+  VALOR : decimal(12,2)
+  CONTROLE : integer
+  --
+  .. Índices ..
+  + FO_RDD : CONTROLE
+}
+
+entity "fo_relhr" as fo_relhr {
+  NUMERO : integer
+  NOME : varchar(30)
+  HFOL00 : varchar(1)
+  GRUPO : varchar(2)
+  ALMOCO : varchar(1)
+  PADRAO : varchar(1)
+  HORREF : varchar(2)
+  MARALM : varchar(1)
+  MARMES : varchar(1)
+  DATAREF1 : datetime
+  --
+  .. Índices ..
+  + FO_RELHR : NUMERO
+}
+
+entity "fo_res" as fo_res {
+  NUMERO : integer
+  CONTA : integer
+  MES : integer
+  HORAS : decimal(6,2)
+  VALOR : decimal(12,2)
+  CONTROLE : integer
+  --
+  .. Índices ..
+  + FO_RES : CONTROLE
+}
+
+entity "fo_rss" as fo_rss {
+  NUMERO : integer
+  CONTA : integer
+  HORAS : decimal(6,2)
+  VALOR : decimal(12,2)
+  CONTROLE : integer
+  FATOR : decimal(8,5)
+  TRIBUTIRR : integer
+  TRIBUTINPS : integer
+  TRIB_FGTS : integer
+  TIPO : integer
+  VALORBASE : decimal(10,2)
+  MES1 : integer
+  VALORMES1 : decimal(18,2)
+  MES2 : integer
+  VALORMES2 : decimal(18,2)
+  --
+  .. Índices ..
+  + FO_RSS : CONTROLE
+}
+
+entity "fo_sal" as fo_sal {
+  NUMERO : integer
+  ANO : integer
+  SALJAN : decimal(12,2)
+  MOT1 : varchar(2)
+  SALFEV : decimal(12,2)
+  MOT2 : varchar(2)
+  SALMAR : decimal(12,2)
+  MOT3 : varchar(2)
+  SALABR : decimal(12,2)
+  MOT4 : varchar(2)
+  SALMAI : decimal(12,2)
+  MOT5 : varchar(2)
+  SALJUN : decimal(12,2)
+  MOT6 : varchar(2)
+  SALJUL : decimal(12,2)
+  MOT7 : varchar(2)
+  SALAGO : decimal(12,2)
+  MOT8 : varchar(2)
+  SALSET : decimal(12,2)
+  MOT9 : varchar(2)
+  SALOUT : decimal(12,2)
+  MOT10 : varchar(2)
+  SALNOV : decimal(12,2)
+  MOT11 : varchar(2)
+  SALDEZ : decimal(12,2)
+  MOT12 : varchar(2)
+  --
+  .. Índices ..
+  + FO_SAL : STR(NUMERO,8)+STR(ANO,4)
+}
+
+entity "fo_var" as fo_var {
+  NUMERO : integer
+  CONTA : integer
+  HORAS : decimal(18,2)
+  VALOR : decimal(18,2)
+  TIPO : integer
+  CONTROLE : integer
+  VARFER : integer
+  VARRES : integer
+  VAR13S : integer
+  NIVFER : integer
+  NIVRES : integer
+  NIV13S : integer
+  --
+  .. Índices ..
+  + FO_VAR : CONTROLE
+}
+
+entity "fo_vbr" as fo_vbr {
+  NUMERO : integer
+  CONTA : integer
+  HORAS : decimal(18,2)
+  VALOR : decimal(18,2)
+  TIPO : integer
+  CONTROLE : integer
+  VARFER : integer
+  VARRES : integer
+  VAR13S : integer
+  NIVFER : integer
+  NIVRES : integer
+  NIV13S : integer
+  --
+  .. Índices ..
+  + FO_VBR : CONTROLE
+}
+
+entity "fp000100" as fp000100 {
+  NUMERO : integer
+  CONTA : integer
+  HORAS : decimal(6,2)
+  VALOR : decimal(12,2)
+  CONTROLE : integer
+  FATOR : decimal(6,4)
+  TRIBUTIRR : integer
+  TRIBUTINPS : integer
+  TRIB_FGTS : integer
+  TIPO : integer
+  VALORBASE : decimal(10,2)
+}
+
+entity "fp000101" as fp000101 {
+  NUMERO : integer
+  CONTA : integer
+  HORAS : decimal(6,2)
+  VALOR : decimal(12,2)
+  CONTROLE : integer
+  FATOR : decimal(6,4)
+  TRIBUTIRR : integer
+  TRIBUTINPS : integer
+  TRIB_FGTS : integer
+  TIPO : integer
+  VALORBASE : decimal(10,2)
+}
+
+entity "fp000102" as fp000102 {
+  NUMERO : integer
+  CONTA : integer
+  HORAS : decimal(6,2)
+  VALOR : decimal(12,2)
+  CONTROLE : integer
+  FATOR : decimal(6,4)
+  TRIBUTIRR : integer
+  TRIBUTINPS : integer
+  TRIB_FGTS : integer
+  TIPO : integer
+  VALORBASE : decimal(10,2)
+}
+
+entity "fp000103" as fp000103 {
+  NUMERO : integer
+  CONTA : integer
+  HORAS : decimal(6,2)
+  VALOR : decimal(12,2)
+  CONTROLE : integer
+  FATOR : decimal(6,4)
+  TRIBUTIRR : integer
+  TRIBUTINPS : integer
+  TRIB_FGTS : integer
+  TIPO : integer
+  VALORBASE : decimal(10,2)
+}
+
+entity "fp000104" as fp000104 {
+  NUMERO : integer
+  CONTA : integer
+  HORAS : decimal(6,2)
+  VALOR : decimal(12,2)
+  CONTROLE : integer
+  FATOR : decimal(6,4)
+  TRIBUTIRR : integer
+  TRIBUTINPS : integer
+  TRIB_FGTS : integer
+  TIPO : integer
+  VALORBASE : decimal(10,2)
+}
+
+entity "fp000105" as fp000105 {
+  NUMERO : integer
+  CONTA : integer
+  HORAS : decimal(6,2)
+  VALOR : decimal(12,2)
+  CONTROLE : integer
+  FATOR : decimal(6,4)
+  TRIBUTIRR : integer
+  TRIBUTINPS : integer
+  TRIB_FGTS : integer
+  TIPO : integer
+  VALORBASE : decimal(10,2)
+}
+
+entity "fp000106" as fp000106 {
+  NUMERO : integer
+  CONTA : integer
+  HORAS : decimal(6,2)
+  VALOR : decimal(12,2)
+  CONTROLE : integer
+  FATOR : decimal(6,4)
+  TRIBUTIRR : integer
+  TRIBUTINPS : integer
+  TRIB_FGTS : integer
+  TIPO : integer
+  VALORBASE : decimal(10,2)
+}
+
+entity "fp000107" as fp000107 {
+  NUMERO : integer
+  CONTA : integer
+  HORAS : decimal(6,2)
+  VALOR : decimal(12,2)
+  CONTROLE : integer
+  FATOR : decimal(6,4)
+  TRIBUTIRR : integer
+  TRIBUTINPS : integer
+  TRIB_FGTS : integer
+  TIPO : integer
+  VALORBASE : decimal(10,2)
+}
+
+entity "fp000108" as fp000108 {
+  NUMERO : integer
+  CONTA : integer
+  HORAS : decimal(6,2)
+  VALOR : decimal(12,2)
+  CONTROLE : integer
+  FATOR : decimal(6,4)
+  TRIBUTIRR : integer
+  TRIBUTINPS : integer
+  TRIB_FGTS : integer
+  TIPO : integer
+  VALORBASE : decimal(10,2)
+}
+
+entity "fp000109" as fp000109 {
+  NUMERO : integer
+  CONTA : integer
+  HORAS : decimal(6,2)
+  VALOR : decimal(12,2)
+  CONTROLE : integer
+  FATOR : decimal(6,4)
+  TRIBUTIRR : integer
+  TRIBUTINPS : integer
+  TRIB_FGTS : integer
+  TIPO : integer
+  VALORBASE : decimal(10,2)
+}
+
+entity "fp000110" as fp000110 {
+  NUMERO : integer
+  CONTA : integer
+  HORAS : decimal(6,2)
+  VALOR : decimal(12,2)
+  CONTROLE : integer
+  FATOR : decimal(6,4)
+  TRIBUTIRR : integer
+  TRIBUTINPS : integer
+  TRIB_FGTS : integer
+  TIPO : integer
+  VALORBASE : decimal(10,2)
+}
+
+entity "fp000111" as fp000111 {
+  NUMERO : integer
+  CONTA : integer
+  HORAS : decimal(6,2)
+  VALOR : decimal(12,2)
+  CONTROLE : integer
+  FATOR : decimal(6,4)
+  TRIBUTIRR : integer
+  TRIBUTINPS : integer
+  TRIB_FGTS : integer
+  TIPO : integer
+  VALORBASE : decimal(10,2)
+}
+
+entity "fp000112" as fp000112 {
+  NUMERO : integer
+  CONTA : integer
+  HORAS : decimal(6,2)
+  VALOR : decimal(12,2)
+  CONTROLE : integer
+  FATOR : decimal(6,4)
+  TRIBUTIRR : integer
+  TRIBUTINPS : integer
+  TRIB_FGTS : integer
+  TIPO : integer
+  VALORBASE : decimal(10,2)
+}
+
+entity "htttroca" as htttroca {
+  NUMERO : integer
+  DATA : varchar(10)
+  HORA : varchar(10)
+  ANT : varchar(10)
+  HTT : varchar(10)
+  --
+  .. Índices ..
+  + HTTTROCA : NUMERO
+}
+
+entity "irrf" as irrf {
+  CGC : varchar(18)
+  CPF : varchar(18)
+  NOME : varchar(40)
+  V401 : decimal(12,2)
+  V402 : decimal(12,2)
+  V403 : decimal(12,2)
+  V404 : decimal(12,2)
+  V407 : decimal(12,2)
+  V405 : decimal(12,2)
+  V501 : decimal(12,2)
+  V502 : decimal(12,2)
+  V503 : decimal(12,2)
+  V504 : decimal(12,2)
+  V505 : decimal(12,2)
+  V506 : decimal(12,2)
+  V507 : decimal(12,2)
+  V611 : decimal(12,2)
+  V612 : decimal(12,2)
+  V613 : decimal(12,2)
+  V614 : decimal(12,2)
+  V615 : decimal(12,2)
+  V617 : decimal(12,2)
+  OBS01 : varchar(60)
+  OBS02 : varchar(60)
+  OBS03 : varchar(60)
+  OBS04 : varchar(60)
+  OBS05 : varchar(60)
+  V601 : decimal(12,2)
+  V602 : decimal(12,2)
+  V603 : decimal(12,2)
+  V604 : decimal(12,2)
+  V605 : decimal(12,2)
+  V607 : decimal(12,2)
+  --
+  .. Índices ..
+  + IRRF : CPF
+}
+
+entity "irrf01" as irrf01 {
+  NUMERO : integer
+  DOCUMENTO : varchar(20)
+  ANO : integer
+  CGC : varchar(18)
+  PESSOA : varchar(1)
+  NOME : varchar(40)
+  ENDERECO : varchar(40)
+  BAIRRO : varchar(30)
+  CIDADE : varchar(30)
+  ESTADO : varchar(2)
+  CEP : varchar(9)
+  DDD : varchar(4)
+  TELEFONE : varchar(9)
+  CONTATO : varchar(12)
+  --
+  .. Índices ..
+  + IRRF01 : NUMERO
+}
+
+entity "irrf02" as irrf02 {
+  NUMERO : integer
+  ITEM : integer
+  MES : integer
+  DARF : varchar(4)
+  NATUREZA : varchar(20)
+  RENDA : decimal(12,2)
+  ALIQUOTA : decimal(5,2)
+  IRRF : decimal(8,2)
+  --
+  .. Índices ..
+  + IRRF02 : STR(NUMERO,8)+STR(ITEM,2)
+}
+
+entity "prov13" as prov13 {
+  NUMERO : integer
+  SALARIO : decimal(12,2)
+  SALVAR : decimal(12,2)
+  AVOS : integer
+  VALOR : decimal(12,2)
+  VALENC : decimal(12,2)
+  VALTOT : decimal(12,2)
+  VALPRI : decimal(12,2)
+  VALLIQ : decimal(12,2)
+  MES : integer
+  ANO : integer
+  DEPTO : integer
+  SETOR : integer
+  SECAO : integer
+  --
+  .. Índices ..
+  + PROV13 : STRZERO(NUMERO,8)+STRZERO(ANO,4)+STRZERO(MES,2)
+}
+
+entity "provfe" as provfe {
+  NUMERO : integer
+  COMP : datetime
+  SALARIO : decimal(12,2)
+  SALVAR : decimal(12,2)
+  AVOS : integer
+  DIAS : integer
+  VALOR : decimal(12,2)
+  VALTER : decimal(12,2)
+  VALENC : decimal(12,2)
+  VALTOT : decimal(12,2)
+  MES : integer
+  ANO : integer
+  DEPTO : integer
+  SETOR : integer
+  SECAO : integer
+  CONTROLE : varchar(24)
+  --
+  .. Índices ..
+  + PROVFE : CONTROLE
+}
+
+entity "resfor" as resfor {
+  NUMERO : integer
+  VAL29 : decimal(12,2)
+  HOR29 : decimal(6,2)
+  VAL30 : decimal(12,2)
+  HOR30 : decimal(6,2)
+  VAL31 : decimal(12,2)
+  HOR31 : decimal(6,2)
+  VAL32 : decimal(12,2)
+  HOR32 : decimal(6,2)
+  VAL33 : decimal(12,2)
+  HOR33 : decimal(6,2)
+  VAL34 : decimal(12,2)
+  HOR34 : decimal(6,2)
+  VAL35 : decimal(12,2)
+  HOR35 : decimal(6,2)
+  VAL36 : decimal(12,2)
+  HOR36 : decimal(6,2)
+  VAL37 : decimal(12,2)
+  HOR37 : decimal(6,2)
+  VAL38 : decimal(12,2)
+  HOR38 : decimal(6,2)
+  VAL39 : decimal(12,2)
+  HOR39 : decimal(6,2)
+  VAL40 : decimal(12,2)
+  HOR40 : decimal(6,2)
+  VAL41 : decimal(12,2)
+  HOR41 : decimal(6,2)
+  VAL42 : decimal(12,2)
+  HOR42 : decimal(6,2)
+  VAL43 : decimal(12,2)
+  HOR43 : decimal(6,2)
+  VAL44 : decimal(12,2)
+  HOR44 : decimal(6,2)
+  VAL45 : decimal(12,2)
+  HOR45 : decimal(6,2)
+  VAL46 : decimal(12,2)
+  HOR46 : decimal(6,2)
+  VAL47 : decimal(12,2)
+  HOR47 : decimal(6,2)
+  VAL48 : decimal(12,2)
+  HOR48 : decimal(6,2)
+  VAL49 : decimal(12,2)
+  HOR49 : decimal(6,2)
+  VAL50 : decimal(12,2)
+  HOR50 : decimal(6,2)
+  VAL51 : decimal(12,2)
+  HOR51 : decimal(6,2)
+  VAL52 : decimal(12,2)
+  HOR52 : decimal(6,2)
+  VAL53 : decimal(12,2)
+  HOR53 : decimal(6,2)
+  VAL54 : decimal(12,2)
+  HOR54 : decimal(6,2)
+  VAL55 : decimal(12,2)
+  HOR55 : decimal(6,2)
+  DES29 : varchar(20)
+  DES30 : varchar(20)
+  DES31 : varchar(20)
+  DES32 : varchar(20)
+  DES33 : varchar(20)
+  DES34 : varchar(20)
+  DES35 : varchar(20)
+  DES36 : varchar(20)
+  DES37 : varchar(20)
+  DES38 : varchar(20)
+  DES39 : varchar(20)
+  DES40 : varchar(20)
+  DES41 : varchar(20)
+  DES42 : varchar(20)
+  DES43 : varchar(20)
+  DES44 : varchar(20)
+  DES45 : varchar(20)
+  DES46 : varchar(20)
+  DES47 : varchar(20)
+  DES48 : varchar(20)
+  DES49 : varchar(20)
+  DES50 : varchar(20)
+  DES51 : varchar(20)
+  DES52 : varchar(20)
+  DES53 : varchar(20)
+  DES54 : varchar(20)
+  DES55 : varchar(20)
+  --
+  .. Índices ..
+  + RESFOR : NUMERO
+}
+
+entity "vtavul" as vtavul {
+  NUMERO : integer
+  CONTA : integer
+  HORAS : decimal(6,2)
+  VALOR : decimal(12,2)
+  CONTROLE : integer
+  --
+  .. Índices ..
+  + VTAVUL : CONTROLE
+}
+
+entity "vtfixo" as vtfixo {
+  NUMERO : integer
+  CONTA : integer
+  HORAS : decimal(6,2)
+  VALOR : decimal(12,2)
+  CONTROLE : integer
+  CTACOM : integer
+  --
+  .. Índices ..
+  + VTFIXO : STR(NUMERO,8)+STR(CONTA,4)+STR(CTACOM,4)
+}
+
+entity "vtfolha" as vtfolha {
+  NUMERO : integer
+  CONTA : integer
+  HORAS : decimal(6,2)
+  VALOR : decimal(12,2)
+  CONTROLE : integer
+  --
+  .. Índices ..
+  + VTFOLHA : CONTROLE
+}
+
+
+@enduml

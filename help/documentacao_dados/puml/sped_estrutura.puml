@@ -1,0 +1,28 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "regc170for" as regc170for {
+  COD_PART : varchar(20)
+  COD_ITEM : varchar(20)
+  COD_FORN : varchar(30)
+  DESCR_FORN : varchar(120)
+  NCM_FORN : varchar(8)
+  QTD_DESCR : integer
+  --
+  .. Índices ..
+  + REGC170FOR : COD_PART+  COD_item+  COD_forn
+}
+
+entity "regh010lxval" as regh010lxval {
+  COD_ITEM : varchar(60)
+  VL_UNIT : decimal(14,6)
+  TIPOPRECO : varchar(1)
+  --
+  .. Índices ..
+  + REGH10LXV1 : TIPOPRECO+  COD_ITEM
+  + REGH010XV2 : cod_item
+}
+
+
+@enduml

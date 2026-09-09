@@ -1,0 +1,96 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "adipie" as adipie {
+  FORNECEDO : integer
+  DCLASSIPI : varchar(14)
+  DOPER : varchar(3)
+  DVALORNF : decimal(18,2)
+  DVALIPI : decimal(18,2)
+  CGC : varchar(18)
+  COGNOME : varchar(20)
+  DCFONEW : varchar(4)
+  FICHA : boolean
+  DESCRI : varchar(60)
+  --
+  .. Índices ..
+  + ADIPIE-1 : STR(FORNECEDO,8)+DOPER+DCLASSIPI
+  + ADIPIE-2 : STR(FORNECEDO,8)+DCFONEW+DCLASSIPI
+  + ADIPIE-3 : DCFONEW
+}
+
+entity "adipig" as adipig {
+  GRUPO : varchar(5)
+  CFOP : varchar(4)
+  --
+  .. Índices ..
+  + ADIPIG : GRUPO+CFOP
+  + ADIPIG-2 : CFOP
+}
+
+entity "adipis" as adipis {
+  FORNECEDO : integer
+  DCLASSIPI : varchar(14)
+  DOPER : varchar(3)
+  DVALORNF : decimal(18,2)
+  DVALIPI : decimal(18,2)
+  CGC : varchar(18)
+  COGNOME : varchar(20)
+  DCFONEW : varchar(4)
+  FICHA : boolean
+  DESCRI : varchar(60)
+  --
+  .. Índices ..
+  + ADIPIS-1 : STR(FORNECEDO,8)+DOPER+DCLASSIPI
+  + ADIPIS-2 : STR(FORNECEDO,8)+DCFONEW+DCLASSIPI
+  + ADIPIS-3 : DCFONEW
+}
+
+entity "bpforc" as bpforc {
+  FORNECEDO : integer
+  SAI : varchar(1)
+  --
+  .. Índices ..
+  + BPFORC : FORNECEDO
+}
+
+entity "bpforr" as bpforr {
+  FORNECEDO : integer
+  TIPO : varchar(1)
+  VALOR : decimal(18,2)
+  MES : integer
+  ANO : integer
+  GRUPO : varchar(4)
+  COGNOME : varchar(15)
+  PERC : decimal(15,6)
+  --
+  .. Índices ..
+  + BPFORR : STR(ANO,4)+STR(MES,2)+STR(FORNECEDO,8)
+}
+
+entity "bs3" as bs3 {
+  CODIGO : varchar(12)
+  NOME : varchar(30)
+  GRUPOUTL : varchar(3)
+  ESTOQUE : integer
+  ESTOQU3 : integer
+  USO01 : integer
+  USO02 : integer
+  USO03 : integer
+  USO04 : integer
+  SAL01 : integer
+  SAL02 : integer
+  SAL03 : integer
+  SAL04 : integer
+  SA301 : integer
+  SA302 : integer
+  SA303 : integer
+  SA304 : integer
+  --
+  .. Índices ..
+  + BS3-1 : CODIGO
+}
+
+
+@enduml

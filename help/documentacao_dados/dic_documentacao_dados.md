@@ -1,5 +1,5 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 29/07/2026
+> Varredura automatica realizada em: 09/09/2026
 
 ## Tabela DBF: `dic`
 > **Origem:** `dic` (Driver: DBFCDX)
@@ -13,6 +13,16 @@
 
 **Indices vinculados:**
 - Tag: `MANARQ` Expressao: `ARQUIVO`
+
+```mermaid
+erDiagram
+    dic {
+        C ARQUIVO
+        C DESCRICAO
+        C CAMINHO
+        C DRIVER
+    }
+```
 
 ---
 ## Tabela DBF: `dici`
@@ -31,6 +41,19 @@
 **Indices vinculados:**
 - Tag: `DICI` Expressao: `TABELA+CAMPO`
 
+```mermaid
+erDiagram
+    dici {
+        C TABELA
+        C CAMPO
+        C TIPO
+        N TAM
+        N DEC
+        C EXCLUIDO
+        D DATAUP
+    }
+```
+
 ---
 ## Tabela DBF: `dicidx`
 > **Origem:** `dicidx` (Driver: DBFCDX)
@@ -44,5 +67,15 @@
 
 **Indices vinculados:**
 - Tag: `ARQSEG` Expressao: `ARQUIVO+STR(SEQ,3)`
+
+```mermaid
+erDiagram
+    dicidx {
+        C ARQUIVO
+        N SEQ
+        C TAG
+        C CHAVE
+    }
+```
 
 ---

@@ -1,5 +1,5 @@
 # Dicionario de Estruturas de Dados do Projeto
-> Varredura automatica realizada em: 31/07/2026
+> Varredura automatica realizada em: 09/09/2026
 
 ## Tabela DBF: `acpnc`
 > **Origem:** `acpnc` (Driver: DBFCDX)
@@ -66,6 +66,63 @@
 - Tag: `SAC` Expressao: `SAC`
 - Tag: `COMPETE` Expressao: `COMPETE`
 
+```mermaid
+erDiagram
+    acpnc {
+        N ACPNC
+        D DATA
+        D DATAFEC
+        N CLIENTE
+        C CLINOME
+        C PRODUTO
+        C DESPRO
+        N APNC
+        N RNC
+        N RAT
+        L SAIR
+        N QTI01
+        N QTI02
+        N QTI03
+        N QTI04
+        N QTI05
+        N QTI06
+        N QTI07
+        N QTE01
+        N QTE02
+        N QTE03
+        N QTE04
+        N QTE05
+        N QTE06
+        N QTE07
+        N QTE08
+        N QTE09
+        N QTE10
+        N QTE11
+        N VLI01
+        N VLI02
+        N VLI03
+        N VLI04
+        N VLI05
+        N VLI06
+        N VLI07
+        N VLE01
+        N VLE02
+        N VLE03
+        N VLE04
+        N VLE05
+        N VLE06
+        N VLE07
+        N VLE08
+        N VLE09
+        N VLE10
+        N VLE11
+        N PCVALEXT
+        N PCVALINT
+        N SAC
+        C COMPETE
+    }
+```
+
 ---
 ## Tabela DBF: `adp`
 > **Origem:** `adp` (Driver: DBFCDX)
@@ -95,6 +152,30 @@
 - Tag: `ADP` Expressao: `ADP`
 - Tag: `RNC` Expressao: `RNC`
 
+```mermaid
+erDiagram
+    adp {
+        N ADP
+        C CODIGO
+        C NOME
+        N CLIENTE
+        C CLINOME
+        C NFDEV
+        C CLIRET
+        C RASTRO
+        N INSNUM
+        C INSNOME
+        D DATA
+        N INIHOR
+        N FIMHOR
+        N HORAS
+        C REQUER
+        C AREA
+        C RESPO
+        N RNC
+    }
+```
+
 ---
 ## Tabela DBF: `adpi`
 > **Origem:** `adpi` (Driver: DBFCDX)
@@ -108,6 +189,16 @@
 
 **Indices vinculados:**
 - Tag: `ADP` Expressao: `ADP`
+
+```mermaid
+erDiagram
+    adpi {
+        N ADP
+        C ESPC
+        C ENCO
+        C LAUDO
+    }
+```
 
 ---
 ## Tabela DBF: `caf`
@@ -124,6 +215,18 @@
 
 **Indices vinculados:**
 - Tag: `NUMERO` Expressao: `NUMERO`
+
+```mermaid
+erDiagram
+    caf {
+        N NUMERO
+        D PREVISTO
+        D EFETUADO
+        D DPLANO
+        C EFICAZ
+        C OBS
+    }
+```
 
 ---
 ## Tabela DBF: `cfe`
@@ -146,6 +249,23 @@
 **Indices vinculados:**
 - Tag: `NUMERO` Expressao: `NUMERO`
 
+```mermaid
+erDiagram
+    cfe {
+        N NUMERO
+        D DATA
+        C TIPOCLI
+        N CLIFOR
+        C COGNOME
+        C NOTA
+        N PESO
+        C MEIOTRAN
+        C JUSTIFI
+        C TIPOENT
+        C PRODUTO
+    }
+```
+
 ---
 ## Tabela DBF: `crdias`
 > **Origem:** `crdias` (Driver: DBFCDX)
@@ -160,6 +280,17 @@
 
 **Indices vinculados:**
 - Tag: `SEQ` Expressao: `SEQ`
+
+```mermaid
+erDiagram
+    crdias {
+        N SEQ
+        N NFOR
+        N DIAS
+        N QTENT
+        N QTPRZ
+    }
+```
 
 ---
 ## Tabela DBF: `crfa`
@@ -193,6 +324,33 @@
 - Tag: `SEQNFOR` Expressao: `STR(SEQ,3)+STR(NFOR,8)`
 - Tag: `NFOR` Expressao: `NFOR`
 
+```mermaid
+erDiagram
+    crfa {
+        N SEQ
+        N NFOR
+        C NOME
+        N QTRA
+        N QTNA
+        N PPMA
+        N DIAA
+        N IAFA
+        N IQFA
+        N MESA
+        N QTRS
+        N QTNS
+        N PPMS
+        N DIAS
+        N IAFS
+        N IQFS
+        N MESS
+        C CONCEITO
+        N PPM
+        N IAF
+        C SUBRAMO
+    }
+```
+
 ---
 ## Tabela DBF: `crfor`
 > **Origem:** `crfor` (Driver: DBFCDX)
@@ -220,6 +378,28 @@
 - Tag: `SEQ` Expressao: `SEQ`
 - Tag: `NFOR` Expressao: `NFOR`
 - Tag: `SEQNFOR` Expressao: `STR(SEQ,3)+STR(NFOR,8)`
+
+```mermaid
+erDiagram
+    crfor {
+        N SEQ
+        N NFOR
+        N QTDREC
+        N QTDNC
+        N PPM
+        N DIAS
+        N IAF
+        N IQF
+        C ANUAL
+        C SEMES
+        C DESCRI
+        N PPMS
+        N PPMA
+        N IAFS
+        N IAFA
+        C NOME
+    }
+```
 
 ---
 ## Tabela DBF: `crft`
@@ -250,6 +430,31 @@
 **Indices vinculados:**
 - Tag: `SEQNFOR` Expressao: `STR(SEQ,3)+STR(NFOR,8)`
 
+```mermaid
+erDiagram
+    crft {
+        N NFOR
+        N SEQ
+        N ITEM
+        C DESCRICAO
+        N VAL01
+        N VAL02
+        N VAL03
+        N VAL04
+        N VAL05
+        N VAL06
+        N VAL07
+        N VAL08
+        N VAL09
+        N VAL10
+        N VAL11
+        N VAL12
+        N TOTAL
+        N IAFS
+        N PPMS
+    }
+```
+
 ---
 ## Tabela DBF: `crrsapc`
 > **Origem:** `crrsapc` (Driver: DBFCDX)
@@ -262,6 +467,15 @@
 
 **Indices vinculados:**
 - Tag: `SEQCLIENTE` Expressao: `STR(SEQ,3)+STR(CLIENTE,8)`
+
+```mermaid
+erDiagram
+    crrsapc {
+        N SEQ
+        N CLIENTE
+        N QTDE
+    }
+```
 
 ---
 ## Tabela DBF: `crrsapp`
@@ -287,6 +501,27 @@
 
 **Indices vinculados:**
 - Tag: `SEQCODIGO` Expressao: `STR(SEQ,3)+CODIGO`
+
+```mermaid
+erDiagram
+    crrsapp {
+        N SEQ
+        C CODIGO
+        C NOME
+        C PRODUSO
+        N QTDE
+        N SET01
+        N SET02
+        N SET03
+        N SET04
+        N SET05
+        N SET06
+        N SET07
+        N SET08
+        N SET09
+        N SET00
+    }
+```
 
 ---
 ## Tabela DBF: `crrsaps`
@@ -329,6 +564,43 @@
 **Indices vinculados:**
 - Tag: `SEQSETOR` Expressao: `STR(SEQ,3)+SETCOD`
 
+```mermaid
+erDiagram
+    crrsaps {
+        N SEQ
+        C SETCOD
+        C SETOR
+        C SETCOG
+        N QTDE
+        N QTDENC
+        N PPM
+        N RET
+        N DEV
+        N SUC
+        N PPMRET
+        N PPMDEV
+        N PPMSUC
+        N SEMRET
+        N SEMSUC
+        N SEMDEV
+        N SEMPPM
+        N SEMPPMRET
+        N SEMPPMSUC
+        N SEMPPMDEV
+        N SEMTOT
+        N SEMPRO
+        N ANURET
+        N ANUSUC
+        N ANUDEV
+        N ANUPPM
+        N ANUPPMRET
+        N ANUPPMSUC
+        N ANUPPMDEV
+        N ANUTOT
+        N ANUPRO
+    }
+```
+
 ---
 ## Tabela DBF: `crrserr`
 > **Origem:** `crrserr` (Driver: DBFCDX)
@@ -342,6 +614,16 @@
 
 **Indices vinculados:**
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    crrserr {
+        C CODIGO
+        C NOME
+        L GRAFICO
+        C COGNOME
+    }
+```
 
 ---
 ## Tabela DBF: `crrsseq`
@@ -413,6 +695,72 @@
 **Indices vinculados:**
 - Tag: `SEQ` Expressao: `SEQ`
 
+```mermaid
+erDiagram
+    crrsseq {
+        N SEQ
+        D DIAFIM
+        D DIAINI
+        N MES
+        N ANO
+        C DESCR2
+        C DESCRI
+        N RET
+        N SUC
+        N DEV
+        N TOTMES
+        N PPMMES
+        N PPMRET
+        N PPMSUC
+        N PPMDEV
+        N PRODMES
+        N PRODMY
+        C ANUAL
+        C SEMES
+        N PRODNF
+        N SEMRET
+        N SEMSUC
+        N SEMDEV
+        N SEMPPMRET
+        N SEMPPMSUC
+        N SEMPPMDEV
+        N SEMTOT
+        N SEMPRO
+        N SEMPPM
+        D SEMINI
+        D SEMFIM
+        N ANURET
+        N ANUSUC
+        N ANUDEV
+        N ANUPPMRET
+        N ANUPPMSUC
+        N ANUPPMDEV
+        N ANUTOT
+        N ANUPRO
+        N ANUPPM
+        D ANUINI
+        D ANUFIM
+        C PLANO01
+        C PLANO02
+        C PLANO03
+        C PLANO04
+        C PLANO05
+        C PLANO06
+        C PLANO07
+        C ACAO01
+        C ACAO02
+        C ACAO03
+        C ACAO04
+        C ACAO05
+        C ACAO06
+        C ACAO07
+        N NUMFUN
+        N NUMREG
+        N NUMTEM
+        N ZERO
+    }
+```
+
 ---
 ## Tabela DBF: `crrsset`
 > **Origem:** `crrsset` (Driver: DBFCDX)
@@ -426,6 +774,16 @@
 
 **Indices vinculados:**
 - Tag: `SEQ` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    crrsset {
+        C CODIGO
+        C NOME
+        L GRAFICO
+        C COGNOME
+    }
+```
 
 ---
 ## Tabela DBF: `crseq`
@@ -445,6 +803,20 @@
 **Indices vinculados:**
 - Tag: `SEQ` Expressao: `SEQ`
 
+```mermaid
+erDiagram
+    crseq {
+        N SEQ
+        D DIAFIM
+        D DIAINI
+        N MES
+        N ANO
+        C DESCRI
+        C ANUAL
+        C SEMES
+    }
+```
+
 ---
 ## Tabela DBF: `crts`
 > **Origem:** `crts` (Driver: DBFCDX)
@@ -462,6 +834,20 @@
 
 **Indices vinculados:**
 - Tag: `SEQ` Expressao: `SEQ`
+
+```mermaid
+erDiagram
+    crts {
+        N SEQ
+        N PRODMES
+        N RET
+        N SUC
+        N DEV
+        N PPMRET
+        N PPMSUC
+        N PPMDEV
+    }
+```
 
 ---
 ## Tabela DBF: `msrd`
@@ -483,6 +869,22 @@
 **Indices vinculados:**
 - Tag: `MSRD` Expressao: `MSRD`
 - Tag: `CODIGO` Expressao: `CODIGO`
+
+```mermaid
+erDiagram
+    msrd {
+        N MSRD
+        C CODIGO
+        N PF
+        D DATA
+        C OCORREU
+        C DESC01
+        C DESC02
+        C INV01
+        C ACA01
+        N CLIENTE
+    }
+```
 
 ---
 ## Tabela DBF: `pe01tmp`
@@ -527,6 +929,40 @@
 - Tag: `PE01TMP5` Expressao: `STR(AR,8)+STR(ARITEM,3)`
 - Tag: `PE01TMP6` Expressao: `CODIGO`
 - Tag: `PE01TMP7` Expressao: `STR(CLIENTE,8)+STR(NRNOTASAI,8)+CODIGO`
+
+```mermaid
+erDiagram
+    pe01tmp {
+        C TIPPED
+        C CODIGO
+        C UNIDADE
+        C NOME
+        C NOM2
+        N NRNOTAINI
+        C DIGCTR
+        D DATAFAT
+        N VALORINI
+        N TOTKGINI
+        N NRNOTASAI
+        N TOTKGANT
+        N TOTKGSAI
+        N TOTKGEST
+        C TIPOCLI
+        N CLIENTE
+        C COGNOME
+        D DATASAI
+        N CRM
+        N PEDIDO
+        N ITEM
+        C RECEBER
+        C OBS
+        C RASTROFOR
+        D DCORTE
+        N AR
+        N ARITEM
+        N RIRM
+    }
+```
 
 ---
 ## Tabela DBF: `racf`
@@ -598,6 +1034,71 @@
 - Tag: `RACF` Expressao: `RACF`
 - Tag: `RACF-2` Expressao: `DATA`
 
+```mermaid
+erDiagram
+    racf {
+        N RACF
+        N RNC
+        N RAT
+        D DATA
+        C DENO
+        C DESENHO
+        C REVISAO
+        C RASTRO
+        N FORNECEDO
+        C NOMEF
+        C RESP
+        C RESPC
+        C FONE
+        C FAX
+        C EMAIL
+        C DESC01
+        C DESC02
+        C DESC03
+        C DESC04
+        C DESC05
+        C ACAO01
+        C ACAO02
+        C CAUSA01
+        C CAUSA02
+        C CAUSA03
+        C CAUSA04
+        C CORRE01
+        C CORRE02
+        C CORRE03
+        C CORRE04
+        D DATAI
+        C RESPF
+        C CARGOF
+        D DATAF
+        D DATAE
+        C VERI
+        C APRO
+        C NOTA
+        C CNFITA
+        C CNFFOR
+        C AREA
+        C RESPO
+        C CARGO
+        N QTL1
+        N QTL2
+        N QTN1
+        N QTN2
+        N QTD1
+        N QTD2
+        C UNID
+        N CRM
+        C TIPOE
+        C CBUSCA
+        C DESCRI
+        C INCUSER
+        D INCDATA
+        C EFICAZ
+        C DEMERITO
+        C DESCRI01
+    }
+```
+
 ---
 ## Tabela DBF: `racfsal`
 > **Origem:** `racfsal` (Driver: DBFCDX)
@@ -610,6 +1111,15 @@
 
 **Indices vinculados:**
 - Tag: `SEQCLIFOR` Expressao: `STR(SEQ,3)+STR(CLIFOR,8)`
+
+```mermaid
+erDiagram
+    racfsal {
+        N SEQ
+        N CLIFOR
+        N QTDE
+    }
+```
 
 ---
 ## Tabela DBF: `rat`
@@ -628,6 +1138,19 @@
 **Indices vinculados:**
 - Tag: `RAT` Expressao: `RAT`
 - Tag: `DATA` Expressao: `DATA`
+
+```mermaid
+erDiagram
+    rat {
+        N RAT
+        N CLIENTE
+        C CLINOME
+        D DATA
+        L VISITA
+        L RECCLI
+        L RELCLI
+    }
+```
 
 ---
 ## Tabela DBF: `rati`
@@ -661,6 +1184,35 @@
 
 **Indices vinculados:**
 - Tag: `RAT` Expressao: `RAT`
+
+```mermaid
+erDiagram
+    rati {
+        N RAT
+        C CODIGO
+        N QTDE
+        C RASTRO
+        C PROB01
+        C PROB02
+        C PROB03
+        C ANAL01
+        C ANAL02
+        C ANAL03
+        C ANAL04
+        C ANAL05
+        C ACAO01
+        C ACAO02
+        C ACAO03
+        D PRAZO
+        N RESNUM
+        C RESNOME
+        L LACAO
+        N SAC
+        N RACF
+        L PARADA
+        C RELACAO
+    }
+```
 
 ---
 ## Tabela DBF: `rnc`
@@ -771,6 +1323,110 @@
 - Tag: `RNC` Expressao: `RNC`
 - Tag: `RNC-2` Expressao: `DATA`
 
+```mermaid
+erDiagram
+    rnc {
+        N RNC
+        C CODRNC
+        C DESCRI
+        C CODIGO
+        C REVI
+        C OFC
+        C SETOR
+        C RASTRO
+        C NOME
+        C NFC
+        C RIC
+        C NFIC
+        C PED
+        N QTL
+        N QTLN
+        C DEC01
+        C DEC02
+        C DEC03
+        D DATA
+        C DISPO
+        D DATAD
+        C RAC
+        C SACR
+        C OBS01
+        C OBS02
+        C OBS03
+        C OBS04
+        C RESP
+        C ACAO01
+        C ACAO02
+        C ACAO03
+        C ACAO04
+        C LAUDO
+        D DATAR
+        C DIST01
+        C DIST02
+        C REFDOC
+        N QTDEREI
+        C TIPCAD
+        N CLIFOR
+        C TIPACAO
+        N NSAC
+        N NRACF
+        C TIPERR
+        C UNID
+        C AREA
+        C RESPO
+        C CARGO
+        C CODRET
+        C INCUSER
+        D INCDATA
+        C FECUSER
+        D FECDATA
+        N ABRNUM
+        C ABRNOM
+        N SELHI
+        N SELHF
+        D SELDI
+        D SELDF
+        N SELVL
+        N SELTH
+        N RETHI
+        N RETHF
+        D RETDI
+        D RETDF
+        N RETVL
+        N RETTH
+        N REIQT
+        N REIHI
+        N REIHF
+        D REIDI
+        D REIDF
+        N REIVL
+        N REITH
+        C MATCOD
+        C MATNOM
+        N RETOPR
+        N RETOP2
+        N RETOP3
+        C RETNOM
+        C RETNO2
+        C RETNO3
+        N RETVAL
+        N CRM
+        C TIPOE
+        C DESCE
+        C CBUSCA
+        L FECHADA
+        N RAT
+        N REHHI
+        N REHHF
+        D REHDI
+        D REHDF
+        N REHVL
+        N REHTH
+        N VALSUC
+        N QTDSUC
+        N PECSUC
+    }
+```
+
 ---
 ## Tabela DBF: `rnci`
 > **Origem:** `rnci` (Driver: DBFCDX)
@@ -784,6 +1440,16 @@
 
 **Indices vinculados:**
 - Tag: `RNCI` Expressao: `RNC`
+
+```mermaid
+erDiagram
+    rnci {
+        N RNC
+        N QTNC
+        C SETCOD
+        C CODERR
+    }
+```
 
 ---
 ## Tabela DBF: `sac`
@@ -874,6 +1540,89 @@
 - Tag: `SAC-2` Expressao: `STR(OS,8,2)+STR(NF,8)+STR(ITEM,3)`
 - Tag: `SAC-3` Expressao: `CODIGO`
 
+```mermaid
+erDiagram
+    sac {
+        N RNC
+        N RAT
+        C DOCUMENTO
+        C RASTRO
+        D DATA
+        C NOME
+        C CODIGO
+        N QTL
+        N QTN
+        N CLIENTE
+        C CLINOME
+        C DESC01
+        C DESC02
+        C DESC03
+        C DESC04
+        N OS
+        N NF
+        N ITEM
+        C TIPSAC
+        D DATOS
+        D DATEN
+        D PRAZO
+        D DATAF
+        C EFICA
+        N NOVA
+        C TIPO
+        D FECHO
+        C CONG
+        C RESUL
+        C EQP01
+        C EQP02
+        C EQP03
+        C EQP04
+        N PF
+        N FEMEAREV
+        D FEMEAREVD
+        D INCDATA
+        C INCUSER
+        C NOTSETOR
+        N ANTERIOR
+        C FECNOME
+        N SAC
+        C PMED01
+        C PMED02
+        C PMED03
+        C PMED04
+        C PMED05
+        C PAMB01
+        C PAMB02
+        C PAMB03
+        C PAMB04
+        C PAMB05
+        C PMAO01
+        C PMAO02
+        C PMAO03
+        C PMAO04
+        C PMAO05
+        C PMAQ01
+        C PMAQ02
+        C PMAQ03
+        C PMAQ04
+        C PMAQ05
+        C PMET01
+        C PMET02
+        C PMET03
+        C PMET04
+        C PMET05
+        C PMAT01
+        C PMAT02
+        C PMAT03
+        C PMAT04
+        C PMAT05
+        N POA
+        C REVPF
+        C REVPC
+        C REVPFOBS
+        C REVPCOBS
+    }
+```
+
 ---
 ## Tabela DBF: `saci`
 > **Origem:** `saci` (Driver: DBFCDX)
@@ -920,5 +1669,48 @@
 
 **Indices vinculados:**
 - Tag: `SACI` Expressao: `SAC`
+
+```mermaid
+erDiagram
+    saci {
+        N SAC
+        N CAUSA
+        N ACAO
+        C AREA
+        C DESARE
+        C RESPON
+        C ACAO01
+        C ACAO02
+        C ACAO03
+        C ACAO04
+        C ACAO05
+        C ACAO06
+        C ACAO07
+        C ACAO08
+        C ACAO09
+        C ACAO10
+        D PRAZO
+        D DATAF
+        D FECHO
+        C POSICAO
+        C INV01
+        C INV02
+        C INV03
+        C INV04
+        C INV05
+        C INV06
+        C INV07
+        C INV08
+        C INV09
+        C INV10
+        C ACM01
+        C ACM02
+        C ACM03
+        C ACM04
+        C ACM05
+        C ACM06
+        L LPAE
+    }
+```
 
 ---
